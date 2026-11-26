@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** rigid/articulated object와 robot manipulator contact scene.
-- **Input boundary:** RGB-D/point cloud, object state와 contact/task observation.
-- **Output/decision under evaluation:** grasp, pose, force 또는 end-effector trajectory.
-- **Primary target:** task completion, contact success, pose/force error와 generalization.
+- **Target system/task:** 시뮬레이션 및 실물 팔의 다과제 조작.
+- **Input boundary:** 다중 시점 RGB-D 점군·언어 지시·로봇 상태.
+- **Output/decision under evaluation:** 말단 목표와 실행할 관절 궤적.
+- **Primary target:** 과제 성공 및 운동학적 궤적 타당성.
 - **Detected evaluation headings:** 4.1. Dataset Preparation (p. 4); 4.4. Practical Implementation Choices (p. 6); 5. Experiments (p. 6); 5.2. Simulation Experiments (p. 6); 5.4. Real Robot Experiment (p. 8).
 
 ## Experimental Matrix
@@ -65,8 +65,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Simulation Experiments), p. 8 (Figure
 |---|---|---|---|
 | Robot/hardware/simulator | We assume access to a multi-task dataset D = {ξi}ND i=1, containing a total of ND expert demonstrations paired with Dl = {li}ND i=1 ... | embodiment, simulator version and control stack | p. 4 (4.1. Dataset Preparation), p. 6 (5. Experiments) |
 | Task/environment | Finally, we show HDP is capable of solving challenging real-world tasks efficiently and effectively on an open oven task with only 20 demonstrations. | reset, timeout, object/scene variation | p. 6 (5. Experiments), p. 8 (5.4. Real Robot Experiment) |
-| Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 3 (3.1. Diffusion Models), p. 4 (4. Hierarchical Diffusion Policy) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 1 (1. Introduction), p. 1 (1. Introduction) |
+| Observation/sensor | 다중 시점 RGB-D 점군·언어 지시·로봇 상태 | calibration, preprocessing, privileged input | p. 3 (3.1. Diffusion Models), p. 4 (4. Hierarchical Diffusion Policy) |
+| Output/decision | 말단 목표와 실행할 관절 궤적 | action frame, controller and termination | p. 1 (1. Introduction), p. 1 (1. Introduction) |
 
 ## Metrics and Success Definition
 

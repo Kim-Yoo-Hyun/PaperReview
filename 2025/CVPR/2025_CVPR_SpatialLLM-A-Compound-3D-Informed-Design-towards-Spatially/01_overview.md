@@ -44,12 +44,14 @@ SpatialLLM은 물체의 3차원 위치·방향과 물체 사이 관계에 대한
 
 ## Observation, State, and Output Interface
 
+SpatialVQA의 3D 상자는 공간 질의와 정답 구축에 쓰인다. §4는 raw image에서 공간 관계를 답하는 설정과 별도 깊이·좌표를 입력하는 비교 모델을 구별한다. 로봇 행동 평가는 없다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=4) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Ma_SpatialLLM_A_Compound_3D-Informed_Design_towards_Spatially-Intelligent_Large_Multimodal_Models_CVPR_2025_paper.pdf#page=7)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Existing pretraining and visual instruction tuning data for LMMs [41, 58] focused on detailed descriptions and conversations about scenes, appearances, and actions, while being vague about the 3D spatial relationships that build ... | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (3.2.1. Challenges of 3D spatial reasoning), p. 3 (3.1. Preliminary of LMMs) |
-| State/latent | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions, conversations, about | geometry, map, object/relationship state | p. 4 (3.2.1. Challenges of 3D spatial reasoning), p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3. Compound 3D-Informed Design) |
-| Output/action | At this stage, the model is trained to describe images in details to align visual and language representations in the same space. • Visual instruction tuning. | point map, pose, scene graph, affordance 또는 query result | p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3. Compound 3D-Informed Design), p. 6 (3.3.1. Design space) |
-| Objective/outcome | This stage focuses on developing foundational visual representations, often with reconstructionbased objectives (e.g., MAE [23], DINOv2 [47]). | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 3 (3.1. Preliminary of LMMs), p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3.1. Design space) |
+| Observation/input | Existing pretraining and visual instruction tuning data for LMMs [41, 58] focused on detailed descriptions and conversations about scenes, appearances, and actions, while being vague about the 3D spatial relationships that build ... | RGB 이미지와 공간 관계 질문 | p. 4 (3.2.1. Challenges of 3D spatial reasoning), p. 3 (3.1. Preliminary of LMMs) |
+| State/latent | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions, conversations, about | 이미지에서 추출한 공간 특징 | p. 4 (3.2.1. Challenges of 3D spatial reasoning), p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3. Compound 3D-Informed Design) |
+| Output/action | At this stage, the model is trained to describe images in details to align visual and language representations in the same space. • Visual instruction tuning. | 거리·방향·관계에 대한 답변 | p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3. Compound 3D-Informed Design), p. 6 (3.3.1. Design space) |
+| Objective/outcome | This stage focuses on developing foundational visual representations, often with reconstructionbased objectives (e.g., MAE [23], DINOv2 [47]). | SpatialVQA 등의 공간 질의응답 정확도 | p. 3 (3.1. Preliminary of LMMs), p. 3 (3.1. Preliminary of LMMs), p. 5 (3.3.1. Design space) |
 
 ## Main Claims and Actual Contribution
 

@@ -10,7 +10,7 @@
 - Authors: Wencan Cheng, Hao Tang, Luc Van Gool, Jong Hwan Ko
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
+- Tags: geometry, Diffusion, point cloud, 3D Vision, depth
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf
 - Code/Project: https://github.com/cwc1260/HandDiff
@@ -45,12 +45,14 @@ HandDiff는 깊이 영상에서 얻은 점군을 조건으로 손 관절의 3D �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | The model extracts features from input depth images and corresponding point clouds as joint-wise and local conditions to guide the iterative denoising process that recovers accurate hand poses from diffused noisy pose ... | conditioning observation와 noisy/intermediate sample | p. 1 (1. Introduction), p. 2 (1. Introduction) |
-| State/latent | model, extracts, features, input, depth, images, corresponding, point, clouds, joint-wise, local, conditions | latent/noise variable와 conditional distribution | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Introduction) |
-| Output/action | The following is a summary of our primary contributions: • We propose a novel diffusion-based model for hand pose estimation that utilizes the depth image and point cloud input as a multi-modal ... | generated sample, action chunk 또는 trajectory | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. The Proposed Hand Pose Diffusion Model) |
-| Objective/outcome | (7) By using the smooth L1 loss, we supervise the approximated joint distribution by the following joint loss function: | distribution fit, multimodality, sample quality와 latency | p. 5 (3.3. Training), p. 5 (3.3. Training) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 깊이 영상 및 그 영상의 역투영 점군 |
+| 표현 | 관절별·국소 기하 특징 |
+| 출력 | 사람 손의 3차원 관절 좌표 |
+| 평가 | NYU·ICVL·MSRA의 관절 위치 오차 |
+
+[방법 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf#page=3) · [평가 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf#page=6)
 
 ## Main Claims and Actual Contribution
 
@@ -82,3 +84,7 @@ HandDiff는 깊이 영상에서 얻은 점군을 조건으로 손 관절의 3D �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. The Proposed Hand Pose Diffusion Model), p. 3 (3.2. Joint-wise Local Feature-conditioned Denoiser)이다.
+
+## 검색 태그 근거
+
+깊이 영상과 그 영상에서 역투영한 점에 조건부인 확산 과정으로 사람 손의 관절 좌표를 복원한다. NYU 등에서 관절 위치 오차를 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Cheng_HandDiff_3D_Hand_Pose_Estimation_with_Diffusion_on_Image-Point_Cloud_CVPR_2024_paper.pdf#page=6)

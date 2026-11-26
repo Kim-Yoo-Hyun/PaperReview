@@ -40,12 +40,14 @@ ReasonGrounder는 여러 시점에서 구축한 3차원 장면 표현과 시각�
 
 ## Observation, State, and Output Interface
 
+SAM은 다중 시점 영상에서 마스크를 만들고 가우시안에서 렌더링한 깊이로 마스크의 3D 크기를 정한다. 언어 질의에 대응하는 시각 특징으로 대상을 찾는다. ReasoningGD의 점군·RGB-D 파일과 그림 2의 관측 입력을 구분했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ReasonGrounder_LVLM-Guided_Hierarchical_Feature_Splatting_for_Open-Vocabulary_3D_Visual_Grounding_CVPR_2025_paper.pdf#page=5)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD dataset offers over 10K complex scenes with 2 million annotations, ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1. Introduction), p. 1 (1. Introduction) |
-| State/latent | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially, fully, occluded | geometry, map, object/relationship state | p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction) |
-| Output/action | For instance, simple commands like apple can be directly interpreted, while more complex instructions, such as Can you localize the red, round, sweet fruit on the table that is partially occluded by ... | point map, pose, scene graph, affordance 또는 query result | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (Method) |
-| Objective/outcome | geometric accuracy, semantic consistency와 planning/manipulation utility | geometric accuracy, semantic consistency와 planning/manipulation utility | 본문 anchor 없음 |
+| Observation/input | LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD dataset offers over 10K complex scenes with 2 million annotations, ... | 다중 시점 영상과 언어 질의 | p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| State/latent | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially, fully, occluded | 마스크 규모별 가우시안 특징과 참조 시점 | p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction) |
+| Output/action | For instance, simple commands like apple can be directly interpreted, while more complex instructions, such as Can you localize the red, round, sweet fruit on the table that is partially occluded by ... | 질의 대상의 3D 위치와 마스크 | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (Method) |
+| Objective/outcome | 위치 정확도와 마스크 겹침 | 위치 정확도와 마스크 겹침 | 본문 anchor 없음 |
 
 ## Main Claims and Actual Contribution
 

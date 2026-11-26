@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-실제 조작과 새 객체·배경 및 long-horizon 확장을 평가한다.
+게재본 §5와 표 1은 단기 과제 6개와 장기 과제 2개를 열거한다. 표 2의 평균 성공률 76.7%는 단기 과제 6개에서 집계했다. 학회 웹 초록의 과제 수는 6개다. [게재본 §5](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/li25c/li25c.pdf#page=5) · [게재본 표 1·2](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/li25c/li25c.pdf#page=6) · [학회 웹 초록](https://proceedings.mlr.press/v305/li25c.html)
 
 ## Evaluation Type and Scope
 

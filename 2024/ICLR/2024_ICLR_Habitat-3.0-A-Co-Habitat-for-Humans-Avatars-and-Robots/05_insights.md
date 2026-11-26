@@ -42,8 +42,8 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 The policy uses a ResNet-18 (He et al., 2016) visual encoder to embed the 256 × 256 depth input image into a 512 dimension embedding.를 (2019)) to generate realistic body shapes and poses, (4) a library of avatars made from 12 base models with multiple gender representations, body shapes, and appearances, (5) a motion and behavior generation ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Since the Spot robot has a long body shape and cannot be represented by a single cylinder, we use a 2-cylinder representation, placed in the center and the front of the robot ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `팔 카메라, 과제별 사람 감지·위치 또는 로봇 관절 상태 → 상대 위치, 로봇과 물체 상태, 협력 목표 → 사람 추종을 위한 베이스 명령 또는 협력 재배치 행동`.
+- 이 논문의 재사용 가능한 지점은 The policy uses a ResNet-18 (He et al., 2016) visual encoder to embed the 256 × 256 depth input image into a 512 dimension embedding.를 (2019)) to generate realistic body shapes and poses, (4) a library of avatars made from 12 base models with multiple gender representations, body shapes, and appearances, (5) a motion and behavior generation ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 상대 위치, 로봇과 물체 상태, 협력 목표가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Since the Spot robot has a long body shape and cannot be represented by a single cylinder, we use a 2-cylinder representation, placed in the center and the front of the robot ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: Social tasks - Aiming at reproducible and standardized benchmarking, we present two collaborative human-robot interaction tasks and a suite of baselines for each.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

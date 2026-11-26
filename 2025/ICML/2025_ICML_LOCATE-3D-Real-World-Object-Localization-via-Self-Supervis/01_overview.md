@@ -10,7 +10,7 @@
 - Authors: Paul Mcvay, Sergio Arnaud, Ada Martin, Arjun Majumdar, Krishna Murthy Jatavallabhula, Phillip Thomas, Ruslan Partsey, Daniel Dugas, Abha Gejji, Alexander Sax, Vincent-Pierre Berges, Mikael Henaff, Ayush Jain, Ang Cao, Ishita Prasad, Mrinal Kalakrishnan, Michael Rabbat, Nicolas Ballas, Mido Assran, Oleksandr Maksymets, Aravind Rajeswaran, Franziska Meier
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: 3D Vision, Reinforcement Learning
+- Tags: 3D Vision, self-supervised, 3D visual grounding
 - Official paper: https://proceedings.mlr.press/v267/mcvay25a.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/mcvay25a/mcvay25a.pdf
 - Code/Project: not identified

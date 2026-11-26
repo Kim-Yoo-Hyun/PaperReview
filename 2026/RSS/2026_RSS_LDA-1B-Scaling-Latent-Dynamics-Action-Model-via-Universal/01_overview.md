@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
-- Authors: Jiangran Lyu, Kai Liu, Xuheng Zhang, Haoran Liao, Yusen Feng, Wenxuan Zhu, Tingrui Shen, Jiayi Chen, Jiazhao Zhang, Yifei Dong, Cui Wenbo, Senmao Qi, Shuo Wang, Yixin Zheng, Mi Yan, Xuesong Shi, Haoran Li, Dongbin Zhao, Ming-Yu Liu, Zhizheng Zhang, Li Yi, Yizhou Wang, He Wang
+- Authors: Jiangran Lyu, Kai Liu, Xuheng Zhang, Haoran Liao, Yusen Feng, Wenxuan Zhu, Tingrui Shen, Jiayi Chen, Jiazhao Zhang, Yifei Dong, Wenbo Cui, Senmao Qi, Shuo Wang, Yixin Zheng, Mi Yan, Xuesong Shi, Haoran Li, Dongbin Zhao, Ming-Yu Liu, Zhizheng Zhang, Li Yi, Yizhou Wang, He Wang
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: NEXT
@@ -12,7 +12,7 @@
 - Aliases: LDA-1B
 - Official paper: https://roboticsproceedings.org/rss22/p210.html
 - Venue verification: https://roboticsproceedings.org/rss22/p210.html
-- Code/Project: https://github.com/jiangranlv/LDA-1B
+- Code/Project: https://pku-epic.github.io/LDA/
 - Code: https://github.com/jiangranlv/LDA-1B
 - Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
@@ -42,3 +42,9 @@ Simulation과 실제 contact-rich·dexterous·long-horizon 조작을 보고한�
 ## Verification Boundary
 
 저품질 데이터 정의, 데이터 역할별 objective, action/vision rate, 학습 데이터 중복을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 시각·행동 잠재 동역학의 디퓨전 트랜스포머 · lda/model/modules/action_model/flow_matching_head/cdit_uwm.py [배포 파일](https://raw.githubusercontent.com/jiangranlv/LDA-1B/06e6a274a9086cc26635a9fe663866335eb30fc5/lda/model/modules/action_model/flow_matching_head/cdit_uwm.py)
+- 가중치 · RoboCasa에 맞춘 LDA 가중치 · LDA-robocasa.pt [배포 파일](https://huggingface.co/Wayer2/LDA-robocasa/resolve/811d14d8c22d3e98021c035948118143f53dd312/LDA-robocasa.pt)
+- 데이터 · 저자 코드에 포함된 모의 집기 시연 예제 · playground/demo_data/sim_pick_place/data/chunk-000/episode_000000.parquet [배포 파일](https://raw.githubusercontent.com/jiangranlv/LDA-1B/06e6a274a9086cc26635a9fe663866335eb30fc5/playground/demo_data/sim_pick_place/data/chunk-000/episode_000000.parquet)

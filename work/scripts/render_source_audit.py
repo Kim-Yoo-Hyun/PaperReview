@@ -20,6 +20,8 @@ FIELDS = {
 }
 PASS, EDIT, OPEN = "통과", "수정 필요", "존재 불확실"
 TIERS = ("CORE", "NEXT", "REFERENCE", "ARCHIVE")
+SEARCH_TAG_TIERS = ("REFERENCE", "ARCHIVE")
+SEARCH_TAG_PREFIXES = tuple(f"{tier.lower()}_tags_" for tier in SEARCH_TAG_TIERS)
 FOLLOWUP_FIELDS = {"primary": "대표 서지", "arxiv": "arXiv 식별자", "doi": "DOI",
                    "project": "프로젝트 주소", "code_url": "코드 주소", "pdf": "원문 PDF",
                    "title": "제목", "authors": "저자", "code": "코드", "weights": "가중치", "data": "데이터"}
@@ -394,6 +396,7 @@ def validate(rows, meta):
             if (name not in FOLLOWUP_FIELDS or change.get("kind") not in ("오류", "보완")
                 or change.get("status") not in (PASS, OPEN) or not change.get("basis")
                 or not change.get("source", "").startswith("https://")
+                or ("verified_on" in change and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(change["verified_on"])))
                 or not {"before", "corrected"}.issubset(change)):
                 raise ValueError(f"Incomplete follow-up for {row['id']} {name}")
     pending = {r["id"] for r in rows if current_checks(r, include_reviews=False)["summary"] == OPEN}
@@ -494,6 +497,17 @@ def validate(rows, meta):
                     or not tags.get("source", "").startswith("https://")
                     or not valid_source_locations(tags.get("pdf_pages"), tags.get("html_sections"))):
                     raise ValueError(f"Missing search tag evidence for {row['id']}")
+                if review["batch"].startswith(SEARCH_TAG_PREFIXES):
+                    roles = tags.get("tag_roles", {})
+                    removed = tags.get("removed_tag_roles", {})
+                    if (set(roles) != set(tags["tags"]) or not all(roles.values())
+                        or set(removed) != set(tags["before"]) - set(tags["tags"]) or not all(removed.values())
+                        or set(tags.get("facets_before", {})) != set(tags.get("facets", {}))
+                        or (tags.get("pdf_pages") and not re.fullmatch(r"[0-9a-f]{64}", tags.get("pdf_sha256", "")))):
+                        raise ValueError(f"Incomplete search tag review for {row['id']}")
+                    if tags.get("facets_absent_before") and (not tags.get("facets") or
+                            any(value is not None for value in tags["facets_before"].values())):
+                        raise ValueError(f"Conflicting prior search filters for {row['id']}")
             if project := review.get("project"):
                 if "before" not in project or not all(project.get(key, "").startswith("https://") for key in ("url", "source")):
                     raise ValueError(f"Missing current project evidence for {row['id']}")
@@ -601,6 +615,7 @@ def render(rows, meta):
     batches = meta.get("summary_batches", [])
     transcriptions = [r["note_transcription_review"] for r in rows if "note_transcription_review" in r]
     latest_date = max([post["verified_on"], *(b["verified_on"] for b in batches),
+                       *(v["verified_on"] for r in later for v in r["followup"].values() if "verified_on" in v),
                        *(r["verified_on"] for r in transcriptions),
                        *(r["taxonomy_review"]["verified_on"] for r in rows if "taxonomy_review" in r),
                        *(r["byline_correction"]["verified_on"] for r in rows if "byline_correction" in r),
@@ -610,34 +625,59 @@ def render(rows, meta):
                          if "resolution" in r.get("byline_review", {}))])
     lines = [
         "# 원문 감사", "",
-        f"{latest_date} KST 기준. 등록된 {n:,}편에서 **확인된 잔여 오류는 {failed}/{n:,}편({pct(failed, n)})**, "
-        f"10개 필드에 근거가 갖춰진 논문은 **{passed}편**, 한 필드 이상 미확인인 논문은 **{unknown:,}편**이다. "
+        f"{latest_date} KST 기준. 11월 전수 감사 대상 **{n:,}편**의 판정과 교정 결과다. "
+        f"이후 등록분을 포함한 현재 편수는 [레지스트리 통계](./REGISTRY_STATS.md)에서 확인한다. "
         f"[논문별 판정과 직접 근거]({ledger})", "",
     ]
+    lines += [
+        "## 오류율과 검증 범위", "",
+        "| 측정 | 분자 / 분모 | 의미 |", "|---|---:|---|",
+        f"| 11월 20일 교정 전 추가 확인 오류 | {changed} / {n:,} ({pct(changed,n)}) | 당시 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |",
+        f"| 이번 반영 후 확인 오류 | {failed} / {n:,} ({pct(failed,n)}) | 10개 필드의 최신 판정 중 ‘수정 필요’가 남은 논문 |",
+        f"| 현재 전 항목 통과 | {passed} / {n:,} ({pct(passed,n)}) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |",
+        f"| 현재 미확인 필드 보유 | {unknown:,} / {n:,} ({pct(unknown,n)}) | 하나 이상에 판정 근거가 부족한 논문 |", "",
+        f"11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 {affected}/{n:,}편({pct(affected,n)})이다. "
+        f"자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.", "",
+        f"**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. "
+        f"기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 {pct(failed,n)}–{pct(failed+unknown,n)}다. "
+        "필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.", "",
+        "## 항목별 결과", "",
+        "| 항목 | 11월 20일에 확인한 오류 | 현재 통과 | 존재 불확실 | 수정 필요 |",
+        "|---|---:|---:|---:|---:|",
+    ]
+    for field, label in FIELDS.items():
+        c = Counter(v[field] for v in states.values())
+        lines.append(f"| {label} | {found[field]} | {c[PASS]:,} | {c[OPEN]:,} | {c[EDIT]} |")
+    lines += ["", "링크는 주소의 역할별로, 공개 자료는 저자 표명과 배포 파일별로 판정한다. "
+              f"이전 요약 판정 {old_scope}편은 정규화 배치 문장이 대상이었다. 논문별 `scope`에서 대조한 문장을 확인할 수 있다.", "",
+              "## 읽기 등급별 확인 범위", "", "| 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |",
+              "|---|---:|---:|---:|---:|---:|"]
+    for tier in TIERS:
+        group = [r for r in rows if r["tier_at_audit"] == tier]
+        ss = [states[r["id"]] for r in group]
+        pending_artifacts = sum(any(v[k] == OPEN for k in ("code","weights","data")) for v in ss)
+        lines.append(f"| {tier} | {len(group)} | {counts(group)[0]} | {sum(v['summary']==OPEN for v in ss)} | "
+                     f"{sum(v['tags']==OPEN for v in ss)} | {pending_artifacts} |")
+    lines += ["", "## 배치별 결과", "", "| 배치 | 논문별 원장 행 | 편수 | 전 항목 통과 | 미확인 | 수정 필요 |",
+              "|---:|---|---:|---:|---:|---:|"]
+    for b in sorted({r["batch"] for r in rows}):
+        group = [r for r in rows if r["batch"] == b]
+        start = 1 + (b-1) * meta["batch_size"]
+        complete, pending, outstanding = counts(group)
+        lines.append(f"| <a id=\"batch-{b:02}\"></a>{b} | [{group[0]['id']}–{group[-1]['id']}]({ledger}#L{start}-L{start+len(group)-1}) "
+                     f"| {len(group)} | {complete} | {pending} | {outstanding} |")
+    lines.append("")
     if batches:
         verified_summaries = sum(checks["summary"] == PASS for checks in states.values())
-        lines += ["## 요약·기여 원문 대조", "",
-                  f"전체 {n:,}편 중 {verified_summaries:,}편({pct(verified_summaries, n)})의 요약·기여를 원문에서 확인했다. "
-                  "판정 대상 문장은 논문별 원장에 기록했다. 아래 표는 순차 배치의 대조 이력이다.", "",
-                  "| 확인일 | 등급 | 대상 | PDF | 공식 웹 원문 | 같은 등급에서 남은 요약 |",
-                  "|---|---|---|---:|---:|---:|"]
-        remaining = Counter(r["tier_at_audit"] for r in rows if current_checks(r, include_reviews=False)["summary"] == OPEN)
-        for batch in batches:
-            members = [r for r in rows if r.get("summary_review", {}).get("batch") == batch["batch"]]
-            ids = [r["id"] for r in members]
-            web_count = sum(r["summary_review"].get("source_format") == "html" for r in members)
-            tier = batch["tier"]
-            remaining[tier] -= len(ids)
-            baseline = "https://github.com/Kim-Yoo-Hyun/PaperReview/tree/" + batch["baseline_commit"]
-            lines.append(f"| {batch['verified_on']} | {tier} | [{ids[0]}–{ids[-1]} 중 당시 미확인 논문]({baseline}) "
-                         f"| {len(ids) - web_count} | {web_count} | {remaining[tier]} |")
-        lines += ["", "안정 ID 순서로 미확인 논문을 골라 각 overview의 한 줄 요약과 핵심 기여 두 개를 원문에 대조했다. "
-                  "문장마다 실제 확인한 PDF 쪽수 또는 공식 웹 보고서의 절을 연결했다. 원장에는 판본과 교정 전 노트의 SHA-256을 기록했다. "
-                  "이 순차 배치에서 집계하는 값은 검증 진척이다.", ""]
-        repairs = [r for r in rows if r.get("summary_review", {}).get("transcription_fix")]
-        if repairs:
-            refs = " · ".join(f"[{r['id']} 원문]({r['summary_review']['source']})" for r in repairs)
-            lines += [f"요약·기여를 대조하며 {len(repairs)}편의 문자 전사도 바로잡았다. {refs}", ""]
+        reviews = [r["summary_review"] for r in rows if "summary_review" in r]
+        web = sum(review.get("source_format") == "html" for review in reviews)
+        repairs = sum(bool(review.get("transcription_fix")) for review in reviews)
+        lines += ["<a id=\"요약기여-원문-대조\"></a>", "", "## 요약과 기여의 원문 대조", "",
+                  f"대상 {n:,}편 중 {verified_summaries:,}편({pct(verified_summaries, n)})의 요약·기여에 원문 근거가 있다. "
+                  f"순차 검토한 {len(reviews):,}편은 PDF {len(reviews) - web:,}편과 공식 웹 원문 {web}편이며 "
+                  f"이 중 {repairs}편의 문자 전사를 교정했다. 원장에 문장별 쪽·절과 판본 해시를, "
+                  "배치 메타데이터에 검토일·대상 등급·기준 커밋을 기록했다. "
+                  f"[논문별 근거]({ledger}) · [배치 이력](../work/sources/registry_meta.json)", ""]
     if transcriptions:
         notes = [note for record in transcriptions for note in record["notes"].values()]
         n_lines = sum(len(note["lines_before"]) for note in notes)
@@ -657,6 +697,18 @@ def render(rows, meta):
             lines.append(f"| {title} | {correction['basis']} "
                          f"[기존에 연결된 PDF]({correction['before_source']}) · [게재본]({review['source']}) |")
         lines.append("")
+    for row in rows:
+        if review := row.get("byline_review"):
+            if resolution := review.get("resolution"):
+                lines += [f"**{row['title'].split(':')[0]} 저자 명단.** {resolution['basis']} "
+                          f"[게재본 표제면]({resolution['source']}#page=1) · [출판사 웹 서지]({review['publisher']['source']}) · "
+                          f"[학회 목차]({review['program']['source']})", ""]
+                continue
+            lines += [f"**{row['title'].split(':')[0]} 저자 명단.** 출판사 서지에는 {review['publisher']['count']}명, "
+                      f"학회 목차와 저자판에는 {review['program']['count']}명이 적혀 있다. "
+                      f"{review['target']}은 출판사 인증 화면으로 연결되어 미확인으로 유지한다. "
+                      f"[출판사 서지]({review['publisher']['source']}) · [학회 목차]({review['program']['source']}) · "
+                      f"[저자판]({review['author_version']['source']})", ""]
     bylines = [r["byline_correction"] for r in rows if r.get("byline_correction")]
     summary_bylines = sum(not change.get("batch") for change in bylines)
     if summary_bylines:
@@ -677,10 +729,30 @@ def render(rows, meta):
                   "| 배치 | 공개 근거를 갱신한 논문 | 배포 파일 | 저자의 미공개·공개 예정 안내 | 배포 미확인으로 교정 | 기존 검색 태그 대조 |",
                   "|---|---:|---:|---:|---:|---:|"]
         for batch in sorted({review["batch"] for review in taxonomy_reviews}):
+            if batch.startswith(SEARCH_TAG_PREFIXES):
+                continue
             group = [review for review in taxonomy_reviews if review["batch"] == batch]
             findings = Counter(item["finding"] for review in group for item in review.get("fields", {}).values())
             lines.append(f"| {batch} | {sum(bool(r.get('fields')) for r in group)} | {findings['file']} | "
                          f"{findings['not_released']} | {findings['unresolved']} | {sum('legacy_tags' in r for r in group)} |")
+        lines.append("")
+    for tier, prefix in zip(SEARCH_TAG_TIERS, SEARCH_TAG_PREFIXES):
+        groups = {}
+        for review in taxonomy_reviews:
+            if review["batch"].startswith(prefix):
+                groups.setdefault(review["batch"], []).append(review["legacy_tags"])
+        if not groups:
+            continue
+        lines += [f"### {tier} 검색 태그", "",
+                  "방법·평가 절에서 각 태그의 역할을 확인했다. 표시 태그와 검색 필터를 함께 고친 논문은 두 열에 모두 센다. "
+                  "[논문별 원문 위치와 교정 전 값](" + ledger + ")", "",
+                  "| 배치 | 대조 | 표시 태그 변경 | 기존 필터 교정 | 필터 첫 등록 | 모두 유지 |",
+                  "|---|---:|---:|---:|---:|---:|"]
+        for batch, group in sorted(groups.items()):
+            changes = [(r["before"] != r["tags"], r.get("facets_before", {}) != r.get("facets", {})) for r in group]
+            first_filters = sum(bool(r.get("facets_absent_before")) for r in group)
+            lines.append(f"| {batch} | {len(group)} | {sum(tags for tags, _ in changes)} | "
+                         f"{sum(facets for _, facets in changes) - first_filters} | {first_filters} | {changes.count((False, False))} |")
         lines.append("")
     taxonomy_bylines = len(bylines) - summary_bylines
     if taxonomy_bylines:
@@ -710,118 +782,26 @@ def render(rows, meta):
             lines.append(f"| {FIELDS[field]} | {len(group)} | {resolved} | {sum(latest.values())} "
                          f"| {latest['file']} | {latest['not_applicable']} | {remaining} |")
         lines.append("")
-        if rechecks:
-            lines += ["| 추가로 확인한 논문 | 자료 | 확인한 공개 범위 |", "|---|---|---|"]
-            for row in rows:
-                for field, item in row.get("artifact_recheck", {}).get("fields", {}).items():
-                    if item["finding"] == "file":
-                        title = row["title"].split(":")[0]
-                        lines.append(f"| {title} (`{row['id']}`) | {FIELDS[field]} | {item['basis']} "
-                                     f"[배포 파일]({item['source']}) · [저자 설명]({item['release_reference']}) |")
-            lines.append("")
-            scopes = []
-            for row in rows:
-                fields = {f: c for f, c in row.get("artifact_recheck", {}).get("fields", {}).items()
-                          if c["finding"] == "not_applicable"}
-                if fields:
-                    names = "·".join(FIELDS[f] for f in fields)
-                    source = next(iter(fields.values()))["source"]
-                    scopes.append(f"[{row['title'].split(':')[0]} ({names})]({source})")
-            if scopes:
-                lines += ["**연구 산출물에 해당하지 않는 항목.** " + " · ".join(scopes), ""]
-            corrections = [(i, r) for i, r in enumerate(rows, 1) if any("metadata_correction" in item
-                           for item in r.get("artifact_recheck", {}).get("fields", {}).values())]
-            if corrections:
-                lines += [f"별도로 {len(corrections)}편의 원장에 실험 데이터가 ‘해당 없음’으로 기록돼 있었다. "
-                          "이 논문들이 표본이나 시행을 사용한 사실을 확인해 ‘배포 파일 미확인’으로 고쳤다. "
-                          "위 표의 현재 미확인 데이터에 포함된다. "
-                          + " · ".join(f"[{r['id']}]({ledger}#L{i})" for i, r in corrections), ""]
-        for row in rows:
-            for field, item in row.get("artifact_review", {}).get("fields", {}).items():
-                if item.get("before", {}).get("status") == "not_applicable" and item["status"] == PASS:
-                    lines += [f"{row['title'].split(':')[0]}(`{row['id']}`)의 {FIELDS[field]}는 기존에 "
-                              f"`not_applicable`로 분류되어 있었다. {item['basis']} "
-                              f"[저자 설명]({item['release_reference']}) · [배포 파일]({item['source']})", ""]
-    for row in rows:
-        if review := row.get("byline_review"):
-            if resolution := review.get("resolution"):
-                lines += [f"**{row['title'].split(':')[0]} 저자 명단.** {resolution['basis']} "
-                          f"[게재본 표제면]({resolution['source']}#page=1) · [출판사 웹 서지]({review['publisher']['source']}) · "
-                          f"[학회 목차]({review['program']['source']})", ""]
-                continue
-            lines += [f"**{row['title'].split(':')[0]} 저자 명단.** 출판사 서지에는 {review['publisher']['count']}명, "
-                      f"학회 목차와 저자판에는 {review['program']['count']}명이 적혀 있다. "
-                      f"{review['target']}은 출판사 인증 화면으로 연결되어 미확인으로 유지한다. "
-                      f"[출판사 서지]({review['publisher']['source']}) · [학회 목차]({review['program']['source']}) · "
-                      f"[저자판]({review['author_version']['source']})", ""]
+        corrections = [(i, r["id"]) for i, r in enumerate(rows, 1) if any("metadata_correction" in item
+                       for item in r.get("artifact_recheck", {}).get("fields", {}).values())]
+        if corrections:
+            refs = " · ".join(f"[{paper_id}]({ledger}#L{i})" for i, paper_id in corrections)
+            lines += [f"실험 데이터를 사용했지만 배포 파일을 확인하지 못한 {len(corrections)}편의 "
+                      f"기존 ‘해당 없음’ 판정을 ‘미확인’으로 고쳤다. {refs}", ""]
     lines += [
-        "## 오류율과 검증 범위", "",
-        "| 측정 | 분자 / 분모 | 의미 |", "|---|---:|---|",
-        f"| 11월 20일 교정 전 추가 확인 오류 | {changed} / {n:,} ({pct(changed,n)}) | 당시 점검에서 사실 오류가 입증된 논문. 같은 논문은 한 번만 센다. |",
-        f"| 이번 반영 후 확인 오류 | {failed} / {n:,} ({pct(failed,n)}) | 10개 필드의 최신 판정 중 ‘수정 필요’가 남은 논문 |",
-        f"| 현재 전 항목 통과 | {passed} / {n:,} ({pct(passed,n)}) | 서지·링크, 기여·태그, 공개 자료 세 종류가 모두 통과 |",
-        f"| 현재 미확인 필드 보유 | {unknown:,} / {n:,} ({pct(unknown,n)}) | 미확인은 오류로 확정하거나 통과 처리하지 않았다. |", "",
-        f"11월 20일 논문 기록과 자동 검색 분류에서 오류를 고친 논문은 중복을 제외해 {affected}/{n:,}편({pct(affected,n)})이다. "
-        f"자동 분류에서 잘못 붙은 검색 단서와 논문 내용 자체의 오류는 위 표에서 구별했다.", "",
-        f"**[해석]** 미확인 필드에서 추가 오류가 나올 수 있어 전체의 실제 잔여 오류율은 점으로 추정할 수 없다. "
-        f"기존 통과 판정을 전제로, 미확인만 해소될 때 가능한 논문 단위 범위는 {pct(failed,n)}–{pct(failed+unknown,n)}다. "
-        "필드별 미확인 건수와 당시 무작위 표본의 결과는 아래에 따로 제시했다.", "",
-        "## 교정 재검증", "", f"{post['verified_on']}에 수행한 전수 점검 기록이다. [당시 조사 시작 판본]({historic}/work/sources/papers.json)", "",
-        f"- 전 {n:,}편에서 대표 URL과 논문별 서지 출처에 다시 접근했다. 독립적으로 표제를 식별한 논문은 {biblios['title']:,}편, "
-        f"대표 URL 자체에서 표제를 확인한 논문은 {biblios['primary']:,}편이다. "
-        f"새 서지에서 순서가 일치하는 저자열 {biblios['authors']:,}편, 해당 판본의 등록 연도 {biblios['year']:,}편, 게재 근거 {biblios['venue']:,}편을 대조했다. "
-        "논문별 서지 필드·프로그램 표제·PDF 첫 쪽을 사용했다. 대소문자·구두점·공백·수식 표기를 정규화해 제목을 비교하고, "
-        "저자열은 각 이름의 성·이름 표기를 정리한 뒤 순서를 비교했다. 저자 수·순서가 다르거나 프로그램과 게재본이 다르면 표제면을 확인했다.",
-        f"- 원장이 공개로 기록한 코드 {released_fields['code']}건·가중치 {released_fields['weights']}건·데이터 {released_fields['data']}건의 "
-        f"출처를 다시 열었다. {len(releases)}건 중 {accessible}건에서 파일·목록 또는 웹페이지가 응답했다. "
-        "AgiBot World Alpha는 인증 없이 파일 주소를 열 수 없었고, 저자 배포 목록에서 같은 리비전의 파일과 이용 조건을 확인했다. "
-        "응답 결과는 접근성 검사다. 구현의 완전성, 가중치 호환성, 실험 재현성은 별도 검증 대상이다. "
-        "[AgiBot World Alpha 배포 정보](https://huggingface.co/api/datasets/agibot-world/AgiBotWorld-Alpha)",
-        f"- 안정 ID를 정렬한 직전 원장에서 `random.Random({post['seed']}).sample(ids, {len(sample)})`로 비복원 추출했다. "
-        f"교체 없이 {len(sample)}편의 overview에서 동일한 폐루프 행동 주장과 평가 범위를 점검했다. "
-        f"해당 문구 없음 {probed['문구 없음']}편, 행동과 연결되는 근거 확인 {probed['행동 근거 확인']}편, "
-        f"원문 범위를 벗어난 귀속 {probed['적용 범위 오류']}편, 판정 유보 {probed['판정 유보']}편이었다. "
-        "이 표본은 특정 서술 오류를 찾기 위한 검사다. 표본의 발견률을 열 가지 필드의 전체 오류율로 일반화할 수 없다.",
-        f"- 같은 서식이 남아 있던 **{cleaned:,}개 overview의 {appearances:,}곳**을 정리했다. "
-        "원문의 출력·평가가 확인된 경우 요약과 기여를 구체화했고, 나머지 자동 발췌에는 출처 수준을 표시했다. "
-        f"기존 정규화 배치에서 이미 확인한 {aligned}편은 그 요약과 기여를 overview에 연결했다. 공통 문구를 지운 일만으로 요약을 통과시키지 않았다.",
-        f"- 자동 검색 분류에서 ‘reinforcement’의 일부가 ‘force’로 읽혀 {len(cue_rows)}편에 잘못된 단서가 붙었다. "
-        f"힘·토크 단서 {cue_counts['force_torque']}건과 접촉 단서 {cue_counts['contact_rich']}건을 제거하고 생성 규칙을 고쳤다. "
-        "독립적인 접촉 단어가 있는 논문은 해당 단서를 유지했다.",
-        f"- 이번에 확인한 사실 오류는 " + ", ".join(f"{FIELDS[k]} {found[k]}건" for k in FIELDS if found[k]) + "이다. "
-        "원문에서 대상으로 삼은 출력과 실험으로 보인 효과를 구분한다. 예를 들어 3DVG-Transformer는 언어가 가리키는 3D 물체를 찾고, "
-        "Masked Autoencoders는 가려진 패치를 복원해 시각 표현을 학습한다. "
-        "[3DVG-Transformer 게재본](https://openaccess.thecvf.com/content/ICCV2021/html/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.html) · "
-        "[Masked Autoencoders 게재본](https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html)", "",
-        "## 항목별 결과", "",
-        "| 항목 | 11월 20일에 확인한 오류 | 현재 통과 | 존재 불확실 | 수정 필요 |",
-        "|---|---:|---:|---:|---:|",
-    ]
-    for field, label in FIELDS.items():
-        c = Counter(v[field] for v in states.values())
-        lines.append(f"| {label} | {found[field]} | {c[PASS]:,} | {c[OPEN]:,} | {c[EDIT]} |")
-    lines += ["", "링크는 대표 원문과 기재한 부가 주소별로 판정한다. 원문만 열리더라도 다른 링크의 판정은 유지한다. "
-              "잘못된 주소를 걷어낸 뒤 대체 주소가 확인되지 않은 경우에는 그 역할이 미확인이다. "
-              "저자의 공개 표명이나 배포 파일로 코드·가중치·데이터를 각각 판단한다. 배포 근거를 찾지 못한 상태는 ‘존재 불확실’이다. "
-              f"기존 요약 판정에는 overview 대신 검증한 정규화 배치의 요약·기여를 대상으로 명시한 {old_scope}편이 포함된다. "
-              "논문별 근거의 `scope`에서 대상 텍스트를 확인할 수 있다.", "",
-              "## 읽기 등급별 확인 범위", "", "| 등급 | 논문 | 전 항목 통과 | 요약·기여 미확인 | 태그 미확인 | 공개 여부 중 한 가지 이상 미확인 |",
-              "|---|---:|---:|---:|---:|---:|"]
-    for tier in TIERS:
-        group = [r for r in rows if r["tier_at_audit"] == tier]
-        ss = [states[r["id"]] for r in group]
-        pending_artifacts = sum(any(v[k] == OPEN for k in ("code","weights","data")) for v in ss)
-        lines.append(f"| {tier} | {len(group)} | {counts(group)[0]} | {sum(v['summary']==OPEN for v in ss)} | "
-                     f"{sum(v['tags']==OPEN for v in ss)} | {pending_artifacts} |")
-    lines += ["", "## 배치별 결과", "", "| 배치 | 논문별 원장 행 | 편수 | 전 항목 통과 | 미확인 | 수정 필요 |",
-              "|---:|---|---:|---:|---:|---:|"]
-    for b in sorted({r["batch"] for r in rows}):
-        group = [r for r in rows if r["batch"] == b]
-        start = 1 + (b-1) * meta["batch_size"]
-        complete, pending, outstanding = counts(group)
-        lines.append(f"| <a id=\"batch-{b:02}\"></a>{b} | [{group[0]['id']}–{group[-1]['id']}]({ledger}#L{start}-L{start+len(group)-1}) "
-                     f"| {len(group)} | {complete} | {pending} | {outstanding} |")
-    lines += ["", "## 이전 감사", "",
+        "## 교정 재검증", "",
+        f"{post['verified_on']} 당시 점검 범위와 방법이다. [점검 시작 판본]({historic}/work/sources/papers.json)", "",
+        f"- 서지 출처에서 표제 {biblios['title']:,}편(대표 URL에서 {biblios['primary']:,}편), 저자 순서 {biblios['authors']:,}편, "
+        f"연도 {biblios['year']:,}편, 게재 근거 {biblios['venue']:,}편을 다시 확인했다. 서지가 엇갈리면 게재본 표제면을 대조했다.",
+        f"- 공개로 기록된 코드 {released_fields['code']}건·가중치 {released_fields['weights']}건·데이터 {released_fields['data']}건 중 "
+        f"{accessible}/{len(releases)}건에서 파일·목록 또는 웹페이지가 응답했다. 인증이 필요한 자료는 저자 배포 목록과 판본을 확인했다. "
+        "[AgiBot World Alpha 배포 목록](https://huggingface.co/api/datasets/agibot-world/AgiBotWorld-Alpha)",
+        f"- 안정 ID를 정렬해 `random.Random({post['seed']}).sample(ids, {len(sample)})`로 추출한 {len(sample)}편의 폐루프 행동 주장을 확인했다. "
+        f"문구 없음 {probed['문구 없음']}편, 행동 근거 확인 {probed['행동 근거 확인']}편, 범위 오류 {probed['적용 범위 오류']}편, "
+        f"유보 {probed['판정 유보']}편이다. 이 표본의 분모는 해당 문구를 검사한 논문이다.",
+        f"- 자동 서식 {cleaned}편·{appearances:,}곳을 정리하고 정규화 배치 {aligned}편을 개요와 연결했다. "
+        f"잘못 매칭된 {len(cue_rows)}편에서 힘·토크 단서 {cue_counts['force_torque']}건과 접촉 단서 {cue_counts['contact_rich']}건을 제거했다.", "",
+        "## 이전 감사", "",
               f"- 11월 19일의 파일 진단은 당시 1,227편의 태그 표기, 중복 의심, 발표일 해상도를 점검했다. 비슷한 제목으로 잡힌 GR00T N1.5와 N1.6은 별도 판본으로 유지했다. "
               f"정식 발표일이 연도 단위인 항목에서 최근 6개월 비중을 확정할 수 없다. [당시 분모·검사 기준]({historic}/research/REGISTRY_AUDIT.md) · [현행 통계](./REGISTRY_STATS.md)",
               f"- 같은 날 집중 읽기 477편 중 CORE 30편·NEXT 20편의 층화표본에서는 10/50편에서 11개 오류를 고쳤다. "

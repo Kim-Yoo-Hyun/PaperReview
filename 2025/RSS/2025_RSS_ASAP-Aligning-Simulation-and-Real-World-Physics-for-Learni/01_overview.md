@@ -10,7 +10,7 @@
 - Authors: Tairan He, Jiawei Gao, Wenli Xiao, Yuanhang Zhang, Zi Wang, Jiashun Wang, Zhengyi Luo, Guanqi He, Nikhil Sobanbabu, Chaoyi Pan, Zeji Yi, Guannan Qu, Kris Kitani, Jessica K. Hodgins, Linxi Fan, Yuke Zhu, Changliu Liu, Guanya Shi
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, sim-to-real, residual dynamics
+- Tags: Robotics, humanoid, whole-body control, sim-to-real, calibration, Reinforcement Learning
 - Official paper: https://www.roboticsproceedings.org/rss21/p066.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p066.pdf
 - Code/Project: https://agile.human2humanoid.com/

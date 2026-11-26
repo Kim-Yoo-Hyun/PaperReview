@@ -14,6 +14,7 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p145.html
 - Code/Project: https://hetolin.github.io/PoseVLA/
 - Code: https://github.com/hetolin/PoseVLA
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 5, 7, 8쪽](https://roboticsproceedings.org/rss22/p145.pdf#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,8 @@ Pose 표현을 VLA에 넣는 것만으로 새 기여를 주장하지 않도록 �
 ## Verification Boundary
 
 3D 데이터 규모·pose supervision·camera convention·test object 중복을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- PoseVLA의 행동 정책 후학습 · train_posttrain.py [배포 파일](https://raw.githubusercontent.com/hetolin/PoseVLA/1520c6b595fe75de4efe587dc5b5c2716376e4ae/train_posttrain.py)
+- PoseVLA 1단계 공간 사전학습 체크포인트 · model.safetensors [배포 파일](https://huggingface.co/hetolin/PoseVLA-stage1/resolve/2bf05b6880b22ac85dd6c3c4e9c34ddc71b15be6/model.safetensors)

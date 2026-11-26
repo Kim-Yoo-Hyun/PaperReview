@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): The second ta
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | The second task further intensifies the difficulty, requiring the robot to decompose the task into subtasks and execute the steps to operate ... | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | The strong generalization capabilities has inspired two main approaches in language-conditioned manipulation: pre-training visionlanguage-action models using large-scale robotics data, as demonstrated by ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
-| State / latent | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action | benchmark state/goal와 method decision | notation and tensor shape require body check |
-| Output / action | Besides, performance, declines, significantly, when, linguistic, instructions, transition | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
-| Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
+| Target problem | The second task further intensifies the difficulty, requiring the robot to decompose the task into subtasks and execute the steps to operate ... | 시뮬레이션의 언어 조건 장기 조작 벤치마크 | body wording is the source claim |
+| Observation / input | The strong generalization capabilities has inspired two main approaches in language-conditioned manipulation: pre-training visionlanguage-action models using large-scale robotics data, as demonstrated by ... | 정책 평가의 관측·지시와 별도 계획 평가의 표시된 이미지 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action | 과제 상태와 지시 의도·진행도 | notation and tensor shape require body check |
+| Output / action | Besides, performance, declines, significantly, when, linguistic, instructions, transition | VLA의 조작 행동 또는 VLM의 스킬 순서 | exact unit/frame/decoder require body check |
+| Target outcome | comparable score and protocol validity | 성공률·의도 점수·진행도 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

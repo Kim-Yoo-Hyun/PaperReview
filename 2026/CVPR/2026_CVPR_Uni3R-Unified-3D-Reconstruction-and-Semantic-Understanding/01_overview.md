@@ -45,12 +45,14 @@ Uni3R은 카메라 자세가 주어지지 않은 여러 영상을 받아 장면�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Qualitative comparison of novel view synthesis on RealEstate10k test set with 8 input images. | RGB-D, image set, point cloud, depth와 camera pose | p. 5 (3.2. Rendering with Open-Vocabulary Semantics), p. 2 (1. Introduction) |
-| State/latent | Qualitative, comparison, novel, view, synthesis, RealEstate10k, test, input, images, cross-frame, attention, mechanism | geometry, map, object/relationship state | p. 5 (3.2. Rendering with Open-Vocabulary Semantics), p. 2 (1. Introduction), p. 4 (3.1.2. Cross-View Transformer Encoder) |
-| Output/action | Its cross-frame attention mechanism enables robust feature fusion to produce globally consistent scene representations from an arbitrary number of input views, while its predicted point maps provide potent geometric guidance. • Uni3R ... | point map, pose, scene graph, affordance 또는 query result | p. 2 (1. Introduction), p. 4 (3.1.2. Cross-View Transformer Encoder), p. 5 (3.3. Training Objectives) |
-| Objective/outcome | The final training objective is a weighted sum of the individual losses: \mat h cal { L}_{\tex t {total}} = \mathcal {L}_{\text {rgb}} + \lambda _{\text {sem}}\mathcal {L}_{\text {sem}} + \lambda _{\text ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 6 (3.3. Training Objectives), p. 5 (3.3. Training Objectives), p. 3 (3. Method) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 외부 자세를 주지 않은 다중 RGB와 카메라 내부 파라미터 |
+| 표현 | 다중 뷰 토큰, 점 기하와 의미 특징 |
+| 출력 | 3D 가우시안 및 렌더링한 기하·색·의미 |
+| 평가 | 뷰 합성, 깊이와 의미 분할 정확도 |
+
+[방법 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=3) · [평가 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -76,3 +78,7 @@ Uni3R은 카메라 자세가 주어지지 않은 여러 영상을 받아 장면�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.1.2. Cross-View Transformer Encoder), p. 5 (3.3. Training Objectives), p. 6 (3.3. Training Objectives)이다.
+
+## 검색 태그 근거
+
+외부 자세를 주지 않은 여러 RGB 영상과 카메라 내부 파라미터로 가우시안 기하와 의미 특징을 예측한다. VGGT의 기하 및 CLIP 계열 의미 특징은 훈련 감독에 쓰고 분할에서 텍스트 질의를 사용한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_Uni3R_Unified_3D_Reconstruction_and_Semantic_Understanding_via_Generalizable_Gaussian_CVPR_2026_paper.pdf#page=7)

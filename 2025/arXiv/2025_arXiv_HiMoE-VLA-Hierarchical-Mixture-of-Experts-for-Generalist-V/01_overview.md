@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, action-interface, cross-embodiment
+- Tags: VLA, action-interface, cross-embodiment, mixture-of-experts
 - Aliases:
 - Official paper: https://arxiv.org/abs/2512.05693
 - Full-text retrieval: https://arxiv.org/pdf/2512.05693v2
@@ -35,6 +35,10 @@ HiMoE-VLA는 로봇마다 다른 행동 공간과 관측의 차이를 고려해 
 CALVIN·LIBERO 및 실제 로봇 평가를 보고한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2512.05693) · [저자 project/code](https://github.com/ZhiyingDu/HiMoE-VLA). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+행동 공간 사이의 라우터와 블록 내부 전문가를 나누고 중앙 층을 공유해 시연에서 흐름 기반 행동을 학습한다. LIBERO·CALVIN과 xArm7·양팔 ALOHA의 결과가 여러 기체에 대한 근거다. [원문 4쪽](https://arxiv.org/pdf/2512.05693v2#page=4) · [원문 7쪽](https://arxiv.org/pdf/2512.05693v2#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

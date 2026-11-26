@@ -10,7 +10,7 @@ CUT3R 공간 표현과 SigLIP 의미 표현을 융합하고 학습 중 미래 2D
 
 ## Observation–State–Action Interface
 
-영상 stream·언어 → semantic-spatial state → navigation action; predictive branch는 학습 보조다.
+단안 RGB 프레임과 언어 지시로 전진·회전·정지 행동을 예측한다. 미래 표현 예측 분기는 훈련 시에만 사용한다.
 
 ## Pipeline and Optimization Boundary
 

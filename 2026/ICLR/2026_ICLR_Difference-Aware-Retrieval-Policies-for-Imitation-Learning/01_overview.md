@@ -7,7 +7,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, evaluation, data-selection
+- Tags: Robotics, evaluation, retrieval, imitation-learning
 - Aliases:
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html
@@ -34,6 +34,10 @@ Query state·이웃 시연·상대 벡터 → action prediction.
 Continuous control과 manipulation, 고차원 시각 표현에서 BC와 비교한다.
 
 근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/8c2ecd140ebe227a531edc9a0c3b69d4-Abstract-Conference.html) · [저자 project/code](https://weirdlabuw.github.io/darp-site/) · [공식 code](https://github.com/WEIRDLabUW/darp).
+
+## 검색 태그 근거
+
+DARP는 행동 예측 시 질의 상태와 가까운 시연 상태·행동을 검색한다. 이웃과 질의의 차이로 후보 행동을 만든 뒤 통합하며, 연속 제어·조작에서 행동 복제와 비교한다. [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=7) · [원문 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/8c2ecd140ebe227a531edc9a0c3b69d4-Paper-Conference.pdf#page=9)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

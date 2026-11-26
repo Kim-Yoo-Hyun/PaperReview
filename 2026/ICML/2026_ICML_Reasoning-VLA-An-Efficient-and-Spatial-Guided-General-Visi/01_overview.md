@@ -10,7 +10,7 @@
 - Authors: Dapeng Zhang, Zhenlong Yuan, Zhangquan Chen, Chih-Ting Liao, Yinda Chen, Fei Shen, Qingguo Zhou, Tat-Seng Chua
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Vision-Language Model, Robotics, 3D Vision, Reinforcement Learning
+- Tags: VLA, Vision-Language Model, Robotics, trajectory representation, Reinforcement Learning
 - Official paper: https://icml.cc/virtual/2026/poster/62900
 - Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhang26ib/zhang26ib.pdf
 - Full-text retrieval at original review: https://openreview.net/pdf/2958fe5249a1a673a414d689de7784b306b2a02a.pdf

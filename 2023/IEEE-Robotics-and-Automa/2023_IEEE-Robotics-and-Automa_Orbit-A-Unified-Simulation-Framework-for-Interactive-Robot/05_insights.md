@@ -39,14 +39,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `standardized observation, action, task state와 evaluation split → benchmark state/goal와 method decision → policy/controller trajectory 또는 measured result`.
-- 이 논문의 재사용 가능한 지점은 To support working with diverse observations and action spaces, we include fixed-arm and mobile manipulators with different physically-based sensors and motion generators.를 We design the system bottom-up - from incorporating user-defined models for the actuator dynamics to modularizing task specifications for learning with different levels of observations and action spaces.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 benchmark state/goal와 method decision가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, and advance sensors, actuators, and motion gene ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `과제별 상태·센서 관측 및 보행 명령 → Isaac Sim의 로봇·물체·센서·제어 모듈 → 조작 행동과 보행 정책 명령`.
+- 이 논문의 재사용 가능한 지점은 To support working with diverse observations and action spaces, we include fixed-arm and mobile manipulators with different physically-based sensors and motion generators.를 We design the system bottom-up - from incorporating user-defined models for the actuator dynamics to modularizing task specifications for learning with different levels of observations and action spaces.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 Isaac Sim의 로봇·물체·센서·제어 모듈가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 ORBIT exploits the latest state-of-the-art simulation capabilities through Isaac Sim and extends them further to incorporate different actuator and sensor noise models into the simulation, and advance sensors, actuators, and motion gene ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: Our main contributions are as follows:
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `RL, IL, offline learning, and robot data`; tags: `Robotics, simulation, Robot Learning, Benchmark, NVIDIA`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

@@ -79,3 +79,7 @@ GaussianZoom은 저해상도 관측으로부터 점차 확대해 볼 수 있는 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (4.1. Multi-View Consistent SR Module), p. 4 (4.1. Multi-View Consistent SR Module)이다.
+
+## 검색 태그 근거
+
+초기 장면에서 확대할 영역을 정하고, 렌더링한 뷰와 깊이·VLM이 만든 설명으로 높은 해상도의 확대 영상을 생성한다. 이 영상으로 세부 수준별 가우시안을 학습한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_GaussianZoom_Progressive_Zoom-in_Generative_3D_Gaussian_Splatting_with_Geometric_and_CVPR_2026_paper.pdf#page=7)

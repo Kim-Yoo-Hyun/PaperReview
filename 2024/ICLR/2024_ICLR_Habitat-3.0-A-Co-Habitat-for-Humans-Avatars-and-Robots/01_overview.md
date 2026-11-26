@@ -46,10 +46,10 @@ Habitat 3.0은 가상 사람과 로봇이 실내에서 함께 이동하거나 �
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The policy uses a ResNet-18 (He et al., 2016) visual encoder to embed the 256 × 256 depth input image into a 512 dimension embedding. | standardized observation, action, task state와 evaluation split | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 2 (1 INTRODUCTION) |
-| State/latent | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension, embedding, generate | benchmark state/goal와 method decision | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 2 (1 INTRODUCTION), p. 17 (A.2 SOCIAL REARRANGEMENT) |
-| Output/action | (2019)) to generate realistic body shapes and poses, (4) a library of avatars made from 12 base models with multiple gender representations, body shapes, and appearances, (5) a motion and behavior generation ... | policy/controller trajectory 또는 measured result | p. 2 (1 INTRODUCTION), p. 17 (A.2 SOCIAL REARRANGEMENT), p. 18 (A.2 SOCIAL REARRANGEMENT) |
-| Objective/outcome | We use 2 PPO minibatches and 1 epoch per update, an entropy loss of 1e-4, and clip the gradient norm to 0.2. | success metric, robustness, generalization과 reproducibility | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 17 (A.1 SOCIAL NAVIGATION), p. 16 (A.1 SOCIAL NAVIGATION) |
+| Observation/input | The policy uses a ResNet-18 (He et al., 2016) visual encoder to embed the 256 × 256 depth input image into a 512 dimension embedding. | 팔 카메라, 과제별 사람 감지·위치 또는 로봇 관절 상태 | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 2 (1 INTRODUCTION) |
+| State/latent | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension, embedding, generate | 상대 위치, 로봇과 물체 상태, 협력 목표 | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 2 (1 INTRODUCTION), p. 17 (A.2 SOCIAL REARRANGEMENT) |
+| Output/action | (2019)) to generate realistic body shapes and poses, (4) a library of avatars made from 12 base models with multiple gender representations, body shapes, and appearances, (5) a motion and behavior generation ... | 사람 추종을 위한 베이스 명령 또는 협력 재배치 행동 | p. 2 (1 INTRODUCTION), p. 17 (A.2 SOCIAL REARRANGEMENT), p. 18 (A.2 SOCIAL REARRANGEMENT) |
+| Objective/outcome | We use 2 PPO minibatches and 1 epoch per update, an entropy loss of 1e-4, and clip the gradient norm to 0.2. | 사회적 내비게이션과 물체 재배치의 성공·충돌 | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 17 (A.1 SOCIAL NAVIGATION), p. 16 (A.1 SOCIAL NAVIGATION) |
 
 ## Main Claims and Actual Contribution
 
@@ -75,6 +75,10 @@ Habitat 3.0은 가상 사람과 로봇이 실내에서 함께 이동하거나 �
 - **p. 17 / Figure/Table caption - extractive body cue:** Figure 5: Social Navigation training curves. We plot the training average distance to the humanoid and reward for the social navigation baselines and ablations. We ...
 - **p. 18 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** The final social rearrangement reward is as follows: rsocial-rearrange t = 10 · ⊮success + 5 · ⊮subgoal -5 · ⊮collision -0.005.
 - **p. 23 / Figure/Table caption - extractive body cue:** Table 3: Social Rearrangement baseline results. in place does no part of the task, thus reducing the total number of collisions. In the ZSC setting, ...
+
+## 검색 태그 근거
+
+사람의 움직임은 휴머노이드 아바타로 구현하고, 조작기가 달린 Spot을 사회적 내비게이션과 협동 물체 재배치에서 제어한다. 사회적 추종의 DDPPO 정책은 팔 카메라 깊이와 사람 감지·상대 위치를 사용하며, 재배치 실험은 시각 관측과 관절 상태를 조합한다. [원문 6쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=6) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2024/file/430894999584d0bd358611e2ecf00b15-Paper-Conference.pdf#page=7)
 
 ## Why Read It
 

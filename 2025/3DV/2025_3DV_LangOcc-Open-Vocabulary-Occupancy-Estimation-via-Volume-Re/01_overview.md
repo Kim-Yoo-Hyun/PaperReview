@@ -10,7 +10,7 @@
 - Authors: Simon Boeder, Fabian Gigengack, Benjamin Risse
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: sensor fusion, LiDAR, 3D Vision
+- Tags: open-vocabulary, semantic occupancy, 3D Vision
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00024
 - PDF title variant: LangOcc: Self-Supervised Open Vocabulary Occupancy Estimation via Volume Rendering [원문 표제면](https://arxiv.org/pdf/2407.17310v2#page=1) · [공식 서지](https://api.crossref.org/works/10.1109/3dv66043.2025.00024)
 - Preprint PDF: https://arxiv.org/pdf/2407.17310

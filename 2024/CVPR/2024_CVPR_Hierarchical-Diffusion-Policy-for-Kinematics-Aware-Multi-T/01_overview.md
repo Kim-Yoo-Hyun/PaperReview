@@ -44,12 +44,14 @@ HDP는 다음에 도달할 말단 자세를 먼저 정한 뒤 목표 조건부 �
 
 ## Observation, State, and Output Interface
 
+그림 3의 입력은 여러 시점의 RGB-D로 만든 점군, 언어 지시, 로봇 상태다. 시연으로 말단·관절 확산 정책을 학습하고 순기구학과 역기구학 보정으로 궤적을 만든다. RLBench와 실물 오븐 열기·서랍 분류를 다뤘다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ma_Hierarchical_Diffusion_Policy_for_Kinematics-Aware_Multi-Task_Robotic_Manipulation_CVPR_2024_paper.pdf#page=4) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ma_Hierarchical_Diffusion_Policy_for_Kinematics-Aware_Multi-Task_Robotic_Manipulation_CVPR_2024_paper.pdf#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The model can be trained by maximising the evidence lower bound (ELBO) \math bb {E}_ { x_ 0 }[\ log p_\t heta (x^0) ] \ge \mathbb {E}_q\left [\log \frac {p_\theta (x^{0:K})}{q(x^{1:K}/x^0)}\right ]\label ... | RGB-D/point cloud, object state와 contact/task observation | p. 3 (3.1. Diffusion Models), p. 4 (4. Hierarchical Diffusion Policy) |
-| State/latent | model, trained, maximising, evidence, lower, bound, ELBO, math, heta, mathbb, left, frac | object geometry, affordance, contact mode 또는 end-effector state | p. 3 (3.1. Diffusion Models), p. 4 (4. Hierarchical Diffusion Policy), p. 1 (1. Introduction) |
-| Output/action | We aim to learn a HDP policy π(a / o, l), which processes the RGB-D observation o and language instruction l, specifying the task, to predict a hybrid action a. | grasp, pose, force 또는 end-effector trajectory | p. 4 (4. Hierarchical Diffusion Policy), p. 1 (1. Introduction), p. 1 (1. Introduction) |
-| Objective/outcome | The network is optimised by behaviour cloning losses, i.e., cross-entropy losses in the discrete action space \ma t hcal {L}_ \mat hrm {high} = - \m athbb {E}_{k\sim \xi , \xi \sim ... | task completion, contact success, pose/force error와 generalization | p. 4 (4.2. High-Level Next-Best Pose Agent), p. 5 (4.3. Low-Level RK-Diffuser), p. 5 (4.3. Low-Level RK-Diffuser) |
+| Observation/input | The model can be trained by maximising the evidence lower bound (ELBO) \math bb {E}_ { x_ 0 }[\ log p_\t heta (x^0) ] \ge \mathbb {E}_q\left [\log \frac {p_\theta (x^{0:K})}{q(x^{1:K}/x^0)}\right ]\label ... | 다중 시점 RGB-D 점군·언어 지시·로봇 상태 | p. 3 (3.1. Diffusion Models), p. 4 (4. Hierarchical Diffusion Policy) |
+| State/latent | model, trained, maximising, evidence, lower, bound, ELBO, math, heta, mathbb, left, frac | 말단과 관절 궤적의 확산 표현 및 순기구학 | p. 3 (3.1. Diffusion Models), p. 4 (4. Hierarchical Diffusion Policy), p. 1 (1. Introduction) |
+| Output/action | We aim to learn a HDP policy π(a / o, l), which processes the RGB-D observation o and language instruction l, specifying the task, to predict a hybrid action a. | 말단 목표와 실행할 관절 궤적 | p. 4 (4. Hierarchical Diffusion Policy), p. 1 (1. Introduction), p. 1 (1. Introduction) |
+| Objective/outcome | The network is optimised by behaviour cloning losses, i.e., cross-entropy losses in the discrete action space \ma t hcal {L}_ \mat hrm {high} = - \m athbb {E}_{k\sim \xi , \xi \sim ... | 과제 성공 및 운동학적 궤적 타당성 | p. 4 (4.2. High-Level Next-Best Pose Agent), p. 5 (4.3. Low-Level RK-Diffuser), p. 5 (4.3. Low-Level RK-Diffuser) |
 
 ## Main Claims and Actual Contribution
 

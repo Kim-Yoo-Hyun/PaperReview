@@ -7,7 +7,7 @@
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: tactile-RL, binary-contact, self-supervised-learning, dexterity
+- Tags: tactile-RL, binary-contact, self-supervised-learning, dexterity, Benchmark
 - Aliases: RoTO, Robot Tactile Olympiad
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html
 - Venue verification: https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html
@@ -34,6 +34,10 @@ Binary contact·proprioception → 표현/memory → contact-rich control.
 RoTO 실험은 Isaac Lab의 세 과제로 구성된다. 10초 동안 공을 88번 튀긴 수치와 보정구를 25번 회전시킨 수치는 시뮬레이션 에이전트의 최고 기록이다. [PDF 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=6) · [PDF 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=9)
 
 근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/bc09efb501c801ed92e181e26a885c2d-Abstract-Conference.html) · [저자 project/code](https://elle-miller.github.io/tactile_rl/) · [공식 code](https://github.com/elle-miller/roto).
+
+## 검색 태그 근거
+
+정책은 고유수용 상태와 접촉의 유무를 받는다. PPO에 접촉 복원·다음 상태 예측 등의 자기지도 목표를 더해 비교했다. Isaac Lab에서 Franka의 구 찾기와 Shadow Hand의 공 튀기기·두 공 돌리기를 평가했다. [원문 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=4) · [원문 6쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=6) · [원문 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/bc09efb501c801ed92e181e26a885c2d-Paper-Conference.pdf#page=9)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

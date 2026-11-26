@@ -8,9 +8,9 @@
 
 - Year/Venue: 2025 / ICCV
 - Authors: Guanxing Lu, Baoxiong Jia, Puhao Li, Yixin Chen, Ziwei Wang, Yansong Tang, Siyuan Huang
-- Primary track: VLA and generalist robot policies
+- Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Gaussian Splatting, world model, Robotics
+- Tags: Gaussian Splatting, world model, Robotics, Diffusion
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ GWM은 행동에 따라 장면의 3차원 가우시안이 어떻게 이동하는
 
 ## Observation, State, and Output Interface
 
+그림 2·§3.1–3.3의 입력은 한두 RGB 관측에서 복원한 가우시안과 로봇 행동이다. 동역학은 잠재 확산으로 학습한다. 하위 평가에는 모방학습·모델 기반 RL과 실제 팔에서의 확산 정책이 포함된다. 언어 지시는 동역학 입력에 없다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=4) · [PDF 8쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Lu_GWM_Towards_Scalable_Gaussian_World_Models_for_Robotic_Manipulation_ICCV_2025_paper.pdf#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Feed-forward 3D Gaussian Splatting Given single or two-view image inputs I = {I}i={1,2} of a world state, our goal is to first encode the scene into 3D Gaussian representations for dynamics learning ... | image/video, language instruction, proprioception과 history | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding) |
-| State/latent | Feed-forward, Gaussian, Splatting, Given, single, two-view, image, inputs, world, state, goal, first | language-grounded task state와 action-policy context | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding), p. 6 (4.2. GWM-based Imitation Learning) |
-| Output/action | Specifically, we obtain the 3D Gaussian world state G using Splatt3R [70], which first employs the stereo reconstruction model Mast3R [37] to generate 3D point maps from input images and then predicts ... | continuous action, pose 또는 action chunk | p. 3 (3.1. World State Encoding), p. 6 (4.2. GWM-based Imitation Learning), p. 2 (1. Introduction) |
-| Objective/outcome | The goal of model-based RL [31] is to learn a policy π that maximizes the expected sum of discounted rewards π∗ = arg maxπ Eπ [P∞ t=0 γtrt] while constructing a model ... | instruction following, task success, generalization과 latency | p. 5 (3.3. GWM for Policy Learning), p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 5 (3.2. Diffusion-based Dynamics Modeling) |
+| Observation/input | Feed-forward 3D Gaussian Splatting Given single or two-view image inputs I = {I}i={1,2} of a world state, our goal is to first encode the scene into 3D Gaussian representations for dynamics learning ... | 한두 시점 RGB에서 얻은 장면 표현과 로봇 행동 이력 | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding) |
+| State/latent | Feed-forward, Gaussian, Splatting, Given, single, two-view, image, inputs, world, state, goal, first | 3D 가우시안 집합을 압축한 잠재 상태 | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding), p. 6 (4.2. GWM-based Imitation Learning) |
+| Output/action | Specifically, we obtain the 3D Gaussian world state G using Splatt3R [70], which first employs the stereo reconstruction model Mast3R [37] to generate 3D point maps from input images and then predicts ... | 예측한 다음 장면 상태와 렌더링 영상 | p. 3 (3.1. World State Encoding), p. 6 (4.2. GWM-based Imitation Learning), p. 2 (1. Introduction) |
+| Objective/outcome | The goal of model-based RL [31] is to learn a policy π that maximizes the expected sum of discounted rewards π∗ = arg maxπ Eπ [P∞ t=0 γtrt] while constructing a model ... | 영상 예측 품질 및 하위 모방학습·모델 기반 RL 성과 | p. 5 (3.3. GWM for Policy Learning), p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 5 (3.2. Diffusion-based Dynamics Modeling) |
 
 ## Main Claims and Actual Contribution
 

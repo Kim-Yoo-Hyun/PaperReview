@@ -10,7 +10,7 @@
 - Authors: Botao Ye, Sifei Liu, Haofei Xu, Xueting Li, Marc Pollefeys, Ming-Hsuan Yang, Songyou Peng
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, geometry, 3D Vision
+- Tags: Gaussian Splatting, geometry, 3D Vision, camera pose
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/857b34d81f0a8bfe3e18879dee3b5086-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ NoPoSplat은 상대 자세를 모르는 소수 영상에서 한 입력 카메라
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (3 METHOD)이다.
+
+## 검색 태그 근거
+
+첫 카메라 좌표계를 공통 기준으로 삼는 순전파 모델로 여러 RGB 영상의 가우시안을 예측한다. 카메라 내부 파라미터를 조건화하며, 가우시안 대응에서 상대 자세를 계산하는 실험도 보고했다. [원문 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=3) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/857b34d81f0a8bfe3e18879dee3b5086-Paper-Conference.pdf#page=7)

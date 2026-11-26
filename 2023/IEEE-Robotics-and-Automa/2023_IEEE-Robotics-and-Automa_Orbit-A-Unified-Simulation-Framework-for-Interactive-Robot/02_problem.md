@@ -22,11 +22,11 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION)): However, exis
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, existing platforms often need to make a trade-off between these aspects. | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | To support working with diverse observations and action spaces, we include fixed-arm and mobile manipulators with different physically-based sensors and motion generators. | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
-| State / latent | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators | benchmark state/goal와 method decision | notation and tensor shape require body check |
-| Output / action | framework, design, decisions, abstractions, Sec, Additionally, demonstrate, sim-to-real | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
-| Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
+| Target problem | However, existing platforms often need to make a trade-off between these aspects. | Orbit의 모의 조작과 ANYmal-D 보행 전이 | body wording is the source claim |
+| Observation / input | To support working with diverse observations and action spaces, we include fixed-arm and mobile manipulators with different physically-based sensors and motion generators. | 과제별 상태·센서 관측 및 보행 명령 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators | Isaac Sim의 로봇·물체·센서·제어 모듈 | notation and tensor shape require body check |
+| Output / action | framework, design, decisions, abstractions, Sec, Additionally, demonstrate, sim-to-real | 조작 행동과 보행 정책 명령 | exact unit/frame/decoder require body check |
+| Target outcome | comparable score and protocol validity | 조작 학습 성과와 실물 보행 실행 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

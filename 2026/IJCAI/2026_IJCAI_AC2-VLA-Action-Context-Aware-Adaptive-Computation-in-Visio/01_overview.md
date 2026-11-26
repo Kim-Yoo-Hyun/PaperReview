@@ -12,8 +12,9 @@
 - Aliases: AC2-VLA, AC^2-VLA, AC²-VLA
 - Official paper: https://ijcai.org/proceedings/2026/228
 - Venue verification: https://ijcai.org/proceedings/2026/228
-- Code/Project: https://github.com/SunnyYWD/AC-2-VLA
-- Code: https://github.com/SunnyYWD/AC-2-VLA
+- Code/Project: https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA
+- Code: https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 5, 6, 7쪽](https://www.ijcai.org/proceedings/2026/0228.pdf#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 초록과 metadata 수준의 정리다. 구체적 실험 조건·수치·본문 한계는 추가 확인이 필요하다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -33,7 +34,7 @@ AC2-VLA는 현재 영상과 지시, 직전 행동을 보고 어느 시점에 시
 
 Robotic manipulation benchmark에서 계산량·속도와 성공을 비교한다. 초록만으로 real-robot trial 조건은 확정하지 않는다.
 
-근거: [공식 paper/abstract](https://ijcai.org/proceedings/2026/228) · [저자 project/code](https://github.com/SunnyYWD/AC-2-VLA). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
+근거: [공식 paper/abstract](https://ijcai.org/proceedings/2026/228) · [저자 project/code](https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA). 인용한 결과 외의 수치, 기준선의 비교 조건과 실패 범위는 추가 확인이 필요하다.
 
 ## Why This Paper Is Here — Researcher Interpretation
 
@@ -42,3 +43,7 @@ RL 기반 시간 적응과 비교할 학습된 계산 절감 baseline이며 지�
 ## Verification Boundary
 
 본문에서 확인할 항목: 관측 age·cache invalidation·학습 추가 비용·FLOPs와 실측 latency. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- AC²-VLA 저자의 공개 구현 · Action_Prior_VLA_model/router.py [배포 파일](https://raw.githubusercontent.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA/835b0fd2a36c070bf44b7ad58f5a8b75805157d2/Action_Prior_VLA_model/router.py)

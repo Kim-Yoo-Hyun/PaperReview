@@ -10,7 +10,7 @@
 - Authors: Zhongyi Zhou, Yichen Zhu, Xiaoyu Liu, Zhibin Tang, Junjie Wen, Yaxin Peng, Chaomin Shen, Yi Xu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Vision-Language Model, Reinforcement Learning
+- Tags: VLA, Vision-Language Model, co-training, mixture of experts
 - Publication index title: ChatVLA-2: Vision-Language-Action Model with Open-World Reasoning
 - Official paper: https://neurips.cc/virtual/2025/poster/120199
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/41128e5b3a7622da5b17588757599077-Paper-Conference.pdf

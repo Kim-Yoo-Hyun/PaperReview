@@ -41,3 +41,8 @@ Flow denoising과 environment interaction의 확률적 정책 인터페이스.
 ## Verification Boundary
 
 Flow-Noise/Flow-SDE 구분, likelihood 집계, normalizer와 update budget을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · OpenPI 흐름 정책의 강화학습 표집기 · rlinf/models/embodiment/openpi/sampling/rl_sampler.py [배포 파일](https://raw.githubusercontent.com/RLinf/RLinf/3b98d93b0c8be5bb8764935c7e9d04cfa2658d62/rlinf/models/embodiment/openpi/sampling/rl_sampler.py)
+- 가중치 · CALVIN ABC→D에서 Flow-SDE로 학습한 π₀.₅ 정책 · model.safetensors [배포 파일](https://huggingface.co/RLinf/RLinf-Pi05-CALVIN-ABC-D-RL-FlowSDE/resolve/712bd3da6f8a92be8004ccf53078af70cc945bc7/model.safetensors)

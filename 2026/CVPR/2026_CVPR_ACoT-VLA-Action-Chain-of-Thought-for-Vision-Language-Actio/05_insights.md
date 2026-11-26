@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action Policy Instruction Observation Actions Reference Actions Fig ...를 Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the specified task.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Concretely, LIBERO-Plus introduces 7 perturbation dimensions, i.e., camera-viewpoints (Camera), robot-initialstates (Robot), language-variations (Language), lightingconditions (Light), background-textures (Background), sensor-noise (Noi ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `영상·언어 지시 및 학습 시의 시연 행동 → 명시적 기준 행동 궤적과 암시적 행동 특징 → 최종 행동 시퀀스`.
+- 이 논문의 재사용 가능한 지점은 (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action Policy Instruction Observation Actions Reference Actions Fig ...를 Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the specified task.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 명시적 기준 행동 궤적과 암시적 행동 특징가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Concretely, LIBERO-Plus introduces 7 perturbation dimensions, i.e., camera-viewpoints (Camera), robot-initialstates (Robot), language-variations (Language), lightingconditions (Light), background-textures (Background), sensor-noise (Noi ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: To summarize, our main contributions are as follows: • Conceptually, we introduce Action Chain of Thought (ACoT), a new paradigm for generalist robot policies.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `VLA and generalist robot policies`; tags: `VLA, Chain-of-Thought, Planning`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

@@ -10,7 +10,7 @@
 - Authors: Yining Hong, Zishuo Zheng, Peihao Chen, Yian Wang, Junyan Li, Chuang Gan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: LLM, 3D Vision, sensor fusion
+- Tags: LLM, 3D Vision, sensor fusion, tactile sensing, audio
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ MultiPLY는 실내 장면에서 물체에 행동을 가한 뒤 얻는 시각·�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | To sum up, the contributions of this paper are: • We propose Multisensory Universe, a large-scale multisensory dataset comprising 500k data collected by an agent engaging with the 3D embodied environment, covering ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1. Introduction), p. 2 (1. Introduction) |
-| State/latent | contributions, Multisensory, Universe, large-scale, dataset, comprising, data, collected, agent, engaging, embodied, environment | geometry, map, object/relationship state | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.4. Training & Inference) |
-| Output/action | In the inference time, MultiPLY could generate a series of action tokens through the LLM, instructing the agent to take the action and receive the outcome of the action as the next-state ... | point map, pose, scene graph, affordance 또는 query result | p. 2 (1. Introduction), p. 6 (4.4. Training & Inference), p. 5 (4.2. Action Tokens) |
-| Objective/outcome | The feature goes through a Sigmoid layer, and is optimized with a binary cross entropy (BCE) loss. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 6 (4.4. Training & Inference), p. 5 (4.4. Training & Inference), p. 5 (4.4. Training & Inference) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 텍스트 및 시뮬레이션의 영상·점군·소리·촉각·온도 |
+| 표현 | 물체 개념 그래프와 관측 토큰 |
+| 출력 | 상호작용 토큰과 질문의 텍스트 답변 |
+| 평가 | 모의 환경의 다감각 탐색과 응답 |
+
+[원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=4) · [원문 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=5) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=6)
 
 ## Main Claims and Actual Contribution
 
@@ -71,3 +73,7 @@ Multisensory Universe는 실내 스캔에 배치한 물체와 시뮬레이션 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (4.4. Training & Inference), p. 6 (4.4. Training & Inference)이다.
+
+## 검색 태그 근거
+
+상호작용 토큰이 시뮬레이터에서 관찰·이동·접촉을 요청한다. 반환된 시각·점군·소리·촉각·온도 정보를 응답 생성에 사용한다. 이동 실행은 별도 경로 탐색기가 담당한다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=4) · [원문 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=5) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Hong_MultiPLY_A_Multisensory_Object-Centric_Embodied_Large_Language_Model_in_3D_CVPR_2024_paper.pdf#page=6)

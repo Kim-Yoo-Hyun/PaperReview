@@ -10,7 +10,7 @@
 - Authors: Yi Zhao, Aidan Scannell, Wenshuai Zhao, Yuxin Hou, Tianyu Cui, Le Chen, Dieter Büchler, Arno Solin, Juho Kannala, Joni Pajarinen
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, Reinforcement Learning, world model, non-curated data
+- Tags: Robotics, Reinforcement Learning, world model, non-curated data, behavior cloning
 - Official paper: https://iclr.cc/virtual/2026/poster/10007436
 - Full-text retrieval: https://arxiv.org/pdf/2502.19544
 - Code/Project: https://aidanscannell.com/publications/efficient-rl-by-guiding-generalist-world-models-with-non-curated-data/

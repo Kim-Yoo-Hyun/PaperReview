@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, most of these approaches rely solely on 2D imagery, lacking awareness of This CVPR paper is the Open Access version, provided ... | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | After the FiLM conditioned QFormer aggregates the visual features into a compact observation embedding zobs, a diffusion policy is employed as the ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
-| State / latent | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
-| Output / action | math, mathbf, text, boldsymbol, varepsilon, Big, label, diff_loss | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
-| Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
+| Target problem | However, most of these approaches rely solely on 2D imagery, lacking awareness of This CVPR paper is the Open Access version, provided ... | 시점 변화에 따른 팔 조작 | body wording is the source claim |
+| Observation / input | After the FiLM conditioned QFormer aggregates the visual features into a compact observation embedding zobs, a diffusion policy is employed as the ... | 카메라의 RGB·깊이·시점 정보와 언어 지시 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding | 목표 시점 복원으로 학습한 영상 특징 | notation and tensor shape require body check |
+| Output / action | math, mathbf, text, boldsymbol, varepsilon, Big, label, diff_loss | 확산 정책이 예측한 말단·그리퍼 행동 | exact unit/frame/decoder require body check |
+| Target outcome | completion, contact success and robustness | 관측 시점별 시뮬레이션·실물 조작 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

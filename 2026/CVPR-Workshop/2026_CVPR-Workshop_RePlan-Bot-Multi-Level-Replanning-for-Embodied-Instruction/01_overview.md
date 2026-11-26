@@ -8,7 +8,7 @@
 - Category: Planning and Long-Horizon Reasoning
 - Primary track: Planning and control
 - Tier: REFERENCE
-- Tags: Planning, language, execution
+- Tags: Planning, language, execution, embodied navigation
 - Aliases:
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/html/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf
@@ -35,6 +35,10 @@ RePlan-Bot은 자연어 지시를 수행하면서 관측을 바탕으로 다음 
 ALFRED instruction following 평가를 보고한다.
 
 근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/html/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.html). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+ALFRED에서 LLM이 하위 목표를 감사하고, RGB에서 추정한 깊이와 인스턴스 마스크로 3차원 지도를 만든다. 중간 단계의 탐색과 하위 행동 보정을 따로 평가한다. 깊이는 추정한 중간 표현이다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=4) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026W/GRAIL-V/papers/Gong_RePlan-Bot_Multi-Level_Replanning_for_Embodied_Instruction_Following_CVPRW_2026_paper.pdf#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

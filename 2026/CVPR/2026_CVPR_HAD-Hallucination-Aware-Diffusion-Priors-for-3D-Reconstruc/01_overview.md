@@ -78,3 +78,7 @@ HAD는 희소 뷰에서 확산 모델이 합성한 영상 중 입력 장면과 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Preliminary), p. 5 (4.2.2. Hallucination Score Estimation)이다.
+
+## 검색 태그 근거
+
+합성 새 시점의 각 픽셀이 참조 뷰와 기하적으로 일치하는지 채점한다. 확산 모델의 후보 가운데 신뢰도 높은 픽셀을 선택해 희소 뷰 장면을 복원한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_HAD_Hallucination-Aware_Diffusion_Priors_for_3D_Reconstruction_CVPR_2026_paper.pdf#page=7)

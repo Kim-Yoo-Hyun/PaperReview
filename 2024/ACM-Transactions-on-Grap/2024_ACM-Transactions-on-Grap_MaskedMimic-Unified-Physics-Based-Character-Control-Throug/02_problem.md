@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (3 PRELIMIN
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Prior works in physics-based simulation has addressed these challenges by developing specialized controllers for specific tasks such as locomotion, object interaction, and ... | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | (2) 𝑝(𝑠,𝑔/𝜋) denotes the distribution of states and goals observed under the student policy. | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
-| Output / action | agent, then, samples, action, policy, objective, predict, next | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
-| Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
+| Target problem | Prior works in physics-based simulation has addressed these challenges by developing specialized controllers for specific tasks such as locomotion, object interaction, and ... | 시뮬레이션 캐릭터의 부분 목표 조건 제어 | body wording is the source claim |
+| Observation / input | (2) 𝑝(𝑠,𝑔/𝜋) denotes the distribution of states and goals observed under the student policy. | 캐릭터 상태와 부분 관절·경로·텍스트 등 명령 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations | 완전한 추종 교사와 부분 목표 학생의 잠재 표현 | notation and tensor shape require body check |
+| Output / action | agent, then, samples, action, policy, objective, predict, next | 캐릭터의 관절 제어 명령 | exact unit/frame/decoder require body check |
+| Target outcome | motion/task success and recovery | 전체·희소 관절 추종 오차와 과제 수행 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

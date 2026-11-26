@@ -44,12 +44,14 @@ ManiSkill은 물리 시뮬레이터에서 다양한 물체에 대한 조작 기�
 
 ## Observation, State, and Output Interface
 
+움직이는 받침의 팔·양팔로 수납장을 열고 의자를 밀거나 물통을 옮긴다. 전문가 시연 생성에는 물체별 RL을, 표의 기준선에는 행동 복제와 오프라인 RL을 쓴다. 관측 모드는 상태·RGB-D·점군이며 대표 비교는 점군 조건이다. [PDF 5쪽](https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/eda80a3d5b344bc40f3bc04f65b7a357-Paper-round2.pdf#page=5) · [PDF 9쪽](https://datasets-benchmarks-proceedings.neurips.cc/paper_files/paper/2021/file/eda80a3d5b344bc40f3bc04f65b7a357-Paper-round2.pdf#page=9)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | In pointcloud and rgbd modes, the object states in s are replaced by the corresponding point cloud / RGB-D visual observations captured from a panoramic camera mounted on a robot. state mode ... | standardized observation, action, task state와 evaluation split | p. 5 (Abstract), p. 4 (Abstract) |
-| State/latent | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D, visual, observations | benchmark state/goal와 method decision | p. 5 (Abstract), p. 4 (Abstract), p. 5 (Abstract) |
-| Output/action | 2 ManiSkill Benchmark The goal of building ManiSkill benchmark can be best described as facilitating learning generalizable manipulation skills from 3D visual inputs with demonstrations. "Manipulation" involves low-level physical intera ... | policy/controller trajectory 또는 measured result | p. 4 (Abstract), p. 5 (Abstract), p. 1 (Abstract) |
-| Objective/outcome | In order to quickly verify the reward template (as our tasks are complicated and solving by RL takes hours), we use Model-Predictive Control (MPC) via Cross Entropy Method (CEM), which can be ... | success metric, robustness, generalization과 reproducibility | p. 7 (Abstract), p. 3 (Abstract), p. 4 (Abstract) |
+| Observation/input | In pointcloud and rgbd modes, the object states in s are replaced by the corresponding point cloud / RGB-D visual observations captured from a panoramic camera mounted on a robot. state mode ... | 모드별 상태·RGB-D·머리 카메라 점군 | p. 5 (Abstract), p. 4 (Abstract) |
+| State/latent | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D, visual, observations | 로봇 관절과 물체·과제의 상태 | p. 5 (Abstract), p. 4 (Abstract), p. 5 (Abstract) |
+| Output/action | 2 ManiSkill Benchmark The goal of building ManiSkill benchmark can be best described as facilitating learning generalizable manipulation skills from 3D visual inputs with demonstrations. "Manipulation" involves low-level physical intera ... | 이동 베이스와 팔의 조작 행동 | p. 4 (Abstract), p. 5 (Abstract), p. 1 (Abstract) |
+| Objective/outcome | In order to quickly verify the reward template (as our tasks are complicated and solving by RL takes hours), we use Model-Predictive Control (MPC) via Cross Entropy Method (CEM), which can be ... | 학습에 없던 물체에서의 과제 성공 | p. 7 (Abstract), p. 3 (Abstract), p. 4 (Abstract) |
 
 ## Main Claims and Actual Contribution
 

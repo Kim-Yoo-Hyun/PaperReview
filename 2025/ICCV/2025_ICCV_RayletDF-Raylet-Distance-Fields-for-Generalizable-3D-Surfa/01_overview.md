@@ -10,7 +10,7 @@
 - Authors: Shenxing Wei, Jinxi Li, Yafei Yang, Siyuan Zhou, Bo Yang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, point cloud, 3D Vision, surface reconstruction
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -73,3 +73,7 @@ RayletDF는 원시 점군이나 영상에서 얻은 3D 가우시안에 짧은 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.5. Sampling Raylets for Training and Test), p. 6 (4.1. Evaluation on 3D Gaussians)이다.
+
+## 검색 태그 근거
+
+점군 또는 기존 가우시안에서 짧은 질의 광선의 특징을 가져와 표면까지의 거리를 예측하고 여러 광선의 관측을 종합해 표면을 추출한다. 입력에 가우시안을 주는 조건에서 RGB는 선행 복원 단계에 사용한다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wei_RayletDF_Raylet_Distance_Fields_for_Generalizable_3D_Surface_Reconstruction_from_ICCV_2025_paper.pdf#page=6)

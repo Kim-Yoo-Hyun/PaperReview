@@ -44,12 +44,14 @@ VLABench는 자연어로 지시한 조작을 평가하도록 구성한 100개 �
 
 ## Observation, State, and Output Interface
 
+시뮬레이션에서 언어 조건 VLA의 과제 진행도·성공을 평가하고, 별도 VLM 계획 평가에서는 이미지와 지시로 스킬 순서를 생성한다. 벤치마크가 지원하는 점군 출력과 실제 RGB 기반 평가 경로를 구분했다. [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_VLABench_A_Large-Scale_Benchmark_for_Language-Conditioned_Robotics_Manipulation_with_Long-Horizon_ICCV_2025_paper.pdf#page=6)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The strong generalization capabilities has inspired two main approaches in language-conditioned manipulation: pre-training visionlanguage-action models using large-scale robotics data, as demonstrated by RT-2 and Palm-E [5, 14, 50], and ... | standardized observation, action, task state와 evaluation split | p. 2 (1. Introduction), p. 2 (1. Introduction) |
-| State/latent | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action, models, large-scale | benchmark state/goal와 method decision | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs) |
-| Output/action | Such tasks require agents to master multiple capabilities: interpreting natural language instructions, understanding complex environments, making decisions, formulating plans, and executing precise actions. | policy/controller trajectory 또는 measured result | p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs), p. 7 (4.2. Zero-shot Ability of Agent) |
-| Objective/outcome | The final trajectory is smoothed using a Bezier curve to optimize path quality. | success metric, robustness, generalization과 reproducibility | p. 6 (3.4. Dataset Construction), p. 6 (3.4. Dataset Construction), p. 7 (Model) |
+| Observation/input | The strong generalization capabilities has inspired two main approaches in language-conditioned manipulation: pre-training visionlanguage-action models using large-scale robotics data, as demonstrated by RT-2 and Palm-E [5, 14, 50], and ... | 정책 평가의 관측·지시와 별도 계획 평가의 표시된 이미지 | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| State/latent | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action, models, large-scale | 과제 상태와 지시 의도·진행도 | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs) |
+| Output/action | Such tasks require agents to master multiple capabilities: interpreting natural language instructions, understanding complex environments, making decisions, formulating plans, and executing precise actions. | VLA의 조작 행동 또는 VLM의 스킬 순서 | p. 2 (1. Introduction), p. 8 (4.3. Comprehensive Ability of VLMs), p. 7 (4.2. Zero-shot Ability of Agent) |
+| Objective/outcome | The final trajectory is smoothed using a Bezier curve to optimize path quality. | 성공률·의도 점수·진행도 | p. 6 (3.4. Dataset Construction), p. 6 (3.4. Dataset Construction), p. 7 (Model) |
 
 ## Main Claims and Actual Contribution
 

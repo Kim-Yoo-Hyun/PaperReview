@@ -41,8 +41,8 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Given the visual and language input, the model outputs the predicted action 푎0.를 Therefore, we introduce the following losses to guide the policy training: Text Supervision Loss L푇: This loss ensures the effective alignment of the model's visual and linguistic input, making sure it can ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Limitation: As for the limitation, though our method can not directly avoid obstacles, we can incorporate collision-free motion planner library like curobo [48] to realize this to some extent.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `표시가 그려진 RGB와 텍스트, 역투영용 깊이·카메라 파라미터 → 접촉점과 그리퍼·이동 방향 → 실행할 접촉 자세와 방향`.
+- 이 논문의 재사용 가능한 지점은 Given the visual and language input, the model outputs the predicted action 푎0.를 Therefore, we introduce the following losses to guide the policy training: Text Supervision Loss L푇: This loss ensures the effective alignment of the model's visual and linguistic input, making sure it can ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 접촉점과 그리퍼·이동 방향가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Limitation: As for the limitation, though our method can not directly avoid obstacles, we can incorporate collision-free motion planner library like curobo [48] to realize this to some extent.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: In summary, our contributions are as follows: • 1) We propose employing a sequence of key-frames presented with prompts to explicitly convey the task objectives in both low-level action and high-level planning. ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

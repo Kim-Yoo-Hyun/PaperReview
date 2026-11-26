@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SIMULATION`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** VIMA-BENCH의 여러 단계 조작.
+- **Input boundary:** 현재 영상과 시각·언어 지시.
+- **Output/decision under evaluation:** 중간 목표 영상과 하위 정책의 행동.
+- **Primary target:** 장기 조작 성공과 중간 목표의 지시 일치.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Experiment Setup (p. 6); 4.3. Quantitative Results of Success Rate (p. 6).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (4.3. Quantitative Results of Success Rate)
 |---|---|---|---|
 | Robot/hardware/simulator | Benchmark & Tasks We conduct evaluation on VIMABENCH, a benchmark suite for multimodal robot learning, which is built on the Ravens robot simulator [50]. | embodiment, simulator version and control stack | p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup) |
 | Task/environment | For more details regarding the simulation benchmark and tasks setting, please refer to Appendix A . | reset, timeout, object/scene variation | p. 6 (4.1. Experiment Setup), p. 7 (4.4. Further Analysis) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 5 (3.4. Goal-conditioned Policy Model), p. 3 (3.1. Pipeline Overview) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 4 (3.1. Pipeline Overview), p. 3 (3.1. Pipeline Overview) |
+| Observation/sensor | 현재 영상과 시각·언어 지시 | calibration, preprocessing, privileged input | p. 5 (3.4. Goal-conditioned Policy Model), p. 3 (3.1. Pipeline Overview) |
+| Output/decision | 중간 목표 영상과 하위 정책의 행동 | action frame, controller and termination | p. 4 (3.1. Pipeline Overview), p. 3 (3.1. Pipeline Overview) |
 
 ## Metrics and Success Definition
 

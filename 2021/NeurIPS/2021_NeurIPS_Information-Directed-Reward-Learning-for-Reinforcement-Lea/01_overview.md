@@ -8,7 +8,7 @@
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: reward-learning, robot-learning, evaluation
+- Tags: reward-learning, robot-learning, evaluation, Reinforcement Learning
 - Aliases: IDRL
 - Official paper: https://proceedings.neurips.cc/paper/2021/hash/1fa6269f58898f0e809575c9a48747ef-Abstract.html
 - Full-text retrieval: https://proceedings.neurips.cc/paper/2021/file/1fa6269f58898f0e809575c9a48747ef-Paper.pdf
@@ -35,6 +35,10 @@ Bayesian reward belief·policy 후보 → query → expert feedback.
 여러 환경과 query 유형에서 label efficiency를 평가한다.
 
 근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper/2021/hash/1fa6269f58898f0e809575c9a48747ef-Abstract.html). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+베이지안 보상 모형에서 유력한 정책 쌍을 택하고, 두 정책의 반환 차이에 대한 정보 이득으로 질의를 고른다. 격자와 MuJoCo의 Ant·HalfCheetah 등에서 점수·비교 피드백의 효율을 측정했다. [원문 4쪽](https://proceedings.neurips.cc/paper/2021/file/1fa6269f58898f0e809575c9a48747ef-Paper.pdf#page=4) · [원문 9쪽](https://proceedings.neurips.cc/paper/2021/file/1fa6269f58898f0e809575c9a48747ef-Paper.pdf#page=9)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

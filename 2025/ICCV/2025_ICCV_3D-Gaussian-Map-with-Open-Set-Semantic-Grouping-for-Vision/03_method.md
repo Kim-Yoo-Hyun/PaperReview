@@ -60,9 +60,9 @@ PDF body method statement (p. 5 (3.5. Implementation Details), p. 5 (3.3. Multi-
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate, waypoints, guided, L-word, instruction | camera/depth stream, pose, map와 language goal | body cue; exact tensor/frame verify |
-| State/latent | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate | robot pose, free-space/semantic map와 local goal | body cue; notation verify |
-| Action/output | contrast, introduces, sparse, adaptive, Gaussians, model, scene, efficiently, capturing, spatial | collision-free trajectory 또는 velocity command | body cue; unit/decoder verify |
+| Input/observation | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate, waypoints, guided, L-word, instruction | RGB-D 파노라마와 언어 지시 | body cue; exact tensor/frame verify |
+| State/latent | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate | 의미별로 묶은 3D 가우시안 지도 | body cue; notation verify |
+| Action/output | contrast, introduces, sparse, adaptive, Gaussians, model, scene, efficiently, capturing, spatial | 후보 경로 노드의 선택 | body cue; unit/decoder verify |
 | Objective/constraint | differentiable, rendering, process, enables, gradients, pixel-level, loss, functions, backpropagate, through | path cost, risk or goal utility | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -74,7 +74,7 @@ PDF body method statement (p. 5 (3.5. Implementation Details), p. 5 (3.3. Multi-
 - **p. 4 / 3.1. Egocentric Scene Map (ESM) - extractive body cue:** After initializing Gaussian primitives Gt, a tile-based renderer M3D→2D rasterizes these primitives to synthesize corresponding 2D observation {ˆIt, ˆDt} of the scene from a specific ...
 - **p. 5 / 3.5. Implementation Details - extractive body cue:** To ensure efficiency and sparse sampling, the RGB-D observations are resized to 224 × 224, and the 3D Gaussian Map is constructed at this resolution.
 - **p. 5 / 3.5. Implementation Details - extractive body cue:** At each waypoint, our agent constructs the 3D Gaussian Map using multi-view RGB-D observations and applies MAP strategy to assist in its decision-making process.
-- **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
+- **Normalized interface:** observation=RGB-D 파노라마와 언어 지시; state=의미별로 묶은 3D 가우시안 지도; output/action=후보 경로 노드의 선택.
 
 ## Temporal and Runtime Contract
 

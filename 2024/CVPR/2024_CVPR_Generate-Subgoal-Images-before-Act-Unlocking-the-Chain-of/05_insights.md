@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 The policy model can be parameterized as an image-conditioned planner that infers the action ai,t given the current observation xi,t and the generated subgoal image gi: ⌧i a = {ai,t}T t=1 ⇠QT ...를 Given the initial observation x0 and a multi-modal prompt P as task instruction potentially needs to be reached by N subgoal steps, robots are required to learn a policy conditioned on the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Incorporating commonsense knowledge from pre-trained MLLM like GPT-4V provides an avenue for more generalizable and promising reasoning in CoTDiffusion, which leaves as our future work.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `현재 영상과 시각·언어 지시 → 의미 정렬된 시각 중간 목표 → 중간 목표 영상과 하위 정책의 행동`.
+- 이 논문의 재사용 가능한 지점은 The policy model can be parameterized as an image-conditioned planner that infers the action ai,t given the current observation xi,t and the generated subgoal image gi: ⌧i a = {ai,t}T t=1 ⇠QT ...를 Given the initial observation x0 and a multi-modal prompt P as task instruction potentially needs to be reached by N subgoal steps, robots are required to learn a policy conditioned on the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 의미 정렬된 시각 중간 목표가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Incorporating commonsense knowledge from pre-trained MLLM like GPT-4V provides an avenue for more generalizable and promising reasoning in CoTDiffusion, which leaves as our future work.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: The contributions of this work are as follows: • We propose a hierarchical framework CoTDiffusion that the high-level diffusion model translates the multi-modal prompts into coherent subgoal images in a chain-ofthought manner ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `VLA and generalist robot policies`; tags: `Diffusion, VLA, Planning`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

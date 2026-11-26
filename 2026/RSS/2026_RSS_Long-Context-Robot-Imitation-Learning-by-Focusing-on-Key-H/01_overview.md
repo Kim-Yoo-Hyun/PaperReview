@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
-- Authors: Max Sobol Mark, Maria Attarian, Chuyuan Fu, Debidatta Dwibedi, Jacky Liang, Dhruv Shah, Aviral Kumar
+- Authors: Max Sobol Mark, Jacky Liang, Maria Attarian, Chuyuan Fu, Debidatta Dwibedi, Aviral Kumar, Dhruv Shah
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -12,7 +12,7 @@
 - Aliases: BPP, BPP: Long-Context Robot Imitation Learning by Focusing on Key History Frames
 - Official paper: https://roboticsproceedings.org/rss22/p201.html
 - Venue verification: https://roboticsproceedings.org/rss22/p201.html
-- Code/Project: not identified
+- Code/Project: https://bigpicturepolicies.github.io/
 - Code: not_identified
 - Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 

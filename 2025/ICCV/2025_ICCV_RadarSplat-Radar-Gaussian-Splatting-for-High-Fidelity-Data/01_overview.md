@@ -10,7 +10,7 @@
 - Authors: Pou-Chun Kung, Skanda Harisha, Ram Vasudevan, Aline Eid, Katherine A. Skinner
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Gaussian Splatting, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, data generation, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Kung_RadarSplat_Radar_Gaussian_Splatting_for_High-Fidelity_Data_Synthesis_and_3D_ICCV_2025_paper.pdf
 - Code/Project: not identified

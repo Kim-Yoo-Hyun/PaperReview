@@ -42,3 +42,9 @@ Chunk 길이·목표 분해와 데이터 scaling의 효과를 분리할 최신 �
 ## Verification Boundary
 
 본문에서 확인할 항목: 유효 결정 길이·coverage·데이터 크기·학습 계산량·물리 시간. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · SHARSA 하위 목표 표집·선택 · agents/sharsa.py [배포 파일](https://raw.githubusercontent.com/seohongpark/horizon-reduction/c298aedcc505bc7a7b44b4d0c9318993f8b3f3fd/agents/sharsa.py)
+- 가중치 · HumanoidMaze 자료 생성에 사용한 OGBench 전문가 정책. SHARSA 학습 결과와 구별함 · experts.tar.gz [배포 파일](https://rail.eecs.berkeley.edu/datasets/ogbench/experts.tar.gz)
+- 데이터 · 저자가 공개한 100M 규모 cube-octuple-play의 한 분할 · cube-octuple-play-v0-000.npz [배포 파일](https://rail.eecs.berkeley.edu/datasets/ogbench/cube-octuple-play-100m-v0/cube-octuple-play-v0-000.npz)

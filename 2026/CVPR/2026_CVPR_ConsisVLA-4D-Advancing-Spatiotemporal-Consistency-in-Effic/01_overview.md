@@ -44,12 +44,14 @@ ConsisVLA-4D는 지시에 등장하는 물체를 여러 시점에서 대응시�
 
 ## Observation, State, and Output Interface
 
+다중 RGB 시점과 언어 지시로 행동을 학습한다. 움직인 물체와 미래 전역 깊이는 훈련용 보조 목표다. 표 4와 그림 4에서 실물 양팔 조작을, 표 1·2에서 시뮬레이션을 평가했다. [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=6) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_ConsisVLA-4D_Advancing_Spatiotemporal_Consistency_in_Efficient_3D-Perception_and_4D-Reasoning_for_CVPR_2026_paper.pdf#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Current Vision-Language-Action (VLA) models primarily focus on mapping 2D observations to actions but exhibit notable limitations in spatiotemporal perception and reasoning: 1) spatial representations often rely on additional sensors, i ... | image/video, language instruction, proprioception과 history | p. 1 (Abstract), p. 1 (1. Introduction) |
-| State/latent | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit, notable, limitations | language-grounded task state와 action-policy context | p. 1 (Abstract), p. 1 (1. Introduction), p. 4 (4.1. Proposed Framework) |
-| Output/action | D): 1) CV-Aligner extracts instructionrelated and cross-correlated spatial objects; 2) CO-Fuser aggregates multi-view geometric relation; 3) CS-Thinker infers actions based on implicit knowledge of future dynamic objects and global depth. | continuous action, pose 또는 action chunk | p. 1 (1. Introduction), p. 4 (4.1. Proposed Framework), p. 3 (3. Preliminary & Problem Definition) |
-| Objective/outcome | During this process, the initialized action tokens 0A are decoded in parallel to yield ˆA, optimized using the L1 loss Laction. | instruction following, task success, generalization과 latency | p. 6 (4.4. Cross-Scene Spatiotemporal Consistency), p. 2 (1. Introduction), p. 3 (3. Preliminary & Problem Definition) |
+| Observation/input | Current Vision-Language-Action (VLA) models primarily focus on mapping 2D observations to actions but exhibit notable limitations in spatiotemporal perception and reasoning: 1) spatial representations often rely on additional sensors, i ... | 다중 시점 RGB와 언어 지시 | p. 1 (Abstract), p. 1 (1. Introduction) |
+| State/latent | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit, notable, limitations | 시점 간 대응과 학습 중 미래 물체·깊이 특징 | p. 1 (Abstract), p. 1 (1. Introduction), p. 4 (4.1. Proposed Framework) |
+| Output/action | D): 1) CV-Aligner extracts instructionrelated and cross-correlated spatial objects; 2) CO-Fuser aggregates multi-view geometric relation; 3) CS-Thinker infers actions based on implicit knowledge of future dynamic objects and global depth. | 병렬 디코딩한 행동 시퀀스 | p. 1 (1. Introduction), p. 4 (4.1. Proposed Framework), p. 3 (3. Preliminary & Problem Definition) |
+| Objective/outcome | During this process, the initialized action tokens 0A are decoded in parallel to yield ˆA, optimized using the L1 loss Laction. | 시뮬레이션·실물 조작의 성공과 실행 효율 | p. 6 (4.4. Cross-Scene Spatiotemporal Consistency), p. 2 (1. Introduction), p. 3 (3. Preliminary & Problem Definition) |
 
 ## Main Claims and Actual Contribution
 

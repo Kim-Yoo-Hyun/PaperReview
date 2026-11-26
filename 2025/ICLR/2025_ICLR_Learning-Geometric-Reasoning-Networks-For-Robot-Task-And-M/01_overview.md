@@ -10,7 +10,7 @@
 - Authors: Smail Ait Bouhsain, Rachid Alami, Thierry Simeon
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, Graph Reasoning
+- Tags: Robotics, Graph Reasoning, task and motion planning
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/561dd71d04695c85e1c0f6a0fbe0bd85-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/561dd71d04695c85e1c0f6a0fbe0bd85-Paper-Conference.pdf
 - Code/Project: not identified

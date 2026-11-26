@@ -8,7 +8,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
-- Tags: preference-learning, multimodal-feedback, hindsight, reward-learning
+- Tags: preference-learning, multimodal-feedback, hindsight-counterfactual-trajectories, reward-learning
 - Aliases: PRIMT
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2025/hash/e0d760e4495abf701b97c8acda111372-Abstract-Conference.html
 - Venue verification: https://proceedings.neurips.cc/paper_files/paper/2025/hash/e0d760e4495abf701b97c8acda111372-Abstract-Conference.html
@@ -42,3 +42,7 @@ Hindsight 재사용과 foundation reward 결합이 이미 연구되었음을 보
 ## Verification Boundary
 
 합성 trajectory 유효성, reward 누출, foundation model 호출 비용을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · PRIMT 선호 보상 학습 · primt_reward_model.py [배포 파일](https://raw.githubusercontent.com/primt25/PRIMT/a88ab92d7570ab67c0690a549b836a9501c64384/primt_reward_model.py)

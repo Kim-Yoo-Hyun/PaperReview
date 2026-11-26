@@ -10,7 +10,7 @@
 - Authors: Bardienus Pieter Duisterhof, Lojze Zust, Philippe Weinzaepfel, Vincent Leroy, Yohann Cabon, Jerome Revaud
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: geometry, 3D Vision
+- Tags: geometry, 3D Vision, matching, 3D reconstruction, camera pose
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00008
 - Full-text retrieval: https://arxiv.org/pdf/2409.19152.pdf
 - Code/Project: not identified

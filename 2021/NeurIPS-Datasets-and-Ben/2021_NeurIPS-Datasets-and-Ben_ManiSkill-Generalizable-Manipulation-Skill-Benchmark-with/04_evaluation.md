@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **Target system/task:** 모바일 매니퓰레이터의 물체 조작 벤치마크.
+- **Input boundary:** 모드별 상태·RGB-D·머리 카메라 점군.
+- **Output/decision under evaluation:** 이동 베이스와 팔의 조작 행동.
+- **Primary target:** 학습에 없던 물체에서의 과제 성공.
 - **Detected evaluation headings:** B.5 Evaluation Kit (p. 16); B.5 Evaluation Kit (p. 18).
 
 ## Experimental Matrix
@@ -62,8 +62,8 @@ PDF body evaluation/result cue (p. 8 (Abstract), p. 9 (Abstract), p. 8 (Figure/T
 |---|---|---|---|
 | Robot/hardware/simulator | We plan to process more objects from the PartNet-Mobility dataset [62] and add them to our ManiSkill assets; 2) While the four tasks currently ... | embodiment, simulator version and control stack | p. 9 (Abstract), p. 9 (Abstract) |
 | Task/environment | Models are trained with our demonstrations dataset, with 300 demonstration trajectories per training environment. | reset, timeout, object/scene variation | p. 9 (Abstract), p. 8 (Abstract) |
-| Observation/sensor | standardized observation, action, task state와 evaluation split | calibration, preprocessing, privileged input | p. 5 (Abstract), p. 4 (Abstract) |
-| Output/decision | policy/controller trajectory 또는 measured result | action frame, controller and termination | p. 5 (Abstract), p. 1 (Abstract) |
+| Observation/sensor | 모드별 상태·RGB-D·머리 카메라 점군 | calibration, preprocessing, privileged input | p. 5 (Abstract), p. 4 (Abstract) |
+| Output/decision | 이동 베이스와 팔의 조작 행동 | action frame, controller and termination | p. 5 (Abstract), p. 1 (Abstract) |
 
 ## Metrics and Success Definition
 

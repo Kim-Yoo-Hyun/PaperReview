@@ -10,7 +10,7 @@
 - Authors: Yueh-Cheng Liu, Lukas Höllein, Matthias Nießner, Angela Dai
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision, surface reconstruction
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ QuickSplat은 3D 표면 복원에 쓸 가우시안 초기값을 신경망으로 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.3. Iterative Gaussian Optimization), p. 3 (3.2. Initialization Prior)이다.
+
+## 검색 태그 근거
+
+실내 영상의 특징에서 2D 표면 가우시안의 조밀한 초기값과 후속 가우시안 증식·갱신을 학습한다. ScanNet++의 레이저 스캔 메시는 학습 및 평가의 기하 근거다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Liu_QuickSplat_Fast_3D_Surface_Reconstruction_via_Learned_Gaussian_Initialization_ICCV_2025_paper.pdf#page=6)

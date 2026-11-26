@@ -10,7 +10,7 @@
 - Authors: Ziyu Zhu, Xiaojian Ma, Yixin Chen, Zhidong Deng, Siyuan Huang, Qing Li
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision-Language, alignment, Transformer
+- Tags: 3D Vision-Language, alignment, Transformer, 3D visual grounding
 - Official paper: https://arxiv.org/abs/2308.04352
 - Full-text retrieval: https://arxiv.org/pdf/2308.04352
 - Code/Project: https://3d-vista.github.io/
@@ -76,3 +76,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.4. Self-supervised Pre-training), p. 6 (Figure/Table caption)이다.
+
+## 검색 태그 근거
+
+색이 붙은 점군에서 물체 토큰을 만들고 텍스트와 융합한다. 마스킹한 물체·단어의 복원과 장면–문장 대응으로 사전학습한 뒤 근거 물체 찾기·캡션·질문 응답을 평가했다. [원문 4쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_3D-VisTA_Pre-trained_Transformer_for_3D_Vision_and_Text_Alignment_ICCV_2023_paper.pdf#page=7)

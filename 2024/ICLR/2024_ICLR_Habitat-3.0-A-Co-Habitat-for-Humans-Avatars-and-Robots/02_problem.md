@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUC
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Training and testing such social agents on hardware with real humans poses inherent challenges, including safety concerns, scalability limitations, substantial cost implications, ... | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | The policy uses a ResNet-18 (He et al., 2016) visual encoder to embed the 256 × 256 depth input image into a ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
-| State / latent | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension | benchmark state/goal와 method decision | notation and tensor shape require body check |
-| Output / action | LSTM, output, then, action, value, prediction, network, Additionally | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
-| Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
+| Target problem | Training and testing such social agents on hardware with real humans poses inherent challenges, including safety concerns, scalability limitations, substantial cost implications, ... | 사람 아바타와 조작기를 갖춘 Spot의 모의 실내 협력 | body wording is the source claim |
+| Observation / input | The policy uses a ResNet-18 (He et al., 2016) visual encoder to embed the 256 × 256 depth input image into a ... | 팔 카메라, 과제별 사람 감지·위치 또는 로봇 관절 상태 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension | 상대 위치, 로봇과 물체 상태, 협력 목표 | notation and tensor shape require body check |
+| Output / action | LSTM, output, then, action, value, prediction, network, Additionally | 사람 추종을 위한 베이스 명령 또는 협력 재배치 행동 | exact unit/frame/decoder require body check |
+| Target outcome | comparable score and protocol validity | 사회적 내비게이션과 물체 재배치의 성공·충돌 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

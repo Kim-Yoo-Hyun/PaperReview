@@ -10,7 +10,7 @@
 - Authors: Xingyu Peng, Yan Bai, Chen Gao, Lirong Yang, Fei Xia, Beipeng Mu, Xiaofei Wang, Si Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic
+- Tags: semantic, 3D detection, open-vocabulary
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5197_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf
 - Code/Project: https://github.com/GradiusTwinbee/GLIS
@@ -75,3 +75,7 @@ GLIS는 실내 점군에서 개별 물체 후보와 장면 전체의 단서를 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (X. Peng et al), p. 3 (X. Peng et al), p. 6 (X. Peng et al)이다.
+
+## 검색 태그 근거
+
+GLIS는 공간 문맥과 후보를 결합해 개방 어휘 3D 물체를 검출한다. 이미지 기반 의사 라벨은 학습에 사용하고 추론 시에는 점군 후보의 지역·전역 정보를 언어모델이 함께 해석한다. 실내 ScanNetV2에서 평가했다. [원문 5쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=5) · [원문 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05197.pdf#page=11)

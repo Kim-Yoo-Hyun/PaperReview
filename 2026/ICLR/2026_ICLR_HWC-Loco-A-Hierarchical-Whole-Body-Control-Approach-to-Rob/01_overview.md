@@ -10,7 +10,7 @@
 - Authors: Sixu Lin, Guanren Qiao, Yunxin Tai, Ang Li, Kui Jia, Guiliang Liu
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, robust locomotion, safety recovery
+- Tags: Robotics, humanoid, whole-body control, robust locomotion, safety recovery, hierarchical control
 - Official paper: https://iclr.cc/virtual/2026/poster/10011640
 - Full-text retrieval: https://arxiv.org/pdf/2503.00923
 - Code/Project: https://simonlinsx.github.io/HWC_Loco/

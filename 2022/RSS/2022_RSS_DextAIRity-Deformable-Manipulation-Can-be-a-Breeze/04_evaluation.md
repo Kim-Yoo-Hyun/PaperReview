@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** rigid/articulated object와 robot manipulator contact scene.
-- **Input boundary:** RGB-D/point cloud, object state와 contact/task observation.
-- **Output/decision under evaluation:** grasp, pose, force 또는 end-effector trajectory.
-- **Primary target:** task completion, contact success, pose/force error와 generalization.
+- **Target system/task:** 양팔 그리퍼와 송풍기를 이용한 천 펼치기·가방 열기.
+- **Input boundary:** 상단 RGB-D 관측과 태스크별 집기·송풍 후보.
+- **Output/decision under evaluation:** 집기 자세 및 송풍 위치·방향.
+- **Primary target:** 천의 펼쳐진 면적 또는 가방 열림.
 - **Detected evaluation headings:** V. EVALUATION (p. 5).
 
 ## Experimental Matrix
@@ -65,8 +65,8 @@ PDF body evaluation/result cue (p. 7 (V. EVALUATION), p. 8 (V. EVALUATION), p. 8
 |---|---|---|---|
 | Robot/hardware/simulator | For both tasks, we evaluate task completion rate and ability to generalize to unseen cloths and bags on a real-world robot platform. | embodiment, simulator version and control stack | p. 5 (V. EVALUATION), p. 6 (V. EVALUATION) |
 | Task/environment | The failure of [FlingBot] is due to its limited move speed, which needs to Large Rect X-Large Rect Shirt Dress Pick&Place 36.2 / 13.1 ... | reset, timeout, object/scene variation | p. 6 (V. EVALUATION), p. 5 (V. EVALUATION) |
-| Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 4 (IV. METHOD), p. 5 (IV. METHOD) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 4 (IV. METHOD), p. 2 (I. INTRODUCTION) |
+| Observation/sensor | 상단 RGB-D 관측과 태스크별 집기·송풍 후보 | calibration, preprocessing, privileged input | p. 4 (IV. METHOD), p. 5 (IV. METHOD) |
+| Output/decision | 집기 자세 및 송풍 위치·방향 | action frame, controller and termination | p. 4 (IV. METHOD), p. 2 (I. INTRODUCTION) |
 
 ## Metrics and Success Definition
 

@@ -10,7 +10,7 @@
 - Authors: Mikołaj Zieliński, Krzysztof Byrski, Tomasz Szczepanik, Dominik Belter, Przemysław Spurek
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: NeRF, equivariant, 3D Vision
+- Tags: NeRF, equivariant, 3D Vision, Gaussian Splatting
 - Official paper: https://icml.cc/virtual/2026/poster/62601
 - Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/zielinski26a/zielinski26a.pdf
 - Full-text retrieval at original review: https://openreview.net/pdf/048e4b5756022f2faa8898f0f2d379b85079ab58.pdf
@@ -81,3 +81,7 @@ EKS는 국소적으로 변형할 수 있는 비등방 가우시안 커널로 신
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3. Preliminary), p. 4 (4. Proposed Method), p. 5 (4. Proposed Method)이다.
+
+## 검색 태그 근거
+
+영상으로 학습한 신경 방사장을 국소 변형에 맞추어 편집하기 위해 비등방 가우시안 커널의 국소 좌표를 변환한다. 외부 물리 시뮬레이션이 제공한 변형으로 장면 편집을 시연했다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=3) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zielinski26a/zielinski26a.pdf#page=7)

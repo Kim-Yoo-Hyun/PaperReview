@@ -14,6 +14,7 @@
 - Venue verification: https://ojs.aaai.org/index.php/AAAI/article/view/29139
 - Code/Project: https://github.com/jkbjh/cn-ppo-paper-code
 - Code: https://github.com/jkbjh/cn-ppo-paper-code
+- 방법·평가 확인 (2026-11-25): [원문 2, 3, 4, 5, 6, 8, 9쪽](https://arxiv.org/pdf/2312.11091#page=2) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,7 @@ On-policy RL의 correlated/white noise와 병렬 data 수집 조건을 비교한
 ## Verification Boundary
 
 행동 likelihood와 trajectory correlation·noise 재사용·seed/환경 수을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- PPO 정책의 시간 상관 행동 잡음 구현 · cnppo/cnpolicy.py [배포 파일](https://raw.githubusercontent.com/jkbjh/cn-ppo-paper-code/f2422442468a646ae37dc5e40cca72c3a7b62260/cnppo/cnpolicy.py)

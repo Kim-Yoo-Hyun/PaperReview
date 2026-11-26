@@ -60,9 +60,9 @@ PDF body method statement (p. 5 (3.3.1. Design space), p. 3 (3.1. Preliminary of
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions, conversations, about, scenes, appearances | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
-| State/latent | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions | geometry, map, object/relationship state | body cue; notation verify |
-| Action/output | Second, novel, compound, D-informed, design, introduces, improvements, across, multiple, dimensions | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Input/observation | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions, conversations, about, scenes, appearances | RGB 이미지와 공간 관계 질문 | body cue; exact tensor/frame verify |
+| State/latent | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions | 이미지에서 추출한 공간 특징 | body cue; notation verify |
+| Action/output | Second, novel, compound, D-informed, design, introduces, improvements, across, multiple, dimensions | 거리·방향·관계에 대한 답변 | body cue; unit/decoder verify |
 | Objective/constraint | stage, focuses, developing, foundational, visual, representations, often, reconstructionbased, objectives, MAE | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -74,7 +74,7 @@ PDF body method statement (p. 5 (3.3.1. Design space), p. 3 (3.1. Preliminary of
 - **p. 3 / 3.1. Preliminary of LMMs - extractive body cue:** Prior works [39, 41, 46, 58] repurpose VQA benchmarks [22, 32] into instruction-tuning datasets.
 - **p. 4 / 3.3. Compound 3D-Informed Design - extractive body cue:** While previous approaches focused on generating 3D-informed instruction tuning data to enable LMMs with the abilities to estimate distances, depths, or spatial relationships [14, 16], ...
 - **p. 5 / 3.3.1. Design space - extractive body cue:** In a multimodal LLM, a pre-trained CLIP visual encoder extracts grid features from the input image.
-- **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
+- **Normalized interface:** observation=RGB 이미지와 공간 관계 질문; state=이미지에서 추출한 공간 특징; output/action=거리·방향·관계에 대한 답변.
 
 ## Temporal and Runtime Contract
 

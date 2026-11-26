@@ -8,7 +8,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: VLA, action-chunking, feedback, control-frequency
+- Tags: VLA, action-chunking, feedback, diffusion policy, evaluation
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.01626
 - Full-text retrieval: https://arxiv.org/pdf/2610.01626v1
@@ -35,6 +35,10 @@
 GR00T manipulation task에서 chunk 안정성 가정의 차이를 보고한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2610.01626) · [저자 project/code](https://aryangoyal7.github.io/publication/2026-stability-action-chunking). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+같은 시뮬레이터 상태에서 행동을 교란한 뒤 고정 행동열 재생과 정책 재호출에서 궤적 편차를 측정한다. robomimic 등에서는 과제별 확산 정책을, RoboCasa에서는 공개 GR00T N1.5 정책을 조사했다. VLA는 여러 평가 대상 중 하나다. [원문 4쪽](https://arxiv.org/pdf/2610.01626v1#page=4) · [원문 6쪽](https://arxiv.org/pdf/2610.01626v1#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -22,19 +22,19 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Control inputs are high-dimensional and difficult to search (e.g., 23 DoF robot with a multi-finger hand). | demonstration으로 정의된 robot task distribution | body wording is the source claim |
-| Observation / input | First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions). | observation history와 expert trajectory/action | exact sensor/frame/preprocessing from PDF body |
-| State / latent | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs | behavior policy와 temporal action context | notation and tensor shape require body check |
-| Output / action | upper, bound, consider, oracle, hand-engineered, states, solving, task | predicted action 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | closed-loop task success and robustness | imitation error, task success, robustness와 compounding error | metric/denominator are in 04 evidence |
+| Target problem | Control inputs are high-dimensional and difficult to search (e.g., 23 DoF robot with a multi-finger hand). | IsaacGym의 Franka·Kuka 조작 | body wording is the source claim |
+| Observation / input | First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions). | 자연 이미지 사전학습 후 손목 영상과 관절 상태 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs | 동결된 시각 특징과 고유수용 상태 | notation and tensor shape require body check |
+| Output / action | upper, bound, consider, oracle, hand-engineered, states, solving, task | PPO 정책의 관절 명령 | exact unit/frame/decoder require body check |
+| Target outcome | closed-loop task success and robustness | 시뮬레이션의 과제 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | observation history o_{t−H:t}; body terms: First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels), p. 2 (1. Introduction) |
-| Decision / output variable | expert-like action/chunk a_{t:t+H}; body terms: compare, visual, encoders, trained, supervised, learning, ImageNet, Deng | p. 2 (1. Introduction), p. 4 (3.1. Motivation), p. 1 (1. Introduction) |
-| Objective / loss / cost | imitation or action-distribution loss; cue terms: adopt, masked, modeling, self-supervision, objective-specifically, autoencoder, MAE, PPO | p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training) |
+| State / observation variable | 자연 이미지 사전학습 후 손목 영상과 관절 상태; body terms: First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels), p. 2 (1. Introduction) |
+| Decision / output variable | PPO 정책의 관절 명령; body terms: compare, visual, encoders, trained, supervised, learning, ImageNet, Deng | p. 2 (1. Introduction), p. 4 (3.1. Motivation), p. 1 (1. Introduction) |
+| Objective / loss / cost | 시뮬레이션의 과제 성공; cue terms: adopt, masked, modeling, self-supervision, objective-specifically, autoencoder, MAE, PPO | p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training), p. 4 (2.2. Learning Motor Control from Pixels) |
 | Success / guarantee | closed-loop task success and robustness | p. 5 (3.6. Distributed Training), p. 6 (4. Experimental Setup), p. 6 (5.2. Generalization) |
 
@@ -66,7 +66,7 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 4 (3.1. Motivation), p
 
 ## Position in the Robotics Loop
 
-il writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels), p. 2 (1. Introduction), p. 4 (3.4. Observations and Actions). The downstream handoff is claimed only when the body describes it.
+자연 이미지 사전학습 후 손목 영상과 관절 상태 → 동결된 시각 특징과 고유수용 상태 → PPO 정책의 관절 명령. [원문 근거](./01_overview.md#observation-state-and-output-interface)
 
 ## Verification Questions
 

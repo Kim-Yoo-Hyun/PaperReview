@@ -44,12 +44,14 @@ RoboGround는 지시가 가리키는 물체와 배치 영역의 마스크를 로
 
 ## Observation, State, and Output Interface
 
+RoboCasa에서 만든 시연으로 팔·그리퍼 행동을 학습한다. GLaMM은 지시와 영상에서 목표와 배치 영역의 마스크를 만든다. §4의 정책은 여러 시점의 관측 이력, 로봇 상태, 지시를 받고 마스크로 영상 특징을 선택한다. 성공률은 시뮬레이션 결과다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=5) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_RoboGround_Robotic_Manipulation_with_Grounded_Vision-Language_Priors_CVPR_2025_paper.pdf#page=6)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | As shown in Figure 3(b), this model processes a sequence of historical image observations, robot states and a language instruction as input to predict future robot actions. | image/video, language instruction, proprioception과 history | p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model) |
-| State/latent | Figure, model, processes, sequence, historical, image, observations, robot, states, language, instruction, input | language-grounded task state와 action-policy context | p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model), p. 6 (4.4. Training and Inference) |
-| Output/action | The grounded vision-language model takes an image observation and a language instruction as input and outputs binary masks for target objects and/or target placement areas specified by the instruction, as shown in ... | continuous action, pose 또는 action chunk | p. 5 (4.2. Grounded Vision-Language Model), p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview) |
-| Objective/outcome | For binary gripper actions, we apply Binary Cross Entropy (BCE) loss Lgripper. | instruction following, task success, generalization과 latency | p. 6 (4.4. Training and Inference), p. 6 (4.4. Training and Inference), p. 5 (4.3. Grounded Policy Network) |
+| Observation/input | As shown in Figure 3(b), this model processes a sequence of historical image observations, robot states and a language instruction as input to predict future robot actions. | 영상·로봇 상태·언어 지시와 VLM이 추정한 마스크 | p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model) |
+| State/latent | Figure, model, processes, sequence, historical, image, observations, robot, states, language, instruction, input | 목표·배치 영역에 집중한 시각 특징 | p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model), p. 6 (4.4. Training and Inference) |
+| Output/action | The grounded vision-language model takes an image observation and a language instruction as input and outputs binary masks for target objects and/or target placement areas specified by the instruction, as shown in ... | 팔 및 그리퍼 행동 | p. 5 (4.2. Grounded Vision-Language Model), p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview) |
+| Objective/outcome | For binary gripper actions, we apply Binary Cross Entropy (BCE) loss Lgripper. | 조건별 조작 성공과 마스크 품질 | p. 6 (4.4. Training and Inference), p. 6 (4.4. Training and Inference), p. 5 (4.3. Grounded Policy Network) |
 
 ## Main Claims and Actual Contribution
 

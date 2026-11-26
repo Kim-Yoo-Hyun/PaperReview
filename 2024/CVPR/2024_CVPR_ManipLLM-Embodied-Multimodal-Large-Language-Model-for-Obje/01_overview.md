@@ -10,7 +10,7 @@
 - Authors: Xiaoqi Li, Mingxu Zhang, Yiran Geng, Haoran Geng, Yuxing Long, Yan Shen, Renrui Zhang, Jiaming Liu, Hao Dong
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: LLM, Robotics, Vision-Language
+- Tags: LLM, Robotics, Vision-Language, force feedback
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ ManipLLM은 물체 영상과 지시에서 상호작용할 지점 및 그리퍼 �
 
 ## Observation, State, and Output Interface
 
+언어모형은 RGB와 텍스트로 관절 물체의 접촉점·방향을 예측한다. 깊이는 접촉점의 3차원 역투영에, 힘 신호는 실행 중 방향 조정에 쓰인다. 시뮬레이션 및 실제 물체 열기를 평가했다. [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=5) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_ManipLLM_Embodied_Multimodal_Large_Language_Model_for_Object-Centric_Robotic_Manipulation_CVPR_2024_paper.pdf#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | To deal with these difficulties, the proposed policy aims to adjust how we interact with things based on impedance force feedback, which can handle different scenarios effectively. | image/video, language instruction, proprioception과 history | p. 5 (3.2. Active Impedance Adaptation Policy), p. 5 (3.2. Active Impedance Adaptation Policy) |
-| State/latent | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback, handle, different | language-grounded task state와 action-policy context | p. 5 (3.2. Active Impedance Adaptation Policy), p. 5 (3.2. Active Impedance Adaptation Policy), p. 1 (1. Introduction) |
-| Output/action | Thus, the best forward direction is generated as the following to determine the current end-effector's pose: dopt, opt = arg max j∈{0,1,...,N} ∥δj∥ By doing so, we determine the optimal movement pose ... | continuous action, pose 또는 action chunk | p. 5 (3.2. Active Impedance Adaptation Policy), p. 1 (1. Introduction), p. 4 (3.1. Fine-tuning Strategy) |
-| Objective/outcome | This is supervised under cross-entropy loss LA, enabling the model aware where of the object region can be manipulated and facilitating the model latter predict contact position that can promote a movement. | instruction following, task success, generalization과 latency | p. 4 (3.1. Fine-tuning Strategy), p. 5 (3.1. Fine-tuning Strategy), p. 4 (3.1. Fine-tuning Strategy) |
+| Observation/input | To deal with these difficulties, the proposed policy aims to adjust how we interact with things based on impedance force feedback, which can handle different scenarios effectively. | RGB와 텍스트, 3D 역투영용 깊이와 실행 중 힘 피드백 | p. 5 (3.2. Active Impedance Adaptation Policy), p. 5 (3.2. Active Impedance Adaptation Policy) |
+| State/latent | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback, handle, different | 접촉점·그리퍼 방향과 관절 물체의 움직임 | p. 5 (3.2. Active Impedance Adaptation Policy), p. 5 (3.2. Active Impedance Adaptation Policy), p. 1 (1. Introduction) |
+| Output/action | Thus, the best forward direction is generated as the following to determine the current end-effector's pose: dopt, opt = arg max j∈{0,1,...,N} ∥δj∥ By doing so, we determine the optimal movement pose ... | 시작 자세 및 조정된 조작 방향 | p. 5 (3.2. Active Impedance Adaptation Policy), p. 1 (1. Introduction), p. 4 (3.1. Fine-tuning Strategy) |
+| Objective/outcome | This is supervised under cross-entropy loss LA, enabling the model aware where of the object region can be manipulated and facilitating the model latter predict contact position that can promote a movement. | 시뮬레이션과 실물의 물체 조작 성공 | p. 4 (3.1. Fine-tuning Strategy), p. 5 (3.1. Fine-tuning Strategy), p. 4 (3.1. Fine-tuning Strategy) |
 
 ## Main Claims and Actual Contribution
 

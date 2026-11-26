@@ -10,7 +10,7 @@
 - Authors: Georg Hess, Carl Lindström, Maryam Fatemi, Christoffer Petersson, Lennart Svensson
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
+- Tags: Gaussian Splatting, data generation, LiDAR, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Hess_SplatAD_Real-Time_Lidar_and_Camera_Rendering_with_3D_Gaussian_Splatting_CVPR_2025_paper.pdf
 - Code/Project: not identified

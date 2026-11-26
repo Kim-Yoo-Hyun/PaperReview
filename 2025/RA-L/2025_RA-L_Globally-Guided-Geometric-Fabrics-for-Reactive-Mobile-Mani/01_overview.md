@@ -8,7 +8,7 @@
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: mobile-manipulation, motion-planning, grasping
+- Tags: mobile-manipulation, motion-planning, grasping, reactive-control
 - Aliases: G3F
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2025.3562005
 - Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10967245
@@ -35,6 +35,10 @@ Robot/환경 state → global guidance → reactive whole-body motion.
 다중 mobile manipulator의 simulation 및 실제 실험을 보고한다.
 
 근거: [공식 paper/abstract](https://doi.org/10.1109/LRA.2025.3562005) · [저자 project/code](https://autonomousrobots.nl/paper_websites/g3f). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+전역 경로를 이용해 반응형 로컬 기하 계획기를 유도한다. 이동 장애물 사이의 운반·배치 실험에는 베이스와 팔을 함께 제어하는 모바일 매니퓰레이터와 외부 Vicon 위치 계측을 사용한다. [원문 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10967245#page=3) · [원문 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=10967245#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

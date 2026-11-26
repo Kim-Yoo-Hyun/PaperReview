@@ -11,7 +11,7 @@
 - 저자 판본: ICML 게재본에 인쇄된 다섯 번째 저자 Riccardo de Lutio의 성 표기를 반영했다. [표제면](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=1) · [학회 서지](https://proceedings.mlr.press/v267/takmaz25a.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, 3D Vision
+- Tags: LiDAR, 3D Vision, shape completion
 - Official paper: https://proceedings.mlr.press/v267/takmaz25a.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/takmaz25a/takmaz25a.pdf
 - Code/Project: not identified
@@ -46,12 +46,14 @@ CAL은 여러 시점의 센서 관측에서 얻은 부분 형상과 의미 정�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | CAL takes a single input Lidar scan P, providing sparse and incomplete observations of scene geometry (Fig. | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (3.2. Learning To Complete Objects), p. 3 (3. Method) |
-| State/latent | CAL, takes, single, input, Lidar, scan, providing, sparse, incomplete, observations, scene, geometry | geometry, map, object/relationship state | p. 4 (3.2. Learning To Complete Objects), p. 3 (3. Method), p. 5 (3.2. Learning To Complete Objects) |
-| Output/action | Semantic Scene Completion (SSC) (Behley et al., 2019) assumes input in the form of a single Lidar point cloud P = {pn}N n=1, pn ∈R4, consisting of spatial positions and intensity channel. | point map, pose, scene graph, affordance 또는 query result | p. 3 (3. Method), p. 5 (3.2. Learning To Complete Objects), p. 4 (3.1. Mining 3D Shape Priors From Unlabeled Data) |
-| Objective/outcome | During each training iteration, the generative decoder produces coarse-to-fine voxel grids for each scale L, supervised with a binary occupancy loss (Locc: binary-cross entropy wrt. aggregated binary occupancy labels) and prototype clas ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (3.2. Learning To Complete Objects), p. 5 (3.2. Learning To Complete Objects) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 단일 라이다 스캔과 선택적 텍스트 범주 질의 |
+| 표현 | 완성된 3D 장면의 인스턴스 복셀과 특징 |
+| 출력 | 점유·인스턴스와 질의한 범주 |
+| 평가 | 장면 완성과 분할 정확도 |
+
+[원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=3) · [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=5) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -79,3 +81,7 @@ CAL은 여러 시점의 센서 관측에서 얻은 부분 형상과 의미 정�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.2. Learning To Complete Objects), p. 4 (3.2. Learning To Complete Objects)이다.
+
+## 검색 태그 근거
+
+학습용 물체 형상·의미 의사 라벨은 시간에 걸쳐 정렬한 라이다와 카메라로 만든다. 추론은 단일 라이다 관측에서 가려진 점유와 인스턴스를 예측하고 어휘 조회에는 텍스트 임베딩을 쓴다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=3) · [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=5) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/takmaz25a/takmaz25a.pdf#page=7)

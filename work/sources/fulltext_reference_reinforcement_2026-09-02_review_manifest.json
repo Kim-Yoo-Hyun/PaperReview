@@ -16,7 +16,7 @@
     {
       "paper_id": "pr-0945",
       "title": "VINS-Mono: A Robust and Versatile Monocular Visual-Inertial State Estimator",
-      "folder": "2018/T-RO/2018_T-RO_VINS-Mono-A-Robust-and-Versatile-Monocular-Visual-Inertial",
+      "folder": "2011-2020/2018/T-RO/2018_T-RO_VINS-Mono-A-Robust-and-Versatile-Monocular-Visual-Inertial",
       "target": "tmp/pdfs/fulltext_reinforcement_2026-09-02/pr-0945.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1708.03852",
@@ -78,7 +78,7 @@
     {
       "paper_id": "pr-0946",
       "title": "LIO-SAM: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping",
-      "folder": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth",
+      "folder": "2011-2020/2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth",
       "target": "tmp/pdfs/fulltext_reinforcement_2026-09-02/pr-0946.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2007.00258",
@@ -325,7 +325,7 @@
     {
       "paper_id": "pr-0950",
       "title": "SAPIEN: A SimulAted Part-Based Interactive ENvironment",
-      "folder": "2020/CVPR/2020_CVPR_SAPIEN-A-SimulAted-Part-Based-Interactive-ENvironment",
+      "folder": "2011-2020/2020/CVPR/2020_CVPR_SAPIEN-A-SimulAted-Part-Based-Interactive-ENvironment",
       "target": "tmp/pdfs/fulltext_reinforcement_2026-09-02/pr-0950.pdf",
       "candidate_urls": [
         "https://openaccess.thecvf.com/content_CVPR_2020/papers/Xiang_SAPIEN_A_SimulAted_Part-Based_Interactive_ENvironment_CVPR_2020_paper.pdf",

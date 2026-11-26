@@ -11,7 +11,7 @@
 - 저자 표기 근거는 게재 PDF의 표제면이다. 웹 서지는 Herbert Cai를 세 번째로, 게재 PDF는 Hong Cai를 여섯 번째로 표기한다. [게재본](https://proceedings.neurips.cc/paper_files/paper/2025/file/2e14be0332c04c76742710e417cedb2a-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.neurips.cc/paper_files/paper/2025/hash/2e14be0332c04c76742710e417cedb2a-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
+- Tags: Gaussian Splatting, LiDAR, semantic occupancy, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/119271
 - Venue verification: https://proceedings.neurips.cc/paper_files/paper/2025/hash/2e14be0332c04c76742710e417cedb2a-Abstract-Conference.html
 - DOI: https://doi.org/10.52202/085713-1078

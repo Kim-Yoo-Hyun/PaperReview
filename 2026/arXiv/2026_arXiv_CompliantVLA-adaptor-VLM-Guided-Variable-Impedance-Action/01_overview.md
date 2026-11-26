@@ -7,14 +7,14 @@
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: VLA, VLM, variable-impedance, force-feedback
+- Tags: VLA, VLM, variable-impedance, force-feedback, multi-rate control
 - Aliases: CompliantVLA-adaptor
 - Official paper: https://arxiv.org/abs/2601.15541
 - Venue verification: https://arxiv.org/abs/2601.15541
 - Code/Project: https://sites.google.com/view/compliantvla
 - Code: not_identified
 - Full-text retrieval: https://arxiv.org/pdf/2601.15541v2
-- Source audit: 2026-11-24에 요약과 핵심 기여 두 개를 원문과 대조했다.
+- Source audit: 2026-11-24에 요약과 기여를 대조했다. 2026-11-26에 III-B 식 (6)–(7)에 따라 강성과 감쇠의 계산 절차를 교정했다.
 
 ## Problem and Importance
 
@@ -22,18 +22,22 @@ CompliantVLA-adaptor는 VLA가 생성한 위치 명령을 작업 맥락과 힘·
 
 ## Core Idea and Contribution
 
-- 시각·언어 모델이 장면과 지시에서 강성·감쇠를 정하고, 접촉 중 측정한 힘·토크에 따라 제어 파라미터를 다시 조절한다. [PDF 3쪽](https://arxiv.org/pdf/2601.15541v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2601.15541v2#page=4)
+- VLM이 제안한 강성을 측정 힘에 따라 조절하고, 조절된 강성·유효 질량·감쇠비로 제어기에 적용할 감쇠를 계산한다. [PDF 3쪽](https://arxiv.org/pdf/2601.15541v2#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2601.15541v2#page=4)
 - 시뮬레이션 접촉 과제와 실물 상자 밀기·화이트보드 닦기에서 어댑터 유무에 따른 과제 성공과 접촉력을 측정했다. [PDF 5쪽](https://arxiv.org/pdf/2601.15541v2#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2601.15541v2#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2601.15541v2#page=8)
 
 ## Observation–State–Action Interface
 
-이미지·언어 → stiffness/damping; force feedback → controller 보정.
+VLA가 목표 동작을 내고, VLM이 영상·지시·힘을 바탕으로 강성을 제안한다. 제어기는 측정 힘으로 강성을 조절하고 적용 감쇠를 계산한다.
 
 ## Evaluation Scope and Claim Boundary
 
 Simulation과 실제 접촉 과제에서 성공률·force violation을 비교한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2601.15541) · [저자 project/code](https://sites.google.com/view/compliantvla).
+
+## 검색 태그 근거
+
+VLM 질의와 힘 피드백에는 서로 다른 주기가 있다. 실험에서는 매 두 행동 스텝마다 VLM을 호출했고, 그 사이에도 제어기는 측정 힘에 따라 강성을 조절했다. [실행 제어식](https://arxiv.org/pdf/2601.15541v2#page=4) · [실험의 질의 주기](https://arxiv.org/pdf/2601.15541v2#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

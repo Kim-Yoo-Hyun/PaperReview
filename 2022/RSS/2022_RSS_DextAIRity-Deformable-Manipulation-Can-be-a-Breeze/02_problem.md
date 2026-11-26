@@ -22,11 +22,11 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, despite the potential advantages of air-based manipulation, it is an open and challenging problem. | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | Observation Blowing Scores Blowing Network max Execution Cloth unfolding Grasp (a) Grasping Policy (Cloth Unfolding) Stretch Place Initial State Bag opening ×8 ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
-| Output / action | blowing, step, network, takes, top-down, observation, input, infers | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
-| Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
+| Target problem | However, despite the potential advantages of air-based manipulation, it is an open and challenging problem. | 양팔 그리퍼와 송풍기를 이용한 천 펼치기·가방 열기 | body wording is the source claim |
+| Observation / input | Observation Blowing Scores Blowing Network max Execution Cloth unfolding Grasp (a) Grasping Policy (Cloth Unfolding) Stretch Place Initial State Bag opening ×8 ... | 상단 RGB-D 관측과 태스크별 집기·송풍 후보 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy | 집기와 송풍 행동별 예상 성과 | notation and tensor shape require body check |
+| Output / action | blowing, step, network, takes, top-down, observation, input, infers | 집기 자세 및 송풍 위치·방향 | exact unit/frame/decoder require body check |
+| Target outcome | completion, contact success and robustness | 천의 펼쳐진 면적 또는 가방 열림 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

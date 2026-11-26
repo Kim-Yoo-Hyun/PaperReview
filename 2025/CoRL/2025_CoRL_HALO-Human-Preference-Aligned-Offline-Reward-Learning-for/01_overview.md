@@ -35,6 +35,10 @@ HALO는 로봇의 주행 시연과 이진 주행 피드백에서 시각 보상�
 
 근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/seneviratne25a.html).
 
+## 검색 태그 근거
+
+HALO는 사람이 주행한 조작과 허용 가능한 방향에 대한 사람 주석을 이용해 후보 속도 명령의 순위를 구성한다. 전방 RGB로 학습한 보상을 오프라인 정책과 모델 예측 제어에 적용해 Husky에서 평가한다. [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=5) · [원문 8쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/seneviratne25a/seneviratne25a.pdf#page=8)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 항법 VLA-RL에 인간 선호 보상을 붙일 때 참고할 구체적 reward-learning 대안이다.

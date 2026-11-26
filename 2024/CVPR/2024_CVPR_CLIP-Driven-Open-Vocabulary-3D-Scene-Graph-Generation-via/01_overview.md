@@ -10,7 +10,7 @@
 - Authors: Lianggangxu Chen, Xuejiao Wang, Jiale Lu, Shaohui Lin, Changbo Wang, Gaoqi He
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Scene Graph, CLIP, Graph Reasoning
+- Tags: 3D Scene Graph, CLIP, Graph Reasoning, open-vocabulary
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -79,3 +79,7 @@ CCL-3DSGG는 점군 장면 그래프의 물체와 관계를 이미지·텍스트
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (Abstract), p. 3 (1) Visual con), p. 1 (1. Introduction), p. 2 (1) Visual con), p. 2 (1) Visual contextual), p. 4 (3.1. Cross-modality Features Extraction)이다.
+
+## 검색 태그 근거
+
+학습에서 이미지와 텍스트 특징에 3D 물체와 관계를 맞춘다. 추론에서는 점군 장면 그래프와 텍스트 범주를 쓰고, 영상이 있는 경우에는 영상 특징을 선택적으로 합친다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=4) · [원문 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=5) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_CLIP-Driven_Open-Vocabulary_3D_Scene_Graph_Generation_via_Cross-Modality_Contrastive_Learning_CVPR_2024_paper.pdf#page=7)

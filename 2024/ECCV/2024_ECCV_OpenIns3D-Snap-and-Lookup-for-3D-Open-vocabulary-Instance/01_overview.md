@@ -10,7 +10,7 @@
 - Authors: Zhening Huang, Xiaoyang Wu, Xi Chen, Hengshuang Zhao, Lei Zhu, Joan Lasenby
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, semantic
+- Tags: 3D Vision, semantic, 3D segmentation
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/7914_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/07914.pdf
 - Code/Project: not identified

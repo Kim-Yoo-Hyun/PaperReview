@@ -10,7 +10,7 @@
 - Authors: Zihao Xiao, Longlong Jing, Shangxuan Wu, Alex Zihao Zhu, Jingwei Ji, Chiyu Max Jiang, Wei-Chih Hung, Thomas Funkhouser, Weicheng Kuo, Anelia Angelova, Yin Zhou, Shiwei Sheng
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Vision-Language Model, 3D Vision, semantic
+- Tags: Vision-Language Model, 3D Vision, semantic, distillation
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5642_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf
 - Code/Project: not identified
@@ -74,3 +74,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 5 (3 Method), p. 7 (3 Method), p. 4 (3 Method)이다.
+
+## 검색 태그 근거
+
+훈련 때는 라이다 점에 대응하는 영상의 CLIP 특징을 복셀 및 물체 수준에서 증류한다. 점군으로 예측한 마스크와 특징으로 nuScenes와 SemanticKITTI의 파놉틱 분할을 평가했다. [원문 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=4) · [원문 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05642.pdf#page=9)

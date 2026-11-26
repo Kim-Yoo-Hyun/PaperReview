@@ -10,7 +10,7 @@
 - Authors: Zhiyu Chen, Chunran Zheng, Jiayu Wen, XiaoLei Zhang, Jiaming Xu, Feng Pan, Yukang Cui
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision, Vision-Language
+- Tags: 3D Vision, sensor fusion, LiDAR-inertial odometry
 - Official paper: https://arxiv.org/abs/2606.19190
 - Full-text retrieval: https://arxiv.org/pdf/2606.19190
 - Code/Project: not identified
@@ -43,12 +43,14 @@ FAST-LIVGO는 LiDAR·관성·영상·GNSS를 오차 상태 필터에 결합해 �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | To unify spatial references, GNSS ephemeris and observations (e.g., position, velocity) are transformed from the EarthCentered, Earth-Fixed (ECEF) frame to the local East-NorthUp (ENU) frame during preprocessing, which serves as the def ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (III. METHODOLOGY), p. 2 (III. METHODOLOGY) |
-| State/latent | unify, spatial, references, GNSS, ephemeris, observations, position, velocity, transformed, EarthCentered, Earth-Fixed, ECEF | geometry, map, object/relationship state | p. 2 (III. METHODOLOGY), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY) |
-| Output/action | This lightweight approach successfully avoids state augmentation while fully exploiting the submillimeter relative precision of carrier phase observations. | point map, pose, scene graph, affordance 또는 query result | p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 1 (I. INTRODUCTION) |
-| Objective/outcome | Following initialization, the ESIKF state is updated using two types of residuals: • Doppler Residual: Directly constrains the instantaneous velocity and the receiver clock drift ( ˙δt). • Time-Differenced Carrier Phase (TDCP) ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY), p. 2 (III. METHODOLOGY) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 라이다 스캔, 카메라, IMU와 GNSS |
+| 표현 | 오차 상태를 추정하는 필터와 국소 지도 |
+| 출력 | 보정한 센서 플랫폼의 자세와 위치 |
+| 평가 | 벤치마크 및 실물 수집 데이터의 궤적 오차 |
+
+[방법 3쪽](https://arxiv.org/pdf/2606.19190v2#page=3) · [평가 7쪽](https://arxiv.org/pdf/2606.19190v2#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -77,3 +79,7 @@ FAST-LIVGO는 LiDAR·관성·영상·GNSS를 오차 상태 필터에 결합해 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 2 (III. METHODOLOGY), p. 3 (III. METHODOLOGY)이다.
+
+## 검색 태그 근거
+
+오차 상태 필터가 LiDAR 점군, RGB 카메라, IMU와 GNSS를 융합한다. M3DGR에 더해 실물 고정익 무인기와 휴대형 장치로 수집한 데이터에서 궤적 오차를 평가했다. [원문 3쪽](https://arxiv.org/pdf/2606.19190v2#page=3) · [원문 7쪽](https://arxiv.org/pdf/2606.19190v2#page=7)

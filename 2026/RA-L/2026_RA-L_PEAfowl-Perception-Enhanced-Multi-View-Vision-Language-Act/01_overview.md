@@ -7,7 +7,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: multi-view, 3D-representation, bimanual, VLA
+- Tags: multi-view, 3D-representation, bimanual, VLA, RGB-D, action diffusion
 - Aliases: PEAfowl
 - Official paper: https://peafowlvla.github.io/
 - Venue verification: https://ieeexplore.ieee.org/document/11661761/
@@ -27,7 +27,7 @@ PEAfowl은 여러 카메라의 시각 토큰을 깊이에 따라 3차원에 배�
 
 ## Observation–State–Action Interface
 
-다중 시점 영상·지시 → 3D-aware VLA 표현 → 양팔 행동.
+여러 시점의 원시 RGB-D, 언어 지시와 로봇 관절 상태로 양팔 관절 궤적을 예측한다.
 
 ## Evaluation Scope and Claim Boundary
 
@@ -35,10 +35,14 @@ RoboTwin2.0과 실제 양팔 조작을 평가한다.
 
 근거: [공식 paper/abstract](https://ieeexplore.ieee.org/document/11661761/) · [저자 project/code](https://peafowlvla.github.io/) · [공식 code](https://github.com/Qingyu-Fan/PEAfowl).
 
+## 검색 태그 근거
+
+그림 2에서 카메라의 원시 깊이는 정책의 깊이 인코더로, 교사가 보정한 깊이는 분포 예측기의 훈련 정답으로 들어간다. [그림 2](https://arxiv.org/pdf/2601.17885v2#page=3) · [교사 모델의 사용 범위](https://arxiv.org/pdf/2601.17885v2#page=9)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 VLA-RL 성능 병목이 reward보다 공간 지각에 있을 때 비교할 표현 대안이다.
 
 ## Verification Boundary
 
-학습 depth 정답 비용, 추론 depth 필요 여부, unseen camera/object 전이을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+깊이 교사 정답 생성 비용과 새로운 시점·물체에서의 일반화를 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.

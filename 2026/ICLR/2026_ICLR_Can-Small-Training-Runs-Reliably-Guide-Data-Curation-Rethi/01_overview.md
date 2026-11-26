@@ -8,7 +8,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, evaluation, data-selection
+- Tags: evaluation, data-selection, Large Language Model, pretraining
 - Aliases:
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html
@@ -35,6 +35,10 @@ Data recipe·proxy 학습 설정 → 상대 loss 순위; 로봇 행동 평가는
 LLM pretraining recipe와 random-feature model 이론을 다룬다.
 
 근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/c7d04ce5e71efdfc7a4a78f7161238a9-Abstract-Conference.html).
+
+## 검색 태그 근거
+
+소형 언어모델의 학습률이 텍스트 사전학습 데이터 조합의 순위를 바꾸는 조건을 분석한다. 여러 크기의 언어모델로 순위 일치를 평가한다. [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=5) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/c7d04ce5e71efdfc7a4a78f7161238a9-Paper-Conference.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

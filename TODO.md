@@ -2,8 +2,6 @@
 
 ## 재개 순서
 
-**다음 원장 작업은 다축 태그가 남은 NEXT 77편 중 앞의 50편이다.** 안정 ID 순으로 *When Life Gives You BC, Make Q-functions* (`pr-1125`)부터 *Tune to Learn* (`pr-1197`)까지다. 행동 복제에서 추출한 가치와 환경 상호작용으로 학습한 가치를 구분하고, 제어 이득이나 실행 주기가 달라지는 비교에서는 같은 정책의 어느 제어 조건을 측정했는지 기록한다. [직전 배치와 매핑](./work/update/REGISTRY.md#taxonomy-batches) · [별도 등록 배치](./work/sources/batches/gapfill_2026_11.yaml)
-
 **다음 연구 작업은 G1이 걸쇠를 당기다가 저항이 갑자기 사라질 때 균형을 유지하는지 시뮬레이션에서 확인하는 것이다.** 후보 4의 첫 비교는 다음 순서로 진행한다. [선행 연구와 판별 기준](./work/research_topics/README.md#g1-load-release) · [공개 G1 모델](https://github.com/google-deepmind/mujoco_menagerie/blob/main/unitree_g1/README.md)
 
 1. 현재 컴퓨터의 로컬 Docker와 G1 전신 제어 기준선을 확인한다. 최소 장면에서 손에 가해지는 힘, 발 접촉, 몸통 각속도를 기록할 수 있는지 점검한다.
@@ -24,5 +22,9 @@ CORE 31편에 남은 공개 여부 55개는 새 배포 파일이나 저자의 �
 
 ## 직전 완료
 
-- 레지스트리 공통 검토 질문을 한곳에 모으고, 논문별 노트에는 원문 근거와 개별 판단을 남겼다. 한 논문의 모든 검색 태그와 별칭은 색인 한 행에서 볼 수 있다. [공통 검토 기준](./research/READING_STATUS.md#note-checks) · [논문 색인](./research/REGISTRY_INDEX.csv)
-- 직전 원문 검토 범위는 *PhysTwin*부터 *Force Policy*까지 50편이다. 집중 읽기 500편 중 423편에 다축 태그가 있다. 공개 범위가 미확인인 필드와 교정 전 값은 배치 원장에서 조회한다. [직전 50편](./work/sources/batches/core_next_08.yaml) · [배치 전체](./work/update/REGISTRY.md#taxonomy-batches) · [원문 감사](./research/SOURCE_AUDIT.md)
+- 논문 폴더·표준 노트·문서 링크·생성 색인을 원장과 대조했다. 검색 단서 794편을 동기화하고 PDF 실패 로그를 제거했다. π₀ 프로젝트 주소와 PointWorld PDF 필드를 교정했고, 링크 미확인 논문은 36편에서 26편으로 줄었다. [구조 검증](./work/update/REGISTRY.md#구조-검증)
+- ARCHIVE 마지막 31편을 원문과 대조해 표시 태그 22편과 검색 필터 30편을 수정했다. 감사 당시 ARCHIVE 242편과 11월 감사 대상 전체 1,252편의 태그 검토를 완료했다. [ARCHIVE 감사 결과](./research/SOURCE_AUDIT.md#archive-검색-태그) · [전체 항목별 판정](./research/SOURCE_AUDIT.md#항목별-결과)
+- 2020년까지의 논문 148편을 두 기간 폴더로 옮기고 읽기 이력과 노트 경로를 연결했다. [기간별 탐색](./README.md#수록-현황)
+- NEXT 마지막 27편을 분류하고, 이전 배치에서 검색 태그 판정이 남았던 20편도 원문과 대조했다. 집중 읽기 500편의 다축 분류와 검색 태그 검토를 마쳤다. 접촉 제어 비교에 쓰는 논문 네 편은 REFERENCE에 등록했다. [마지막 27편](./work/sources/batches/core_next_10.yaml) · [접촉 제어 논문](./research/VLA_ACTION_SPACE.md#추가-조사)
+- VLA 28편에서 접촉력·강성·감쇠, 관절 명령, 전신 균형, 이동·태스크 전환을 비교하고 10편을 REFERENCE에 등록했다. 실물에서 힘과 이동을 함께 검토할 때에는 Opt2VLA가 결정하는 목표 법선력과 별도 RL 제어기가 결정하는 관절 명령을 구분한다. [논문별 배포·평가 비교](./synthesis/04_vla.md#vla-action-interfaces)
+- [문헌 안내](./research/README.md)에 선정·출처 기준을 모으고 [외부 목록 대조와 누락 심사](./research/GAPFILL.md)를 통합했다. [색인](./research/REGISTRY_INDEX.csv)에는 태그·별칭과 정독 500편의 등급 내 순서가 함께 나온다. 논문별 노트의 [공통 검토 기준](./research/READING_STATUS.md#note-checks)은 그대로 참조할 수 있다.

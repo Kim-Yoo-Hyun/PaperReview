@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, humanoid, whole-body teleoperation, loco-manipulation, Imitation Learning`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** HumanoidBench: Simulated Humanoid Benchmark for Whole-Body Locomotion and Manipulation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Mobile ALOHA: Learning Bimanual Mobile Manipulation using Low-Cost Whole-Body Teleoperation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

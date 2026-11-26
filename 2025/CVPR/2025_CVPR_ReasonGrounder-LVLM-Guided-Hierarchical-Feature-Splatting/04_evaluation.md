@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on Open-set 3D Visual Grou
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Target system/task:** 실내 장면의 열린 어휘 3D 물체 찾기.
+- **Input boundary:** 다중 시점 영상과 언어 질의.
+- **Output/decision under evaluation:** 질의 대상의 3D 위치와 마스크.
+- **Primary target:** 위치 정확도와 마스크 겹침.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Evaluation on Open-set 3D Visual Grounding (p. 6); 4.2. Evaluation on 3D Reasoning (p. 6).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 6 (4.1. Evaluation on Open-set 3D Visual Grou
 |---|---|---|---|
 | Robot/hardware/simulator | This paper introduces a novel dataset, ReasoningGD, which includes over 10K scenes of varying complexity and more than 263 types of common objects, with ... | embodiment, simulator version and control stack | p. 5 (4. Experiments), p. 7 (4.2. Evaluation on 3D Reasoning) |
 | Task/environment | The ReasoningGD dataset introduced here includes scenes with amodal binary mask annotations, accurately representing the full shape of occluded objects from different views. | reset, timeout, object/scene variation | p. 7 (4.2. Evaluation on 3D Reasoning), p. 7 (4.2. Evaluation on 3D Reasoning) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 2 (1. Introduction), p. 1 (1. Introduction) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1. Introduction), p. 6 (Method) |
+| Observation/sensor | 다중 시점 영상과 언어 질의 | calibration, preprocessing, privileged input | p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Output/decision | 질의 대상의 3D 위치와 마스크 | action frame, controller and termination | p. 2 (1. Introduction), p. 6 (Method) |
 
 ## Metrics and Success Definition
 

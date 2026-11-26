@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | This foundational shift, however, introduces a critical and distinct research challenge: How can we robustly and efficiently synthesize the complex, high-dimensional motion ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | best, knowledge, first, formulate, deliberative, process, structured, chain | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | This foundational shift, however, introduces a critical and distinct research challenge: How can we robustly and efficiently synthesize the complex, high-dimensional motion ... | 언어 조건 로봇팔 조작 | body wording is the source claim |
+| Observation / input | (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action ... | 영상·언어 지시 및 학습 시의 시연 행동 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model | 명시적 기준 행동 궤적과 암시적 행동 특징 | notation and tensor shape require body check |
+| Output / action | best, knowledge, first, formulate, deliberative, process, structured, chain | 최종 행동 시퀀스 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 시뮬레이션·실물의 조작 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

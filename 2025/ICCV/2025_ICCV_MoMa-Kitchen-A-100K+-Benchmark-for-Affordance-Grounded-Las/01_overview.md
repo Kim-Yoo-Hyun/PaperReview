@@ -42,3 +42,8 @@ VLA+RL을 manipulation과 navigation에 통합할 때 성공 조건을 구체화
 ## Verification Boundary
 
 형상별 split, oracle grasp label 생성, navigability와 reachability 정의, 실환경 전이을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 점군에서 베이스 위치의 조작 가능성을 예측하는 모델 · model/NaviAff.py [배포 파일](https://raw.githubusercontent.com/MoMaKitchen/MoMaKitchen/393cb4a556ccfb47e7791bf28c08719b78f4319a/model/NaviAff.py)
+- 데이터 · MoMa-Kitchen RGB-D·점군 평가 자료 분할 파일 · momakitchen_data.tar.gz.part-00 [배포 파일](https://huggingface.co/datasets/IPEC-COMMUNITY/MoMa-Kitchen-Data/resolve/f7c392e6fb10591fd95d91fc820227d353ae5470/momakitchen_data.tar.gz.part-00)

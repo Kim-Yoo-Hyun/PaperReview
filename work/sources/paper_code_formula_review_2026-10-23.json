@@ -937,7 +937,7 @@
         "prior_review_hash_matches": true,
         "title_token_overlap": 1.0,
         "mirror": false,
-        "overview_path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
+        "overview_path": "2011-2020/2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
         "identity_check": "Prior source review PDF SHA256 exact match",
         "corrected_note_count": 1,
         "correction_pages": [
@@ -1001,12 +1001,12 @@
       "after_sha256": "23a1ed0def05c228bf78611921a4a61bf1793e5eaf8085135a7ef797a0662eaf"
     },
     {
-      "path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
+      "path": "2011-2020/2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
       "before_sha256": "2228a5da52279f2edcbdee7077bdb30ad16b71205c8b08cc087a9bcccfbc85dd",
       "after_sha256": "4b95b4e1fcacc31a9ab6db424e8db5d22eb7ebd73d681190e8cf5df3dd6482f9"
     },
     {
-      "path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
+      "path": "2011-2020/2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
       "before_sha256": "f5e0e8cbb9df9fa9e08176cb2418adcc62ea1cc8664b652bada3930021b209b7",
       "after_sha256": "c9652a4ce0e1ced9e6468be2b3a3568ff939b2a2ae690ae1bd8fcd3eca3e2fa2"
     }

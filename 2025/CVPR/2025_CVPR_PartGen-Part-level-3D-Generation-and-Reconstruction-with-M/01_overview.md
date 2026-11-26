@@ -10,7 +10,7 @@
 - Authors: Minghao Chen, Roman Shapovalov, Iro Laina, Tom Monnier, Jianyuan Wang, David Novotny, Andrea Vedaldi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision, object completion
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ PartGen은 물체를 여러 뷰에서 부품별로 분해하고, 다른 부품�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3.1. Background on 3D generation), p. 4 (3.1. Background on 3D generation), p. 3 (3. Method), p. 5 (3.5. Training data)이다.
+
+## 검색 태그 근거
+
+텍스트나 다중 시점 영상을 바탕으로 부품 마스크를 만들고, 다른 부품에 가려진 표면의 뷰를 생성한다. 보완된 각 부품을 개별 3D 자산으로 재구성한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=3) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_PartGen_Part-level_3D_Generation_and_Reconstruction_with_Multi-view_Diffusion_Models_CVPR_2025_paper.pdf#page=8)

@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-DoF humanoid whole-body dynamics와 contacts.
-- **Input boundary:** proprioception, reference pose/motion, visual or language command.
-- **Output/decision under evaluation:** joint/whole-body action, motion target 또는 task trajectory.
-- **Primary target:** tracking, balance, skill/task success와 recovery.
+- **Target system/task:** 모의 및 실물 휴머노이드의 전신 추종.
+- **Input boundary:** 고유수용 상태와 모드별 마스킹된 신체 목표.
+- **Output/decision under evaluation:** 관절 목표.
+- **Primary target:** 모드별 추종 오차와 실물 제어 전환.
 - **Detected evaluation headings:** III. EXPERIMENT (p. 4).
 
 ## Experimental Matrix
@@ -63,8 +63,8 @@ PDF body evaluation/result cue (p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT), 
 |---|---|---|---|
 | Robot/hardware/simulator | In this section, we present extensive experimental results in both IsaacGym [23] and the real-world Unitree H1 [24] robot to address the following questions: ... | embodiment, simulator version and control stack | p. 4 (III. EXPERIMENT), p. 5 (III. EXPERIMENT) |
 | Task/environment | Real-World Evaluation To address Q3 (does HOVER transfer to real-world hardware and execute versatile multi-mode control?), we conduct quantitative tracking experiments and locomotion tests ... | reset, timeout, object/scene variation | p. 5 (III. EXPERIMENT), p. 4 (III. EXPERIMENT) |
-| Observation/sensor | proprioception, reference pose/motion, visual or language command | calibration, preprocessing, privileged input | p. 4 (II. METHOD), p. 2 (II. METHOD) |
-| Output/decision | joint/whole-body action, motion target 또는 task trajectory | action frame, controller and termination | p. 3 (II. METHOD), p. 3 (II. METHOD) |
+| Observation/sensor | 고유수용 상태와 모드별 마스킹된 신체 목표 | calibration, preprocessing, privileged input | p. 4 (II. METHOD), p. 2 (II. METHOD) |
+| Output/decision | 관절 목표 | action frame, controller and termination | p. 3 (II. METHOD), p. 3 (II. METHOD) |
 
 ## Metrics and Success Definition
 

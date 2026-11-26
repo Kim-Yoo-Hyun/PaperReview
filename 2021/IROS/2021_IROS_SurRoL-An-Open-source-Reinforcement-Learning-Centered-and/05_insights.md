@@ -40,14 +40,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the commercial software limits, e.g., V-REP.를 Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which benefits low-cost data collection and accelerates the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 By visually inspecting the training progress, we find that the agents can quickly learn to approach the object such as the needle and attempt to pick reasonably, but failed because of the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `시뮬레이션의 저차원 상태와 실물 시험별 도구·표적 위치 → 도구·물체·카메라 및 목표 상태 → 도구의 이동·집게 조작 또는 카메라 명령`.
+- 이 논문의 재사용 가능한 지점은 SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the commercial software limits, e.g., V-REP.를 Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which benefits low-cost data collection and accelerates the ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 도구·물체·카메라 및 목표 상태가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 By visually inspecting the training progress, we find that the agents can quickly learn to approach the object such as the needle and attempt to pick reasonably, but failed because of the ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which benefits low-cost data collection and accelerates the ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, surgical robotics, Reinforcement Learning, simulation, sim-to-real, dexterous manipulation`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

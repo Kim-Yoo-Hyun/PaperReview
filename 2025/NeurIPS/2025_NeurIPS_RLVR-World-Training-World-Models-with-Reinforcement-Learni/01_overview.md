@@ -7,7 +7,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: world-model, RLVR, video-prediction
+- Tags: world-model, RLVR, video-prediction, model predictive control
 - Aliases: RLVR-World
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2025/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html
 - Venue verification: https://proceedings.neurips.cc/paper_files/paper/2025/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html
@@ -31,9 +31,13 @@ Action-conditioned state prediction → decoded metric reward → world model up
 
 ## Evaluation Scope and Claim Boundary
 
-언어·영상 world model의 여러 도메인을 평가한다. RT-1 로봇 영상의 예측 품질을 로봇 제어 성공으로 해석하지 않는다.
+텍스트 환경의 상태 예측과 RT-1 영상 예측을 평가한다. 부록 표 12는 PushT 시뮬레이션에서 각 세계 모델을 CEM 계획기에 넣고 과제 성공률을 비교한다.
 
 근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html) · [저자 project/code](https://thuml.github.io/RLVR-World/) · [공식 code](https://github.com/thuml/RLVR-World).
+
+## 검색 태그 근거
+
+PushT 시뮬레이션에서 CEM 계획기의 성공률은 기본 세계 모델을 쓰면 0.80, RLVR-World 또는 DINO-WM을 쓰면 각각 0.86이었다. 이 수치는 부록 표 12의 제어 평가에 해당한다. [부록 표 12](https://proceedings.neurips.cc/paper_files/paper/2025/file/b63a24a1832bd14fa945c71f535c0095-Paper-Conference.pdf#page=30)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

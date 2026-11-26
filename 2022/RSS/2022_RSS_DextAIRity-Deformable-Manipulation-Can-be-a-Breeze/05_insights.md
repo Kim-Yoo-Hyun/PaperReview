@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 Observation Blowing Scores Blowing Network max Execution Cloth unfolding Grasp (a) Grasping Policy (Cloth Unfolding) Stretch Place Initial State Bag opening ×8 rotations Observation Grasping Scores max Selected Grasp Grasping Network … ...를 At each blowing step, a top-down depth observation as input and the blowing action with the highest score will be executed.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While in this paper we demonstrate the effectiveness of directed air to manipulate deformable objects, we discuss a few limitations and practical considerations of deploying DextAIRity in real-world applications.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `상단 RGB-D 관측과 태스크별 집기·송풍 후보 → 집기와 송풍 행동별 예상 성과 → 집기 자세 및 송풍 위치·방향`.
+- 이 논문의 재사용 가능한 지점은 Observation Blowing Scores Blowing Network max Execution Cloth unfolding Grasp (a) Grasping Policy (Cloth Unfolding) Stretch Place Initial State Bag opening ×8 rotations Observation Grasping Scores max Selected Grasp Grasping Network … ...를 At each blowing step, a top-down depth observation as input and the blowing action with the highest score will be executed.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 집기와 송풍 행동별 예상 성과가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While in this paper we demonstrate the effectiveness of directed air to manipulate deformable objects, we discuss a few limitations and practical considerations of deploying DextAIRity in real-world applications.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: Our system setup consists of (a) three UR5 robot arms, two of which are equipped with parallel-jaw grippers and one with a commodity centrifugal air pump.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, deformable object, cloth manipulation, air flow, dexterous manipulation, real-world control`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

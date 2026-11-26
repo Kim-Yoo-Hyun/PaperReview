@@ -36,6 +36,10 @@ AutumnBench grid-world에서 사람과 학습 agent를 비교한다. 실로봇 �
 
 근거: [공식 paper/abstract](https://proceedings.mlr.press/v306/warrier26a.html) · [저자 project/code](https://zenodo.org/records/19498269).
 
+## 검색 태그 근거
+
+WorldTest의 환경 수준 질의를 AutumnBench의 프레임 예측·변화 탐지·계획으로 구체화한다. 사람에게는 격자를 그림으로 보여 주고 추론 모델에는 색 이름 배열로 제공한다. [원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=4) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/warrier26a/warrier26a.pdf#page=7)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 VLA world model의 시각 품질·정책 순위와 환경 이해를 구분할 평가 방법론이다.

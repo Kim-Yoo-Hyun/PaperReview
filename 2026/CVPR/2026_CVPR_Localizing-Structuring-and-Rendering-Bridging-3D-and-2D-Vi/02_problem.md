@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): The key diffi
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | The key difficulty lies in coupling geometric reasoning with semantic perception-robots must not only reason about 3D spatial structures but also interpret ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Given a natural language instruction I which is transformed to elang by VLM, like [43], and multi-view RGB-D observations O = {oi}Mobs ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | gripper, state, binary, classification, head, Qgrip, hgrip, MaxPool | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | The key difficulty lies in coupling geometric reasoning with semantic perception-robots must not only reason about 3D spatial structures but also interpret ... | RLBench·실물 팔의 가림 및 정밀 조작 | body wording is the source claim |
+| Observation / input | Given a natural language instruction I which is transformed to elang by VLM, like [43], and multi-view RGB-D observations O = {oi}Mobs ... | 언어 지시와 보정된 다중 RGB-D 점군 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D | 관심 영역 내 점군과 렌더링한 시점 특징 | notation and tensor shape require body check |
+| Output / action | gripper, state, binary, classification, head, Qgrip, hgrip, MaxPool | 말단의 위치·회전 및 그리퍼 행동 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 조작 과제의 성공률 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

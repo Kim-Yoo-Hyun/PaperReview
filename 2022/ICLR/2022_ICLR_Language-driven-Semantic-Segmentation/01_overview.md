@@ -10,7 +10,7 @@
 - Authors: Boyi Li, Kilian Q. Weinberger, Serge Belongie, Vladlen Koltun, René Ranftl
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Vision-Language Model, semantic, open-vocabulary, alignment
+- Tags: Vision-Language Model, semantic, open-vocabulary, alignment, segmentation
 - Official paper: https://arxiv.org/abs/2201.03546
 - Full-text retrieval: https://arxiv.org/pdf/2201.03546
 - Code/Project: https://github.com/isl-org/lang-seg
@@ -44,12 +44,14 @@ LSeg는 영상의 각 위치에 대해 주어진 텍스트 레이블과의 대�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | We propose to use state-of-the-art text encoders that have been co-trained on visual data, such as CLIP, to embed labels from the training set into an embedding space and to train a ... | camera/depth stream, pose, map와 language goal | p. 2 (1 INTRODUCTION), p. 4 (C Input Label Set) |
-| State/latent | state-of-the-art, text, encoders, have, been, co-trained, visual, data, CLIP, embed, labels, training | robot pose, free-space/semantic map와 local goal | p. 2 (1 INTRODUCTION), p. 4 (C Input Label Set), p. 1 (ABSTRACT) |
-| Output/action | In other words, there should be no interactions between the input channels, whose order is defined by the order of the words and can thus be arbitrary. | collision-free trajectory 또는 velocity command | p. 4 (C Input Label Set), p. 1 (ABSTRACT), p. 4 (C Input Label Set) |
-| Objective/outcome | During training, we minimize a per-pixel softmax with cross-entropy loss (with temperature scaling) as is standard in semantic segmentation1. | goal reach, safety, localization error와 replanning latency | p. 4 (C Input Label Set), p. 1 (1 INTRODUCTION), p. 1 (ABSTRACT) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | RGB 이미지와 범주 텍스트 |
+| 표현 | 픽셀과 텍스트의 공통 특징 공간 |
+| 출력 | 픽셀별 의미 범주 |
+| 평가 | 열린 어휘 이미지 의미 분할 |
+
+[원문 3쪽](https://arxiv.org/pdf/2201.03546#page=3) · [원문 6쪽](https://arxiv.org/pdf/2201.03546#page=6)
 
 ## Main Claims and Actual Contribution
 
@@ -77,3 +79,7 @@ LSeg는 영상의 각 위치에 대해 주어진 텍스트 레이블과의 대�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 4 (C Input Label Set)이다.
+
+## 검색 태그 근거
+
+이미지의 각 픽셀 특징과 입력 범주 이름을 임베딩한 특징을 비교해 의미 분할한다. PASCAL-5i와 COCO-20i 등을 사용해 학습 시 보지 않은 범주를 평가했다. [원문 3쪽](https://arxiv.org/pdf/2201.03546#page=3) · [원문 6쪽](https://arxiv.org/pdf/2201.03546#page=6)

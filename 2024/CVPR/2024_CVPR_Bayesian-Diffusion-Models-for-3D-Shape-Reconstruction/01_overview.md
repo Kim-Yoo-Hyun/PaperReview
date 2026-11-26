@@ -10,7 +10,7 @@
 - Authors: Haiyang Xu, Yu Lei, Zeyuan Chen, Xiang Zhang, Yue Zhao, Yilin Wang, Zhuowen Tu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision, shape completion
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ Bayesian Diffusion Models는 단일 영상의 증거와 학습한 3D 형상 사�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Bayesian Inference with Stochastic Gradient), p. 3 (3. Method)이다.
+
+## 검색 태그 근거
+
+영상에 조건부인 점군 확산 과정에 학습한 3D 형상 사전분포를 결합한다. 결과 점군을 정답 물체 형상과 비교해 단일 뷰의 가려진 부분 복원을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_Bayesian_Diffusion_Models_for_3D_Shape_Reconstruction_CVPR_2024_paper.pdf#page=7)

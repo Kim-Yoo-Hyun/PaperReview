@@ -8,7 +8,7 @@
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: mobile-manipulation, motion-planning, grasping
+- Tags: mobile-manipulation, motion-planning, grasping, multi-robot
 - Aliases:
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2026.3653338
 - Full-text retrieval: https://arxiv.org/pdf/2509.03638v1
@@ -35,6 +35,10 @@
 Simulation과 실제 협동 object transport를 평가한다.
 
 근거: [공식 paper/abstract](https://doi.org/10.1109/LRA.2026.3653338). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+두 모바일 매니퓰레이터가 좁은 통로로 물체를 운반할 수 있도록 파지 쌍의 적합성을 임베딩으로 학습하고 후보를 고른다. 실물 시험에서 상태는 외부 모션 캡처로 측정한다. [원문 4쪽](https://arxiv.org/pdf/2509.03638v1#page=4) · [원문 7쪽](https://arxiv.org/pdf/2509.03638v1#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

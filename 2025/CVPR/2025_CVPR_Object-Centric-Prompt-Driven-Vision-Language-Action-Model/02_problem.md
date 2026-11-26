@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction)): In contrast, 
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | In contrast, RT-Trajectory [20] (Figure1.(c)) illustrates the entire movement path of the endeffector, which helps bridge the gap between task components and ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Given the visual and language input, the model outputs the predicted action 푎0. | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | Execution, Input, effector, pose, z-axis, y-axis, contact, point | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | In contrast, RT-Trajectory [20] (Figure1.(c)) illustrates the entire movement path of the endeffector, which helps bridge the gap between task components and ... | 관절 물체와 생활용품의 접촉 조작 | body wording is the source claim |
+| Observation / input | Given the visual and language input, the model outputs the predicted action 푎0. | 표시가 그려진 RGB와 텍스트, 역투영용 깊이·카메라 파라미터 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce | 접촉점과 그리퍼·이동 방향 | notation and tensor shape require body check |
+| Output / action | Execution, Input, effector, pose, z-axis, y-axis, contact, point | 실행할 접촉 자세와 방향 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 모의·실물 성공 및 표시 잡음 민감도 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

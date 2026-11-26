@@ -49,9 +49,9 @@ PDF body method statement (p. 6 (Method), p. 6 (Method)): To extract language fe
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially, fully, occluded, Dataset, Contributions | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
-| State/latent | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially | geometry, map, object/relationship state | body cue; notation verify |
-| Action/output | Furthermore, introduce, novel, ReasoningGD, dataset, containing, over, complex, scenes, object | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Input/observation | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially, fully, occluded, Dataset, Contributions | 다중 시점 영상과 언어 질의 | body cue; exact tensor/frame verify |
+| State/latent | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially | 마스크 규모별 가우시안 특징과 참조 시점 | body cue; notation verify |
+| Action/output | Furthermore, introduce, novel, ReasoningGD, dataset, containing, over, complex, scenes, object | 질의 대상의 3D 위치와 마스크 | body cue; unit/decoder verify |
 | Objective/constraint | not recovered | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -62,7 +62,7 @@ PDF body method statement (p. 6 (Method), p. 6 (Method)): To extract language fe
 - **p. 6 / Method - extractive body cue:** Our ReasonGrounder employs the same explicit queries as previous state-of-the-art approaches. is deemed successful if the pixel with the highest relevance falls within the labeled ...
 - **p. 6 / Method - extractive body cue:** To extract language features from each image, we use the OpenCLIP ViT-B/16 model.
 - **p. 1 / 1. Introduction - extractive body cue:** As shown in Figure 1, these instructions involve locating the target object, interpreting the intent of the description, and accounting for occlusion.
-- **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
+- **Normalized interface:** observation=다중 시점 영상과 언어 질의; state=마스크 규모별 가우시안 특징과 참조 시점; output/action=질의 대상의 3D 위치와 마스크.
 
 ## Temporal and Runtime Contract
 

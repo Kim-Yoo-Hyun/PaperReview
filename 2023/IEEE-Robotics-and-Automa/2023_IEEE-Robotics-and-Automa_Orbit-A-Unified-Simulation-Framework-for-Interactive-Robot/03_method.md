@@ -55,9 +55,9 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators, different, physically-based, sensors, motion | standardized observation, action, task state와 evaluation split | body cue; exact tensor/frame verify |
-| State/latent | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators | benchmark state/goal와 method decision | body cue; notation verify |
-| Action/output | main, contributions, follows, present, ORBIT, unified, modular, framework, robot, learning | policy/controller trajectory 또는 measured result | body cue; unit/decoder verify |
+| Input/observation | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators, different, physically-based, sensors, motion | 과제별 상태·센서 관측 및 보행 명령 | body cue; exact tensor/frame verify |
+| State/latent | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators | Isaac Sim의 로봇·물체·센서·제어 모듈 | body cue; notation verify |
+| Action/output | main, contributions, follows, present, ORBIT, unified, modular, framework, robot, learning | 조작 행동과 보행 정책 명령 | body cue; unit/decoder verify |
 | Objective/constraint | Since, RSL-rl, rl-games, optimized, GPU, observe, training, speed, frames, second | benchmark score and failure cost | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -68,7 +68,7 @@ PDF body method statement (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 5 
 - **p. 2 / 2) It provides a batteries-included experience for roboti - extractive body cue:** Additionally, we demonstrate the sim-to-real transfer of a locomotion policy for the quadruped robot, ANYmal.
 - **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** 7, we show the training of Franka-Reach and Franka-Cabinet-Opening with PPO [37] using different RL frameworks and action spaces.
 - **p. 5 / V. EXEMPLAR WORKFLOWS WITH ORBIT - extractive body cue:** Owing to highquality physics, sensor simulation, and rendering, ORBIT is useful for multiple robotics challenges in both perception and decision-making.
-- **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
+- **Normalized interface:** observation=과제별 상태·센서 관측 및 보행 명령; state=Isaac Sim의 로봇·물체·센서·제어 모듈; output/action=조작 행동과 보행 정책 명령.
 
 ## Temporal and Runtime Contract
 

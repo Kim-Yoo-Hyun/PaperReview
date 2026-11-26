@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | These limitations prevent the widespread adoption of physics-based methods, as current control policies cannot handle noisy observations such as video or language. | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | The physics simulation determines state st ∈S and transition dynamics T while our policy πPHC computes per-step action at ∈A. | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
-| Output / action | summarize, contributions, follows, Perpetual, Humanoid, Controller, successfully, imitate | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
-| Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
+| Target problem | These limitations prevent the widespread adoption of physics-based methods, as current control policies cannot handle noisy observations such as video or language. | 물리 시뮬레이션 아바타의 동작 추종과 낙상 복구 | body wording is the source claim |
+| Observation / input | The physics simulation determines state st ∈S and transition dynamics T while our policy πPHC computes per-step action at ∈A. | 고유수용 상태와 참조 자세·속도 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes | 추종·복구 정책과 결합 가중치 | notation and tensor shape require body check |
+| Output / action | summarize, contributions, follows, Perpetual, Humanoid, Controller, successfully, imitate | 관절 제어 행동 | exact unit/frame/decoder require body check |
+| Target outcome | motion/task success and recovery | 동작 추종 정확도와 실패 후 복귀 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

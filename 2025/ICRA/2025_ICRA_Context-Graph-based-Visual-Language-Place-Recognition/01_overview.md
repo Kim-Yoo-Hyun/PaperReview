@@ -6,7 +6,7 @@
 - Authors: Soojin Woo, Seong-Woo Kim
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Graph Reasoning
+- Tags: Graph Reasoning, semantic
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11127699
 - Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699
 - Code/Project: https://github.com/woo-soojin/context-based-vlpr
@@ -39,3 +39,7 @@
 2024년 저자판의 표제는 *Context-Based Visual-Language Place Recognition*이다. 저자 저장소는 ICRA 2025 게재를 명시하고, 게재본 그림 4와 III-C절은 문맥 그래프의 구성과 결합을 설명한다. [저자판](https://arxiv.org/abs/2410.19341) · [PDF 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=4) · [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11127699#page=5)
 
 저자 저장소에 픽셀 군집 중심, 문맥 그래프와 그래프 임베딩을 만드는 함수가 공개되어 있다. [구현 파일](https://raw.githubusercontent.com/woo-soojin/context-based-vlpr/3556108a08c7c637256e4bb7337d51915a5dd5fa/utils/context_graph.py) · [저자 저장소 안내](https://raw.githubusercontent.com/woo-soojin/context-based-vlpr/3556108a08c7c637256e4bb7337d51915a5dd5fa/README.md)
+
+## 검색 태그 근거
+
+카메라 영상의 픽셀에 의미 범주를 할당하고 안정적인 영역을 골라 관계 그래프로 만든다. 의미 히스토그램과 그래프를 함께 이용해 같은 장소의 기준 영상을 검색한다. [원문 3쪽](https://arxiv.org/pdf/2410.19341v1#page=3) · [원문 5쪽](https://arxiv.org/pdf/2410.19341v1#page=5)

@@ -10,7 +10,7 @@
 - Authors: Zhengyi Luo, Jinkun Cao, Alexander Winkler, Kris Kitani, Weipeng Xu
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, motion imitation
+- Tags: humanoid, whole-body control, motion imitation, Reinforcement Learning, recovery policy
 - Official paper: https://openaccess.thecvf.com/content/ICCV2023/html/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf
 - Code/Project: https://zhengyiluo.github.io/PHC-Site/
@@ -44,12 +44,14 @@ Perpetual Humanoid Control은 물리 시뮬레이션의 휴머노이드가 다�
 
 ## Observation, State, and Output Interface
 
+참조 자세와 모의 캐릭터 상태를 이용해 동작 추종 프리미티브를 강화학습한다. 낙상 복구 정책을 조합해 모션 캡처 또는 영상에서 복원한 동작을 계속 추종한다. 실시간 평가는 시뮬레이션 아바타에서 수행했다. [PDF 4쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=4) · [PDF 6쪽](https://openaccess.thecvf.com/content/ICCV2023/papers/Luo_Perpetual_Humanoid_Control_for_Real-time_Simulated_Avatars_ICCV_2023_paper.pdf#page=6)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The physics simulation determines state st ∈S and transition dynamics T while our policy πPHC computes per-step action at ∈A. | proprioception, reference pose/motion, visual or language command | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy) |
-| State/latent | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes, per-step, action | whole-body pose, balance/contact state와 skill/mode | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy), p. 2 (1. Introduction) |
-| Output/action | P(F ) shares the same input and output space as P(1) · · · P(k), but since the reference motion does not provide useful information about failstate recovery (the humanoid should not ... | joint/whole-body action, motion target 또는 task trajectory | p. 5 (3.2. Progressive Multiplicative Control Policy), p. 2 (1. Introduction), p. 6 (3.2. Progressive Multiplicative Control Policy) |
-| Objective/outcome | The policy's goal is to maximize the discounted reward E hPT t=1 γt-1rt i , and we use the proximal policy gradient (PPO) [35] to learn πPHC. | tracking, balance, skill/task success와 recovery | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad) |
+| Observation/input | The physics simulation determines state st ∈S and transition dynamics T while our policy πPHC computes per-step action at ∈A. | 고유수용 상태와 참조 자세·속도 | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy) |
+| State/latent | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes, per-step, action | 추종·복구 정책과 결합 가중치 | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy), p. 2 (1. Introduction) |
+| Output/action | P(F ) shares the same input and output space as P(1) · · · P(k), but since the reference motion does not provide useful information about failstate recovery (the humanoid should not ... | 관절 제어 행동 | p. 5 (3.2. Progressive Multiplicative Control Policy), p. 2 (1. Introduction), p. 6 (3.2. Progressive Multiplicative Control Policy) |
+| Objective/outcome | The policy's goal is to maximize the discounted reward E hPT t=1 γt-1rt i , and we use the proximal policy gradient (PPO) [35] to learn πPHC. | 동작 추종 정확도와 실패 후 복귀 | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad), p. 4 (3.1. Goal Conditioned Motion Imitation with Ad) |
 
 ## Main Claims and Actual Contribution
 

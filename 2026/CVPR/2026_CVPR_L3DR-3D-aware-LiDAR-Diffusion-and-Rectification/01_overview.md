@@ -10,7 +10,7 @@
 - Authors: Quan Liu, Xiaoqin Zhang, Ling Shao, Shijian Lu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
+- Tags: LiDAR, Diffusion, Generation, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -46,12 +46,14 @@ L3DR은 거리 영상에서 생성한 LiDAR 스캔을 3D 점군으로 되돌린 
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | In order to generate ground-truth and diffusion-generated point cloud pairs for the following training stage, we retrain a state-of-the-art conditional LiDAR diffusion model, LiDM [34], on KITTI, nuScenes, and WOD to generate ... | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (4.2. LiDAR Diffusion Training), p. 2 (1. Introduction) |
-| State/latent | order, generate, ground-truth, diffusion-generated, point, cloud, pairs, following, training, stage, retrain, state-of-the-art | geometry, map, object/relationship state | p. 4 (4.2. LiDAR Diffusion Training), p. 2 (1. Introduction), p. 5 (4.3. Residual Regression Training) |
-| Output/action | The contributions of this work can be summarized in three major aspects: • We propose a 3D-aware LiDAR Diffusion and Rectification framework that rectifies RV geometry artifacts with a 3D residual regression ... | point map, pose, scene graph, affordance 또는 query result | p. 2 (1. Introduction), p. 5 (4.3. Residual Regression Training), p. 4 (4.2. LiDAR Diffusion Training) |
-| Objective/outcome | Empirically, RVP is lossless when the point cloud projection structure is preserved and RV image size is equal to or larger than the laser angular resolution. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (4.1. Range View Projection), p. 4 (4. Method), p. 5 (4.3. Residual Regression Training) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 무조건 생성 또는 의미 지도·전면 영상 조건. 보정기의 입력은 생성된 점군 |
+| 표현 | 거리 영상 확산과 3D 잔차 위치 |
+| 출력 | 보정한 3D 라이다 스캔 |
+| 평가 | 실제 점군 분포와의 유사도 및 기하 왜곡 |
+
+[원문 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -81,3 +83,7 @@ L3DR은 거리 영상에서 생성한 LiDAR 스캔을 3D 점군으로 되돌린 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (4.3. Residual Regression Training), p. 4 (4.2. LiDAR Diffusion Training), p. 4 (4. Method), p. 6 (4.4. Diffusion-agnostic Inference)이다.
+
+## 검색 태그 근거
+
+거리 영상 확산 모델의 출력을 3D 점으로 되돌리고 잔차 회귀망으로 표면 경계의 점 위치를 보정한다. 무조건 생성과 의미 지도·전면 영상 조건부 생성에서 점군 품질을 평가했다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Liu_L3DR_3D-aware_LiDAR_Diffusion_and_Rectification_CVPR_2026_paper.pdf#page=7)

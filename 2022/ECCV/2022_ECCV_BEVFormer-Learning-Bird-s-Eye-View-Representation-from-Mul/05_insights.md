@@ -47,7 +47,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Planning and control`; tags: `sensor fusion, 3D perception, Planning`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

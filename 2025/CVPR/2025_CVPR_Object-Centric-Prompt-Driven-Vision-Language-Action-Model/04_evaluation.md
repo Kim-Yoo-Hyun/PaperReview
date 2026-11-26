@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** 관절 물체와 생활용품의 접촉 조작.
+- **Input boundary:** 표시가 그려진 RGB와 텍스트, 역투영용 깊이·카메라 파라미터.
+- **Output/decision under evaluation:** 실행할 접촉 자세와 방향.
+- **Primary target:** 모의·실물 성공 및 표시 잡음 민감도.
 - **Detected evaluation headings:** 4. Experiment (p. 6); 4.4. Real-world Experiment (p. 8).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (4.3. Ablation Study), p. 8 (4.3.2. Toleran
 |---|---|---|---|
 | Robot/hardware/simulator | Simulator visualizations are shown in the left of Figure 4, illustrating the prompt input, the robot's contact state with the object, and the final ... | embodiment, simulator version and control stack | p. 6 (4.2. Comparisons with Baselines), p. 6 (4.1. Setup Details) |
 | Task/environment | Following previous work [31, 40], we utilize SAPIEN [53] along with the PartNet-Mobility dataset to construct an environment, interacting with about 1500 object shapes ... | reset, timeout, object/scene variation | p. 6 (4.1. Setup Details), p. 8 (4.4. Real-world Experiment) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 5 (3.4.1. Model Inference), p. 4 (3.3.2. Policy Learning) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 2 (1. Introduction), p. 4 (3.3.2. Policy Learning) |
+| Observation/sensor | 표시가 그려진 RGB와 텍스트, 역투영용 깊이·카메라 파라미터 | calibration, preprocessing, privileged input | p. 5 (3.4.1. Model Inference), p. 4 (3.3.2. Policy Learning) |
+| Output/decision | 실행할 접촉 자세와 방향 | action frame, controller and termination | p. 2 (1. Introduction), p. 4 (3.3.2. Policy Learning) |
 
 ## Metrics and Success Definition
 

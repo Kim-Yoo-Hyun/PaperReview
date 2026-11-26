@@ -10,7 +10,7 @@
 - Authors: Bo Liu, Yuqian Jiang, Xiaohan Zhang, Qiang Liu, Shiqi Zhang, Joydeep Biswas, Peter Stone
 - Primary track: Planning and control
 - Tier: REFERENCE
-- Tags: Robotics, LLM planning, classical planning, PDDL, plan verification
+- Tags: Robotics, LLM planning, classical planning, PDDL, task planning
 - Official paper: https://arxiv.org/abs/2304.11477
 - Full-text retrieval: https://arxiv.org/pdf/2304.11477
 - Code/Project: https://github.com/Cranial-XIX/llm-pddl

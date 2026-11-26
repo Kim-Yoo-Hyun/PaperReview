@@ -10,7 +10,7 @@
 - Authors: Jared Mejia, Victoria Dean, Tess Hellebrekers, Abhinav Gupta
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, tactile sensing, audio-visual pretraining, contact-rich manipulation
+- Tags: Robotics, tactile sensing, audio-visual pretraining, contact-rich manipulation, audio, behavior cloning
 - Official paper: https://arxiv.org/abs/2405.08576
 - Full-text retrieval: https://arxiv.org/pdf/2405.08576
 - Code/Project: https://sites.google.com/view/hearing-touch

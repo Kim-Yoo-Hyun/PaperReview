@@ -10,7 +10,7 @@
 - Authors: Shuaifeng Zhi, Tristan Laidlow, Stefan Leutenegger, Andrew J. Davison
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: NeRF, semantic, 3D Vision, alignment
+- Tags: NeRF, semantic, 3D Vision, 3D segmentation
 - Official paper: https://arxiv.org/abs/2103.15875
 - Full-text retrieval: https://arxiv.org/pdf/2103.15875
 - Code/Project: https://shuaifengzhi.com/Semantic-NeRF/
@@ -78,3 +78,7 @@ Semantic-NeRF는 장면 하나의 여러 영상에서 색과 부피 밀도 및 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (3.4. Implementation), p. 4 (3.4. Implementation), p. 8 (4.4. Semantic Fusion), p. 4 (4.2. Semantic Neural Radiance Fields)이다.
+
+## 검색 태그 근거
+
+포즈가 주어진 컬러 영상과 의미 레이블로 장면의 색·밀도·의미를 함께 최적화한다. Replica의 홀드아웃 시점에서 분할 정확도와 희소·노이즈 라벨의 효과를 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhi_In-Place_Scene_Labelling_and_Understanding_With_Implicit_Scene_Representation_ICCV_2021_paper.pdf#page=6)

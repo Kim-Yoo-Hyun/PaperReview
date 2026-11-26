@@ -1,4 +1,4 @@
-# D · 등록 전 후보. found_in 키와 분모는 research/EXTERNAL_COVERAGE.md 참조.
+# D · 등록 전 후보. found_in 키와 분모는 research/GAPFILL.md#external-coverage 참조.
 - id: 2024-yue-deervla
   title: 'DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution'
   authors:

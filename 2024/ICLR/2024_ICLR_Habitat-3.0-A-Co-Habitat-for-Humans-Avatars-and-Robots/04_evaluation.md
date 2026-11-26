@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **Target system/task:** 사람 아바타와 조작기를 갖춘 Spot의 모의 실내 협력.
+- **Input boundary:** 팔 카메라, 과제별 사람 감지·위치 또는 로봇 관절 상태.
+- **Output/decision under evaluation:** 사람 추종을 위한 베이스 명령 또는 협력 재배치 행동.
+- **Primary target:** 사회적 내비게이션과 물체 재배치의 성공·충돌.
 - **Detected evaluation headings:** A IMPLEMENTATION DETAILS (p. 16); C DETAILED COMPARISON RESULTS (p. 21); C.2.2 ADDITIONAL ABLATION RESULTS AND ANALYSIS (p. 23).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 7 (Figure/Table caption), p. 25 (Figure/Table
 |---|---|---|---|
 | Robot/hardware/simulator | In all episodes, to make sure that the robot learns to find the humanoid, the robot location is initialized at least 3m away from ... | embodiment, simulator version and control stack | p. 16 (A.1 SOCIAL NAVIGATION), p. 17 (A.1 SOCIAL NAVIGATION) |
 | Task/environment | To compute this measure, we split the humanoid trajectory into equally spaced waypoints, we then use a path planner to measure the number of ... | reset, timeout, object/scene variation | p. 17 (A.1 SOCIAL NAVIGATION), p. 18 (A.2 SOCIAL REARRANGEMENT) |
-| Observation/sensor | standardized observation, action, task state와 evaluation split | calibration, preprocessing, privileged input | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 2 (1 INTRODUCTION) |
-| Output/decision | policy/controller trajectory 또는 measured result | action frame, controller and termination | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 18 (A.2 SOCIAL REARRANGEMENT) |
+| Observation/sensor | 팔 카메라, 과제별 사람 감지·위치 또는 로봇 관절 상태 | calibration, preprocessing, privileged input | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 2 (1 INTRODUCTION) |
+| Output/decision | 사람 추종을 위한 베이스 명령 또는 협력 재배치 행동 | action frame, controller and termination | p. 17 (A.2 SOCIAL REARRANGEMENT), p. 18 (A.2 SOCIAL REARRANGEMENT) |
 
 ## Metrics and Success Definition
 

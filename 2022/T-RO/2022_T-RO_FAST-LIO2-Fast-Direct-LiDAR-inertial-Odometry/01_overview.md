@@ -48,10 +48,10 @@ FAST-LIO2는 라이다 원시 점을 국소 지도에 직접 정합하고 관성
 
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | To prevent the size of the map from going unbound, only map points in a large local region of length L around the LiDAR current position are maintained Algorithm 1: State Estimation ... | camera/depth stream, pose, map와 language goal | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION) |
-| State/latent | prevent, size, going, unbound, only, points, large, local, region, length, around, LiDAR | robot pose, free-space/semantic map와 local goal | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION), p. 4 (IV. STATE ESTIMATION) |
-| Output/action | The localization provides state feedback for the robot onboard controllers, while the dense 3D map provides necessary information about the environment (i.e., free space and obstacles) for trajectory planning. | collision-free trajectory 또는 velocity command | p. 1 (I. INTRODUCTION), p. 4 (IV. STATE ESTIMATION), p. 4 (III. SYSTEM OVERVIEW) |
-| Objective/outcome | Besides efficient nearest neighbor search, the new data structure supports incremental map update (i.e., point insertion, on-tree downsampling, points delete) and dynamic re-balancing at minimal computation cost. | goal reach, safety, localization error와 replanning latency | p. 2 (I. INTRODUCTION), p. 5 (IV. STATE ESTIMATION), p. 1 (I. INTRODUCTION) |
+| Observation/input | To prevent the size of the map from going unbound, only map points in a large local region of length L around the LiDAR current position are maintained Algorithm 1: State Estimation ... | 원시 LiDAR 스캔과 IMU 가속도·각속도 | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION) |
+| State/latent | prevent, size, going, unbound, only, points, large, local, region, length, around, LiDAR | 관성 상태와 로컬 점군 지도 | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION), p. 4 (IV. STATE ESTIMATION) |
+| Output/action | The localization provides state feedback for the robot onboard controllers, while the dense 3D map provides necessary information about the environment (i.e., free space and obstacles) for trajectory planning. | 추정한 자세·위치와 갱신된 점군 지도 | p. 1 (I. INTRODUCTION), p. 4 (IV. STATE ESTIMATION), p. 4 (III. SYSTEM OVERVIEW) |
+| Objective/outcome | Besides efficient nearest neighbor search, the new data structure supports incremental map update (i.e., point insertion, on-tree downsampling, points delete) and dynamic re-balancing at minimal computation cost. | 궤적 오차와 스캔당 추정·지도 갱신 시간 | p. 2 (I. INTRODUCTION), p. 5 (IV. STATE ESTIMATION), p. 1 (I. INTRODUCTION) |
 
 ## Main Claims and Actual Contribution
 
@@ -77,6 +77,10 @@ FAST-LIO2는 라이다 원시 점을 국소 지도에 직접 정합하고 관성
 - **p. 16 / VII. REAL-WORLD EXPERIMENTS - extractive body cue:** The occasional timeout usually does not affect a subsequent controller since the IMU propagated state estimate could be used during this short period.
 - **p. 10 / VI. BENCHMARK RESULTS - extractive body cue:** In this section, extensive experiments in terms of accuracy, robustness, and computational efficiency are conducted on various open datasets.
 - **p. 13 / 100 Hz - extractive body cue:** The LINS performs worse than LIO-SAM in liosam and ulhk datasets and failed in liosam 2 (garden sequence from [30]) because the two sequences are ...
+
+## 검색 태그 근거
+
+원시 LiDAR 점을 로컬 지도에 직접 정합하고 IMU로 전파한 상태를 반복 칼만 필터로 갱신한다. 항공·지상 이동 자료에서 궤적 오차와 처리 시간을 평가한다. 장애물 회피는 추정치를 활용한 선행 응용으로 인용한다. [원문 4쪽](https://arxiv.org/pdf/2107.06829v1#page=4) · [원문 14쪽](https://arxiv.org/pdf/2107.06829v1#page=14)
 
 ## Why Read It
 

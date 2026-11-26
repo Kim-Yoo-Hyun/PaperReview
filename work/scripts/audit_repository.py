@@ -7,21 +7,23 @@ import csv
 import gzip
 import hashlib
 import json
+import os
 import re
 import sys
 import unicodedata
 import urllib.parse
 from collections import Counter, defaultdict
+from functools import cache
 from pathlib import Path
 
 try:
     from render_source_audit import check_applied, render as render_source_audit, valid_source_locations
-    from registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
-    from registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
+    from registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES, catalog_cues
+    from registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, paper_year_path, validate_record_shape, venue_id_for
 except ModuleNotFoundError:
     from .render_source_audit import check_applied, render as render_source_audit, valid_source_locations
-    from .registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES
-    from .registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, validate_record_shape, venue_id_for
+    from .registry_profiles import ARTIFACT_STATUSES, EVALUATION_SETTINGS, LINEAGE_STATUSES, PROTOCOL_STATUSES, REPRO_STATUSES, catalog_cues
+    from .registry_schema import CURATION_ROLES, DATA_STATUSES, FACET_KEYS, PRIMARY_TRACKS, SCHEMA_VERSION, paper_year_path, validate_record_shape, venue_id_for
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -139,7 +141,7 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def audit_catalog(path: Path, kind: str, paper_ids: set[str], errors: list[str]) -> int:
+def audit_catalog(path: Path, kind: str, papers_by_id: dict[str, dict], errors: list[str]) -> int:
     if not path.exists():
         errors.append(f"missing {kind} catalog: {path.relative_to(ROOT)}")
         return 0
@@ -161,13 +163,22 @@ def audit_catalog(path: Path, kind: str, paper_ids: set[str], errors: list[str])
         if not entry_id.startswith(f"{kind}:"):
             errors.append(f"invalid {kind} catalog id: {entry_id}")
         for reference in entry.get("paper_references", []):
-            if reference.get("paper_id") not in paper_ids:
-                errors.append(f"{kind} catalog points to unknown paper_id: {reference.get('paper_id')}")
+            pid = reference.get("paper_id")
+            paper = papers_by_id.get(pid)
+            if paper is None:
+                errors.append(f"{kind} catalog points to unknown paper_id: {pid}")
+            elif reference.get("source") != f"{paper['folder']}/04_evaluation.md":
+                errors.append(f"{kind} catalog note path mismatch: {entry_id} {pid}")
             if reference.get("evidence") != "cue_only":
                 errors.append(f"{kind} catalog reference is missing cue_only evidence: {entry_id}")
     duplicates = [value for value, count in Counter(ids).items() if count > 1]
     if duplicates:
         errors.append(f"duplicate {kind} catalog ids: {duplicates}")
+    cues_by_paper = catalog_cues(catalog, f"{kind}_id")
+    stale = sum((paper.get("evaluation_profile") or {}).get(f"{kind}_cues") != cues_by_paper.get(pid, [])
+                for pid, paper in papers_by_id.items())
+    if stale:
+        errors.append(f"{kind} catalog differs from evaluation cues for {stale} papers")
     return len(entries)
 
 
@@ -243,6 +254,14 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
             continue
         if row.get("title") != item.get("title") or row.get("year") != str(item.get("year")):
             errors.append(f"generated registry index identity mismatch: {row.get('paper_id')}")
+        expected_values = {
+            "overview_path": f"./{item['folder']}/01_overview.md",
+            "venue": (item.get("publication") or {}).get("venue", item.get("venue", "")),
+            "category": item.get("category", ""),
+        }
+        for field, expected in expected_values.items():
+            if row.get(field) != expected:
+                errors.append(f"generated registry index {field} mismatch: {row.get('paper_id')}")
         for field in ("tags", "aliases"):
             if row.get(field) != ";".join(item.get(field, [])):
                 errors.append(f"generated registry index {field} mismatch: {row.get('paper_id')}")
@@ -250,6 +269,8 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
         if row.get("identifier_status") != expected_identifier:
             errors.append(f"generated registry index identifier status mismatch: {row.get('paper_id')}")
         primary = (item.get("sources") or {}).get("primary") or {}
+        if row.get("primary_source") != primary.get("url", ""):
+            errors.append(f"generated registry index source URL mismatch: {row.get('paper_id')}")
         expected_scope = primary.get("scope") or (item.get("provenance") or {}).get("primary_source_scope", "")
         if row.get("primary_source_scope") != expected_scope:
             errors.append(f"generated registry index source scope mismatch: {row.get('paper_id')}")
@@ -260,6 +281,8 @@ def audit_registry_index(path: Path, papers_by_id: dict[str, dict], errors: list
             facets = {}
         if not isinstance(facets, dict) or any(key not in FACET_KEYS for key in facets):
             errors.append(f"generated registry index has invalid facets: {row.get('paper_id')}")
+        elif facets != item.get("facets", {}):
+            errors.append(f"generated registry index facets mismatch: {row.get('paper_id')}")
         try:
             indexed_relations = json.loads(row.get("outgoing_relations", "[]"))
         except json.JSONDecodeError:
@@ -555,6 +578,8 @@ def audit_markdown_documents(errors: list[str]) -> dict[str, int]:
     """
     paths = sorted(path for path in ROOT.rglob("*.md") if ".git" not in path.parts)
     link_re = re.compile(r"(?<!\\)\[[^\]\n]*\]\(([^)\n]+)\)")
+    root = ROOT.resolve()
+    exact_case = cache(path_has_exact_case)
     checked = 0
     for path in paths:
         content = path.read_text(encoding="utf-8")
@@ -593,15 +618,16 @@ def audit_markdown_documents(errors: list[str]) -> dict[str, int]:
                 parsed = urllib.parse.urlsplit(target)
                 if parsed.scheme or target.startswith("//") or not parsed.path:
                     continue
-                resolved = (path.parent / urllib.parse.unquote(parsed.path)).resolve()
+                local = path.parent / urllib.parse.unquote(parsed.path)
                 try:
-                    resolved.relative_to(ROOT.resolve())
+                    local.resolve().relative_to(root)
+                    spelling = Path(os.path.normpath(local)).relative_to(ROOT)
                 except ValueError:
                     errors.append(f"Markdown link escapes repository: {relative}:{number} -> {raw_target}")
                     continue
                 checked += 1
-                if not resolved.exists():
-                    errors.append(f"Markdown link target missing: {relative}:{number} -> {raw_target}")
+                if not exact_case(str(spelling)):
+                    errors.append(f"Markdown link target missing or miscapitalized: {relative}:{number} -> {raw_target}")
         if fence:
             errors.append(f"Markdown code fence unclosed: {relative}")
     return {"files": len(paths), "links": checked}
@@ -908,6 +934,9 @@ def main() -> None:
             errors.append(f"{item.get('title', '<untitled>')} registry schema: {', '.join(shape_errors)}")
         if item.get("page") and not valid_http(item.get("page")):
             errors.append(f"invalid primary source URL: {item.get('paper_id')}")
+        pdf_source = ((item.get("sources") or {}).get("paper_pdf") or {}).get("url")
+        if item.get("pdf") and item["pdf"] != pdf_source:
+            errors.append(f"paper PDF source mismatch: {item.get('paper_id')}")
         publication = item.get("publication") or {}
         if publication.get("venue_id") and not isinstance(publication.get("venue_id"), str):
             errors.append(f"invalid venue_id: {item.get('paper_id')}")
@@ -997,10 +1026,13 @@ def main() -> None:
     missing_notes = []
     for item in papers:
         folder = ROOT / item["folder"]
+        if not str(item.get("year", "")).isdecimal() or folder.parent.parent != ROOT / paper_year_path(item["year"]):
+            errors.append(f"paper outside its publication-year directory: {item['paper_id']} {item['folder']}")
         if not path_has_exact_case(item["folder"]):
             errors.append(f"paper folder spelling/case mismatch: {item['paper_id']} {item['folder']}")
+        note_files = {path.name for path in folder.iterdir() if path.is_file()} if folder.is_dir() else set()
         for name in NOTE_NAMES:
-            if not (folder / name).exists():
+            if name not in note_files:
                 missing_notes.append(str(folder / name))
     if missing_notes:
         errors.append(f"missing standard notes: {len(missing_notes)}")
@@ -1219,7 +1251,7 @@ def main() -> None:
         if row.get("paper_id", "") != item.get("paper_id", ""):
             errors.append(f"paper_id mismatch in status: {row.get('overview_path')}")
     catalog_counts = {
-        kind: audit_catalog(path, kind, paper_ids, errors)
+        kind: audit_catalog(path, kind, paper_by_id, errors)
         for kind, path in CATALOGS.items()
     }
     resource_count = audit_resources(RESOURCES, paper_ids, errors)

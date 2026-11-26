@@ -42,3 +42,9 @@ VLA의 RL이 환경 return이 아닌 검증 가능한 중간 출력 보상일 �
 ## Verification Boundary
 
 annotation 접근, downstream controller의 역할, execution feedback 사용 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · VLA-R1 추론 서버 · scripts/server.py [배포 파일](https://raw.githubusercontent.com/GigaAI-research/VLA-R1/42f4e0e94adde6d6a679f0a939af08bb6b43e4d8/scripts/server.py)
+- 가중치 · VLA-R1 시각언어 추론 모델 · model-00001-of-00002.safetensors [배포 파일](https://huggingface.co/GigaAI-Research/vla-r1/resolve/a386eadd90900d18d8c56d2e15b57ec33082c024/model-00001-of-00002.safetensors)
+- 데이터 · VLA-R1 어포던스 및 궤적 추론 자료 · vla_r1.zip [배포 파일](https://huggingface.co/datasets/GigaAI-Research/vla_r1/resolve/f3574bec448c86886209f5ad89f903345eac025e/vla_r1.zip)

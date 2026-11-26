@@ -10,7 +10,7 @@
 - Authors: Chin-Hsuan Wu, Yen-Chun Chen, Bolivar Solarte, Lu Yuan, Min Sun
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, geometry, Diffusion, Generation, 3D Vision
+- Tags: 3D reconstruction, geometry, Diffusion, 3D Vision, camera pose
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00080
 - Preprint PDF: https://arxiv.org/pdf/2312.17250
 - Full-text retrieval at original review: https://openreview.net/attachment?id=W7vOFBCGPm&name=pdf
@@ -78,3 +78,7 @@ iFusion은 카메라 자세를 모르는 두 물체 영상에서 상대 자세�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (2. Preliminary), p. 4 (3.1. Diffusion as a Pose Estimator), p. 5 (3.3. From Sparse Views to 3D Reconstruction)이다.
+
+## 검색 태그 근거
+
+소수의 물체 영상에서 확산 모델을 역으로 사용해 먼저 상대 자세를 최적화한다. 추정 자세를 바탕으로 같은 물체의 표현을 맞추고 GSO와 OmniObject3D에서 자세·형상 오차를 평가한다. [원문 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=4) · [원문 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125593#page=8)

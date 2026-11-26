@@ -641,7 +641,19 @@ def contains(text: str, *needles: str) -> bool:
     return any(needle.casefold() in text for needle in needles)
 
 
-def build_facets(item: dict) -> dict[str, list[str]]:
+def read_facet_reviews(ledger: Path) -> dict:
+    reviews = {}
+    with ledger.open(encoding="utf-8") as handle:
+        for line in handle:
+            row = json.loads(line)
+            excluded = row.get("postcheck", {}).get("removed_search_cues", {})
+            reviewed = row.get("taxonomy_review", {}).get("legacy_tags", {}).get("facets", {})
+            if excluded or reviewed:
+                reviews[row["id"]] = {"excluded": excluded, "reviewed": reviewed}
+    return reviews
+
+
+def build_facets(item: dict, *, excluded: dict | None = None, reviewed: dict | None = None) -> dict[str, list[str]]:
     text = text_for_facets(item)
     facets = {key: [] for key in FACET_KEYS}
 
@@ -751,7 +763,12 @@ def build_facets(item: dict) -> dict[str, list[str]]:
     if contains(text, "whole-body", "whole body"):
         add("interaction", "whole_body")
 
-    return {key: sorted(values) for key, values in facets.items()}
+    generated = {key: sorted(values) for key, values in facets.items()}
+    for axis, cue in (excluded or {}).items():
+        generated[axis] = [value for value in generated[axis] if value != cue]
+    # A checked axis can be empty, for example when geometry is a prediction rather than a sensor input.
+    generated.update({axis: list(values) for axis, values in (reviewed or {}).items()})
+    return generated
 
 
 def role_for(item: dict) -> str:
@@ -894,6 +911,8 @@ def reconcile(
     status_rows = read_status()
     reviews, review_scopes, review_manifests = read_reviews()
     note_reviews, note_review_manifests = read_note_reviews()
+    audit_path = load_json(META).get("source_audit", {}).get("path")
+    facet_reviews = read_facet_reviews(ROOT / audit_path) if audit_path else {}
     papers_by_id = {paper["paper_id"]: paper for paper in papers}
     ids_by_title = {paper["title"]: paper["paper_id"] for paper in papers}
     current_intensive_ids = {
@@ -1011,7 +1030,7 @@ def reconcile(
             backfilled_retained_rationales += 1
             paper["curation"] = curation
 
-        paper["facets"] = build_facets(paper)
+        paper["facets"] = build_facets(paper, **facet_reviews.get(paper_id, {}))
         paper["facet_provenance"] = "curation taxonomy cue; exact task/evaluation role remains in paper notes."
 
         notes = note_evidence(folder)
@@ -1243,6 +1262,19 @@ def reconcile(
     return result
 
 
+def refresh_insight_position(text: str, tier: str, track: str, tags: list[str]) -> str:
+    """Retire a stale generated metadata line without rewriting the author's analysis."""
+    snapshot = re.search(
+        r"(?m)(?<=^### Dependency and evolution\n\n)"
+        r"^- \*\*Registry position:\*\* `([^`\n]+)` in `([^`\n]+)`; tags: `([^`\n]+)`\.$",
+        text,
+    )
+    if not snapshot or snapshot.groups() == (tier, track, ", ".join(tags)):
+        return text
+    link = "- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다."
+    return text[:snapshot.start()] + link + text[snapshot.end():]
+
+
 def reconcile_priorities(apply: bool) -> dict:
     """Sync a tier review without re-running body-evidence/profile extraction."""
     try:
@@ -1296,14 +1328,15 @@ def reconcile_priorities(apply: bool) -> dict:
         }[tier]
         if tier in {"CORE", "NEXT"}:
             paper["primary_track"] = row["primary_track"]
-        # Only metadata headers change. Body analysis, source evidence, and
-        # tracker inputs remain untouched by this operation.
+        # Sync registry metadata without regenerating paper analysis or tracker inputs.
         for name in ("01_overview.md", "02_problem.md", "03_method.md", "04_evaluation.md", "05_insights.md"):
             path = ROOT / paper["folder"] / name
             original = path.read_text(encoding="utf-8")
             updated = re.sub(r"(?m)^- Tier: .*?$", f"- Tier: {tier}", original)
             if paper.get("primary_track"):
                 updated = re.sub(r"(?m)^- Primary track: .*?$", f"- Primary track: {paper['primary_track']}", updated)
+            if name == "05_insights.md":
+                updated = refresh_insight_position(updated, tier, paper["primary_track"], paper["tags"])
             if updated != original:
                 note_updates[path] = updated
         if json.dumps(paper, ensure_ascii=False, sort_keys=True) != before:

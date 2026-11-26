@@ -10,7 +10,7 @@
 - Authors: Yuval Haitman, Amit Efraim, Joseph M. Francos
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: geometry, sensor fusion, LiDAR, Diffusion, Generation, point cloud, 3D Vision
+- Tags: 3D Registration, LiDAR, Diffusion, Generation, point cloud, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Haitman_C-GenReg_Training-Free_3D_Point_Cloud_Registration_by_Multi-View-Consistent_Geometry-to-Image_Generation_CVPR_2026_paper.pdf
 - Code/Project: not identified

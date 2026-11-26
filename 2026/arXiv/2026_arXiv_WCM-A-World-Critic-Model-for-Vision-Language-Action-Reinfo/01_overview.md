@@ -12,8 +12,9 @@
 - Aliases: WCM
 - Official paper: https://arxiv.org/abs/2607.29613
 - Venue verification: https://arxiv.org/abs/2607.29613
-- Code/Project: https://github.com/sylvestf/WCM
+- Code/Project: https://sylvestf.github.io/wcm-homepage/
 - Code: https://github.com/sylvestf/WCM
+- 방법·평가 확인 (2026-11-25): [원문 4, 5, 6, 7, 8, 9쪽](https://arxiv.org/pdf/2607.29613v1#page=4) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. arXiv v1와 공식 repository의 configs/scripts/world_critic 존재 확인. 학회 acceptance 및 실제 구현 재현은 확인하지 않았다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,9 @@ WCM은 부분적으로 관측되는 조작에서 단일 영상의 수익을 회�
 ## Verification Boundary
 
 본문에서 확인할 항목: critic/actor 가중치 공유·history 접근·latent target·on/off-policy 차이. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- 세계 비평가 학습 모듈 · world_critic/training.py [배포 파일](https://raw.githubusercontent.com/sylvestf/WCM/d028ebbff2cf0a761f5d12a4bdc7095c0acd5522/world_critic/training.py)
+- 선택된 pick-and-place 과제의 저자 체크포인트 · best.pt [배포 파일](https://huggingface.co/Sylvest/pick-place-wcm-ckpt/resolve/9cbbda60ba72966cf3bf6c4684f28d31f28f66b9/best.pt)
+- 선택된 pick-and-place 과제 학습 자료 · data/chunk-000/file-000.parquet [배포 파일](https://huggingface.co/datasets/Sylvest/pick-place-wcm/resolve/0600e5a90f70a1695b14c0cfc5ad9feb04c3d413/data/chunk-000/file-000.parquet)

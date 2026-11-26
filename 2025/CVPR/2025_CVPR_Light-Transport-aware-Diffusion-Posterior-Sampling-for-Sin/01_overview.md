@@ -79,3 +79,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.3. Differentiable Rendering with a Diffusion Prior), p. 4 (4. Method)이다.
+
+## 검색 태그 근거
+
+구름과 같은 산란 매질을 한 장의 영상에서 복원한다. 렌더러가 입력 영상과 비교한 오차를 이용하고 체적 확산 사전분포를 적용해 3D 밀도를 추정한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Leonard_Light_Transport-aware_Diffusion_Posterior_Sampling_for_Single-View_Reconstruction_of_3D_CVPR_2025_paper.pdf#page=7)

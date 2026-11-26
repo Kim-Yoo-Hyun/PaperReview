@@ -7,7 +7,7 @@
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: embodiment, flow, video-pretraining, manipulation
+- Tags: embodiment, flow, video-pretraining, manipulation, diffusion model
 - Aliases: EC-Flow
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.html
 - Venue verification: https://openaccess.thecvf.com/content/ICCV2025/html/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.html
@@ -34,6 +34,10 @@ EC-Flow는 저수준 행동 라벨이 없는 조작 영상에서 로봇 자체�
 Meta-World와 실제 가림·변형·비변위 조작을 평가한다.
 
 근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/ICCV2025/html/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.html) · [저자 project/code](https://ec-flow1.github.io/) · [공식 code](https://github.com/YixiangChen515/EC-Flow).
+
+## 검색 태그 근거
+
+조건부 확산 모델이 영상·지시에서 로봇 표면점의 2D 이동을 예측한다. URDF와 관절 투영으로 행동을 복원하고 Meta-World 및 실물 Franka에서 평가한다. flow는 예측하는 점의 움직임을 뜻한다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_EC-Flow_Enabling_Versatile_Robotic_Manipulation_from_Action-Unlabeled_Videos_via_Embodiment-Centric_ICCV_2025_paper.pdf#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

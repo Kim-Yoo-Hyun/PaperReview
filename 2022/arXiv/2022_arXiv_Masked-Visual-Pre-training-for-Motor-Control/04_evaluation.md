@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** demonstration으로 정의된 robot task distribution.
-- **Input boundary:** observation history와 expert trajectory/action.
-- **Output/decision under evaluation:** predicted action 또는 action chunk.
-- **Primary target:** imitation error, task success, robustness와 compounding error.
+- **Target system/task:** IsaacGym의 Franka·Kuka 조작.
+- **Input boundary:** 자연 이미지 사전학습 후 손목 영상과 관절 상태.
+- **Output/decision under evaluation:** PPO 정책의 관절 명령.
+- **Primary target:** 시뮬레이션의 과제 성공.
 - **Detected evaluation headings:** 3. PixMC Benchmark (p. 4); 4. Experimental Setup (p. 5); 5. Experimental Results (p. 6).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 5 (Figure/Table caption), p. 7 (Figure/Table 
 |---|---|---|---|
 | Robot/hardware/simulator | The benchmark provides proprioceptive information for the robots, as well as hand-engineered states typically including 3D poses or relevant objects, goals, and their relations. | embodiment, simulator version and control stack | p. 4 (3.4. Observations and Actions), p. 4 (3.1. Motivation) |
 | Task/environment | In particular, there is no benchmark suite for learning motor control algorithms that has high-resolution images, realistic robots, fast physics simulation, efficient training, and ... | reset, timeout, object/scene variation | p. 4 (3.1. Motivation), p. 6 (5.1. Sample Complexity) |
-| Observation/sensor | observation history와 expert trajectory/action | calibration, preprocessing, privileged input | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels) |
-| Output/decision | predicted action 또는 action chunk | action frame, controller and termination | p. 2 (1. Introduction), p. 4 (3.4. Observations and Actions) |
+| Observation/sensor | 자연 이미지 사전학습 후 손목 영상과 관절 상태 | calibration, preprocessing, privileged input | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels) |
+| Output/decision | PPO 정책의 관절 명령 | action frame, controller and termination | p. 2 (1. Introduction), p. 4 (3.4. Observations and Actions) |
 
 ## Metrics and Success Definition
 

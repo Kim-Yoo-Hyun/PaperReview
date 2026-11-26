@@ -44,12 +44,14 @@
 
 ## Observation, State, and Output Interface
 
+RGB-D 파노라마와 지시로 지도를 만들고 장면·시점·인스턴스별 점수로 다음 경로 노드를 고른다. 점 좌표는 깊이 역투영으로 초기화한다. DAgger 미세조정과 REVERIE·R2R에서의 내비게이션을 확인했다. [PDF 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Gao_3D_Gaussian_Map_with_Open-Set_Semantic_Grouping_for_Vision-Language_Navigation_ICCV_2025_paper.pdf#page=5)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Based on g, we design MAP strategy to predict action probabilities by aggregating spatial-semantic cues from candidate waypoints V, guided by the L-word instruction embedding X ∈RL×768. | camera/depth stream, pose, map와 language goal | p. 4 (3.3. Multi-Level Action Prediction (MAP)), p. 3 (3. Method) |
-| State/latent | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate, waypoints, guided | robot pose, free-space/semantic map와 local goal | p. 4 (3.3. Multi-Level Action Prediction (MAP)), p. 3 (3. Method), p. 3 (3. Method) |
-| Output/action | Built upon this, the agent is required to learn a navigation policy that predicts the next step action at ∈ At. | collision-free trajectory 또는 velocity command | p. 3 (3. Method), p. 3 (3. Method), p. 1 (1. Introduction) |
-| Objective/outcome | The differentiable rendering process enables gradients from pixel-level loss functions to backpropagate through the Gaussian parameters. | goal reach, safety, localization error와 replanning latency | p. 4 (3.1. Egocentric Scene Map (ESM)), p. 4 (3.1. Egocentric Scene Map (ESM)), p. 5 (3.5. Implementation Details) |
+| Observation/input | Based on g, we design MAP strategy to predict action probabilities by aggregating spatial-semantic cues from candidate waypoints V, guided by the L-word instruction embedding X ∈RL×768. | RGB-D 파노라마와 언어 지시 | p. 4 (3.3. Multi-Level Action Prediction (MAP)), p. 3 (3. Method) |
+| State/latent | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate, waypoints, guided | 의미별로 묶은 3D 가우시안 지도 | p. 4 (3.3. Multi-Level Action Prediction (MAP)), p. 3 (3. Method), p. 3 (3. Method) |
+| Output/action | Built upon this, the agent is required to learn a navigation policy that predicts the next step action at ∈ At. | 후보 경로 노드의 선택 | p. 3 (3. Method), p. 3 (3. Method), p. 1 (1. Introduction) |
+| Objective/outcome | The differentiable rendering process enables gradients from pixel-level loss functions to backpropagate through the Gaussian parameters. | REVERIE·R2R의 경로 성공 및 경로 효율 | p. 4 (3.1. Egocentric Scene Map (ESM)), p. 4 (3.1. Egocentric Scene Map (ESM)), p. 5 (3.5. Implementation Details) |
 
 ## Main Claims and Actual Contribution
 

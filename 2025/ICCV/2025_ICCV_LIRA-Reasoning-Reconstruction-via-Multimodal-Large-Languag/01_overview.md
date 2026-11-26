@@ -10,7 +10,7 @@
 - Authors: Zhen Zhou, Tong Wang, Yunkai Ma, Xiao Tan, Fengshui Jing
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision, Vision-Language
+- Tags: 3D Vision, Vision-Language, 3D reconstruction
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -75,3 +75,7 @@ LIRA는 실내 RGB-D 영상을 보면서 암시적인 지시가 가리키는 물
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1.2. 2D Reasoning Segmentation within the FBV), p. 7 (4.5. Runtime Analysis)이다.
+
+## 검색 태그 근거
+
+RGB-D 스트림에서 언어모델로 간접 지시를 해석해 후보를 만들고 시점별 인스턴스를 점진적으로 합친다. 참조 물체 분할과 대상의 3D 복원을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhou_LIRA_Reasoning_Reconstruction_via_Multimodal_Large_Language_Models_ICCV_2025_paper.pdf#page=7)

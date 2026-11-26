@@ -42,3 +42,8 @@ Chunk-aware actor-critic과 공유 표현 연구에서 반드시 넘어야 하�
 ## Verification Boundary
 
 value target gradient 경계, OOD action 처리, 실로봇 데이터·환경 예산을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · GR00T에 연결한 DEAS 비평가 · gr00t/model/action_head/deas_critic.py [배포 파일](https://raw.githubusercontent.com/csmile-1006/DEAS-Isaac-GR00T/1bfc8464c4d28574cbd2e699342791c7e4d80028/gr00t/model/action_head/deas_critic.py)
+- 데이터 · RoboCasa CoffeeSetupMug 시연 궤적 · demos/CoffeeSetupMug/data/chunk-000/episode_000000.parquet [배포 파일](https://huggingface.co/datasets/changyeon/deas_robocasa/resolve/b929891bd6e18ec5cec46d20e793f78e5d4d0359/demos/CoffeeSetupMug/data/chunk-000/episode_000000.parquet)

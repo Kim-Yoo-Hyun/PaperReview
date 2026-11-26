@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, robotics agents still face significant challenges in following instructions for long-horizon manipulation tasks, especially when the given general instructions are not ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | The policy model can be parameterized as an image-conditioned planner that infers the action ai,t given the current observation xi,t and the ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | Generated, Subgoal, Current, Observation, Environment, Multi, Modal, Instructions | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | However, robotics agents still face significant challenges in following instructions for long-horizon manipulation tasks, especially when the given general instructions are not ... | VIMA-BENCH의 여러 단계 조작 | body wording is the source claim |
+| Observation / input | The policy model can be parameterized as an image-conditioned planner that infers the action ai,t given the current observation xi,t and the ... | 현재 영상과 시각·언어 지시 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation | 의미 정렬된 시각 중간 목표 | notation and tensor shape require body check |
+| Output / action | Generated, Subgoal, Current, Observation, Environment, Multi, Modal, Instructions | 중간 목표 영상과 하위 정책의 행동 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 장기 조작 성공과 중간 목표의 지시 일치 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

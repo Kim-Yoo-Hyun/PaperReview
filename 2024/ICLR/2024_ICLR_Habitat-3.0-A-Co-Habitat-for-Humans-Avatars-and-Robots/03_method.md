@@ -61,9 +61,9 @@ PDF body method statement (p. 16 (A.1 SOCIAL NAVIGATION), p. 18 (A.2 SOCIAL REAR
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension, embedding, generate, realistic, body | standardized observation, action, task state와 evaluation split | body cue; exact tensor/frame verify |
-| State/latent | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension | benchmark state/goal와 method decision | body cue; notation verify |
-| Action/output | Social, tasks, Aiming, reproducible, standardized, benchmarking, present, collaborative, human-robot, interaction | policy/controller trajectory 또는 measured result | body cue; unit/decoder verify |
+| Input/observation | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension, embedding, generate, realistic, body | 팔 카메라, 과제별 사람 감지·위치 또는 로봇 관절 상태 | body cue; exact tensor/frame verify |
+| State/latent | policy, uses, ResNet-18, visual, encoder, embed, depth, input, image, dimension | 상대 위치, 로봇과 물체 상태, 협력 목표 | body cue; notation verify |
+| Action/output | Social, tasks, Aiming, reproducible, standardized, benchmarking, present, collaborative, human-robot, interaction | 사람 추종을 위한 베이스 명령 또는 협력 재배치 행동 | body cue; unit/decoder verify |
 | Objective/constraint | PPO, minibatches, epoch, update, entropy, loss, clip, gradient, norm, agent | benchmark score and failure cost | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 16 (A.1 SOCIAL NAVIGATION), p. 18 (A.2 SOCIAL REAR
 - **p. 18 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** The action space of the learned high-level policy consists of discrete selections from all possible combinations of skills and objects/receptacles allowed at each step.
 - **p. 19 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** If the robot approaches the humanoid within a short distance (< 1.5m) while executing a skill, the current skill is aborted, and the high-level policy ...
 - **p. 19 / A.2 SOCIAL REARRANGEMENT - extractive body cue:** If the high-level policy chooses to execute an infeasible low-level action, such as attempting to pick an object that is out of reach (based on ...
-- **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
+- **Normalized interface:** observation=팔 카메라, 과제별 사람 감지·위치 또는 로봇 관절 상태; state=상대 위치, 로봇과 물체 상태, 협력 목표; output/action=사람 추종을 위한 베이스 명령 또는 협력 재배치 행동.
 
 ## Temporal and Runtime Contract
 

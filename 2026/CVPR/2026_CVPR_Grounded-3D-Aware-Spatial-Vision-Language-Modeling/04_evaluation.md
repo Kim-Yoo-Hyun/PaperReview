@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Target system/task:** 단안 영상의 3D 위치 추정과 공간 질의응답.
+- **Input boundary:** RGB 이미지·질문·카메라 내부 파라미터.
+- **Output/decision under evaluation:** 3D 상자 및 공간 질문에 대한 답변.
+- **Primary target:** 3D 위치 추정과 질의응답 정확도.
 - **Detected evaluation headings:** 3. Experiments (p. 6); 3.1. Implementation Details (p. 6).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (3.2. 3D Object Detection), p. 6 (3.3. Visu
 |---|---|---|---|
 | Robot/hardware/simulator | The Omni3D dataset is highly imbalanced [44], with far fewer outdoor training samples compared to indoor scenes. | embodiment, simulator version and control stack | p. 7 (3.5. Analysis and Ablation Study), p. 6 (3.2. 3D Object Detection) |
 | Task/environment | We evaluate our model on the Omni3D test set, following the benchmark protocol and hyperparameters used in DetAny3D. | reset, timeout, object/scene variation | p. 6 (3.2. 3D Object Detection), p. 7 (3.5. Analysis and Ablation Study) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Observation/sensor | RGB 이미지·질문·카메라 내부 파라미터 | calibration, preprocessing, privileged input | p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM) |
+| Output/decision | 3D 상자 및 공간 질문에 대한 답변 | action frame, controller and termination | p. 2 (1. Introduction), p. 2 (1. Introduction) |
 
 ## Metrics and Success Definition
 

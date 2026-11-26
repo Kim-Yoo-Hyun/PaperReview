@@ -10,7 +10,7 @@
 - Authors: Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, Neil Houlsby
 - Primary track: Foundations: Vision and Language Models
 - Tier: ARCHIVE
-- Tags: Vision Transformer, representation
+- Tags: Vision Transformer, representation, RGB
 - Official paper: https://arxiv.org/abs/2010.11929
 - Full-text retrieval: https://arxiv.org/pdf/2010.11929
 - Code/Project: https://github.com/google-research/vision_transformer
@@ -39,12 +39,14 @@ Vision Transformer는 이미지를 패치열로 바꿔 Transformer 인코더로 
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Similar to BERT's [class] token, we prepend a learnable embedding to the sequence of embedded patches (z0 0 = xclass), whose state at the output of the Transformer encoder (z0 L) serves ... | 논문이 명시한 observation과 task input | p. 3 (3 METHOD), p. 3 (3 METHOD) |
-| State/latent | Similar, BERT, class, token, prepend, learnable, embedding, sequence, embedded, patches, xclass, whose | task state 또는 decision variable | p. 3 (3 METHOD), p. 3 (3 METHOD), p. 4 (3 METHOD) |
-| Output/action | To handle 2D images, we reshape the image x ∈RH×W ×C into a sequence of flattened 2D patches xp ∈RN×(P 2·C), where (H, W) is the resolution of the original image, C ... | paper-specific output/action | p. 3 (3 METHOD), p. 4 (3 METHOD), p. 4 (3 METHOD) |
-| Objective/outcome | The Vision Transformer can handle arbitrary sequence lengths (up to memory constraints), however, the pre-trained position embeddings may no longer be meaningful. | primary task objective와 closed-loop behavior | p. 4 (3 METHOD), p. 3 (3 METHOD) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 고정 크기의 RGB 영상 패치 |
+| 표현 | 패치 임베딩과 분류 토큰 |
+| 출력 | 영상 범주에 대한 점수 |
+| 평가 | 영상 분류와 전이 정확도 |
+
+[방법 3쪽](https://arxiv.org/pdf/2010.11929v2#page=3) · [평가 7쪽](https://arxiv.org/pdf/2010.11929v2#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -71,3 +73,7 @@ Vision Transformer는 이미지를 패치열로 바꿔 Transformer 인코더로 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 3 (3 METHOD), p. 4 (3 METHOD), p. 7 (Figure/Table caption)이다.
+
+## 검색 태그 근거
+
+ViT는 RGB 영상의 정사각 패치를 벡터로 바꿔 Transformer에 넣고 분류 토큰에서 범주를 예측한다. ImageNet과 VTAB의 전이 성능으로 검증했다. 패치를 단어에 빗댄 제목에서 언어 입력이 잘못 유추됐다. [원문 3쪽](https://arxiv.org/pdf/2010.11929v2#page=3) · [원문 7쪽](https://arxiv.org/pdf/2010.11929v2#page=7)

@@ -10,7 +10,7 @@
 - Authors: Lichen Zhao, Daigang Cai, Lu Sheng, Dong Xu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D visual grounding, Graph Reasoning, Transformer
+- Tags: 3D visual grounding, Graph Reasoning, Transformer, point cloud
 - Official paper: https://openaccess.thecvf.com/content/ICCV2021/html/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.pdf
 - Code/Project: https://github.com/zlccccc/3DVG-Transformer
@@ -76,3 +76,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 4 (3.2. Relation-enhanced Proposal Generation), p. 5 (3.3. Cross-modal Proposal Disambiguation)이다.
+
+## 검색 태그 근거
+
+점군에서 찾은 물체 후보를 좌표 기반 문맥으로 보강하고 후보 사이의 관계를 이용해 언어 설명과 대응시킨다. ScanRefer에서 평가했으며 3D 입력 변형은 좌표·색·법선을 쓴다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhao_3DVG-Transformer_Relation_Modeling_for_Visual_Grounding_on_Point_Clouds_ICCV_2021_paper.pdf#page=6)

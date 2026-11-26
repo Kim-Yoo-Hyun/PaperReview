@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** mapped 3D environment과 mobile robot.
-- **Input boundary:** camera/depth stream, pose, map와 language goal.
-- **Output/decision under evaluation:** collision-free trajectory 또는 velocity command.
-- **Primary target:** goal reach, safety, localization error와 replanning latency.
+- **Target system/task:** 실제 이동 플랫폼의 LiDAR–관성 오도메트리와 지도 작성.
+- **Input boundary:** 원시 LiDAR 스캔과 IMU 가속도·각속도.
+- **Output/decision under evaluation:** 추정한 자세·위치와 갱신된 점군 지도.
+- **Primary target:** 궤적 오차와 스캔당 추정·지도 갱신 시간.
 - **Detected evaluation headings:** VI. BENCHMARK RESULTS (p. 10); VII. REAL-WORLD EXPERIMENTS (p. 14).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. 
 |---|---|---|---|
 | Robot/hardware/simulator | 11 TABLE II THE DATASETS FOR BENCHMARK LiDAR IMU Type Line Type Rate lili Solid-state - 6-axis | embodiment, simulator version and control stack | p. 11 (VI. BENCHMARK RESULTS), p. 14 (VII. REAL-WORLD EXPERIMENTS) |
 | Task/environment | Platforms Besides the benchmark evaluation where the datasets are mainly collected on the ground, we also test our FAST-LIO2 in a variety of challenging ... | reset, timeout, object/scene variation | p. 14 (VII. REAL-WORLD EXPERIMENTS), p. 14 (VII. REAL-WORLD EXPERIMENTS) |
-| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION) |
-| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 4 (IV. STATE ESTIMATION), p. 4 (III. SYSTEM OVERVIEW) |
+| Observation/sensor | 원시 LiDAR 스캔과 IMU 가속도·각속도 | calibration, preprocessing, privileged input | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION) |
+| Output/decision | 추정한 자세·위치와 갱신된 점군 지도 | action frame, controller and termination | p. 4 (IV. STATE ESTIMATION), p. 4 (III. SYSTEM OVERVIEW) |
 
 ## Metrics and Success Definition
 

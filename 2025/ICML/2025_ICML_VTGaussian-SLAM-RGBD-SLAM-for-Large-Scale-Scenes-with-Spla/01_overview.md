@@ -10,7 +10,7 @@
 - Authors: Pengchong Hu, Zhizhong Han
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision, Gaussian Splatting
+- Tags: 3D Vision, Gaussian Splatting, SLAM
 - Official paper: https://proceedings.mlr.press/v267/hu25h.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/hu25h/hu25h.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ VTGaussian-SLAM은 RGB-D 키프레임의 깊이 픽셀에 가우시안을 묶어
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | We minimize the rendering errors with respect to observations, min {g}k ρ//Vi-V ′ i //1+τLS(Vi, V ′ i )+σUi//Di-D′ i//1, (2) where LS is the SSIM loss, Ui is a mask which ... | camera/depth stream, pose, map와 language goal | p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Cameras) |
-| State/latent | minimize, rendering, errors, respect, observations, Vi-V, Ui//Di-D, i//1, where, SSIM, loss, mask | robot pose, free-space/semantic map와 local goal | p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Cameras), p. 3 (3.2. View-tied Gaussians) |
-| Output/action | We optimize pi to minimize rendering errors, min pi αWi//Vi -V ′ i //1 + βWi//Di -D′ i//1, (1) where {V ′ i , D′ i} = splat({g}o ∈So, pi) are rendered ... | collision-free trajectory 또는 velocity command | p. 4 (3.3. Tracking Cameras), p. 3 (3.2. View-tied Gaussians), p. 3 (3.2. View-tied Gaussians) |
-| Objective/outcome | We minimize the rendering errors with respect to observations, min {g}k ρ//Vi-V ′ i //1+τLS(Vi, V ′ i )+σUi//Di-D′ i//1, (2) where LS is the SSIM loss, Ui is a mask which ... | goal reach, safety, localization error와 replanning latency | p. 5 (3.4. Mapping Scenes), p. 5 (3.5. Bundle Adjustment), p. 3 (3.3. Tracking Cameras) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | RGB-D 프레임과 키프레임 |
+| 표현 | 키프레임의 관측에 연결된 가우시안 |
+| 출력 | 추정한 카메라 자세와 조밀한 지도 |
+| 평가 | 궤적의 절대 오차와 재구성 품질 |
+
+[방법 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=3) · [평가 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -76,3 +78,7 @@ VTGaussian-SLAM은 RGB-D 키프레임의 깊이 픽셀에 가우시안을 묶어
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.4. Mapping Scenes), p. 4 (3.3. Tracking Cameras)이다.
+
+## 검색 태그 근거
+
+키프레임의 RGB-D 픽셀에 가우시안을 묶고, 렌더링 오차로 카메라 자세와 지도를 갱신한다. Replica 등에서 궤적과 장면 복원을 비교했다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=3) · [원문 8쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hu25h/hu25h.pdf#page=8)

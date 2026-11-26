@@ -39,8 +39,8 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D, image set, point cloud, depth와 camera pose → geometry, map, object/relationship state → point map, pose, scene graph, affordance 또는 query result`.
-- 이 논문의 재사용 가능한 지점은 Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion.를 Our framework naturally extends from single-view to multi-view inputs by embedding all image tokens with depth- and pixel-based positional cues in a unified spatial feature space.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 geometry, map, object/relationship state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This makes its 3D predictions unstable under changes in image size.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `RGB 이미지·질문·카메라 내부 파라미터 → 참조 영역 토큰과 카메라 보정 표현 → 3D 상자 및 공간 질문에 대한 답변`.
+- 이 논문의 재사용 가능한 지점은 Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion.를 Our framework naturally extends from single-view to multi-view inputs by embedding all image tokens with depth- and pixel-based positional cues in a unified spatial feature space.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 참조 영역 토큰과 카메라 보정 표현가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 This makes its 3D predictions unstable under changes in image size.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: We introduce both explicit and implicit forms of grounding, designed to strengthen the spatial reasoning capacity of the vision-language model.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

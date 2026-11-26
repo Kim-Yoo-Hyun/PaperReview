@@ -7,7 +7,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, feedback, evaluation
+- Tags: Robotics, feedback, evaluation, counterfactual, VLA, failure recovery
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.13516
 - Venue verification: https://arxiv.org/abs/2610.13516
@@ -34,6 +34,10 @@ RESCUE는 로봇 정책 감시기가 울린 시점에 개입하면 실제로 과
 LIBERO에서 수집한 원 에피소드 1,562개 중 262개가 실패했다. 128,340건은 저장한 체크포인트에서 복원·실행한 반사실적 분기다. [PDF 3쪽](https://arxiv.org/pdf/2610.13516v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4) · [PDF 5쪽](https://arxiv.org/pdf/2610.13516v1#page=5)
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2610.13516).
+
+## 검색 태그 근거
+
+동일한 LIBERO 및 정책 상태를 복원해 계속 실행·스크립트 복구 조건으로 분기한다. 남은 시간 안에 회복할 확률을 이용해 경보에 개입할 가치를 평가한다. 복원은 시뮬레이션 평가자가 수행한다. [원문 4쪽](https://arxiv.org/pdf/2610.13516v1#page=4) · [원문 5쪽](https://arxiv.org/pdf/2610.13516v1#page=5)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

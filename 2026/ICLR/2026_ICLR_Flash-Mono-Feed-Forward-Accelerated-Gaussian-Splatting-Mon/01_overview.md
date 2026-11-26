@@ -10,7 +10,7 @@
 - Authors: Zicheng Zhang, Ke Wu, Xiangting Meng, Keyu Liu, Jieru Zhao, Wenchao Ding
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Gaussian Splatting, geometry, depth, 3D Vision
+- Tags: Gaussian Splatting, SLAM, depth, 3D Vision
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/5fcacc84d87c97bee5baecb3fb8f6e88-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/5fcacc84d87c97bee5baecb3fb8f6e88-Paper-Conference.pdf
 - Code/Project: not identified

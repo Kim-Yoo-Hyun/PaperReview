@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** rigid/articulated object와 robot manipulator contact scene.
-- **Input boundary:** RGB-D/point cloud, object state와 contact/task observation.
-- **Output/decision under evaluation:** grasp, pose, force 또는 end-effector trajectory.
-- **Primary target:** task completion, contact success, pose/force error와 generalization.
+- **Target system/task:** 양팔을 이용한 천 펼치기.
+- **Input boundary:** 상단 RGB 영상과 파지 높이 결정용 깊이.
+- **Output/decision under evaluation:** 두 파지점 및 잡기·당기기·던지기 동작.
+- **Primary target:** 시도별 천의 펼쳐진 면적.
 - **Detected evaluation headings:** 4 Evaluation (p. 6); 4.4 Results (p. 8).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 7 (4 Evaluation), p. 9 (4.4 Results), p. 8 (F
 |---|---|---|---|
 | Robot/hardware/simulator | The performance is reported averaged over 10 test episodes, where real-world grasp errors are filtered out (see "Real World Failure Cases" below). | embodiment, simulator version and control stack | p. 9 (4.4 Results), p. 7 (4 Evaluation) |
 | Task/environment | In real, the simulation policy is deployed to collect real world experience on 150 Normal Rect episodes (257 steps), optimized on both simulation and ... | reset, timeout, object/scene variation | p. 7 (4 Evaluation), p. 6 (4 Evaluation) |
-| Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 5 (3 Method), p. 2 (1 Introduction) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 3 (3 Method), p. 5 (3 Method) |
+| Observation/sensor | 상단 RGB 영상과 파지 높이 결정용 깊이 | calibration, preprocessing, privileged input | p. 5 (3 Method), p. 2 (1 Introduction) |
+| Output/decision | 두 파지점 및 잡기·당기기·던지기 동작 | action frame, controller and termination | p. 3 (3 Method), p. 5 (3 Method) |
 
 ## Metrics and Success Definition
 

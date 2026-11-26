@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, action-chunking, feedback, control-frequency
+- Tags: VLA, action-chunking, trajectory representation, Flow Matching
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.05230
 - Full-text retrieval: https://arxiv.org/pdf/2610.05230v1
@@ -35,6 +35,10 @@ Vela는 미래 행동을 시간 간격을 조정할 수 있는 연속 스플라�
 Simulation benchmark와 실제 long-horizon manipulation을 보고한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2610.05230) · [저자 project/code](https://clementine24.github.io/Vela/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+행동 곡선의 제어점과 시간 범위를 함께 예측하고, 디코딩한 궤적의 오차로 flow matching을 학습한다. 표 3은 다음 재계획까지 실행할 행동 수를 바꿔 비교한다. 곡선 내부의 매 시점에 새 관측을 받는 방식으로 분류할 근거는 없다. [원문 6쪽](https://arxiv.org/pdf/2610.05230v1#page=6) · [원문 9쪽](https://arxiv.org/pdf/2610.05230v1#page=9)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

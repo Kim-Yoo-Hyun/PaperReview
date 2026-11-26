@@ -1,0 +1,3185 @@
+# 부록 A · 템플릿 4 | NEXT 27편 | 2026-11-25
+# 페이지 번호는 각 행의 방법·평가 PDF 표지부터 센다.
+- id: 2026-wang-discounted-liveness
+  registry_id: pr-1198
+  title: Offline Policy Evaluation for Manipulation Policies via Discounted Liveness Formulation
+  authors:
+    - Hao Wang
+    - Joshua Bowden
+    - Colton Crosby
+    - Somil Bansal
+  affiliations:
+    - University of Southern California
+    - Stanford University
+  year: 2026
+  venue: RSS
+  links:
+    paper: https://www.roboticsproceedings.org/rss22/p154.html
+    pdf: https://www.roboticsproceedings.org/rss22/p154.pdf
+    project: https://github.com/haowwang/offline_policy_eval_manipulation
+    code: https://github.com/haowwang/offline_policy_eval_manipulation
+  tier: 2
+  one_line_summary: 이 연구는 실패와 시간 종료가 뒤섞인 유한 길이 조작 궤적으로부터 정책의 목표 달성 가능성을 오프라인에서 추정한다.
+  key_contributions:
+    - 과제 완료 가능성을 나타내는 할인된 벨만 연산자를 정의하고 보수적인 고정점과 수축 성질을 분석해 시간 제한에 의한 편향을 다룬다.
+    - VLA·확산 정책의 시뮬레이션 조작과 실제 로봇을 조종한 사람의 천 접기 시연에서 TD 및 몬테카를로 추정과 과제 진행·중단 편향을 비교했다.
+  method_tags:
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 기타
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - LIBERO-Spatial
+    - robomimic Square
+    - Franka 천 접기
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 할인 벨만 방정식으로 유한 궤적에서 고정 정책의 목표 달성 가능성을 평가한다. 시뮬레이션과 실제 천 접기의 결과는 가치 추정 비교이며 정책 학습 후 성공률이 아니다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://www.roboticsproceedings.org/rss22/p154.html
+      저자·소속 원문: https://www.roboticsproceedings.org/rss22/p154.pdf#page=1
+      방법·평가 원문: https://www.roboticsproceedings.org/rss22/p154.pdf
+    pdf_sha256: 79bf1d3e0f9105ecd6ec92c417301c46e68a34605f7e6ed1abef9b9e47e55b12
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    summary_source: https://www.roboticsproceedings.org/rss22/p154.pdf
+    openness:
+      code:
+        scope: Square 너트 조립의 할인 가치 추정기 학습 스크립트 · square_task/train_our_method_square_task.sh
+        source: https://raw.githubusercontent.com/haowwang/offline_policy_eval_manipulation/45bbad6756aea9ad69176e1c44f7da2dc99c249d/square_task/train_our_method_square_task.sh
+        release_reference: https://github.com/haowwang/offline_policy_eval_manipulation/blob/45bbad6756aea9ad69176e1c44f7da2dc99c249d/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://github.com/haowwang/offline_policy_eval_manipulation
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://github.com/haowwang/offline_policy_eval_manipulation
+  changed_from:
+    id: pr-1198
+    tier: NEXT
+    tags:
+      - offline-evaluation
+      - truncation-bias
+      - manipulation
+      - value-function
+    facets: {}
+    venue: RSS
+    links:
+      page: https://www.roboticsproceedings.org/rss22/p154.html
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2026-yu-ac2vla
+  registry_id: pr-1199
+  title: 'AC2-VLA: Action-Context-Aware Adaptive Computation in Vision-Language-Action Models for Efficient Robotic Manipulation'
+  authors:
+    - Wenda Yu
+    - Tianshi Wang
+    - Fengling Li
+    - Jingjing Li
+    - Lei Zhu
+  affiliations:
+    - Tongji University
+    - University of Technology Sydney
+    - University of Electronic Science and Technology of China
+  year: 2026
+  venue: IJCAI
+  links:
+    paper: https://ijcai.org/proceedings/2026/228
+    pdf: https://www.ijcai.org/proceedings/2026/0228.pdf
+    project: https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA
+    code: https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA
+  tier: 2
+  one_line_summary: AC2-VLA는 현재 영상과 지시, 직전 행동을 보고 어느 시점에 시각언어 백본의 어떤 연산을 수행할지 조절한다.
+  key_contributions:
+    - 이전 계산의 재사용, 토큰 제거, 일부 구성 요소의 선택적 실행을 결합하고 전체 모델의 행동 출력을 교사로 삼아 계산 정책을 학습한다.
+    - SIMPLER의 Google Robot·WidowX 과제에서 성공률과 추론 비용을 함께 측정하고 각 연산 절감 전략을 제거한 경우와 비교했다.
+  method_tags:
+    - unknown
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 모바일매니퓰레이터
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - SIMPLER
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: CogACT의 행동 맥락을 감안해 비전·언어 계산의 일부를 건너뛰고 교사 표현을 증류한다. Google Robot과 WidowX는 SIMPLER에서 평가했다. 학습 자료는 실제 Bridge 시연이다.
+  vla:
+    backbone:
+      name: CogACT / Prismatic
+      size: 7B (VLM)
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - 기타
+    evaluation:
+      sim_benchmarks:
+        - SIMPLER
+      real_robot_tasks: 0
+      scope: §4.1 시뮬레이션. Bridge 실제 로봇 자료로 라우터를 학습한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://ijcai.org/proceedings/2026/228
+      저자·소속 원문: https://www.ijcai.org/proceedings/2026/0228.pdf#page=1
+      방법·평가 원문: https://www.ijcai.org/proceedings/2026/0228.pdf
+    pdf_sha256: 60cdc9d7154543fbb354089211d944609e1d69e4037aa7625c9aaf29996c7cda
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    summary_source: https://www.ijcai.org/proceedings/2026/0228.pdf
+    openness:
+      code:
+        scope: AC²-VLA 저자의 공개 구현 · Action_Prior_VLA_model/router.py
+        source: https://raw.githubusercontent.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA/835b0fd2a36c070bf44b7ad58f5a8b75805157d2/Action_Prior_VLA_model/router.py
+        release_reference: https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA/blob/835b0fd2a36c070bf44b7ad58f5a8b75805157d2/README.md
+        access: 연구실 저장소의 고정 커밋과 구현 파일 본문 확인
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://github.com/TJ-Spatial-Intelligence-Lab/AC-2-VLA
+  changed_from:
+    id: pr-1199
+    tier: NEXT
+    tags:
+      - VLA
+      - adaptive-computation
+      - latency
+      - action-context
+    facets: {}
+    venue: IJCAI
+    links:
+      page: https://ijcai.org/proceedings/2026/228
+      pdf: null
+      project: https://github.com/SunnyYWD/AC-2-VLA
+      code: https://github.com/SunnyYWD/AC-2-VLA
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://github.com/SunnyYWD/AC-2-VLA
+        evidence: manifest_link
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2026-fei-wcm
+  registry_id: pr-1200
+  title: 'WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning'
+  authors:
+    - Senyu Fei
+    - Xiaopeng Yu
+    - Siyin Wang
+    - Xianzhong Zhao
+    - Jingjing Gong
+    - Xipeng Qiu
+  affiliations:
+    - Tongji University
+    - Shanghai Innovation Institute
+    - Fudan University
+  year: 2026
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2607.29613
+    pdf: https://arxiv.org/pdf/2607.29613v1
+    project: https://sylvestf.github.io/wcm-homepage/
+    code: https://github.com/sylvestf/WCM
+  tier: 2
+  one_line_summary: WCM은 부분적으로 관측되는 조작에서 단일 영상의 수익을 회귀하는 비평가에 미래 잠재 상태 예측을 더해 행동의 가치를 추정한다.
+  key_contributions:
+    - 경량 LeJEPA 모형이 관측 이력에서 미래 표현과 가치를 함께 학습하도록 구성해 온폴리시 및 오프폴리시 VLA 강화학습에 적용했다.
+    - 시뮬레이션의 분포 변화와 일곱 가지 실물 조작에서 기존 비평가와 비교하고 OpenVLA-OFT와 π0.5의 실물 오프폴리시 학습 결과를 보고했다.
+  method_tags:
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: 부분
+    data: 부분
+  datasets_benchmarks:
+    - ManiSkill
+    - Meta-World
+    - LIBERO
+    - CALVIN
+    - WidowX 250S
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 이력으로 미래 관측 표현과 시간차 가치를 함께 예측하는 비평가다. 시뮬레이션 네 환경의 비교와 WidowX의 실물 실험을 구분한다.
+  vla:
+    backbone:
+      name: π0·π0.5 및 OpenVLA-OFT 비교
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 기타
+    training:
+      - RL 파인튜닝
+    evaluation:
+      sim_benchmarks:
+        - ManiSkill
+        - Meta-World
+        - LIBERO
+        - CALVIN
+      real_robot_tasks: 7
+      scope: PDF 6–9쪽. 연속 행동 표기는 flow 변형에 해당한다. WCM은 학습에 결합하는 비평가다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2607.29613
+      저자·소속 원문: https://arxiv.org/pdf/2607.29613v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2607.29613v1
+    pdf_sha256: 45366b3fcac97ce006dc4ec352651c74983ffae8e880da0c2e7840eb67c001e7
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+    summary_source: https://arxiv.org/pdf/2607.29613v1
+    openness:
+      code:
+        scope: 세계 비평가 학습 모듈 · world_critic/training.py
+        source: https://raw.githubusercontent.com/sylvestf/WCM/d028ebbff2cf0a761f5d12a4bdc7095c0acd5522/world_critic/training.py
+        release_reference: https://github.com/sylvestf/WCM/blob/d028ebbff2cf0a761f5d12a4bdc7095c0acd5522/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 선택된 pick-and-place 과제의 저자 체크포인트 · best.pt
+        source: https://huggingface.co/Sylvest/pick-place-wcm-ckpt/resolve/9cbbda60ba72966cf3bf6c4684f28d31f28f66b9/best.pt
+        release_reference: https://huggingface.co/Sylvest/pick-place-wcm-ckpt/blob/9cbbda60ba72966cf3bf6c4684f28d31f28f66b9/best.pt
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+      data:
+        scope: 선택된 pick-and-place 과제 학습 자료 · data/chunk-000/file-000.parquet
+        source: https://huggingface.co/datasets/Sylvest/pick-place-wcm/resolve/0600e5a90f70a1695b14c0cfc5ad9feb04c3d413/data/chunk-000/file-000.parquet
+        release_reference: https://huggingface.co/datasets/Sylvest/pick-place-wcm/blob/0600e5a90f70a1695b14c0cfc5ad9feb04c3d413/data/chunk-000/file-000.parquet
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+  changed_from:
+    id: pr-1200
+    tier: NEXT
+    tags:
+      - VLA
+      - reinforcement-learning
+      - critic
+      - world-model
+      - partial-observability
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2607.29613
+      pdf: null
+      project: https://github.com/sylvestf/WCM
+      code: https://github.com/sylvestf/WCM
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/sylvestf/WCM/d028ebbff2cf0a761f5d12a4bdc7095c0acd5522/world_critic/training.py
+        verified_on: '2026-11-20'
+        evidence: 해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. world_critic/training.py
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2026-dong-real-time-expo-ft
+  registry_id: pr-1201
+  title: Reinforcement Learning for Real-Time Vision-Language-Action Policies
+  authors:
+    - Perry Dong
+    - Kuo-Han Hung
+    - Dorsa Sadigh
+    - Chelsea Finn
+  affiliations:
+    - Stanford University
+  year: 2026
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2609.18207
+    pdf: https://arxiv.org/pdf/2609.18207
+    project: https://pd-perry.github.io/real-time-expo-ft/
+    code: https://github.com/pd-perry/expo-ft
+  tier: 2
+  one_line_summary: Real-Time EXPO-FT는 비동기 VLA가 미리 낸 행동 청크를 더 최근 관측에서 편집하고 비평가로 선택한다.
+  key_contributions:
+    - 편집 정책과 VLA를 함께 갱신하며 늦게 도착한 후보를 현재의 상태에서 비교한다.
+    - Kinetix 시뮬레이션 10개 과제와 빠른 반응이 필요한 실물 조작 4개 과제에서 지연 조건을 비교했다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - Kinetix
+    - 실물 동적 조작 4과제
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0061
+  verification: 부분확인
+  notes: 느린 VLA가 앞서 낸 행동 후보를 더 최근 관측에서 편집하고 비평가로 선택한다. 온라인 학습에 쓰인 시연과 실제 로봇 상호작용을 구분한다.
+  vla:
+    backbone:
+      name: π0.5 + 경량 행동 편집기
+      size: Gemma 2B + 300M 행동 전문가 (부록)
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 기타
+    training:
+      - SFT
+      - RL 파인튜닝
+    evaluation:
+      sim_benchmarks:
+        - Kinetix
+      real_robot_tasks: 4
+      scope: PDF 7–8, 14쪽. Kinetix의 소규모 정책과 실제 로봇 π0.5 설정을 구분한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2609.18207
+      저자·소속 원문: https://arxiv.org/pdf/2609.18207#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2609.18207
+    pdf_sha256: 6572e8f3568be6aca79f1a13819c3beb5f2613f5d7f33413e3892162b30533cd
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 14
+    summary_source: https://arxiv.org/pdf/2609.18207
+    openness:
+      code:
+        scope: 로봇 정책의 비동기 온라인 학습 진입점 · train_pi_robo_async.py
+        source: https://raw.githubusercontent.com/pd-perry/expo-ft/21fe3d3b7d913c80836496817965932f49e0aedf/train_pi_robo_async.py
+        release_reference: https://github.com/pd-perry/expo-ft/blob/21fe3d3b7d913c80836496817965932f49e0aedf/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://pd-perry.github.io/real-time-expo-ft/
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://pd-perry.github.io/real-time-expo-ft/
+  changed_from:
+    id: pr-1201
+    tier: NEXT
+    tags:
+      - VLA
+      - reinforcement-learning
+      - latency
+      - reactive-control
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2609.18207
+      pdf: null
+      project: https://pd-perry.github.io/real-time-expo-ft/
+      code: https://github.com/pd-perry/expo-ft
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/pd-perry/expo-ft/HEAD/eval_droid_policy.py
+        evidence: 저자 구현 파일 · eval_droid_policy.py
+        verified_on: '2026-11-20'
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2026-kim-roboalign
+  registry_id: pr-1202
+  title: 'RoboAlign: Learning Test-Time Reasoning for Language-Action Alignment in Vision-Language-Action Models'
+  authors:
+    - Dongyoung Kim
+    - Sumin Park
+    - Woomin Song
+    - Seungku Kim
+    - Taeyoung Kim
+    - Huiwon Jang
+    - Jinwoo Shin
+    - Jaehyung Kim
+    - Younggyo Seo
+  affiliations:
+    - KAIST
+    - RLWRLD
+    - Yonsei University
+    - University of California Berkeley
+  year: 2026
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2603.21341
+    pdf: https://arxiv.org/pdf/2603.21341v1
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: RoboAlign은 멀티모달 언어 모델이 추론 후 고른 행동 토큰의 정확도를 보상으로 사용해 언어 표현을 로봇 행동에 맞춘다.
+  key_contributions:
+    - 자연어 추론으로 생성한 FAST 행동 토큰을 강화학습으로 교정하고 정렬을 마친 백본에 확산 기반 행동 출력을 학습시킨다.
+    - LIBERO·CALVIN과 실물 로봇에서 백본 정렬을 적용한 정책과 지도학습 기준선을 비교해 행동 성능으로의 전이를 측정했다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - BridgeData V2
+    - LIBERO
+    - CALVIN
+    - Franka 실물 4과제
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 추론을 정렬할 때 FAST 토큰 정확도로 보상을 계산한다. 하류 LIBERO·CALVIN 및 실제 로봇 평가는 고정한 백본 위의 확산 행동 헤드를 사용한다.
+  vla:
+    backbone:
+      name: Qwen2.5-VL-7B-Instruct
+      size: 7B (VLM)
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+      - RL 파인튜닝
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+        - CALVIN
+      real_robot_tasks: 4
+      scope: PDF 5–7쪽. 백본 정렬에 사용하는 FAST 토큰과 로봇이 실행하는 확산 행동을 구분한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2603.21341
+      저자·소속 원문: https://arxiv.org/pdf/2603.21341v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2603.21341v1
+    pdf_sha256: ccd58d6cc635122a0e20aa5a9c7efa2c91a79497e445d840256e80b489183188
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 6
+      - 7
+    summary_source: https://arxiv.org/pdf/2603.21341v1
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2603.21341
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2603.21341
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://arxiv.org/abs/2603.21341
+  changed_from:
+    id: pr-1202
+    tier: NEXT
+    tags:
+      - VLA
+      - reinforcement-learning
+      - action-alignment
+      - reasoning
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2603.21341
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2025-xu-stare-vla
+  registry_id: pr-1203
+  title: 'STARE-VLA: Progressive Stage-Aware Reinforcement for Fine-Tuning Vision-Language-Action Models'
+  authors:
+    - Feng Xu
+    - Guangyao Zhai
+    - Xin Kong
+    - Tingzhong Fu
+    - Daniel F. N. Gordon
+    - Xueli An
+    - Benjamin Busam
+  affiliations:
+    - Technical University of Munich
+    - Imperial College London
+    - Huawei Technologies
+  year: 2025
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2512.05107
+    pdf: https://arxiv.org/pdf/2512.05107v2
+    project: https://sites.google.com/view/stare-vla
+    code: unknown
+  tier: 2
+  one_line_summary: StARe-VLA는 긴 조작을 접근·파지·운반처럼 인과적으로 이어지는 단계로 나누어 각 단계에 맞는 신호로 정책을 후학습한다.
+  key_contributions:
+    - 단계별 오프라인 선호 학습과 온라인 상호작용 PPO를 구성하고 지도학습 초기화 뒤 두 단계를 순차 적용하는 절차를 제시했다.
+    - SimplerEnv와 ManiSkill3에서 전체 궤적 단위 학습과 비교해 중간 단계에 보상을 두는 방식과 후학습 순서가 과제 성공에 주는 영향을 평가했다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - SimplerEnv
+    - ManiSkill3
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0051
+    - pr-0061
+  verification: 부분확인
+  notes: 단계별 보상과 선호 신호의 역할을 분리한다. 서로 다른 정책의 이산·연속 행동 실험은 각 백본의 결과다. 본문의 SIMPLER 및 ManiSkill3 평가를 실물 시험으로 집계하지 않는다.
+  vla:
+    backbone:
+      name: OpenVLA와 π0.5 별도 실험
+      size: OpenVLA 7B / π0.5 규모 미확인
+    action_representation:
+      - 이산 토큰
+      - 연속(diffusion·flow matching)
+    architecture: 기타
+    training:
+      - SFT
+      - RL 파인튜닝
+    evaluation:
+      sim_benchmarks:
+        - SimplerEnv
+        - ManiSkill3
+      real_robot_tasks: 0
+      scope: PDF 9–10쪽. 행동 표현 두 종류는 각기 다른 정책에 해당한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2512.05107
+      저자·소속 원문: https://arxiv.org/pdf/2512.05107v2#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2512.05107v2
+    pdf_sha256: b76fbbd8a943ab679df56bd42bd538da6c6725bd19ac231fbdce89e114ff3da3
+    method_evaluation_pages:
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+    summary_source: https://arxiv.org/pdf/2512.05107v2
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://sites.google.com/view/stare-vla
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://sites.google.com/view/stare-vla
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://sites.google.com/view/stare-vla
+  changed_from:
+    id: pr-1203
+    tier: NEXT
+    tags:
+      - VLA
+      - reinforcement-learning
+      - credit-assignment
+      - reward-shaping
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2512.05107
+      pdf: null
+      project: https://sites.google.com/view/stare-vla
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: https://sites.google.com/view/stare-vla
+        evidence: manifest_link
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2026-hoque-egodex
+  registry_id: pr-1205
+  title: 'EgoDex: Learning Dexterous Manipulation from Large-Scale Egocentric Video'
+  authors:
+    - Ryan Hoque
+    - Peide Huang
+    - David J. Yoon
+    - Mouli Sivapurapu
+    - Jian Zhang
+  affiliations:
+    - Apple
+  year: 2026
+  venue: ICLR
+  links:
+    paper: https://arxiv.org/abs/2505.11709
+    pdf: https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf
+    project: https://github.com/apple-aiml-research/ml-egodex
+    code: https://github.com/apple-aiml-research/ml-egodex
+  tier: 2
+  one_line_summary: EgoDex는 사람이 조작할 때의 1인칭 영상과 양손 손가락의 3차원 궤적을 동기화해 손재주가 필요한 동작을 학습하고 평가할 자료를 제공한다.
+  key_contributions:
+    - Apple Vision Pro로 탁상 조작 194개 과제에서 829시간을 기록하고 영상 프레임을 손 관절 추적과 연결했다.
+    - 영상과 과거 손 자세에서 미래 사람 손 궤적을 예측하는 과제와 오차 지표를 정의하고 여러 모방학습 모델을 같은 조건에서 비교했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 기타
+  modality_tags:
+    - RGB
+    - 언어
+    - 기타
+  data_source_tags:
+    - 인간영상
+  openness:
+    code: 부분
+    weights: unknown
+    data: 부분
+  datasets_benchmarks:
+    - EgoDex
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: Apple Vision Pro에서 촬영한 사람의 양손 조작 영상과 3차원 손 궤적을 제공한다. 벤치마크에서 예측하는 손의 미래 움직임에는 물리 로봇 작동이 포함되지 않는다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://iclr.cc/Downloads/2026
+      저자·소속 원문: https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=1
+      방법·평가 원문: https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf
+    pdf_sha256: 82b6bc252813862f79743d9afd07fb9a9bf36dd03fb2804c362400ccebcab2a8
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+    summary_source: https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf
+    openness:
+      code:
+        scope: EgoDex 손 궤적의 오프라인 평가 지표 · compute_metrics.py
+        source: https://raw.githubusercontent.com/apple-aiml-research/ml-egodex/718d9ebd8ec17187f72a74a08c66deea80178cb6/compute_metrics.py
+        release_reference: https://github.com/apple-aiml-research/ml-egodex/blob/718d9ebd8ec17187f72a74a08c66deea80178cb6/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://github.com/apple-aiml-research/ml-egodex
+      data:
+        scope: EgoDex 궤적 배포 첫 번째 압축 묶음 · part1.zip
+        source: https://ml-site.cdn-apple.com/datasets/egodex/part1.zip
+        release_reference: https://github.com/apple-aiml-research/ml-egodex
+        access: 배포 파일 첫 바이트 확인
+  changed_from:
+    id: pr-1205
+    tier: NEXT
+    tags:
+      - robot-data
+      - human-video
+      - dexterous-manipulation
+      - Benchmark
+    facets: {}
+    venue: ICLR
+    links:
+      page: https://arxiv.org/abs/2505.11709
+      pdf: null
+      project: https://github.com/apple-aiml-research/ml-egodex
+      code: https://github.com/apple-aiml-research/ml-egodex
+    openness:
+      code: released
+      weights: not_recorded
+      data: released
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/apple-aiml-research/ml-egodex/HEAD/compute_metrics.py
+        evidence: 저자 구현 파일 · compute_metrics.py
+        verified_on: '2026-11-20'
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: released
+        source: https://ml-site.cdn-apple.com/datasets/egodex/part1.zip
+        verified_on: '2026-11-20'
+        evidence: Apple이 배포하는 EgoDex 훈련 자료 첫 부분.
+- id: 2026-zhao-humanoid-everyday
+  registry_id: pr-1206
+  title: 'Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation'
+  authors:
+    - Zhenyu Zhao
+    - Hongyi Jing
+    - Xiawei Liu
+    - Jiageng Mao
+    - Abha Jha
+    - Hanwen Yang
+    - Rong Xue
+    - Sergey Zakharov
+    - Vitor Guizilini
+    - Yue Wang
+  affiliations:
+    - University of Southern California
+    - Toyota Research Institute
+  year: 2026
+  venue: ICRA
+  links:
+    paper: https://arxiv.org/abs/2510.08807
+    pdf: https://arxiv.org/pdf/2510.08807v3
+    project: https://humanoideveryday.github.io/
+    code: https://github.com/physical-superintelligence-lab/Humanoid-Everyday
+  tier: 2
+  one_line_summary: Humanoid Everyday는 전신 이동을 동반한 조작과 사람과의 상호작용을 포함한 휴머노이드 시연 데이터셋과 정책 평가 절차를 제시한다.
+  key_contributions:
+    - G1과 H1 원격조작으로 260개 과제의 궤적 약 1만 300개를 수집하고, 로봇별 센서 관측·행동 기록에 언어 주석을 연결했다.
+    - 데이터셋에서 고른 일곱 과제에 대해 정책별·과제별 열 번씩 실행해 모방 정책들의 성공률을 비교하고, 이동 조작과 정밀 삽입의 실패를 수량화했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+    - 이동
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 휴머노이드
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+    - 촉각
+    - 고유수용감각
+    - 기타
+  data_source_tags:
+    - 실제로봇
+  openness:
+    code: 부분
+    weights: unknown
+    data: 부분
+  datasets_benchmarks:
+    - Humanoid Everyday
+    - Unitree G1
+    - Unitree H1
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 실제 G1·H1의 조작 및 이동조작 시연이다. 양손 종류와 센서는 기종마다 다르며, 기록한 모든 채널이 모든 모방 정책의 입력은 아니다.
+  humanoid:
+    control_scope:
+      - 상체 조작
+      - 로코모션
+      - 전신
+    training:
+      - 텔레오퍼레이션 모방
+    hardware:
+      - Unitree G1
+      - Unitree H1
+    hand_type:
+      - 다지 손
+    sim_to_real: unknown
+    scope: 실제 기기에서 시연을 수집했다. G1 Dex3-1과 H1의 Inspire 손 구성은 PDF 4–5쪽에 기재됐다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://api.crossref.org/works/10.1109/icra57385.2026.11696267
+      저자·소속 원문: https://arxiv.org/pdf/2510.08807v3#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2510.08807v3
+    pdf_sha256: 831ca6eada80353438665e9c697b65ad91f2ddf457ae794196a8d1a668d17b6a
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 6
+    summary_source: https://arxiv.org/pdf/2510.08807v3
+    openness:
+      code:
+        scope: 휴머노이드 평가 서버와 관측·명령을 교환하는 클라이언트 · humanoid_everyday/core.py
+        source: https://raw.githubusercontent.com/physical-superintelligence-lab/Humanoid-Everyday/7c427fdb01a919dfd1b0697353e41b689a0f7e26/humanoid_everyday/core.py
+        release_reference: https://github.com/physical-superintelligence-lab/Humanoid-Everyday/blob/7c427fdb01a919dfd1b0697353e41b689a0f7e26/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://humanoideveryday.github.io/
+      data:
+        scope: Humanoid Everyday의 LeRobot 형식 궤적 · data/chunk-000/episode_000000.parquet
+        source: https://huggingface.co/datasets/USC-GVL/humanoid-everyday/resolve/71f6210e91c2a7e8b8e4d47db0147444a1a0640e/data/chunk-000/episode_000000.parquet
+        release_reference: https://huggingface.co/datasets/USC-GVL/humanoid-everyday/blob/71f6210e91c2a7e8b8e4d47db0147444a1a0640e/data/chunk-000/episode_000000.parquet
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+  changed_from:
+    id: pr-1206
+    tier: NEXT
+    tags:
+      - robot-data
+      - humanoid
+      - loco-manipulation
+      - multimodal
+      - Benchmark
+    facets: {}
+    venue: ICRA
+    links:
+      page: https://arxiv.org/abs/2510.08807
+      pdf: null
+      project: https://humanoideveryday.github.io/
+      code: https://github.com/physical-superintelligence-lab/Humanoid-Everyday
+    openness:
+      code: released
+      weights: not_recorded
+      data: released
+    artifact_profiles:
+      code:
+        status: released
+        source: https://github.com/physical-superintelligence-lab/Humanoid-Everyday
+        evidence: manifest_link
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: released
+        source: https://huggingface.co/api/datasets/USC-GVL/humanoid-everyday
+        evidence: 배포 파일 목록에서 확인한 범위 · meta/tasks.jsonl
+        verified_on: '2026-11-20'
+- id: 2024-wen-foundationpose
+  registry_id: pr-1207
+  title: 'FoundationPose: Unified 6D Pose Estimation and Tracking of Novel Objects'
+  authors:
+    - Bowen Wen
+    - Wei Yang
+    - Jan Kautz
+    - Stan Birchfield
+  affiliations:
+    - NVIDIA
+  year: 2024
+  venue: CVPR
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html
+    pdf: https://openaccess.thecvf.com/content/CVPR2024/papers/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.pdf
+    project: https://nvlabs.github.io/FoundationPose/
+    code: https://github.com/NVlabs/FoundationPose
+  tier: 2
+  one_line_summary: FoundationPose는 새 물체의 CAD 모델이나 소수 참조 영상을 이용해 별도 미세조정 없이 6차원 자세를 추정하고 추적한다.
+  key_contributions:
+    - CAD가 없는 경우 참조 영상으로 신경 암시적 물체 표현을 구성한 뒤, 두 설정에서 같은 모듈로 자세 후보를 보정하고 순위를 매긴다.
+    - 공개 데이터셋에서 CAD 사용 여부에 따른 초기 자세 추정과 비디오에서의 후속 추적을 따로 평가해 전용 기준선들과 비교했다.
+  method_tags:
+    - unknown
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+    - depth
+  data_source_tags:
+    - 합성
+  openness:
+    code: 부분
+    weights: 부분
+    data: 부분
+  datasets_benchmarks:
+    - LINEMOD-Occlusion
+    - YCB-Video
+    - T-LESS
+    - YCBInEOAT
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: RGB-D로 미지 물체의 6D 자세를 추정·추적한다. 합성 학습과 실제 영상 평가는 서로 다른 자료다. 추적 오차로 하류 로봇의 조작 성공률을 정할 수 없다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html
+      저자·소속 원문: https://openaccess.thecvf.com/content/CVPR2024/papers/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.pdf#page=1
+      방법·평가 원문: https://openaccess.thecvf.com/content/CVPR2024/papers/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.pdf
+    pdf_sha256: ce914493bfde225899ecc99ae67eeec9282720712b77ff0b37fd5ef829fcfefd
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    summary_source: https://openaccess.thecvf.com/content/CVPR2024/papers/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.pdf
+    openness:
+      code:
+        scope: FoundationPose의 물체 자세 등록·추적 추론 · estimater.py
+        source: https://raw.githubusercontent.com/NVlabs/FoundationPose/a1b694b83e633c2cb6115b9063d940a687759392/estimater.py
+        release_reference: https://github.com/NVlabs/FoundationPose/blob/a1b694b83e633c2cb6115b9063d940a687759392/readme.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: FoundationPose의 자세 가설 점수 또는 보정 네트워크 체크포인트 · model_best.pth
+        source: https://drive.google.com/file/d/1E9FPB5WFIBMLrOJqZLpoVOK4Mjzrrxhv/view
+        release_reference: https://drive.google.com/drive/folders/1BEQLZH69UO5EOfah-K9bfI3JyP9Hf7wC
+        access: 저자 배포 폴더와 이름·크기가 표시된 개별 파일 페이지 확인
+      data:
+        scope: FoundationPose 학습용 GSO 렌더 배포 자료 · 30602556.zip
+        source: https://drive.google.com/file/d/1_ctJIyrlsco7e6l975kgqFN2M9g-EIPi/view
+        release_reference: https://drive.google.com/drive/folders/13zo4TCmN9LoPJFtd-gJRXPFDIyVmYx6q
+        access: 저자 배포 폴더와 이름·크기가 표시된 개별 파일 페이지 확인
+  changed_from:
+    id: pr-1207
+    tier: NEXT
+    tags:
+      - 6D pose
+      - tracking
+      - RGB-D
+      - novel objects
+    facets: {}
+    venue: CVPR
+    links:
+      page: https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html
+      pdf: null
+      project: https://nvlabs.github.io/FoundationPose/
+      code: https://github.com/NVlabs/FoundationPose
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_applicable
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/NVlabs/FoundationPose/HEAD/run_demo.py
+        evidence: 저자 구현 파일 · run_demo.py
+        verified_on: '2026-11-20'
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_applicable
+        source: null
+        evidence: paper_type and evaluation note scope; no data artifact cue
+- id: 2024-dass-disam
+  registry_id: pr-1208
+  title: 'Learning to Look: Seeking Information for Decision Making via Policy Factorization'
+  authors:
+    - Shivin Dass
+    - Jiaheng Hu
+    - Ben Abbatematteo
+    - Peter Stone
+    - Roberto Martín-Martín
+  affiliations:
+    - University of Texas at Austin
+    - Sony AI
+  year: 2024
+  venue: CoRL
+  links:
+    paper: https://proceedings.mlr.press/v270/dass25a.html
+    pdf: https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/dass25a/dass25a.pdf
+    project: https://robin-lab.cs.utexas.edu/learning2look/
+    code: https://github.com/UT-Austin-RobIn/l2l
+  tier: 2
+  one_line_summary: DISaM은 다음 조작을 정할 정보가 현재 관측에 없을 때, 정보를 찾는 행동과 그 정보를 사용해 작업을 끝내는 행동을 분리해 학습한다.
+  key_contributions:
+    - 조작 정책에서 얻은 신호를 정보 탐색 정책의 보상으로 사용하고, 실행 시 다음 조작 행동의 불확실성을 기준으로 어느 정책을 쓸지 결정한다.
+    - 정보 탐색이 필요한 시뮬레이션 세 과제와 실제 Tiago 두 과제에서 관측을 얻기 위한 행동과 최종 조작 성공을 비교했다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 모바일매니퓰레이터
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - Cooking
+    - Walls
+    - Assembly
+    - Tiago Button
+    - Tiago Teatime
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 정보를 활용하는 정책을 시연으로 학습하고 정보를 찾는 정책을 강화학습으로 훈련한다. 시뮬레이션 세 과제와 실물 Tiago 두 과제에서 비교했다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://proceedings.mlr.press/v270/dass25a.html
+      저자·소속 원문: https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/dass25a/dass25a.pdf#page=1
+      방법·평가 원문: https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/dass25a/dass25a.pdf
+    pdf_sha256: 0912563dfbb60a3ac242b7900e0c54a79b32e38db7ce0f783c2f4631daf55917
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    summary_source: https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/dass25a/dass25a.pdf
+    openness:
+      code:
+        scope: 정보를 이용하는 정책의 시연 기반 학습 · l2l/scripts/train_il.py
+        source: https://raw.githubusercontent.com/UT-Austin-RobIn/l2l/37382315d4e262d381862752931fe7445c2a0594/l2l/scripts/train_il.py
+        release_reference: https://github.com/UT-Austin-RobIn/l2l/blob/37382315d4e262d381862752931fe7445c2a0594/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://robin-lab.cs.utexas.edu/learning2look/
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://robin-lab.cs.utexas.edu/learning2look/
+  changed_from:
+    id: pr-1208
+    tier: NEXT
+    tags:
+      - active perception
+      - policy factorization
+      - partial observability
+    facets: {}
+    venue: CoRL
+    links:
+      page: https://proceedings.mlr.press/v270/dass25a.html
+      pdf: null
+      project: https://robin-lab.cs.utexas.edu/learning2look/
+      code: https://github.com/UT-Austin-RobIn/l2l
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/UT-Austin-RobIn/l2l/HEAD/l2l/scripts/train_il.py
+        evidence: 저자 구현 파일 · l2l/scripts/train_il.py
+        verified_on: '2026-11-20'
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-yang-activeodpe
+  registry_id: pr-1209
+  title: Active 6D pose estimation for textureless objects using multi-view RGB frames
+  authors:
+    - Jun Yang
+    - Wenjie Xue
+    - Sahar Ghavidel
+    - Steven L. Waslander
+  affiliations:
+    - University of Toronto
+  year: 2026
+  venue: IJRR
+  links:
+    paper: https://api.crossref.org/works/10.1177/02783649251411922
+    pdf: https://arxiv.org/pdf/2503.03726v2
+    project: https://trailab.github.io/ActiveODPE/
+    code: unknown
+  tier: 2
+  one_line_summary: 이 연구는 여러 RGB 시점에서 무늬 없는 물체의 위치와 방향을 추정하고, 남은 자세 모호성을 해소할 다음 카메라 위치를 고른다.
+  key_contributions:
+    - 먼저 삼차원 병진을 추정한 뒤 공통 크기의 형판과 비교해 회전을 구하며, 예상 자세 불확실성에 따라 추가 시점을 선택한다.
+    - ROBI·TOD와 투명 물체 T-ROBI에서 같은 시점의 추정 정확도를 비교하고, 목표 정확도에 도달하는 데 필요한 관측 수를 시점 선택 방식별로 평가했다.
+  method_tags:
+    - 모델기반
+  task_tags:
+    - unknown
+  embodiment_tags:
+    - unknown
+  modality_tags:
+    - RGB
+  data_source_tags:
+    - 합성
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - ROBI
+    - T-ROBI
+    - TOD
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 물체 형상과 여러 RGB 관측으로 자세와 불확실성을 갱신해 다음 시점을 고른다. ROBI·T-ROBI·TOD의 자세·관측 평가가 핵심이며 실제 파지 성공은 측정 지표가 아니다. 자세 추정기 학습용 합성 자료와 실제 평가 영상을 구분했다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://journals.sagepub.com/doi/10.1177/02783649251411922
+      저자·소속 원문: https://arxiv.org/pdf/2503.03726v2#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2503.03726v2
+    pdf_sha256: bef03adb3292970aa7a0896199b8dca6f5772b5d9d690bd432ed619ef3d3d087
+    method_evaluation_pages:
+      - 2
+      - 5
+      - 7
+      - 10
+      - 15
+      - 18
+      - 19
+    summary_source: https://arxiv.org/pdf/2503.03726v2
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://trailab.github.io/ActiveODPE/
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://trailab.github.io/ActiveODPE/
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://trailab.github.io/ActiveODPE/
+  changed_from:
+    id: pr-1209
+    tier: NEXT
+    tags:
+      - active perception
+      - 6D pose
+      - RGB
+      - next-best-view
+    facets: {}
+    venue: IJRR
+    links:
+      page: https://api.crossref.org/works/10.1177/02783649251411922
+      pdf: null
+      project: https://trailab.github.io/ActiveODPE/
+      code: null
+    openness:
+      code: project_only
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: project_only
+        source: https://trailab.github.io/ActiveODPE/
+        evidence: manifest_link
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-lin-posevla
+  registry_id: pr-1212
+  title: Universal Pose Pretraining for Generalizable Vision-Language-Action Policies
+  authors:
+    - Haitao Lin
+    - Hanyang Yu
+    - Jingshun Huang
+    - He Zhang
+    - Yonggen Ling
+    - Ping Tan
+    - Xiangyang Xue
+    - Yanwei Fu
+  affiliations:
+    - Tencent Robotics X
+    - Futian Laboratory
+    - Hong Kong University of Science and Technology
+    - Fudan University
+    - Shanghai Innovation Institute
+  year: 2026
+  venue: RSS
+  links:
+    paper: https://roboticsproceedings.org/rss22/p145.html
+    pdf: https://roboticsproceedings.org/rss22/p145.pdf
+    project: https://hetolin.github.io/PoseVLA/
+    code: https://github.com/hetolin/PoseVLA
+  tier: 2
+  one_line_summary: Pose-VLA는 카메라 기준 3차원 자세 토큰을 먼저 학습하고 그 표현을 개별 로봇의 행동 공간에 맞춰 조작 정책을 훈련한다.
+  key_contributions:
+    - 다양한 3차원 자료의 공간 관계와 로봇 시연의 움직임을 같은 이산 자세 표현에 연결하고, 공간 정합 학습 뒤 궤적 감독을 추가한다.
+    - RoboTwin 2.0과 LIBERO에서 시뮬레이션 성능을 측정하고 실제 조작에서는 과제당 100개 시연을 사용해 물체가 바뀌었을 때의 일반화를 평가했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 양팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: 부분
+    data: unknown
+  datasets_benchmarks:
+    - RoboTwin 2.0
+    - Xtrainer 실물 양팔 4과제
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 자세 토큰은 사전학습 인터페이스이며, 하류 로봇 실행에는 연속 행동 전문가를 사용한다. 시뮬레이션과 실물 양팔 조작 표를 따로 읽는다.
+  vla:
+    backbone:
+      name: PaliGemma와 π0 계열 행동 전문가
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - RoboTwin 2.0
+      real_robot_tasks: 4
+      scope: PDF 3–5, 7쪽. 사전학습의 이산 자세 토큰과 실행 행동은 용도가 다르다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://roboticsproceedings.org/rss22/p145.html
+      저자·소속 원문: https://roboticsproceedings.org/rss22/p145.pdf#page=1
+      방법·평가 원문: https://roboticsproceedings.org/rss22/p145.pdf
+    pdf_sha256: 5a25cdd44550ff0ed9c3e2907b258bbe28779377f9256ba7630518554cee74f4
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 7
+      - 8
+    summary_source: https://roboticsproceedings.org/rss22/p145.pdf
+    openness:
+      code:
+        scope: PoseVLA의 행동 정책 후학습 · train_posttrain.py
+        source: https://raw.githubusercontent.com/hetolin/PoseVLA/1520c6b595fe75de4efe587dc5b5c2716376e4ae/train_posttrain.py
+        release_reference: https://github.com/hetolin/PoseVLA/blob/1520c6b595fe75de4efe587dc5b5c2716376e4ae/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: PoseVLA 1단계 공간 사전학습 체크포인트 · model.safetensors
+        source: https://huggingface.co/hetolin/PoseVLA-stage1/resolve/2bf05b6880b22ac85dd6c3c4e9c34ddc71b15be6/model.safetensors
+        release_reference: https://huggingface.co/hetolin/PoseVLA-stage1/blob/2bf05b6880b22ac85dd6c3c4e9c34ddc71b15be6/model.safetensors
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://hetolin.github.io/PoseVLA/
+  changed_from:
+    id: pr-1212
+    tier: NEXT
+    tags:
+      - VLA
+      - pose tokens
+      - pretraining
+      - embodiment alignment
+    facets: {}
+    venue: RSS
+    links:
+      page: https://roboticsproceedings.org/rss22/p145.html
+      pdf: null
+      project: https://hetolin.github.io/PoseVLA/
+      code: https://github.com/hetolin/PoseVLA
+    openness:
+      code: released
+      weights: reported
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/hetolin/PoseVLA/HEAD/eval_detection.py
+        evidence: 저자 구현 파일 · eval_detection.py
+        verified_on: '2026-11-20'
+      weights:
+        status: reported
+        evidence: 배포 파일 목록에서 확인한 범위 · model.safetensors
+        source: https://huggingface.co/api/models/hetolin/PoseVLA-stage1
+        verified_on: '2026-11-20'
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-yang-robo3r
+  registry_id: pr-1213
+  title: 'Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction'
+  authors:
+    - Sizhe Yang
+    - Linning Xu
+    - Hao Li
+    - Juncheng Mu
+    - Jia Zeng
+    - Dahua Lin
+    - Jiangmiao Pang
+  affiliations:
+    - Shanghai AI Laboratory
+    - The Chinese University of Hong Kong
+    - University of Science and Technology of China
+    - Tsinghua University
+  year: 2026
+  venue: RSS
+  links:
+    paper: https://roboticsproceedings.org/rss22/p056.html
+    pdf: https://roboticsproceedings.org/rss22/p056.pdf
+    project: https://yangsizhe.github.io/robo3r/
+    code: https://github.com/InternRobotics/Robo3R
+  tier: 2
+  one_line_summary: Robo3R은 RGB 영상과 로봇 상태에서 로봇 기준 좌표계의 실제 척도 3차원 장면을 순전파로 복원해 조작에 사용한다.
+  key_contributions:
+    - 시점별 기하와 상대 카메라 자세를 전역 유사 변환으로 정렬하고, 마스크 기반 점 예측과 키포인트 PnP로 물체 경계와 카메라 정합을 개선한다.
+    - 복원 오차와 함께 모방학습·실물 전이·파지 생성·충돌 회피 계획을 평가해 추정한 기하가 후속 로봇 행동에 미치는 영향을 비교했다.
+  method_tags:
+    - unknown
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 양팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 합성
+  openness:
+    code: 부분
+    weights: 부분
+    data: 부분
+  datasets_benchmarks:
+    - Robo3R
+    - 로봇 영상 재구성 평가
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 한 장면의 RGB와 로봇 상태에서 계량적 3D를 복원한다. 합성 렌더로 학습한 추정기의 기하 오차와 실제 로봇에서의 하류 활용을 구분한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://roboticsproceedings.org/rss22/p056.html
+      저자·소속 원문: https://roboticsproceedings.org/rss22/p056.pdf#page=1
+      방법·평가 원문: https://roboticsproceedings.org/rss22/p056.pdf
+    pdf_sha256: b2a72356f2956dd46eca4b65e3f605f015a121a51307ec171435ddbfb9d9a1a6
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 6
+      - 8
+    summary_source: https://roboticsproceedings.org/rss22/p056.pdf
+    openness:
+      code:
+        scope: Robo3R의 3D 예측 평가 진입점 · eval.py
+        source: https://raw.githubusercontent.com/InternRobotics/Robo3R/10fbd8efe40c8a1f4539f2c2c68f649e4e2bff7e/eval.py
+        release_reference: https://github.com/InternRobotics/Robo3R/blob/10fbd8efe40c8a1f4539f2c2c68f649e4e2bff7e/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: Robo3R 기하 추정기 체크포인트 · franka_wQpos.pth
+        source: https://huggingface.co/yangsizhe/Robo3R/resolve/437d1a3638a33195aae77d5c98b64eaaa151f7db/franka_wQpos.pth
+        release_reference: https://huggingface.co/yangsizhe/Robo3R/blob/437d1a3638a33195aae77d5c98b64eaaa151f7db/franka_wQpos.pth
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+      data:
+        scope: Robo3R의 합성 재구성 자료 · 1kScenes_in-gripper_test/1kScenes_in-gripper_test.tar.gz
+        source: https://huggingface.co/datasets/yangsizhe/Robo3R/resolve/43a317341c6aa584f303dffc64df942ee92a02b9/1kScenes_in-gripper_test/1kScenes_in-gripper_test.tar.gz
+        release_reference: https://huggingface.co/datasets/yangsizhe/Robo3R/blob/43a317341c6aa584f303dffc64df942ee92a02b9/1kScenes_in-gripper_test/1kScenes_in-gripper_test.tar.gz
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+  changed_from:
+    id: pr-1213
+    tier: NEXT
+    tags:
+      - 3D reconstruction
+      - metric scale
+      - robot state
+      - manipulation
+    facets: {}
+    venue: RSS
+    links:
+      page: https://roboticsproceedings.org/rss22/p056.html
+      pdf: null
+      project: https://yangsizhe.github.io/robo3r/
+      code: https://github.com/InternRobotics/Robo3R
+    openness:
+      code: released
+      weights: reported
+      data: released
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/InternRobotics/Robo3R/HEAD/eval.py
+        evidence: 저자 구현 파일 · eval.py
+        verified_on: '2026-11-20'
+      weights:
+        status: reported
+        evidence: 배포 파일 목록에서 확인한 범위 · pi3.pth
+        source: https://huggingface.co/api/models/yangsizhe/Robo3R
+        verified_on: '2026-11-20'
+      data:
+        status: released
+        source: https://huggingface.co/api/datasets/yangsizhe/Robo3R
+        evidence: 배포 파일 목록에서 확인한 범위 · 1kScenes_in-gripper_test/1kScenes_in-gripper_test.tar.gz
+        verified_on: '2026-11-20'
+- id: 2026-qian-geopredict
+  registry_id: pr-1214
+  title: 'GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation'
+  authors:
+    - Jingjing Qian
+    - Boyao Han
+    - Chen Shi
+    - Lei Xiao
+    - Long Yang
+    - Shaoshuai Shi
+    - Li Jiang
+  affiliations:
+    - The Chinese University of Hong Kong (Shenzhen)
+    - Hunan University
+    - Voyager Research (DiDi Chuxing)
+  year: 2026
+  venue: CVPR
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html
+    pdf: https://openaccess.thecvf.com/content/CVPR2026/papers/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.pdf
+    project: https://jingjingqian75.github.io/GeoPredict-Page/
+    code: https://github.com/jingjingqian75/GeoPredict
+  tier: 2
+  one_line_summary: GeoPredict는 미래 로봇 관절부의 3차원 이동과 작업 공간의 기하를 학습 신호로 삼아 연속 행동을 내는 VLA의 정밀 조작을 개선한다.
+  key_contributions:
+    - 로봇팔 키포인트의 미래 궤적과 주변 3차원 가우시안을 예측해 깊이 렌더링으로 감독하고, 실행 시에는 기하 복호화 없이 추가 질의 토큰만 쓴다.
+    - RoboCasa·LIBERO와 실제 조작에서 작업 성공을 비교하고 운동학 예측과 기하 감독을 각각 제거해 기여를 평가했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - LIBERO
+    - RoboCasa Human-50
+    - DISCOVER 실제 로봇팔
+  limitations:
+    paper_reported: 저자는 학습 시 여러 RGB-D 시점과 외부 파라미터 수집이 확장 비용을 올린다고 지적한다. PDF 8쪽.
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 훈련 중 미래 궤적과 3D Gaussian 기하를 예측한다. 학습용 RGB-D·캘리브레이션과 배포 정책의 RGB 관측을 구분한다.
+  vla:
+    backbone:
+      name: π0 기반 GeoPredict
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+        - RoboCasa Human-50
+      real_robot_tasks: unknown
+      scope: PDF 8쪽 Table 5는 공간·기하·강건성 세 평가 조건을 구분한다. 고유한 실물 과제 수는 미확인이다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html
+      저자·소속 원문: https://openaccess.thecvf.com/content/CVPR2026/papers/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.pdf#page=1
+      방법·평가 원문: https://openaccess.thecvf.com/content/CVPR2026/papers/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.pdf
+    pdf_sha256: f1155061464799b376176dcf89c4b30ab3ebb904bbcbb7d51e73eb07546f4f81
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 7
+      - 8
+    summary_source: https://openaccess.thecvf.com/content/CVPR2026/papers/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.pdf
+    openness:
+      code:
+        scope: GeoPredict의 가우시안 기하 예측 모듈 · models/gaussian.py
+        source: https://raw.githubusercontent.com/jingjingqian75/GeoPredict/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/models/gaussian.py
+        release_reference: https://github.com/jingjingqian75/GeoPredict/blob/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/readme.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://jingjingqian75.github.io/GeoPredict-Page/
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://jingjingqian75.github.io/GeoPredict-Page/
+  changed_from:
+    id: pr-1214
+    tier: NEXT
+    tags:
+      - VLA
+      - 3D Gaussian
+      - predictive geometry
+      - kinematics
+    facets: {}
+    venue: CVPR
+    links:
+      page: https://openaccess.thecvf.com/content/CVPR2026/html/Qian_GeoPredict_Leveraging_Predictive_Kinematics_and_3D_Gaussian_Geometry_for_Precise_CVPR_2026_paper.html
+      pdf: null
+      project: https://github.com/jingjingqian75/GeoPredict
+      code: https://github.com/jingjingqian75/GeoPredict
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/jingjingqian75/GeoPredict/5191756e8c4f16de2b63c28636341f2d4f5cdf2e/models/gaussian.py
+        verified_on: '2026-11-20'
+        evidence: 해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. models/gaussian.py
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-song-reconvla
+  registry_id: pr-1215
+  title: 'ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver'
+  authors:
+    - Wenxuan Song
+    - Ziyang Zhou
+    - Han Zhao
+    - Jiayi Chen
+    - Pengxiang Ding
+    - Haodong Yan
+    - Yuxin Huang
+    - Feilong Tang
+    - Donglin Wang
+    - Haoang Li
+  affiliations:
+    - The Hong Kong University of Science and Technology (Guangzhou)
+    - Westlake University
+    - Zhejiang University
+    - Monash University
+  year: 2026
+  venue: AAAI
+  links:
+    paper: https://ojs.aaai.org/index.php/AAAI/article/view/38921
+    pdf: https://arxiv.org/pdf/2508.10333
+    project: https://zionchow.github.io/ReconVLA/
+    code: https://github.com/Chowzy069/Reconvla
+  tier: 2
+  one_line_summary: ReconVLA는 로봇 정책이 영상에서 조작 대상에 집중하도록 해당 물체 영역을 복원하는 보조 목표로 시각 표현을 학습한다.
+  key_contributions:
+    - 정책의 시각 토큰에 조건화된 확산 트랜스포머가 목표 영역을 복원하게 하고, 기존 로봇 궤적에서 해당 영역이 표시된 사전학습 예시를 구성한다.
+    - CALVIN과 실물 조작에서 목표 영역 복원 학습이 주의 분포와 조작 성공에 미치는 영향을 측정하고 새로운 대상에 대한 일반화도 평가했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: 부분
+    data: unknown
+  datasets_benchmarks:
+    - BridgeData V2
+    - LIBERO
+    - CALVIN
+    - 실물 조작
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 조작 대상 영역을 재구성하는 확산 헤드는 보조 학습용이다. 로봇 행동은 별도 자기회귀 토큰으로 생성한다. 게재처 서지와 저자 원문판의 쪽수를 각각 남겼다.
+  vla:
+    backbone:
+      name: LLaVA-OneVision / Qwen2-7B
+      size: 7B (언어 모델)
+    action_representation:
+      - 이산 토큰
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+        - CALVIN
+      real_robot_tasks: 4
+      scope: 저자판 PDF 3–7쪽. 실행 행동은 이산 토큰이고 확산은 보조 이미지 복원에 쓰인다. Fig. 5는 네 실물 과제를 제시한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://ojs.aaai.org/index.php/AAAI/article/view/38921
+      저자·소속 원문: https://arxiv.org/pdf/2508.10333#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2508.10333
+    pdf_sha256: de568f5eb3e26a355160e7b79c286327eae38f3585a419a51a061c186e55f011
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    summary_source: https://ojs.aaai.org/index.php/AAAI/article/download/38921/42883
+    openness:
+      code:
+        scope: ReconVLA의 행동·시각 재구성 학습 진입점 · reconvla/train_vla.py
+        source: https://raw.githubusercontent.com/Chowzy069/Reconvla/047ccd9f3278161dcf82d731716e466e1209ef1c/reconvla/train_vla.py
+        release_reference: https://github.com/Chowzy069/Reconvla/blob/047ccd9f3278161dcf82d731716e466e1209ef1c/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: ReconVLA의 저자 공개 모델 · checkpoint-5554/model-00001-of-00004.safetensors
+        source: https://huggingface.co/zzyzyzy/ReconVLA/resolve/8fbe73e804f22abe67f7080e54dde21a37809315/checkpoint-5554/model-00001-of-00004.safetensors
+        release_reference: https://huggingface.co/zzyzyzy/ReconVLA/blob/8fbe73e804f22abe67f7080e54dde21a37809315/checkpoint-5554/model-00001-of-00004.safetensors
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://zionchow.github.io/ReconVLA/
+  changed_from:
+    id: pr-1215
+    tier: NEXT
+    tags:
+      - VLA
+      - visual grounding
+      - reconstruction
+      - manipulation
+    facets: {}
+    venue: AAAI
+    links:
+      page: https://ojs.aaai.org/index.php/AAAI/article/view/38921
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-xu-gap
+  registry_id: pr-1216
+  title: Action-Geometry Prediction with 3D Geometric Prior for Bimanual Manipulation
+  authors:
+    - Chongyang Xu
+    - Haipeng Li
+    - Shen Cheng
+    - Haoqiang Fan
+    - Ziliang Feng
+    - Shuaicheng Liu
+  affiliations:
+    - Sichuan University
+    - University of Electronic Science and Technology of China
+    - Dexmal
+  year: 2026
+  venue: CVPR
+  links:
+    paper: https://openaccess.thecvf.com/content/CVPR2026/html/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.html
+    pdf: https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf
+    project: https://github.com/Chongyang-99/GAP
+    code: https://github.com/Chongyang-99/GAP
+  tier: 2
+  one_line_summary: 이 연구는 RGB에서 얻은 기하 특징과 로봇의 고유수용감각으로 두 팔의 다음 행동 묶음과 그 뒤의 3차원 장면을 함께 예측한다.
+  key_contributions:
+    - 사전학습된 3차원 모델의 잠재 표현에 2차원 의미 특징을 결합하고, 확산 모형이 예측한 미래 기하를 조밀한 점 지도로 복호화한다.
+    - RoboTwin에서 양팔의 역할·동시성·순서가 다른 과제를 나눠 비교하고 실제 로봇에서도 정책의 손 협응과 조작 성공을 평가했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 양팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - RoboTwin 2.0
+    - 실물 양팔 4과제
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 단일 RGB 영상과 로봇 상태에서 행동 청크와 미래 3D 점지도를 함께 예측한다. 실물 네 과제는 Table 5에 있으며 언어 입력을 필수 조건으로 분류하지 않았다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://openaccess.thecvf.com/CVPR2026?day=2026-06-07
+      저자·소속 원문: https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf#page=1
+      방법·평가 원문: https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf
+    pdf_sha256: 10f479d23ebfd17c18c76ea57b36507e7ba5e5f2becd8ab3f865a8c7cfdac901
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    summary_source: https://openaccess.thecvf.com/content/CVPR2026/papers/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.pdf
+    openness:
+      code:
+        scope: RoboTwin용 GAP 양팔 정책 배포 모듈 · deploy_policy.py
+        source: https://raw.githubusercontent.com/Chongyang-99/GAP/dc6591904f564354b8cb2aeb3f016bdfc75ca5f5/deploy_policy.py
+        release_reference: https://github.com/Chongyang-99/GAP/blob/dc6591904f564354b8cb2aeb3f016bdfc75ca5f5/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://github.com/Chongyang-99/GAP
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://github.com/Chongyang-99/GAP
+  changed_from:
+    id: pr-1216
+    tier: NEXT
+    tags:
+      - bimanual manipulation
+      - 3D geometry
+      - diffusion policy
+      - action chunk
+    facets: {}
+    venue: CVPR
+    links:
+      page: https://openaccess.thecvf.com/content/CVPR2026/html/Xu_Action-Geometry_Prediction_with_3D_Geometric_Prior_for_Bimanual_Manipulation_CVPR_2026_paper.html
+      pdf: null
+      project: https://github.com/Chongyang-99/GAP
+      code: https://github.com/Chongyang-99/GAP
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/Chongyang-99/GAP/HEAD/deploy_policy.py
+        evidence: 저자 구현 파일 · deploy_policy.py
+        verified_on: '2026-11-20'
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2025-hu-aawr
+  registry_id: pr-1217
+  title: Real-World Reinforcement Learning of Active Perception Behaviors
+  authors:
+    - Edward Hu
+    - Jie Wang
+    - Xingfang Yuan
+    - Fiona Luo
+    - Muyao Li
+    - Gaspard Lambrechts
+    - Oleh Rybkin
+    - Dinesh Jayaraman
+  affiliations:
+    - University of Pennsylvania
+    - University of Liège
+    - University of California Berkeley
+  year: 2025
+  venue: NeurIPS
+  links:
+    paper: https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
+    pdf: https://papers.neurips.cc/paper_files/paper/2025/file/aa1b1a959c80086cba61d0fd66de412f-Paper-Conference.pdf
+    project: https://penn-pal-lab.github.io/aawr/
+    code: https://github.com/penn-pal-lab/aawr
+  tier: 2
+  one_line_summary: AAWR은 학습 때만 이용할 수 있는 추가 센서로 가치 함수를 훈련해, 실행 때에는 로봇이 스스로 부족한 정보를 얻는 행동을 배우게 한다.
+  key_contributions:
+    - 추가 관측으로 추정한 어드밴티지를 이용해 제한된 관측만 받는 정책을 갱신하며 소량 시연과 초기 정책으로 실물 학습을 시작한다.
+    - 세 로봇의 여덟 가지 부분 관측 조작 과제에서 능동 지각 행동과 성공률을 측정하고 추가 센서 없는 학습 및 시연 모방과 비교했다.
+  method_tags:
+    - IL
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: 부분
+  datasets_benchmarks:
+    - AAWR
+    - Koch 및 Franka 능동 관측 과제
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 훈련 중 특권 정보를 이용한 가치 추정으로 실제 로봇의 관측 행동을 학습한다. 가치 추정기가 받는 정보와 배포 정책의 부분 관측을 분리한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
+      저자·소속 원문: https://papers.neurips.cc/paper_files/paper/2025/file/aa1b1a959c80086cba61d0fd66de412f-Paper-Conference.pdf#page=1
+      방법·평가 원문: https://papers.neurips.cc/paper_files/paper/2025/file/aa1b1a959c80086cba61d0fd66de412f-Paper-Conference.pdf
+    pdf_sha256: cb6d113bff5935b45ac91b62f62f5523ff0ec58b382434f38d82c2cdba8bd301
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 7
+      - 8
+    summary_source: https://papers.neurips.cc/paper_files/paper/2025/file/aa1b1a959c80086cba61d0fd66de412f-Paper-Conference.pdf
+    openness:
+      code:
+        scope: AAWR의 시연·가치 기반 정책 학습 진입점 · src/train_il.py
+        source: https://raw.githubusercontent.com/penn-pal-lab/aawr/05845db6c0da25993e816c44f47c123487f20cd1/src/train_il.py
+        release_reference: https://github.com/penn-pal-lab/aawr/blob/05845db6c0da25993e816c44f47c123487f20cd1/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://penn-pal-lab.github.io/aawr/
+      data:
+        scope: AAWR-DROID 로봇 궤적 · bookshelf_duck/failure/2025-05-06_21-35-51/trajectory.h5
+        source: https://huggingface.co/datasets/Everloom/AAWR-DROID/resolve/374a4de67cd72052bb37766098286244bb87c980/bookshelf_duck/failure/2025-05-06_21-35-51/trajectory.h5
+        release_reference: https://huggingface.co/datasets/Everloom/AAWR-DROID/blob/374a4de67cd72052bb37766098286244bb87c980/bookshelf_duck/failure/2025-05-06_21-35-51/trajectory.h5
+        access: 고정 판본의 파일 목록·첫 바이트 확인
+  changed_from:
+    id: pr-1217
+    tier: NEXT
+    tags:
+      - active perception
+      - real-world RL
+      - privileged value
+      - partial observability
+    facets: {}
+    venue: NeurIPS
+    links:
+      page: https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
+      pdf: null
+      project: https://penn-pal-lab.github.io/aawr/
+      code: https://github.com/penn-pal-lab/aawr
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/penn-pal-lab/aawr/HEAD/src/train_il.py
+        evidence: 저자 구현 파일 · src/train_il.py
+        verified_on: '2026-11-20'
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2024-hollenstein-colored-noise-ppo
+  registry_id: pr-1218
+  title: 'Colored Noise in PPO: Improved Exploration and Performance through Correlated Action Sampling'
+  authors:
+    - Jakob Hollenstein
+    - Georg Martius
+    - Justus Piater
+  affiliations:
+    - University of Innsbruck
+    - Max Planck Institute for Intelligent Systems
+    - University of Tübingen
+  year: 2024
+  venue: AAAI
+  links:
+    paper: https://ojs.aaai.org/index.php/AAAI/article/view/29139
+    pdf: https://arxiv.org/pdf/2312.11091
+    project: https://github.com/jkbjh/cn-ppo-paper-code
+    code: https://github.com/jkbjh/cn-ppo-paper-code
+  tier: 2
+  one_line_summary: 이 연구는 PPO가 연속 행동을 표집할 때 탐색 잡음의 시간적 상관을 조절하면 학습 성능이 어떻게 달라지는지 평가한다.
+  key_contributions:
+    - 평균·분산을 조절하는 정책에 시간 상관이 있는 잡음 과정을 적용해 백색에서 분홍색 잡음까지 서로 다른 상관 수준을 비교했다.
+    - 시뮬레이션에서 평균적으로 백색과 분홍색 사이의 상관이 유리했고, 한 번에 자료를 모으는 병렬 환경 수를 늘리면 더 강한 상관이 유리해지는 경향을 보고했다.
+  method_tags:
+    - RL
+  task_tags:
+    - 이동
+    - 내비게이션
+  embodiment_tags:
+    - 기타
+  modality_tags:
+    - 기타
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - MuJoCo
+    - Gym 연속 제어 환경
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: PPO 탐색 잡음의 시간 상관과 병렬 환경 수를 바꿔 시뮬레이션 반환값을 비교한다. 부록의 미로와 연속 제어 환경 결과에서 실제 로봇 성능을 추론하지 않는다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://ojs.aaai.org/index.php/AAAI/article/view/29139
+      저자·소속 원문: https://arxiv.org/pdf/2312.11091#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2312.11091
+    pdf_sha256: 0de999c33fbe5e99d9a739eb3a641412e95d6ec3277ac404b9acc504f8122994
+    method_evaluation_pages:
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 8
+      - 9
+    summary_source: https://ojs.aaai.org/index.php/AAAI/article/download/29139/30155
+    openness:
+      code:
+        scope: PPO 정책의 시간 상관 행동 잡음 구현 · cnppo/cnpolicy.py
+        source: https://raw.githubusercontent.com/jkbjh/cn-ppo-paper-code/f2422442468a646ae37dc5e40cca72c3a7b62260/cnppo/cnpolicy.py
+        release_reference: https://github.com/jkbjh/cn-ppo-paper-code/blob/f2422442468a646ae37dc5e40cca72c3a7b62260/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://github.com/jkbjh/cn-ppo-paper-code
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://github.com/jkbjh/cn-ppo-paper-code
+  changed_from:
+    id: pr-1218
+    tier: NEXT
+    tags:
+      - PPO
+      - exploration
+      - temporal correlation
+      - action noise
+    facets: {}
+    venue: AAAI
+    links:
+      page: https://ojs.aaai.org/index.php/AAAI/article/view/29139
+      pdf: null
+      project: https://github.com/jkbjh/cn-ppo-paper-code
+      code: https://github.com/jkbjh/cn-ppo-paper-code
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/jkbjh/cn-ppo-paper-code/f2422442468a646ae37dc5e40cca72c3a7b62260/cnppo/cnpolicy.py
+        verified_on: '2026-11-20'
+        evidence: 해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. cnppo/cnpolicy.py
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2024-padalkar-shared-control-templates
+  registry_id: pr-1219
+  title: Guiding real-world reinforcement learning for in-contact manipulation tasks with Shared Control Templates
+  authors:
+    - Abhishek Padalkar
+    - Gabriel Quere
+    - Antonin Raffin
+    - João Silvério
+    - Freek Stulp
+  affiliations:
+    - German Aerospace Center (DLR)
+  year: 2024
+  venue: Autonomous Robots
+  links:
+    paper: https://link.springer.com/article/10.1007/s10514-024-10164-6
+    pdf: https://elib.dlr.de/206235/1/s10514-024-10164-6.pdf
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: 이 연구는 기하와 물체 접촉에서 이미 아는 제약을 제어 템플릿에 맡기고 남은 자유도만 강화학습으로 탐색해 실물 학습 부담을 줄인다.
+  key_contributions:
+    - 공유 제어 템플릿으로 허용되는 움직임을 정해 행동·상태 공간을 줄이고, 미지의 작업 변수에 대해서만 로봇이 경험에서 학습하게 한다.
+    - 실제 7자유도 팔의 붓기 과제는 65회 약 16분, 격자 클램프 삽입은 75회 약 17분의 학습을 보고하고 삽입 때 접촉력도 평가했다.
+  method_tags:
+    - RL
+    - 고전제어
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - 고유수용감각
+    - 기타
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - KUKA iiwa 시뮬레이션
+    - DLR SARA 실물 붓기·격자 클램프 삽입
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 단계별 기하·제어 제약으로 허용 동작을 정하고 나머지 자유도를 강화학습으로 탐색한다. KUKA iiwa 시뮬레이션에서 붓기, 실제 DLR SARA에서 붓기와 격자 클램프 삽입을 비교했다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://link.springer.com/article/10.1007/s10514-024-10164-6
+      저자·소속 원문: https://elib.dlr.de/206235/1/s10514-024-10164-6.pdf#page=1
+      방법·평가 원문: https://elib.dlr.de/206235/1/s10514-024-10164-6.pdf
+    pdf_sha256: 7aab5f995fd6a7c3c8eef488842e21defbd86d330b9657c73076755862cc5482
+    method_evaluation_pages:
+      - 1
+      - 2
+      - 7
+      - 8
+      - 10
+      - 11
+      - 13
+    summary_source: https://link.springer.com/content/pdf/10.1007/s10514-024-10164-6.pdf
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://link.springer.com/article/10.1007/s10514-024-10164-6
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://link.springer.com/article/10.1007/s10514-024-10164-6
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://link.springer.com/article/10.1007/s10514-024-10164-6
+  changed_from:
+    id: pr-1219
+    tier: NEXT
+    tags:
+      - real-world RL
+      - contact
+      - constraints
+      - shared control
+    facets: {}
+    venue: Autonomous Robots
+    links:
+      page: https://link.springer.com/article/10.1007/s10514-024-10164-6
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2025-naik-multimodal-pose-uncertainty
+  registry_id: pr-1220
+  title: Robotic task success evaluation under multi-modal non-parametric object pose uncertainty
+  authors:
+    - Lakshadeep Naik
+    - Thorbjørn Mosekjær Iversen
+    - Aljaz Kramberger
+    - Norbert Krüger
+  affiliations:
+    - University of Southern Denmark
+    - Danish Institute for Advanced Study
+  year: 2025
+  venue: Industrial Robot
+  links:
+    paper: https://api.crossref.org/works/10.1108/IR-10-2024-0467
+    pdf: https://arxiv.org/pdf/2403.10874v1
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: 이 연구는 물체의 6차원 자세 오차와 로봇 과제가 허용하는 오차를 함께 모델링해 주어진 추정으로 행동이 성공할 확률을 계산한다.
+  key_contributions:
+    - 실행 가능한 오차 범위를 시뮬레이션으로 미리 구하고, 여러 봉우리를 가질 수 있는 자세 오차 분포와 결합해 과제별 성공 가능성을 산출한다.
+    - 이동 조작에서 파지를 위한 베이스 위치의 역기구학적 도달 가능성과 실제 파지 성공을 따로 평가해 영상 신뢰도 및 단일 가우시안 불확실성과 비교했다.
+  method_tags:
+    - 모델기반
+  task_tags:
+    - 조작
+    - 모바일매니퓰레이션
+  embodiment_tags:
+    - 모바일매니퓰레이터
+  modality_tags:
+    - 기타
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - MY-MM
+    - 실물 모바일 파지
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 객체 자세의 다봉 분포와 시뮬레이션으로 얻은 과제별 허용오차를 합쳐 작업 성공 확률을 평가한다. 평가 대상은 자세 오차가 있는 과제의 성공 예측이다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF
+      저자·소속 원문: https://arxiv.org/pdf/2403.10874v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2403.10874v1
+    pdf_sha256: 020c03799f922b1b61849e219a5241817cd808989ad7d741c67181616d029bd5
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 6
+      - 7
+    summary_source: https://arxiv.org/pdf/2403.10874v1
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://api.crossref.org/works/10.1108/IR-10-2024-0467
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://api.crossref.org/works/10.1108/IR-10-2024-0467
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://api.crossref.org/works/10.1108/IR-10-2024-0467
+  changed_from:
+    id: pr-1220
+    tier: NEXT
+    tags:
+      - pose uncertainty
+      - task success
+      - mobile manipulation
+      - tolerance
+    facets: {}
+    venue: Industrial Robot
+    links:
+      page: https://api.crossref.org/works/10.1108/IR-10-2024-0467
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-yang-structrl
+  registry_id: pr-1221
+  title: 'StructRL: Structured Action-Space Exploration for Flow-Based VLAs'
+  authors:
+    - Jiarui Yang
+    - Bin Zhu
+    - Jingjing Chen
+    - Na Zou
+    - Yanwei Fu
+    - Jianggang Zhu
+    - Yu-Gang Jiang
+  affiliations:
+    - Fudan University
+    - Singapore Management University
+    - Shanghai Artificial Intelligence Laboratory
+  year: 2026
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2608.15139
+    pdf: https://arxiv.org/pdf/2608.15139
+    project: https://flyfaerss.github.io/structrl/
+    code: unknown
+  tier: 2
+  one_line_summary: StructRL은 결정론적 flow ODE가 산출한 행동 청크에 구조적 잡음을 더해 시간·행동 축의 탐색 상관을 제어한다.
+  key_contributions:
+    - 행동 공간의 상관 구조에 대해 우도를 계산하므로 flow를 적분하는 과정에 확률 전이를 삽입하지 않고 정책을 갱신한다.
+    - LIBERO·ManiSkill과 실물 FR3의 바나나 집기·충전기 연결에서 독립 잡음 등과 비교했다.
+  method_tags:
+    - RL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - LIBERO
+    - ManiSkill
+    - Franka FR3
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 결정론적 flow ODE가 만든 행동 청크에 상관 구조를 가진 탐색 잡음을 더한다. 시뮬레이션과 실물 FR3 두 과제의 비동기 온라인 갱신을 구분한다.
+  vla:
+    backbone:
+      name: π0·π0.5·GR00T N1.5 계열
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - RL 파인튜닝
+    evaluation:
+      sim_benchmarks:
+        - LIBERO
+        - ManiSkill
+      real_robot_tasks: 2
+      scope: PDF 9, 14쪽. 실물 FR3에서 π0.5의 pick-banana·plug-charger-in을 평가했다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2608.15139
+      저자·소속 원문: https://arxiv.org/pdf/2608.15139#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2608.15139
+    pdf_sha256: 1cdf2ab3ef49151d86a28b561d65c13962b06ac6876249c036d026e23629b204
+    method_evaluation_pages:
+      - 4
+      - 5
+      - 7
+      - 9
+      - 14
+    summary_source: https://arxiv.org/pdf/2608.15139
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://flyfaerss.github.io/structrl/
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://flyfaerss.github.io/structrl/
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://flyfaerss.github.io/structrl/
+  changed_from:
+    id: pr-1221
+    tier: NEXT
+    tags:
+      - VLA
+      - RL
+      - flow policy
+      - structured exploration
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2608.15139
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-jin-soe
+  registry_id: pr-1222
+  title: 'SOE: Sample-Efficient Robot Policy Self-Improvement via On-Manifold Exploration'
+  authors:
+    - Yang Jin
+    - Jun Lv
+    - Han Xue
+    - Wendi Chen
+    - Chuan Wen
+    - Cewu Lu
+  affiliations:
+    - Shanghai Jiao Tong University
+    - Shanghai Innovation Institute
+    - Noematrix
+  year: 2026
+  venue: ICRA
+  links:
+    paper: https://arxiv.org/abs/2509.19292
+    pdf: https://arxiv.org/pdf/2509.19292v1
+    project: https://ericjin2002.github.io/SOE/
+    code: https://github.com/EricJin2002/SOE
+  tier: 2
+  one_line_summary: SOE는 로봇 정책이 이미 알고 있는 유효 행동의 주변을 낮은 차원의 공간에서 탐색해 기본 정책을 개선할 행동을 수집한다.
+  key_contributions:
+    - 과제에 필요한 변화를 담는 잠재 표현을 학습한 뒤 그 공간에서 행동을 바꾸고, 사람이 탐색 방향을 지정할 수도 있게 한다.
+    - 시뮬레이션과 실물 과제에서 성공률과 함께 탐색 중 움직임의 저크 및 자료 수집량을 비교해 잠재 공간 탐색과 사람의 안내 효과를 측정했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - robomimic
+    - Flexiv Rizon 4
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 시연 행동 주변에서 탐색하고 성공한 시행을 모아 모방 정책을 갱신한다. 상호작용을 사용한다는 것만으로 정책 경사나 Q학습으로 분류하지 않는다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://api.crossref.org/works/10.1109/icra57385.2026.11696357
+      저자·소속 원문: https://arxiv.org/pdf/2509.19292v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2509.19292v1
+    pdf_sha256: b93683822ba27eee862cebf8c5a0735f86d47d1ebb4af8d9a9577e8f4f79e400
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+    summary_source: https://arxiv.org/pdf/2509.19292v1
+    openness:
+      code:
+        scope: SOE의 시연 학습·잠재 행동 탐색 학습 진입점 · src/train.py
+        source: https://raw.githubusercontent.com/EricJin2002/SOE/9b5be5a7be16c39e8aa5314aad4bff29c6c81261/src/train.py
+        release_reference: https://github.com/EricJin2002/SOE/blob/9b5be5a7be16c39e8aa5314aad4bff29c6c81261/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://ericjin2002.github.io/SOE/
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://ericjin2002.github.io/SOE/
+  changed_from:
+    id: pr-1222
+    tier: NEXT
+    tags:
+      - robot self-improvement
+      - latent exploration
+      - action manifold
+      - manipulation
+    facets: {}
+    venue: ICRA
+    links:
+      page: https://arxiv.org/abs/2509.19292
+      pdf: null
+      project: https://ericjin2002.github.io/SOE/
+      code: https://github.com/EricJin2002/SOE
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/EricJin2002/SOE/9b5be5a7be16c39e8aa5314aad4bff29c6c81261/src/train.py
+        verified_on: '2026-11-20'
+        evidence: 해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. src/train.py
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2025-liu-activepose
+  registry_id: pr-1223
+  title: 'ActivePose: Active 6D Object Pose Estimation and Tracking for Robotic Manipulation'
+  authors:
+    - Sheng Liu
+    - Zhe Li
+    - Weiheng Wang
+    - Han Sun
+    - Heng Zhang
+    - Hongpeng Chen
+    - Yusen Qin
+    - Arash Ajoudani
+    - Yizhao Wang
+  affiliations:
+    - Karlsruhe Institute of Technology
+    - Shanghai Jiao Tong University
+    - Istituto Italiano di Tecnologia
+    - The Hong Kong Polytechnic University
+    - D-Robotics
+  year: 2025
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2509.11364
+    pdf: https://arxiv.org/pdf/2509.11364v2
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: ActivePose는 새 물체 자세가 모호할 때 카메라를 능동적으로 옮기고, 조작 도중에는 물체가 보이도록 시점을 제어해 자세 추적을 유지한다.
+  key_contributions:
+    - CAD 렌더링과 FoundationPose 자세 가설의 엔트로피로 시점 예시를 구성하고, 시각언어 모델의 모호성 점수와 결합해 도달 가능한 다음 시점을 선택한다.
+    - 카메라 궤적을 출력하는 확산 정책을 시연으로 학습하고, 실제 물체 이동·가림에서의 추적 및 핀 삽입 결과를 초기 자세 추정과 구분해 평가했다.
+  method_tags:
+    - IL
+    - 모델기반
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 양팔
+  modality_tags:
+    - RGB
+    - depth
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - ActivePose
+    - Franka Panda 감지 팔·조작 팔
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 관측용 팔과 조작용 팔의 역할이 다르다. 초기 자세의 다음 시점 선택과 움직이는 대상의 추적용 카메라 정책을 별도로 평가한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2509.11364
+      저자·소속 원문: https://arxiv.org/pdf/2509.11364v2#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2509.11364v2
+    pdf_sha256: 2fb147499d8ceb10ddfaf644156151398d182de28f9a28a2af867add521179e4
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    summary_source: https://arxiv.org/pdf/2509.11364v2
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2509.11364
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2509.11364
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://arxiv.org/abs/2509.11364
+  changed_from:
+    id: pr-1223
+    tier: NEXT
+    tags:
+      - active perception
+      - 6D pose
+      - VLM
+      - next-best-view
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2509.11364
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-cui-imagine-then-verify
+  registry_id: pr-1224
+  title: 'Imagine then Verify: Affordance-Targeted Active Perception for Task-Oriented Grasping in Cluttered Scenes'
+  authors:
+    - Jingzhi Cui
+    - Xuefeng Liu
+    - Feng Han
+    - Xinyu Liu
+    - Wei Chen
+    - Jianwei Niu
+  affiliations:
+    - Beihang University
+  year: 2026
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2609.23504
+    pdf: https://arxiv.org/pdf/2609.23504v1
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: ATAP는 가려진 물체 전체를 스캔하는 데 쓰이는 관측 횟수를 줄이기 위해 지시한 용도에 맞는 파지 부위를 확인할 다음 시점을 고른다.
+  key_contributions:
+    - 부분 관측을 완성한 물체 형상에서 가능한 기능 부위들을 추정하고, 예상 엔트로피 감소와 실제 관측으로 부위를 확인할 이득을 함께 평가한다.
+    - 가려진 시뮬레이션·실물 장면에서 단순 파지와 기능 부위 파지의 성공률을 구분하고 고정 시점·복원 중심 탐색과 관측 횟수를 비교했다.
+  method_tags:
+    - 모델기반
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+  modality_tags:
+    - RGB
+    - depth
+    - 언어
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - 클러터 장면의 affordance 파지
+    - Franka FR3
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: 가려진 기능 부위의 형상을 가정한 후 그 가설을 확인할 다음 시점을 계획한다. 시뮬레이션과 실물에서 과제에 맞는 부위의 파지를 평가했다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2609.23504
+      저자·소속 원문: https://arxiv.org/pdf/2609.23504v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2609.23504v1
+    pdf_sha256: 215572a6b1cad4a75969e9e5fce91f5fb9d726d52cd6127e762069742e2e757a
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+    summary_source: https://arxiv.org/pdf/2609.23504v1
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2609.23504
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2609.23504
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://arxiv.org/abs/2609.23504
+  changed_from:
+    id: pr-1224
+    tier: NEXT
+    tags:
+      - active perception
+      - affordance
+      - grasping
+      - shape completion
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2609.23504
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: note_cue_scan; no explicit data artifact status identified
+- id: 2026-shcherba-estimate-dont-imitate
+  registry_id: pr-1225
+  title: 'Estimate, Don''t Imitate: Reusing Differentiable State-Based Policies for Visuomotor Control'
+  authors:
+    - Denis Shcherba
+    - Adrian Abel
+    - Eckart Cobo-Briesewitz
+    - Paul Mattes
+    - Wojciech Samek
+    - Marc Toussaint
+  affiliations:
+    - Fraunhofer Heinrich-Hertz-Institut
+    - Technische Universität Berlin
+    - Robotics Institute Germany
+    - BIFOLD
+  year: 2026
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2609.34018
+    pdf: https://arxiv.org/pdf/2609.34018v1
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: 이 연구는 시각 정책이 전문가 행동을 다시 배우는 대신 영상에서 필요한 상태를 복원하고 고정된 상태 기반 전문가가 행동을 결정하도록 한다.
+  key_contributions:
+    - 직접 상태 감독으로 시작해 미분 가능한 전문가를 통해 역전파한 행동 일치 손실의 비중을 늘림으로써 제어에 영향을 주는 추정 오차를 줄인다.
+    - 실제 Panda의 큐브 과제에서 성공률은 완료한 에피소드 기준 19/25(76.0%), 관절 한계로 중단하고 재시작한 두 시도를 포함하면 19/27(70.4%)였다.
+  method_tags:
+    - unknown
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 기타
+  modality_tags:
+    - RGB
+    - 고유수용감각
+  data_source_tags:
+    - 시뮬
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - Franka Panda
+    - Allegro Hand
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: RGB 상태 추정기에 상태·행동 손실을 전달하고 실행 때 기존 상태 기반 정책을 재사용한다. 정책 증류는 기존 대안이며 저자 방법이 새 행동 정책을 학습한다는 뜻이 아니다. 모의 학습 뒤 물리 Panda에서 검증한 sim-to-real 조건이다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2609.34018
+      저자·소속 원문: https://arxiv.org/pdf/2609.34018v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2609.34018v1
+    pdf_sha256: de94b28080ee3f4a10971a551b7cee14ea976b7c0066644663b523c6c7b25a2f
+    method_evaluation_pages:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    summary_source: https://arxiv.org/pdf/2609.34018v1
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2609.34018
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://arxiv.org/abs/2609.34018
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://arxiv.org/abs/2609.34018
+  changed_from:
+    id: pr-1225
+    tier: NEXT
+    tags:
+      - state estimation
+      - visuomotor control
+      - policy distillation
+      - manipulation
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2609.34018
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2026-yang-geometric-vla
+  registry_id: pr-1226
+  title: Understanding the Impact of Geometric Foundation Models on Vision-Language-Action Models
+  authors:
+    - Yurou Yang
+    - Muyuan Lin
+    - Roberto Martin-Martin
+    - Martin Labrie
+    - Shreekant Gayaka
+    - Cheng-Hao Kuo
+    - Luca Carlone
+  affiliations:
+    - Amazon Personal Robotics Group
+    - University of Texas at Austin
+    - Massachusetts Institute of Technology
+  year: 2026
+  venue: ECCV
+  links:
+    paper: https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2
+    pdf: https://arxiv.org/pdf/2605.24642v1
+    project: unknown
+    code: unknown
+  tier: 2
+  one_line_summary: 이 연구는 GR00T-N1.5의 표현이 기하 정보를 얼마나 담는지, 그리고 VGGT의 기하를 제공하는 방식이 조작 행동을 어떻게 바꾸는지 비교한다.
+  key_contributions:
+    - 선형 탐침으로 정책과 기하 모델의 특징에서 깊이 등을 예측한 뒤, 동일한 기반 정책에 기하 특징을 결합하는 세 구조를 통제된 조건에서 비교했다.
+    - RoboCasa와 실제 Unitree G1에서 구조별 성능을 비교하고 카메라 수·자료 구성·재구성 품질 등 구조 외 조건에 따라 결과가 달라짐을 조사했다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 휴머노이드
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: unknown
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - RoboCasa
+    - LIBERO
+    - Unitree G1
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - unknown
+  verification: 부분확인
+  notes: VGGT의 기하 표현을 VLA의 서로 다른 위치에 결합하고, 표현 탐침과 G1 상체 pick-and-place를 각각 평가한다. 상체 조작 결과를 보행이나 전신 안정성으로 확대하지 않는다.
+  vla:
+    backbone:
+      name: GR00T-N1.5 / VGGT
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 기타
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - RoboCasa
+        - LIBERO
+      real_robot_tasks: unknown
+      scope: PDF 7–13쪽. 세 기하 결합 구조와 평가 조건을 비교한다. 실물 표의 하위 동작은 별개 과제로 합산하지 않았다.
+  humanoid:
+    control_scope:
+      - 상체 조작
+    training:
+      - unknown
+    hardware:
+      - Unitree G1
+    hand_type:
+      - unknown
+    sim_to_real: unknown
+    scope: G1 실물 조작은 PDF 11–13쪽에 보고됐다. 표의 관찰·파지·들기 단계를 전신 이동으로 확대하지 않았다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2
+      저자·소속 원문: https://arxiv.org/pdf/2605.24642v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2605.24642v1
+    pdf_sha256: 92dbf1113f1bbb398a5463a7b4918c4bbda4f981d637bd6264e1196c14dc31cb
+    method_evaluation_pages:
+      - 7
+      - 8
+      - 11
+      - 12
+      - 13
+    summary_source: https://arxiv.org/pdf/2605.24642v1
+    openness:
+      code:
+        scope: 검토한 논문·배포처에서 해당 방법의 구현 파일을 특정하지 못했다.
+        source: https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2
+  changed_from:
+    id: pr-1226
+    tier: NEXT
+    tags:
+      - VLA
+      - 3D reconstruction
+      - geometry fusion
+      - representation probing
+    facets: {}
+    venue: ECCV
+    links:
+      page: https://link.springer.com/chapter/10.1007/978-3-032-37271-0_2
+      pdf: null
+      project: null
+      code: null
+    openness:
+      code: not_identified
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: not_identified
+        source: null
+        evidence: not_identified
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved
+- id: 2026-yue-prism
+  registry_id: pr-1227
+  title: 'PRISM: Precision Forcing for Generalist Vision-Language-Action Policies'
+  authors:
+    - Chenghao Yue
+    - Peiyan Li
+    - Hao Wang
+    - Lei Lv
+    - Jiahao Chen
+    - Huaping Liu
+    - Yu Luo
+    - Yuanlong Zhang
+  affiliations:
+    - Seen-E Robotics
+    - Tsinghua University
+    - Dalian University of Technology
+    - Tongji University
+    - Peking University
+  year: 2026
+  venue: arXiv
+  links:
+    paper: https://arxiv.org/abs/2610.14704
+    pdf: https://arxiv.org/pdf/2610.14704v1
+    project: https://seen-e.github.io/PRISM/
+    code: https://github.com/seen-e/PRISM
+  tier: 2
+  one_line_summary: PRISM은 정밀 조작 성패를 가르는 문맥과 흐름 생성 시점에 더 많은 학습 신호를 배분해 범용 VLA의 연속 행동을 미세조정한다.
+  key_contributions:
+    - 훈련 궤적에서 정밀도가 필요한 정도를 추정해 흐름 오차의 가중치를 바꾸고 시각언어 표현이 그 요구 수준을 예측하도록 보조 학습한다.
+    - 실물 드라이브 커넥터 삽입·양팔 커넥터 결합·나사 조임에서 과제 전체 성공률의 평균이 기본 π0.5의 38.3%에서 PRISM의 86.7%로 높아졌다.
+  method_tags:
+    - IL
+  task_tags:
+    - 조작
+  embodiment_tags:
+    - 단팔
+    - 양팔
+  modality_tags:
+    - RGB
+    - 언어
+    - 고유수용감각
+  data_source_tags:
+    - 혼합
+  openness:
+    code: 부분
+    weights: unknown
+    data: unknown
+  datasets_benchmarks:
+    - RLBench-10
+    - LIBERO
+    - MSSM
+  limitations:
+    paper_reported: unknown
+    subsequent_work: unknown
+  prior_work:
+    - pr-0061
+  verification: 부분확인
+  notes: 구간별 정밀도 표지를 이용해 flow 학습과 표현 손실의 가중치를 바꾼다. MSSM 실물 세 과제에서는 성공률과 완료 시간을 구분한다.
+  vla:
+    backbone:
+      name: π0.5 및 StarVLA의 π 계열 flow 변형
+      size: unknown
+    action_representation:
+      - 연속(diffusion·flow matching)
+    architecture: 단일 모델
+    training:
+      - SFT
+    evaluation:
+      sim_benchmarks:
+        - RLBench-10
+        - LIBERO
+      real_robot_tasks: 3
+      scope: PDF 6–9쪽. MSSM 세 실물 과제에서 단계 완료와 전체 성공을 별도 평가한다.
+  evidence:
+    verified_on: '2026-11-25'
+    sources:
+      발표처·서지: https://arxiv.org/abs/2610.14704
+      저자·소속 원문: https://arxiv.org/pdf/2610.14704v1#page=1
+      방법·평가 원문: https://arxiv.org/pdf/2610.14704v1
+    pdf_sha256: ebf99d5286da055d1926ff9f242929326f3d34c7b92541812c09aa17f3d98d4a
+    method_evaluation_pages:
+      - 1
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+    summary_source: https://arxiv.org/pdf/2610.14704v1
+    openness:
+      code:
+        scope: PRISM용 시연 데이터와 정밀도 학습 신호 처리 · prism/data.py
+        source: https://raw.githubusercontent.com/seen-e/PRISM/5a84f5a9e69bbbb5e64b45c999adc9a532219928/prism/data.py
+        release_reference: https://github.com/seen-e/PRISM/blob/5a84f5a9e69bbbb5e64b45c999adc9a532219928/README.md
+        access: 구현 또는 실행 스크립트 본문 대조
+      weights:
+        scope: 검토한 논문·배포처에서 이 연구에 해당하는 가중치 파일을 특정하지 못했다.
+        source: https://seen-e.github.io/PRISM/
+      data:
+        scope: 검토한 논문·배포처에서 이 연구의 자료 파일과 공개 범위를 특정하지 못했다.
+        source: https://seen-e.github.io/PRISM/
+  changed_from:
+    id: pr-1227
+    tier: NEXT
+    tags:
+      - VLA
+      - Flow Matching
+      - precision manipulation
+      - representation learning
+    facets: {}
+    venue: arXiv
+    links:
+      page: https://arxiv.org/abs/2610.14704
+      pdf: null
+      project: https://seen-e.github.io/PRISM/
+      code: https://github.com/seen-e/PRISM
+    openness:
+      code: released
+      weights: not_recorded
+      data: not_identified
+    artifact_profiles:
+      code:
+        status: released
+        source: https://raw.githubusercontent.com/seen-e/PRISM/5a84f5a9e69bbbb5e64b45c999adc9a532219928/prism/data.py
+        verified_on: '2026-11-20'
+        evidence: 해당 논문을 명시하는 저장소에서 구현 파일을 열어 확인했다. prism/data.py
+      weights:
+        status: not_recorded
+        evidence: no explicit checkpoint availability cue
+      data:
+        status: not_identified
+        source: null
+        evidence: existing manifest artifact status preserved

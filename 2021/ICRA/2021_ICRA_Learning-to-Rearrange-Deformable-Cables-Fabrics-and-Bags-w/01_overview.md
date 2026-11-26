@@ -10,7 +10,7 @@
 - Authors: Daniel Seita, Pete Florence, Jonathan Tompson, Erwin Coumans, Vikas Sindhwani, Ken Goldberg, Andy Zeng
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, deformable object, cable manipulation, cloth manipulation, goal-conditioned learning, vision-based control
+- Tags: Robotics, deformable object, cable manipulation, cloth manipulation, goal-conditioned learning, vision-based control, behavior cloning
 - Official paper: https://arxiv.org/abs/2012.03385
 - Full-text retrieval: https://arxiv.org/pdf/2012.03385
 - Code/Project: https://sites.google.com/view/berkeley-deformable/
@@ -44,12 +44,14 @@
 
 ## Observation, State, and Output Interface
 
+시뮬레이션에서는 현재·목표의 정사영 RGB-D 관측과 시연의 집기·놓기 자세로 행동을 복제한다. ICRA판은 시뮬레이션 결과이며 저자 개정판 Ⅷ절의 실물 Franka 케이블 실험은 이진 분할 마스크를 정책 영상 입력으로 쓴다. [PDF 5쪽](https://arxiv.org/pdf/2012.03385v4#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2012.03385v4#page=6)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The first FCN fpick takes as input the visual observation ot, and outputs a dense per-pixel prediction of action-values Qpick that correlate with picking success: Tpick = arg max(u,v) Qpick((u, v)/ot) where ... | RGB-D/point cloud, object state와 contact/task observation | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
-| State/latent | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel, prediction, action-values | object geometry, affordance, contact mode 또는 end-effector state | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND), p. 3 (III. BACKGROUND) |
-| Output/action | Problem Formulation We formulate the problem of rearranging deformable objects as learning a policy π that sequences pick and place actions at ∈A with a robot from visual observations ot ∈O: π(ot) ... | grasp, pose, force 또는 end-effector trajectory | p. 2 (III. BACKGROUND), p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
-| Objective/outcome | Contact and friction constraints between soft bodies and multi bodies are solved in a unified constraint solver at the velocity level. | task completion, contact success, pose/force error와 generalization | p. 4 (V. SIMULATOR AND TASKS), p. 4 (V. SIMULATOR AND TASKS), p. 5 (V. SIMULATOR AND TASKS) |
+| Observation/input | The first FCN fpick takes as input the visual observation ot, and outputs a dense per-pixel prediction of action-values Qpick that correlate with picking success: Tpick = arg max(u,v) Qpick((u, v)/ot) where ... | 시뮬레이션의 정사영 RGB-D와 목표 영상, 실물 케이블의 이진 마스크 | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
+| State/latent | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel, prediction, action-values | 현재·목표 영상의 공간 특징과 대응 점수 | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND), p. 3 (III. BACKGROUND) |
+| Output/action | Problem Formulation We formulate the problem of rearranging deformable objects as learning a policy π that sequences pick and place actions at ∈A with a robot from visual observations ot ∈O: π(ot) ... | 집기·놓기 위치와 회전 | p. 2 (III. BACKGROUND), p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
+| Objective/outcome | Contact and friction constraints between soft bodies and multi bodies are solved in a unified constraint solver at the velocity level. | 변형체별 목표 달성률과 실물 케이블 마스크 겹침 | p. 4 (V. SIMULATOR AND TASKS), p. 4 (V. SIMULATOR AND TASKS), p. 5 (V. SIMULATOR AND TASKS) |
 
 ## Main Claims and Actual Contribution
 

@@ -77,3 +77,7 @@ Language Embedded 3D Gaussians는 여러 뷰의 언어 특징을 압축해 가�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.3. Quantization of Language Features), p. 3 (3.2. Dense Language Feature Extraction), p. 5 (3.4. Language Embedded 3D Gaussians)이다.
+
+## 검색 태그 근거
+
+영상의 CLIP·DINO 특징을 이산 코드로 바꾸어 다중 뷰의 의미를 가우시안과 연결한다. 새 뷰에서 텍스트 질의로 물체나 영역을 검색한다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Shi_Language_Embedded_3D_Gaussians_for_Open-Vocabulary_Scene_Understanding_CVPR_2024_paper.pdf#page=7)

@@ -13,7 +13,7 @@
 - Official paper: https://arxiv.org/abs/2606.09337
 - Venue verification: https://arxiv.org/abs/2606.09337
 - Code/Project: https://torl-vla.github.io/
-- Code: not identified
+- Code: not_released
 - Source audit: 2026-11-09: official abstract/project 및 metadata 확인. 최신 v3 abstract 확인; N1 본문 대조는 v1이다. Project는 TORL code Coming Soon이며 연결된 RLT 재현 코드는 TORL 구현으로 간주하지 않는다. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,7 @@ TORL-VLA는 촉각에서 추정한 힘·토크로 VLA의 기준 동작을 만들
 ## Verification Boundary
 
 개입 전후 critic mask, latency, base/보정 정책 학습 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 저자는 TORL-VLA 코드를 공개 예정으로 표시한다. 별도 링크는 RLT 기준선의 재구현이다. [저자 공개 안내](https://torl-vla.github.io/)

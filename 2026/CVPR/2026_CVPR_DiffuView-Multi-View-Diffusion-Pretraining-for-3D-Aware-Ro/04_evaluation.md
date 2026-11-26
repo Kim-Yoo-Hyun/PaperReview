@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** rigid/articulated object와 robot manipulator contact scene.
-- **Input boundary:** RGB-D/point cloud, object state와 contact/task observation.
-- **Output/decision under evaluation:** grasp, pose, force 또는 end-effector trajectory.
-- **Primary target:** task completion, contact success, pose/force error와 generalization.
+- **Target system/task:** 시점 변화에 따른 팔 조작.
+- **Input boundary:** 카메라의 RGB·깊이·시점 정보와 언어 지시.
+- **Output/decision under evaluation:** 확산 정책이 예측한 말단·그리퍼 행동.
+- **Primary target:** 관측 시점별 시뮬레이션·실물 조작 성공.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.2. Simulation Experiments (p. 5); 4.3. View Generalization Experiments (p. 6); 4.4. Real World Experiments (p. 7).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 7 (4.4. Real World Experiments), p. 7 (4.3. V
 |---|---|---|---|
 | Robot/hardware/simulator | To enable our pretraining model to generalize effectively to the visual and geometric characteristics of robotic manipulation scenes, we construct a pretraining dataset composed ... | embodiment, simulator version and control stack | p. 5 (4.1. Pretraining Setups), p. 5 (4.1. Pretraining Setups) |
 | Task/environment | Our fine-tuning dataset encompasses over 200 robotic manipulation tasks with rich and varied object interactions. | reset, timeout, object/scene variation | p. 5 (4.1. Pretraining Setups), p. 6 (4.2. Simulation Experiments) |
-| Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 5 (3.2. Policy Learning), p. 4 (3. Method) |
+| Observation/sensor | 카메라의 RGB·깊이·시점 정보와 언어 지시 | calibration, preprocessing, privileged input | p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
+| Output/decision | 확산 정책이 예측한 말단·그리퍼 행동 | action frame, controller and termination | p. 5 (3.2. Policy Learning), p. 4 (3. Method) |
 
 ## Metrics and Success Definition
 

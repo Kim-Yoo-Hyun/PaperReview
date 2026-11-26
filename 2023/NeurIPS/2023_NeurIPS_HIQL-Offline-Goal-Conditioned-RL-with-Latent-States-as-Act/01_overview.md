@@ -41,3 +41,8 @@
 ## Verification Boundary
 
 본문에서 확인할 항목: goal relabeling·latent 목표 표현·subgoal 거리·action-free 데이터 범위. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · HIQL의 계층적 목표 조건부 학습 · src/agents/hiql.py [배포 파일](https://raw.githubusercontent.com/seohongpark/HIQL/b32c832cd67e4fe56ecabb49dbb96dc8d4f4c432/src/agents/hiql.py)
+- 데이터 · HIQL AntMaze에서 상태와 영상의 대응에 쓰는 보조 자료 · antmaze_aux/antmaze-large-diverse-v2-aux.npz [배포 파일](https://raw.githubusercontent.com/seohongpark/HIQL/b32c832cd67e4fe56ecabb49dbb96dc8d4f4c432/antmaze_aux/antmaze-large-diverse-v2-aux.npz)

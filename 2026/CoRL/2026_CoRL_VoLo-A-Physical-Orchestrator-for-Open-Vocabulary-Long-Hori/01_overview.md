@@ -8,7 +8,7 @@
 - Category: Planning and Long-Horizon Reasoning
 - Primary track: Planning and control
 - Tier: REFERENCE
-- Tags: Planning, language, execution
+- Tags: Planning, language, execution, VLA, failure recovery
 - Aliases:
 - Official paper: https://arxiv.org/abs/2606.07723
 - Full-text retrieval: https://arxiv.org/pdf/2606.07723v1
@@ -35,6 +35,10 @@ VoLoAgent는 시각언어모형이 로봇 정책과 인식·동작 도구를 호
 RoboVoLo와 실제 open-vocabulary long-horizon manipulation 평가를 보고한다.
 
 근거: [공식 paper/abstract](https://openreview.net/forum?id=sF3YZbbTNX) · [저자 project/code](https://chicychen.github.io/VoLo/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+VoLo의 감독 VLM이 도구 결과와 장면을 보고 다음 행동 호출·중단·복구를 정한다. 저수준 VLA와 파지·배치 도구를 선택해 사용하며, RoboVoLo와 실물 장기 조작에서 진행 감시를 평가한다. [원문 5쪽](https://arxiv.org/pdf/2606.07723v1#page=5) · [원문 8쪽](https://arxiv.org/pdf/2606.07723v1#page=8)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

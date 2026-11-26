@@ -10,7 +10,7 @@
 - Authors: Jihan Yang, Runyu Ding, Weipeng Deng, Zhe Wang, Xiaojuan Qi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: point-language, open-world, semantic
+- Tags: point-language, open-world, semantic, 3D segmentation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ RegionPLC는 영역 단위의 언어와 점군의 대응을 학습해 새로운 
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | This is the first time that a 3D open-world model achieves state-of-the-art performance without any 3D annotation or 2D pixel-aligned image features but only sparse language supervision for learning. | camera/depth stream, pose, map와 language goal | p. 6 (4.3. Annotation-free Open World), p. 4 (3.4. Boost Synergy of Diverse 3D-language Sources) |
-| State/latent | first, time, open-world, model, achieves, state-of-the-art, performance, without, annotation, pixel-aligned, image, features | robot pose, free-space/semantic map와 local goal | p. 6 (4.3. Annotation-free Open World), p. 4 (3.4. Boost Synergy of Diverse 3D-language Sources), p. 6 (4.2. Base-annotated Open World) |
-| Output/action | Motivated by the observations of complementary merits of individual 3D-language sources and their unsatisfactory synergy results, we further study how to combine these varied 3D-language sources effectively and efficiently. | collision-free trajectory 또는 velocity command | p. 4 (3.4. Boost Synergy of Diverse 3D-language Sources), p. 6 (4.2. Base-annotated Open World), p. 5 (3.5. Region-aware Point-discriminative Contrastive) |
-| Objective/outcome | To alleviate this issue, we propose a regionaware factor to normalize Lpdc by the region size, to ensure an equivalent gradient scale on points in each region regardless of its size.Obtained region-aware ... | goal reach, safety, localization error와 replanning latency | p. 5 (3.5. Region-aware Point-discriminative Contrastive), p. 5 (3.5. Region-aware Point-discriminative Contrastive), p. 4 (3.4. Boost Synergy of Diverse 3D-language Sources) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 추론은 장면 점군과 범주 텍스트. 캡션 감독은 RGB에서 구축 |
+| 표현 | 점 영역과 언어 특징의 대비 표현 |
+| 출력 | 열린 어휘의 점별 또는 인스턴스별 분할 |
+| 평가 | 실내 장면 분할 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -76,3 +78,7 @@ RegionPLC는 영역 단위의 언어와 점군의 대응을 학습해 새로운 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (4.3. Annotation-free Open World), p. 5 (3.5. Region-aware Point-discriminative Contrastive)이다.
+
+## 검색 태그 근거
+
+RGB 영역에서 얻은 캡션을 3D 영역과 연결하여 점–언어 대비학습을 한다. 추론에서는 클래스 텍스트와 점 특징을 비교하여 열린 어휘 분할을 수행한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_RegionPLC_Regional_Point-Language_Contrastive_Learning_for_Open-World_3D_Scene_Understanding_CVPR_2024_paper.pdf#page=7)

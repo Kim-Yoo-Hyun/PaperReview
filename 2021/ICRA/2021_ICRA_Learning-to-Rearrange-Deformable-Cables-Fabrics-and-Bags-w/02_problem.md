@@ -22,11 +22,11 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 3 (III. BAC
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Manipulating deformable objects is a long-standing challenge in robotics with a wide range of real-world applications. | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | The first FCN fpick takes as input the visual observation ot, and outputs a dense per-pixel prediction of action-values Qpick that correlate ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
-| State / latent | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
-| Output / action | train, policy, assume, access, small, dataset, stochastic, expert | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
-| Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
+| Target problem | Manipulating deformable objects is a long-standing challenge in robotics with a wide range of real-world applications. | 케이블·천·가방 재배치 | body wording is the source claim |
+| Observation / input | The first FCN fpick takes as input the visual observation ot, and outputs a dense per-pixel prediction of action-values Qpick that correlate ... | 시뮬레이션의 정사영 RGB-D와 목표 영상, 실물 케이블의 이진 마스크 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel | 현재·목표 영상의 공간 특징과 대응 점수 | notation and tensor shape require body check |
+| Output / action | train, policy, assume, access, small, dataset, stochastic, expert | 집기·놓기 위치와 회전 | exact unit/frame/decoder require body check |
+| Target outcome | completion, contact success and robustness | 변형체별 목표 달성률과 실물 케이블 마스크 겹침 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

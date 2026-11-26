@@ -46,11 +46,13 @@ EmbodiedSplat은 이동하며 들어오는 영상으로 3차원 가우시안 지
 
 ## Observation, State, and Output Interface
 
+스트리밍 영상에서 가우시안을 만들고 내부 특징 점군을 3D U-Net으로 집계한다. 표 1에는 RGB 및 RGB-D 구성의 결과가 따로 있다. 텍스트 클래스 임베딩으로 분할하며 정답 점군에서 성능을 평가한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=3) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=6)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Specifically, the embodied agent equipped with a precise SLAM system collects posed RGB or RGB-D images to understand the 3D scene, follow human instructions, and make autonomous decisions based on its own ... | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (1. Introduction), p. 3 (3. Preliminaries) |
-| State/latent | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB, RGB-D, images | geometry, map, object/relationship state | p. 1 (1. Introduction), p. 3 (3. Preliminaries), p. 3 (3. Preliminaries) |
-| Output/action | With It and the N reference views as input, the CNN encoder E predicts pixelwise local Gaussian triplets Θt l = {µt l, ωt l, f t l } and a depth ... | point map, pose, scene graph, affordance 또는 query result | p. 3 (3. Preliminaries), p. 3 (3. Preliminaries), p. 4 (4.1. EmbodiedSplat) |
+| Observation/input | Specifically, the embodied agent equipped with a precise SLAM system collects posed RGB or RGB-D images to understand the 3D scene, follow human instructions, and make autonomous decisions based on its own ... | 연속 RGB 영상, 조건별 측정 깊이 및 텍스트 클래스 | p. 1 (1. Introduction), p. 3 (3. Preliminaries) |
+| State/latent | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB, RGB-D, images | 3D 가우시안의 기하 특징과 의미 코드북 계수 | p. 1 (1. Introduction), p. 3 (3. Preliminaries), p. 3 (3. Preliminaries) |
+| Output/action | With It and the N reference views as input, the CNN encoder E predicts pixelwise local Gaussian triplets Θt l = {µt l, ωt l, f t l } and a depth ... | 텍스트 질의에 따른 의미 분할 | p. 3 (3. Preliminaries), p. 3 (3. Preliminaries), p. 4 (4.1. EmbodiedSplat) |
 | Cosine-query computational cost | 원문 대조: Text–codebook cosine을 O(KD)에 미리 계산하고 M개 Gaussian마다 최대 L−1개 codebook entry의 sparse weighted sum을 사용해 총 O(KD+M(L−1)) 비용으로 계산한다. 이는 해당 cosine 계산의 복잡도이며 전체 reconstruction 시간은 아니다. ([PDF p. 6](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=6), Method, codebook cosine computation) | Codebook query 복잡도; robot behavior metric 아님 | [PDF p. 6](https://openaccess.thecvf.com/content/CVPR2026/papers/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.pdf#page=6), Method, codebook cosine computation |
 
 ## Main Claims and Actual Contribution

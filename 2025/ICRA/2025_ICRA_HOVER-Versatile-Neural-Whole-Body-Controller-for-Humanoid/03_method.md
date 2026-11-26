@@ -61,9 +61,9 @@ PDF body method statement (p. 4 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHO
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action, agent, proprioception, goal, state | proprioception, reference pose/motion, visual or language command | body cue; exact tensor/frame verify |
-| State/latent | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action | whole-body pose, balance/contact state와 skill/mode | body cue; notation verify |
-| Action/output | summarize, contributions, threefold, present, HOVER, unified, neural, controller, humanoid, whole-body | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
+| Input/observation | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action, agent, proprioception, goal, state | 고유수용 상태와 모드별 마스킹된 신체 목표 | body cue; exact tensor/frame verify |
+| State/latent | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action | 교사의 전신 추종과 학생의 부분 명령 표현 | body cue; notation verify |
+| Action/output | summarize, contributions, threefold, present, HOVER, unified, neural, controller, humanoid, whole-body | 관절 목표 | body cue; unit/decoder verify |
 | Objective/constraint | employ, proximal, policy, optimization, PPO, algorithm, maximize, cumulative, discounted, reward | tracking/balance/task objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 4 (II. METHOD), p. 3 (II. METHOD), p. 2 (II. METHO
 - **p. 4 / II. METHOD - extractive body cue:** The student policy πstudent is then updated by minimizing the loss function: L = ∥ˆat -at∥2 2, where ˆat is the reference action from the ...
 - **p. 2 / II. METHOD - extractive body cue:** The state st comprises both the agent's proprioception sp t and the target goal state sg t.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** This versatile command space covers most modes used in prior works [9, 10, 12, 13].
-- **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
+- **Normalized interface:** observation=고유수용 상태와 모드별 마스킹된 신체 목표; state=교사의 전신 추종과 학생의 부분 명령 표현; output/action=관절 목표.
 
 ## Temporal and Runtime Contract
 

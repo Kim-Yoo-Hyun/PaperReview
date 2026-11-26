@@ -10,7 +10,7 @@
 - Authors: Sungwon Kim, Namkyeong Lee, Yunyoung Doh, Seungmin Shin, Guimok Cho, Seung-Won Jeon, Sangkook Kim, Chanyoung Park
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, equivariant, 3D Vision
+- Tags: equivariant, 3D Vision, 3D geometry
 - Official paper: https://proceedings.mlr.press/v267/kim25r.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/kim25r/kim25r.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ T-EMNN은 표면 메시와 국소 두께가 주어졌을 때 사출 성형 부�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | The transformed coordinates xinv i , along with the stored xi and R, allow seamless mapping between the input and output spaces. | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (4. Methodology), p. 4 (4.2.1. ENCODER) |
-| State/latent | transformed, coordinates, xinv, along, stored, allow, seamless, mapping, between, input, output, spaces | geometry, map, object/relationship state | p. 4 (4. Methodology), p. 4 (4.2.1. ENCODER), p. 3 (3.1. Notations) |
-| Output/action | The outputs of the geometric encoders, z(0) i ∈Rd and e(0) ij ∈ Rd, are later used as the input embeddings for the first layer (l = 0) of the processor modules. | point map, pose, scene graph, affordance 또는 query result | p. 4 (4.2.1. ENCODER), p. 3 (3.1. Notations), p. 2 (1. Introduction) |
-| Objective/outcome | Then, the update rule for the node embeddings z(l) i ∈Rd is defined as: zsurf,(l) i ←f V surf(z(l) i , X j∈N(i) e(l+1) ij ), (13) where f V surf is ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (4.2.2. SURFACE PROCESSOR), p. 5 (4.2.2. SURFACE PROCESSOR), p. 6 (4.2.3. THICKNESS PROCESSOR) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 성형 부품의 표면 메시와 국소 두께 |
+| 표현 | 메시 이웃과 두께 방향을 포함한 그래프 |
+| 출력 | 각 절점의 3차원 변위 |
+| 평가 | 사출 성형 부품의 변형 예측 오차 |
+
+[원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=3) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -80,3 +82,7 @@ T-EMNN은 표면 메시와 국소 두께가 주어졌을 때 사출 성형 부�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.3. Thickness in the Mesh), p. 4 (4.2.1. ENCODER)이다.
+
+## 검색 태그 근거
+
+표면 메시에서 공간 연결과 국소 두께를 함께 표현하는 E(3) 등변 네트워크로 사출 성형 부품의 변위를 추정한다. 평가에서는 변형 예측 오차를 비교했다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=3) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/kim25r/kim25r.pdf#page=7)

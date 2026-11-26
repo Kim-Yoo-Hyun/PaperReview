@@ -10,7 +10,7 @@
 - Authors: Yihan Hu, Jiazhi Yang, Li Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai, Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu, Jifeng Dai, Yu Qiao, Hongyang Li
 - Primary track: Planning and control
 - Tier: REFERENCE
-- Tags: Planning, sensor fusion, 3D perception
+- Tags: Planning, Multi-Task Learning, 3D perception
 - Official paper: https://arxiv.org/abs/2212.10156
 - Full-text retrieval: https://arxiv.org/pdf/2212.10156
 - Code/Project: https://github.com/OpenDriveLab/UniAD

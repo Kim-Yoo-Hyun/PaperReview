@@ -61,9 +61,9 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline, robot, recon, serves, loss | proprioception, reference pose/motion, visual or language command | body cue; exact tensor/frame verify |
-| State/latent | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline | whole-body pose, balance/contact state와 skill/mode | body cue; notation verify |
-| Action/output | Supersizing, mOtion, tracking, Natural, humanoId, Control, SONIC, framework, enables, across | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
+| Input/observation | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline, robot, recon, serves, loss | 고유수용 상태와 인코딩한 동작 명령 | body cue; exact tensor/frame verify |
+| State/latent | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline | 여러 명령 인코더가 공유하는 동작 표현 | body cue; notation verify |
+| Action/output | Supersizing, mOtion, tracking, Natural, humanoId, Control, SONIC, framework, enables, across | 관절 제어 명령 | body cue; unit/decoder verify |
 | Objective/constraint | defined, reward, combining, tracking, term, minimizes, root, body-link, pose, velocity | tracking/balance/task objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 15 (3.2. Universal Humanoid Motion Tracking), p. 1
 - **p. 13 / 3.2. Universal Humanoid Motion Tracking - extractive body cue:** 6 provides an overview of our approach, SONIC, a universal humanoid motion tracking framework that employs a unified control policy to track diverse motion commands ...
 - **p. 15 / 3.2. Universal Humanoid Motion Tracking - extractive body cue:** First, a robot control decoder 𝒟𝑐transforms the universal token into motor commands that control the robot's joints. 𝒟𝑐takes as input the concatenation of the universal ...
 - **p. 18 / 3.5. Deployment - extractive body cue:** The system used a multi-rate architecture with four concurrent loops: policy inference at 50 Hz, command streaming at 500 Hz, operator input at 100 Hz, ...
-- **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
+- **Normalized interface:** observation=고유수용 상태와 인코딩한 동작 명령; state=여러 명령 인코더가 공유하는 동작 표현; output/action=관절 제어 명령.
 
 ## Temporal and Runtime Contract
 

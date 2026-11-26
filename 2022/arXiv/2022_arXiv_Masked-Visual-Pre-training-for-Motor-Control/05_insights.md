@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `observation history와 expert trajectory/action → behavior policy와 temporal action context → predicted action 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions).를 PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et al., 2020; 2019).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 behavior policy와 temporal action context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While there exist a number of excellent benchmarks for motor control, e.g., DMC (Tassa et al., 2018), RLBench (James et al., 2020), Robosuite (Zhu et al., 2020), MetaWorld (Yu et al., 2020), ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `자연 이미지 사전학습 후 손목 영상과 관절 상태 → 동결된 시각 특징과 고유수용 상태 → PPO 정책의 관절 명령`.
+- 이 논문의 재사용 가능한 지점은 First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions).를 PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et al., 2020; 2019).로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 동결된 시각 특징과 고유수용 상태가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While there exist a number of excellent benchmarks for motor control, e.g., DMC (Tassa et al., 2018), RLBench (James et al., 2020), Robosuite (Zhu et al., 2020), MetaWorld (Yu et al., 2020), ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: We also compare our method to visual encoders trained by supervised learning on ImageNet (Deng et al., 2009), the choice of encoder in most vision tasks.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Planning and control`; tags: `Robotics, representation learning, Visual Pretraining, Imitation Learning`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

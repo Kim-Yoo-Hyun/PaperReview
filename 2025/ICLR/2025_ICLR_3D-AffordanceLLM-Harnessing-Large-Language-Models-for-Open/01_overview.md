@@ -10,7 +10,7 @@
 - Authors: Hengshuo Chu, Xiang Deng, Qi Lv, Xiaoyang Chen, Yinchuan Li, Jianye HAO, Liqiang Nie
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, 3D Vision, Reinforcement Learning, semantic
+- Tags: Robotics, 3D Vision, affordance, 3D segmentation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/b364c8cbb3f229f40d5873e877391bd2-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/b364c8cbb3f229f40d5873e877391bd2-Paper-Conference.pdf
 - Code/Project: not identified

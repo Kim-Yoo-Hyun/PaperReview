@@ -20,7 +20,7 @@ Contact phase와 behavior-conditioned trajectory를 이용해 switching을 학�
 
 ## Assumptions to Verify — Researcher Interpretation
 
-contact label, rollback 가정, 정식 venue status.
+접촉 라벨의 오차율, 되돌리기가 가능한 접촉 조건, 정식 게재 여부.
 
 해당 조건을 실제 논문의 가정으로 확정하려면 formulation과 experiment를 대조해야 한다.
 

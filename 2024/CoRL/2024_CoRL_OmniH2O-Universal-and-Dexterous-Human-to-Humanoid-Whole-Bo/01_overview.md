@@ -10,7 +10,7 @@
 - Authors: Tairan He, Zhengyi Luo, Xialin He, Wenli Xiao, Chong Zhang, Weinan Zhang, Kris M. Kitani, Changliu Liu, Guanya Shi
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body teleoperation, loco-manipulation, Imitation Learning
+- Tags: Robotics, humanoid, whole-body teleoperation, loco-manipulation, Imitation Learning, Reinforcement Learning
 - Official paper: https://proceedings.mlr.press/v270/he25b.html
 - Full-text retrieval: https://arxiv.org/pdf/2406.08858
 - Code/Project: https://omni.human2humanoid.com/

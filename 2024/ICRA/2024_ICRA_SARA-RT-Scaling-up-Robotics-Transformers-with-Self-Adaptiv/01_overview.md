@@ -10,7 +10,7 @@
 - Authors: Isabel Leal, Krzysztof Choromanski, Deepali Jain, Avinava Dubey, Jake Varley, Michael Ryoo, Yao Lu, Frederick Liu, Vikas Sindhwani, Quan Vuong, Tamas Sarlos, Ken Oslund, Karol Hausman, Kanishka Rao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, robot policy, efficient attention, manipulation
+- Tags: Robotics, robot policy, efficient attention, manipulation, Vision-Language-Action
 - Official paper: https://arxiv.org/abs/2312.01990
 - Full-text retrieval: https://arxiv.org/pdf/2312.01990
 - Code/Project: https://deepmind.google/discover/blog/shaping-the-future-of-advanced-robotics/

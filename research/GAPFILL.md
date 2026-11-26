@@ -1,43 +1,70 @@
-# 누락 논문 등록 심사
+# 외부 대조와 누락 심사
 
-2026-11-19에 기존 원장 1,227편을 기준으로 36편을 심사했다. 지난 외부 대조 후보 17편을 모두 포함했고 능동 로봇 인식과 촉각 기반 정교 조작 검색에서 19편을 추가로 심사했다. 각 후보의 실제 서지를 먼저 확인하고, 중복 판정 뒤 등록 가치를 검토했다. [전체 심사 YAML](../work/sources/batches/gapfill_2026_11.yaml) · [등록 전 외부 대조](./EXTERNAL_COVERAGE.md)
+2026-11-19 당시 원장 1,227편의 ID·제목을 서베이·학회·연구실·큐레이션 25개 목록과 대조했다. 외부 대조 후보 17편과 추가 검색에서 고른 19편을 심사해 **23편을 NEXT에 등록하고 9편을 보류했다. 4편은 기존 논문과 일치했다.** 날짜와 분모는 이 조사 시점에 고정한다. [등록 전 후보와 발견 목록](../work/sources/batches/missing_candidates_2026.yaml) · [36편의 판정과 원문 근거](../work/sources/batches/gapfill_2026_11.yaml)
 
-| 최초 유입 | A 등록 | B 보류 | C 기존 등록 | D 확인 불가 |
+<a id="external-coverage"></a>
+
+## 기준 목록별 커버리지
+
+목록별 중복을 정리한 44,911개 항목 중 586개, 로보틱스 관련 여덟 주제의 제목 필터에 든 1,401개 항목 중 159개가 일치했다. 같은 논문이 여러 목록에 나타날 수 있다. 마지막 열은 추가 검색식 G1·G2에 각각 걸린 제목 수이며, 대시는 해당 목록에 추가 검색을 적용하지 않았다는 뜻이다. [대조 원자료와 제목 정규식](../work/sources/coverage_titles.jsonl.gz) · [추가 검색식](#search-queries)
+
+| 목록 · 원문 | 전체 일치/분모 | 주제 필터 일치/분모 | 필터 내 동일성 미결 | 능동 / 촉각 추가 검색 |
 |---|---:|---:|---:|---:|
-| F | 13 | 4 | 0 | 0 |
-| G | 10 | 5 | 4 | 0 |
+| [VLA · Concepts, Progress, Applications and Challenges](https://arxiv.org/html/2505.04769) · `surveyV` | 66/297 (22.2%) | 38/95 (40.0%) | 0 | — |
+| [Humanoid Locomotion and Manipulation](https://arxiv.org/html/2501.02116) · `surveyH` | 53/423 (12.5%) | 12/90 (13.3%) | 0 | — |
+| [VLA · A Survey on Vision-Language-Action Models for Embodied AI](https://arxiv.org/html/2405.14093) · `surveyM` | 168/766 (21.9%) | 55/217 (25.3%) | 0 | — |
+| [RSS 2024](https://roboticsproceedings.org/rss20/) · `rss24` | 29/134 (21.6%) | 7/11 (63.6%) | 0 | 1 / 0 |
+| [CoRL 2024](https://proceedings.mlr.press/v270/) · `corl24` | 27/264 (10.2%) | 7/16 (43.8%) | 0 | 0 / 0 |
+| [ICLR 2024](https://iclr.cc/static/virtual/data/iclr-2024-orals-posters.json) · `iclr24` | 9/2296 (0.4%) | 0/1 (0.0%) | 0 | 0 / 0 |
+| [NeurIPS 2024](https://neurips.cc/static/virtual/data/neurips-2024-orals-posters.json) · `neurips24` | 6/4537 (0.1%) | 1/10 (10.0%) | 0 | 2 / 0 |
+| [ICRA 2024](https://api.crossref.org/works?filter=container-title%3A2024+IEEE+International+Conference+on+Robotics+and+Automation+%28ICRA%29%2Ctype%3Aproceedings-article) · `icra24` | 12/1766 (0.7%) | 1/52 (1.9%) | 0 | — |
+| [IROS 2024](https://api.crossref.org/works?filter=container-title%3A2024+IEEE%2FRSJ+International+Conference+on+Intelligent+Robots+and+Systems+%28IROS%29%2Ctype%3Aproceedings-article) · `iros24` | 0/1587 (0.0%) | 0/70 (0.0%) | 0 | — |
+| [RSS 2025](https://roboticsproceedings.org/rss21/) · `rss25` | 65/163 (39.9%) | 20/26 (76.9%) | 0 | 0 / 4 |
+| [CoRL 2025](https://proceedings.mlr.press/v305/) · `corl25` | 22/263 (8.4%) | 7/29 (24.1%) | 0 | 2 / 4 |
+| [ICLR 2025](https://iclr.cc/static/virtual/data/iclr-2025-orals-posters.json) · `iclr25` | 49/3830 (1.3%) | 1/11 (9.1%) | 0 | 1 / 1 |
+| [NeurIPS 2025](https://neurips.cc/static/virtual/data/neurips-2025-orals-posters.json) · `neurips25` | 52/5858 (0.9%) | 16/36 (44.4%) | 0 | 1 / 0 |
+| [ICRA 2025](https://api.crossref.org/works?filter=container-title%3A2025+IEEE+International+Conference+on+Robotics+and+Automation+%28ICRA%29%2Ctype%3Aproceedings-article) · `icra25` | 13/1609 (0.8%) | 4/61 (6.6%) | 0 | — |
+| [IROS 2025](https://api.crossref.org/works?filter=container-title%3A2025+IEEE%2FRSJ+International+Conference+on+Intelligent+Robots+and+Systems+%28IROS%29%2Ctype%3Aproceedings-article) · `iros25` | 12/1985 (0.6%) | 2/83 (2.4%) | 0 | — |
+| [RSS 2026](https://roboticsproceedings.org/rss22/) · `rss26` | 36/210 (17.1%) | 9/34 (26.5%) | 0 | 1 / 2 |
+| [CoRL 2026](https://www.corl.org/program/accepted-papers) · `corl26` | 13/687 (1.9%) | 9/177 (5.1%) | 0 | 2 / 6 |
+| [ICLR 2026](https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json) · `iclr26` | 65/5468 (1.2%) | 19/49 (38.8%) | 0 | 4 / 1 |
+| [NeurIPS 2026](https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json) · `neurips26` | 4/9110 (0.0%) | 2/113 (1.8%) | 0 | 5 / 1 |
+| [ICRA 2026](https://api.crossref.org/works?filter=container-title%3A2026+IEEE+International+Conference+on+Robotics+and+Automation+%28ICRA%29%2Ctype%3Aproceedings-article) · `icra26` | 23/1881 (1.2%) | 15/152 (9.9%) | 1 | — |
+| [IROS 2026](https://2026.ieee-iros.org/program/paper-index/) · `iros26` | 7/1929 (0.4%) | 2/170 (1.2%) | 0 | — |
+| [Awesome Embodied VLA/VA/VLN](https://raw.githubusercontent.com/jonyzhang2023/awesome-embodied-vla-va-vln/main/README.md) · `awesome` | 71/253 (28.1%) | 43/141 (30.5%) | 1 | — |
+| [Stanford ILIAD](https://iliad.stanford.edu/publications/) · `stanford` | 10/124 (8.1%) | 2/2 (100.0%) | 0 | — |
+| [NVIDIA GEAR](https://research.nvidia.com/labs/gear/publications/) · `gear` | 18/47 (38.3%) | 6/10 (60.0%) | 0 | — |
+| [Physical Intelligence](https://www.pi.website/research) · `pi` | 5/7 (71.4%) | 4/6 (66.7%) | 0 | — |
 
-등록한 23편은 로봇 연구의 비교에 쓸 수 있는 방법·시스템·데이터셋이며 모두 NEXT(부록 A의 2등급)다. 최근 논문의 후속 채택 횟수는 추정하지 않았다. 직접 확인한 후속 사용의 예로 T-Rex는 ViTacFormer를 실물 촉각 조작의 비교 정책으로 사용한다. [T-Rex 실기 비교표](https://arxiv.org/pdf/2606.17055#page=7)
+서베이 3편의 참고문헌을 직접 확인했고, 연구실은 공개 목록 전체, 학회는 2024–2026년 행사를 조사했다. ICRA·IROS는 IEEE가 Crossref에 기탁한 자료를 사용했으며 IROS 2026은 저널 발표를 포함하는 행사 색인을 썼다. 원자료 첫 행에는 출처·기간·제목 규칙·기준 원장 해시가 있고, 뒤의 각 행에 원제·정규화 제목·일치 ID·미결 판정이 있다. 동일 목록에서는 같은 등록 ID를 한 번 센다.
 
-## A. 등록한 논문
+## 하위 주제별 수록 범위
 
-| 등록 ID | 논문 | 연구에서 쓰는 이유 |
-|---|---|---|
-| pr-1228 | [DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution](https://proceedings.neurips.cc/paper_files/paper/2024/hash/67b0e7c7c2a5780aeefe3b79caac106e-Abstract-Conference.html) | 계산 예산에 따라 같은 VLA의 실행 깊이를 바꾸는 비교 기준이다. |
-| pr-1229 | [Improving Vision-Language-Action Model with Online Reinforcement Learning](https://arxiv.org/abs/2501.16664) | 온라인 RL을 VLA에 직접 적용하는 방식과 RL·감독학습을 교대하는 방식을 대조할 기준이다. |
-| pr-1230 | [MoRE: Unlocking Scalability in Reinforcement Learning for Quadruped Vision-Language-Action Models](https://arxiv.org/abs/2503.08007) | 사족 로봇에서 VLA를 행동 가치 함수로 학습하는 경로를 대표한다. |
-| pr-1231 | [MEM: Multi-Scale Embodied Memory for Vision Language Action Models](https://arxiv.org/abs/2603.03596) | 단기 영상 이력과 장기 의미 이력이 서로 다른 행동 오류를 해결하는지 시험할 기준이다. |
-| pr-1232 | [RoboMonkey: Scaling Test-Time Sampling and Verification for Vision-Language-Action Models](https://proceedings.mlr.press/v305/kwok25a.html) | 추가 학습 없이 행동 후보를 더 뽑는 효과와 학습한 검증기가 주는 이득을 분리할 기준이다. |
-| pr-1233 | [T-Rex: Tactile-Reactive Dexterous Manipulation](https://arxiv.org/abs/2606.17055) | 접촉 중 빠른 촉각 반응을 학습할 시연 자료와 서로 다른 주기의 VLA 구조를 함께 제시한다. |
-| pr-1234 | [Contact-Grounded Policy: Dexterous Visuotactile Policy with Generative Contact Grounding](https://roboticsproceedings.org/rss22/p005.html) | 촉각을 정책의 추가 입력으로 쓰는 경우와 미래 접촉을 실행 제어 목표로 만드는 경우를 직접 비교한다. |
-| pr-1235 | [Advancing Humanoid Locomotion: Mastering Challenging Terrains with Denoising World Model Learning](https://roboticsproceedings.org/rss20/p058.html) | 잡음 제거 세계 모델과 보행 RL을 실제 불규칙 지형에 전이한 대표 제어 사례다. |
-| pr-1236 | [CLONE: Closed-Loop Whole-Body Humanoid Teleoperation for Long-Horizon Tasks](https://proceedings.mlr.press/v305/li25h.html) | 전신 시연을 수집할 때 제어기와 실제 위치의 차이를 폐루프로 보정하는 시스템 기준이다. |
-| pr-1237 | [Vision in Action: Learning Active Perception from Human Demonstrations](https://proceedings.mlr.press/v305/xiong25a.html) | 카메라 움직임을 학습한 양팔 정책과 고정 카메라 정책을 실물에서 비교한 능동 인식의 직접 선행이다. |
-| pr-1238 | [Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection](https://arxiv.org/abs/2606.09258) | 복구가 가능한 시점에서 미래 시각 목표만 바꾸는 대조군을 제공한다. |
-| pr-1239 | [VLA-FAIL: Efficient Task Failure Detection for Finetuned Vision-Language-Action Models](https://arxiv.org/abs/2606.21386) | 실패 감지의 정확도와 알림 시간을 함께 평가하는 지표와 VLA용 감지 기준을 제공한다. |
-| pr-1240 | [HumanoidMimicGen: Data Generation for Loco-Manipulation via Whole-Body Planning](https://arxiv.org/abs/2605.27724) | 전신 계획으로 이동 조작 시연을 만드는 기법과 휴머노이드용 시뮬레이션 벤치마크를 함께 제공한다. |
-| pr-1241 | [Active Perception for Grasp Detection via Neural Graspness Field](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4364fef031fdf7bfd9d1c9c56b287084-Abstract-Conference.html) | 재구성 품질 대신 파지 목표에 대한 불확실성으로 카메라 시점을 고르는 기준이다. |
-| pr-1242 | [KineDex: Learning Tactile-Informed Visuomotor Policies via Kinesthetic Teaching for Dexterous Manipulation](https://proceedings.mlr.press/v305/zhang25l.html) | 접촉력 시연을 수집하고 힘을 제어하는 정책까지 연결하는 촉각 모방학습의 기준이다. |
-| pr-1243 | [UniTac2Pose: A Unified Approach Learned in Simulation for Category-level Visuotactile In-hand Pose Estimation](https://proceedings.mlr.press/v305/wu25d.html) | 새 물체의 손안 자세·추적·불확실성을 같은 촉각 추정기에서 평가하는 비교 기준이다. |
-| pr-1244 | [ViTaSCOPE: Visuo-tactile Implicit Representation for In-hand Pose and Extrinsic Contact Estimation](https://roboticsproceedings.org/rss21/p054.html) | 손안 물체의 자세와 물체가 환경에 닿는 위치를 함께 추정하는 접촉 상태 기준이다. |
-| pr-1245 | [VTDexManip: A Dataset and Benchmark for Visual-tactile Pretraining and Dexterous Manipulation with Reinforcement Learning](https://proceedings.iclr.cc/paper_files/paper/2025/hash/e19b6f65791e350347bcff8a3955cb5b-Abstract-Conference.html) | 희소 이진 촉각의 기여를 같은 RL 과제에서 비교할 수 있는 데이터셋과 벤치마크다. |
-| pr-1246 | [ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation](https://roboticsproceedings.org/rss22/p129.html) | 행동과 미래 촉각의 공동 예측을 장시간 실물 다지 조작에서 대조할 기준이다. |
-| pr-1247 | [Blind Dexterous Grasping via Real2Sim2Real Tactile Policy Learning](https://arxiv.org/abs/2606.11767) | 시각이 없는 다지 파지에서 촉각 접촉 보정과 RL 전문가 증류를 검토할 기준이다. |
-| pr-1248 | [PTLD: Sim-to-real Privileged Tactile Latent Distillation for Dexterous Manipulation](https://arxiv.org/abs/2603.04531) | 실물의 특권 관측을 학습 때만 사용해 촉각 상태 추정기를 증류하는 전이 기준이다. |
-| pr-1249 | [HuG: Learning Humanoid Whole-Body Affordance-Aware Grasping with Active Perception](https://arxiv.org/abs/2611.01659) | 카메라 탐색과 파지 가능성 판단에 전신 균형 제약을 결합한 실기 휴머노이드 기준이다. |
-| pr-1250 | [ActiveMimic: Egocentric Video Pretraining with Active Perception](https://arxiv.org/abs/2606.06194) | 사람의 머리 움직임을 관측 행동으로 학습하고 실제 로봇으로 전이하는 직접 선행이다. |
+등록 전 일치율이 낮은 순서다. 오른쪽 세 수치는 같은 분모로 재측정했다. 한 논문이 여러 주제에 해당할 수 있으며, 제목에 드러나지 않은 로봇 과업은 이 검색에서 빠질 수 있다.
 
-## B. 보류한 논문
+| 순위 | 하위 주제 | 등록 전 일치/분모 | 미결 | 23편 등록 후 재측정 |
+|---:|---|---:|---:|---:|
+| 1 | 능동 로봇 인식 | 1/40 (2.5%) | 0 | 5/40 (12.5%) |
+| 2 | 촉각 조작 | 10/246 (4.1%) | 0 | 17/246 (6.9%) |
+| 3 | 실패 감지·복구 | 1/19 (5.3%) | 0 | — |
+| 4 | 시연 수집·전이 | 11/129 (8.5%) | 0 | — |
+| 5 | 휴머노이드 전신·보행 | 17/196 (8.7%) | 0 | — |
+| 6 | 지시 기반 내비게이션 | 12/123 (9.8%) | 0 | — |
+| 7 | 접촉 조립·삽입 | 9/88 (10.2%) | 0 | — |
+| 8 | VLA 행동정책 | 105/630 (16.7%) | 1 | 112/630 (17.8%) |
+
+능동 인식에서는 ViA처럼 실제로 빠진 연구가 있었고 기존 논문 JIGGLE은 *active sensing*이라는 표현을 썼다. 촉각에서도 KineDex·VTDexManip이 누락됐고 ViTaSCOPE는 *in-hand pose*로 검색된다. 낮은 수록률에는 수집 누락과 용어 차이가 함께 작용한다. 연구 공백으로 판단할 때는 가까운 선행의 본문과 평가를 대조한다.
+
+## 등록 판정
+
+| 유입 경로 | 등록 | 보류 | 기존과 중복 | 존재 확인 불가 |
+|---|---:|---:|---:|---:|
+| 외부 목록과 대조한 17편 | 13 | 4 | 0 | 0 |
+| 능동 인식·촉각 추가 검색 19편 | 10 | 5 | 4 | 0 |
+
+등록 ID는 `pr-1228`–`pr-1250`이다. 각 논문의 선정 이유, 공개물, 선행 관계는 심사 원장 A에 있다. 예를 들어 T-Rex가 ViTacFormer를 실물 조작의 기준선으로 사용한 표까지 확인했다. 중복 4편은 JIGGLE(`pr-1050`), 실물 능동 인식 RL(`pr-1217`), GeoDEx(`pr-0894`), ActiveVLA(`pr-0795`)다. [등록 23편](../work/sources/batches/gapfill_2026_11.yaml#L5) · [중복 판정](../work/sources/batches/gapfill_2026_11.yaml#L2741) · [T-Rex 실물 비교표](https://arxiv.org/pdf/2606.17055#page=7)
+
+### 보류한 후보
 
 | 논문 | 보류 이유 |
 |---|---|
@@ -51,8 +78,6 @@
 | [DOGlove: Dexterous Manipulation with a Low-Cost Open-Source Haptic Force Feedback Glove](https://roboticsproceedings.org/rss21/p104.html) | DOGlove는 원격조작자에게 힘·진동을 돌려주는 공개 장치다. 로봇 정책 입력으로 쓰는 촉각의 기여와 조작자가 느낀 피드백의 기여를 분리할 때 다시 검토한다. |
 | [Learning Active Perception and Manipulation via Spatio-temporal Visual Memory](https://neurips.cc/virtual/2026/poster/151254) | 공식 발표 페이지에서 ActiveMem·ActiveBench와 저자를 확인했다. 관련 연구 절과 기준선 표를 확보해 SaPaVe 등과 직접 관계를 판정한 뒤 등록한다. |
 
-심사 후보 중 제외로 판정한 논문은 0편이다.
-
 ### ActiveZero 보류 재검토
 
 2026-11-19에 NeurIPS 행사 프로그램과 저자 공개 목록을 다시 확인했다. 공식 프로그램에는 **포스터 채택**으로 기록돼 있다. 초록은 ActiveMem에 카메라 행동이 포함된 400만 에피소드와 49개 장면이 있으며, ActiveBench에서 시각 질의응답과 시뮬레이션 조작을 평가한다고 밝힌다. 아래 수치와 범위의 출처는 발표 초록이다. [공식 발표](https://neurips.cc/virtual/2026/poster/151254) · [공식 프로그램 데이터](https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json)
@@ -65,56 +90,27 @@
 
 **B 보류를 유지한다.** 행사 데이터의 `paper_pdf_url`은 비어 있고, 연결된 OpenReview 원문과 부록은 이번 접근에 403을 반환했다. 첫 저자의 공개 목록과 arXiv에서도 일치하는 원고를 찾지 못했다. 관측 행동의 감독, 장면 분할, 예산을 확인할 수 있는 원문 또는 실험 부록이 공개되면 ViA·ActiveMimic·SaPaVe와 대조한다. [OpenReview](https://openreview.net/forum?id=bkasRJF9pc) · [첫 저자 연구 목록](https://zhoues.github.io/)
 
-## C. 기존 등록과 중복
+### 등록 전 대조에서 남은 판본 문제
 
-| 기존 ID | 확인된 외부 논문 |
-|---|---|
-| pr-1050 | [JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments](https://roboticsproceedings.org/rss20/p007.html) |
-| pr-1217 | [Real-World Reinforcement Learning of Active Perception Behaviors](https://papers.nips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html) |
-| pr-0894 | [GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty](https://roboticsproceedings.org/rss21/p057.html) |
-| pr-0795 | [ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation](https://openaccess.thecvf.com/content/CVPR2026/html/Liu_ActiveVLA_Injecting_Active_Perception_into_Vision-Language-Action_Models_for_Precise_3D_CVPR_2026_paper.html) |
+| 외부 제목 | 원장 대조 후보 | 확인할 차이 |
+|---|---|---|
+| [BEHAVIOR-1K: A human-centered, embodied AI benchmark with 1, 000 everyday activities and realistic simulation](https://arxiv.org/html/2405.14093#bib.bib171) | pr-0730 | CoRL 발표와 후속 확장 원고가 같은 등록 단위인지 확인한다. |
+| [Scalable Vision-Language-Action Model Pretraining for Robotic Manipulation with Real-Life Human Activity Videos](https://doi.org/10.1109/icra57385.2026.11697552) | pr-0186 | 공식 프로그램과 DOI 표제에서 Dexterous 표기가 달라 저자·판본을 확인한다. |
+| [Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning](https://arxiv.org/pdf/2506.01953) | pr-0116 | Foundation Model과 VLA Model 두 표제가 어느 발표 판본을 가리키는지 확인한다. |
 
-## D. 존재 불확실 또는 확인 불가
+<a id="search-queries"></a>
 
-0편. 삭제 권장도 0편이다. OpenReview 페이지를 열 수 없을 때는 공식 행사 목록, 저자 원문, 정식 proceedings를 대조했다. ActiveZero는 공식 발표 페이지에서 존재가 확인돼 B에 포함했다. [NeurIPS 발표](https://neurips.cc/virtual/2026/poster/151254)
+## 추가 검색식과 판정 범위
 
-## G. 하위 주제 검색과 측정
-
-기간은 2024–2026년 행사 기준이다. 능동 인식은 로봇이 관측을 바꾸는 경우, 촉각은 손안 조작·다지 손과 직접 이어지는 경우를 중심으로 선별했다. 수술·항법·사람 피드백처럼 경계에 있는 논문은 로봇 행동과의 관계를 개별 확인했다.
-
-지난 외부 대조의 분모를 고정해 등록 전후를 계산했다. 같은 원자료에서 새로 등록한 ID와 원문 링크가 일치하는 행을 더했다. 이번 검색에서 확장한 동의어는 과거 분모에 소급하지 않았다.
-
-| 동일한 제목 필터 | 등록 전 | 등록 후 |
-|---|---:|---:|
-| 능동 로봇 인식 | 1/40 (2.5%) | 5/40 (12.5%) |
-| 촉각 조작 | 10/246 (4.1%) | 17/246 (6.9%) |
-| VLA 행동정책 | 105/630 (16.7%) | 112/630 (17.8%) |
-
-### 실제 검색식과 대상
-
-공식 목록 제목에 NFKC 정규화를 적용하고 대소문자를 구분하지 않고 다음 정규식으로 검색했다. arXiv·저자 페이지·프로시딩은 후보 서지 및 공개물 확인에도 사용했다.
+공식 학회 목록에서 유니코드를 NFKC로 정규화하고 대소문자를 구분하지 않고 검색했다. 같은 식을 등록 전 원장의 전 연도에 적용하면 G1은 6편(`pr-0795`, `pr-0805`, `pr-1030`, `pr-1050`, `pr-1217`, `pr-1224`), G2는 3편(`pr-0849`, `pr-0893`, `pr-0894`)이다. 학회별 적중 수는 위의 기준 목록 표에 있다.
 
 | 번호 | 제목 검색식 |
 |---|---|
 | G1 | <code>\bactive (?:visual &#124;3d &#124;object )?(?:perception&#124;pose estimation)&#124;next.best.view&#124;active view(?:point)? (?:selection&#124;planning)&#124;viewpoint (?:planning&#124;selection)&#124;active (?:grasp&#124;vision)&#124;active sensing</code> |
 | G2 | <code>(?=.*(?:tactile&#124;haptic&#124;touch sensing&#124;touch feedback))(?=.*(?:dexterous&#124;dexterity&#124;in.hand&#124;multifinger&#124;multi.finger&#124;robotic hand))</code> |
 
-| 검색한 공식 목록 | 고유 제목 | G1 일치 | G2 일치 |
-|---|---:|---:|---:|
-| [corl24](https://proceedings.mlr.press/v270/) | 264 | 0 | 0 |
-| [rss24](https://roboticsproceedings.org/rss20/) | 134 | 1 | 0 |
-| [iclr24](https://iclr.cc/static/virtual/data/iclr-2024-orals-posters.json) | 2,296 | 0 | 0 |
-| [neurips24](https://neurips.cc/static/virtual/data/neurips-2024-orals-posters.json) | 4,537 | 2 | 0 |
-| [corl25](https://proceedings.mlr.press/v305/) | 263 | 2 | 4 |
-| [rss25](https://roboticsproceedings.org/rss21/) | 163 | 0 | 4 |
-| [iclr25](https://iclr.cc/static/virtual/data/iclr-2025-orals-posters.json) | 3,830 | 1 | 1 |
-| [neurips25](https://neurips.cc/static/virtual/data/neurips-2025-orals-posters.json) | 5,858 | 1 | 0 |
-| [corl26](https://www.corl.org/program/accepted-papers) | 687 | 2 | 6 |
-| [rss26](https://roboticsproceedings.org/rss22/) | 210 | 1 | 2 |
-| [iclr26](https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json) | 5,468 | 4 | 1 |
-| [neurips26](https://neurips.cc/static/virtual/data/neurips-2026-orals-posters.json) | 9,110 | 5 | 1 |
-
-웹 검색은 arXiv·CVF·ICLR·NeurIPS·저자 연구실을 대상으로 아래 질의를 사용했다. 공개된 원고는 방법·관련 연구·기준선 표에서 직접 관계를 확인했다. 중복 판정에는 구두점·Unicode를 정규화한 표제와 별칭, arXiv·DOI·OpenReview 식별자 및 가장 비슷한 기존 제목을 사용했다.
+<details>
+<summary>arXiv·CVF·학회·저자 페이지에서 사용한 검색어</summary>
 
 ~~~text
 2024 2025 2026 active perception robot grasp active viewpoint planning GenNBV active vision manipulation CVPR CoRL next best view
@@ -140,52 +136,12 @@ ActiveZero Enshen Zhou ActiveMem ActiveBench arXiv manipulation visual memory pa
 "ActiveMimic: Egocentric Video Pretraining with Active Perception"
 ~~~
 
-### 등록 전 원장에 있던 논문
+</details>
 
-아래는 같은 G 검색식을 기존 원장 전체 제목에 적용한 결과다. 연도 제한은 외부 후보 발견에 적용했고, 기존 연구와의 중복 검사는 원장 전체 연도에 대해 수행했다. 제목에 쓰이지 않은 동의어는 집계되지 않는다.
+추가로 탐색할 표현은 능동 인식의 *gaze control*, *eye-in-hand exploration*, *information-gathering action*과 촉각의 *shear field*, *extrinsic contact localization*, *tactile reorientation*이다. 검색 적중과 실제 심사 대상을 구분했다. [당시 검색 결과와 미판정 제목](https://github.com/Kim-Yoo-Hyun/PaperReview/blob/8303fdd74fedbd456c0ab94230bde5cfd64c40ba/research/GAPFILL.md#검색-결과의-범위와-원인-해석)
 
-| 검색식 | 등록 전 ID | 제목 |
-|---|---|---|
-| G1 | pr-0795 | ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation |
-| G1 | pr-0805 | SaPaVe: Towards Active Perception and Manipulation in Vision-Language Action Models for Robotics |
-| G1 | pr-1030 | Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation |
-| G1 | pr-1050 | JIGGLE: An Active Sensing Framework for Boundary Parameters Estimation in Deformable Surgical Environments |
-| G1 | pr-1217 | Real-World Reinforcement Learning of Active Perception Behaviors |
-| G1 | pr-1224 | Imagine then Verify: Affordance-Targeted Active Perception for Task-Oriented Grasping in Cluttered Scenes |
-| G2 | pr-0849 | DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation |
-| G2 | pr-0893 | PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands |
-| G2 | pr-0894 | GeoDEx: A Unified Geometric Framework for Tactile Dexterous and Extrinsic Manipulation under Force Uncertainty |
+## 판본과 공개 범위
 
-### 검색 결과의 범위와 원인 해석
-
-공식 목록 검색에 일치했지만 이번 심사에 포함되지 않은 제목은 아래와 같다.
-
-| 추가 검색 결과 | 처리 |
-|---|---|
-| [Improving Viewpoint-Independent Object-Centric Representations through Active Viewpoint Selection](https://proceedings.neurips.cc/paper_files/paper/2024/hash/2360da01c2ed6592bb691326424de184-Abstract-Conference.html) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [PP-Tac: Paper Picking Using Omnidirectional Tactile Feedback in Dexterous Robotic Hands](https://roboticsproceedings.org/rss21/p056.html) | 기존 등록 pr-0893 |
-| [Mind the GAP: Glimpse-based Active Perception improves generalization and sample efficiency of visual reasoning](https://openreview.net/forum?id=iXCeQ2m6vT) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [FingerEye: Learning Dexterous Manipulation with Continuous Vision-Tactile Sensing](https://openreview.net/forum?id=RAA96LpIxJ) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [Dex-X: Learning Visual-Tactile Dexterous Manipulation From Human Demonstration with Simulated Interaction](https://openreview.net/forum?id=suRtJLXVxI) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [Touch2Trace: Tactile-Driven Imitation Learning for Dexterous Cable Tracing](https://openreview.net/forum?id=ALlLaCTHKQ) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [PEERING INTO THE UNKNOWN: ACTIVE VIEW SELECTION WITH NEURAL UNCERTAINTY MAPS FOR 3D RECONSTRUCTION](https://openreview.net/forum?id=e7gbgdw05A) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [DexMove: Learning Tactile-Guided Non-Prehensile Manipulation with Dexterous Hands](https://openreview.net/forum?id=dT3ZciXvNX) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D Scenes](https://openreview.net/forum?id=c2EfS9E5CJ) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [DriveAgent-R1: Advancing VLM-based Autonomous Driving with Active Perception and Hybrid Thinking](https://openreview.net/forum?id=r2g8TV4nJy) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [APPLE: Toward General Active Perception via Reinforcement Learning](https://openreview.net/forum?id=hU2gT2Ucua) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [Towards Scalable Egocentric HOI for Humanoids: Benchmarking Whole-Body Dexterous Interaction with Tactile Prediction](https://openreview.net/forum?id=0UDyFy4rIa) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [Learning Actionable Information Landscapes for Multimodal Active Sensing in Hawkmoths](https://openreview.net/forum?id=4RHseRnmZo) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [Do Glimpse Policies See Like Humans? A Behavioral Audit Reveals Dissociated Viewing Priors in Classification-Trained Active Vision](https://openreview.net/forum?id=GBLeJAfMvA) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [I-Perceive: A Foundation Model for Vision-Language Active Perception](https://openreview.net/forum?id=tQvz32bRpB) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-| [Spherical Bayesian Experimental Design for Active View Selection in 3D Gaussian Splatting](https://openreview.net/forum?id=k2OeOyeBRk) | 검색 적중. 이번 배치 밖이며 포함 여부 미판정 |
-
-능동 인식은 (a) 수집 누락과 (c) 키워드 차이가 함께 작용한 것으로 본다. ViA처럼 실제로 빠져 있던 실기 연구가 있고, 등록돼 있던 JIGGLE은 제목에서 active sensing을 쓴다. 촉각 정교 조작에서도 KineDex·VTDexManip이 빠져 있었고, ViTaSCOPE는 dexterous 대신 in-hand pose와 extrinsic contact를 쓴다. (b) 분야 전체의 논문 수가 적다는 판단에는 이 자료만으로 근거가 부족하다.
-
-추가 검색어는 능동 인식의 경우 gaze control, eye-in-hand exploration, information-gathering action, task-driven camera placement다. 촉각은 shear field, extrinsic contact localization, fingertip force feedback, tactile reorientation까지 넓힐 수 있다.
-
-## 낮은 확신과 외부 목록 표기
-
-- ActiveZero는 초록에 ActiveMem·ActiveBench가 있지만 본문 baseline 표와 분할을 확인하지 못했다. 이름이 비슷한 ActiveArena나 SaPaVe에 연결하지 않았다. [공식 발표](https://neurips.cc/virtual/2026/poster/151254)
 - ViTaSCOPE의 저자 사이트는 코드 링크를 Coming Soon으로 표시한다. PTLD의 프로젝트가 가리키는 저장소는 이번 확인에서 접근되지 않아 공개 여부를 unknown으로 두었다. ActiveMimic의 공개로 확인한 코드는 데이터 처리 범위다. [ViTaSCOPE](https://jayjunlee.github.io/vitascope/) · [PTLD](https://akashsharma02.github.io/ptld-website/) · [ActiveMimic](https://github.com/leolin9248/activemimic-data)
 - Real-World Reinforcement Learning of Active Perception Behaviors는 NeurIPS 2025 발표지만 proceedings 페이지의 citation publication date는 2026-04-23이다. 행사 연도와 온라인 게시일 필드를 혼용하면 연도가 달라진다. 동일 논문으로 판정했다. [공식 게재 페이지](https://papers.nips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html)
 - Self-supervised perception for tactile skin covered dexterous hands의 PMLR 초록은 PercepSkin, 연결된 원고는 Sparsh-skin이라는 이름을 쓴다. 표제와 저자가 일치한다. 별도 논문으로 세지 않았다. [PMLR](https://proceedings.mlr.press/v305/sharma25a.html) · [원고 첫 장](https://raw.githubusercontent.com/mlresearch/v305/main/assets/sharma25a/sharma25a.pdf#page=1)

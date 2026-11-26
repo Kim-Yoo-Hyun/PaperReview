@@ -10,7 +10,7 @@
 - Authors: Zhiyang Lu, Qinghan Chen, Zhimin Yuan, Chenglu Wen, Ming Cheng, Cheng Wang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Tags: LiDAR, semantic, alignment, 3D Vision, scene flow
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00032
 - Full-text retrieval: https://arxiv.org/pdf/2408.07825.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ SSRFlow는 합성 점군으로 학습한 장면 흐름을 실제 LiDAR로 전이
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | 2.2 Hierarchical Feature Extraction The overview of our proposed network is shown in Figure 1. | RGB-D, image set, point cloud, depth와 camera pose | p. 3 (2 Methodology), p. 2 (1 Introduction) |
-| State/latent | Hierarchical, Feature, Extraction, overview, network, Figure, rely, stereo, RGB-D, images, input, backbone | geometry, map, object/relationship state | p. 3 (2 Methodology), p. 2 (1 Introduction), p. 3 (2 Methodology) |
-| Output/action | (2008) rely on stereo or RGB-D images as input. | point map, pose, scene graph, affordance 또는 query result | p. 2 (1 Introduction), p. 3 (2 Methodology), p. 4 (2 Methodology) |
-| Objective/outcome | 3 Training Losses 3.1 Hierarchical Supervised Loss A supervised loss is directly hooked to the GT of scene flow, and we leverage multi-level loss functions as supervision to optimize the model across ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 6 (2 Methodology), p. 6 (2 Methodology), p. 5 (2 Methodology) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 두 시점의 점군 |
+| 표현 | 시공간 및 의미 특징 |
+| 출력 | 점별 장면 흐름 |
+| 평가 | 합성 및 실제 라이다 점군에서의 흐름 오차 |
+
+[원문 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=3) · [원문 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=6) · [원문 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -77,3 +79,7 @@ SSRFlow는 합성 점군으로 학습한 장면 흐름을 실제 LiDAR로 전이
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (2 Methodology), p. 4 (2 Methodology), p. 6 (2 Methodology)이다.
+
+## 검색 태그 근거
+
+연속 두 점군의 기하와 의미 특징을 맞추고 시공간 재임베딩으로 점별 변위를 추정한다. LiDAR-KITTI 평가에서는 합성 FT3Ds 또는 스테레오 기반 SF-KITTI에서 학습한 모델을 비교했다. [원문 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=3) · [원문 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=6) · [원문 8쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125601#page=8)

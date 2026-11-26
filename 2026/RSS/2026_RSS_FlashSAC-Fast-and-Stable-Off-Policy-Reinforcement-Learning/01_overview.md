@@ -37,6 +37,10 @@ Unitree G1의 실물 계단 오르기에서 인용하는 4시간은 FlashSAC의 
 
 근거: [공식 paper/abstract](https://roboticsproceedings.org/rss22/p099.html) · [저자 project/code](https://github.com/Holiday-Robot/FlashSAC).
 
+## 검색 태그 근거
+
+FlashSAC는 off-policy actor–critic의 정규화와 학습 업데이트를 조정한다. 픽셀 기반 제어는 시뮬레이션에서 평가하고, G1 계단 오르기는 시뮬레이션에서 학습한 정책을 실물로 전이한다. [원문 5쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=5) · [원문 7쪽](https://roboticsproceedings.org/rss22/p099.pdf#page=7)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 새 VLA-RL 구조의 필요성을 판단할 때 참고할 강한 off-policy 학습 baseline이다.

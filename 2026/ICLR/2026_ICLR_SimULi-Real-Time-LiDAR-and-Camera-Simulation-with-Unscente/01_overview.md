@@ -10,7 +10,7 @@
 - Authors: Haithem Turki, Qi Wu, Xin Kang, Janick Martinez Esturo, Shengyu Huang, Ruilong Li, Zan Gojcic, Riccardo de Lutio
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, 3D Vision
+- Tags: sensor fusion, LiDAR, 3D Vision, simulation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9a0ca0a65535cc70ab9c6e71ed830136-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ SimULi는 하나의 주행 장면에서 카메라 영상과 회전식 LiDAR 관�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | 3.4 OPTIMIZATION We jointly optimize the camera particles Gc, LiDAR particles Gl, bilateral grids A, and the environment map by sampling a random input image and LiDAR scan at each training step. | RGB-D, image set, point cloud, depth와 camera pose | p. 6 (3 METHOD), p. 2 (1 INTRODUCTION) |
-| State/latent | OPTIMIZATION, jointly, optimize, camera, particles, LiDAR, bilateral, grids, environment, sampling, random, input | geometry, map, object/relationship state | p. 6 (3 METHOD), p. 2 (1 INTRODUCTION), p. 6 (3 METHOD) |
-| Output/action | With the rise of end-to-end policy models, accurate sensor simulation has become a critical component in the development and evaluation of autonomous vehicle (AV) systems. | point map, pose, scene graph, affordance 또는 query result | p. 2 (1 INTRODUCTION), p. 6 (3 METHOD), p. 7 (3 METHOD) |
-| Objective/outcome | We minimize a reconstruction loss, an anchoring loss that encourages camera Gaussians in Gc to lie near the LiDAR-supervised scene geometry distilled into Gl, and lower-level regularization terms such that the final ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 6 (3 METHOD), p. 6 (3 METHOD), p. 7 (3 METHOD) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 포즈가 있는 카메라와 라이다의 관측 기록 |
+| 표현 | 기하가 연결된 센서별 가우시안 집합 |
+| 출력 | 지정 시점의 합성 카메라·라이다 관측 |
+| 평가 | Waymo와 PandaSet에서 합성의 정확도와 처리량 |
+
+[원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=4) · [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=5) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -76,3 +78,7 @@ SimULi는 하나의 주행 장면에서 카메라 영상과 회전식 LiDAR 관�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 7 (3 METHOD), p. 6 (3 METHOD)이다.
+
+## 검색 태그 근거
+
+카메라와 라이다용 가우시안 집합을 각각 두고 최근접점 제약으로 기하를 맞춘다. 비선형 센서 투영을 계산해 새 카메라 영상과 라이다 스캔을 렌더링하고, 생성 정확도와 처리량을 평가한다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=4) · [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=5) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/9a0ca0a65535cc70ab9c6e71ed830136-Paper-Conference.pdf#page=8)

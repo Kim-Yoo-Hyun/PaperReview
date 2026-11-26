@@ -56,9 +56,9 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework, naturally, extends, single-view, multi-view | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
-| State/latent | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework | geometry, map, object/relationship state | body cue; notation verify |
-| Action/output | introduce, explicit, implicit, forms, grounding, designed, strengthen, spatial, reasoning, capacity | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Input/observation | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework, naturally, extends, single-view, multi-view | RGB 이미지·질문·카메라 내부 파라미터 | body cue; exact tensor/frame verify |
+| State/latent | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework | 참조 영역 토큰과 카메라 보정 표현 | body cue; notation verify |
+| Action/output | introduce, explicit, implicit, forms, grounding, designed, strengthen, spatial, reasoning, capacity | 3D 상자 및 공간 질문에 대한 답변 | body cue; unit/decoder verify |
 | Objective/constraint | token, detached, computation, graph, gradient, flows, through, serves, strong, conditional | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -70,7 +70,7 @@ PDF body method statement (p. 3 (2.2. Grounding in the 2D Plane), p. 4 (2.2.2. I
 - **p. 3 / 2.1. Foundational Spatial VLM - extractive body cue:** The base NVILA encoder extracts dense visual tokens from an RGB image for single-view inputs.
 - **p. 4 / 2.3. Monocular 3D Grounding via Region Prompt - extractive body cue:** Each 3D bounding box is expressed in a unified, language-based format compatible with 2D HTML-style outputs, eliminating the need for task-specific heads.
 - **p. 5 / 2.4. Data Construction and Composition - extractive body cue:** To construct the implicit grounding corpus, we start from RefSpatial [23], which includes 2D samples from OpenImages [53], 3D video data from CA-1M [54], and ...
-- **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
+- **Normalized interface:** observation=RGB 이미지·질문·카메라 내부 파라미터; state=참조 영역 토큰과 카메라 보정 표현; output/action=3D 상자 및 공간 질문에 대한 답변.
 
 ## Temporal and Runtime Contract
 

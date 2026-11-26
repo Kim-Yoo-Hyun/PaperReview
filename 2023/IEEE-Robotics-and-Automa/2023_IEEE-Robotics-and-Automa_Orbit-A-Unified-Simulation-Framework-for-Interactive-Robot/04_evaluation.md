@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **Target system/task:** Orbit의 모의 조작과 ANYmal-D 보행 전이.
+- **Input boundary:** 과제별 상태·센서 관측 및 보행 명령.
+- **Output/decision under evaluation:** 조작 행동과 보행 정책 명령.
+- **Primary target:** 조작 학습 성과와 실물 보행 실행.
 - **Detected evaluation headings:** not reliably recovered.
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (V. EXEMPLAR WORKFLOWS WITH ORBIT), p. 7 (V
 |---|---|---|---|
 | Robot/hardware/simulator | It readily comes with different robotic platforms, sensors, CPU and GPU-based motion generators, and benchmark tasks that aim to provide a batteries-included experience for ... | embodiment, simulator version and control stack | p. 7 (VI. DISCUSSION), p. 7 (VI. DISCUSSION) |
 | Task/environment | In this paper, we proposed ORBIT: an interactive and intuitive framework to simplify environment designing, enable easy task specifications, and lower the entry barrier ... | reset, timeout, object/scene variation | p. 7 (VI. DISCUSSION), p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
-| Observation/sensor | standardized observation, action, task state와 evaluation split | calibration, preprocessing, privileged input | p. 1 (Abstract), p. 1 (I. INTRODUCTION) |
-| Output/decision | policy/controller trajectory 또는 measured result | action frame, controller and termination | p. 2 (2) It provides a batteries-included experience for roboti), p. 2 (2) It provides a batteries-included experience for roboti) |
+| Observation/sensor | 과제별 상태·센서 관측 및 보행 명령 | calibration, preprocessing, privileged input | p. 1 (Abstract), p. 1 (I. INTRODUCTION) |
+| Output/decision | 조작 행동과 보행 정책 명령 | action frame, controller and termination | p. 2 (2) It provides a batteries-included experience for roboti), p. 2 (2) It provides a batteries-included experience for roboti) |
 
 ## Metrics and Success Definition
 

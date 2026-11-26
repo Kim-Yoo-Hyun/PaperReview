@@ -10,7 +10,7 @@
 - Authors: Niladri Shekhar Dutt, Sanjeev Muralikrishnan, Niloy J. Mitra
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic, alignment, Diffusion, Generation, 3D Vision
+- Tags: semantic, alignment, Diffusion, 3D Vision, 3D correspondence
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ Diff3F는 텍스처가 없는 3D 형상에 사전학습된 2D 확산 모델의 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Semantics through Painting), p. 4 (3.2. Semantics through Painting), p. 3 (3. Method)이다.
+
+## 검색 태그 근거
+
+텍스처가 없는 형상을 여러 방향에서 렌더링한 뒤 확산 모델 및 DINO 특징을 표면으로 역투영해 집계한다. 형상 사이의 점 대응과 부품 분할을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.pdf#page=3) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Dutt_Diffusion_3D_Features_Diff3F_Decorating_Untextured_Shapes_with_Distilled_Semantic_CVPR_2024_paper.pdf#page=8)

@@ -10,7 +10,7 @@
 - Authors: Tianxing Chen, Zanxin Chen, Baijun Chen, Zijian Cai, Yibin Liu, Zixuan Li, Qiwei Liang, Xianliang Lin, Yiheng Ge, Zhenyu Gu, Weiliang Deng, Yubin Guo, Tian Nian, Xuanbing Xie, Qiangyu Chen, Kailun Su, Tianling Xu, Guodong Liu, Mengkang Hu, Huan-ang Gao, Kaixuan Wang, Zhixuan Liang, Yusen Qin, Xiaokang Yang, Ping Luo, Yao Mu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Robotics, Benchmark
+- Tags: VLA, Robotics, Benchmark, domain randomization
 - Official paper: https://icml.cc/virtual/2026/poster/62192
 - Full-text retrieval: https://arxiv.org/pdf/2506.18088.pdf
 - Code/Project: not identified

@@ -58,9 +58,9 @@ PDF body method statement (p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHO
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy, Stretch, Place, Initial, State | RGB-D/point cloud, object state와 contact/task observation | body cue; exact tensor/frame verify |
-| State/latent | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy | object geometry, affordance, contact mode 또는 end-effector state | body cue; notation verify |
-| Action/output | system, setup, consists, three, UR5, robot, arms, equipped, parallel-jaw, grippers | grasp, pose, force 또는 end-effector trajectory | body cue; unit/decoder verify |
+| Input/observation | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy, Stretch, Place, Initial, State | 상단 RGB-D 관측과 태스크별 집기·송풍 후보 | body cue; exact tensor/frame verify |
+| State/latent | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy | 집기와 송풍 행동별 예상 성과 | body cue; notation verify |
+| Action/output | system, setup, consists, three, UR5, robot, arms, equipped, parallel-jaw, grippers | 집기 자세 및 송풍 위치·방향 | body cue; unit/decoder verify |
 | Objective/constraint | total, collected, training, validation, interactions, over, course, hours, trained, blowing | task/contact/pose objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -72,7 +72,7 @@ PDF body method statement (p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHO
 - **p. 3 / IV. METHOD - extractive body cue:** Crucially, while controlled airflow provides the system with additional control over out-of-contact object regions, the deformation on the object also provides visual feedback about the ...
 - **p. 5 / IV. METHOD - extractive body cue:** To reduce noise in reward computation, at the beginning of each blowing action the blower turns on for 2 s after movement to ensure the ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** By controlling the blower's direction, the system can apply dense forces on out-of-contact surfaces (A and B) to efficiently achieve its goal. • High-speed interactions ...
-- **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
+- **Normalized interface:** observation=상단 RGB-D 관측과 태스크별 집기·송풍 후보; state=집기와 송풍 행동별 예상 성과; output/action=집기 자세 및 송풍 위치·방향.
 
 ## Temporal and Runtime Contract
 

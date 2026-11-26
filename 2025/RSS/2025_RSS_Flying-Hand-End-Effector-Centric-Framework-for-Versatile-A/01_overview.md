@@ -44,12 +44,14 @@ Flying Hand는 비행체와 로봇팔의 결합 동역학을 하위 제어기가
 
 ## Observation, State, and Output Interface
 
+그림 2에서 ACT는 말단 상태와 두 RGB 관측으로 목표 말단 자세를 예측한다. 전신 MPC가 비행체·팔 명령을 계산한다. 물체 집기와 연속 과제는 시뮬레이션에서, 자율 핀 삽입은 실제 비행체에서도 평가했다. [PDF 3쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=3) · [PDF 12쪽](https://www.roboticsproceedings.org/rss21/p130.pdf#page=12)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | After that, we train a joint space ACT policy with the same training setting as the ee-centric ACT policy, except that the end-effector pose in the observation and action space is replaced ... | proprioception, reference pose/motion, visual or language command | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning) |
-| State/latent | After, train, joint, space, ACT, policy, same, training, setting, ee-centric, except, end-effector | whole-body pose, balance/contact state와 skill/mode | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface) |
-| Output/action | At the most highlevel, the ee-centric policy module gets current observations and generates the target end-effector states online without the need to consider the specific platform jointly. | joint/whole-body action, motion target 또는 task trajectory | p. 4 (C. Teleportation and Imitation Learning), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface), p. 7 (B. EE-Centrie Policy Learning) |
-| Objective/outcome | ‘The MPC formulation minimizes a cost function over a finite time horizon H while subject to system dynamics and constraints: | tracking, balance, skill/task success와 recovery | p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 8 (B. Implementation Details) |
+| Observation/input | After that, we train a joint space ACT policy with the same training setting as the ee-centric ACT policy, except that the end-effector pose in the observation and action space is replaced ... | 말단 상태와 기체·말단의 RGB 영상 | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning) |
+| State/latent | After, train, joint, space, ACT, policy, same, training, setting, ee-centric, except, end-effector | 말단 목표 자세와 결합 기체·팔 동역학 | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface) |
+| Output/action | At the most highlevel, the ee-centric policy module gets current observations and generates the target end-effector states online without the need to consider the specific platform jointly. | ACT의 목표 말단 자세와 MPC의 기체·팔 명령 | p. 4 (C. Teleportation and Imitation Learning), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface), p. 7 (B. EE-Centrie Policy Learning) |
+| Objective/outcome | ‘The MPC formulation minimizes a cost function over a finite time horizon H while subject to system dynamics and constraints: | 비행 추종 오차와 조작 과제 성공 | p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 8 (B. Implementation Details) |
 
 ## Main Claims and Actual Contribution
 

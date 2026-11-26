@@ -10,7 +10,7 @@
 - Authors: Junting Chen, Haotian Liang, Lingxiao Du, Weiyun Wang, Mengkang Hu, Yao Mu, Wenhai Wang, Jifeng Dai, Ping Luo, Wenqi Shao, Lin Shao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Vision-Language Model, Robotics, Reinforcement Learning
+- Tags: Vision-Language Model, Robotics, instruction tuning
 - Official paper: https://neurips.cc/virtual/2025/poster/115408
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/bc97207e3979d1cc23109db0be0e8ed2-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.04217

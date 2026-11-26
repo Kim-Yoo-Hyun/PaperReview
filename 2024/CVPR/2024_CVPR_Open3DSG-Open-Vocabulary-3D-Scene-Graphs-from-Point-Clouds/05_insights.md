@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 3.1), and in parallel, we extract vision-language features from aligned 2D images (Sec.를 The overall goal of our approach is to distill the knowledge of 2D vision-language models into a 3D graph neural network (GNN) to predict open-vocabulary 3D scene graphs in a 2-step process.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While closed-vocabulary evaluations are valuable, they cannot highlight the huge potential of open-vocabulary methods such as ours.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `점군·텍스트 질의와 선택적인 다중 시점 RGB-D 특징 → 물체 노드와 쌍별 관계 임베딩 → 질의된 물체 및 관계를 담은 장면 그래프`.
+- 이 논문의 재사용 가능한 지점은 3.1), and in parallel, we extract vision-language features from aligned 2D images (Sec.를 The overall goal of our approach is to distill the knowledge of 2D vision-language models into a 3D graph neural network (GNN) to predict open-vocabulary 3D scene graphs in a 2-step process.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 물체 노드와 쌍별 관계 임베딩가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 While closed-vocabulary evaluations are valuable, they cannot highlight the huge potential of open-vocabulary methods such as ours.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from a 3D point cloud, which can be ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Robotics-enabling 3D perception`; tags: `3D Scene Graph, open-vocabulary, Graph Reasoning`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

@@ -44,12 +44,14 @@ EAP-GS는 소수 영상으로 장면을 복원할 때 3D Gaussian Splatting의 �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | After a new image registration, bundle adjustment is performed to refine the parameters of camera pose Pi and 3D point X to minimizes the reprojection error and filter observations with large errors: ... | RGB-D, image set, point cloud, depth와 camera pose | p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.2. Attentional Pointcloud Augmentation) |
-| State/latent | After, image, registration, bundle, adjustment, performed, refine, parameters, camera, pose, point, minimizes | geometry, map, object/relationship state | p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.2. Attentional Pointcloud Augmentation), p. 5 (3.2. Attentional Pointcloud Augmentation) |
-| Output/action | The input to reconstruction stage consists of the n scene views I = {Ii ∈RH×W/i = 1, ..., n} and 16501 | point map, pose, scene graph, affordance 또는 query result | p. 4 (3.2. Attentional Pointcloud Augmentation), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary) |
-| Objective/outcome | It is important to note that without sufficient supervised views to provide constraints, simply using this 3D feature point generation mechanism may degrade reconstruction results in certain regions of the scene. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary), p. 5 (3.2. Attentional Pointcloud Augmentation) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 드문 여러 영상과 초기화에 쓰는 SfM 점 및 카메라 자세 |
+| 표현 | 영상 상대 깊이와 평탄 정도로 보완한 초기 점 분포 |
+| 출력 | 학습한 3D 가우시안 장면과 새 시점 렌더링 |
+| 평가 | LLFF 등의 뷰 합성 품질 |
+
+[방법 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf#page=4) · [평가 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -77,3 +79,7 @@ EAP-GS는 소수 영상으로 장면을 복원할 때 3D Gaussian Splatting의 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Attentional Pointcloud Augmentation), p. 4 (3.1. Preliminary)이다.
+
+## 검색 태그 근거
+
+소수 영상의 SfM 점군을, 단안 상대 깊이와 공간 주파수에 따라 보완한다. 초기화에 쓰는 점과 깊이를 모두 영상에서 얻고 LLFF 등의 뷰 합성을 평가했다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Dai_EAP-GS_Efficient_Augmentation_of_Pointcloud_for_3D_Gaussian_Splatting_in_CVPR_2025_paper.pdf#page=7)

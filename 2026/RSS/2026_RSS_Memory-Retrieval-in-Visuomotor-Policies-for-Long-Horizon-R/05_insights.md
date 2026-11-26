@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `World models, safety, uncertainty, and recovery`; tags: `Robotics, VLA, memory, long horizon, partial observability, Imitation Learning, retrieval`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Demonstrating ViSafe: Vision-enabled Safety for High-speed Detect and Avoid (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

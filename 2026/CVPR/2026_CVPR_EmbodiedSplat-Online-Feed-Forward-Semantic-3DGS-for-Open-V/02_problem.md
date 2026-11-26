@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Nevertheless, all of them share two limitations in embodied scenarios: | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | Specifically, the embodied agent equipped with a precise SLAM system collects posed RGB or RGB-D images to understand the 3D scene, follow ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB | geometry, map, object/relationship state | notation and tensor shape require body check |
-| Output / action | Since, FreeSplat, designed, offline, modify, inference, pipeline, enable | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
-| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+| Target problem | Nevertheless, all of them share two limitations in embodied scenarios: | 온라인 3D 의미 장면 재구성 | body wording is the source claim |
+| Observation / input | Specifically, the embodied agent equipped with a precise SLAM system collects posed RGB or RGB-D images to understand the 3D scene, follow ... | 연속 RGB 영상, 조건별 측정 깊이 및 텍스트 클래스 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB | 3D 가우시안의 기하 특징과 의미 코드북 계수 | notation and tensor shape require body check |
+| Output / action | Since, FreeSplat, designed, offline, modify, inference, pipeline, enable | 텍스트 질의에 따른 의미 분할 | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | 정답 점군의 분할 정확도·추론 비용 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

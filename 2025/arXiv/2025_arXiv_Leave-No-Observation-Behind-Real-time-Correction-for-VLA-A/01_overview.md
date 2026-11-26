@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, action-chunking, feedback, control-frequency
+- Tags: VLA, action-chunking, feedback, control-frequency, residual policy, imitation-learning
 - Aliases: A2C2
 - Official paper: https://arxiv.org/abs/2509.23224
 - Full-text retrieval: https://arxiv.org/pdf/2509.23224v1
@@ -35,6 +35,10 @@ VLA chunk·fresh observation·chunk 정보 → residual → 실행.
 Kinetix와 LIBERO Spatial 평가를 보고한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2509.23224) · [저자 project/code](https://github.com/k1000dai/a2c2-libero). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+A2C2는 고정한 기본 정책의 현재 행동, 가장 최근 관측, 행동열 내 위치를 받아 매 제어 스텝의 잔차를 예측한다. 잔차의 감독은 시연 행동과 기본 행동의 차이이며, Kinetix와 LIBERO-Spatial에서 지연과 실행 길이를 바꿔 평가한다. [원문 4쪽](https://arxiv.org/pdf/2509.23224v1#page=4) · [원문 5쪽](https://arxiv.org/pdf/2509.23224v1#page=5)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

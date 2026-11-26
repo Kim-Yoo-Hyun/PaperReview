@@ -10,7 +10,7 @@
 - Authors: Yang Miao, Francis Engelmann, Olga Vysotska, Federico Tombari, Marc Pollefeys, Daniel Barath
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision, Graph Reasoning
+- Tags: 3D Vision, Graph Reasoning, 3D Scene Graph
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1255_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ SceneGraphLoc은 질의 이미지가 어느 장면에 속하는지 찾기 위해
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 1 (Body text (section not recovered))이다.
+
+## 검색 태그 근거
+
+질의 RGB 영상의 패치와 사전에 구축한 3D 장면 그래프의 물체 노드를 대응시켜 장면을 찾는다. 3RScan에서 장면 검색과 물체 대응을 평가했다. [원문 2쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=2) · [원문 10쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01255.pdf#page=10)

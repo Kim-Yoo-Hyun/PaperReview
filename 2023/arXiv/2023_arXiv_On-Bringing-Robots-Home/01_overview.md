@@ -10,7 +10,7 @@
 - Authors: Nur Muhammad Mahi Shafiullah, Anant Rai, Haritheja Etukuru, Yiqian Liu, Ishan Misra, Soumith Chintala, Lerrel Pinto
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, mobile manipulation, home robotics, whole-body autonomy
+- Tags: Robotics, mobile manipulation, home robotics, Imitation Learning, human demonstrations
 - Official paper: https://arxiv.org/abs/2311.16098
 - Full-text retrieval: https://arxiv.org/pdf/2311.16098
 - Code/Project: https://dobb-e.com/

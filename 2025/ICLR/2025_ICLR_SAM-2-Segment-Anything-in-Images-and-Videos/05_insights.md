@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `논문이 명시한 observation과 task input → task state 또는 decision variable → paper-specific output/action`.
-- 이 논문의 재사용 가능한 지점은 The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for which the spatio-temporal mask (i.e., a ‘masklet') is to be ...를 SAM 2 is equipped with a memory that stores information about the object and previous interactions, which allows it to generate masklet predictions throughout the video, and also effectively correct these based ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 task state 또는 decision variable가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We leveraged our online model in the loop setup to enable this, requesting annotators to use SAM 2 interactively to identify failure modes and then correct them.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `영상 프레임과 사용자가 제공한 점·상자·마스크 → 프레임 특징과 이전 마스크의 메모리 → 대상별 분할 마스크와 시간에 따른 마스크열`.
+- 이 논문의 재사용 가능한 지점은 The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for which the spatio-temporal mask (i.e., a ‘masklet') is to be ...를 SAM 2 is equipped with a memory that stores information about the object and previous interactions, which allows it to generate masklet predictions throughout the video, and also effectively correct these based ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 프레임 특징과 이전 마스크의 메모리가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 We leveraged our online model in the loop setup to enable this, requesting annotators to use SAM 2 interactively to identify failure modes and then correct them.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: We introduce the Segment Anything Model 2 (SAM 2), a unified model for video and image segmentation (we consider an image as a single-frame video).
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Foundations: Vision and Language Models`; tags: `segmentation, foundation model, prompting, video segmentation, memory`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

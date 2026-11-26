@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** mapped 3D environment과 mobile robot.
-- **Input boundary:** camera/depth stream, pose, map와 language goal.
-- **Output/decision under evaluation:** collision-free trajectory 또는 velocity command.
-- **Primary target:** goal reach, safety, localization error와 replanning latency.
+- **Target system/task:** 정적 실내 장면의 열린 어휘 3D 장면 그래프.
+- **Input boundary:** 점군·텍스트 질의와 선택적인 다중 시점 RGB-D 특징.
+- **Output/decision under evaluation:** 질의된 물체 및 관계를 담은 장면 그래프.
+- **Primary target:** 물체·관계 예측과 열린 어휘 질의 성능.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Experimental Setup (p. 6); 4.4. Qualitative Results (p. 8).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (4.1. Experimental Setup), p. 7 (4.2. Close
 |---|---|---|---|
 | Robot/hardware/simulator | However, since 3DSSG is the only dataset to provide ground truth scene graph labels, we evaluate our distilled model quantitatively on it. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | The 3DSSG dataset [44] is at the time of writing this paper, the only dataset that provides semantic scene graph labels aligned with a ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Closed-set 3D scene graph prediction) |
-| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 3 (3. Method), p. 3 (3. Method) |
-| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 1 (1. Introduction), p. 1 (1. Introduction) |
+| Observation/sensor | 점군·텍스트 질의와 선택적인 다중 시점 RGB-D 특징 | calibration, preprocessing, privileged input | p. 3 (3. Method), p. 3 (3. Method) |
+| Output/decision | 질의된 물체 및 관계를 담은 장면 그래프 | action frame, controller and termination | p. 1 (1. Introduction), p. 1 (1. Introduction) |
 
 ## Metrics and Success Definition
 

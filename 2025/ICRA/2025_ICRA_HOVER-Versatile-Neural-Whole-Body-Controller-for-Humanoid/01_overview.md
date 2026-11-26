@@ -10,7 +10,7 @@
 - Authors: Tairan He, Wenli Xiao, Toru Lin, Zhengyi Luo, Zhenjia Xu, Zhenyu Jiang, Jan Kautz, Changliu Liu, Guanya Shi, Xiaolong Wang, Linxi Jim Fan, Yuke Zhu
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, Reinforcement Learning, NVIDIA
+- Tags: Robotics, humanoid, whole-body control, Reinforcement Learning, policy distillation
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11128549
 - Full-text retrieval: https://arxiv.org/pdf/2410.21229v2
 - Code/Project: https://hover-versatile-humanoid.github.io/
@@ -46,12 +46,14 @@ HOVER는 전신 동작 모방을 공통 교사로 삼고 다양한 명령 방식
 
 ## Observation, State, and Output Interface
 
+특권 상태로 전신을 추종하는 교사를 RL로 학습한다. DAgger로 증류한 학생은 마스킹된 명령과 고유수용 상태를 받는다. 표 Ⅲ의 시뮬레이션 추종과 표 Ⅴ의 실물 제어 모드 평가를 구분했다. [PDF 2쪽](https://arxiv.org/pdf/2410.21229v2#page=2) · [PDF 6쪽](https://arxiv.org/pdf/2410.21229v2#page=6)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Using these oracle states, we query the oracle teacher policy πoracle(ˆat/sp-oracle t , sg-oracle t ) to obtain the reference action ˆat. | proprioception, reference pose/motion, visual or language command | p. 4 (II. METHOD), p. 2 (II. METHOD) |
-| State/latent | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action, agent, proprioception | whole-body pose, balance/contact state와 skill/mode | p. 4 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD) |
+| Observation/input | Using these oracle states, we query the oracle teacher policy πoracle(ˆat/sp-oracle t , sg-oracle t ) to obtain the reference action ˆat. | 고유수용 상태와 모드별 마스킹된 신체 목표 | p. 4 (II. METHOD), p. 2 (II. METHOD) |
+| State/latent | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action, agent, proprioception | 교사의 전신 추종과 학생의 부분 명령 표현 | p. 4 (II. METHOD), p. 2 (II. METHOD), p. 3 (II. METHOD) |
 | Output/action | 원문 대조: 보상은 proprioceptive state와 goal state의 함수 R(s_t^p,s_t^g)로 정의한다. 정책 action은 19차원 목표 관절 위치이며 PD controller에 전달한다. 보상 정의 자체가 recovery 절차를 명시하는 것은 아니다. ([PDF p. 2](https://hover-versatile-humanoid.github.io/resources/HOVER_paper.pdf#page=2), §II-A Goal-Conditioned RL for Humanoid Control) | 19차원 목표 관절 위치 → PD controller | [PDF p. 2](https://hover-versatile-humanoid.github.io/resources/HOVER_paper.pdf#page=2), §II-A Goal-Conditioned RL for Humanoid Control |
-| Objective/outcome | We employ the proximal policy optimization (PPO) algorithm [18] to maximize the cumulative discounted reward E hPT t=1 γt-1rt i . | tracking, balance, skill/task success와 recovery | p. 2 (II. METHOD), p. 4 (II. METHOD), p. 2 (II. METHOD) |
+| Objective/outcome | We employ the proximal policy optimization (PPO) algorithm [18] to maximize the cumulative discounted reward E hPT t=1 γt-1rt i . | 모드별 추종 오차와 실물 제어 전환 | p. 2 (II. METHOD), p. 4 (II. METHOD), p. 2 (II. METHOD) |
 
 ## Main Claims and Actual Contribution
 

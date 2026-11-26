@@ -61,9 +61,9 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations, step, observes, current, humanoid | proprioception, reference pose/motion, visual or language command | body cue; exact tensor/frame verify |
-| State/latent | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations | whole-body pose, balance/contact state와 skill/mode | body cue; notation verify |
-| Action/output | framework, consists, stages, present, MaskedMimic, versatile, control, model, enables, physically | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
+| Input/observation | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations, step, observes, current, humanoid | 캐릭터 상태와 부분 관절·경로·텍스트 등 명령 | body cue; exact tensor/frame verify |
+| State/latent | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations | 완전한 추종 교사와 부분 목표 학생의 잠재 표현 | body cue; notation verify |
+| Action/output | framework, consists, stages, present, MaskedMimic, versatile, control, model, enables, physically | 캐릭터의 관절 제어 명령 | body cue; unit/decoder verify |
 | Objective/constraint | agent, objective, learn, policy, maximizes, discounted, cumulative, reward, where, likelihood | tracking/balance/task objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 7 (3. Inference), p. 4 (3 PRELIMINARIES), p. 8 (3.
 - **p. 8 / 3. Inference - extractive body cue:** To ensure the model supports high-level goals, such as textcommands and interaction with a target object, all future poses can be masked out.
 - **p. 2 / 1 INTRODUCTION - extractive body cue:** These partial descriptions can include target keyframes, target joint positions/rotations, text instructions, object interactions, or any combination thereof.
 - **p. 1 / Body text (section boundary not confidently recovered) - extractive body cue:** MaskedMimic can be used for a wide range of applications, including generating full-body motion from partially observed joint target positions, joystick steering, object interactions, path-following, ...
-- **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
+- **Normalized interface:** observation=캐릭터 상태와 부분 관절·경로·텍스트 등 명령; state=완전한 추종 교사와 부분 목표 학생의 잠재 표현; output/action=캐릭터의 관절 제어 명령.
 
 ## Temporal and Runtime Contract
 

@@ -22,10 +22,10 @@
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET AND REAL-ROBOT COMPARISON`.
-- **Target system/task:** multi-robot demonstration/dataset ecosystem.
-- **Input boundary:** multi-view observation, language/task label과 action trajectory.
-- **Output/decision under evaluation:** dataset sample 또는 learned policy action.
-- **Primary target:** coverage, cross-embodiment transfer, data efficiency와 task success.
+- **Target system/task:** 여러 로봇팔의 시연 데이터와 Flexiv 블록 옮기기.
+- **Input boundary:** 기체별 RGB-D·힘·관절·소리 및 일부 촉각 기록, ACT 평가의 RGB·행동 시연.
+- **Output/decision under evaluation:** RH20T 시연 및 ACT의 팔·그리퍼 행동.
+- **Primary target:** 시연 수별 도달·집기·놓기 성공.
 - **Detected evaluation headings:** Dataset (p. 3); III. RH20T DATASET (p. 3); IV. EXPERIMENTS (p. 5).
 
 ## Experimental Matrix
@@ -62,8 +62,8 @@
 |---|---|---|---|
 | Robot/hardware/simulator | It is evident that all the cameras are calibrated with respect to the robot's base frame, and all the recorded data are synchronized in ... | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 3 (III. RH20T DATASET) |
 | Task/environment | We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community. | reset, timeout, object/scene variation | p. 3 (III. RH20T DATASET), p. 5 (IV. EXPERIMENTS) |
-| Observation/sensor | multi-view observation, language/task label과 action trajectory | calibration, preprocessing, privileged input | p. 3 (III. RH20T DATASET), p. 1 (Abstract) |
-| Output/decision | dataset sample 또는 learned policy action | action frame, controller and termination | p. 1 (I. INTRODUCTION), p. 3 (III. RH20T DATASET) |
+| Observation/sensor | 기체별 RGB-D·힘·관절·소리 및 일부 촉각 기록, ACT 평가의 RGB·행동 시연 | calibration, preprocessing, privileged input | p. 3 (III. RH20T DATASET), p. 1 (Abstract) |
+| Output/decision | RH20T 시연 및 ACT의 팔·그리퍼 행동 | action frame, controller and termination | p. 1 (I. INTRODUCTION), p. 3 (III. RH20T DATASET) |
 
 ## Metrics and Success Definition
 

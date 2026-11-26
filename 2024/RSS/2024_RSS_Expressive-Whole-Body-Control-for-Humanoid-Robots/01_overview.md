@@ -10,7 +10,7 @@
 - Authors: Xuxin Cheng, Yandong Ji, Junming Chen, Ruihan Yang, Ge Yang, Xiaolong Wang
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, motion imitation, sim-to-real
+- Tags: Robotics, humanoid, whole-body control, motion imitation, sim-to-real, Reinforcement Learning
 - Official paper: https://www.roboticsproceedings.org/rss20/p107.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p107.pdf
 - Code/Project: https://expressive-humanoid.github.io/

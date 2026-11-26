@@ -60,9 +60,9 @@ PDF body method statement (p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem For
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce, following, losses, guide, policy | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | summary, contributions, follows, employing, sequence, key-frames, presented, prompts, explicitly, convey | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce, following, losses, guide, policy | 표시가 그려진 RGB와 텍스트, 역투영용 깊이·카메라 파라미터 | body cue; exact tensor/frame verify |
+| State/latent | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce | 접촉점과 그리퍼·이동 방향 | body cue; notation verify |
+| Action/output | summary, contributions, follows, employing, sequence, key-frames, presented, prompts, explicitly, convey | 실행할 접촉 자세와 방향 | body cue; unit/decoder verify |
 | Objective/constraint | aforementioned, losses, trained, simultaneously, under, total, objective, function, formulate, pose | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -74,7 +74,7 @@ PDF body method statement (p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem For
 - **p. 1 / 1. Introduction - extractive body cue:** Since key-frames represent important or bottleneck steps of the gripper during the task execution [18, 19, 26, 46, 58], we propose CrayonRobo, an approach that ...
 - **p. 2 / 1. Introduction - extractive body cue:** Based on the input goal prompt, the model determines the 6 DoF contact pose, enabling it to interact with the object as required.
 - **p. 3 / 3.2. Data Collection - extractive body cue:** These are then served as information embedded in the input language prompt.
-- **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
+- **Normalized interface:** observation=표시가 그려진 RGB와 텍스트, 역투영용 깊이·카메라 파라미터; state=접촉점과 그리퍼·이동 방향; output/action=실행할 접촉 자세와 방향.
 
 ## Temporal and Runtime Contract
 

@@ -38,13 +38,7 @@ PDF body method statement (p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Imple
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
-|---|---|---|---|---|---|---|
-| Reference / embodiment interface | human/task reference를 robot-compatible state로 바꾼다 | reference motion, visual/language input, body state | retargeting, pose/skill conditioning 또는 multimodal encoding을 수행 | whole-body context | The transformerbased decoder generates action sequences from the latent variable (only during training and set to be the mean of the prior ... | p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Implementation Details) |
-| Balance-aware whole-body execution | reference를 contact·balance-aware command로 변환한다 | context, body state, contact | policy, WBC, inverse dynamics 또는 hierarchical control을 적용 | joint target/torque | ‘To show the advantage of leaming from an ee-centric demonstration compared to a joint space demonstration, we use the same demonstration trajectory ... | p. 10 (B. Implementation Details), p. 7 (B. EE-Centrie Policy Learning) |
-| Recovery / adaptation | mismatch·disturbance·fall 뒤 behavior를 복구한다 | feedback/history와 failure state | adaptation, motion completion, reinitialization 또는 safe stop을 수행 | recovery command | ACT utilizes a Conditional Variational Autoencoder (CVAE) where the encoder compresses action sequences and Joint observations into a latent style variable. | p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Implementation Details) |
-
-- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
+말단 상태와 기체·말단의 RGB 영상 → 말단 목표 자세와 결합 기체·팔 동역학 → ACT의 목표 말단 자세와 MPC의 기체·팔 명령. [방법·평가의 원문 근거](./01_overview.md#observation-state-and-output-interface)
 
 ## Objective / Update Rule
 
@@ -54,16 +48,16 @@ PDF body method statement (p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Imple
 - **p. 9 / B. Implementation Details - extractive body cue:** 11, human teleoperators can easily achieve all aerial manipulation tasks with little learning and operation cost.
 - **p. 10 / B. Implementation Details - extractive body cue:** After training, wwe choose the policy with the least validation loss to perform 50 evaluation trials.
 - **p. 11 / B. Implementation Details - extractive body cue:** After training through 100,000 epochs, the policy with the least validation loss is selected.
-- **Formal bridge:** whole-body pose/contact/reference state -> joint/whole-body action -> tracking/balance/task objective -> motion/task success and recovery.
+- **Formal bridge:** 말단 상태와 기체·말단의 RGB 영상 → 말단 목표 자세와 결합 기체·팔 동역학 → ACT의 목표 말단 자세와 MPC의 기체·팔 명령.
 - **Equation/algorithm anchors:** p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 10 (B. Implementation Details), p. 11 (B. Implementation Details).
 
 ## Variables and Parameters
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | After, train, joint, space, ACT, policy, same, training, setting, ee-centric, except, end-effector, pose, observation | proprioception, reference pose/motion, visual or language command | body cue; exact tensor/frame verify |
-| State/latent | After, train, joint, space, ACT, policy, same, training, setting, ee-centric | whole-body pose, balance/contact state와 skill/mode | body cue; notation verify |
-| Action/output | framework, consists, fully-actuated, hexarotor, DoF, robotic, end-effector-centrie, whole-body, model, predictive | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
+| Input/observation | After, train, joint, space, ACT, policy, same, training, setting, ee-centric, except, end-effector, pose, observation | 말단 상태와 기체·말단의 RGB 영상 | body cue; exact tensor/frame verify |
+| State/latent | After, train, joint, space, ACT, policy, same, training, setting, ee-centric | 말단 목표 자세와 결합 기체·팔 동역학 | body cue; notation verify |
+| Action/output | framework, consists, fully-actuated, hexarotor, DoF, robotic, end-effector-centrie, whole-body, model, predictive | ACT의 목표 말단 자세와 MPC의 기체·팔 명령 | body cue; unit/decoder verify |
 | Objective/constraint | MPC, formulation, minimizes, cost, function, over, finite, time, horizon, while | tracking/balance/task objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,16 +69,16 @@ PDF body method statement (p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Imple
 - **p. 8 / B. Implementation Details - extractive body cue:** ‘To further analyze the contribution of the L adaptive control, specifically its effectiveness in handling model mismatch and interaction disturbance, we visualized the base external ...
 - **p. 2 / 1. Iyrropuction - extractive body cue:** The framework consists of a versatile aerial manipulation platform capable ‘of executing multiple tasks, a policy-agnostic controller that precisely tracks the target end-effector state, and ...
 - **p. 3 / C. Teleportation and Imitation Learning - extractive body cue:** the Human teleoperation of learned autonemnous policy. sends the target eadetfector state to eecentic MPC, which then generates
-- **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
+- **Normalized interface:** observation=말단 상태와 기체·말단의 RGB 영상; state=말단 목표 자세와 결합 기체·팔 동역학; output/action=ACT의 목표 말단 자세와 MPC의 기체·팔 명령.
 
 ## Temporal and Runtime Contract
 
-| Contract | Generic domain prior | PDF body cue | Unresolved detail |
-|---|---|---|---|
-| Horizon | reference motion/skill horizon과 high-frequency whole-body control horizon이 분리된다. | ‘The optimal control problem in the ee-centric MPC is implemented using ACADOS [51] with a 25ms discretisation step and a 2.5s constant ... | episode/sequence/action-chunk boundary |
-| Rate / latency | motion policy/WBC/torque loop의 계층별 rate; numeric value 확인 필요. | Horizon Length Horizoa Steps NV State Cost Qy Rotation Cost Qe. | Hz/fps, inference time and control rate |
-| Memory | body pose, contact, reference/history와 fall/recovery state. | not stated or recoverable in the selected PDF body | window and reset |
-| Compute | high-DOF policy, retargeting과 inverse-dynamics/QP solve가 latency를 결정한다. | ‘The optimal control problem in the ee-centric MPC is implemented using ACADOS [51] with a 25ms discretisation step and a 2.5s constant ... | hardware, batch and throughput |
+| Contract | PDF body cue | Unresolved detail |
+|---|---|---|
+| Horizon | ‘The optimal control problem in the ee-centric MPC is implemented using ACADOS [51] with a 25ms discretisation step and a 2.5s constant ... | episode/sequence/action-chunk boundary |
+| Rate / latency | Horizon Length Horizoa Steps NV State Cost Qy Rotation Cost Qe. | Hz/fps, inference time and control rate |
+| Memory | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | ‘The optimal control problem in the ee-centric MPC is implemented using ACADOS [51] with a 25ms discretisation step and a 2.5s constant ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -100,11 +94,11 @@ PDF body method statement (p. 7 (B. EE-Centrie Policy Learning), p. 10 (B. Imple
 
 ## Evaluation Link
 
-| Method component | Evaluation evidence to inspect | PDF anchor |
+| 평가 근거 | 원문에서 추출한 내용 | 원문 위치 |
 |---|---|---|
-| Reference / embodiment interface | Some work also showed amazing results, achieving high-speed grasping, or grasping moving objects [50], but sacrificed payload capacity or precision due to ... | p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility) |
-| Balance-aware whole-body execution | 4, compared with our method (blue), the baseline wo. | p. 8 (B. Implementation Details), p. 7 (A. Experimental Setup) |
-| Recovery / adaptation | improvements can be achieved through more accurate system modeling and higher-precision hardware to enhance tracking accuracy. | p. 9 (B. Implementation Details), p. 10 (B. Implementation Details) |
+| 원문 대조 | Some work also showed amazing results, achieving high-speed grasping, or grasping moving objects [50], but sacrificed payload capacity or precision due to ... | p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility) |
+| 원문 대조 | 4, compared with our method (blue), the baseline wo. | p. 8 (B. Implementation Details), p. 7 (A. Experimental Setup) |
+| 원문 대조 | improvements can be achieved through more accurate system modeling and higher-precision hardware to enhance tracking accuracy. | p. 9 (B. Implementation Details), p. 10 (B. Implementation Details) |
 
 ## Failure and Ablation Link
 

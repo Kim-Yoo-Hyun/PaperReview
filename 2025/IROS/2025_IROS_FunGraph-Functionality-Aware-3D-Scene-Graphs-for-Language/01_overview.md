@@ -10,7 +10,7 @@
 - Authors: Dennis Rotondi, Fabio Scaparro, Hermann Blum, Kai O. Arras
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision, Graph Reasoning
+- Tags: 3D Vision, Graph Reasoning, 3D Scene Graph, affordance
 - Official paper: https://arxiv.org/abs/2503.07909
 - Full-text retrieval: https://arxiv.org/pdf/2503.07909
 - Code/Project: not identified
@@ -77,3 +77,7 @@ FunGraph는 실내 장면 그래프에서 물체 노드를 기능적 부품까�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (I. INTRODUCTION), p. 3 (III. METHOD), p. 5 (III. METHOD), p. 4 (III. METHOD)이다.
+
+## 검색 태그 근거
+
+실물 모바일 매니퓰레이터의 RGB-D로 물체와 손잡이 같은 기능 부품을 계층적으로 연결한다. 지시문에 맞는 부품과 가능한 상호작용을 찾는 정확도가 주요 평가 대상이다. [원문 3쪽](https://arxiv.org/pdf/2503.07909#page=3) · [원문 7쪽](https://arxiv.org/pdf/2503.07909#page=7)

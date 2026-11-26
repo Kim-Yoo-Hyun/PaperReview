@@ -14,13 +14,13 @@
 
 ## System and Robotics Loop
 
-다중 시점 영상·지시 → 3D-aware VLA 표현 → 양팔 행동.
+여러 시점의 원시 RGB-D, 언어 지시와 로봇 관절 상태로 양팔 관절 궤적을 예측한다.
 
 이 interface에서 관측·내부 상태·학습 target·실행 action을 분리해서 읽는다. 정확한 controller 경계와 timing은 아래 질문으로 확인한다.
 
 ## Assumptions to Verify — Researcher Interpretation
 
-학습 depth 정답 비용, 추론 depth 필요 여부, unseen camera/object 전이.
+깊이 교사 정답 생성 비용과 새로운 시점·물체에서의 일반화.
 
 해당 조건을 실제 논문의 가정으로 확정하려면 formulation과 experiment를 대조해야 한다.
 

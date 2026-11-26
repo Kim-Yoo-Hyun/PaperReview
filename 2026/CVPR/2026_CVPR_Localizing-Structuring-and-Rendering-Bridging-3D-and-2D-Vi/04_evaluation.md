@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** RLBench·실물 팔의 가림 및 정밀 조작.
+- **Input boundary:** 언어 지시와 보정된 다중 RGB-D 점군.
+- **Output/decision under evaluation:** 말단의 위치·회전 및 그리퍼 행동.
+- **Primary target:** 조작 과제의 성공률.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Simulation Results (p. 7); 4.2. Real-World Deployment Results (p. 7).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 8 (Figure/Table caption), p. 7 (4.1. Simulati
 |---|---|---|---|
 | Robot/hardware/simulator | Real-World Deployment Situation. lation heatmaps Qcoarse, world-aligned cube markers with adaptive sizing (ℓcube = 10-15cm, scaled to 0.8× object size for small targets); (3) ... | embodiment, simulator version and control stack | p. 7 (4. Experiments), p. 7 (4. Experiments) |
 | Task/environment | Real-world: success rate, translation/rotation error, 20 trials/task. | reset, timeout, object/scene variation | p. 7 (4. Experiments), p. 8 (4.3. Ablation Studies) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 3 (3.1. Localizing Coarse Target Region), p. 2 (1. Introduction) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 6 (3.4. Fine-Grained Action Prediction), p. 2 (1. Introduction) |
+| Observation/sensor | 언어 지시와 보정된 다중 RGB-D 점군 | calibration, preprocessing, privileged input | p. 3 (3.1. Localizing Coarse Target Region), p. 2 (1. Introduction) |
+| Output/decision | 말단의 위치·회전 및 그리퍼 행동 | action frame, controller and termination | p. 6 (3.4. Fine-Grained Action Prediction), p. 2 (1. Introduction) |
 
 ## Metrics and Success Definition
 

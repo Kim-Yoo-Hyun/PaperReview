@@ -10,7 +10,7 @@
 - Authors: Yunsoo Kim, Changki Sung, Dasol Hong, Hyun Myung
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision, event camera, camera pose
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ E2EGS는 카메라 자세가 주어지지 않은 이벤트 스트림의 반복�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | These volumetric representation methods typically take camera poses and 2D views as input, leveraging multiview images to learn implicit or explicit 3D scene representations. | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (1. Introduction), p. 4 (3.2. Robust edge detection with patch-based tem) |
-| State/latent | volumetric, representation, methods, typically, take, camera, poses, views, input, leveraging, multiview, images | geometry, map, object/relationship state | p. 1 (1. Introduction), p. 4 (3.2. Robust edge detection with patch-based tem), p. 1 (1. Introduction) |
-| Output/action | Edges with incorrectly estimated depth in previous frames can be identified and removed based on their inconsistency with current observations, ensuring only geometrically consistent edges guide subsequent Gaussian initialization and re ... | point map, pose, scene graph, affordance 또는 query result | p. 4 (3.2. Robust edge detection with patch-based tem), p. 1 (1. Introduction), p. 3 (3.1. Framework overview) |
-| Objective/outcome | During reconstruction, an edge-guided loss spatially weights the photometric error based on edge confidence, prioritizing optimization at geometrically salient boundaries (Sec. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3.1. Framework overview), p. 3 (3.1. Framework overview), p. 4 (3.2. Robust edge detection with patch-based tem) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 시간 구간별로 누적한 이벤트 스트림 |
+| 표현 | 반복 관측된 경계와 가우시안 지도 |
+| 출력 | 카메라 궤적과 경계 영상 |
+| 평가 | 합성·실제 이벤트 자료의 궤적·재구성 정확도 |
+
+[방법 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=3) · [평가 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -80,3 +82,7 @@ E2EGS는 카메라 자세가 주어지지 않은 이벤트 스트림의 반복�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Edge-guided 3D reconstruction), p. 4 (3.1. Framework overview)이다.
+
+## 검색 태그 근거
+
+이벤트 누적에서 얻은 장면 경계를 이용해 가우시안과 카메라 궤적을 함께 복원한다. 합성 Replica와 실제 TUM-VIE의 이벤트 입력을 사용했고 RGB는 실행 입력으로 요구하지 않는다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=3) · [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=4) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_E2EGS_Event-to-Edge_Gaussian_Splatting_for_Pose-Free_3D_Reconstruction_CVPR_2026_paper.pdf#page=6)

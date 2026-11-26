@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** physics simulation의 robot/environment model.
-- **Input boundary:** simulated state, geometry, contact와 control input.
-- **Output/decision under evaluation:** simulation step, trajectory 또는 environment query.
-- **Primary target:** physical plausibility, speed, reproducibility와 task utility.
+- **Target system/task:** 모의 광학 촉각 센서와 실물 DIGIT 대조.
+- **Input boundary:** 시뮬레이션의 접촉 형상 및 센서의 광학 설정.
+- **Output/decision under evaluation:** 모의 촉각 영상, 하위 모델의 파지 안정성·자세 추정.
+- **Primary target:** 센서 영상 비교와 과제별 예측·제어 성능.
 - **Detected evaluation headings:** IV. SIMULATED EXPERIMENTS (p. 5); V. SIM2REAL EXPERIMENTS (p. 7).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMU
 |---|---|---|---|
 | Robot/hardware/simulator | The vertical dashed line shows the largest dataset collected on real robot [6]. | embodiment, simulator version and control stack | p. 6 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS) |
 | Task/environment | We choose these two tasks based on previous works with real robots[6], [27] for better comparison between simulated and real environments. | reset, timeout, object/scene variation | p. 5 (IV. SIMULATED EXPERIMENTS), p. 5 (IV. SIMULATED EXPERIMENTS) |
-| Observation/sensor | simulated state, geometry, contact와 control input | calibration, preprocessing, privileged input | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple) |
-| Output/decision | simulation step, trajectory 또는 environment query | action frame, controller and termination | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Observation/sensor | 시뮬레이션의 접촉 형상 및 센서의 광학 설정 | calibration, preprocessing, privileged input | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple) |
+| Output/decision | 모의 촉각 영상, 하위 모델의 파지 안정성·자세 추정 | action frame, controller and termination | p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
 
 ## Metrics and Success Definition
 

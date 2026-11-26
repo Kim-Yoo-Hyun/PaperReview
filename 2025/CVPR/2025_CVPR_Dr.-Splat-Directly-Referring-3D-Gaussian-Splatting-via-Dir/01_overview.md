@@ -78,3 +78,7 @@ Dr. Splat은 언어 특징을 3D 가우시안에 직접 연결해 텍스트로 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction)이다.
+
+## 검색 태그 근거
+
+CLIP 영역 특징을 여러 뷰에서 가우시안에 직접 등록하고 압축해 저장한다. 텍스트 질의에 대응하는 영역을 찾아 분할 성능과 계산 비용을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Jun-Seong_Dr._Splat_Directly_Referring_3D_Gaussian_Splatting_via_Direct_Language_CVPR_2025_paper.pdf#page=7)

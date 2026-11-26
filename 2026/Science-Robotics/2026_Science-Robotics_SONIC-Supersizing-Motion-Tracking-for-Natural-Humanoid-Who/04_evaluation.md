@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-DoF humanoid whole-body dynamics와 contacts.
-- **Input boundary:** proprioception, reference pose/motion, visual or language command.
-- **Output/decision under evaluation:** joint/whole-body action, motion target 또는 task trajectory.
-- **Primary target:** tracking, balance, skill/task success와 recovery.
+- **Target system/task:** 실물 G1과 모의 휴머노이드의 전신 동작 추종.
+- **Input boundary:** 고유수용 상태와 인코딩한 동작 명령.
+- **Output/decision under evaluation:** 관절 제어 명령.
+- **Primary target:** 추종 오차·생존율 및 실물 명령 추종.
 - **Detected evaluation headings:** 2. Results (p. 3); 3.1. Humanoid Motion Dataset (p. 13).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 19 (Figure/Table caption), p. 4 (Figure/Table
 |---|---|---|---|
 | Robot/hardware/simulator | 14,513 701 253 Dance 9,689 504 485 Injured 9,386 1,167 528 Action / Tool use 9,920 228 322 Others (10+ main cat.) 63,583 429 ... | embodiment, simulator version and control stack | p. 13 (3.1. Humanoid Motion Dataset), p. 3 (2.1. Motion Tracking) |
 | Task/environment | From our motion-capture dataset, we constructed two held-out splits. | reset, timeout, object/scene variation | p. 3 (2.1. Motion Tracking), p. 5 (2.1. Motion Tracking) |
-| Observation/sensor | proprioception, reference pose/motion, visual or language command | calibration, preprocessing, privileged input | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking) |
-| Output/decision | joint/whole-body action, motion target 또는 task trajectory | action frame, controller and termination | p. 16 (3.3. Generative Kinematic Motion Planner), p. 16 (3.2. Universal Humanoid Motion Tracking) |
+| Observation/sensor | 고유수용 상태와 인코딩한 동작 명령 | calibration, preprocessing, privileged input | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking) |
+| Output/decision | 관절 제어 명령 | action frame, controller and termination | p. 16 (3.3. Generative Kinematic Motion Planner), p. 16 (3.2. Universal Humanoid Motion Tracking) |
 
 ## Metrics and Success Definition
 

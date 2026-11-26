@@ -45,12 +45,14 @@ LangRef3DGS는 가려지거나 일부만 보이는 RGB-D 관측을 연속적인 
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Our proposed LangRef3D3S enables robust languageguided 3D segmentation from partial RGB-D observations. | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (1. Introduction), p. 1 (1. Introduction) |
-| State/latent | LangRef3D3S, enables, robust, languageguided, segmentation, partial, RGB-D, observations, Despite, significant, missing, data | geometry, map, object/relationship state | p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction) |
-| Output/action | Despite significant missing data (e.g., the stuffed bear, plate, and cookies are partially unobserved), our method accurately segments objects of varying scales-from the large tea glass to the small, challenging cookies-demonstrating it ... | point map, pose, scene graph, affordance 또는 query result | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4. Method) |
-| Objective/outcome | Let F ∈RN×d denote the semantic features of N Gaussian points, and let ∇FL be the corresponding gradient matrix of the training loss L. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (4.3. Gradient Low-Rank Mechanism for Semantic), p. 6 (4.4. Detection of Invisible Classes), p. 5 (4.3. Gradient Low-Rank Mechanism for Semantic) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 부분 RGB-D 관측과 자연어 설명 |
+| 표현 | 가우시안 임베딩 및 객체 군집 |
+| 출력 | 참조 영역의 3D 분할 |
+| 평가 | 가림 및 제한 관측 조건의 영역 분할 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=3) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -80,3 +82,7 @@ LangRef3DGS는 가려지거나 일부만 보이는 RGB-D 관측을 연속적인 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (4.3. Gradient Low-Rank Mechanism for Semantic), p. 5 (4.4. Detection of Invisible Classes)이다.
+
+## 검색 태그 근거
+
+연속 가우시안 임베딩을 부분 RGB-D에서 만들고 층별 특징과 군집 지표를 사용해 텍스트가 참조하는 영역을 분할한다. 가림 및 관측 희소성에 따른 결과를 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=3) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Ye_LangRef3DGS_Natural_Language-Guided_3D_Referential_Segmentation_from_Partial_Observations_via_CVPR_2026_paper.pdf#page=8)

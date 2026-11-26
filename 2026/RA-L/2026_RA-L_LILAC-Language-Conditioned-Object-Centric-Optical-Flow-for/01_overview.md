@@ -35,6 +35,10 @@ Flow 품질 benchmark와 자유형 지시의 실제 조작을 평가한다. IEEE
 
 근거: [공식 paper/abstract](https://ieeexplore.ieee.org/abstract/document/11478289) · [저자 project](https://lilac-75srg.kinsta.page/).
 
+## 검색 태그 근거
+
+LILAC은 RGB와 언어 지시로 물체의 2D 점 이동을 자기회귀 예측한다. 이후 깊이와 카메라 파라미터를 써서 역투영하고 팔의 6자유도 궤적으로 변환한다. 광류 예측과 3D 실행의 입력이 다르다. [원문 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=3) · [원문 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11478289#page=7)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 Flow/geometry를 action으로 연결하는 REFERENCE다. 현재 frozen VLA 검색 실험의 직접 prerequisite는 아니므로 NEXT를 늘리기보다 표현·개방루프 비교가 필요할 때 찾도록 둔다.

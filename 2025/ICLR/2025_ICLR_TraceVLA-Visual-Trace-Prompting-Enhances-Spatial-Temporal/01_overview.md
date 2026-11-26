@@ -10,7 +10,7 @@
 - Authors: Ruijie Zheng, Yongyuan Liang, Shuaiyi Huang, Jianfeng Gao, Hal Daumé III, Andrey Kolobov, Furong Huang, Jianwei Yang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Robotics, 3D Vision
+- Tags: VLA, Robotics, tracking, prompting
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/8667f264f88c7938a73a53ab01eb1327-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/8667f264f88c7938a73a53ab01eb1327-Paper-Conference.pdf
 - Code/Project: not identified

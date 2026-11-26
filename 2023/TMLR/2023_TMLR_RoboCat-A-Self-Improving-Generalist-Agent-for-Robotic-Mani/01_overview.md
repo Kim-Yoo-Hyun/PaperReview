@@ -10,7 +10,7 @@
 - Authors: Konstantinos Bousmalis, Giulia Vezzani, Dushyant Rao, Coline Devin, Alex X. Lee, Maria Bauza, Todor Davchev, Yuxiang Zhou, Agrim Gupta, Akhil Raju, Antoine Laurens, Claudio Fantacci, Valentin Dalibard, Martina Zambelli, Murilo Martins, Rugile Pevceviciute, Michiel Blokzijl, Misha Denil, Nathan Batchelor, Thomas Lampe, Emilio Parisotto, Konrad Żołna, Scott Reed, Sergio Gómez Colmenarejo, Jon Scholz, Abbas Abdolmaleki, Oliver Groth, Jean-Baptiste Regli, Oleg Sushkov, Tom Rothörl, José Enrique Chen, Yusuf Aytar, Dave Barker, Joy Ortiz, Martin Riedmiller, Jost Tobias Springenberg, Raia Hadsell, Francesco Nori, Nicolas Heess
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, generalist policy, cross-embodiment, self-improvement, robot manipulation
+- Tags: Robotics, generalist policy, cross-embodiment, self-improvement, robot manipulation, goal-conditioned policy
 - Official paper: https://arxiv.org/abs/2306.11706
 - Venue verification: https://openreview.net/pdf/2a72d6fcd3472bdf5725a3e011fe30f7ad1c46e0.pdf
 - Full-text retrieval: https://arxiv.org/pdf/2306.11706

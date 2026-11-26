@@ -14,7 +14,7 @@
 - Tags: Robotics, VLA, Flow Matching, generalist policy, cross-embodiment, dexterous manipulation
 - Official paper: https://www.roboticsproceedings.org/rss21/p010.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p010.pdf
-- Code/Project: https://www.pi.website/research/pi0
+- Code/Project: https://www.pi.website/blog/pi0
 - Paper type: method
 - Source audit: full-text PDF body checked on 2026-09-03 (17 pages; tesseract OCR fallback; title-token overlap first two pages=1.0)
 

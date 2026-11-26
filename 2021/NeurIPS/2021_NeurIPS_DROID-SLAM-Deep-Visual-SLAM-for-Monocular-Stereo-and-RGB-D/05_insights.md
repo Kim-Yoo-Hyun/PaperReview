@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `Robotics-enabling 3D perception`; tags: `SLAM, RGB-D, geometry`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** 3D Gaussian Splatting for Real-Time Radiance Field Rendering (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

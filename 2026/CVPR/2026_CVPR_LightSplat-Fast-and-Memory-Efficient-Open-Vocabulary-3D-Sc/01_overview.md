@@ -45,12 +45,14 @@ LightSplat은 각 가우시안의 의미를 작은 색인으로 기록해 별도
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | To achieve efficient semantic injection, we assign 2-byte mask indices instead of full language features to Gaussians that contribute meaningfully in the image space: Gk = n gn | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (3.3. Indexed Feature Injection), p. 1 (1. Introduction) |
-| State/latent | achieve, efficient, semantic, injection, assign, byte, mask, indices, instead, full, language, features | geometry, map, object/relationship state | p. 4 (3.3. Indexed Feature Injection), p. 1 (1. Introduction), p. 2 (1. Introduction) |
-| Output/action | With growing demand for natural user interactions within 3D environments, open-vocabulary 3D scene understanding has emerged as an important task [1, 9, 11, 16, 19, 21, 26]. | point map, pose, scene graph, affordance 또는 query result | p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Overview) |
-| Objective/outcome | To assign semantics only to Gaussians that significantly contribute to the rendered image, we compute their pixel-wise contributions using alphablending weights from the rendering equation [10]. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3.3. Indexed Feature Injection), p. 4 (3.2. Index-Feature Mapping) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 다중 뷰 RGB, 가우시안 장면과 텍스트 질의 |
+| 표현 | 군집 ID 및 공유 특징 항목 |
+| 출력 | 조회에 대응하는 의미 영역 |
+| 평가 | 분할 정확도, 의미 등록 시간과 질의 지연 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=3) · [원문 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=5) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=6)
 
 ## Main Claims and Actual Contribution
 
@@ -74,3 +76,7 @@ LERF-OVS 표 1의 4.2초는 특징 증류 시간이다. 입력은 여러 뷰의 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Overview), p. 3 (3.1. Overview)이다.
+
+## 검색 태그 근거
+
+다중 뷰 영상에서 얻은 마스크를 일관된 3D 군집에 연결하고, 재구성된 가우시안에 압축한 의미 색인을 붙인다. 논문의 의미 등록 시간과 질의 지연은 표에서 별도로 측정한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=3) · [원문 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=5) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Bang_LightSplat_Fast_and_Memory-Efficient_Open-Vocabulary_3D_Scene_Understanding_in_Five_CVPR_2026_paper.pdf#page=6)

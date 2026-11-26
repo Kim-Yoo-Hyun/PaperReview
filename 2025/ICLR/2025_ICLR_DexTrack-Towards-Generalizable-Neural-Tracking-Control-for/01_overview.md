@@ -10,7 +10,7 @@
 - Authors: Xueyi Liu, Jianibieke Adalibieke, Qianwei Han, Yuzhe Qin, Li Yi
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, dexterous manipulation, tracking control, human demonstration
+- Tags: Robotics, dexterous manipulation, tracking control, human demonstration, Reinforcement Learning
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/d5a1f97d2b922da92e880d13b7d2bf02-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2502.09614
 - Code/Project: https://meowuu7.github.io/DexTrack/

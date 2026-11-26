@@ -10,7 +10,7 @@
 - Authors: Jingyi Pan, Dan Xu, Qiong Luo
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Diffusion, Generation, 3D Vision
+- Tags: Diffusion, Generation, 3D Vision, 3D reconstruction
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -74,3 +74,7 @@ DiGA3D는 여러 시점에서 가려진 영역을 채울 때 확산 모델이 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Problem formulation and overview), p. 3 (3.1. Preliminary), p. 4 (3.4. Texture-Geometry Guided SDS Loss)이다.
+
+## 검색 태그 근거
+
+텍스트로 지정한 제거·재질 변경·교체 영역을 여러 뷰에서 일관되게 채운다. 확산 모델의 외관과 기하 정보를 전파해 가려진 영역의 새로운 3D 표현을 최적화한다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_DiGA3D_Coarse-to-Fine_Diffusional_Propagation_of_Geometry_and_Appearance_for_Versatile_ICCV_2025_paper.pdf#page=7)

@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Additionally, existing methods are primarily trained in closed-vocabulary settings that lack the diversity to encompass the rich semantics and variaThis ICCV paper ... | mapped 3D environment과 mobile robot | body wording is the source claim |
-| Observation / input | Based on g, we design MAP strategy to predict action probabilities by aggregating spatial-semantic cues from candidate waypoints V, guided by the ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF body |
-| State / latent | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
-| Output / action | navigation, step, agent, receives, degree, panoramic, observation, comprising | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
-| Target outcome | goal reach with collision-free execution | goal reach, safety, localization error와 replanning latency | metric/denominator are in 04 evidence |
+| Target problem | Additionally, existing methods are primarily trained in closed-vocabulary settings that lack the diversity to encompass the rich semantics and variaThis ICCV paper ... | 실내에서의 지시 조건 내비게이션 | body wording is the source claim |
+| Observation / input | Based on g, we design MAP strategy to predict action probabilities by aggregating spatial-semantic cues from candidate waypoints V, guided by the ... | RGB-D 파노라마와 언어 지시 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | design, MAP, strategy, predict, action, probabilities, aggregating, spatial-semantic, cues, candidate | 의미별로 묶은 3D 가우시안 지도 | notation and tensor shape require body check |
+| Output / action | navigation, step, agent, receives, degree, panoramic, observation, comprising | 후보 경로 노드의 선택 | exact unit/frame/decoder require body check |
+| Target outcome | goal reach with collision-free execution | REVERIE·R2R의 경로 성공 및 경로 효율 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

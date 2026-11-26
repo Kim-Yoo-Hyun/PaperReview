@@ -57,9 +57,9 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model, Goal-image, Reference, Figure, Given | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | summarize, main, contributions, follows, Conceptually, introduce, Action, Chain, Thought, ACoT | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model, Goal-image, Reference, Figure, Given | 영상·언어 지시 및 학습 시의 시연 행동 | body cue; exact tensor/frame verify |
+| State/latent | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model | 명시적 기준 행동 궤적과 암시적 행동 특징 | body cue; notation verify |
+| Action/output | summarize, main, contributions, follows, Conceptually, introduce, Action, Chain, Thought, ACoT | 최종 행동 시퀀스 | body cue; unit/decoder verify |
 | Objective/constraint | entire, framework, optimized, under, standard, flow-matching, mean-squared, error, MSE, objective | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -71,7 +71,7 @@ PDF body method statement (p. 4 (3.4. Action-Guided Prediction), p. 4 (3.3. Impl
 - **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** Formally, given visual observation ot and language instruction l, a pre-trained VLM encodes them into a contextual key-value cache: (K^ {\t e x t { ...
 - **p. 3 / 3. Methodology - extractive body cue:** We conclude by illustrating the policy prediction strategy that effectively integrates this action guidance during policy learning (Sec.
 - **p. 4 / 3.2. Explicit Action Reasoner - extractive body cue:** 2 (a), generating kinematically plausible action reference as explicit action-space guidance gex action for downstream action policy.
-- **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
+- **Normalized interface:** observation=영상·언어 지시 및 학습 시의 시연 행동; state=명시적 기준 행동 궤적과 암시적 행동 특징; output/action=최종 행동 시퀀스.
 
 ## Temporal and Runtime Contract
 

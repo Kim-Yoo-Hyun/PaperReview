@@ -10,7 +10,7 @@
 - Authors: Minghan Qin, Wanhua Li, Jiawei Zhou, Haoqian Wang, Hanspeter Pfister
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, Vision-Language, grounding
+- Tags: Gaussian Splatting, Vision-Language, grounding, open-vocabulary
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ LangSplat은 3D 가우시안에 언어 특징을 담아 자연어로 장면 속 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.3. 3D Gaussian Splatting for Language Fields), p. 4 (3.2. Learning Hierarchical Semantics with SAM), p. 3 (3. Proposed Approach)이다.
+
+## 검색 태그 근거
+
+포즈가 알려진 다중 뷰 RGB의 SAM 마스크와 CLIP 특징을 가우시안에 기록한다. 텍스트 질의에 해당하는 영역을 렌더링해 여러 크기의 참조 물체를 평가했다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Qin_LangSplat_3D_Language_Gaussian_Splatting_CVPR_2024_paper.pdf#page=7)

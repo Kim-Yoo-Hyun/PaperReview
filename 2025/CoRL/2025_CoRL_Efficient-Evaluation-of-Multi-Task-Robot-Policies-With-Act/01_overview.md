@@ -7,7 +7,7 @@
 - Category: Benchmarks and Datasets
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: robot-evaluation, Benchmark, policy-comparison
+- Tags: robot-evaluation, Benchmark, policy-comparison, VLA
 - Aliases: Active Experiment Selection
 - Official paper: https://proceedings.mlr.press/v305/anwar25a.html
 - Venue verification: https://proceedings.mlr.press/v305/anwar25a.html
@@ -34,6 +34,10 @@ Policy·task·prior·관측 결과 → 다음 평가 선택.
 실제 및 simulated 평가 자료를 이용한 효율 비교를 보고한다.
 
 근거: [공식 paper/abstract](https://proceedings.mlr.press/v305/anwar25a.html).
+
+## 검색 태그 근거
+
+과제 설명의 임베딩과 실험 비용을 이용해 다음 정책·과제 평가를 선택한다. 실물 근거는 HAMSTER·OpenVLA가 이미 수집한 평가 결과를 이용한 재분석이고, 시뮬레이션에서는 Meta-World 자료를 사용했다. [원문 4쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/anwar25a/anwar25a.pdf#page=4) · [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v305/d42e9e994b3821cca9121500c717f9a87c7cb4f6/assets/anwar25a/anwar25a.pdf#page=5)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

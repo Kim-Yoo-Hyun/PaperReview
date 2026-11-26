@@ -10,7 +10,7 @@
 - Authors: Chenfeng Xu, Huan Ling, Sanja Fidler, Or Litany
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Diffusion, Generation, 3D Vision
+- Tags: Diffusion, 3D Vision, 3D detection
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -75,3 +75,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Diffusion Model as a Feature Extractor)이다.
+
+## 검색 태그 근거
+
+기하 조건부 새 시점 합성으로 Stable Diffusion의 특징을 보강한 뒤 단일 RGB 영상에서 물체의 3D 경계 상자를 예측한다. Omni3D의 ARKitScenes 자료에서 비교했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Xu_3DiffTection_3D_Object_Detection_with_Geometry-Aware_Diffusion_Features_CVPR_2024_paper.pdf#page=6)

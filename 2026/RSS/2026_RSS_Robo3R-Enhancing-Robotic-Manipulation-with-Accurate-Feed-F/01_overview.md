@@ -14,6 +14,7 @@
 - Venue verification: https://roboticsproceedings.org/rss22/p056.html
 - Code/Project: https://yangsizhe.github.io/robo3r/
 - Code: https://github.com/InternRobotics/Robo3R
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 6, 8쪽](https://roboticsproceedings.org/rss22/p056.pdf#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,9 @@ TASK-GEOMETRY가 일반 재구성 정확도 개선의 반복인지 판단할 직
 ## Verification Boundary
 
 Robot state privilege·similarity transform·훈련 물체 중복·latency을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- Robo3R의 3D 예측 평가 진입점 · eval.py [배포 파일](https://raw.githubusercontent.com/InternRobotics/Robo3R/10fbd8efe40c8a1f4539f2c2c68f649e4e2bff7e/eval.py)
+- Robo3R 기하 추정기 체크포인트 · franka_wQpos.pth [배포 파일](https://huggingface.co/yangsizhe/Robo3R/resolve/437d1a3638a33195aae77d5c98b64eaaa151f7db/franka_wQpos.pth)
+- Robo3R의 합성 재구성 자료 · 1kScenes_in-gripper_test/1kScenes_in-gripper_test.tar.gz [배포 파일](https://huggingface.co/datasets/yangsizhe/Robo3R/resolve/43a317341c6aa584f303dffc64df942ee92a02b9/1kScenes_in-gripper_test/1kScenes_in-gripper_test.tar.gz)

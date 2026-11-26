@@ -22,11 +22,11 @@ PDF body framing (p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 1 (1 INTRODUCTION
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, it can be exceptionally difficult to design a style-reward 𝑟𝑆 that leads a character to learn naturalistic behaviors, or behaviors that ... | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | 6.2 Network Architecture Each policy 𝜋is modeled by a neural network that maps a given state s𝑡and goal g to a Gaussian ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
-| Output / action | before, state, transition, provided, input, discriminator, first, apply | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
-| Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
+| Target problem | However, it can be exceptionally difficult to design a style-reward 𝑟𝑆 that leads a character to learn naturalistic behaviors, or behaviors that ... | 물리 시뮬레이션의 캐릭터 전신 동작 | body wording is the source claim |
+| Observation / input | 6.2 Network Architecture Each policy 𝜋is modeled by a neural network that maps a given state s𝑡and goal g to a Gaussian ... | 캐릭터 상태·과제 목표와 학습용 참조 동작 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian | 상태 전이를 평가하는 동작 판별기 | notation and tensor shape require body check |
+| Output / action | before, state, transition, provided, input, discriminator, first, apply | 저수준 PD 제어기에 보낼 관절 목표 | exact unit/frame/decoder require body check |
+| Target outcome | motion/task success and recovery | 과제 보상 및 생성한 움직임의 스타일 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

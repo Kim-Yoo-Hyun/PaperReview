@@ -61,9 +61,9 @@ PDF body method statement (p. 2 (3) Cross-Scene), p. 4 (4.1. Proposed Framework)
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit, notable, limitations, spatiotemporal, perception | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | contributions, summarized, follows, ConsisVLA-4D, efficient, innovative, framework, advances, spatiotemporal, consistency | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit, notable, limitations, spatiotemporal, perception | 다중 시점 RGB와 언어 지시 | body cue; exact tensor/frame verify |
+| State/latent | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit | 시점 간 대응과 학습 중 미래 물체·깊이 특징 | body cue; notation verify |
+| Action/output | contributions, summarized, follows, ConsisVLA-4D, efficient, innovative, framework, advances, spatiotemporal, consistency | 병렬 디코딩한 행동 시퀀스 | body cue; unit/decoder verify |
 | Objective/constraint | During, process, initialized, action, tokens, decoded, parallel, yield, optimized, loss | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 2 (3) Cross-Scene), p. 4 (4.1. Proposed Framework)
 - **p. 2 / 3) Cross-Scene - extractive body cue:** During inference, these pre-learned knowledge sets account for less than 10% of the observation-instruction sequence, enabling efficient 4D visual reasoning.
 - **p. 5 / 4.4. Cross-Scene Spatiotemporal Consistency - extractive body cue:** In the SC-Attn module, each dynamic token 0dyn-4D i is independently guided by its corresponding object representation zobj-3D i and the instruction embedding t: \ ...
 - **p. 3 / 3. Preliminary & Problem Definition - extractive body cue:** Analogous to how the human retina captures 2D images while the brain integrates spatial cues and predicts future states during manipulation, VLA models should inherit ...
-- **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
+- **Normalized interface:** observation=다중 시점 RGB와 언어 지시; state=시점 간 대응과 학습 중 미래 물체·깊이 특징; output/action=병렬 디코딩한 행동 시퀀스.
 
 ## Temporal and Runtime Contract
 

@@ -10,7 +10,7 @@
 - Authors: Mark He Huang, Lin Geng Foo, Christian Theobalt, Ying Sun, De Wen Soh
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision, camera pose
 - Official paper: https://neurips.cc/virtual/2025/poster/117447
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/44bac5b848f95099a89b1d142a8f53b5-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2510.20605
@@ -81,3 +81,7 @@ OnlineSplatter는 단안 영상에서 자유롭게 움직이는 물체를 온라
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (3 Method), p. 5 (3 Method)이다.
+
+## 검색 태그 근거
+
+미보정 RGB 스트림에 물체 마스크를 적용하고 과거 관측을 객체 메모리에서 검색해 가우시안과 카메라 정합을 온라인으로 갱신한다. 자유롭게 움직이는 물체의 영상 재구성을 평가한다. [원문 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/44bac5b848f95099a89b1d142a8f53b5-Paper-Conference.pdf#page=3) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/44bac5b848f95099a89b1d142a8f53b5-Paper-Conference.pdf#page=7)

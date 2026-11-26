@@ -11,7 +11,7 @@
 - 저자 판본: CVPR 게재본 표제면의 네 번째 저자 Eli Vanderbilt 표기를 반영했다. [표제면](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=1) · [학회 서지](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Generation, 3D scene, Embodied AI
+- Tags: Generation, 3D scene, Embodied AI, simulation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -46,12 +46,14 @@ Holodeck은 자연어로 묘사한 실내 환경을 물체 자산과 공간 제�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Example outputs of HOLODECK-a large language model powered system, which can generate diverse types of environments (arcade, spa, museum), customize for styles (Victorian-style), and understand fine-grained requirements ("has a cat", "f ... | camera/depth stream, pose, map와 language goal | p. 1 (Body text (section not recovered)), p. 4 (3. HOLODECK) |
-| State/latent | Example, outputs, HOLODECK-a, large, language, model, powered, system, generate, diverse, types, environments | robot pose, free-space/semantic map와 local goal | p. 1 (Body text (section not recovered)), p. 4 (3. HOLODECK), p. 2 (Abstract) |
-| Output/action | An LLM prompt is designed for each module with three elements: (1) Task Description: outlines the context and goals of the task; (2) Output Format: specifies the expected structure and type of ... | collision-free trajectory 또는 velocity command | p. 4 (3. HOLODECK), p. 2 (Abstract), p. 2 (1. Introduction) |
-| Objective/outcome | To address the challenge of positioning objects correctly, we prompt GPT-4 to generate spatial relational constraints between objects and then optimize the layout to satisfy those constraints. | goal reach, safety, localization error와 replanning latency | p. 1 (Abstract), p. 2 (1. Introduction), p. 5 (3. HOLODECK) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 자연어 장면 요청과 객체 자산 목록 |
+| 표현 | 공간 배치 및 객체 관계 제약 |
+| 출력 | 상호작용 가능한 AI2-THOR 장면 |
+| 평가 | 장면 선호도와 별도 에이전트의 ObjectNav 전이 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=6) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -70,3 +72,7 @@ Holodeck은 자연어로 묘사한 실내 환경을 물체 자산과 공간 제�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3. HOLODECK), p. 3 (3. HOLODECK), p. 1 (Body text (section not recovered))이다.
+
+## 검색 태그 근거
+
+언어로 방 배치와 공간 제약을 만들고 Objaverse 자산을 배치해 AI2-THOR 장면을 생성한다. 생성 장면으로 별도 내비게이션 에이전트를 학습시켜 NOVELTYTHOR에서 ObjectNav 전이를 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=6) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Holodeck_Language_Guided_Generation_of_3D_Embodied_AI_Environments_CVPR_2024_paper.pdf#page=8)

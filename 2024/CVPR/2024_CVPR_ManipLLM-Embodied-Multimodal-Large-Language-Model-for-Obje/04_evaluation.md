@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** 관절 물체의 접촉 위치와 움직임 결정.
+- **Input boundary:** RGB와 텍스트, 3D 역투영용 깊이와 실행 중 힘 피드백.
+- **Output/decision under evaluation:** 시작 자세 및 조정된 조작 방향.
+- **Primary target:** 시뮬레이션과 실물의 물체 조작 성공.
 - **Detected evaluation headings:** 4. Experiment Results (p. 6); 4.4. Real-world Evaluation (p. 8).
 
 ## Experimental Matrix
@@ -63,8 +63,8 @@ PDF body evaluation/result cue (p. 7 (4.3. Ablation and Analysis), p. 6 (4.1. Tr
 |---|---|---|---|
 | Robot/hardware/simulator | 5, the devised TTA strategy addresses discrepancies arising from real-world hardware configurations. | embodiment, simulator version and control stack | p. 8 (4.4. Real-world Evaluation), p. 6 (4.1. Training Details) |
 | Task/environment | We adopt SAPIEN [31] and the PartNetMobility dataset to set up an interactive environment for our task, with VulkanRenderer of high-efficiency rasterizationbased renderer. | reset, timeout, object/scene variation | p. 6 (4.1. Training Details), p. 8 (4.4. Real-world Evaluation) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 5 (3.2. Active Impedance Adaptation Policy), p. 5 (3.2. Active Impedance Adaptation Policy) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 1 (1. Introduction), p. 4 (3.1. Fine-tuning Strategy) |
+| Observation/sensor | RGB와 텍스트, 3D 역투영용 깊이와 실행 중 힘 피드백 | calibration, preprocessing, privileged input | p. 5 (3.2. Active Impedance Adaptation Policy), p. 5 (3.2. Active Impedance Adaptation Policy) |
+| Output/decision | 시작 자세 및 조정된 조작 방향 | action frame, controller and termination | p. 1 (1. Introduction), p. 4 (3.1. Fine-tuning Strategy) |
 
 ## Metrics and Success Definition
 

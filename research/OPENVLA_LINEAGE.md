@@ -1,6 +1,6 @@
 # OpenVLA 인용 계보
 
-기준 논문은 Moo Jin Kim·Karl Pertsch 등의 **OpenVLA: An Open-Source Vision-Language-Action Model**이다. `pr-0051`, CoRL 2024. VLM을 로봇 시연으로 미세조정해 한 시점의 관측과 지시에서 행동 토큰을 생성한다. 이후 연구에는 이 가중치를 바꾼 논문, 배포 때 출력만 재선택한 논문, 원본 성적을 평가표에 인용한 논문이 모두 있다. [공식 게재본](https://proceedings.mlr.press/v270/kim25c.html)
+Moo Jin Kim·Karl Pertsch 등의 **OpenVLA: An Open-Source Vision-Language-Action Model**(`pr-0051`, CoRL 2024)은 한 시점의 영상과 언어 지시에서 행동 토큰을 예측한다. 아래에는 원문에서 관계를 확인한 선행 8편과 후속 15편을 담았다. [공식 게재본](https://proceedings.mlr.press/v270/kim25c.html)
 
 ## 선행 → 기준 → 후속
 
@@ -18,11 +18,11 @@ Prismatic VLMs · DINOv2 · LoRA                  ┘ 시각언어 백본과 적
                            OpenVLA → OpenVLA-OFT → SimpleVLA-RL
 ```
 
-가지는 각 논문이 **어디를 바꾸었는지** 보여 준다. 직접 계승 여부는 아래 표에 따로 적었다. 예를 들어 같은 추론 가지에서도 ECoT는 OpenVLA로 실험하고, ACoT-VLA는 π0.5에서 출발한다. 같은 학회 연도에 나온 ECoT·V-GPS도 자신의 본문에서 OpenVLA를 사용하므로 후속으로 배치했다.
+가지는 연구 질문으로 묶었다. ECoT는 OpenVLA를 사용하고 같은 추론 가지의 ACoT-VLA는 π0.5에서 출발한다. ECoT·V-GPS는 OpenVLA와 학회 연도가 같지만 본문에 사용 근거가 있다.
 
 ## 확인한 선행 연구
 
-각 행의 관계는 OpenVLA 저자의 설계와 실험에 비추어 붙인 해석이다. 간소 스키마는 제목·첫 저자 또는 팀·발표처·연도·ID·관계·출처를 담는다. 원장에 없는 논문에는 실제 arXiv ID를 썼다. 표의 쪽수는 링크한 판본의 PDF 페이지다. CoRL은 행사 연도를 사용하므로 2024년 행사의 PMLR 서지 연도는 2025로 표시될 수 있다.
+선행 관계는 OpenVLA의 설계와 실험에 근거한 해석이다. 원장 밖 논문은 arXiv ID로 표시한다. 쪽수는 연결한 PDF, CoRL 연도는 행사 기준이다. 2024년 행사 논문의 PMLR 출판 연도는 2025년이다.
 
 | 논문 | 첫 저자·발표 | ID | 관계 | 근거와 적용 범위 | 원문 위치 |
 |---|---|---|---|---|---|
@@ -65,12 +65,12 @@ Prismatic VLMs · DINOv2 · LoRA                  ┘ 시각언어 백본과 적
 
 ## 후속 근거가 희박한 지점
 
-**훈련 혼합을 언제 바꿔야 하는가.** OpenVLA가 마지막 3분의 1에서 DROID를 제거한 절차는 SpatialVLA도 명시적으로 계승했다. 두 논문과 이 표의 후속에서 동일 백본·전체 데이터 예산을 고정하고 DROID의 유지·제거·점진 감량만 바꿔 목표 로봇과 다른 로봇을 함께 비교한 실험은 확인하지 못했다. [해석] 처음부터 훈련을 나눠야 하는 비용이 한 이유일 수 있다. 공간 표현과 훈련 혼합이 함께 바뀐 모델 간 비교로는 제거 시점의 효과를 분리하기 어렵다. [OpenVLA §3.3](https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf#page=5) · [SpatialVLA 훈련 혼합](https://arxiv.org/pdf/2501.15830#page=5)
+**DROID 시연을 언제 제외할 것인가.** SpatialVLA도 OpenVLA처럼 훈련 마지막 3분의 1에서 DROID를 제외했다. 검토한 후속에서는 백본·전체 예산을 고정하고 유지·제거·점진 감량을 목표 로봇과 다른 로봇에서 대조한 실험을 찾지 못했다. [해석] 혼합 시점의 효과를 분리하려면 훈련을 나눠 실행하는 비용이 든다. [OpenVLA §3.3](https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf#page=5) · [SpatialVLA 훈련 혼합](https://arxiv.org/pdf/2501.15830#page=5)
 
-**양자화한 정책의 오류와 느린 제어의 오류를 어떻게 구분하는가.** OpenVLA는 같은 조건에서 한 행동의 실행을 기다리는 제어로 다시 측정했다. 이 방식에서는 8비트 성능이 회복된다. 최근 QuantVLA처럼 저비트 정책을 평가한 후속도 있다. 이번 15편에서는 같은 실물 로봇에서 정밀도와 제어기 대기 방식을 모두 바꿔 원본의 결과가 다른 과제에서도 재현되는지 보여 준 표를 확인하지 못했다. [해석] 이 비교에는 모델 속도뿐 아니라 로봇 제어기의 실제 대기 동작을 맞출 수 있는 장비가 필요하다. 분야 전체에 후속이 없다는 추정까지 지지하지는 않는다. [OpenVLA 표 11](https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf#page=33) · [QuantVLA, CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_QuantVLA_Scale-Calibrated_Post-Training_Quantization_for_Vision-Language-Action_Models_CVPR_2026_paper.html)
+**양자화 오차와 제어 지연을 어떻게 구분할 것인가.** OpenVLA는 한 행동의 실행을 기다리는 제어에서 8비트 성능이 회복된다고 보고했다. QuantVLA도 저비트 정책을 평가했다. 검토한 15편에서는 동일 실물 로봇에서 정밀도와 대기 방식을 교차시킨 후속 표를 찾지 못했다. [해석] 비교하려면 제어기의 실제 대기 동작까지 재현할 수 있어야 한다. [OpenVLA 표 11](https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf#page=33) · [QuantVLA, CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_QuantVLA_Scale-Calibrated_Post-Training_Quantization_for_Vision-Language-Action_Models_CVPR_2026_paper.html)
 
 ## 검색과 판정 범위
 
-2026-11-19에 원장의 VLA 논문, OpenVLA 원문의 역방향 참고문헌, OpenAlex의 OpenVLA 인용 목록에서 피인용순 상위 100개 제목을 함께 검토 대상으로 삼았다. 후속 15편은 행동 표현·기억·추론·행동 선택·RL을 대표하면서, 인용하는 쪽의 관련 연구나 기준선 표에 연결할 수 있는 논문이다. 검색 결과의 인용 횟수, 인접 읽기 순서, 저자 프로젝트 소개만으로 연결한 행은 없다. 희박한 지점은 후보 원문의 DROID·final third·blocking control·non-blocking 문맥과 별도로 검색한 `OpenVLA DROID final third ablation`, `OpenVLA 8-bit quantization blocking control`을 대조했다. [OpenAlex 인용 목록](https://api.openalex.org/works?filter=cites:W4399695759&sort=cited_by_count:desc&per_page=100&select=display_name)
+2026-11-19에 원장의 VLA 논문, OpenVLA의 참고문헌, OpenAlex의 피인용순 상위 100개 제목을 조사했다. 후속은 인용하는 논문의 관련 연구·기준선 표에서 사용 방식을 확인해 선정했다. DROID 혼합과 양자화 후속은 원문의 `final third`·`blocking control`·`non-blocking` 문맥과 `OpenVLA DROID final third ablation`, `OpenVLA 8-bit quantization blocking control` 검색으로 추가 점검했다. [OpenAlex 인용 목록](https://api.openalex.org/works?filter=cites:W4399695759&sort=cited_by_count:desc&per_page=100&select=display_name)
 
-**판본과 재실행 여부.** PD-VLA 표 IV의 원본 LIBERO-Spatial은 84.9이고 OFT 표 I의 원본 행은 84.7이다. 두 표의 전체 평균은 76.5다. 원본 LIBERO 표에 대조해 전사 차이를 표시하고, 논문에 적힌 각 값을 그대로 읽는다. SmolVLA처럼 기존 성적 인용이 명시된 경우에만 그렇게 표시했다. 표에 정책 이름만 있을 때는 독립 재실행·체크포인트 사용 여부를 미확인으로 둔다. [OpenVLA 표 12](https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf#page=35) · [PD-VLA 표 IV](https://arxiv.org/pdf/2503.02310#page=5) · [OFT 표 I](https://arxiv.org/pdf/2502.19645#page=6)
+**기준선 수치의 출처.** 원본 모델의 LIBERO-Spatial 값은 PD-VLA 표 IV에서 84.9, OFT 표 I에서 84.7이며 두 표의 전체 평균은 76.5다. 각 표의 값을 보존했다. SmolVLA는 기존 성적 인용을 명시했다. 이름만 실린 기준선은 재실행·체크포인트 사용 여부가 미확인이다. [OpenVLA 표 12](https://raw.githubusercontent.com/mlresearch/v270/main/assets/kim25c/kim25c.pdf#page=35) · [PD-VLA 표 IV](https://arxiv.org/pdf/2503.02310#page=5) · [OFT 표 I](https://arxiv.org/pdf/2502.19645#page=6)

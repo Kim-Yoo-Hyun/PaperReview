@@ -10,7 +10,7 @@
 - Authors: Hyojun Go, Byeongjun Park, Hyelin Nam, Byung-Hoon Kim, Hyungjin Chung, Changick Kim
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, geometry, Diffusion, Generation, 3D Vision
+- Tags: Gaussian Splatting, geometry, Diffusion, Generation, 3D Vision, flow-matching
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ VideoRFSplat은 텍스트로부터 장면의 여러 뷰와 그 뷰를 촬영할 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (4.1. Dual-Stream Pose-Video Joint Model), p. 5 (4.1. Dual-Stream Pose-Video Joint Model)이다.
+
+## 검색 태그 근거
+
+텍스트 조건부 rectified flow가 뷰 영상과 카메라 광선 표현을 함께 생성한다. 생성한 영상과 얻은 자세를 가우시안 장면으로 변환하고 텍스트에 맞는 다중 뷰 결과를 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Go_VideoRFSplat_Direct_Scene-Level_Text-to-3D_Gaussian_Splatting_Generation_with_Flexible_Pose_ICCV_2025_paper.pdf#page=7)

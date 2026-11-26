@@ -42,9 +42,9 @@ PDF body method statement (p. 4 (IV. STATE ESTIMATION), p. 7 (V. MAPPING), p. 4 
 
 | Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
 |---|---|---|---|---|---|---|
-| Map / localization state | sensor stream을 pose와 world map으로 누적한다 | camera/depth/LiDAR, odometry, history | mapping, localization, scene graph 또는 map update를 수행 | pose/map/free-space state | Kinematic Model We first derive the system model, which consists of a state transition model and a measurement model. | p. 4 (IV. STATE ESTIMATION), p. 7 (V. MAPPING) |
-| Global / local decision | goal과 risk를 고려해 route를 정한다 | map, goal, obstacle/risk estimate | graph search, local planning, language grounding 또는 replanning을 수행 | path/waypoint/local goal | For a given point p in {G¯pj} from the state estimation module (see Algorithm 1) and downsample resolution l, the algorithm partitions ... | p. 7 (V. MAPPING), p. 4 (IV. STATE ESTIMATION) |
-| Motion execution / recovery | route를 velocity/action으로 실행하고 실패에 대응한다 | path와 current pose/feedback | tracking, collision check, recovery 또는 replan을 수행 | velocity/base command | 1) State Transition Model: Take the first IMU frame (denoted as I) as the global frame (denoted as G) and denote ITL ... | p. 4 (IV. STATE ESTIMATION), p. 1 (I. INTRODUCTION) |
+| 관성 전파 | 스캔 사이의 상태를 예측한다 | IMU 가속도·각속도 | 상태 전파와 스캔 내 운동 보상 | 스캔 끝의 사전 상태 | 그림 1과 상태 천이식 | PDF 4–5쪽 |
+| 점군 정합 | 포즈를 보정한다 | 운동 보상된 점과 로컬 지도 | 점–평면 잔차로 반복 필터 갱신 | 보정된 상태 | 알고리즘 1과 측정식 | PDF 5–6쪽 |
+| 지도 갱신 | 다음 정합에 사용할 이웃을 유지한다 | 갱신한 포즈와 스캔 점들 | ikd-Tree에 점을 삽입하고 이동 영역에서 벗어난 점을 삭제한다 | 갱신된 로컬 지도 | V절 지도 작성 | PDF 6–7쪽 |
 
 - Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
 
@@ -56,17 +56,17 @@ PDF body method statement (p. 4 (IV. STATE ESTIMATION), p. 7 (V. MAPPING), p. 4 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Recent developments in LiDAR technologies have enabled the commercialization and mass production of more lightweight, cost-effective (in a cost range similar to global shutter cameras), ...
 - **p. 8 / 9 Algorithm End - extractive body cue:** 10 11 Function Insert(T, p, father,SW) 12 if T is empty then 13 Initialize(T,p,father); 14 else 15 ax ←T.axis; 16 if p[ax] < T.point[ax] then ...
 - **p. 8 / 24 End Function - extractive body cue:** The funcAlgorithm 3: Box-wise Delete Input : Operation Cuboid CO, k-d Tree Node T, Switch of Parallelly Re-building SW 1 Function BoxwiseDelete(T,CO,SW) 2 CT ←T.range; ...
-- **Formal bridge:** sensor/map state and goal -> path/waypoint/velocity -> path cost, risk or goal utility -> goal reach with collision-free execution.
+- **Formal bridge:** 원시 LiDAR·IMU 측정과 이전 관성 상태 -> 관성 상태 추정치와 점군 지도 -> 점–평면 측정 잔차와 관성 사전 추정의 결합 -> 궤적 추정 정확도와 스캔당 처리 시간.
 - **Equation/algorithm anchors:** p. 5 (IV. STATE ESTIMATION), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. SYSTEM OVERVIEW), p. 5 (IV. STATE ESTIMATION).
 
 ## Variables and Parameters
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | prevent, size, going, unbound, only, points, large, local, region, length, around, LiDAR, current, position | camera/depth stream, pose, map와 language goal | body cue; exact tensor/frame verify |
-| State/latent | prevent, size, going, unbound, only, points, large, local, region, length | robot pose, free-space/semantic map와 local goal | body cue; notation verify |
-| Action/output | More, specifically, contributions, follows, develop, incremental, tree, data, structure, ikd-Tree | collision-free trajectory 또는 velocity command | body cue; unit/decoder verify |
-| Objective/constraint | Besides, efficient, nearest, neighbor, search, data, structure, supports, incremental, update | path cost, risk or goal utility | equation anchor required |
+| Input/observation | prevent, size, going, unbound, only, points, large, local, region, length, around, LiDAR, current, position | 원시 LiDAR 스캔과 IMU 가속도·각속도 | body cue; exact tensor/frame verify |
+| State/latent | prevent, size, going, unbound, only, points, large, local, region, length | 관성 상태와 로컬 점군 지도 | body cue; notation verify |
+| Action/output | More, specifically, contributions, follows, develop, incremental, tree, data, structure, ikd-Tree | 추정한 자세·위치와 갱신된 점군 지도 | body cue; unit/decoder verify |
+| Objective/constraint | Besides, efficient, nearest, neighbor, search, data, structure, supports, incremental, update | 점–평면 측정 잔차와 관성 사전 추정의 결합 | equation anchor required |
 
 ## Observation–State–Action Interface
 
@@ -77,16 +77,16 @@ PDF body method statement (p. 4 (IV. STATE ESTIMATION), p. 7 (V. MAPPING), p. 4 
 - **p. 1 / I. INTRODUCTION - extractive body cue:** 40The central requirement for adopting LiDAR-based SLAM approaches to these widespread applications is to obtain accurate, low-latency state estimation and dense 3D map with limited ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** To further speed up the computation, a new and mathematically equivalent formula of computing the Kalman gain is used to reduce the computation complexity to ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** The elimination of a hand-engineered feature extraction makes the system naturally applicable to different LiDAR sensors; 3) We integrate these two key techniques into a ...
-- **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
+- **Normalized interface:** observation=원시 LiDAR 스캔과 IMU 가속도·각속도; state=관성 상태와 로컬 점군 지도; output/action=추정한 자세·위치와 갱신된 점군 지도.
 
 ## Temporal and Runtime Contract
 
 | Contract | Generic domain prior | PDF body cue | Unresolved detail |
 |---|---|---|---|
-| Horizon | map-level start-goal plan과 local controller horizon을 계층적으로 분리한다. | Private Dataset 1) Detail Evaluation of Processing Time: In order to validate the real-time performance of FAST-LIO2, we use the handheld platform ... | episode/sequence/action-chunk boundary |
-| Rate / latency | mapping/localization, global planner, local planner와 base controller rate를 구분한다. | The map built by FAST-LIO2 in real-time is shown in Fig. | Hz/fps, inference time and control rate |
-| Memory | map/scene graph, pose history와 current local goal. | not recovered | window and reset |
-| Compute | map update, collision checking, path search와 replanning frequency가 결정한다. | Private Dataset 1) Detail Evaluation of Processing Time: In order to validate the real-time performance of FAST-LIO2, we use the handheld platform ... | hardware, batch and throughput |
+| Horizon | 스캔이 도착할 때마다 그동안 누적한 IMU 측정으로 상태를 전파한다. | Private Dataset 1) Detail Evaluation of Processing Time: In order to validate the real-time performance of FAST-LIO2, we use the handheld platform ... | 스캔 축적과 IMU 시간 범위 |
+| Rate / latency | 스캔별 오도메트리·지도 갱신 시간을 측정한다. | The map built by FAST-LIO2 in real-time is shown in Fig. | 스캔 주기와 처리 시간 |
+| Memory | 로컬 점군 지도를 ikd-Tree로 유지한다. | not recovered | 로컬 지도 범위와 제거되는 점 |
+| Compute | 최근접점 검색과 점의 삽입·삭제가 지도 갱신 비용에 기여한다. | Private Dataset 1) Detail Evaluation of Processing Time: In order to validate the real-time performance of FAST-LIO2, we use the handheld platform ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -101,9 +101,9 @@ PDF body method statement (p. 4 (IV. STATE ESTIMATION), p. 7 (V. MAPPING), p. 4 
 
 | Method component | Evaluation evidence to inspect | PDF anchor |
 |---|---|---|
-| Map / localization state | 11 TABLE II THE DATASETS FOR BENCHMARK LiDAR IMU Type Line Type Rate lili Solid-state - 6-axis | p. 11 (VI. BENCHMARK RESULTS), p. 14 (VII. REAL-WORLD EXPERIMENTS) |
-| Global / local decision | For example, our prior work [63] demonstrated the application of FAST-LIO2 on an autonomous UAV avoiding dynamic small objects (down to 9 ... | p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 12 (Figure/Table caption) |
-| Motion execution / recovery | Notice that the considerably reduced processing time for FAST-LIO2 is achieved even at a much higher number of map points. | p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. BENCHMARK RESULTS) |
+| 센서 구성 | 항공·지상 등 데이터별 LiDAR와 IMU 입력 사양 | PDF 11쪽 표 II |
+| 추정치의 사용 예 | 저자가 인용한 과거의 UAV 장애물 회피 응용 | PDF 16쪽 |
+| 실시간 처리 | 점군 규모에 따른 추정·지도 작성 시간 | PDF 15–16쪽 |
 
 ## Failure and Ablation Link
 

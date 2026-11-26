@@ -10,7 +10,7 @@
 - Authors: Renhe Zhang, Yuyang Tan, Jingyu Gong, Zhizhong Zhang, Lizhuang Ma, Yuan Xie, Xin Tan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, semantic, alignment, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, semantic, alignment, 3D Vision, camera pose
 - Official paper: https://icml.cc/virtual/2026/poster/65536
 - Full-text retrieval: https://arxiv.org/pdf/2603.14232.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ S2GS는 영상이 도착할 때마다 과거 프레임을 다시 처리하지 �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | This naturally imposes a causal constraint on online joint reconstruction and understanding: at each time step, the model can only rely on the current observation and a persistent state accumulated from the ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1. Introduction), p. 1 (1. Introduction) |
-| State/latent | naturally, imposes, causal, constraint, online, joint, reconstruction, understanding, time, step, model, only | geometry, map, object/relationship state | p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Language-driven Open-vocabulary Segmentation) |
-| Output/action | More fundamentally, in real-world online scenarios, inputs arrive sequentially over time and the system must update its state 1 | point map, pose, scene graph, affordance 또는 query result | p. 1 (1. Introduction), p. 5 (3.4. Language-driven Open-vocabulary Segmentation), p. 2 (1. Introduction) |
-| Objective/outcome | Under the causal constraint, the Transformer aggregates information from {Iτ}τ≤t to form geometry features Ht. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 3 (3.2. Causal Transformer for 3D Gaussian Regression), p. 4 (3.3. Online Instance Tracking and Semantic), p. 3 (3.2. Causal Transformer for 3D Gaussian Regression) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 미보정 RGB 스트림. 분할 질의에는 텍스트 |
+| 표현 | 가우시안 기하와 프레임을 넘는 인스턴스 메모리 |
+| 출력 | 카메라 파라미터·깊이·인스턴스 특징 |
+| 평가 | 카메라·장면 복원과 열린 어휘 분할 |
+
+[원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=4) · [원문 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -70,3 +72,7 @@ S2GS는 영상이 도착할 때마다 과거 프레임을 다시 처리하지 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Overview and Online Setting), p. 4 (3.2. Causal Transformer for 3D Gaussian Regression)이다.
+
+## 검색 태그 근거
+
+미보정 RGB 스트림을 인과적으로 인코딩해 카메라 파라미터·깊이·가우시안을 예측한다. 프레임을 넘는 인스턴스 질의를 갱신하는 의미 분기는 텍스트 임베딩과 비교할 특징을 출력한다. [원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=4) · [원문 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhang26fn/zhang26fn.pdf#page=8)

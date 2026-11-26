@@ -7,7 +7,7 @@
 - Category: 3D Vision-Language Understanding
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Robotics, evaluation, affordance
+- Tags: Robotics, evaluation, affordance, human-video, retrieval
 - Aliases:
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php
 - Venue verification: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php
@@ -34,6 +34,10 @@ Robo-ABC는 사람이 물체를 다루는 영상에서 모은 접촉점을 시�
 실물 파지 성공률 85.7%와 VRB 기준선의 68.6%는 일곱 물체 범주에서 얻은 값이다. 이미지에 대한 접촉점 예측 정확도는 별도 평가다. [PDF 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=11) · [PDF 12쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=12)
 
 근거: [공식 paper/abstract](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5748_ECCV_2024_paper.php) · [저자 project/code](https://tea-lab.github.io/Robo-ABC/) · [공식 code](https://github.com/TEA-Lab/Robo-ABC).
+
+## 검색 태그 근거
+
+사람이 물체를 만지는 영상에서 접촉점을 저장하고 동결한 확산 모델 특징으로 새 물체에 대응시킨다. 실제 팔의 파지는 깊이 기하와 AnyGrasp를 이용한다. 확산은 특징 추출 구성요소다. [원문 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=6) · [원문 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05748.pdf#page=8)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

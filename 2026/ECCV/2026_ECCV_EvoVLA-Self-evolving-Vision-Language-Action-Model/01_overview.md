@@ -42,3 +42,8 @@ VLA+RL 보상 개선에서 이미 다룬 near-miss 구분과 실제 물리 완�
 ## Verification Boundary
 
 pose·stage annotation의 특권 정보, hard-negative 생성 비용, 세 모듈별 기여을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · EvoVLA의 OpenVLA-OFT 정책 구현 · evovla/models/openvla_policy_oft.py [배포 파일](https://raw.githubusercontent.com/AIGeeksGroup/EvoVLA/1c30af1e6545fbeab45f074373b06f6a544d1e20/evovla/models/openvla_policy_oft.py)
+- 데이터 · Discoverse-L 블록 다리 과제의 관측·행동 시연 · Discoverse-L/demonstrations/block_bridge_place/000/obs_action.json [배포 파일](https://huggingface.co/datasets/AIGeeksGroup/Discoverse-L/resolve/4e056a8591de42e4336d7b5c93410e028cf12952/Discoverse-L/demonstrations/block_bridge_place/000/obs_action.json)

@@ -10,7 +10,7 @@
 - Authors: Huy Ha, Shuran Song
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, deformable object, cloth manipulation, dynamic manipulation, vision-based control
+- Tags: Robotics, deformable object, cloth manipulation, dynamic manipulation, vision-based control, self-supervised learning
 - Official paper: https://arxiv.org/abs/2105.03655
 - Venue verification: https://proceedings.mlr.press/v164/ha22a.html
 - Conference edition: 2021 · https://proceedings.mlr.press/v164/
@@ -46,12 +46,14 @@ FlingBot은 천을 두 팔로 집어 늘인 뒤 펄럭이는 동작을 학습해
 
 ## Observation, State, and Output Interface
 
+정책은 위쪽 RGB에서 양팔 파지 위치와 방향을 고른다. 깊이로 파지 높이를 정하고 고정 동작을 실행한다. 한 번 펼친 뒤의 면적 증가로 행동 점수를 지도하며 시뮬레이션 학습 후 실제 천으로 미세조정했다. [PDF 5쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=5) · [PDF 7쪽](https://proceedings.mlr.press/v164/ha22a/ha22a.pdf#page=7)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | From a top-down RGB image a), our policy evaluates a batch of different action rotations and scales by transforming the observation b) then predicting the corresponding batch of value maps c). | RGB-D/point cloud, object state와 contact/task observation | p. 5 (3 Method), p. 2 (1 Introduction) |
-| State/latent | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales, transforming, observation | object geometry, affordance, contact mode 또는 end-effector state | p. 5 (3 Method), p. 2 (1 Introduction), p. 3 (3 Method) |
-| Output/action | At each time step, the policy predicts value maps from its visual observation and picks actions greedily with respect to its value maps. | grasp, pose, force 또는 end-effector trajectory | p. 2 (1 Introduction), p. 3 (3 Method), p. 5 (3 Method) |
-| Objective/outcome | However, to minimize collisions between two arms, we wish to impose a constraint that L is always left of R, and vice versa (Fig 9a). | task completion, contact success, pose/force error와 generalization | p. 4 (3 Method), p. 3 (3 Method), p. 3 (3 Method) |
+| Observation/input | From a top-down RGB image a), our policy evaluates a batch of different action rotations and scales by transforming the observation b) then predicting the corresponding batch of value maps c). | 상단 RGB 영상과 파지 높이 결정용 깊이 | p. 5 (3 Method), p. 2 (1 Introduction) |
+| State/latent | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales, transforming, observation | 도달 가능한 양팔 파지 후보별 면적 증가 점수 | p. 5 (3 Method), p. 2 (1 Introduction), p. 3 (3 Method) |
+| Output/action | At each time step, the policy predicts value maps from its visual observation and picks actions greedily with respect to its value maps. | 두 파지점 및 잡기·당기기·던지기 동작 | p. 2 (1 Introduction), p. 3 (3 Method), p. 5 (3 Method) |
+| Objective/outcome | However, to minimize collisions between two arms, we wish to impose a constraint that L is always left of R, and vice versa (Fig 9a). | 시도별 천의 펼쳐진 면적 | p. 4 (3 Method), p. 3 (3 Method), p. 3 (3 Method) |
 
 ## Main Claims and Actual Contribution
 

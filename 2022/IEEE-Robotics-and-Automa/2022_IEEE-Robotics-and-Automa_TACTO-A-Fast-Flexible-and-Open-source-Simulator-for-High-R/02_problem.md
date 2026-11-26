@@ -22,11 +22,11 @@ PDF body framing (p. 1 (I. INTRODUCTION)): One aspect that has proven so far to 
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], ... | physics simulation의 robot/environment model | body wording is the source claim |
-| Observation / input | Hence, it is difficult to adapt to existing and future sensor designs that require advanced functionalities, like reflection, refraction, and shadows with ... | simulated state, geometry, contact와 control input | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities | dynamics/contact state 또는 learned simulator representation | notation and tensor shape require body check |
-| Output / action | allows, perform, orders, magnitude, more, experiments, fraction, effort | simulation step, trajectory 또는 environment query | exact unit/frame/decoder require body check |
-| Target outcome | fidelity, throughput and downstream task utility | physical plausibility, speed, reproducibility와 task utility | metric/denominator are in 04 evidence |
+| Target problem | One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], ... | 모의 광학 촉각 센서와 실물 DIGIT 대조 | body wording is the source claim |
+| Observation / input | Hence, it is difficult to adapt to existing and future sensor designs that require advanced functionalities, like reflection, refraction, and shadows with ... | 시뮬레이션의 접촉 형상 및 센서의 광학 설정 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities | 젤 표면의 접촉 자국과 렌더링 장면 | notation and tensor shape require body check |
+| Output / action | allows, perform, orders, magnitude, more, experiments, fraction, effort | 모의 촉각 영상, 하위 모델의 파지 안정성·자세 추정 | exact unit/frame/decoder require body check |
+| Target outcome | fidelity, throughput and downstream task utility | 센서 영상 비교와 과제별 예측·제어 성능 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

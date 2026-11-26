@@ -14,6 +14,7 @@
 - Venue verification: https://proceedings.mlr.press/v270/dass25a.html
 - Code/Project: https://robin-lab.cs.utexas.edu/learning2look/
 - Code: https://github.com/UT-Austin-RobIn/l2l
+- 방법·평가 확인 (2026-11-25): [원문 4, 5, 6, 7, 8쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/dass25a/dass25a.pdf#page=4) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 행사 CoRL 2024와 PMLR vol.270의 2025 출판을 구별; 폴더 연도는 행사 기준이다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,7 @@ DISaM은 다음 조작을 정할 정보가 현재 관측에 없을 때, 정보�
 ## Verification Boundary
 
 Context privilege·KL 대상 분포·학습 reward·전환 threshold을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- 정보를 이용하는 정책의 시연 기반 학습 · l2l/scripts/train_il.py [배포 파일](https://raw.githubusercontent.com/UT-Austin-RobIn/l2l/37382315d4e262d381862752931fe7445c2a0594/l2l/scripts/train_il.py)

@@ -10,7 +10,7 @@
 - Authors: Lin-Zhuo Chen, Kangjie Liu, Youtian Lin, Zhihao Li, Siyu Zhu, Xun Cao, Yao Yao
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D Vision
+- Tags: Gaussian Splatting, 3D Vision, optical-flow
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/623307df18da128262aaf394cdcfb235-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ Flow Distillation Sampling은 관측 뷰에 가까운 새 시점에서 예상되
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Our contributions are summarized as follows: • FDS leverages matching prior information to recover absolute scale, significantly enhancing the geometric quality of the Gaussian radiance field. • An adaptive camera sampling scheme ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1 INTRODUCTION), p. 4 (3 METHOD) |
-| State/latent | contributions, summarized, follows, FDS, leverages, matching, prior, information, recover, absolute, scale, significantly | geometry, map, object/relationship state | p. 2 (1 INTRODUCTION), p. 4 (3 METHOD), p. 2 (1 INTRODUCTION) |
-| Output/action | As mentioned above, we can project pixel x = (u1, v1) in m-th view image to the n-th view by its corresponding depth and their pose transformation: Dn(u2, v2) "u2 v2 1 ... | point map, pose, scene graph, affordance 또는 query result | p. 4 (3 METHOD), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
-| Objective/outcome | 3.2 FLOW DISTILLATION SAMPLING Given a collection of images {Ii}i=1,2,...N, Gaussian Radiance Field typically employs the following loss function for rendering optimization: L = 1 | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3 METHOD), p. 3 (3 METHOD), p. 3 (3 METHOD) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 관측 RGB, 카메라 파라미터와 가까운 가상 시점 |
+| 표현 | 사전학습 대응 모델의 광류와 가우시안 기하 |
+| 출력 | 광류 제약으로 정제한 장면 |
+| 평가 | Mushroom·ScanNet에서의 깊이와 영상 품질 |
+
+[원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=4) · [원문 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=9)
 
 ## Main Claims and Actual Contribution
 
@@ -77,3 +79,7 @@ Flow Distillation Sampling은 관측 뷰에 가까운 새 시점에서 예상되
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (3 METHOD), p. 4 (3 METHOD)이다.
+
+## 검색 태그 근거
+
+인접한 가상 카메라 시점에서 사전학습 대응 모델의 광류와 가우시안 기하가 유도한 움직임을 일치시킨다. 광류 제약으로 Mushroom·ScanNet의 깊이 및 렌더링을 정제했다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=4) · [원문 9쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/623307df18da128262aaf394cdcfb235-Paper-Conference.pdf#page=9)

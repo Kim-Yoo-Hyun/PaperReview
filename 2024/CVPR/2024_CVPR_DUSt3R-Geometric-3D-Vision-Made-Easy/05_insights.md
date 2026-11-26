@@ -47,7 +47,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `Robotics-enabling 3D perception`; tags: `3D reconstruction, calibration, geometry`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** RVT: Robotic View Transformer for 3D Object Manipulation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Where2Act: From Pixels to Actions for Articulated 3D Objects (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

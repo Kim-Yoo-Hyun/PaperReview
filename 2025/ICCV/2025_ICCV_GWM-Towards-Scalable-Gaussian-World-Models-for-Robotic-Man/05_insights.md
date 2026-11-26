@@ -39,14 +39,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Feed-forward 3D Gaussian Splatting Given single or two-view image inputs I = {I}i={1,2} of a world state, our goal is to first encode the scene into 3D Gaussian representations for dynamics learning ...를 Specifically, we obtain the 3D Gaussian world state G using Splatt3R [70], which first employs the stereo reconstruction model Mast3R [37] to generate 3D point maps from input images and then predicts ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In this paper, we introduce a novel Gaussian World Model (GWM) for robotic manipulation that addresses limitations of image-based world models by incorporating robust geometric information.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `한두 시점 RGB에서 얻은 장면 표현과 로봇 행동 이력 → 3D 가우시안 집합을 압축한 잠재 상태 → 예측한 다음 장면 상태와 렌더링 영상`.
+- 이 논문의 재사용 가능한 지점은 Feed-forward 3D Gaussian Splatting Given single or two-view image inputs I = {I}i={1,2} of a world state, our goal is to first encode the scene into 3D Gaussian representations for dynamics learning ...를 Specifically, we obtain the 3D Gaussian world state G using Splatt3R [70], which first employs the stereo reconstruction model Mast3R [37] to generate 3D point maps from input images and then predicts ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 3D 가우시안 집합을 압축한 잠재 상태가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In this paper, we introduce a novel Gaussian World Model (GWM) for robotic manipulation that addresses limitations of image-based world models by incorporating robust geometric information.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: In summary, our main contributions are threefold. • We introduce GWM, a novel 3D world model that is instantiated with a Gaussian diffusion transformer and a Gaussian VAE for efficient dynamic modeling.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `VLA and generalist robot policies`; tags: `Gaussian Splatting, world model, Robotics`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

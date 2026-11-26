@@ -8,7 +8,7 @@
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, evaluation, manipulation
+- Tags: Robotics, evaluation, manipulation, dynamics model, model-based planning
 - Aliases:
 - Official paper: https://roboticsproceedings.org/rss20/p010.html
 - Venue verification: https://roboticsproceedings.org/rss20/p010.html
@@ -33,6 +33,10 @@
 로프·입자·상자·천 등 real-world 물체의 예측과 조작을 보고한다.
 
 근거: [공식 paper/abstract](https://roboticsproceedings.org/rss20/p010.html) · [저자 project/code](https://robopil.github.io/adaptigraph/) · [공식 code](https://github.com/Boey-li/AdaptiGraph). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+
+## 검색 태그 근거
+
+AdaptiGraph는 재질과 물리 파라미터를 조건으로 입자 동역학을 학습한다. 실물 RGB-D 관측과 소수의 상호작용으로 파라미터를 맞추고, 적응된 모형으로 물체 조작을 폐루프 계획한다. [원문 5쪽](https://www.roboticsproceedings.org/rss20/p010.pdf#page=5) · [원문 7쪽](https://www.roboticsproceedings.org/rss20/p010.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

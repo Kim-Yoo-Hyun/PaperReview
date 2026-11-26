@@ -10,7 +10,7 @@
 - Authors: Ruihuang Li, Zhengqiang ZHANG, Chenhang He, Zhiyuan Ma, Vishal Patel, Lei Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, semantic
+- Tags: 3D Vision, semantic, representation alignment
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6612_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/06612.pdf
 - Code/Project: not identified

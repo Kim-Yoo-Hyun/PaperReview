@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 In particular, given RGB-D observations \protect \mathbf {o}, language instruction \protect \mathbf {l} and robot proprioception \protect \mathbf {c}, our goal is to learn a multi-task policy \pi (\ ma thbf {a}/\mathbf ...를 Thus the action space is aligned and translationally anchored to the visual features observed from input images, which simplifies the mapping from states to actions and avoids training and inferencing with a ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Future works could explore recent techniques on reducing diffusive sampling steps while maintaining optimal accuracy.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `RGB-D로 복원한 점군과 언어 지시 → 세 평면의 공간 특징 및 행동 확산 필드 → 그리퍼의 자세·개폐 명령`.
+- 이 논문의 재사용 가능한 지점은 In particular, given RGB-D observations \protect \mathbf {o}, language instruction \protect \mathbf {l} and robot proprioception \protect \mathbf {c}, our goal is to learn a multi-task policy \pi (\ ma thbf {a}/\mathbf ...를 Thus the action space is aligned and translationally anchored to the visual features observed from input images, which simplifies the mapping from states to actions and avoids training and inferencing with a ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 세 평면의 공간 특징 및 행동 확산 필드가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Future works could explore recent techniques on reducing diffusive sampling steps while maintaining optimal accuracy.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: In this work, we propose PDFactor, a novel multi-task manipulation agent that leverages a tri-perspective view transformer to learn a hybrid action representation.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Manipulation, contact, tactile, and dexterity`; tags: `Diffusion, Robotics, 3D action`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

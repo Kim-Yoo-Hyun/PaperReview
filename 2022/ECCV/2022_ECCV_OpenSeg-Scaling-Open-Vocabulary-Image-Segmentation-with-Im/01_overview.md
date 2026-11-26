@@ -45,12 +45,14 @@ OpenSeg는 물체 영역을 제안하는 과정과 영역을 텍스트 어휘에
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | We argue that what is missing in these state-of-the-art open-vocabulary classification models are mid-level representations from visual groupings [48], which organize an image into a small set of segmentation masks. | camera/depth stream, pose, map와 language goal | p. 2 (1 Introduction), p. 6 (3 Method) |
-| State/latent | argue, what, missing, state-of-the-art, open-vocabulary, classification, models, mid-level, representations, visual, groupings, organize | robot pose, free-space/semantic map와 local goal | p. 2 (1 Introduction), p. 6 (3 Method), p. 6 (3 Method) |
-| Output/action | We use a cross-attention module taking inputs as FP E s and a randomly initialized queries q0 ∈RN×D to generate mask queries q ∈RN×D. | collision-free trajectory 또는 velocity command | p. 6 (3 Method), p. 6 (3 Method), p. 2 (1 Introduction) |
-| Objective/outcome | The grounding loss aims at maximizing the normalized score of a labeled image-caption pair ⟨Ib, Cb⟩over all images and all captions in a mini-batch. | goal reach, safety, localization error와 replanning latency | p. 7 (3 Method), p. 6 (3 Method), p. 7 (3 Method) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | RGB 영상과 범주 이름. 캡션은 훈련 감독 |
+| 표현 | 영역 마스크와 영역별 특징 |
+| 출력 | 영상의 의미 분할 마스크 |
+| 평가 | 열린 어휘 영상 분할 |
+
+[원문 4쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=4) · [원문 8쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -78,3 +80,7 @@ OpenSeg는 물체 영역을 제안하는 과정과 영역을 텍스트 어휘에
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 6 (3 Method), p. 7 (3 Method), p. 8 (3 Method)이다.
+
+## 검색 태그 근거
+
+영역 마스크를 만들고 해당 영역의 픽셀 특징을 캡션 속 단어와 대응시킨다. 학습용 캡션과 배포 시 질의 클래스 이름을 구분하며 평가 출력은 이미지의 분할 마스크다. [원문 4쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=4) · [원문 8쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136960532.pdf#page=8)

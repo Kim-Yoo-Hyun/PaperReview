@@ -14,6 +14,7 @@
 - Venue verification: https://arxiv.org/abs/2610.14704
 - Code/Project: https://seen-e.github.io/PRISM/
 - Code: https://github.com/seen-e/PRISM
+- 방법·평가 확인 (2026-11-25): [원문 1, 5, 6, 7, 8, 9쪽](https://arxiv.org/pdf/2610.14704v1#page=1) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: arXiv 초록·공식 publication/project를 확인한 등록. Abstract 기반 — 본문 수동 확인 필요. 연구 dossier의 지정 절 검토와 paper별 5-note의 evidence를 구별하며 사용자 읽기 상태는 변경하지 않음. Author project는 research manuscript 2026으로 표시. GitHub root의 prism/openpi/starvla/configs/scripts를 확인했으나 설치·실행은 하지 않음. 동명 depth 논문과 identifier/제목으로 구별. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,7 @@ VLM condition과 flow action expert의 학습을 조정한다. 정밀도 점수�
 ## Verification Boundary
 
 정밀도 proxy와 실제 공차의 차이·flow-time weighting·SNR gate·auxiliary loss·task별 trial·공개 구현의 논문 일치을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- PRISM용 시연 데이터와 정밀도 학습 신호 처리 · prism/data.py [배포 파일](https://raw.githubusercontent.com/seen-e/PRISM/5a84f5a9e69bbbb5e64b45c999adc9a532219928/prism/data.py)

@@ -42,3 +42,7 @@ Simulation과 실제 로봇의 여덟 평가에서 새로운 지시에 대한 �
 ## Verification Boundary
 
 본문에서 확인할 항목: 시각 보존 손실·guidance 입력·새 지시 split·RL과 SFT의 데이터/비용 차이. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 저자 프로젝트의 DeLock 코드 링크는 공개 예정으로 표시되어 있다. [저자 공개 안내](https://suninghuang19.github.io/delock_page/)

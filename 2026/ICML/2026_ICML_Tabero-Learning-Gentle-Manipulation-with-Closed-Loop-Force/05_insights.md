@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, VLA, tactile, force feedback, contact-rich manipulation, Benchmark, dexterity`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** EquAct: An SE(3)-Equivariant Multi-Task Transformer for 3D Robotic Manipulation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** TactAlign: Human-to-Robot Policy Transfer via Tactile Alignment (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

@@ -39,8 +39,8 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `multi-view observation, language/task label과 action trajectory → shared representation, embodiment/task identity와 data distribution → dataset sample 또는 learned policy action`.
-- 이 논문의 재사용 가능한 지점은 Proprioception encompasses joint angles/torques, end-effector Cartesian pose and gripper states.를 Each sequence in the dataset includes visual, force, audio, and action information.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 shared representation, embodiment/task identity와 data distribution가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The current limitations of this paper are that (i) the cost of data collection is expensive and (ii) the potential of robotic foundation models is not evaluated on our dataseet.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `기체별 RGB-D·힘·관절·소리 및 일부 촉각 기록, ACT 평가의 RGB·행동 시연 → 보정된 카메라·로봇 좌표와 시간 정렬 시연 → RH20T 시연 및 ACT의 팔·그리퍼 행동`.
+- 이 논문의 재사용 가능한 지점은 Proprioception encompasses joint angles/torques, end-effector Cartesian pose and gripper states.를 Each sequence in the dataset includes visual, force, audio, and action information.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 보정된 카메라·로봇 좌표와 시간 정렬 시연가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 The current limitations of this paper are that (i) the cost of data collection is expensive and (ii) the potential of robotic foundation models is not evaluated on our dataseet.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: We introduce our robotic manipulation dataset, RobotHuman demonstration in 20TB (RH20T), to the community.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

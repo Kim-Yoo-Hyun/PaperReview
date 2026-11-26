@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 2 (1. Introduction)): Open-vocabula
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Open-vocabulary 3D scene understanding methods propose a solution towards these challenges by training a model not on a fixed label set but ... | mapped 3D environment과 mobile robot | body wording is the source claim |
-| Observation / input | 3.1), and in parallel, we extract vision-language features from aligned 2D images (Sec. | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF body |
-| State / latent | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
-| Output / action | Given, complexity, high-level, abstraction, How, Wall, related, state-of-the-art | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
-| Target outcome | goal reach with collision-free execution | goal reach, safety, localization error와 replanning latency | metric/denominator are in 04 evidence |
+| Target problem | Open-vocabulary 3D scene understanding methods propose a solution towards these challenges by training a model not on a fixed label set but ... | 정적 실내 장면의 열린 어휘 3D 장면 그래프 | body wording is the source claim |
+| Observation / input | 3.1), and in parallel, we extract vision-language features from aligned 2D images (Sec. | 점군·텍스트 질의와 선택적인 다중 시점 RGB-D 특징 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill | 물체 노드와 쌍별 관계 임베딩 | notation and tensor shape require body check |
+| Output / action | Given, complexity, high-level, abstraction, How, Wall, related, state-of-the-art | 질의된 물체 및 관계를 담은 장면 그래프 | exact unit/frame/decoder require body check |
+| Target outcome | goal reach with collision-free execution | 물체·관계 예측과 열린 어휘 질의 성능 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

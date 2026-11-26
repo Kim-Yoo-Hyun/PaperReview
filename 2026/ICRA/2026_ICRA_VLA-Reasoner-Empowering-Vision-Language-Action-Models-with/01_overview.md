@@ -10,7 +10,7 @@
 - Authors: Wenkai Guo, Guanxing Lu, Haoyuan Deng, Zhenyu Wu, Yansong Tang, Ziwei Wang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Vision-Language Model, Reinforcement Learning
+- Tags: VLA, world model, model-based planning
 - Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11695971
 - Full-text retrieval: https://arxiv.org/pdf/2509.22643
 - Code/Project: not identified

@@ -10,7 +10,7 @@
 - Authors: Jiale Xu, Shenghua Gao, Ying Shan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision, camera pose
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -75,3 +75,7 @@ FreeSplatter는 상대 자세가 주어지지 않은 소수의 영상으로 가�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Training Details), p. 8 (4.5. Applications in 3D AIGC), p. 3 (3.2. Model Architecture)이다.
+
+## 검색 태그 근거
+
+여러 미보정 영상의 토큰에서 공통 좌표계 가우시안을 예측한다. 픽셀과 예측한 3D 위치의 대응으로 PnP를 풀어 입력 카메라 자세를 구한다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xu_FreeSplatter_Pose-free_Gaussian_Splatting_for_Sparse-view_3D_Reconstruction_ICCV_2025_paper.pdf#page=6)

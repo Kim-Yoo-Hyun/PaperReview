@@ -10,7 +10,7 @@
 - Authors: Tianci Wen, Zhiang Liu, Yongchun Fang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, geometry, 3D Vision
+- Tags: Gaussian Splatting, geometry, 3D Vision, SLAM
 - Official paper: https://www.openaccess.thecvf.com/content/ICCV2025/html/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ SEGS-SLAM은 구조화한 점군으로 초기 가우시안 지도를 만들고, 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 1 (Abstract), p. 4 (4.2. Appearance-from-Motion Embedding)이다.
+
+## 검색 태그 근거
+
+단안·스테레오·RGB-D로 카메라를 추적하고, 추정된 점군 구조와 외관 임베딩으로 가우시안 지도를 학습한다. Replica·TUM RGB-D·EuRoC에서 자세 오차나 렌더링 품질을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Wen_SEGS-SLAM_Structure-enhanced_3D_Gaussian_Splatting_SLAM_with_Appearance_Embedding_ICCV_2025_paper.pdf#page=7)

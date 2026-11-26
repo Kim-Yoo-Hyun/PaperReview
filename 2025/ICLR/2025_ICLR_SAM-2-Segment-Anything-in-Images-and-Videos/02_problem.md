@@ -22,19 +22,19 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Further, efficient processing of a large number of frames is a key challenge. | 논문이 정의한 robot/embodied environment | body wording is the source claim |
-| Observation / input | The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for ... | 논문이 명시한 observation과 task input | exact sensor/frame/preprocessing from PDF body |
-| State / latent | task, takes, input, points, boxes, masks, frame, video, define, segment | task state 또는 decision variable | notation and tensor shape require body check |
-| Output / action | SAM, clicks, inputs, following, click, sampling, strategy, CiVOS | paper-specific output/action | exact unit/frame/decoder require body check |
-| Target outcome | source task metric; robot link not established | primary task objective와 closed-loop behavior | metric/denominator are in 04 evidence |
+| Target problem | Further, efficient processing of a large number of frames is a key challenge. | 영상·동영상의 프롬프트 기반 분할 | body wording is the source claim |
+| Observation / input | The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for ... | 영상 프레임과 사용자가 제공한 점·상자·마스크 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | task, takes, input, points, boxes, masks, frame, video, define, segment | 프레임 특징과 이전 마스크의 메모리 | notation and tensor shape require body check |
+| Output / action | SAM, clicks, inputs, following, click, sampling, strategy, CiVOS | 대상별 분할 마스크와 시간에 따른 마스크열 | exact unit/frame/decoder require body check |
+| Target outcome | source task metric; robot link not established | 영상 분할 품질과 상호작용 횟수 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | source-defined input o; body terms: task, takes, input, points, boxes, masks, frame, video, define, segment | p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method) |
-| Decision / output variable | prediction/embedding/sample ŷ; body terms: introduce, Segment, Anything, Model, SAM, unified, video, image | p. 1 (1 Introduction), p. 2 (1 Introduction), p. 28 (Method) |
-| Objective / loss / cost | paper-specific objective; cue terms: not recovered | no optimization/equation sentence selected |
+| State / observation variable | 영상 프레임과 사용자가 제공한 점·상자·마스크; body terms: task, takes, input, points, boxes, masks, frame, video, define, segment | p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method) |
+| Decision / output variable | 대상별 분할 마스크와 시간에 따른 마스크열; body terms: introduce, Segment, Anything, Model, SAM, unified, video, image | p. 1 (1 Introduction), p. 2 (1 Introduction), p. 28 (Method) |
+| Objective / loss / cost | 영상 분할 품질과 상호작용 횟수; cue terms: not recovered | no optimization/equation sentence selected |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | 본문 anchor 없음 |
 | Success / guarantee | source task metric; robot link not established | p. 30 (dataset), p. 31 (dataset), p. 32 (dataset) |
 
@@ -65,7 +65,7 @@ PDF body contribution framing (p. 1 (1 Introduction), p. 2 (1 Introduction), p. 
 
 ## Position in the Robotics Loop
 
-upstream writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method), p. 27 (Method). The downstream handoff is claimed only when the body describes it.
+영상 프레임과 사용자가 제공한 점·상자·마스크 → 프레임 특징과 이전 마스크의 메모리 → 대상별 분할 마스크와 시간에 따른 마스크열. [원문 근거](./01_overview.md#observation-state-and-output-interface)
 
 ## Verification Questions
 

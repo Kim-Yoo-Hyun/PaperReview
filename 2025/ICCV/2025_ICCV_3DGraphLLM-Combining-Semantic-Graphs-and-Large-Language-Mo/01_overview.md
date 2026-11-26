@@ -10,7 +10,7 @@
 - Authors: Tatiana Zemskova, Dmitry Yudin
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Scene Graph, LLM, Graph Reasoning
+- Tags: 3D Scene Graph, LLM, Graph Reasoning, 3D QA
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -78,3 +78,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Model Architecture), p. 3 (3.1. Model Architecture)이다.
+
+## 검색 태그 근거
+
+물체와 관계의 3D 장면 그래프 특징을 언어모델의 토큰으로 넣어 질문 응답과 근거 물체 찾기에 사용한다. 점군 기반 입력과 선택한 2D 특징의 영향을 비교했다. [원문 4쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zemskova_3DGraphLLM_Combining_Semantic_Graphs_and_Large_Language_Models_for_3D_ICCV_2025_paper.pdf#page=7)

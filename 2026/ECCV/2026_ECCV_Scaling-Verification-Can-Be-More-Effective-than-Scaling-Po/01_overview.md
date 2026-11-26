@@ -42,3 +42,8 @@ SIMPLER·PolaRiS와 실로봇의 in/out-of-distribution 지시 실행을 평가�
 ## Verification Boundary
 
 재표현의 의미 보존, verifier 감독량, rollout-independent evaluation을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · Bridge 지시·행동 검증기 · bridge_verifier/lang_transform_vlm.py [배포 파일](https://raw.githubusercontent.com/cover-vla/cover-vla/21a9960639a8340c1e8511fb04776fb11271f246/bridge_verifier/lang_transform_vlm.py)
+- 가중치 · Bridge용 지시·행동 대조 검증기 · cover_verifier_bridge.pt [배포 파일](https://huggingface.co/cover-vla/cover-vla-bridge/resolve/fa9ced533631fd0dc941fa7d6b955ea6127caba9/cover_verifier_bridge.pt)

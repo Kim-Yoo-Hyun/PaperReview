@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** 언어 조건 로봇팔 조작.
+- **Input boundary:** 영상·언어 지시 및 학습 시의 시연 행동.
+- **Output/decision under evaluation:** 최종 행동 시퀀스.
+- **Primary target:** 시뮬레이션·실물의 조작 성공.
 - **Detected evaluation headings:** 4. Experiments (p. 5); 4.1. Experimental Setup (p. 5); 4.2. Simulation Experiments (p. 6).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 8 (4.4. Real-World Deployment), p. 6 (4.2. Si
 |---|---|---|---|
 | Robot/hardware/simulator | For simulation experiments, we strictly follow the official training splits provided by the corresponding benchmark (LIBERO [32], LIBERO-Plus [15], and VLABench [58]), and train ... | embodiment, simulator version and control stack | p. 5 (4.1. Experimental Setup), p. 5 (4.1. Experimental Setup) |
 | Task/environment | For the real-world setting, all demonstrations used for model training are collected on our own robotic platform. | reset, timeout, object/scene variation | p. 5 (4.1. Experimental Setup), p. 6 (4.2. Simulation Experiments) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Observation/sensor | 영상·언어 지시 및 학습 시의 시연 행동 | calibration, preprocessing, privileged input | p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation) |
+| Output/decision | 최종 행동 시퀀스 | action frame, controller and termination | p. 2 (1. Introduction), p. 1 (1. Introduction) |
 
 ## Metrics and Success Definition
 

@@ -10,7 +10,7 @@
 - Authors: Sicheng Zuo, Wenzhao Zheng, Xiaoyong Han, Longchao Yang, yong pan, Jiwen Lu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Tags: 3D representation, semantic occupancy, multi-view, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/116903
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/4470d0b5795c3721e2a622a249ef2154-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.10977

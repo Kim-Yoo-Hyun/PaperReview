@@ -10,7 +10,7 @@
 - Authors: Haobo Jiang, Jin Xie, Jian Yang, Liang Yu, Jianmin Zheng
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: geometry, Diffusion, Generation, point cloud, 3D Vision
+- Tags: geometry, Diffusion, Generation, point cloud, 3D Vision, 3D Registration
 - Official paper: https://proceedings.mlr.press/v267/jiang25k.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/jiang25k/jiang25k.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ Generative Point Cloud Registration은 정합할 두 점군의 깊이에서 서�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Zero-Shot Geometric Consistency Generation), p. 4 (3.3. Zero-Shot Texture Consistency Generation), p. 5 (3.4. Few-Shot Consistency Fine-tuning)이다.
+
+## 검색 태그 근거
+
+두 입력 점군에서 깊이를 투영하고 확산 모델이 뷰 사이 일관된 색 영상을 만들게 한다. 생성한 색을 좌표와 결합해 대응을 찾고 3D 정합 정확도를 평가한다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=3) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/jiang25k/jiang25k.pdf#page=7)

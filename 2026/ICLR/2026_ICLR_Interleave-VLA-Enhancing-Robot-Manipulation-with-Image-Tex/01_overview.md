@@ -10,7 +10,7 @@
 - Authors: Cunxin Fan, Xiaosong Jia, Yihang Sun, Yixiao Wang, Jianglan Wei, Ziyang Gong, Xiangyu Zhao, Masayoshi Tomizuka, Xue Yang, Junchi Yan, Mingyu Ding
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Robotics, Reinforcement Learning
+- Tags: VLA, Robotics, Imitation Learning, Flow Matching
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/444876e32cba0408c63f5295481cfe20-Abstract-Conference.html
 - PDF title variant: Interleave-VLA: Enhancing Robot Manipulation with Interleaved Image-Text Instructions [게재본 표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf#page=1)
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/444876e32cba0408c63f5295481cfe20-Paper-Conference.pdf

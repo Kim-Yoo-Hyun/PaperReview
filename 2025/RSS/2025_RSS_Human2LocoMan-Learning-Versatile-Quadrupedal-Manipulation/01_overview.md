@@ -10,7 +10,7 @@
 - Authors: Yaru Niu, Yunzhe Zhang, Mingyang Yu, Changyi Lin, Chenhao Li, Yikai Wang, Yuxiang Yang, Wenhao Yu, Tingnan Zhang, Zhenzhen Li, Jonathan Francis, Bingqing Chen, Jie Tan, Ding Zhao
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, quadruped locomotion, loco-manipulation, human demonstrations
+- Tags: Robotics, loco-manipulation, human demonstrations, Imitation Learning, quadruped
 - Official paper: https://www.roboticsproceedings.org/rss21/p122.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p122.pdf
 - Code/Project: https://human2bots.github.io/

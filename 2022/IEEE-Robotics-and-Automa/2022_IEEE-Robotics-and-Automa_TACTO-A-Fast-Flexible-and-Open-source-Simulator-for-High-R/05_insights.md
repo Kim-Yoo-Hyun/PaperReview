@@ -37,8 +37,8 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `simulated state, geometry, contact와 control input → dynamics/contact state 또는 learned simulator representation → simulation step, trajectory 또는 environment query`.
-- 이 논문의 재사용 가능한 지점은 Hence, it is difficult to adapt to existing and future sensor designs that require advanced functionalities, like reflection, refraction, and shadows with fast speed.를 To render the RGB image from the depth map, researchers from [13] implemented their own renderer based on Phong's reflection model.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 dynamics/contact state 또는 learned simulator representation가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In the failure grasp, the object is only grasped by the corner and begins to slip after being lifted.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `시뮬레이션의 접촉 형상 및 센서의 광학 설정 → 젤 표면의 접촉 자국과 렌더링 장면 → 모의 촉각 영상, 하위 모델의 파지 안정성·자세 추정`.
+- 이 논문의 재사용 가능한 지점은 Hence, it is difficult to adapt to existing and future sensor designs that require advanced functionalities, like reflection, refraction, and shadows with fast speed.를 To render the RGB image from the depth map, researchers from [13] implemented their own renderer based on Phong's reflection model.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 젤 표면의 접촉 자국과 렌더링 장면가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In the failure grasp, the object is only grasped by the corner and begins to slip after being lifted.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

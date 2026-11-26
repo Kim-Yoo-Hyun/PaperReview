@@ -10,7 +10,7 @@
 - Authors: Vincent Leroy, Yohann Cabon, Jérôme Revaud
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D geometry, matching, calibration
+- Tags: 3D geometry, matching, camera pose
 - Official paper: https://arxiv.org/abs/2406.09756
 - Full-text retrieval: https://arxiv.org/pdf/2406.09756
 - Code/Project: https://github.com/naver/mast3r

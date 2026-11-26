@@ -34,6 +34,10 @@
 
 1,120개 새 인스턴스에서 상태 입력 보정 후 초기 자세 교란의 성공률은 23.8%에서 28.7%로 변했다(Holm 보정 p=0.287). 보정이 활성화되는 별도의 600개 확인 표본에서는 26.3%에서 32.2%로 변했다. [PDF 10쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=10) · [PDF 12쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=12)
 
+## 검색 태그 근거
+
+고정한 OpenVLA-OFT 앞에서 여러 영상 간 일치도와 에피소드 시작 대비 자세를 점검해 관측을 선택적으로 보정한다. LIBERO-Plus의 카메라·고유수용 교란이 평가 조건이다. [원문 4쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=4) · [원문 9쪽](https://mdpi-res.com/d_attachment/entropy/entropy-28-00975/article_deploy/entropy-28-00975.pdf#page=9)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 Top-tier 선정 논문은 아니지만 D1의 stream diagnosis·correction 주장과 직접 겹쳐 REFERENCE로 등록한다.

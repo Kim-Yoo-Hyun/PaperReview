@@ -80,3 +80,7 @@ UW-GS는 수중 영상에서 거리에 따른 색 변화와 움직이는 물체�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Problem formulation), p. 4 (3.1. Problem formulation)이다.
+
+## 검색 태그 근거
+
+수중 카메라 영상의 산란·감쇠 성분과 움직이는 피사체를 처리해 정적 수중 장면을 복원한다. 물속 촬영은 관측 조건이며 평가값은 렌더링과 깊이 품질이다. [원문 3쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Wang_UW-GS_Distractor-Aware_3D_Gaussian_Splatting_for_Enhanced_Underwater_Scene_Reconstruction_WACV_2025_paper.pdf#page=7)

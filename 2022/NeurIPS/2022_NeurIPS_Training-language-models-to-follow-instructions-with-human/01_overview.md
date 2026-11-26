@@ -10,7 +10,7 @@
 - Authors: Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul F. Christiano, Jan Leike, Ryan Lowe
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
-- Tags: LLM, instruction tuning, alignment
+- Tags: LLM, instruction tuning, alignment, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/2203.02155
 - Full-text retrieval: https://arxiv.org/pdf/2203.02155
 - Code/Project: not identified

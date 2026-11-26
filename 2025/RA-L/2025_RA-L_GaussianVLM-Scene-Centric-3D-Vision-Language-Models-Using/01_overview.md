@@ -10,7 +10,7 @@
 - Authors: Anna-Maria Halacheva, Jan-Nico Zaech, Xi Wang, Danda Pani Paudel, Luc Van Gool
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Vision-Language Model, 3D Vision, Gaussian Splatting
+- Tags: Vision-Language Model, 3D Vision, Gaussian Splatting, 3D QA
 - Official paper: https://arxiv.org/abs/2507.00886
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2025.3623037
 - Full-text retrieval: https://arxiv.org/pdf/2507.00886
@@ -77,3 +77,7 @@ GaussianVLM은 언어 특징을 3D 가우시안 장면에 배치해 실내 장�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (I. INTRODUCTION), p. 3 (III. METHOD), p. 4 (III. METHOD), p. 5 (IV. EXPERIMENTS)이다.
+
+## 검색 태그 근거
+
+장면의 가우시안과 언어 질의 또는 질의 위치를 입력으로 받아 응답한다. 장면 중심 질문 응답·캡션과 3D 근거 물체 찾기를 실험했다. [원문 3쪽](https://arxiv.org/pdf/2507.00886#page=3) · [원문 6쪽](https://arxiv.org/pdf/2507.00886#page=6)

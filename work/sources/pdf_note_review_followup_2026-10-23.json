@@ -31,7 +31,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/01_overview.md",
+      "overview_path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -1299,7 +1299,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/01_overview.md",
+      "overview_path": "2011-2020/2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 2,
       "correction_pages": [
@@ -1322,7 +1322,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/01_overview.md",
+      "overview_path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 4,
       "correction_pages": [
@@ -1393,7 +1393,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md",
+      "overview_path": "2011-2020/2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 2,
       "correction_pages": [
@@ -1416,7 +1416,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md",
+      "overview_path": "2011-2020/2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -1485,7 +1485,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/01_overview.md",
+      "overview_path": "2011-2020/2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -1522,7 +1522,7 @@
       "sha256": "ff3da3d9388d3b8623d8533d9d356c33bc8293bca45c1e42edbdf365d827ee76",
       "prior_review_hash_matches": true,
       "transport_note": "Expired TLS certificate; this single unauthenticated public request used a scoped unverified context, then required exact SHA256 equality with the preexisting full-text review before parsing/using the PDF.",
-      "overview_path": "2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/01_overview.md",
+      "overview_path": "2011-2020/2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 2,
       "correction_pages": [
@@ -1545,7 +1545,7 @@
       "prior_review_hash_matches": false,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2013/Neural-Computation/2013_Neural-Computation_Dynamical-Movement-Primitives-Learning-Attractor-Models-fo/01_overview.md",
+      "overview_path": "2011-2020/2013/Neural-Computation/2013_Neural-Computation_Dynamical-Movement-Primitives-Learning-Attractor-Models-fo/01_overview.md",
       "identity_check": "Edinburgh repository cover title, authors and DOI 10.1162/NECO_a_00393 visually confirmed; cover includes download date. Different SHA256 is recorded, not treated as identical bytes.",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -1638,7 +1638,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/01_overview.md",
+      "overview_path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 4,
       "correction_pages": [
@@ -1709,7 +1709,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md",
+      "overview_path": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 3,
       "correction_pages": [
@@ -1732,7 +1732,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/01_overview.md",
+      "overview_path": "2011-2020/2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -1755,7 +1755,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 0.8333333333333334,
       "mirror": false,
-      "overview_path": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md",
+      "overview_path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 2,
       "correction_pages": [
@@ -1870,7 +1870,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/01_overview.md",
+      "overview_path": "2011-2020/2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 2,
       "correction_pages": [
@@ -1893,7 +1893,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/01_overview.md",
+      "overview_path": "2011-2020/2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -2008,7 +2008,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md",
+      "overview_path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 4,
       "correction_pages": [
@@ -2036,7 +2036,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2020/arXiv/2020_arXiv_robosuite-A-Modular-Simulation-Framework-and-Benchmark-for/01_overview.md",
+      "overview_path": "2011-2020/2020/arXiv/2020_arXiv_robosuite-A-Modular-Simulation-Framework-and-Benchmark-for/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -2059,7 +2059,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/01_overview.md",
+      "overview_path": "2011-2020/2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 3,
       "correction_pages": [
@@ -2132,7 +2132,7 @@
       "prior_review_hash_matches": true,
       "title_token_overlap": 1.0,
       "mirror": false,
-      "overview_path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
+      "overview_path": "2011-2020/2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/01_overview.md",
       "identity_check": "Prior source review PDF SHA256 exact match",
       "corrected_note_count": 1,
       "correction_pages": [
@@ -2146,7 +2146,7 @@
   "notes": [
     {
       "paper_id": "pr-0008",
-      "path": "2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/03_method.md",
+      "path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/03_method.md",
       "sha256_before": "1941aeea3bb99d108fa04e8465ba2775521d207a853270e80d3b055046f2f411",
       "sha256_after": "6a27ed7646e2ecb832b00ad56b4f7feafb1ff5a6aaeaf28e66577f61a0435884",
       "pdf_pages": [
@@ -4610,7 +4610,7 @@
     },
     {
       "paper_id": "pr-0489",
-      "path": "2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/03_method.md",
+      "path": "2011-2020/2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/03_method.md",
       "sha256_before": "36d756cf3d2af5753cfe5d9e90f2f66eeb55799e94b9dbf0277d446d69a1c573",
       "sha256_after": "ce1dba034a4bf4f700b0a844fdf2929e8c2dee927df87d80ab15e2aa3c38c460",
       "pdf_pages": [
@@ -4652,7 +4652,7 @@
     },
     {
       "paper_id": "pr-0489",
-      "path": "2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/04_evaluation.md",
+      "path": "2011-2020/2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/04_evaluation.md",
       "sha256_before": "bbea69c9a70cee0e275afe3e7bea0e49026393cd2bf322edaf2703001092cf94",
       "sha256_after": "7768c71367e050676dccaa87140ac49aa644d95a3d03408a2c9e1d8f87a2b509",
       "pdf_pages": [
@@ -4674,7 +4674,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/01_overview.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/01_overview.md",
       "sha256_before": "abd8844962186b7e6f7068a531c335f092c32fdba4aaa3ff82957fbed3ca7ee3",
       "sha256_after": "ef0e06321935897a3299c12d64ce30165727708817cc16bf0e331c65fe085492",
       "pdf_pages": [
@@ -4696,7 +4696,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/03_method.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/03_method.md",
       "sha256_before": "0c899c06e38b8ef682cb13a248cc99ec3e2a21bf93cc342f291055647a8011c5",
       "sha256_after": "d0c33ce1022043776d05296b7e6e1c9e2d306624f09b924dca3b301156c46055",
       "pdf_pages": [
@@ -4758,7 +4758,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
       "sha256_before": "1be2b84923f01f772965a1d4e4a8b0388d8a89aa3ea5a936bcc172c525ba8bcd",
       "sha256_after": "a869a3d87a6d2a3d0e8ffcf9b4ffdc93e2c952c0c579d0d8dcab57eb29bf65d4",
       "pdf_pages": [
@@ -4780,7 +4780,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/05_insights.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/05_insights.md",
       "sha256_before": "86105810ccea6b459861100d9a0989f7b026f15abe40ec5b6220ee97f4dca79f",
       "sha256_after": "0fe92f9c1aefd358af5016f5318d23f7c8665c316a65ebfe34e07bb824107869",
       "pdf_pages": [
@@ -4920,7 +4920,7 @@
     },
     {
       "paper_id": "pr-0523",
-      "path": "2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md",
+      "path": "2011-2020/2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md",
       "sha256_before": "b6c21a60a67accefc759d6916da650f4639e35e0a364ac1f8b369aa663c93d5c",
       "sha256_after": "15c5b978ed2f91d6e2394b1ecf3098a8020091f9d13bf0f22865e5dee6616b23",
       "pdf_pages": [
@@ -4942,7 +4942,7 @@
     },
     {
       "paper_id": "pr-0523",
-      "path": "2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/03_method.md",
+      "path": "2011-2020/2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/03_method.md",
       "sha256_before": "70a47f76ed4e0d36a21091007c227c16cbebb9286c6ed9f7b1d1029c8e74bc95",
       "sha256_after": "db2643e6d8813f6c02662149b0c798b24cbf9519f91bd42b8d4c34325be123d1",
       "pdf_pages": [
@@ -4974,7 +4974,7 @@
     },
     {
       "paper_id": "pr-0524",
-      "path": "2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/03_method.md",
+      "path": "2011-2020/2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/03_method.md",
       "sha256_before": "a9024c257b8105608859ed950a345d9d122828c92ff9d42de34fa0a5cbf56070",
       "sha256_after": "f2e6fa34927d89e3cf4f20c17adaf6d2df4f157e019fbd5e08a850d849a1740f",
       "pdf_pages": [
@@ -5082,7 +5082,7 @@
     },
     {
       "paper_id": "pr-0546",
-      "path": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/03_method.md",
+      "path": "2011-2020/2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/03_method.md",
       "sha256_before": "8bd8c24ebdbf813667a9073ed7e4320b8f91e976a3b5015c8feba8804244c388",
       "sha256_after": "2fe58ccbed2fb9a1b090581658101928a685f59cd298552027120d6d3ef1ab7e",
       "pdf_pages": [
@@ -5104,7 +5104,7 @@
     },
     {
       "paper_id": "pr-0556",
-      "path": "2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/03_method.md",
+      "path": "2011-2020/2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/03_method.md",
       "sha256_before": "4585072d8021d602bd59a390f7d9582ba9b63f5e4036dfc747c274b0d67cebdd",
       "sha256_after": "9b65043a2f19b5a4f93af1ed053ddef96939f09d559358a10248a29b75793d1f",
       "pdf_pages": [
@@ -5136,7 +5136,7 @@
     },
     {
       "paper_id": "pr-0556",
-      "path": "2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/04_evaluation.md",
+      "path": "2011-2020/2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/04_evaluation.md",
       "sha256_before": "47733e4f168c1da9376f862339e84227a4626f9c660a71b7bea8bb10a661f728",
       "sha256_after": "29d46ea518438ce7533cda88ff381e53997cd607b07987ca0dbb7d9a749dd143",
       "pdf_pages": [
@@ -5158,7 +5158,7 @@
     },
     {
       "paper_id": "pr-0559",
-      "path": "2013/Neural-Computation/2013_Neural-Computation_Dynamical-Movement-Primitives-Learning-Attractor-Models-fo/03_method.md",
+      "path": "2011-2020/2013/Neural-Computation/2013_Neural-Computation_Dynamical-Movement-Primitives-Learning-Attractor-Models-fo/03_method.md",
       "sha256_before": "d97faa14694248c3689991a3c634df2d177e5cb44f6f682caac45d59025bd563",
       "sha256_after": "86b4d0f882f36adf1265337db8bca9fde5b5d2b4dbef8d2b16ceb633de917de5",
       "pdf_pages": [
@@ -5560,7 +5560,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/01_overview.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/01_overview.md",
       "sha256_before": "4b79e95ca595719ace93fb174c6c026077dc3e62aa7816dfd3c69d42ec6124d7",
       "sha256_after": "82e7fbefdc5eab057fb9e613ec75f7b2dc2971bfe40597c4e4973b821e2d6b8a",
       "pdf_pages": [
@@ -5582,7 +5582,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/03_method.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/03_method.md",
       "sha256_before": "bb8941ea226dd87926b0b2b1600eaa0c43182192e5685cc7f4cce99d39489434",
       "sha256_after": "97c20834e16eda6ef3d2a67116dba90494d9385180acfcf501b96f9638e9696c",
       "pdf_pages": [
@@ -5604,7 +5604,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/04_evaluation.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/04_evaluation.md",
       "sha256_before": "59faac00b41785dff67b83ba04e929280b37881a7232aef800bd77adf0fe3895",
       "sha256_after": "36ae6d34c8a3180e8a42ecda715646e3ec25ba979d3537e736bee4b60d55d354",
       "pdf_pages": [
@@ -5637,7 +5637,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/05_insights.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/05_insights.md",
       "sha256_before": "af8e2055ed9608f48e0396b7dbe474fafd39646e60031f93bcd4f869a44340aa",
       "sha256_after": "e65665ce74b637466e62a37c71562005914c74b0d75daa65fc8ef3ada594e4c8",
       "pdf_pages": [
@@ -5713,7 +5713,7 @@
     },
     {
       "paper_id": "pr-0615",
-      "path": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md",
+      "path": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md",
       "sha256_before": "b52ff3c50b01d00e422dd24064b61c9cfb274f5808b3322e9208cb514d0becda",
       "sha256_after": "d7ba0cc65747590d80e428a0bf1c07f710f95fc327afb1428d411aa52684b437",
       "pdf_pages": [
@@ -5745,7 +5745,7 @@
     },
     {
       "paper_id": "pr-0615",
-      "path": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/02_problem.md",
+      "path": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/02_problem.md",
       "sha256_before": "0c163bb491073f0d2425eb32b7c5130903b75df437e53d972c92f6f4c6f04a62",
       "sha256_after": "7cf33a9087c7e73a4f538a211dae32a2a55d84e7816629d1216bbd57ed47791c",
       "pdf_pages": [
@@ -5767,7 +5767,7 @@
     },
     {
       "paper_id": "pr-0615",
-      "path": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/05_insights.md",
+      "path": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/05_insights.md",
       "sha256_before": "b9e88738268b2e5dcc96e09ea2d03298b6d8146a3a46e93925c6edb8efbe5983",
       "sha256_after": "0aad7d34ef5fc61910e267b7872ae50fd52060b4152b935ff488fa42e59fcbc1",
       "pdf_pages": [
@@ -5789,7 +5789,7 @@
     },
     {
       "paper_id": "pr-0620",
-      "path": "2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/03_method.md",
+      "path": "2011-2020/2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/03_method.md",
       "sha256_before": "b1dd48b34651044e9261d198a9581bf24f30e34b4efb46fe8029f4d7e2294273",
       "sha256_after": "1caca3bb0553d9d86384604bf0ea65a6f479173f5e36397128bd55450a7b14a6",
       "pdf_pages": [
@@ -5821,7 +5821,7 @@
     },
     {
       "paper_id": "pr-0622",
-      "path": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md",
+      "path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md",
       "sha256_before": "ffb3934eb466437aedb79505b8cffd90539d9f1c9c8966a61b4b989e403858fd",
       "sha256_after": "c8c392c89648467abc8615035042e9ab93e1156f502ca213f0083183fe8108dd",
       "pdf_pages": [
@@ -5843,7 +5843,7 @@
     },
     {
       "paper_id": "pr-0622",
-      "path": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/03_method.md",
+      "path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/03_method.md",
       "sha256_before": "bf179039d43523c8a7ed80da04965c336e7a6fa65b27a71eaa531641acf6a304",
       "sha256_after": "ea5050df170c4dc4854d14dab42fdeeb455d790eba62d113136d8cebfc6c2a3a",
       "pdf_pages": [
@@ -6091,7 +6091,7 @@
     },
     {
       "paper_id": "pr-0676",
-      "path": "2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/01_overview.md",
+      "path": "2011-2020/2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/01_overview.md",
       "sha256_before": "7f6673ae4aaa79fdf135f5e1dc173a8d1138dfc5674897888a8bb4719c59caa6",
       "sha256_after": "c53dfaff62497fe8033ebc97c443c15f1ba4eeea23673e5eae4bc1fbb41d20bf",
       "pdf_pages": [
@@ -6113,7 +6113,7 @@
     },
     {
       "paper_id": "pr-0676",
-      "path": "2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/04_evaluation.md",
+      "path": "2011-2020/2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/04_evaluation.md",
       "sha256_before": "1cd7e7025151ebbe0b9020883d3ee4f0fba4bc82f0cea1869ae6becf857e94b4",
       "sha256_after": "5f44eb28bca2d2fae823ea7dfba56f1e97d63981e07e3501b39361a49ab26feb",
       "pdf_pages": [
@@ -6145,7 +6145,7 @@
     },
     {
       "paper_id": "pr-0679",
-      "path": "2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/03_method.md",
+      "path": "2011-2020/2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/03_method.md",
       "sha256_before": "1ffecbabfd1144a64c1a7b1af1019d9c8a367ba8241df5282b49679e956ccde7",
       "sha256_after": "8fa50dae57c168155d5fa6e35fe3b596d65d3d390140d6ddded72b3ac383faaa",
       "pdf_pages": [
@@ -6383,7 +6383,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md",
       "sha256_before": "1be7439e2efda87ae6f1e480ba7aac4f2155b8bbfb0d4622822beae9d5ebf8a2",
       "sha256_after": "ca53e19d81da5ef5cf935c6274b88896262aa204d7dca0c82bdc4f30364f0517",
       "pdf_pages": [
@@ -6418,7 +6418,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/03_method.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/03_method.md",
       "sha256_before": "f4d5a99c4be54c5b99add85f9e7835376ac3ea7ff79b772a80a263b8ba8a033f",
       "sha256_after": "1324bf89b9fecc4af6ecf0f8c667bafe6d6f629d5887a4ada62af54a5b4793c5",
       "pdf_pages": [
@@ -6440,7 +6440,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/04_evaluation.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/04_evaluation.md",
       "sha256_before": "02388c33fdf8b1bd8e0dbb49775c749396b6f23e5e32d532d682b07ca568f534",
       "sha256_after": "a552e7ba8a09ab64c97fe65f96166645b616d176a3f8433aab71a19fcc5dd904",
       "pdf_pages": [
@@ -6516,7 +6516,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/05_insights.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/05_insights.md",
       "sha256_before": "d72a322e9f55a96a1f29757d4a2fae54c165c14bd1c06133ba4f279fece8c19c",
       "sha256_after": "16c176148fae1a255ce679bfd8e274d493a74019ae09af88107dbea5f0370537",
       "pdf_pages": [
@@ -6584,7 +6584,7 @@
     },
     {
       "paper_id": "pr-0846",
-      "path": "2020/arXiv/2020_arXiv_robosuite-A-Modular-Simulation-Framework-and-Benchmark-for/04_evaluation.md",
+      "path": "2011-2020/2020/arXiv/2020_arXiv_robosuite-A-Modular-Simulation-Framework-and-Benchmark-for/04_evaluation.md",
       "sha256_before": "3554f0b6071ae5e984f133c6cab7fc28ad3b2d44c44205da6a737077e245e0bb",
       "sha256_after": "59c1d931a246747c017abb1016721d7347798c8892fe181618082ba0a273fb42",
       "pdf_pages": [
@@ -6606,7 +6606,7 @@
     },
     {
       "paper_id": "pr-0853",
-      "path": "2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/01_overview.md",
+      "path": "2011-2020/2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/01_overview.md",
       "sha256_before": "40f90744be6e485ce4512a982d34b4717a91432631090fdac5a862ddaaf1705a",
       "sha256_after": "4830acd9a854347d08b51feef086cd446aa732b62d3c4f4449f265f2b676977b",
       "pdf_pages": [
@@ -6628,7 +6628,7 @@
     },
     {
       "paper_id": "pr-0853",
-      "path": "2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/03_method.md",
+      "path": "2011-2020/2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/03_method.md",
       "sha256_before": "a4cfa925a4b12c03ebc5235d95bcf3bc28cb34395b11ca10c44457dd603066d3",
       "sha256_after": "959ad9fb833b7c35561b96e1fa1793f94532fa56694ff9399849007987c48e05",
       "pdf_pages": [
@@ -6682,7 +6682,7 @@
     },
     {
       "paper_id": "pr-0853",
-      "path": "2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/04_evaluation.md",
+      "path": "2011-2020/2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/04_evaluation.md",
       "sha256_before": "d4226db81701b3d2217dbe7c5200b557b5a4d342d2445d7173232383cc7e4cee",
       "sha256_after": "067fb6296b9d6c5593b5f19da0399479c0fa808c1837212fbee1ffc2a647c588",
       "pdf_pages": [
@@ -6748,7 +6748,7 @@
     },
     {
       "paper_id": "pr-0946",
-      "path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
+      "path": "2011-2020/2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
       "sha256_before": "6906e53140276a0069963a2786ee714db4b135bb552bcec0f0d1fe2811a9cec6",
       "sha256_after": "2228a5da52279f2edcbdee7077bdb30ad16b71205c8b08cc087a9bcccfbc85dd",
       "pdf_pages": [

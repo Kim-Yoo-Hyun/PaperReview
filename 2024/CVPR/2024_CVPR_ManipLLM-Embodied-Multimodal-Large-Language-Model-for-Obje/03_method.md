@@ -60,9 +60,9 @@ PDF body method statement (p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tun
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback, handle, different, scenarios, effectively | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | Meanwhile, real-world, experiments, strong, generalization, ability, without, TTA, strategy, simulator | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback, handle, different, scenarios, effectively | RGB와 텍스트, 3D 역투영용 깊이와 실행 중 힘 피드백 | body cue; exact tensor/frame verify |
+| State/latent | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback | 접촉점·그리퍼 방향과 관절 물체의 움직임 | body cue; notation verify |
+| Action/output | Meanwhile, real-world, experiments, strong, generalization, ability, without, TTA, strategy, simulator | 시작 자세 및 조정된 조작 방향 | body cue; unit/decoder verify |
 | Objective/constraint | supervised, under, cross-entropy, loss, enabling, model, aware, where, object, region | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -74,7 +74,7 @@ PDF body method statement (p. 6 (3.3. Sim-to-real Transfer), p. 3 (3.1. Fine-tun
 - **p. 4 / 3.1. Fine-tuning Strategy - extractive body cue:** Inspired by Flowbot3D [6], we divide the action type of the object part into "REVOLUTE" and "PRISMATIC", and collect the affordance map in the simulator ...
 - **p. 2 / 1. Introduction - extractive body cue:** This method relies on force feedback generated along the axes and the object to adaptively adjust the direction and predict the trajectory.
 - **p. 2 / 1. Introduction - extractive body cue:** action trajectories (i.e. end-effector trajectories) [4, 40] poses challenges in generalization due to minimal low-level action samples in their pretraining data.
-- **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
+- **Normalized interface:** observation=RGB와 텍스트, 3D 역투영용 깊이와 실행 중 힘 피드백; state=접촉점·그리퍼 방향과 관절 물체의 움직임; output/action=시작 자세 및 조정된 조작 방향.
 
 ## Temporal and Runtime Contract
 

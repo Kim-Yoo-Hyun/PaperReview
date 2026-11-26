@@ -78,3 +78,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 6 (3.6. Loss of Individual Partition Training), p. 5 (3.5.1. Appearance Transform Module)이다.
+
+## 검색 태그 근거
+
+초기 SfM 점군의 분포와 영상 가시성으로 도시 장면을 나누고, 가우시안별 외관 보정으로 촬영 시점마다 다른 밝기와 색을 반영한다. 장면 복원과 새 시점 렌더링을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Yuan_Robust_and_Efficient_3D_Gaussian_Splatting_for_Urban_Scene_Reconstruction_ICCV_2025_paper.pdf#page=7)

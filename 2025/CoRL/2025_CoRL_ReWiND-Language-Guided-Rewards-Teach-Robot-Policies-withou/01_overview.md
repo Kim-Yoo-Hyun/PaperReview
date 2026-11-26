@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2025 / CoRL
-- Authors: Jiahui Zhang, Yusen Luo, Abrar Anwar, Sumedh Anand Sontakke, Joseph J Lim, Jesse Thomason, Erdem Biyik, Jesse Zhang
+- Authors: Jiahui Zhang, Yusen Luo, Abrar Anwar, Sumedh A. Sontakke, Joseph J. Lim, Jesse Thomason, Erdem Bıyık, Jesse Zhang
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: NEXT
@@ -42,3 +42,8 @@ Simulation과 실제 양팔 조작의 미관측 과제 적응을 평가한다.
 ## Verification Boundary
 
 사전학습 시연·외부 데이터 사용량, reward leakage, 신규 과제별 인간 감독을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 영상과 텍스트에 조건화한 보상 모델 · model.py [배포 파일](https://raw.githubusercontent.com/rewind-reward/ReWiND/ea5dd3be409bbe81e9d0177f73202b9fbf41d1f2/model.py)
+- 데이터 · ReWiND용으로 전처리한 Open X 시각 임베딩 · full_openx_embeddings_v2_train.h5 [배포 파일](https://huggingface.co/datasets/HenryZhang/rewind_raw_data5/resolve/1a847dd4fa3dd7397fe3324ce48587193e8202ab/full_openx_embeddings_v2_train.h5)

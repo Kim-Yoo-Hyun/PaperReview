@@ -8,9 +8,9 @@
 
 - Year/Venue: 2022 / arXiv
 - Authors: Tete Xiao, Ilija Radosavovic, Trevor Darrell, Jitendra Malik
-- Primary track: Planning and control
+- Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, representation learning, Visual Pretraining, Imitation Learning
+- Tags: Robotics, representation learning, Visual Pretraining, self-supervised learning, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/2203.06173
 - Full-text retrieval: https://arxiv.org/abs/2203.06173
 - Code/Project: https://tetexiao.com/projects/mvp
@@ -44,12 +44,14 @@
 
 ## Observation, State, and Output Interface
 
+자연 이미지의 마스크 복원으로 시각 인코더를 학습한 뒤 동결한다. 손목 카메라와 관절 위치·속도를 받아 IsaacGym의 Franka 및 다지 손이 달린 Kuka 정책을 PPO로 학습한다. 실세계 자료는 사전학습 이미지다. [PDF 3쪽](https://arxiv.org/pdf/2203.06173v1#page=3) · [PDF 4쪽](https://arxiv.org/pdf/2203.06173v1#page=4)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions). | observation history와 expert trajectory/action | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels) |
-| State/latent | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs, actions, PPO | behavior policy와 temporal action context | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels), p. 2 (1. Introduction) |
-| Output/action | PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et al., 2020; 2019). | predicted action 또는 action chunk | p. 3 (2.2. Learning Motor Control from Pixels), p. 2 (1. Introduction), p. 4 (3.4. Observations and Actions) |
-| Objective/outcome | We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021). | imitation error, task success, robustness와 compounding error | p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training) |
+| Observation/input | First, training is computationally expensive and has poor sample complexity (especially with high-dimensional inputs and actions). | 자연 이미지 사전학습 후 손목 영상과 관절 상태 | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels) |
+| State/latent | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs, actions, PPO | 동결된 시각 특징과 고유수용 상태 | p. 2 (1. Introduction), p. 3 (2.2. Learning Motor Control from Pixels), p. 2 (1. Introduction) |
+| Output/action | PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et al., 2020; 2019). | PPO 정책의 관절 명령 | p. 3 (2.2. Learning Motor Control from Pixels), p. 2 (1. Introduction), p. 4 (3.4. Observations and Actions) |
+| Objective/outcome | We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021). | 시뮬레이션의 과제 성공 | p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training) |
 
 ## Main Claims and Actual Contribution
 

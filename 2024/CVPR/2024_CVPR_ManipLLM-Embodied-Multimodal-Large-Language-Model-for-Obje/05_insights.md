@@ -40,14 +40,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 To deal with these difficulties, the proposed policy aims to adjust how we interact with things based on impedance force feedback, which can handle different scenarios effectively.를 Thus, the best forward direction is generated as the following to determine the current end-effector's pose: dopt, opt = arg max j∈{0,1,...,N} ∥δj∥ By doing so, we determine the optimal movement pose ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Additionally, its head is relatively short, which presents a collision risk when interacting with the protruding handle.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `RGB와 텍스트, 3D 역투영용 깊이와 실행 중 힘 피드백 → 접촉점·그리퍼 방향과 관절 물체의 움직임 → 시작 자세 및 조정된 조작 방향`.
+- 이 논문의 재사용 가능한 지점은 To deal with these difficulties, the proposed policy aims to adjust how we interact with things based on impedance force feedback, which can handle different scenarios effectively.를 Thus, the best forward direction is generated as the following to determine the current end-effector's pose: dopt, opt = arg max j∈{0,1,...,N} ∥δj∥ By doing so, we determine the optimal movement pose ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 접촉점·그리퍼 방향과 관절 물체의 움직임가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 Additionally, its head is relatively short, which presents a collision risk when interacting with the protruding handle.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: Meanwhile, in real-world experiments, our method shows strong generalization ability, with or without TTA strategy.
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `VLA and generalist robot policies`; tags: `LLM, Robotics, Vision-Language`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

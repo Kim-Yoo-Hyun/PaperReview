@@ -10,7 +10,7 @@
 - Authors: Takeshi Noda, Yu-Shen Liu, Zhizhong Han
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision, surface reconstruction
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.3. Loss Functions), p. 3 (3.1. Learning Self-Constrained Priors)이다.
+
+## 검색 태그 근거
+
+여러 영상에 맞추어 가우시안을 학습하고, 모델이 렌더링한 깊이를 TSDF로 융합해 표면 주변의 가우시안을 제약한다. DTU에서 메시와 정답 표면의 거리를 비교했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Noda_3D_Gaussian_Splatting_with_Self-Constrained_Priors_for_High_Fidelity_Surface_CVPR_2026_paper.pdf#page=6)

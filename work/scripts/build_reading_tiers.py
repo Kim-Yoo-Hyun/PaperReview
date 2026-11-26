@@ -1783,13 +1783,14 @@ def plan_section(
         lines.extend([f"### {track} — {len(papers)}", ""])
         for paper in papers:
             sequence += 1
-            lines.append(
+            entry = (
                 f"{sequence}. [{paper['title']}]({'.' + paper['path']}) "
                 f"— {paper['year']} {paper['venue']}."
             )
             rationale = FOCUS_PRIORITY_RATIONALES.get(ids.get(paper["path"]))
             if rationale:
-                lines.append(f"   - 선정 이유: {rationale}")
+                entry += f" {rationale}"
+            lines.append(entry)
         lines.append("")
     return lines
 
@@ -1806,74 +1807,25 @@ def write_plan(
     lines = [
         "# 읽기 계획",
         "",
-        f"- Updated: {datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat()} KST",
-        "- Source registry: [PAPER.md](../PAPER.md)",
-        "- Full tier index: [READING_TIERS.csv](./READING_TIERS.csv)",
-        "- Reading tracker: [READING_STATUS.csv](./READING_STATUS.csv)",
-        "- Inactive reading history: [READING_STATUS_HISTORY.csv](./READING_STATUS_HISTORY.csv)",
-        f"- Intensive-reading set: **{counts['CORE'] + counts['NEXT']} papers** "
-        f"(CORE {counts['CORE']} + NEXT {counts['NEXT']})",
-        f"- Base tier review: {FOCUS_REVIEW_DATE}. 최근 등록·게재 갱신은 [레지스트리 변경](../work/update/REGISTRY.md)을 따른다. 개별 membership은 이 생성기의 CORE/NEXT group으로 관리하고 사용자 읽기 이력은 보존한다.",
+        f"{datetime.now(ZoneInfo('Asia/Seoul')).date().isoformat()} KST 기준. 각 등급 안에서 번호순으로 읽되, 필요한 선행을 익힌 분야는 NEXT를 병행한다. "
+        "[전체 등급표](./READING_TIERS.csv) · [내 읽기 기록](./READING_STATUS.csv) · [기록 작성법](./READING_STATUS.md)",
         "",
-        "## Research Scope and Reading Policy",
-        "",
-        "주 연구축은 VLA를 기반으로 다양한 로봇의 manipulation과 navigation을 다루는 것이다. 현재 새 탐색은 VLA + RL 결합이며, 기존 비-RL 후보의 문헌과 판단도 보존한다. "
-        "관측·언어 지시·보상이 실제 행동과 일반화에 주는 효과, 로봇별 적응 비용과 기존 능력 보존을 함께 검토한다. "
-        "3D vision은 policy state, spatial memory, affordance, localization, collision/contact reasoning이 실제 행동을 바꾸는 경우 우선한다.",
-        "",
-        "읽기 결과는 [7개 synthesis와 교차 질문 분류](../synthesis/README.md)에 연결한다. 행동 표현·시간/feedback·상태/기억·접촉/실행 가능성·적응/평가 신뢰도를 구분해 비교한다. "
-        "현재 후보는 [연구 후보](../work/research_topics/README.md), 이전 판단은 [종료·보류 결과](../work/research_topics/RESULTS.md), 다음 실행은 [TODO](../TODO.md)에서 관리한다. 연구 후보의 판단과 논문 읽기 상태는 별도로 갱신한다.",
-        "",
-        "`observation/history → state/belief/3D memory → language/task/skill decision → VLA/policy/control → contact/failure feedback → adaptation/recovery (RL optional)`",
-        "",
-        f"1. **CORE {counts['CORE']}편:** 목표 연구의 재사용 가능한 foundation, 대표 policy/RL interface, 데이터·평가 기준이다. 각 논문의 선정 이유를 아래에 기록한다.",
-        f"2. **NEXT {counts['NEXT']}편:** 해당 branch의 선행 개념을 확인한 뒤 읽는 전문화·frontier다. CORE 전체 완독을 기다릴 필요는 없다.",
-        f"3. **REFERENCE {counts['REFERENCE']}편:** controller, sensor, embodiment, reconstruction 방법을 실제로 사용할 때 조회한다.",
-        f"4. **ARCHIVE {counts['ARCHIVE']}편:** 현재 범위 밖의 검색·역사 자료로 보존한다.",
-        "",
-        "### 운영 원칙",
-        "",
-        "- 연도만으로 승격·강등하지 않는다. TD, policy gradient, PPO, SAC, POMDP, impedance는 최신 방법의 objective와 interface를 이해하는 데 필요한 범위로 유지한다.",
-        "- CORE의 번호는 탐색과 기본 진행 순서다. 아래 dependency batch에서 필요한 선행을 확인하면 해당 NEXT를 병행한다.",
-        "- Manipulation의 direct VLA RL, RL-generated data distillation, navigation의 hierarchical VLA/RL control을 서로 다른 개선 경로로 비교한다.",
-        "- 동일 플랫폼의 fleet, pretraining-seen/RL-held-out robot, target adaptation, unseen-embodiment zero-shot을 구분한다. RL 전이는 동일 데이터 SFT·후학습 전 base policy와 비교한다.",
-        "- Locomotion은 navigation controller·mobile manipulation과 직접 연결될 때 우선하며, humanoid motion tracking이나 순수 보행 전문화는 필요시 참조한다.",
-        "- 7개 primary track과 연도/venue 폴더 구조를 유지한다. Navigation은 관련 track의 task/interface로 연결하고 중복 등록하지 않는다.",
-        "- 선정 이유는 연구자의 curation 판단이다. abstract/project 재확인은 본문 정독이나 reading status 승격을 뜻하지 않는다.",
-        "",
-        "## Priority Criteria",
-        "",
-        "1. VLA/generalist policy의 reward-driven 개선 또는 manipulation/navigation 실행에 직접 필요한가",
-        "2. action representation, policy gradient/value objective, offline-to-online data, controller interface를 이해할 기준인가",
-        "3. 여러 후속 연구에서 재사용할 foundation, 공개 system, 데이터 또는 benchmark인가",
-        "4. 3D representation의 효과가 perception 점수와 함께 downstream behavior로 평가되는가",
-        "5. demonstration·interaction·compute·inference budget을 맞춘 비교가 가능한가",
-        "6. partial observability, long horizon, reward error, contact, recovery를 구체적으로 평가하는가",
-        "7. 최신 논문은 기존 기준의 어떤 한계를 검증하거나 바꾸는가",
-        "",
-        "## Tier Definitions",
-        "",
-        "| Tier | Papers | Use |",
+        "| 등급 | 편수 | 선정 이유와 읽을 때 |",
         "|---|---:|---|",
-        f"| CORE | {counts['CORE']} | VLA 기반 manipulation/navigation의 기반·대표 interface·평가 좌표계 |",
-        f"| NEXT | {counts['NEXT']} | 해당 CORE prerequisite 이후 읽는 직접 관련 전문화·frontier |",
-        f"| REFERENCE | {counts['REFERENCE']} | 특정 구현·sensor·embodiment가 요구할 때 읽는 기반과 대안 |",
-        f"| ARCHIVE | {counts['ARCHIVE']} | 현재 범위 밖의 검색·역사 자료 |",
+        f"| CORE | {counts['CORE']} | 후속 연구의 목적함수, 제어 방식, 데이터 또는 평가를 이해하는 데 반복해서 필요한 기반 |",
+        f"| NEXT | {counts['NEXT']} | CORE가 남긴 한계, 새 기체·센서·시간 범위의 직접 비교나 평가를 제공하는 연구 |",
+        f"| REFERENCE | {counts['REFERENCE']} | 특정 과제·데이터·구현이 필요할 때 찾는 문헌 |",
+        f"| ARCHIVE | {counts['ARCHIVE']} | 현재 연구 범위 밖에서 검색·역사 자료로 보존한 문헌 |",
         "",
-        "CORE는 최신 논문 모음이나 고정 quota가 아니다. 중요성과 dependency가 바뀌면 규모도 바뀐다.",
+        "로봇의 조작·이동·복구에 어떤 행동 차이가 생기는지 본다. VLA·RL은 갱신하는 정책, 배포 시 제어 구조와 전이 대상을 비교한다. "
+        "3D 인식은 상태 추정이 성공률·충돌·지연에 주는 효과를 따진다. 선정 이유는 연구자의 판단이며 읽기 상태는 사용자가 기록한다. "
+        "[선정 기준](./README.md#paper-admission) · [등급 변경](../work/update/REGISTRY.md)",
         "",
-        "## Completion Rule",
+        "## 분야별 읽기 경로",
         "",
-        "논문 하나를 정독한 뒤 문제·가정, observation/state/action/control interface, "
-        "embodiment/task/data/metric/failure, 재사용·반박할 지점을 tracker와 해당 synthesis에 기록한다. "
-        "노트의 존재와 source evidence는 사용자의 읽기 상태와 별개다.",
+        "화살표는 이해에 필요한 개념 순서다. 직접 인용을 확인할 때는 논문의 관련 연구와 기준선 표를 본다. [OpenVLA 인용 계보](./OPENVLA_LINEAGE.md)",
         "",
-        "## Dependency-Based Reading Batches",
-        "",
-        "단일 canonical plan 안의 비교 경로다. 화살표는 개념적 prerequisite이며 직접 citation을 뜻하지 않는다. "
-        "각 경로의 선행을 확인한 뒤 frontier와 baseline을 함께 읽는다.",
-        "",
-        "| Branch | Foundation and comparison spine | NEXT extension | Exit artifact |",
+        "| 분야 | 기반과 기준선 | 함께 읽을 후속 | 비교할 내용 |",
         "|---|---|---|---|",
         "| VLA + RL manipulation | TD/GAE → PPO + Diffusion Policy → DPPO; IQL/CQL → AWAC/Cal-QL ↔ FQL; RLPD/SERL → HIL-SERL; OFT → ConRFT ↔ RLDG | SimpleVLA-RL, RL4VLA, WCM, RoboAlign, STARE-VLA; Real-Time EXPO-FT는 별도 editor 구조의 대안 | advantage/critic·actor 갱신 대상·배포 구조, demonstration·interaction·compute를 맞춘 비교표 |",
         "| Reward, goals and temporal abstraction | Potential-based reward shaping; UVFA → HER ↔ Successor Features; options/semi-MDP | HIQL, Is Value Learning Really the Main Bottleneck in Offline RL?, Horizon Reduction, Act2Goal | 목표·전이 동역학·종료/할인 가정, value 오차와 policy extraction·horizon 병목을 분리한 표 |",
@@ -1883,37 +1835,11 @@ def write_plan(
         "| Evaluation, contact and recovery | LIBERO/CALVIN/DROID/Habitat; DAgger → DART; MuJoCo/impedance → Recovery RL/TD-MPC2 | D4RL ↔ OGBench, Tune to Learn, Discounted Liveness OPE, OopsieVerse, Tac2Real, RLBench, ManiSkill3, FurnitureBench, SAFE | task/split·reward·gain·damage·reset·intervention 비용, recovery·truncation·OOD protocol |",
         "| World-model policy improvement | TD-MPC2 → Ctrl-World/WMPO/WorldGym | VLAW ↔ VLA-MBPO ↔ RISE; PointWorld의 MPC와 비교; PersistWorld는 prediction-fidelity 참조 | fixed real-data budget, imagined vs real success, failure coverage와 model bias의 분리 |",
         "",
-        "Batch 산출물과 source location을 확인한 뒤에만 synthesis evidence로 사용한다. Benchmark 간 성공률을 같은 난이도의 점수로 합치지 않는다.",
-        "",
-        "## Research Lenses Across Tracks",
-        "",
-        "- VLA RL과 from-scratch RL, supervised fine-tuning, RL-generated-data distillation을 분리한다.",
-        "- Offline demonstration과 online interaction 양, human intervention, reset, reward annotation 비용을 함께 기록한다.",
-        "- Navigation의 instruction/goal grounding과 low-level execution을 분리하고 privileged state·map·oracle success 접근을 명시한다.",
-        "- 3D 입력의 이득은 action success·collision·sample efficiency·latency와 연결한다.",
-        "- 최신 2024–2026 연구도 장기 foundation으로 단정하지 않는다. 공개 interface와 평가 근거가 부족하면 NEXT 또는 REFERENCE로 유지한다.",
-        "- Task success 외에 disturbance, long horizon, contact failure, forgetting, recovery를 비교한다.",
+        "성공률을 비교할 때는 과제·기체·평가 분할과 시연·상호작용·계산 예산을 확인한다. 출처의 절이나 표를 [분야별 비교](../synthesis/README.md)에 기록한다.",
         "",
     ]
     lines.extend(plan_section("CORE", core_groups))
-    lines.extend([
-        "해당 branch의 CORE prerequisite를 확인한 뒤 아래 NEXT를 병행한다. 모든 CORE를 먼저 완독할 필요는 없다.",
-        "",
-    ])
     lines.extend(plan_section("NEXT", next_groups))
-    lines.extend([
-        "## REFERENCE — On-Demand Reading",
-        "",
-        "기존 foundation의 가치를 낮춘 분류가 아니다. 일반 search/control, tactile hardware, "
-        "whole-body locomotion, generic reconstruction은 선택한 실험의 요구에 따라 다시 읽는다. "
-        "현재 tier에서 빠진 기존 읽기 상태와 개인 분석은 history CSV에 보존하며 재승격 시 복원한다.",
-        "",
-        "## ARCHIVE — Search Only",
-        "",
-        "현재 연구 범위 밖의 논문도 registry와 표준 노트에서 검색할 수 있다. "
-        "이번 재분류는 논문 수·PDF 보유 여부·venue quota를 기준으로 하지 않는다.",
-        "",
-    ])
     PLAN.write_text("\n".join(lines))
 
 

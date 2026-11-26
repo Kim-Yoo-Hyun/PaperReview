@@ -10,7 +10,7 @@
 - Authors: Weiqi Zhang, Junsheng Zhou, Haotian Geng, Kanle Shi, Shenkun Xu, Yi Fang, Yu-Shen Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, point cloud, 3D Vision
+- Tags: Gaussian Splatting, point cloud, 3D Vision, Diffusion
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -78,3 +78,7 @@ GaussianGrow는 점군 기하와 텍스트를 조건으로 3D 가우시안 장�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.3. Iterative Inpainting and Refinement), p. 5 (3.2. Appearance Generation), p. 4 (3.2. Appearance Generation), p. 3 (3.2. Appearance Generation)이다.
+
+## 검색 태그 근거
+
+입력 점군을 기하 기준으로 삼고 텍스트와 렌더링 광학 조건에서 여러 뷰의 외관을 생성한다. 일관된 생성 영상에 맞추어 가우시안을 늘려 객체를 완성한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_GaussianGrow_Geometry-aware_Gaussian_Growing_from_3D_Point_Clouds_with_Text_CVPR_2026_paper.pdf#page=7)

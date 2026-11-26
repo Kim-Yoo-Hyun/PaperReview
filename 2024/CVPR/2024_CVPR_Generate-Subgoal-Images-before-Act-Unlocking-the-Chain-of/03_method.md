@@ -61,9 +61,9 @@ PDF body method statement (p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Ov
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation, generated, subgoal, image, t/xi | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | contributions, follows, hierarchical, framework, CoTDiffusion, high-level, diffusion, model, translates, multi-modal | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation, generated, subgoal, image, t/xi | 현재 영상과 시각·언어 지시 | body cue; exact tensor/frame verify |
+| State/latent | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation | 의미 정렬된 시각 중간 목표 | body cue; notation verify |
+| Action/output | contributions, follows, hierarchical, framework, CoTDiffusion, high-level, diffusion, model, translates, multi-modal | 중간 목표 영상과 하위 정책의 행동 | body cue; unit/decoder verify |
 | Objective/constraint | training, objective, formulated, Exi2D, xi-1, align, Forward, Generation, Backward, Bi-directional | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Ov
 - **p. 5 / 3.4. Goal-conditioned Policy Model - extractive body cue:** The final component in our framework is the low-level policy model for action planning, generating an action trajectory ⌧i a when given observation trajectory ⌧i ...
 - **p. 2 / 1. Introduction - extractive body cue:** The subgoal images act as a unified interface bridging the high-level visual planning and low-level action planning, decoupling the instruction understanding and action execution.
 - **p. 1 / 1. Introduction - extractive body cue:** The subgoal images are worth a thousand words, inspiring us to propose a novel framework CoTDiffusion to generate goal images step-by-step before act. vances in ...
-- **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
+- **Normalized interface:** observation=현재 영상과 시각·언어 지시; state=의미 정렬된 시각 중간 목표; output/action=중간 목표 영상과 하위 정책의 행동.
 
 ## Temporal and Runtime Contract
 

@@ -10,7 +10,7 @@
 - Authors: Seungjun Lee, Gim Hee Lee
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
+- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision, event camera
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ DiET-GS는 카메라 움직임으로 흐려진 영상에서 선명한 3D 가우�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Preliminaries), p. 4 (4. Our Method)이다.
+
+## 검색 태그 근거
+
+흐린 RGB와 같은 노출 동안의 이벤트를 이용해 장면 가우시안을 최적화한다. 확산 모델은 영상 선명화의 사전정보로 사용하며 합성·실제 촬영으로 복원 품질을 평가했다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Lee_DiET-GS_Diffusion_Prior_and_Event_Stream-Assisted_Motion_Deblurring_3D_Gaussian_CVPR_2025_paper.pdf#page=7)

@@ -57,9 +57,9 @@ PDF body method statement (p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. 
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence, dataset, includes, visual, force | multi-view observation, language/task label과 action trajectory | body cue; exact tensor/frame verify |
-| State/latent | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence | shared representation, embodiment/task identity와 data distribution | body cue; notation verify |
-| Action/output | introduce, robotic, manipulation, dataset, RobotHuman, demonstration, RH20T, community, TM1, Scale | dataset sample 또는 learned policy action | body cue; unit/decoder verify |
+| Input/observation | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence, dataset, includes, visual, force | 기체별 RGB-D·힘·관절·소리 및 일부 촉각 기록, ACT 평가의 RGB·행동 시연 | body cue; exact tensor/frame verify |
+| State/latent | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence | 보정된 카메라·로봇 좌표와 시간 정렬 시연 | body cue; notation verify |
+| Action/output | introduce, robotic, manipulation, dataset, RobotHuman, demonstration, RH20T, community, TM1, Scale | RH20T 시연 및 ACT의 팔·그리퍼 행동 | body cue; unit/decoder verify |
 | Objective/constraint | Properties, RH20T, designed, objective, enabling, general, robotic, manipulation, means, robot | coverage/data efficiency/transfer objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -71,7 +71,7 @@ PDF body method statement (p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. 
 - **p. 4 / 200 Hz - extractive body cue:** Different force-torque sensors are tared carefully.
 - **p. 4 / 200 Hz - extractive body cue:** The coordinate frame of all robots and force-torque sensors are aligned.
 - **p. 5 / 200 Hz - extractive body cue:** RGBD cameras : robot arm force sensor microphone gripper - haptic device pedal 2 Fig.
-- **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
+- **Normalized interface:** observation=기체별 RGB-D·힘·관절·소리 및 일부 촉각 기록, ACT 평가의 RGB·행동 시연; state=보정된 카메라·로봇 좌표와 시간 정렬 시연; output/action=RH20T 시연 및 ACT의 팔·그리퍼 행동.
 
 ## Temporal and Runtime Contract
 

@@ -42,3 +42,9 @@ Action–wrench 예측·가치·RL 결합 자체의 중복을 점검할 직접 �
 ## Verification Boundary
 
 Frozen backbone/actor 경계, task adaptation 비용, 데이터 누출을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · Facet-0 시각·언어·렌치 조건부 정책 · facet0/policy/policy.py [배포 파일](https://raw.githubusercontent.com/PINE-Lab-NTU/FACET/174c33cc680a7c08130908cfbe78357a04d061c5/facet0/policy/policy.py)
+- 가중치 · 접촉 조작 후학습 Orbax 파라미터 조각 · facet0-post-training/params/d/76014c26c96e044e2fb349f289e4d773 [배포 파일](https://huggingface.co/Pinelab/Facet-0/resolve/3b0ec6439a815ef2ca657c07c1b67109ac62f2c2/facet0-post-training/params/d/76014c26c96e044e2fb349f289e4d773)
+- 데이터 · ManuFacet-1K 실물 조립 궤적 · Facet0-1/data/chunk-000/episode_000000.parquet [배포 파일](https://huggingface.co/datasets/Pinelab/ManuFacet-1K/resolve/43ed790803362f882b7a981623d7c0788984fa31/Facet0-1/data/chunk-000/episode_000000.parquet)

@@ -43,12 +43,14 @@ SAM 2는 클릭이나 마스크로 지정한 대상을 단일 영상에서 분�
 
 ## Observation, State, and Output Interface
 
+그림 2·3에서 점·상자·마스크로 대상을 지정하고 메모리 뱅크로 다음 프레임에 마스크를 전파한다. 언어 명령은 제안 모델의 입력에 포함되지 않는다. [PDF 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=4) · [PDF 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/45c1f6a8cbf2da59ebf2c802b4f742cd-Paper-Conference.pdf#page=5)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for which the spatio-temporal mask (i.e., a ‘masklet') is to be ... | 논문이 명시한 observation과 task input | p. 1 (1 Introduction), p. 1 (1 Introduction) |
-| State/latent | task, takes, input, points, boxes, masks, frame, video, define, segment, interest, spatio-temporal | task state 또는 decision variable | p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method) |
-| Output/action | SAM 2 is equipped with a memory that stores information about the object and previous interactions, which allows it to generate masklet predictions throughout the video, and also effectively correct these based ... | paper-specific output/action | p. 1 (1 Introduction), p. 27 (Method), p. 27 (Method) |
-| Objective/outcome | primary task objective와 closed-loop behavior | primary task objective와 closed-loop behavior | 본문 anchor 없음 |
+| Observation/input | The task takes as input points, boxes, or masks on any frame of the video to define a segment of interest for which the spatio-temporal mask (i.e., a ‘masklet') is to be ... | 영상 프레임과 사용자가 제공한 점·상자·마스크 | p. 1 (1 Introduction), p. 1 (1 Introduction) |
+| State/latent | task, takes, input, points, boxes, masks, frame, video, define, segment, interest, spatio-temporal | 프레임 특징과 이전 마스크의 메모리 | p. 1 (1 Introduction), p. 1 (1 Introduction), p. 27 (Method) |
+| Output/action | SAM 2 is equipped with a memory that stores information about the object and previous interactions, which allows it to generate masklet predictions throughout the video, and also effectively correct these based ... | 대상별 분할 마스크와 시간에 따른 마스크열 | p. 1 (1 Introduction), p. 27 (Method), p. 27 (Method) |
+| Objective/outcome | 영상 분할 품질과 상호작용 횟수 | 영상 분할 품질과 상호작용 횟수 | 본문 anchor 없음 |
 
 ## Main Claims and Actual Contribution
 

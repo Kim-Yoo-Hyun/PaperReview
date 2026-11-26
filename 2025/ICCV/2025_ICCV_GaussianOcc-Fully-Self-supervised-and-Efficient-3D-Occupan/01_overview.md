@@ -10,7 +10,7 @@
 - Authors: Wanshui Gan, Fang Liu, Hongbin Xu, Ningkai Mo, Naoto Yokoya
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
+- Tags: Gaussian Splatting, self-supervised, semantic occupancy, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Gan_GaussianOcc_Fully_Self-supervised_and_Efficient_3D_Occupancy_Estimation_with_Gaussian_ICCV_2025_paper.pdf
 - Code/Project: not identified

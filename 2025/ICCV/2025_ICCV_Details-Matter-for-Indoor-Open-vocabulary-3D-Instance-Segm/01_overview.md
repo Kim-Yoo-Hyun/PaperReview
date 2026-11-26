@@ -10,7 +10,7 @@
 - Authors: Sanghun Jung, Jingjing Zheng, Ke Zhang, Nan Qiao, Albert Y. C. Chen, Lu Xia, Chi Liu, Yuyin Sun, Xiao Zeng, Hsiang-Wei Huang, Byron Boots, Min Sun, Cheng-Hao Kuo
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, semantic
+- Tags: 3D Vision, semantic, 3D segmentation
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Jung_Details_Matter_for_Indoor_Open-vocabulary_3D_Instance_Segmentation_ICCV_2025_paper.pdf
 - Code/Project: not identified

@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `RL, IL, offline learning, and robot data`; tags: `Flow Matching, generative modeling, continuous normalizing flow, action generation`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Denoising Diffusion Probabilistic Models (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Diffusion Policy: Visuomotor Policy Learning via Action Diffusion (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

@@ -10,7 +10,7 @@
 
 Decoded prediction의 검증 가능한 지표를 reward로 삼아 world model을 RL 후학습한다.
 
-언어·영상 world model의 여러 도메인을 평가한다. RT-1 로봇 영상의 예측 품질을 로봇 제어 성공으로 해석하지 않는다.
+텍스트 환경의 상태 예측과 RT-1 영상 예측을 평가한다. 부록 표 12는 PushT 시뮬레이션에서 각 세계 모델을 CEM 계획기에 넣고 과제 성공률을 비교한다.
 
 근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/b63a24a1832bd14fa945c71f535c0095-Abstract-Conference.html) · [저자 project/code](https://thuml.github.io/RLVR-World/) · [공식 code](https://github.com/thuml/RLVR-World). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 

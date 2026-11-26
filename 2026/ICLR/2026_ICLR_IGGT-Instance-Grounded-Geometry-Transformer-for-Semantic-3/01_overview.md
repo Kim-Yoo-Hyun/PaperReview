@@ -11,7 +11,7 @@
 - 저자 판본: ICLR 게재본의 첫 번째·네 번째·일곱 번째 저자를 각각 Hao Li, Xuanyang Zhang, Yushi Lan으로 대조했다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/e1f20114b5233d395486f9cf5b3e0535-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, semantic, alignment, 3D Vision
+- Tags: 3D reconstruction, semantic, alignment, 3D Vision, 3D segmentation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/e1f20114b5233d395486f9cf5b3e0535-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf
 - Code/Project: not identified
@@ -78,3 +78,7 @@ IGGT는 여러 RGB 영상에서 3D 기하와 시점 간 일관된 물체 인스�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 4 (1 INTRODUCTION), p. 4 (3 METHODOLOGY), p. 5 (3 METHODOLOGY)이다.
+
+## 검색 태그 근거
+
+여러 RGB 뷰에서 기하와 시점 사이에 대응하는 물체 인스턴스를 함께 예측한다. 열린 어휘 분할은 예측한 인스턴스를 언어와 비교 가능한 특징으로 조회한다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=4) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/e1f20114b5233d395486f9cf5b3e0535-Paper-Conference.pdf#page=7)

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-접촉 과제에서 vanilla/compliance-aware VLA 및 구성요소 ablation을 비교한다.
+Franka 실물에서 화이트보드 지우기·물체 기울이기·컵 꺼내기는 접촉 과제로, 집어 옮기기는 일반 조작 과제로 평가했다. 표의 평균은 앞의 세 접촉 과제만 포함한다. 지우기 점수는 지운 글자 비율이고 다른 과제의 점수는 에피소드 성공률이다. [과제 정의](https://arxiv.org/pdf/2609.23614v2#page=7) · [실물 결과와 분모](https://arxiv.org/pdf/2609.23614v2#page=8)
 
 ## Evaluation Type and Scope
 

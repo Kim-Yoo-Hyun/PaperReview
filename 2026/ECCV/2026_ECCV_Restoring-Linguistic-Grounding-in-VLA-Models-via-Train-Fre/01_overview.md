@@ -42,3 +42,7 @@ RL 이후 성공률이 언어 grounding을 보장하지 않는다는 직접 평�
 ## Verification Boundary
 
 모순의 정답 정의, 무조건 정지 대조, 정상 지시 성능 trade-off을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 데이터 · ICBench의 반사실 지시 평가 항목 · icbench.jsonl [배포 파일](https://huggingface.co/datasets/Raynh945/ICBench/resolve/f3cddb0c66c60253064e04bcec8cbc96ae97fa8d/icbench.jsonl)

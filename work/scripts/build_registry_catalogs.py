@@ -10,14 +10,21 @@ dataset, split, or reported metric.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from datetime import date
 from pathlib import Path
 
+try:
+    from registry_profiles import catalog_cues
+except ModuleNotFoundError:
+    from .registry_profiles import catalog_cues
+
 
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "work" / "sources" / "papers.json"
+REGISTRY_META = ROOT / "work" / "sources" / "registry_meta.json"
 BENCHMARK_CATALOG = ROOT / "work" / "sources" / "benchmark_catalog.json"
 METRIC_CATALOG = ROOT / "work" / "sources" / "metric_catalog.json"
 
@@ -89,7 +96,7 @@ METRIC_VOCAB = [
     ("mIoU", ["mIoU"], "higher_is_better", "overlap"),
     ("IoU", ["IoU"], "higher_is_better", "overlap"),
     ("AP", ["AP"], "higher_is_better", "detection"),
-    ("mAP", ["mAP"], "higher_is_better", "detection"),
+    ("mAP", ["mAP", "mean average precision"], "higher_is_better", "detection"),
     ("success rate", ["success rate", "task success"], "higher_is_better", "task outcome"),
     ("SR", ["SR"], "higher_is_better", "navigation / task outcome"),
     ("SPL", ["SPL"], "higher_is_better", "navigation efficiency"),
@@ -123,7 +130,9 @@ def cue_lines(text: str, aliases: list[str]) -> bool:
             continue
         if any(marker in lowered for marker in ("not reported", "확인 필요", "confirm", "keyword cue", "metric / success signal")):
             continue
-        if any(re.search(r"(?<![A-Za-z0-9])" + re.escape(alias) + r"(?![A-Za-z0-9])", line, flags=re.IGNORECASE) for alias in aliases):
+        # The case of mAP distinguishes the metric from a generic map.
+        if any(re.search(r"(?<![A-Za-z0-9])" + re.escape(alias) + r"(?![A-Za-z0-9])", line,
+                         flags=0 if alias == "mAP" else re.IGNORECASE) for alias in aliases):
             return True
     return False
 
@@ -169,11 +178,21 @@ def build_catalog(papers: list[dict], vocabulary: list[tuple], kind: str) -> dic
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--apply", action="store_true", help="write the catalogs")
+    parser.add_argument("--apply", action="store_true", help="write the catalogs and synchronize the manifest cue lists")
     args = parser.parse_args()
     papers = json.loads(MANIFEST.read_text(encoding="utf-8"))
     benchmarks = build_catalog(papers, BENCHMARK_VOCAB, "benchmark")
     metrics = build_catalog(papers, METRIC_VOCAB, "metric")
+    benchmark_by_paper = catalog_cues(benchmarks, "benchmark_id")
+    metric_by_paper = catalog_cues(metrics, "metric_id")
+    changed = 0
+    for paper in papers:
+        pid = paper["paper_id"]
+        profile = paper["evaluation_profile"]
+        lists = {"benchmark_cues": benchmark_by_paper.get(pid, []), "metric_cues": metric_by_paper.get(pid, [])}
+        if any(profile.get(key) != value for key, value in lists.items()):
+            profile.update(lists)
+            changed += 1
     print(
         {
             "mode": "apply" if args.apply else "dry-run",
@@ -181,12 +200,21 @@ def main() -> None:
             "metric_entries": len(metrics["entries"]),
             "benchmark_references": sum(len(x["paper_references"]) for x in benchmarks["entries"]),
             "metric_references": sum(len(x["paper_references"]) for x in metrics["entries"]),
+            "paper_cue_lists_changed": changed,
         }
     )
     if not args.apply:
         return
     BENCHMARK_CATALOG.write_text(json.dumps(benchmarks, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     METRIC_CATALOG.write_text(json.dumps(metrics, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if changed:
+        MANIFEST.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if REGISTRY_META.exists():
+        meta = json.loads(REGISTRY_META.read_text(encoding="utf-8"))
+        digest = hashlib.sha256(MANIFEST.read_bytes()).hexdigest()
+        if meta.get("manifest_sha256") != digest:
+            meta.update(manifest_sha256=digest, generated_on=str(date.today()))
+            REGISTRY_META.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

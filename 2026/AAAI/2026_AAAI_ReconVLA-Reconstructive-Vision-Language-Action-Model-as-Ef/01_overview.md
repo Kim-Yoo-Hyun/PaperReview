@@ -12,8 +12,9 @@
 - Aliases: ReconVLA
 - Official paper: https://ojs.aaai.org/index.php/AAAI/article/view/38921
 - Venue verification: https://ojs.aaai.org/index.php/AAAI/article/view/38921
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://zionchow.github.io/ReconVLA/
+- Code: https://github.com/Chowzy069/Reconvla
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 5, 6, 7쪽](https://arxiv.org/pdf/2508.10333#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,8 @@ TASK-GEOMETRY의 이득이 단순 target attention/영역 supervision 때문인�
 ## Verification Boundary
 
 Gaze-region label 생성·data overlap·loss weighting·추론 경로을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- ReconVLA의 행동·시각 재구성 학습 진입점 · reconvla/train_vla.py [배포 파일](https://raw.githubusercontent.com/Chowzy069/Reconvla/047ccd9f3278161dcf82d731716e466e1209ef1c/reconvla/train_vla.py)
+- ReconVLA의 저자 공개 모델 · checkpoint-5554/model-00001-of-00004.safetensors [배포 파일](https://huggingface.co/zzyzyzy/ReconVLA/resolve/8fbe73e804f22abe67f7080e54dde21a37809315/checkpoint-5554/model-00001-of-00004.safetensors)

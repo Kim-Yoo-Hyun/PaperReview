@@ -10,7 +10,7 @@
 - Authors: Qing Li, Huifang Feng, Xun Gong, Yu-Shen Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, semantic, alignment, 3D Vision
+- Tags: Gaussian Splatting, alignment, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/117322
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2510.11473
@@ -46,12 +46,14 @@ VA-GS는 여러 뷰에서 표면 경계와 대응 위치가 일치하도록 영�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Given a set of posed RGB images, our goal is to learn a bunch of 3D Gaussian functions with associated attributes, such as color, opacity, position and shape, to represent the geometry ... | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (4 Method), p. 5 (4 Method) |
-| State/latent | Given, posed, RGB, images, goal, learn, bunch, Gaussian, functions, associated, attributes, color | geometry, map, object/relationship state | p. 4 (4 Method), p. 5 (4 Method), p. 2 (1 Introduction) |
-| Output/action | 1 , (4) where δ = (1 -∇I)2 serves as a per-pixel weight [4] that downweights loss contributions from edge regions, and I denotes the set of image pixels. ˜ N is ... | point map, pose, scene graph, affordance 또는 query result | p. 5 (4 Method), p. 2 (1 Introduction), p. 5 (4 Method) |
-| Objective/outcome | To address this limitation, we propose an edge-aware image reconstruction loss that encourages the model to better preserve sharp structures and boundary details: LI = (1 -β1)L1( ˜I -I) + β1LSSIM( ˜I ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (4 Method), p. 5 (4 Method), p. 4 (4 Method) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 여러 뷰의 RGB와 카메라 파라미터 |
+| 표현 | 경계·법선 제약이 있는 3D 가우시안 |
+| 출력 | 표면 기하와 새 시점 렌더링 |
+| 평가 | 장면 기하 및 새 시점 재구성 |
+
+[원문 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=4) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -81,3 +83,7 @@ VA-GS는 여러 뷰에서 표면 경계와 대응 위치가 일치하도록 영�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction), p. 4 (3 Preliminaries), p. 4 (4 Method)이다.
+
+## 검색 태그 근거
+
+영상 경계, 렌더링 깊이로 얻은 법선, 뷰 사이의 대응을 함께 정렬해 가우시안 표면의 기하를 개선한다. 평가에는 복원 표면과 새 시점 영상의 품질이 포함된다. [원문 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=4) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fe318a2b6c699808019a456b706cd845-Paper-Conference.pdf#page=7)

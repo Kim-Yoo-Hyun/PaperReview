@@ -42,3 +42,9 @@ BC prior 보존을 새 unified objective 없이 달성하는 강한 대안이다
 ## Verification Boundary
 
 Q 초기화에 필요한 상호작용, 두 정책 유지 비용, gating의 행동 분포 변화을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · BC·RL 후보의 Q값을 이용하는 학습 에이전트 · backend/agents/q2rl_gym.py [배포 파일](https://raw.githubusercontent.com/rai-opensource/q2rl/d565ab09f5ae88546f2dec43445fe8701ee3de65/backend/agents/q2rl_gym.py)
+- 가중치 · robomimic Can의 영상 기반 BC 초기 정책 · gmm.pth [배포 파일](https://huggingface.co/theaiinstitute/gmm_robomimic_can_img/resolve/0174f1f1214e326ccc2a6cd7410cc55837a6212a/gmm.pth)
+- 데이터 · Q2RL 배포처에서 제공한 robomimic Can 영상 시연 · can/ph/image_v141.hdf5 [배포 파일](https://huggingface.co/datasets/theaiinstitute/q2rl_robomimic_datasets/resolve/ba3b72ac9f372634a1b7293f140bc3bd0f3acf89/can/ph/image_v141.hdf5)

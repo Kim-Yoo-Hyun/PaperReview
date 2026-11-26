@@ -10,7 +10,7 @@
 - Authors: Yiming Li, Zhiding Yu, Christopher Choy, Chaowei Xiao, Jose M. Alvarez, Sanja Fidler, Chen Feng, Anima Anandkumar
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: semantic, alignment, 3D Vision
+- Tags: semantic occupancy, Transformer, 3D Vision
 - Official paper: https://arxiv.org/abs/2302.12251
 - Full-text retrieval: https://arxiv.org/pdf/2302.12251
 - Code/Project: not identified

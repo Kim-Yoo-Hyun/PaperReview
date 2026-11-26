@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Imitation Learning, energy-based model, multimodal actions`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** What Matters in Learning from Offline Human Demonstrations for Robot Manipulation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Offline Reinforcement Learning with Implicit Q-Learning (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

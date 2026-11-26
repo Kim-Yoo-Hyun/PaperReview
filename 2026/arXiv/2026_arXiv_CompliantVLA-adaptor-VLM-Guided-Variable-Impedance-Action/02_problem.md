@@ -14,7 +14,7 @@ VLM이 task context에 따른 impedance를 정하고 실시간 force/torque feed
 
 ## System and Robotics Loop
 
-이미지·언어 → stiffness/damping; force feedback → controller 보정.
+VLA가 목표 동작을 내고, VLM이 영상·지시·힘을 바탕으로 강성을 제안한다. 제어기는 측정 힘으로 강성을 조절하고 적용 감쇠를 계산한다.
 
 이 interface에서 관측·내부 상태·학습 target·실행 action을 분리해서 읽는다. 정확한 controller 경계와 timing은 아래 질문으로 확인한다.
 

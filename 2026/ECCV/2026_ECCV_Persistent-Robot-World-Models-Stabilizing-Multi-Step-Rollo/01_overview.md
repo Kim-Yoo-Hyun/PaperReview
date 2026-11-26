@@ -8,7 +8,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: world-model, exposure-bias, visual-fidelity
+- Tags: world-model, exposure-bias, visual-fidelity, Reinforcement Learning, video diffusion
 - Aliases: PersistWorld
 - Official paper: https://arxiv.org/abs/2603.25685
 - Full-text retrieval: https://arxiv.org/pdf/2603.25685v2
@@ -35,6 +35,10 @@ Robot action + predicted video history → future multi-view video; 최적화 �
 공식 abstract/project는 DROID에서 LPIPS/SSIM/PSNR 기반 rollout fidelity와 human preference 평가를 설명한다. Downstream policy improvement는 별도 검증 대상이다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2603.25685) · [저자 project/code](https://jaibardhan.com/persistworld/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+로봇 행동과 이전 영상으로 여러 카메라의 다음 영상을 생성한다. 자기 예측 이력에서 갈라진 영상 후보에 시각적 보상을 매겨 비디오 확산 모델을 강화학습한다. 평가 대상은 연속 생성 영상의 품질이다. [원문 9쪽](https://arxiv.org/pdf/2603.25685v2#page=9) · [원문 13쪽](https://arxiv.org/pdf/2603.25685v2#page=13)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

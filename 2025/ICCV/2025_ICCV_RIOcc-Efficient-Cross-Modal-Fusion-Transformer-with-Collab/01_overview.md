@@ -10,7 +10,7 @@
 - Authors: Baojie Fan, Xiaotian Li, Yuhan Zhou, Yuyu Jiang, Jiandong Tian, Huijie Fan
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: sensor fusion, LiDAR, semantic, alignment, 3D Vision
+- Tags: sensor fusion, LiDAR, semantic occupancy, Transformer, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Fan_RIOcc_Efficient_Cross-Modal_Fusion_Transformer_with_Collaborative_Feature_Refinement_for_ICCV_2025_paper.pdf
 - Code/Project: not identified

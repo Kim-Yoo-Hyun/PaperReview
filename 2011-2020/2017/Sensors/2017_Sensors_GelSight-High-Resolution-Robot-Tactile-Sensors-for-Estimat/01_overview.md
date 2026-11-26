@@ -1,0 +1,90 @@
+# GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force
+
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://api.crossref.org/works/10.3390/s17122762.
+> PDF retrieval source: https://publications.ri.cmu.edu/gelsight-high-resolution-robot-tactile-sensors-for-estimating-geometry-and-force/. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2017 / Sensors
+- Authors: Wenzhen Yuan, Siyuan Dong, Edward Adelson
+- Primary track: Manipulation, contact, tactile, and dexterity
+- Tier: REFERENCE
+- Tags: Robotics, tactile sensing, Force, contact, manipulation
+- Official paper: https://api.crossref.org/works/10.3390/s17122762
+- Full-text retrieval: https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf
+- Code/Project: not identified
+- Paper type: method
+- Source audit: full-text PDF body checked on 2026-09-03 (21 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf) 기준이다.
+
+## Why This Paper Is Here
+
+GelSight는 탄성체 표면의 변형을 카메라로 관측해 접촉면의 미세 기하와 물체가 가하는 하중의 단서를 읽는 광학 촉각 센서다. [PDF 1쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=1)
+
+## Problem and Motivation
+
+- **p. 1 / 1. Introduction - extractive body cue:** Tactile sensing is an important mode for both human and robots to perceive the environment.
+- **p. 1 / 1. Introduction - extractive body cue:** In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect ...
+- **p. 1 / 1. Introduction - extractive body cue:** For example, a successfully commercialized sensor is the tactile sensor array from Pressure Profile Systems, which measures the normal pressure distribution over the robot fingertip, ...
+- **p. 1 / 1. Introduction - extractive body cue:** The sensor has been applied to multiple commercialized robots, including the PR2 robot, and Barrett hands, and it successfully assisted common robotic tasks, such as ...
+- **p. 1 / 1. Introduction - extractive body cue:** With the force measurement from the fingertip tactile sensors, a robot is much less likely to break delicate objects.
+- **p. 2 / 1. Introduction - extractive body cue:** Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing.
+- **p. 2 / 1. Introduction - extractive body cue:** When the sensor surface is painted with small black markers, the motion of the markers provides information about both normal force and shear force.
+
+## Core Idea
+
+- **p. 1 / 1. Introduction - extractive body cue:** In the past decades, researchers have developed many different tactile sensors for robots [1-4], and the core part of those tactile sensors is to detect ...
+- **p. 2 / 1. Introduction - extractive body cue:** The first GelSight prototype was developed in 2009 by Johnson and Adelson [7].
+- **p. 2 / 1. Introduction - extractive body cue:** We have developed sensors that are compact, yet have resolution far exceeding that of human skin.
+- **p. 7 / 3.3. Algorithm for Measuring Shape - extractive body cue:** The reflectance function R models both the lighting environment and the surface reflectance.
+- **p. 7 / 3.3. Algorithm for Measuring Shape - extractive body cue:** We model the surface of the sensor with a height function z = f (x, y), so that the surface normal is N(x, y) = ...
+- **p. 8 / 3.3. Algorithm for Measuring Shape - extractive body cue:** (4) We solve the Poission Equation (3) using fast Poisson solver with discrete sine transform (DST), thus we can get a fast computation on the ...
+
+## Observation, State, and Output Interface
+
+탄성체 표면의 조명·표식 이동을 내부 카메라로 읽어 접촉 형상과 하중을 추정한다. ATI 힘·토크 센서는 교정 기준이다. 접촉 시험 및 그리퍼 장착·파지 활용을 구분하며 직접 관측 모달리티는 촉각이다. [PDF 7쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=7) · [PDF 10쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=10)
+
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | Robots need more than force feedback, while the existing sensors do not obtain enough tactile information for the robots. | 내부 카메라로 읽은 표면 반사·표식 변위 | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| State/latent | Robots, need, more, force, feedback, while, existing, sensors, obtain, enough, tactile, information | 접촉 표면 기하와 표식의 변형장 | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 9 (3.4. Algorithm for Measuring Marker Motion) |
+| Output/action | Sensors 2017, 17, 2762 2 of 21 cup in the hand is going to slip, and thus adjust the gripping force accordingly; we can know whether a USB connector is going to ... | 형상·힘·토크·미끄럼 추정 | p. 2 (1. Introduction), p. 9 (3.4. Algorithm for Measuring Marker Motion), p. 1 (1. Introduction) |
+| Objective/outcome | In a simplified version, we only record the gradient at each entry space and match the gradient reading to the closest entry. | 기준 하중·형상과 비교한 측정 오차 | p. 8 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape) |
+
+## Main Claims and Actual Contribution
+
+- 조명에 따른 반사와 표면 표식의 이동을 사용해 접촉 형상 및 접선 방향 변형을 측정하는 원리를 설명한다. [PDF 4쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=4) · [PDF 5쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=5) · [PDF 6쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=6)
+- 힘·토크가 달라질 때의 표식 변위와 접촉면 변화를 측정해 하중과 미끄럼을 추정하는 조건을 조사했다. [PDF 7쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=7) · [PDF 10쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=10) · [PDF 11쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=11) · [PDF 12쪽](https://mdpi-res.com/d_attachment/sensors/sensors-17-02762/article_deploy/sensors-17-02762.pdf#page=12)
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | EMPIRICAL / SIMULATION | do not infer unreported downstream behavior | p. 9 (Figure/Table caption), p. 15 (5. Evaluation) |
+| Embodiment/environment | In the long run, for making a good force measurement with GelSight, we should either collect a more comprehensive dataset (simulation methods could be applied), or choose some other methods that can ... | hardware/simulator version and reset protocol | p. 18 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement) |
+| Dataset/benchmark | The total size of the training dataset is around 28,815. | role, split, size and leakage | p. 18 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 16 (5.2. Evaluation of Force Measurement) |
+| Metric | We train the network with the mean squared error loss function for the regression problem. | definition, denominator, direction and uncertainty | p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 15 (5. Evaluation) |
+| Baseline/ablation | In the figures, we compared the measured values and the ground truth, of the pitch and yaw angles of the surface normal. | fair input/data/compute/action matching | p. 16 (5.1. Evaluation of Shape Measurement), p. 17 (5.2. Evaluation of Force Measurement), p. 17 (5.2. Evaluation of Force Measurement) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 10 / Figure/Table caption - extractive body cue:** Figure 7. (a) when an indenter pressed on the GelSight surface in normal direction, the force is in linear relationship with the indenting depth, but ...
+- **p. 11 / Figure/Table caption - extractive body cue:** Figure 8. The change of the marker displacement field with the increase of shear force. The degree of partial slip also increases as the force ...
+- **p. 12 / Figure/Table caption - extractive body cue:** Figure 9. The change of the marker displacement field and rotational angle with the increase of in-plane torque. The contact surface is flat. When the ...
+- **p. 18 / 6. Application - extractive body cue:** Additionally, it can detect slip by measuring the relative movement of the objects on the sensor.
+- **p. 18 / 6. Application - extractive body cue:** As indicated in Section 3.7, the GelSight sensor can estimate the slip and incipient slip state from the stretching of the surface.
+- **p. 17 / 5.2. Evaluation of Force Measurement - extractive body cue:** The results also show that the GelSight measurement of force can be robust regardless of the geometry of the contact objects.
+- **p. 17 / 5.2. Evaluation of Force Measurement - extractive body cue:** On the one hand, the prediction from CNN highly relies on the training data, and to make robust measurement, the training data should contain the ...
+
+## Why Read It
+
+방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 7 (3.3. Algorithm for Measuring Shape), p. 8 (3.3. Algorithm for Measuring Shape), p. 9 (Figure/Table caption)이다.
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (21 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Problem/bottleneck:** Those tasks, however, are still challenges for robots because they are not yet able to fully apply tactile sensing. (p. 2, 1. Introduction).
+- **Actual contribution:** Tactile sensing is an important mode for both human and robots to perceive the environment. (p. 1, 1. Introduction).
+- **Evaluation boundary:** The coefficient of determination (R2) and root mean square error (RMSE) for the results of three different objects are also listed in the figure. (p. 17, 5.2. Evaluation of Force Measurement).
+- **Explicit failure boundary:** Sensors 2017, 17, 2762 18 of 21 truth qualitatively at all times, but the measurement at some entire contact sequences is worse than the others. (p. 18, 5.2. Evaluation of Force Measurement).

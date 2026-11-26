@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, Gaussian Splatting, Reinforcement Learning`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Gaussian Splatting Visual MPC for Granular Media Manipulation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

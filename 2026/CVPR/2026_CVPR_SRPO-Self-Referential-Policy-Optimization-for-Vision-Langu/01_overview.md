@@ -12,8 +12,8 @@
 - Aliases: SRPO
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Fei_SRPO_Self-Referential_Policy_Optimization_for_Vision-Language-Action_Models_CVPR_2026_paper.html
 - Venue verification: https://openaccess.thecvf.com/content/CVPR2026/html/Fei_SRPO_Self-Referential_Policy_Optimization_for_Vision-Language-Action_Models_CVPR_2026_paper.html
-- Code/Project: not identified
-- Code: not_identified
+- Code/Project: https://github.com/sii-research/siiRL/blob/89d8764b6133ea78557a22eef32c68ad92946d45/docs/examples/embodied_srpo_example.rst
+- Code: https://github.com/sii-research/siiRL
 - Source audit: 2026-11-07–08: official metadata/abstract 및 저자 project/repository 공개 범위 확인.  본문 전체 정독·코드 실행·독립 성능 검증 아님. 사용자 reading status UNREAD 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,8 @@ HINDSIGHT의 실패 재사용이 이미 존재하는 self-reference reward shapi
 ## Verification Boundary
 
 성공 없는 batch 처리, world-model 사전학습 비용, 진행 측정 오류, reward scale을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · OpenVLA-OFT의 LIBERO-Goal SRPO 훈련 실행 설정 · examples/embodied_srpo_trainer/run_openvla_oft_libero_goal.sh [배포 파일](https://raw.githubusercontent.com/sii-research/siiRL/89d8764b6133ea78557a22eef32c68ad92946d45/examples/embodied_srpo_trainer/run_openvla_oft_libero_goal.sh)
+- 가중치 · SRPO 배포 목록의 LIBERO-Goal 단일 시연 OpenVLA 초기 정책. 온라인 RL 후 최종 가중치는 이 파일로 확인할 수 없다 · model-00001-of-00004.safetensors [배포 파일](https://huggingface.co/Sylvest/OpenVLA-AC-PD-1traj-libero-goal/resolve/1071a9919f84762df2fb97e96ea239e10896ae66/model-00001-of-00004.safetensors)

@@ -10,7 +10,7 @@
 - Authors: Sunghwan Hong, Jaewoo Jung, Heeseong Shin, Jisang Han, Jiaolong Yang, Chong Luo, Seungryong Kim
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, geometry, 3D Vision
+- Tags: Gaussian Splatting, geometry, 3D Vision, camera pose
 - Official paper: https://proceedings.mlr.press/v267/hong25c.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/hong25c/hong25c.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ PF3plat은 정확한 카메라 자세가 주어지지 않은 소수의 영상에
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 4 (3.2.2. MULTI-VIEW CONSISTENT DEPTH ESTIMATION)이다.
+
+## 검색 태그 근거
+
+희소 RGB 뷰에서 영상 대응을 이용해 상대 자세와 다중 뷰 깊이를 함께 정제한 뒤 3D 가우시안을 예측한다. 입력하지 않은 시점의 영상과 상대 자세 정확도를 평가했다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=3) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/hong25c/hong25c.pdf#page=7)

@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-사족·이족·quadrotor 실험과 실제 배포를 보고한다.
+사족·이족·쿼드로터의 국소 항법은 시뮬레이션에서 비교했다. 실물 배포 대상은 Unitree Go2와 MagicDog다.
 
 ## Evaluation Type and Scope
 
@@ -14,7 +14,7 @@ Abstract/project에 명시된 평가 범위만 기록한다. 아래의 확인 �
 
 ## Dataset / Benchmark Role
 
-사족·이족·quadrotor 실험과 실제 배포를 보고한다.
+사족·이족·쿼드로터의 국소 항법은 시뮬레이션에서 비교했다. 실물 배포 대상은 Unitree Go2와 MagicDog다.
 
 Resource 이름은 위 source가 evaluation 용도로 명시한 경우만 사용한다. 정확한 training/evaluation role, split, size와 데이터 중복은 not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다.
 

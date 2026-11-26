@@ -24,6 +24,10 @@ Checkpoint CKA, attention knockout, region masking과 input editing을 단계적
 
 읽은 arXiv v1과 EMNLP 최종본의 전체 동등성은 확인하지 않았다. 공개 toolkit의 존재와 우리 checkpoint adapter의 호환·실행은 별개다.
 
+## 검색 태그 근거
+
+VLA-Trace는 π0.5·OpenVLA의 여러 학습 단계에서 표현 유사도와 주의 경로 차단 효과를 비교한다. LIBERO에서의 행동 성공과 COCO에서의 표현 분석은 서로 다른 측정이다. [원문 4쪽](https://aclanthology.org/2026.emnlp-main.2076.pdf#page=4) · [원문 6쪽](https://aclanthology.org/2026.emnlp-main.2076.pdf#page=6)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 FEEDBACK의 표현/행동 연결 진단 도구로 REFERENCE에 보존한다. 기존 mechanistic NEXT와 중복되는 도구 축이며 현재 학습 메커니즘의 직접 검증은 아니다.

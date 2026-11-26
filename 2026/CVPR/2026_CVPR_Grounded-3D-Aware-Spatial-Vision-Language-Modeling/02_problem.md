@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): Two challenge
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Two challenges, in particular, are under-addressed. | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion. | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework | geometry, map, object/relationship state | notation and tensor shape require body check |
-| Output / action | Without, reliable, spatial, grounding, link, between, high-level, instructions | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
-| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+| Target problem | Two challenges, in particular, are under-addressed. | 단안 영상의 3D 위치 추정과 공간 질의응답 | body wording is the source claim |
+| Observation / input | Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion. | RGB 이미지·질문·카메라 내부 파라미터 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework | 참조 영역 토큰과 카메라 보정 표현 | notation and tensor shape require body check |
+| Output / action | Without, reliable, spatial, grounding, link, between, high-level, instructions | 3D 상자 및 공간 질문에 대한 답변 | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | 3D 위치 추정과 질의응답 정확도 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

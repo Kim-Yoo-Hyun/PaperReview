@@ -14,6 +14,7 @@
 - Venue verification: https://arxiv.org/abs/2603.21341
 - Code/Project:
 - Code: not_identified
+- 방법·평가 확인 (2026-11-25): [원문 4, 5, 6, 7쪽](https://arxiv.org/pdf/2603.21341v1#page=4) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. arXiv v1의 정확한 제목 사용. 저자 페이지의 이전 제목은 alias로 보존한다. 검색 색인의 ICLR 2026 표기는 공식 acceptance로 확인하지 못해 arXiv로 등록한다. RoboAlign-R1 world-model 논문과 다르다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance

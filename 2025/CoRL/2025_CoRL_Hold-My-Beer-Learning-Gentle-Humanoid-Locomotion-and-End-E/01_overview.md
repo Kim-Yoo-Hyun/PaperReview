@@ -10,7 +10,7 @@
 - Authors: Yitang Li, Yuanhang Zhang, Wenli Xiao, Chaoyi Pan, Haoyang Weng, Guanqi He, Tairan He, Guanya Shi
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, locomotion, end-effector stabilization, multi-rate control
+- Tags: Robotics, humanoid, locomotion, end-effector stabilization, multi-rate control, Reinforcement Learning
 - Official paper: https://proceedings.mlr.press/v305/li25i.html
 - Full-text retrieval: https://arxiv.org/pdf/2505.24198
 - Code/Project: https://lecar-lab.github.io/SoFTA/

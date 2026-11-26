@@ -42,3 +42,7 @@ Diffusion·autoregressive 정책의 simulation·실제 조작을 평가한다.
 ## Verification Boundary
 
 정적 배경 shortcut, reverse-video negative의 유효성, action-label 없이 가능한 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 영상 잠재 움직임 모델 학습 · idm/train_como.py [배포 파일](https://raw.githubusercontent.com/MCG-NJU/CoMo/62bd06d6455adc42e418c43613e6b3c70059e7a2/idm/train_como.py)

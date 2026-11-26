@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** high-DoF humanoid whole-body dynamics와 contacts.
-- **Input boundary:** proprioception, reference pose/motion, visual or language command.
-- **Output/decision under evaluation:** joint/whole-body action, motion target 또는 task trajectory.
-- **Primary target:** tracking, balance, skill/task success와 recovery.
+- **Target system/task:** 물리 시뮬레이션 아바타의 동작 추종과 낙상 복구.
+- **Input boundary:** 고유수용 상태와 참조 자세·속도.
+- **Output/decision under evaluation:** 관절 제어 행동.
+- **Primary target:** 동작 추종 정확도와 실패 후 복귀.
 - **Detected evaluation headings:** 4. Experiments (p. 6).
 
 ## Experimental Matrix
@@ -61,8 +61,8 @@ PDF body evaluation/result cue (p. 8 (4.1. Motion Imitation), p. 7 (4.1. Motion 
 |---|---|---|---|
 | Robot/hardware/simulator | PHC is trained on the training split of the AMASS [23] dataset. | embodiment, simulator version and control stack | p. 7 (4. Experiments), p. 7 (4.1. Motion Imitation) |
 | Task/environment | On the training dataset, PHC has a better success rate while achieving better or similar MPJPE, showcasing its ability to better imitate sequences from ... | reset, timeout, object/scene variation | p. 7 (4.1. Motion Imitation), p. 8 (4.1. Motion Imitation) |
-| Observation/sensor | proprioception, reference pose/motion, visual or language command | calibration, preprocessing, privileged input | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy) |
-| Output/decision | joint/whole-body action, motion target 또는 task trajectory | action frame, controller and termination | p. 2 (1. Introduction), p. 6 (3.2. Progressive Multiplicative Control Policy) |
+| Observation/sensor | 고유수용 상태와 참조 자세·속도 | calibration, preprocessing, privileged input | p. 3 (3.1. Goal Conditioned Motion Imitation with Ad), p. 5 (3.2. Progressive Multiplicative Control Policy) |
+| Output/decision | 관절 제어 행동 | action frame, controller and termination | p. 2 (1. Introduction), p. 6 (3.2. Progressive Multiplicative Control Policy) |
 
 ## Metrics and Success Definition
 

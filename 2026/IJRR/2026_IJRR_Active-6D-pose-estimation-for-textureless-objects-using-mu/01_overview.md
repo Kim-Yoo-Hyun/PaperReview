@@ -14,6 +14,7 @@
 - Venue verification: https://journals.sagepub.com/doi/10.1177/02783649251411922
 - Code/Project: https://trailab.github.io/ActiveODPE/
 - Code: project_only
+- 방법·평가 확인 (2026-11-25): [원문 2, 5, 7, 10, 15, 18, 19쪽](https://arxiv.org/pdf/2503.03726v2#page=2) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance

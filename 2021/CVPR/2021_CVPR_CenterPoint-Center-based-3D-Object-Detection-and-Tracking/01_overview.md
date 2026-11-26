@@ -10,7 +10,7 @@
 - Authors: Tianwei Yin, Xingyi Zhou, Philipp Krahenbuhl
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: point cloud, 3D Vision
+- Tags: point cloud, 3D Vision, 3D detection
 - Official paper: https://arxiv.org/abs/2006.11275
 - Full-text retrieval: https://arxiv.org/pdf/2006.11275
 - Code/Project: not identified
@@ -69,3 +69,7 @@ nuScenes에서 65.5 NDS는 3D 검출 점수이고 63.8 AMOTA는 여러 재현율
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Preliminaries)이다.
+
+## 검색 태그 근거
+
+라이다 점군을 조감도 특징으로 만든 후 물체 중심에서 크기·방향·속도를 회귀한다. Waymo와 nuScenes에서 물체 위치와 두 시점 간 추적을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2021/papers/Yin_Center-Based_3D_Object_Detection_and_Tracking_CVPR_2021_paper.pdf#page=6)

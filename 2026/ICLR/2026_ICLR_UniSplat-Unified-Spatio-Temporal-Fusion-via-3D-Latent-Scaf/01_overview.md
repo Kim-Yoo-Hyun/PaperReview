@@ -10,7 +10,7 @@
 - Authors: Chen Shi, Shaoshuai Shi, Xiaoyang Lyu, Chunyang Liu, Kehua Sheng, Bo Zhang, Li Jiang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, sensor fusion, LiDAR, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, LiDAR, 3D Vision
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/cb2266111eadcfa2c02187ace64e2183-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ UniSplat은 여러 카메라의 연속 주행 영상에서 공간·시간 정보
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Experimental results demonstrate that our approach achieves state-of-the-art performance across both datasets in input-view reconstruction and novelview synthesis. | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
-| State/latent | Experimental, demonstrate, achieves, state-of-the-art, performance, across, datasets, input-view, reconstruction, novelview, synthesis, Despite | geometry, map, object/relationship state | p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION) |
-| Output/action | Despite these advances, robust reconstruction in urban driving scenarios remains challenging, particularly in maintaining a unified latent representation that evolves smoothly over time, handling partial observations, occlusions, and dy ... | point map, pose, scene graph, affordance 또는 query result | p. 2 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 16 (A.1 IMPLEMENTATION DETAILS) |
-| Objective/outcome | To address the severe class imbalance in the dynamic segmentation loss, we incorporate a negative sampling strategy that randomly selects 50,000 negative pixels per sample for loss computation. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 주행 카메라의 연속 영상과 기하 보정값 |
+| 표현 | 공간·시간 정보를 통합한 희소 3D 격자 |
+| 출력 | 순차 복원한 동적 3D 가우시안 |
+| 평가 | 주행 자료의 새 시점 재구성 |
+
+[원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=4) · [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=5) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -77,3 +79,7 @@ UniSplat은 여러 카메라의 연속 주행 영상에서 공간·시간 정보
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 15 (A.1 IMPLEMENTATION DETAILS), p. 16 (A.1 IMPLEMENTATION DETAILS)이다.
+
+## 검색 태그 근거
+
+여러 주행 카메라의 시계열 영상을 희소한 3D 구조로 융합한다. 라이다는 영상에서 예측하는 스케일의 학습 목표를 만드는 데 쓰인다. 별도 평가 변형은 추론에도 라이다 스케일을 사용한다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=4) · [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=5) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/cb2266111eadcfa2c02187ace64e2183-Paper-Conference.pdf#page=8)

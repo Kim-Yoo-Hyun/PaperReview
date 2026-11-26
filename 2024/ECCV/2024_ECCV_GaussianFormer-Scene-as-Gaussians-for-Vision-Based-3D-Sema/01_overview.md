@@ -10,7 +10,7 @@
 - Authors: Yuanhui Huang, Wenzhao Zheng, Yunpeng Zhang, Jie Zhou, Jiwen Lu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, Gaussian Splatting, semantic
+- Tags: 3D Vision, Gaussian Splatting, semantic occupancy
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3958_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03958.pdf
 - Code/Project: not identified

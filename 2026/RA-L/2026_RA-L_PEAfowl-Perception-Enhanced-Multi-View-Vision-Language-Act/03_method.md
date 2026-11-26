@@ -10,7 +10,7 @@
 
 ## Observation–State–Action Interface
 
-다중 시점 영상·지시 → 3D-aware VLA 표현 → 양팔 행동.
+여러 시점의 원시 RGB-D, 언어 지시와 로봇 관절 상태로 양팔 관절 궤적을 예측한다.
 
 ## Pipeline and Optimization Boundary
 
@@ -18,7 +18,7 @@
 
 ## Training vs Inference
 
-학습·추론 구분을 위해 확인할 항목: 학습 depth 정답 비용, 추론 depth 필요 여부, unseen camera/object 전이.
+학습·추론 구분을 위해 확인할 항목: 깊이 교사 정답 생성 비용과 새로운 시점·물체에서의 일반화.
 
 Source가 명시한 evaluation 범위: RoboTwin2.0과 실제 양팔 조작을 평가한다.
 

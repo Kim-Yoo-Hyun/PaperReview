@@ -115,28 +115,59 @@
         },
         "order": "Prior formal batches and admitted gapfill A excluded; stable paper_id order within NEXT."
       }
+    },
+    {
+      "path": "work/sources/batches/core_next_09.yaml",
+      "schema": "appendix-a-template-4",
+      "registry_key": "registry_id",
+      "record_count": 50,
+      "verified_on": "2026-11-25",
+      "openness_reviewed_on": "2026-11-25",
+      "selection": {
+        "baseline_commit": "8303fdd74fedbd456c0ab94230bde5cfd64c40ba",
+        "tier_counts": {
+          "NEXT": 50
+        },
+        "order": "Prior formal batches and admitted gapfill A excluded; stable paper_id order within NEXT."
+      }
+    },
+    {
+      "path": "work/sources/batches/core_next_10.yaml",
+      "schema": "appendix-a-template-4",
+      "registry_key": "registry_id",
+      "record_count": 27,
+      "verified_on": "2026-11-25",
+      "openness_reviewed_on": "2026-11-25",
+      "selection": {
+        "baseline_commit": "8303fdd74fedbd456c0ab94230bde5cfd64c40ba",
+        "baseline_manifest_sha256": "19b68bb8cd78a8a0ed5bff59a6ede4c87f374406d65c4e438082381511d7135a",
+        "tier_counts": {
+          "NEXT": 27
+        },
+        "order": "Remaining active NEXT IDs after core_next_01–09 and admitted gapfill A; selection uses the working manifest identified above."
+      }
     }
   ],
   "schema": "work/sources/registry.schema.json",
-  "generated_on": "2026-11-25",
-  "paper_count": 1252,
+  "generated_on": "2026-11-26",
+  "paper_count": 1266,
   "identity_policy": "paper_id is the stable internal identity; DOI/arXiv/OpenReview identifiers are optional public identifiers.",
   "version_policy": "Use relations with type=version_of or same_work_as when a preprint and publication must remain separate.",
   "evidence_policy": "Manifest provenance records source scope; note evidence and reading status are not inferred from local PDF presence.",
-  "manifest_sha256": "1c180de8f95f0c38876bd814e5ffc5186423c13a2b68980aa5a397c62125059f",
+  "manifest_sha256": "2b9bcd94f78e1514f6ee08b52af811b7784c5e21dc6e5f174a1a63107390a173",
   "last_reconciled_on": "2026-09-04",
   "reconciliation_policy": "review manifest evidence is paper-level; per-note evidence is retained under provenance.note_evidence; note-scoped review manifests are retained under provenance.note_review without changing paper-level review precedence; tracker status remains user-controlled.",
-  "relation_count": 91,
+  "relation_count": 99,
   "relation_policy": "Directed curated edges in papers.json are not a full citation graph; each managed edge records type, target paper_id, confidence, basis, source, evidence_scope, and reviewed_on.",
   "metadata_profile_version": "1.0",
-  "metadata_profile_reviewed_on": "2026-11-22",
-  "evaluation_profile_count": 1252,
-  "reproducibility_profile_count": 1252,
-  "lineage_profile_count": 1252,
+  "metadata_profile_reviewed_on": "2026-11-25",
+  "evaluation_profile_count": 1266,
+  "reproducibility_profile_count": 1266,
+  "lineage_profile_count": 1266,
   "priority_reviewed_on": "2026-11-20",
   "external_coverage": {
     "as_of": "2026-11-19",
-    "report": "research/EXTERNAL_COVERAGE.md",
+    "report": "research/GAPFILL.md",
     "titles": "work/sources/coverage_titles.jsonl.gz",
     "candidates": "work/sources/batches/missing_candidates_2026.yaml",
     "source_count": 25,
@@ -162,7 +193,7 @@
     }
   ],
   "source_audit": {
-    "verified_on": "2026-11-25",
+    "verified_on": "2026-11-26",
     "path": "work/sources/batches/source_audit_2026_11.jsonl",
     "report": "research/SOURCE_AUDIT.md",
     "paper_count": 1252,
@@ -261,7 +292,7 @@
       "count": 43,
       "baseline_commit": "f3806160de5ecd1a08dd7b18364fd63d0dac5745"
     },
-    "manifest_sha256": "1c180de8f95f0c38876bd814e5ffc5186423c13a2b68980aa5a397c62125059f",
+    "manifest_sha256": "2b9bcd94f78e1514f6ee08b52af811b7784c5e21dc6e5f174a1a63107390a173",
     "initial_verified_on": "2026-11-20",
     "artifact_recheck": {
       "verified_on": "2026-11-24",

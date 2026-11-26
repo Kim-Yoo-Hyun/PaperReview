@@ -10,7 +10,7 @@
 - Authors: Huayi Wang, Zirui Wang, Junli Ren, Qingwei Ben, Tao Huang, Weinan Zhang, Jiangmiao Pang
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, perceptive locomotion, sparse footholds, Reinforcement Learning
+- Tags: Robotics, humanoid, perceptive locomotion, sparse footholds, Reinforcement Learning, LiDAR
 - Official paper: https://www.roboticsproceedings.org/rss21/p068.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p068.pdf
 - Code/Project: https://why618188.github.io/beamdojo/

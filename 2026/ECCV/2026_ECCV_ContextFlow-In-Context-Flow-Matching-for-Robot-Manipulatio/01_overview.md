@@ -7,7 +7,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: in-context-learning, flow-matching, robot-manipulation
+- Tags: in-context-learning, flow-matching, robot-manipulation, imitation-learning
 - Aliases: ContextFlow
 - Official paper: https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16
 - Venue verification: https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16
@@ -34,6 +34,10 @@ ContextFlow는 테스트 시 주어진 시연과 현재 관측을 조건으로 �
 LIBERO 미학습 구성에서 평균 성공률은 ContextFlow 73.5%, ICRT 38.5%로 35%p 차이다. 실물의 빨간 펜을 왼손부터 잡아 뚜껑을 여는 조건에서는 각각 4/10과 0/10이었다. [PDF 10쪽](https://arxiv.org/pdf/2609.06852v1#page=10) · [PDF 14쪽](https://arxiv.org/pdf/2609.06852v1#page=14)
 
 근거: [공식 paper/abstract](https://link.springer.com/chapter/10.1007/978-3-032-37531-5_16) · [저자 project/code](https://dingjiansw101.github.io/contextflow-page/) · [공식 code](https://github.com/dingjiansw101/ContextFlow).
+
+## 검색 태그 근거
+
+시연의 영상·관절 상태·행동을 압축하고, 현재 영상·지시·로봇 상태와 함께 다음 행동열을 조건부 flow matching으로 학습한다. 미학습 과제 구성은 새 시연을 문맥으로 주어 실행하며, LIBERO와 실물 ALOHA에서 평가했다. [원문 5쪽](https://arxiv.org/pdf/2609.06852v1#page=5) · [원문 8쪽](https://arxiv.org/pdf/2609.06852v1#page=8) · [원문 10쪽](https://arxiv.org/pdf/2609.06852v1#page=10)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

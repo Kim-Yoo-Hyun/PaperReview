@@ -10,7 +10,7 @@
 - Authors: Xinpeng Zhao, Jie Jiang, Fengyuan Zhang, Lixin Zhan, Dong Wang, Qinyuan Bu, Jiahang Tu, Guangzhen Yao
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic, alignment, 3D Vision
+- Tags: semantic, alignment, 3D Vision, distillation
 - Official paper: https://icml.cc/virtual/2026/poster/62937
 - Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/zhao26s/zhao26s.pdf
 - Full-text retrieval at original review: https://openreview.net/pdf/8310d4c5a6346eaadb420914138e1711121a0ff8.pdf
@@ -80,3 +80,7 @@ Rh-3DGS는 관측 방향과 가시성에 따라 달라지는 시각언어 특징
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 3 (4.1. Problem Formulation and Notation), p. 4 (4.2. Overview), p. 4 (4.1. Problem Formulation and Notation), p. 5 (4.4. Visibility-Weighted Fr´echet Mean (VFM)), p. 5 (4.3. Visibility-Calibrated Distillation (VCD))이다.
+
+## 검색 태그 근거
+
+관측 방향과 가시성에 따라 동결한 시각언어 교사의 특징에 가중치를 두고 가우시안에 증류한다. 렌더링한 의미 특징을 텍스트 임베딩과 비교해 LERF 등의 분할을 평가했다. [원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=4) · [원문 9쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/zhao26s/zhao26s.pdf#page=9)

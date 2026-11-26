@@ -10,7 +10,7 @@
 - Authors: Xuxin Cheng, Kexin Shi, Ananye Agarwal, Deepak Pathak
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, quadruped locomotion, parkour, Reinforcement Learning
+- Tags: Robotics, quadruped locomotion, parkour, Reinforcement Learning, teacher-student learning
 - Official paper: https://arxiv.org/abs/2309.14341
 - Full-text retrieval: https://arxiv.org/pdf/2309.14341
 - Code/Project: https://extreme-parkour.github.io/

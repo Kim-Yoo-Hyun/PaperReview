@@ -7,7 +7,7 @@
 - Category: Robotics-Enabling 3D Perception
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 6D pose, partial references, uncertainty, object completion
+- Tags: 6D pose, partial references, uncertainty, object completion, RGB-D
 - Aliases: UA-Pose
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html
 - Venue verification: https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html
@@ -34,6 +34,10 @@ Known-pose RGB-D 소수 관측 또는 한 장의 reference 이미지에서 출�
 평가는 RGB-D 시퀀스의 6D 자세 정확도와 온라인 형상 완성도다. 자세에는 ADD·ADD-S의 곡선 아래 면적을, 형상에는 Chamfer 거리를 사용했다. [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf#page=7) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf#page=8)
 
 근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/CVPR2025/html/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.html) · [저자 project/code](https://minfenli.github.io/UA-Pose/) · [공식 저장소(구현 공개 미확인)](https://github.com/minfenli/UA-Pose).
+
+## 검색 태그 근거
+
+참조에서 관측한 표면을 렌더링해 영상 마스크와의 겹침으로 자세 신뢰도를 계산한다. 이미 촬영된 시퀀스에서 보관할 프레임을 선별해 형상을 보완한다. 평가 지표는 물체 자세 오차와 복원 형상의 거리다. [원문 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf#page=5) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf#page=6) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_UA-Pose_Uncertainty-Aware_6D_Object_Pose_Estimation_and_Online_Object_Completion_CVPR_2025_paper.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

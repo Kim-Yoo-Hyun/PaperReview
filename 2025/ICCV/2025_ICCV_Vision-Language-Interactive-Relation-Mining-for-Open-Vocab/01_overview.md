@@ -10,7 +10,7 @@
 - Authors: Yukuan Min, Muli Yang, Jinhao Zhang, Yuxuan Wang, Aming Wu, Cheng Deng
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Vision-Language Model, Graph Reasoning, semantic
+- Tags: Vision-Language Model, Graph Reasoning, semantic, open-vocabulary
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ VL-IRM은 2D 영상에서 물체 쌍을 연결하는 관계를 학습해 훈련 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Generative Relation Recognition), p. 5 (3.4. Training Objectives)이다.
+
+## 검색 태그 근거
+
+영상 속 물체 쌍에서 VLM의 관계 묘사와 계층적 확장을 이용해 술어를 예측한다. Visual Genome에서 미학습 관계의 장면 그래프 성능을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Min_Vision-Language_Interactive_Relation_Mining_for_Open-Vocabulary_Scene_Graph_Generation_ICCV_2025_paper.pdf#page=7)

@@ -10,7 +10,7 @@
 - Authors: Yan Zhuang, Jiawei Ren, Xiaokang Ye, Jianzhi Shen, ruixuan zhang, Tianai Yue, Muhammad Faayez, Xuhong He, Xiyan Zhang, Ziqiao Ma, Lianhui Qin, Zhiting Hu, Tianmin Shu
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, Navigation, Reinforcement Learning
+- Tags: Robotics, Navigation, Benchmark
 - Official paper: https://papers.neurips.cc/paper_files/paper/2025/hash/4a81c1aad3064fb8243b8938a49ecca0-Abstract-Conference.html
 - Full-text retrieval: https://papers.neurips.cc/paper_files/paper/2025/file/4a81c1aad3064fb8243b8938a49ecca0-Paper-Conference.pdf
 - Code/Project: not identified

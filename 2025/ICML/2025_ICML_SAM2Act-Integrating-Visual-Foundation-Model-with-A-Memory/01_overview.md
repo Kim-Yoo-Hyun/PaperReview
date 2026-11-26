@@ -10,7 +10,7 @@
 - Authors: Haoquan Fang, Markus Grotz, Wilbert Pumacay, Yi Ru Wang, Dieter Fox, Ranjay Krishna, Jiafei Duan
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, Imitation Learning
+- Tags: Robotics, Imitation Learning, memory
 - Official paper: https://proceedings.mlr.press/v267/fang25c.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/fang25c/fang25c.pdf
 - Code/Project: not identified

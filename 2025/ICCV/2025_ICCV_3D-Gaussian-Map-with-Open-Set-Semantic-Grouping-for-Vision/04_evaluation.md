@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** mapped 3D environment과 mobile robot.
-- **Input boundary:** camera/depth stream, pose, map와 language goal.
-- **Output/decision under evaluation:** collision-free trajectory 또는 velocity command.
-- **Primary target:** goal reach, safety, localization error와 replanning latency.
+- **Target system/task:** 실내에서의 지시 조건 내비게이션.
+- **Input boundary:** RGB-D 파노라마와 언어 지시.
+- **Output/decision under evaluation:** 후보 경로 노드의 선택.
+- **Primary target:** REVERIE·R2R의 경로 성공 및 경로 효율.
 - **Detected evaluation headings:** 3.5. Implementation Details (p. 5); 4. Experiment (p. 6); 4.1. Experimental Setup (p. 6); 4.3. Diagnostic Experiment (p. 8).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison to State-of-the-Arts), p. 
 |---|---|---|---|
 | Robot/hardware/simulator | We evaluate our method on three benchmark datasets: R2R [3], R4R [32], and REVERIE [56]. | embodiment, simulator version and control stack | p. 6 (4.1. Experimental Setup), p. 6 (4.1. Experimental Setup) |
 | Task/environment | R2R contains 7,189 trajectories, each paired with three natural language instructions, split into train, val seen, val unseen, and test unseen sets spanning 61, ... | reset, timeout, object/scene variation | p. 6 (4.1. Experimental Setup), p. 7 (4.2. Comparison to State-of-the-Arts) |
-| Observation/sensor | camera/depth stream, pose, map와 language goal | calibration, preprocessing, privileged input | p. 4 (3.3. Multi-Level Action Prediction (MAP)), p. 3 (3. Method) |
-| Output/decision | collision-free trajectory 또는 velocity command | action frame, controller and termination | p. 3 (3. Method), p. 1 (1. Introduction) |
+| Observation/sensor | RGB-D 파노라마와 언어 지시 | calibration, preprocessing, privileged input | p. 4 (3.3. Multi-Level Action Prediction (MAP)), p. 3 (3. Method) |
+| Output/decision | 후보 경로 노드의 선택 | action frame, controller and termination | p. 3 (3. Method), p. 1 (1. Introduction) |
 
 ## Metrics and Success Definition
 

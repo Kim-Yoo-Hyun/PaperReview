@@ -7,7 +7,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, evaluation, data-selection
+- Tags: evaluation, data-selection, Large Language Model
 - Aliases:
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html
@@ -34,6 +34,10 @@ LLM 학습 예제 → proxy score·target verification → coreset; robot action
 LLM fine-tuning 평가이며 VLA의 closed-loop 성공을 검증한 논문은 아니다.
 
 근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2025/hash/412360d2dd428c26f34918c8d682cf7e-Abstract-Conference.html).
+
+## 검색 태그 근거
+
+동일 계열의 작은 언어모델로 미세조정 예제를 채점하고 대상 모델로 일부를 확인해 과제별 부분집합을 구성한다. 평가 대상은 텍스트 과제다. [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=5) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/412360d2dd428c26f34918c8d682cf7e-Paper-Conference.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

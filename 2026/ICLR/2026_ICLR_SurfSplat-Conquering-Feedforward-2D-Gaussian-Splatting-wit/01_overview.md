@@ -11,7 +11,7 @@
 - 저자 판본: ICLR 게재본은 Gang Chen을 네 번째, Ning Cao를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 두 이름의 순서가 뒤바뀌어 있다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision, surface reconstruction
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/3a10c46572628d58cb44fb705f25cbbf-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf
 - Code/Project: not identified
@@ -81,3 +81,7 @@ SurfSplat은 소수의 입력 뷰에서 픽셀별 2D 가우시안을 예측할 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 6 (3.1 PRELIMINARIES), p. 4 (3.1 PRELIMINARIES)이다.
+
+## 검색 태그 근거
+
+소수 RGB 뷰의 픽셀별 특징에서 2D 가우시안을 순전파로 예측한다. 인접한 표면의 연결성을 부여하고 불투명도 블렌딩을 조정해 표면 복원과 렌더링을 평가했다. [원문 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=3) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/3a10c46572628d58cb44fb705f25cbbf-Paper-Conference.pdf#page=7)

@@ -10,7 +10,7 @@
 - Authors: Tao Huang, Junli Ren, Huayi Wang, Zirui Wang, Qingwei Ben, Muning Wen, Xiao Chen, Jianan Li, Jiangmiao Pang
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, standing up, fall recovery, sim-to-real
+- Tags: Robotics, humanoid, standing up, fall recovery, sim-to-real, Reinforcement Learning
 - Official paper: https://www.roboticsproceedings.org/rss21/p064.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p064.pdf
 - Code/Project: https://github.com/InternRobotics/HoST

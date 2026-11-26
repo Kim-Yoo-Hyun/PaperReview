@@ -10,7 +10,7 @@
 - Authors: Hao-Yu Hou, Chun-Yi Lee, Motoharu Sonogashira, Yasutomo Kawanishi
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, Graph Reasoning, semantic
+- Tags: 3D Vision, 3D Scene Graph, semantic
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Hou_FROSS_Faster-Than-Real-Time_Online_3D_Semantic_Scene_Graph_Generation_from_RGB-D_ICCV_2025_paper.pdf
 - Code/Project: not identified

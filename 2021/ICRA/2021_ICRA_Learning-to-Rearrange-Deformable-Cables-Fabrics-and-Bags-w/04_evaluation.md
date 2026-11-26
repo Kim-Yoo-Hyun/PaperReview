@@ -24,10 +24,10 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT AND SIMULATION`.
 
 - **판본별 평가 환경.** ICRA 최종판은 PyBullet을 사용하고 저자 개정판 v4는 Franka Panda의 케이블 실험을 추가했다. [PDF 10쪽](https://arxiv.org/pdf/2012.03385v4#page=10)
-- **Target system/task:** rigid/articulated object와 robot manipulator contact scene.
-- **Input boundary:** RGB-D/point cloud, object state와 contact/task observation.
-- **Output/decision under evaluation:** grasp, pose, force 또는 end-effector trajectory.
-- **Primary target:** task completion, contact success, pose/force error와 generalization.
+- **Target system/task:** 케이블·천·가방 재배치.
+- **Input boundary:** 시뮬레이션의 정사영 RGB-D와 목표 영상, 실물 케이블의 이진 마스크.
+- **Output/decision under evaluation:** 집기·놓기 위치와 회전.
+- **Primary target:** 변형체별 목표 달성률과 실물 케이블 마스크 겹침.
 - **Detected evaluation headings:** VI. SIMULATION EXPERIMENTS (p. 5); VII. SIMULATION RESULTS (p. 5); VIII. PHYSICAL EXPERIMENTS AND RESULTS (p. 6).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ ICRA 2021에 제출한 최종판은 케이블·천·가방을 PyBullet에서 평
 |---|---|---|---|
 | Robot/hardware/simulator | We next validate experiments on physical hardware using a Franka Panda robot with a standard parallel-jaw gripper. | embodiment, simulator version and control stack | p. 6 (VIII. PHYSICAL EXPERIMENTS AND RESULTS), p. 5 (VI. SIMULATION EXPERIMENTS) |
 | Task/environment | We use scripted, stochastic demonstrator policies to get 1000 demonstrations (i.e., episodes) per task, and train policies using 1, 10, 100, or all 1000 ... | reset, timeout, object/scene variation | p. 5 (VI. SIMULATION EXPERIMENTS), p. 6 (VII. SIMULATION RESULTS) |
-| Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
+| Observation/sensor | 시뮬레이션의 정사영 RGB-D와 목표 영상, 실물 케이블의 이진 마스크 | calibration, preprocessing, privileged input | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
+| Output/decision | 집기·놓기 위치와 회전 | action frame, controller and termination | p. 3 (III. BACKGROUND), p. 2 (III. BACKGROUND) |
 
 ## Metrics and Success Definition
 

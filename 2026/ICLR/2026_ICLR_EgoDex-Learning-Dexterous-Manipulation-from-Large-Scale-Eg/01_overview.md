@@ -11,6 +11,7 @@
 - Project: https://github.com/apple-aiml-research/ml-egodex
 - Code: https://github.com/apple-aiml-research/ml-egodex
 - Public identifiers: {"arxiv": "2505.11709", "openreview": "FFxkFMU89E"}
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 6, 7, 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/07fcc6e2b89439d3ee5ab60939aaa6a0-Paper-Conference.pdf#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 
 ## Problem and Importance
 
@@ -28,3 +29,8 @@ EgoDex는 사람이 조작할 때의 1인칭 영상과 양손 손가락의 3차�
 ## Why This Paper Is Here — Researcher Interpretation
 
 Ψ₀가 사용한 인간 시연의 출처다. 사람 손 궤적을 로봇 사전학습에 활용하는 방법을 비교할 때 읽는다.
+
+## 공개 자료의 확인 범위
+
+- EgoDex 손 궤적의 오프라인 평가 지표 · compute_metrics.py [배포 파일](https://raw.githubusercontent.com/apple-aiml-research/ml-egodex/718d9ebd8ec17187f72a74a08c66deea80178cb6/compute_metrics.py)
+- EgoDex 궤적 배포 첫 번째 압축 묶음 · part1.zip [배포 파일](https://ml-site.cdn-apple.com/datasets/egodex/part1.zip)

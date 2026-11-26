@@ -36,6 +36,10 @@ ExORL·OGBench의 offline 및 offline-to-online RL과 NAVSIM 자율주행 VLA를
 
 근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/64a0192102e1421a2b2c15ae0bdb9f3a-Abstract-Conference.html) · [저자 project/code](https://lrmbbj.github.io/DIPOLE/) · [공식 code](https://github.com/LRMbbj/DIPOLE).
 
+## 검색 태그 근거
+
+서로 반대 방향으로 Q 가중한 두 확산 정책의 점수 함수를 조합한다. ExORL·OGBench에서 오프라인 및 온라인 전환을 평가하며, VLA에 확장한 NAVSIM 시험의 행동 과제는 자율주행이다. [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/64a0192102e1421a2b2c15ae0bdb9f3a-Paper-Conference.pdf#page=5) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/64a0192102e1421a2b2c15ae0bdb9f3a-Paper-Conference.pdf#page=8)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 Diffusion RL 안정화의 알고리즘 대안으로 참고하며 로봇 조작 효과는 별도 검증한다.

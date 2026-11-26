@@ -10,7 +10,7 @@
 - Authors: Justin Yu, Kush Hari, Karim El-Refai, Arnav Dalal, Justin Kerr, Chung Min Kim, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: NEXT
-- Tags: Robotics, Gaussian Splatting, Reinforcement Learning
+- Tags: Gaussian Splatting, 6D pose tracking, object-centric representation, robot manipulation
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11127328
 - Full-text retrieval: https://arxiv.org/pdf/2503.05189v1
 - Code/Project: https://berkeleyautomation.github.io/POGS

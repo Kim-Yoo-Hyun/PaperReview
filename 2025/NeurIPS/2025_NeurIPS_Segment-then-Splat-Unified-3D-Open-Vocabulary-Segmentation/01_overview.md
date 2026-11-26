@@ -10,7 +10,7 @@
 - Authors: Yiren Lu, Yunlai Zhou, Yiran Qiao, Chaoda Song, Tuo Liang, Jing Ma, Huan Wang, Yu Yin
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision, Gaussian Splatting, semantic
+- Tags: 3D Vision, Gaussian Splatting, semantic, 3D segmentation
 - Official paper: https://neurips.cc/virtual/2025/poster/115127
 - Full-text retrieval: https://arxiv.org/pdf/2503.22204.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ Segment then Splat은 다중 뷰의 물체를 먼저 분리해 물체별 가우�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 5 (3 Method), p. 6 (3 Method)이다.
+
+## 검색 태그 근거
+
+다중 뷰에서 물체 마스크를 연결한 뒤 물체마다 가우시안 집합과 CLIP 특징을 만든다. 고정 장면과 시간에 따라 움직이는 장면의 분할과 재구성을 평가했다. [원문 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=4) · [원문 9쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/f2644105c6680950b0adbfa0a2cfb177-Paper-Conference.pdf#page=9)

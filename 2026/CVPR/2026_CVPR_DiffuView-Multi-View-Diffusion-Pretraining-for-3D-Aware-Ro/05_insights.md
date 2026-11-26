@@ -42,14 +42,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `RGB-D/point cloud, object state와 contact/task observation → object geometry, affordance, contact mode 또는 end-effector state → grasp, pose, force 또는 end-effector trajectory`.
-- 이 논문의 재사용 가능한 지점은 After the FiLM conditioned QFormer aggregates the visual features into a compact observation embedding zobs, a diffusion policy is employed as the action head to generate the robot action a0 conditioned on ...를 At each timestep t, the policy network εψ learns to predict the noise component based on the noisy action a(t), the timestep t, the observation embedding zobs, and the language token l: ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 object geometry, affordance, contact mode 또는 end-effector state가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In future work, we plan to extend DiffuView toward a joint flexible view and time pretraining framework, enabling unified spatial temporal representation learning.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `카메라의 RGB·깊이·시점 정보와 언어 지시 → 목표 시점 복원으로 학습한 영상 특징 → 확산 정책이 예측한 말단·그리퍼 행동`.
+- 이 논문의 재사용 가능한 지점은 After the FiLM conditioned QFormer aggregates the visual features into a compact observation embedding zobs, a diffusion policy is employed as the action head to generate the robot action a0 conditioned on ...를 At each timestep t, the policy network εψ learns to predict the noise component based on the noisy action a(t), the timestep t, the observation embedding zobs, and the language token l: ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 목표 시점 복원으로 학습한 영상 특징가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 In future work, we plan to extend DiffuView toward a joint flexible view and time pretraining framework, enabling unified spatial temporal representation learning.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: To summarize, our contributions are as follows: • We propose DiffuView, a novel diffusion-based representation learning framework for robotic manipulation that learns 3D consistent visual representations through multiview diffusion pret ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `Manipulation, contact, tactile, and dexterity`; tags: `Diffusion, 3D manipulation, Robotics`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

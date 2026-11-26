@@ -10,7 +10,7 @@
 - Authors: Zhenjia Xu, Cheng Chi, Benjamin Burchfiel, Eric Cousineau, Siyuan Feng, Shuran Song
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, deformable object, cloth manipulation, air flow, dexterous manipulation, real-world control
+- Tags: Robotics, deformable object, cloth manipulation, air flow, real-world control, self-supervised learning
 - Official paper: https://arxiv.org/abs/2203.01197
 - Full-text retrieval: https://arxiv.org/pdf/2203.01197
 - Code/Project: https://dextairity.cs.columbia.edu/
@@ -44,12 +44,14 @@ DextAIRity는 로봇이 변형체를 잡고 있는 동안 공기의 방향을 �
 
 ## Observation, State, and Output Interface
 
+그림 2·4의 두 그리퍼가 천이나 가방을 잡고 별도 팔이 송풍기를 조준한다. 상단 영상으로 집기와 송풍 행동을 고르고 면적이나 가방 열림으로 학습한다. 천은 시뮬레이션과 실물, 가방 송풍은 실물에서 평가했다. [PDF 4쪽](https://www.roboticsproceedings.org/rss18/p017.pdf#page=4) · [PDF 7쪽](https://www.roboticsproceedings.org/rss18/p017.pdf#page=7)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Observation Blowing Scores Blowing Network max Execution Cloth unfolding Grasp (a) Grasping Policy (Cloth Unfolding) Stretch Place Initial State Bag opening ×8 rotations Observation Grasping Scores max Selected Grasp Grasping Network … ... | RGB-D/point cloud, object state와 contact/task observation | p. 4 (IV. METHOD), p. 5 (IV. METHOD) |
-| State/latent | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy, Stretch, Place | object geometry, affordance, contact mode 또는 end-effector state | p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 4 (IV. METHOD) |
-| Output/action | At each blowing step, a top-down depth observation as input and the blowing action with the highest score will be executed. | grasp, pose, force 또는 end-effector trajectory | p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 2 (I. INTRODUCTION) |
-| Objective/outcome | In total, we collected 4,400 (4,000 for training, 400 for validation) interactions over the course of 10 hours and trained the blowing network 50 epochs with a standard Cross Entropy loss. | task completion, contact success, pose/force error와 generalization | p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD) |
+| Observation/input | Observation Blowing Scores Blowing Network max Execution Cloth unfolding Grasp (a) Grasping Policy (Cloth Unfolding) Stretch Place Initial State Bag opening ×8 rotations Observation Grasping Scores max Selected Grasp Grasping Network … ... | 상단 RGB-D 관측과 태스크별 집기·송풍 후보 | p. 4 (IV. METHOD), p. 5 (IV. METHOD) |
+| State/latent | Observation, Blowing, Scores, Network, Execution, Cloth, unfolding, Grasp, Grasping, Policy, Stretch, Place | 집기와 송풍 행동별 예상 성과 | p. 4 (IV. METHOD), p. 5 (IV. METHOD), p. 4 (IV. METHOD) |
+| Output/action | At each blowing step, a top-down depth observation as input and the blowing action with the highest score will be executed. | 집기 자세 및 송풍 위치·방향 | p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 2 (I. INTRODUCTION) |
+| Objective/outcome | In total, we collected 4,400 (4,000 for training, 400 for validation) interactions over the course of 10 hours and trained the blowing network 50 epochs with a standard Cross Entropy loss. | 천의 펼쳐진 면적 또는 가방 열림 | p. 5 (IV. METHOD), p. 4 (IV. METHOD), p. 4 (IV. METHOD) |
 
 ## Main Claims and Actual Contribution
 

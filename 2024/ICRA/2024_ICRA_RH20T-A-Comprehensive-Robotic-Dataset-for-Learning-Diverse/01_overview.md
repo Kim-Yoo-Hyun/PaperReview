@@ -44,12 +44,14 @@ RH20T는 접촉이 많은 실물 조작에서 시각·힘·소리·로봇 행동
 
 ## Observation, State, and Output Interface
 
+표 Ⅰ·Ⅱ와 Ⅲ절은 여러 팔의 RGB·깊이·소리·힘·관절 상태와 일부 구성의 손끝 촉각을 구분한다. 한 번의 시연과 기체 간 활용은 자료의 목표다. Ⅳ절은 RGB·행동 기록으로 사전학습한 ACT를 Flexiv 블록 옮기기에서 시연 수별로 비교한다. [PDF 3쪽](https://arxiv.org/pdf/2307.00595v2#page=3) · [PDF 5쪽](https://arxiv.org/pdf/2307.00595v2#page=5)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Proprioception encompasses joint angles/torques, end-effector Cartesian pose and gripper states. | multi-view observation, language/task label과 action trajectory | p. 3 (III. RH20T DATASET), p. 1 (Abstract) |
-| State/latent | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence, dataset, includes | shared representation, embodiment/task identity와 data distribution | p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. INTRODUCTION) |
-| Output/action | Each sequence in the dataset includes visual, force, audio, and action information. | dataset sample 또는 learned policy action | p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 3 (III. RH20T DATASET) |
-| Objective/outcome | Properties of RH20T RH20T is designed with the objective of enabling general robotic manipulation, which means that the robot can perform various skills based on a task description, typically a human demonstration ... | coverage, cross-embodiment transfer, data efficiency와 task success | p. 3 (III. RH20T DATASET), p. 3 (III. RH20T DATASET), p. 1 (Abstract) |
+| Observation/input | Proprioception encompasses joint angles/torques, end-effector Cartesian pose and gripper states. | 기체별 RGB-D·힘·관절·소리 및 일부 촉각 기록, ACT 평가의 RGB·행동 시연 | p. 3 (III. RH20T DATASET), p. 1 (Abstract) |
+| State/latent | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence, dataset, includes | 보정된 카메라·로봇 좌표와 시간 정렬 시연 | p. 3 (III. RH20T DATASET), p. 1 (Abstract), p. 1 (I. INTRODUCTION) |
+| Output/action | Each sequence in the dataset includes visual, force, audio, and action information. | RH20T 시연 및 ACT의 팔·그리퍼 행동 | p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 3 (III. RH20T DATASET) |
+| Objective/outcome | Properties of RH20T RH20T is designed with the objective of enabling general robotic manipulation, which means that the robot can perform various skills based on a task description, typically a human demonstration ... | 시연 수별 도달·집기·놓기 성공 | p. 3 (III. RH20T DATASET), p. 3 (III. RH20T DATASET), p. 1 (Abstract) |
 
 ## Main Claims and Actual Contribution
 

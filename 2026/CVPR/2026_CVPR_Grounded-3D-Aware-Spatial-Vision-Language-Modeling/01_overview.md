@@ -44,12 +44,14 @@ GR3D는 영상 속 지시 대상의 2차원 영역과 단안 3차원 경계 상�
 
 ## Observation, State, and Output Interface
 
+이미지·질문과 카메라 내부 파라미터를 써서 문장 속 영역을 3D 상자로 연결한다. 학습용 깊이 표면점의 좌표 감독과 추론 시 입력을 분리했다. 검출 및 공간 질의응답을 평가한다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=4) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Cheng_Grounded_3D-Aware_Spatial_Vision-Language_Modeling_CVPR_2026_paper.pdf#page=5)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion. | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM) |
-| State/latent | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework, naturally, extends | geometry, map, object/relationship state | p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction) |
-| Output/action | Our framework naturally extends from single-view to multi-view inputs by embedding all image tokens with depth- and pixel-based positional cues in a unified spatial feature space. | point map, pose, scene graph, affordance 또는 query result | p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction), p. 2 (1. Introduction) |
-| Objective/outcome | This token is detached from the computation graph (i.e., no gradient flows through it) but serves as a strong conditional cue for subsequent token prediction. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.3. Monocular 3D Grounding via Region Prompt) |
+| Observation/input | Given an input instruction, the model generates its response in a chain-ofthought (CoT) fashion. | RGB 이미지·질문·카메라 내부 파라미터 | p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM) |
+| State/latent | Given, input, instruction, model, generates, response, chain-ofthought, CoT, fashion, framework, naturally, extends | 참조 영역 토큰과 카메라 보정 표현 | p. 4 (2.2.2. Implicit 2D Grounding), p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction) |
+| Output/action | Our framework naturally extends from single-view to multi-view inputs by embedding all image tokens with depth- and pixel-based positional cues in a unified spatial feature space. | 3D 상자 및 공간 질문에 대한 답변 | p. 3 (2.1. Foundational Spatial VLM), p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Objective/outcome | This token is detached from the computation graph (i.e., no gradient flows through it) but serves as a strong conditional cue for subsequent token prediction. | 3D 위치 추정과 질의응답 정확도 | p. 4 (2.2.2. Implicit 2D Grounding), p. 4 (2.3. Monocular 3D Grounding via Region Prompt) |
 
 ## Main Claims and Actual Contribution
 

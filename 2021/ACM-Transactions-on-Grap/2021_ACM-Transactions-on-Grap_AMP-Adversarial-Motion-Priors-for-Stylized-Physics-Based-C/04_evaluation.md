@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** high-DoF humanoid whole-body dynamics와 contacts.
-- **Input boundary:** proprioception, reference pose/motion, visual or language command.
-- **Output/decision under evaluation:** joint/whole-body action, motion target 또는 task trajectory.
-- **Primary target:** tracking, balance, skill/task success와 recovery.
+- **Target system/task:** 물리 시뮬레이션의 캐릭터 전신 동작.
+- **Input boundary:** 캐릭터 상태·과제 목표와 학습용 참조 동작.
+- **Output/decision under evaluation:** 저수준 PD 제어기에 보낼 관절 목표.
+- **Primary target:** 과제 보상 및 생성한 움직임의 스타일.
 - **Detected evaluation headings:** 8 RESULTS (p. 7).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 9 (8 RESULTS), p. 10 (8 RESULTS), p. 9 (8 RES
 |---|---|---|---|
 | Robot/hardware/simulator | Each environment is denoted by "Character: Task (Dataset)". | embodiment, simulator version and control stack | p. 8 (8 RESULTS), p. 9 (8 RESULTS) |
 | Task/environment | To determine whether the transitions between distinct gaits are a product of the motion prior or a result of the task objective, we train ... | reset, timeout, object/scene variation | p. 9 (8 RESULTS), p. 9 (8 RESULTS) |
-| Observation/sensor | proprioception, reference pose/motion, visual or language command | calibration, preprocessing, privileged input | p. 7 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
-| Output/decision | joint/whole-body action, motion target 또는 task trajectory | action frame, controller and termination | p. 5 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
+| Observation/sensor | 캐릭터 상태·과제 목표와 학습용 참조 동작 | calibration, preprocessing, privileged input | p. 7 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
+| Output/decision | 저수준 PD 제어기에 보낼 관절 목표 | action frame, controller and termination | p. 5 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
 
 ## Metrics and Success Definition
 

@@ -10,7 +10,7 @@
 - Authors: Zhuang Xiong, Chen Zhang, Qingshan Xu, Wenbing Tao
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: geometry, depth, 3D Vision
+- Tags: geometry, depth, SLAM, camera pose, 3D Vision
 - Official paper: https://icml.cc/virtual/2026/poster/65079
 - Full-text retrieval: https://arxiv.org/pdf/2602.05508.pdf
 - Code/Project: not identified

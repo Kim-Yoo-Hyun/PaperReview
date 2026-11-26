@@ -35,6 +35,10 @@ MuJoCo를 포함한 연속 상태·행동 환경에서 causal IL baseline과 비
 
 근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/4415e8cb0741bc0beb79b316f0856108-Abstract-Conference.html).
 
+## 검색 태그 근거
+
+숨은 교란의 영향이 사라질 만큼 앞선 시점의 이력을 도구변수로 사용한다. 조건부 모멘트 제약으로 시연 정책을 추정하고, 시뮬레이션 이동 제어에서 교란 조건을 바꾸어 비교한다. [원문 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/4415e8cb0741bc0beb79b316f0856108-Paper-Conference.pdf#page=6) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/4415e8cb0741bc0beb79b316f0856108-Paper-Conference.pdf#page=8)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 VLA history 추가를 새 해결책으로 주장하기 전에 정보 비대칭과 도구변수 조건을 점검할 선행이다.

@@ -10,7 +10,7 @@
 - Authors: Takahiro Miki, Joonho Lee, Jemin Hwangbo, Lorenz Wellhausen, Vladlen Koltun, Marco Hutter
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, quadruped locomotion, perception, rough terrain
+- Tags: Robotics, quadruped locomotion, perception, rough terrain, teacher-student learning
 - Official paper: https://arxiv.org/abs/2201.08117
 - Full-text retrieval: https://arxiv.org/pdf/2201.08117
 - Code/Project: https://leggedrobotics.github.io/rl-perceptiveloco/

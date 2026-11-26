@@ -10,7 +10,7 @@
 - Authors: Yue Wang, Vitor Campagnolo Guizilini, Tianyuan Zhang, Yilun Wang, Hang Zhao, Justin Solomon
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, BEV, 3D detection, camera
+- Tags: 3D Vision, multi-view, 3D detection, camera
 - Official paper: https://arxiv.org/abs/2110.06922
 - Full-text retrieval: https://arxiv.org/pdf/2110.06922
 - Code/Project: https://github.com/WangYueFt/detr3d

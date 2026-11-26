@@ -144,6 +144,15 @@ def canonical_venue(value: Any) -> str:
     return label or raw or "Unknown"
 
 
+def paper_year_path(year: int | str) -> Path:
+    year_number = int(year)
+    if 1960 <= year_number <= 2010:
+        return Path("1960-2010") / str(year_number)
+    if 2011 <= year_number <= 2020:
+        return Path("2011-2020") / str(year_number)
+    return Path(str(year_number))
+
+
 def venue_year(value: Any) -> int | None:
     match = re.search(r"\b(20\d{2})\b", _text(value))
     return int(match.group(1)) if match else None

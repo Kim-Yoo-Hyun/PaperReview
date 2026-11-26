@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** 로봇 행동에 따른 장면 예측과 하위 정책 학습.
+- **Input boundary:** 한두 시점 RGB에서 얻은 장면 표현과 로봇 행동 이력.
+- **Output/decision under evaluation:** 예측한 다음 장면 상태와 렌더링 영상.
+- **Primary target:** 영상 예측 품질 및 하위 모방학습·모델 기반 RL 성과.
 - **Detected evaluation headings:** 4. Experiments (p. 5).
 
 ## Experimental Matrix
@@ -60,8 +60,8 @@ PDF body evaluation/result cue (p. 8 (4.5. Ablation Analysis), p. 7 (Figure/Tabl
 |---|---|---|---|
 | Robot/hardware/simulator | This validates our hypothesis that explicit 3D representation enhances spatial understanding for robot learning compared to pure 2D approaches. | embodiment, simulator version and control stack | p. 8 (4.5. Ablation Analysis), p. 8 (4.5. Ablation Analysis) |
 | Task/environment | The results confirm that our 3D Gaussian VAE efficiently captures the latent structure of the scene, enabling more compact scene representation while maintaining spatial ... | reset, timeout, object/scene variation | p. 8 (4.5. Ablation Analysis) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 6 (4.2. GWM-based Imitation Learning), p. 2 (1. Introduction) |
+| Observation/sensor | 한두 시점 RGB에서 얻은 장면 표현과 로봇 행동 이력 | calibration, preprocessing, privileged input | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding) |
+| Output/decision | 예측한 다음 장면 상태와 렌더링 영상 | action frame, controller and termination | p. 6 (4.2. GWM-based Imitation Learning), p. 2 (1. Introduction) |
 
 ## Metrics and Success Definition
 

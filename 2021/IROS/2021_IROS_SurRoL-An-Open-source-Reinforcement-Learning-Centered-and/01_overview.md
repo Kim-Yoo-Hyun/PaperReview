@@ -10,7 +10,7 @@
 - Authors: Jiaqi Xu, Bin Li, Bo Lu, Yun-Hui Liu, Qi Dou, Pheng-Ann Heng
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, surgical robotics, Reinforcement Learning, simulation, sim-to-real, dexterous manipulation
+- Tags: Robotics, surgical robotics, Reinforcement Learning, simulation, sim-to-real, Benchmark
 - Official paper: https://arxiv.org/abs/2108.13035
 - Full-text retrieval: https://arxiv.org/pdf/2108.13035
 - Code/Project: https://github.com/med-air/SurRoL
@@ -41,12 +41,14 @@ SurRoL은 다빈치 연구용 수술 로봇과 호환되는 시뮬레이션에�
 
 ## Observation, State, and Output Interface
 
+표 Ⅱ의 수술 도구는 단팔·양팔 집게와 카메라다. 시뮬레이션 RL 비교는 저차원 상태, 실물 GauzeRetrieve는 별도 물체 위치, 카메라 중심 맞추기는 영상에서 추출한 표적 좌표를 쓴다. [PDF 5쪽](https://arxiv.org/pdf/2108.13035v1#page=5) · [PDF 7쪽](https://arxiv.org/pdf/2108.13035v1#page=7)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the commercial software limits, e.g., V-REP. | multi-view observation, language/task label과 action trajectory | p. 2 (III. METHODS), p. 1 (I. INTRODUCTION) |
-| State/latent | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption, machine, learning | shared representation, embodiment/task identity와 data distribution | p. 2 (III. METHODS), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
-| Output/action | Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which benefits low-cost data collection and accelerates the ... | dataset sample 또는 learned policy action | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
-| Objective/outcome | coverage, cross-embodiment transfer, data efficiency와 task success | coverage, cross-embodiment transfer, data efficiency와 task success | 본문 anchor 없음 |
+| Observation/input | SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and removal of the commercial software limits, e.g., V-REP. | 시뮬레이션의 저차원 상태와 실물 시험별 도구·표적 위치 | p. 2 (III. METHODS), p. 1 (I. INTRODUCTION) |
+| State/latent | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption, machine, learning | 도구·물체·카메라 및 목표 상태 | p. 2 (III. METHODS), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION) |
+| Output/action | Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which benefits low-cost data collection and accelerates the ... | 도구의 이동·집게 조작 또는 카메라 명령 | p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Objective/outcome | 수술 기본 과제별 성공 및 실물 전이 | 수술 기본 과제별 성공 및 실물 전이 | 본문 anchor 없음 |
 
 ## Main Claims and Actual Contribution
 

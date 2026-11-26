@@ -22,11 +22,11 @@ PDF body framing (p. 1 (Abstract), p. 2 (Abstract), p. 2 (Abstract), p. 1 (Abstr
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, 3D assets in existing benchmarks mostly lack the diversity of 3D shapes that align with real-world intra-class complexity in topology and ... | defined robot simulator/hardware task suite | body wording is the source claim |
-| Observation / input | In pointcloud and rgbd modes, the object states in s are replaced by the corresponding point cloud / RGB-D visual observations captured ... | standardized observation, action, task state와 evaluation split | exact sensor/frame/preprocessing from PDF body |
-| State / latent | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D | benchmark state/goal와 method decision | notation and tensor shape require body check |
-| Output / action | Here, environment, state, consists, robot, states, joint, angles | policy/controller trajectory 또는 measured result | exact unit/frame/decoder require body check |
-| Target outcome | comparable score and protocol validity | success metric, robustness, generalization과 reproducibility | metric/denominator are in 04 evidence |
+| Target problem | However, 3D assets in existing benchmarks mostly lack the diversity of 3D shapes that align with real-world intra-class complexity in topology and ... | 모바일 매니퓰레이터의 물체 조작 벤치마크 | body wording is the source claim |
+| Observation / input | In pointcloud and rgbd modes, the object states in s are replaced by the corresponding point cloud / RGB-D visual observations captured ... | 모드별 상태·RGB-D·머리 카메라 점군 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D | 로봇 관절과 물체·과제의 상태 | notation and tensor shape require body check |
+| Output / action | Here, environment, state, consists, robot, states, joint, angles | 이동 베이스와 팔의 조작 행동 | exact unit/frame/decoder require body check |
+| Target outcome | comparable score and protocol validity | 학습에 없던 물체에서의 과제 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

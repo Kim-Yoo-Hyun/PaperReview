@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, assembly, contact-rich manipulation, simulation, Reinforcement Learning, sim-to-real`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Global Planning for Contact-Rich Manipulation via Local Smoothing of Quasi-Dynamic Contact Models (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

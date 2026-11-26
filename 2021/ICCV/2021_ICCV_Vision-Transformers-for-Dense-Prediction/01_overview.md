@@ -10,7 +10,7 @@
 - Authors: René Ranftl, Alexey Bochkovskiy, Vladlen Koltun
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, monocular depth, Vision Transformer, geometry
+- Tags: 3D Vision, monocular depth, Vision Transformer, segmentation
 - Official paper: https://arxiv.org/abs/2103.13413
 - Full-text retrieval: https://arxiv.org/pdf/2103.13413
 - Code/Project: https://github.com/isl-org/DPT

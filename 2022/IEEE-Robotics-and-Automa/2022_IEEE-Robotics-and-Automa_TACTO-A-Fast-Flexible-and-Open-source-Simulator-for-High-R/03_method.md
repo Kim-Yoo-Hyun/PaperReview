@@ -46,9 +46,9 @@ PDF body method statement (p. 3 (1. Phong's model for RGB rendering from Depth (
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities, like, reflection, refraction, shadows | simulated state, geometry, contact와 control input | body cue; exact tensor/frame verify |
-| State/latent | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities | dynamics/contact state 또는 learned simulator representation | body cue; notation verify |
-| Action/output | allows, perform, orders, magnitude, more, experiments, fraction, effort, many, cases | simulation step, trajectory 또는 environment query | body cue; unit/decoder verify |
+| Input/observation | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities, like, reflection, refraction, shadows | 시뮬레이션의 접촉 형상 및 센서의 광학 설정 | body cue; exact tensor/frame verify |
+| State/latent | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities | 젤 표면의 접촉 자국과 렌더링 장면 | body cue; notation verify |
+| Action/output | allows, perform, orders, magnitude, more, experiments, fraction, effort, many, cases | 모의 촉각 영상, 하위 모델의 파지 안정성·자세 추정 | body cue; unit/decoder verify |
 | Objective/constraint | not recovered | physics/model/planning objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -57,7 +57,7 @@ PDF body method statement (p. 3 (1. Phong's model for RGB rendering from Depth (
 - **p. 3 / 1. Phong's model for RGB rendering from Depth (simple - extractive body cue:** To render the RGB image from the depth map, researchers from [13] implemented their own renderer based on Phong's reflection model.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** This allows to perform orders of magnitude more experiments at a fraction of the effort, and in many cases of the time.
 - **p. 1 / I. INTRODUCTION - extractive body cue:** One aspect that has proven so far to be difficult to simulate is tactile sensing, and in particular visionbased tactile sensors [2], [3], [4] which ...
-- **Normalized interface:** observation=simulated state, geometry, contact와 control input; state=dynamics/contact state 또는 learned simulator representation; output/action=simulation step, trajectory 또는 environment query.
+- **Normalized interface:** observation=시뮬레이션의 접촉 형상 및 센서의 광학 설정; state=젤 표면의 접촉 자국과 렌더링 장면; output/action=모의 촉각 영상, 하위 모델의 파지 안정성·자세 추정.
 
 ## Temporal and Runtime Contract
 

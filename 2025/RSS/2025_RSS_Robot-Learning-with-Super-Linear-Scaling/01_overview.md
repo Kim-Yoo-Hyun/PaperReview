@@ -10,7 +10,7 @@
 - Authors: Marcel Torne Villasevil, Arhan Jain, Jiayi Yuan, Vidyaaranya Macha, Lars Lien Ankile, Anthony Simeonov, Pulkit Agrawal, Abhishek Gupta
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, Imitation Learning, scaling laws, robot data
+- Tags: Robotics, Imitation Learning, scaling laws, robot data, Reinforcement Learning, digital twin
 - Official paper: https://www.roboticsproceedings.org/rss21/p025.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p025.pdf
 - Code/Project: not identified

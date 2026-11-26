@@ -35,6 +35,10 @@
 
 근거: [공식 paper/abstract](https://proceedings.mlr.press/v267/richens25a.html).
 
+## 검색 태그 근거
+
+목표별 정책을 질의해 환경 전이 모형을 복원할 수 있는 조건과 근사 오차를 분석한다. 정책이 제공하는 정보에 관한 보장이며 특정 로봇의 내부 표현이나 명시적 계획기를 관측한 결과는 아니다. [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=5) · [원문 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/richens25a/richens25a.pdf#page=6)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 명시적 video model 사용과 정책에 내재한 예측 능력을 구별하는 AI 이론 참조다.

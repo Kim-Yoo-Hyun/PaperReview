@@ -10,7 +10,7 @@
 - Authors: Fei Ni, Jianye Hao, Shiguang Wu, Longxin Kou, Jiashun Liu, Yan Zheng, Bin Wang, Yuzheng Zhuang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Diffusion, VLA, Planning
+- Tags: Diffusion, VLA, Planning, image-goal policy
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ CoTDiffusion은 복합 지시와 영상에서 중간 목표 이미지를 차례�
 
 ## Observation, State, and Output Interface
 
+CoTDiffusion이 혼합 영상·언어 프롬프트와 현재 관측을 조건으로 중간 목표 영상을 생성한다. 하위 정책이 목표 영상을 행동으로 옮긴다. VIMA-BENCH의 시뮬레이션 장기 과제로 평가했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.pdf#page=4) · [PDF 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ni_Generate_Subgoal_Images_before_Act_Unlocking_the_Chain-of-Thought_Reasoning_in_CVPR_2024_paper.pdf#page=6)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | The policy model can be parameterized as an image-conditioned planner that infers the action ai,t given the current observation xi,t and the generated subgoal image gi: ⌧i a = {ai,t}T t=1 ⇠QT ... | image/video, language instruction, proprioception과 history | p. 5 (3.4. Goal-conditioned Policy Model), p. 3 (3.1. Pipeline Overview) |
-| State/latent | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation, generated, subgoal | language-grounded task state와 action-policy context | p. 5 (3.4. Goal-conditioned Policy Model), p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Overview) |
-| Output/action | Given the initial observation x0 and a multi-modal prompt P as task instruction potentially needs to be reached by N subgoal steps, robots are required to learn a policy conditioned on the ... | continuous action, pose 또는 action chunk | p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Overview), p. 3 (3.1. Pipeline Overview) |
-| Objective/outcome | The training objective can be formulated as: L = Exi2D[k ˆxi -E ⇣ xi-1, zi align , P) / {z } Forward Generation k+kˆxi-1 -E ⇣ xi, zi align, P) / {z ... | instruction following, task success, generalization과 latency | p. 5 (3.3. Fine-grained Diffusion Training), p. 5 (3.3. Fine-grained Diffusion Training), p. 6 (3.4. Goal-conditioned Policy Model) |
+| Observation/input | The policy model can be parameterized as an image-conditioned planner that infers the action ai,t given the current observation xi,t and the generated subgoal image gi: ⌧i a = {ai,t}T t=1 ⇠QT ... | 현재 영상과 시각·언어 지시 | p. 5 (3.4. Goal-conditioned Policy Model), p. 3 (3.1. Pipeline Overview) |
+| State/latent | policy, model, parameterized, image-conditioned, planner, infers, action, given, current, observation, generated, subgoal | 의미 정렬된 시각 중간 목표 | p. 5 (3.4. Goal-conditioned Policy Model), p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Overview) |
+| Output/action | Given the initial observation x0 and a multi-modal prompt P as task instruction potentially needs to be reached by N subgoal steps, robots are required to learn a policy conditioned on the ... | 중간 목표 영상과 하위 정책의 행동 | p. 3 (3.1. Pipeline Overview), p. 4 (3.1. Pipeline Overview), p. 3 (3.1. Pipeline Overview) |
+| Objective/outcome | The training objective can be formulated as: L = Exi2D[k ˆxi -E ⇣ xi-1, zi align , P) / {z } Forward Generation k+kˆxi-1 -E ⇣ xi, zi align, P) / {z ... | 장기 조작 성공과 중간 목표의 지시 일치 | p. 5 (3.3. Fine-grained Diffusion Training), p. 5 (3.3. Fine-grained Diffusion Training), p. 6 (3.4. Goal-conditioned Policy Model) |
 
 ## Main Claims and Actual Contribution
 

@@ -10,7 +10,7 @@
 - Authors: Dong Wang, Zilong Chen, Jirong Liu, Ziqing Qiao, Xin Xiao, Bingyi Kang, Hongtao Wu, Xiao Ma, Tao Kong, Huaping Liu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Vision-Language Model, Robotics
+- Tags: Vision-Language Model, Robotics, VLA, action representation
 - Official paper: https://icml.cc/virtual/2026/poster/61401
 - Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/wang26v/wang26v.pdf
 - Full-text retrieval at original review: https://openreview.net/pdf/b090562c668703f4568061335c66e0e592e16d9d.pdf

@@ -14,6 +14,7 @@
 - Venue verification: https://www.emerald.com/ir/article-abstract/52/5/651/1254840/Robotic-task-success-evaluation-under-multi-modal?redirectedFrom=PDF
 - Code/Project: not identified
 - Code: not_identified
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 6, 7쪽](https://arxiv.org/pdf/2403.10874v1#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. Industrial Robot 52(5), 651–662; top-tier로 표시하지 않는다. 2024 preprint와 2025 journal은 동일 entry로 관리. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance

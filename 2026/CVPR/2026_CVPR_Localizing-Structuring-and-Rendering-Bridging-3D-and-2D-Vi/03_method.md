@@ -60,9 +60,9 @@ PDF body method statement (p. 6 (3.4. Fine-Grained Action Prediction), p. 5 (3.4
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D, observations, Mobs, final, goal | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | main, contributions, follows, DiffRender-VLA, unified, framework, bridges, spatial, reasoning, visual | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D, observations, Mobs, final, goal | 언어 지시와 보정된 다중 RGB-D 점군 | body cue; exact tensor/frame verify |
+| State/latent | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D | 관심 영역 내 점군과 렌더링한 시점 특징 | body cue; notation verify |
+| Action/output | main, contributions, follows, DiffRender-VLA, unified, framework, bridges, spatial, reasoning, visual | 말단의 위치·회전 및 그리퍼 행동 | body cue; unit/decoder verify |
 | Objective/constraint | learning, viewpoints, end-to-end, through, task, loss, model, discovers, task-relevant, perspectives | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -74,7 +74,7 @@ PDF body method statement (p. 6 (3.4. Fine-Grained Action Prediction), p. 5 (3.4
 - **p. 3 / 3.1. Localizing Coarse Target Region - extractive body cue:** A Perceiver IO encoder [18] jointly processes voxels and language embeddings: (Qcoarse, Zcoarse, θview) = Φenc(V, elang) (1) where Qcoarse ∈RD×H×W predicts coarse target voxel ...
 - **p. 4 / 3.4. Fine-Grained Action Prediction - extractive body cue:** We bridge pretrained visual-language capabilities with 3D manipulation by presenting spatially enriched observations and training the VLA backbone jointly with our spatial embeddings.
 - **p. 4 / 3.2. Structuring Differential Spatial Information - extractive body cue:** Critically, the entire process is differentiable with respect to pcoarse: when action prediction improves, gradients backpropagate through rendered images to refine cube placement and beam ...
-- **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
+- **Normalized interface:** observation=언어 지시와 보정된 다중 RGB-D 점군; state=관심 영역 내 점군과 렌더링한 시점 특징; output/action=말단의 위치·회전 및 그리퍼 행동.
 
 ## Temporal and Runtime Contract
 

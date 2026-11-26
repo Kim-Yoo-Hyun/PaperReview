@@ -61,9 +61,9 @@ PDF body method statement (p. 3 (3.1. Diffusion Models), p. 5 (4.3. Low-Level RK
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | model, trained, maximising, evidence, lower, bound, ELBO, math, heta, mathbb, left, frac, theta, right | RGB-D/point cloud, object state와 contact/task observation | body cue; exact tensor/frame verify |
-| State/latent | model, trained, maximising, evidence, lower, bound, ELBO, math, heta, mathbb | object geometry, affordance, contact mode 또는 end-effector state | body cue; notation verify |
-| Action/output | introduce, novel, kinematics-aware, low-level, agent, Robot, Kinematics, Diffuser, RK-Diffuser, diffusion-based | grasp, pose, force 또는 end-effector trajectory | body cue; unit/decoder verify |
+| Input/observation | model, trained, maximising, evidence, lower, bound, ELBO, math, heta, mathbb, left, frac, theta, right | 다중 시점 RGB-D 점군·언어 지시·로봇 상태 | body cue; exact tensor/frame verify |
+| State/latent | model, trained, maximising, evidence, lower, bound, ELBO, math, heta, mathbb | 말단과 관절 궤적의 확산 표현 및 순기구학 | body cue; notation verify |
+| Action/output | introduce, novel, kinematics-aware, low-level, agent, Robot, Kinematics, Diffuser, RK-Diffuser, diffusion-based | 말단 목표와 실행할 관절 궤적 | body cue; unit/decoder verify |
 | Objective/constraint | network, optimised, behaviour, cloning, losses, cross-entropy, discrete, action, space, hcal | task/contact/pose objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 3 (3.1. Diffusion Models), p. 5 (4.3. Low-Level RK
 - **p. 5 / 4.3. Low-Level RK-Diffuser - extractive body cue:** The low-level RK-Diffuser takes as input the start pose, the end pose, the RGB-D image of the first step observation, a vector of the robot ...
 - **p. 4 / 4.2. High-Level Next-Best Pose Agent - extractive body cue:** For the high-level policy ahigh = (apose, agrip) ∼πhigh(a / o, l), we utilise a next-best pose agent [17] with structured action representations.
 - **p. 5 / 4.3. Low-Level RK-Diffuser - extractive body cue:** For action trajectories sampled from each learned policy, a0 pose ∼pθ(a0 pose / a1 pose, Cpose) and a0 joint ∼pϕ(a0 joint / a1 joint, Cpose), ...
-- **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
+- **Normalized interface:** observation=다중 시점 RGB-D 점군·언어 지시·로봇 상태; state=말단과 관절 궤적의 확산 표현 및 순기구학; output/action=말단 목표와 실행할 관절 궤적.
 
 ## Temporal and Runtime Contract
 

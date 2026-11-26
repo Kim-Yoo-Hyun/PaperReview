@@ -10,7 +10,7 @@
 - Authors: Zhaochong An, Guolei Sun, Yun Liu, Runjia Li, Min Wu, Ming-Ming Cheng, Ender Konukoglu, Serge Belongie
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic, alignment, point cloud, 3D Vision
+- Tags: semantic, alignment, point cloud, 3D Vision, 3D segmentation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/8b21a7ea42cbcd1c29a7a88c444cce45-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ MM-FSS는 적은 수의 정답 점군으로 새 범주를 분할할 때 언어 �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Our method processes point cloud inputs through a joint backbone and two distinct heads of IF and UF, as depicted in Fig. | RGB-D, image set, point cloud, depth와 camera pose | p. 5 (3 METHODOLOGY), p. 1 (1 INTRODUCTION) |
-| State/latent | processes, point, cloud, inputs, through, joint, backbone, distinct, heads, depicted, Fig, However | geometry, map, object/relationship state | p. 5 (3 METHODOLOGY), p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
-| Output/action | However, these methods predominantly focus on unimodal point cloud inputs, overlooking the potential benefits of leveraging multimodal information. | point map, pose, scene graph, affordance 또는 query result | p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 2 (1 INTRODUCTION) |
-| Objective/outcome | (2023), we employ a cosine similarity loss to minimize the distance between 3D point intermodal features and corresponding 2D pixel features (see Appendix B). | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY), p. 17 (B ADDITIONAL IMPLEMENTATION DETAILS) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 소수의 라벨 점군, 질의 점군과 클래스 이름 |
+| 표현 | 영상으로 사전학습한 점 특징과 텍스트 특징 |
+| 출력 | 질의 점의 클래스 |
+| 평가 | 소수 예시를 쓰는 점별 의미 분할 |
+
+[원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=4) · [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=5) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -76,3 +78,7 @@ MM-FSS는 적은 수의 정답 점군으로 새 범주를 분할할 때 언어 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 5 (3 METHODOLOGY), p. 7 (3 METHODOLOGY)이다.
+
+## 검색 태그 근거
+
+소수의 라벨이 붙은 점군과 범주 이름으로 질의 점군을 분할한다. 짝지어진 RGB의 특징은 표현 사전학습에서 감독으로 쓰며, 추론에서는 점군과 텍스트를 사용한다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=4) · [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=5) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8b21a7ea42cbcd1c29a7a88c444cce45-Paper-Conference.pdf#page=7)

@@ -16,6 +16,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import re
 import subprocess
 import unicodedata
@@ -54,7 +55,6 @@ TIERS = ROOT / "research" / "READING_TIERS.csv"
 DEFAULT_PDF_DIR = ROOT / "tmp" / "pdfs" / "fulltext_remaining_2026-09-01"
 DEFAULT_REVIEW_MANIFEST = ROOT / "work" / "sources" / "fulltext_review_manifest.json"
 BT = chr(96)
-READING_CHECKS = "[공통 검토 기준](../../../research/READING_STATUS.md#note-checks)"
 
 LIGATURES = {
     "ﬁ": "fi", "ﬂ": "fl", "ﬀ": "ff", "ﬃ": "ffi", "ﬄ": "ffl",
@@ -974,6 +974,12 @@ def body_evidence_label(record: dict[str, Any]) -> str:
     return "official source body"
 
 
+def reading_checks_link(folder: str) -> str:
+    guide = ROOT / "research" / "READING_STATUS.md"
+    relative = Path(os.path.relpath(guide, ROOT / folder)).as_posix()
+    return f"[공통 검토 기준]({relative}#note-checks)"
+
+
 def note_header(kind: str, item: dict[str, Any], record: dict[str, Any]) -> str:
     canonical = item.get("page") or item.get("pdf") or "source URL not recorded"
     retrieval = record.get("url") or record.get("resolved_url") or item.get("pdf") or canonical
@@ -1081,7 +1087,7 @@ def problem_note(item: dict[str, Any], domain: str, record: dict[str, Any], ev: 
         + f"Evidence interface anchors: {anchor(interface, 'no interface anchor')}. The downstream handoff is claimed only when the body describes it.\n\n"
         + "## Verification Questions\n\n"
         + f"- **Evidence anchors reviewed:** problem {anchor(problem)}, interface {anchor(interface)}, objective {equation_anchor}.\n"
-        + f"\n{READING_CHECKS}\n"
+        + f"\n{reading_checks_link(item['folder'])}\n"
     )
 
 
@@ -1171,7 +1177,7 @@ def method_note(item: dict[str, Any], domain: str, record: dict[str, Any], ev: d
         + cue_lines(ev["ablation"] + ev["failure"], "ablation/failure cue 없음", 7)
         + "\n\n"
         + "## Reproduction Checklist\n\n"
-        + f"{READING_CHECKS}\n\n"
+        + f"{reading_checks_link(item['folder'])}\n\n"
         + "## Verification Questions\n\n"
         + f"- **Evidence anchors reviewed:** method {anchor(method)}, objective {anchor(objective)}, temporal {anchor(temporal)}.\n"
     )
@@ -1283,7 +1289,7 @@ def evaluation_note(item: dict[str, Any], domain: str, record: dict[str, Any], e
         + cue_lines(failures, "explicit limitation/failure sentence not recovered", 6)
         + "\n\n"
         + f"- **Evidence anchors reviewed:** datasets {anchor(dataset)}, metrics {anchor(metrics)}, baselines {anchor(baselines)}, results {anchor(results)}.\n"
-        + f"\n{READING_CHECKS}\n"
+        + f"\n{reading_checks_link(item['folder'])}\n"
     )
 
 

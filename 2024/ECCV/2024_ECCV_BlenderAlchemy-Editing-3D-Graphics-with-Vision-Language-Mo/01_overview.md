@@ -10,7 +10,7 @@
 - Authors: Ian Huang, Guandao Yang, Leonidas Guibas
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Vision-Language Model, 3D Vision, Graph Reasoning
+- Tags: Vision-Language Model, 3D Vision, visual grounding
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/12578_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf
 - Code/Project: https://ianhuang0630.github.io/BlenderAlchemyWeb/
@@ -77,3 +77,7 @@ BlenderAlchemy는 자연어와 참조 이미지로 Blender 장면을 편집하�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 4 (1 Introduction), p. 2 (1 Introduction), p. 3 (1 Introduction), p. 7 (3 Method)이다.
+
+## 검색 태그 근거
+
+VLM이 지시와 렌더링을 보고 Blender 편집 코드를 제안하고 결과를 다시 평가한다. 참조 이미지나 텍스트에 맞춰 수정한 그래픽 자산이 평가 대상이다. [원문 3쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf#page=3) · [원문 8쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/12578.pdf#page=8)

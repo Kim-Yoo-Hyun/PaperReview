@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1 Introduction), p. 1 (1 Introduction), p. 2 (1 Introduc
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Additionally, since the robot arm cannot manipulate the cloth at locations it can't reach, the maximum cloth size is greatly limited by ... | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | From a top-down RGB image a), our policy evaluates a batch of different action rotations and scales by transforming the observation b) ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
-| State / latent | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
-| Output / action | top-down, RGB, image, workspace, cloth, policy, decides, next | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
-| Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
+| Target problem | Additionally, since the robot arm cannot manipulate the cloth at locations it can't reach, the maximum cloth size is greatly limited by ... | 양팔을 이용한 천 펼치기 | body wording is the source claim |
+| Observation / input | From a top-down RGB image a), our policy evaluates a batch of different action rotations and scales by transforming the observation b) ... | 상단 RGB 영상과 파지 높이 결정용 깊이 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales | 도달 가능한 양팔 파지 후보별 면적 증가 점수 | notation and tensor shape require body check |
+| Output / action | top-down, RGB, image, workspace, cloth, policy, decides, next | 두 파지점 및 잡기·당기기·던지기 동작 | exact unit/frame/decoder require body check |
+| Target outcome | completion, contact success and robustness | 시도별 천의 펼쳐진 면적 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

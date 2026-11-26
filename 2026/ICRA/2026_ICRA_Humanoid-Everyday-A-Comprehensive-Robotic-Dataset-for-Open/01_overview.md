@@ -12,6 +12,7 @@
 - Project: https://humanoideveryday.github.io/
 - Code: https://github.com/physical-superintelligence-lab/Humanoid-Everyday
 - Public identifiers: {"arxiv": "2510.08807", "doi": "10.1109/icra57385.2026.11696267"}
+- 방법·평가 확인 (2026-11-25): [원문 4, 5, 6쪽](https://arxiv.org/pdf/2510.08807v3#page=4) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 
 ## Problem and Importance
 
@@ -29,3 +30,8 @@ Humanoid Everyday는 전신 이동을 동반한 조작과 사람과의 상호작
 ## Why This Paper Is Here — Researcher Interpretation
 
 Ψ₀의 휴머노이드 사전학습 자료 가운데 실제 G1·H1의 관측과 행동이 어떤 형태로 기록됐는지 비교할 때 읽는다.
+
+## 공개 자료의 확인 범위
+
+- 휴머노이드 평가 서버와 관측·명령을 교환하는 클라이언트 · humanoid_everyday/core.py [배포 파일](https://raw.githubusercontent.com/physical-superintelligence-lab/Humanoid-Everyday/7c427fdb01a919dfd1b0697353e41b689a0f7e26/humanoid_everyday/core.py)
+- Humanoid Everyday의 LeRobot 형식 궤적 · data/chunk-000/episode_000000.parquet [배포 파일](https://huggingface.co/datasets/USC-GVL/humanoid-everyday/resolve/71f6210e91c2a7e8b8e4d47db0147444a1a0640e/data/chunk-000/episode_000000.parquet)

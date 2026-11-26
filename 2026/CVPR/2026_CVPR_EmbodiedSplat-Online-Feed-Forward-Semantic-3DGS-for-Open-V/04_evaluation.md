@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Target system/task:** 온라인 3D 의미 장면 재구성.
+- **Input boundary:** 연속 RGB 영상, 조건별 측정 깊이 및 텍스트 클래스.
+- **Output/decision under evaluation:** 텍스트 질의에 따른 의미 분할.
+- **Primary target:** 정답 점군의 분할 정확도·추론 비용.
 - **Detected evaluation headings:** 5. Experiments (p. 6); 5.1. Experimental Results (p. 7).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (Figure/Table caption), p. 8 (5.2. Ablation
 |---|---|---|---|
 | Robot/hardware/simulator | Due to the huge domain gap between the real-world and synthetic dataset, our EmbodiedSplat fails to achieve the best results compared to the per-scene ... | embodiment, simulator version and control stack | p. 7 (5.1. Experimental Results), p. 6 (5. Experiments) |
 | Task/environment | ScanNet++ [53] is a high-quality indoor dataset with 450 indoor scenes. | reset, timeout, object/scene variation | p. 6 (5. Experiments), p. 6 (5. Experiments) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 1 (1. Introduction), p. 3 (3. Preliminaries) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 3 (3. Preliminaries), p. 4 (4.1. EmbodiedSplat) |
+| Observation/sensor | 연속 RGB 영상, 조건별 측정 깊이 및 텍스트 클래스 | calibration, preprocessing, privileged input | p. 1 (1. Introduction), p. 3 (3. Preliminaries) |
+| Output/decision | 텍스트 질의에 따른 의미 분할 | action frame, controller and termination | p. 3 (3. Preliminaries), p. 4 (4.1. EmbodiedSplat) |
 
 ## Metrics and Success Definition
 

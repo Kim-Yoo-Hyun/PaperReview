@@ -10,7 +10,7 @@
 - Authors: Yuhui Ding, Thomas Hofmann
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic, alignment, Diffusion, Generation, equivariant, 3D Vision
+- Tags: alignment, Diffusion, Generation, equivariant, 3D geometry
 - Official paper: https://proceedings.mlr.press/v267/ding25a.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/ding25a/ding25a.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ RADM은 분자마다 회전 좌표계를 추정해 정렬된 잠재 공간에서
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (2.3. Equivariance), p. 4 (3.1. Aligned Latent Space)이다.
+
+## 검색 태그 근거
+
+원자 좌표의 회전을 정렬한 잠재 공간에서 3D 구조를 생성한다. 기존 EGNN 인코더를 사용하되 디코더와 확산망은 비등변 구조로 구성했다. 평가 대상은 생성 구조의 안정성과 유효성이다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ding25a/ding25a.pdf#page=3) · [원문 6쪽](https://raw.githubusercontent.com/mlresearch/v267/7914d3407046b308db90001490534e422dab7d87/assets/ding25a/ding25a.pdf#page=6)

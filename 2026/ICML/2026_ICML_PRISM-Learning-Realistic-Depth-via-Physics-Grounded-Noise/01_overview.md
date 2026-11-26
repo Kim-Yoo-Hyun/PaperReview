@@ -10,7 +10,7 @@
 - Authors: Xiujian Liang, Jiacheng Liu, Mingyang Sun, Qichen He, Anda Cheng, Cewu Lu, Jianhua Sun
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic, alignment, depth, 3D Vision
+- Tags: semantic, alignment, depth, 3D Vision, sim-to-real
 - Official paper: https://icml.cc/virtual/2026/poster/65722
 - Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/liang26n/liang26n.pdf
 - Full-text retrieval at original review: https://openreview.net/pdf/9655ce373e592ae3473dc14dddd5cc2be47a3b47.pdf
@@ -46,12 +46,14 @@ PRISM은 합성 깊이 영상에 실제 센서에서 관찰되는 결측과 측�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Simulation) Task Language (Optional) <Enhanced Triplet> Enhanced Depth Simulated RGB Simulated State Large-scale Dataset from Simulation Simulated State Simulated RGB Simulated Depth Joint Gripper + (a) Large-scale Simulated Demonstrati ... | RGB-D, image set, point cloud, depth와 camera pose | p. 5 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ), p. 4 (3.2. Bimodal Noise Disentangler) |
-| State/latent | Simulation, Task, Language, Optional, Enhanced, Triplet, Depth, Simulated, RGB, State, Large-scale, Dataset | geometry, map, object/relationship state | p. 5 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ), p. 4 (3.2. Bimodal Noise Disentangler), p. 3 (3.1. Semantic-Physics Reasoner) |
-| Output/action | The BND maps the concatenated RGB-Depth input X = [I; Dsim] ∈R4×H×W to a pixel-wise sensing invalidation probability map ˆ M ∈[0, 1]H×W . | point map, pose, scene graph, affordance 또는 query result | p. 4 (3.2. Bimodal Noise Disentangler), p. 3 (3.1. Semantic-Physics Reasoner), p. 5 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ) |
-| Objective/outcome | The BND is optimized to minimize the weighted sum of these objectives over the mined sets: LBND = 4 X l=0 λl X x∈Ωl ℓ(l) bce(x) + λdiceLdice( ˆ Ml, Mgt) ! ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (3) Sequential Optimization Objectives. Since PRISM is), p. 5 (3) Sequential Optimization Objectives. Since PRISM is), p. 4 (2) Mask-Aware Denoising Objective. The frozen U-Net ϵθ) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 깊이 합성에는 시뮬레이션 RGB·깊이, 실물 평가에는 센서 RGB·깊이 |
+| 표현 | 센서 결측 및 측정 오차가 반영된 학습 깊이와 조작 정책 |
+| 출력 | 합성 깊이 및 학습한 정책의 행동열 |
+| 평가 | 깊이 데이터의 충실도와 실물 조작 성공 |
+
+[원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=4) · [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=5) · [원문 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=6) · [원문 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -75,3 +77,7 @@ Franka Research 3와 Realman RM75에서 여섯 조작 과제를 평가했다. �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Semantic-Physics Reasoner), p. 3 (2.3. Visual Foundation Models as Semantic Priors)이다.
+
+## 검색 태그 근거
+
+합성 RGB와 깊이에서 실제 센서와 유사한 결측과 수치 잔차를 생성한다. 보정한 깊이로 모방 정책을 훈련하고, 실제 깊이 카메라를 장착한 로봇팔의 조작에서 전이를 평가한다. [원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=4) · [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=5) · [원문 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=6) · [원문 8쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liang26n/liang26n.pdf#page=8)

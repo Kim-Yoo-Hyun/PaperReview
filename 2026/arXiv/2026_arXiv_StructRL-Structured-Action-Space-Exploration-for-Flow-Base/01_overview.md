@@ -1,6 +1,6 @@
 # StructRL: Structured Action-Space Exploration for Flow-Based VLAs
 
-> Evidence maturity: `ABSTRACT_CHECKED`. abstract 기반 — 본문 수동 확인 필요.
+> Evidence maturity: `ABSTRACT_CHECKED`. 최초 등록은 초록에 근거하며, 아래에 별도 인용한 방법과 평가는 원문 해당 쪽에서 확인했다.
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / arXiv
@@ -12,8 +12,9 @@
 - Aliases: StructRL
 - Official paper: https://arxiv.org/abs/2608.15139
 - Venue verification: https://arxiv.org/abs/2608.15139
-- Code/Project: not identified
+- Code/Project: https://flyfaerss.github.io/structrl/
 - Code: not_identified
+- 방법·평가 확인 (2026-11-25): [원문 4, 5, 7, 9, 14쪽](https://arxiv.org/pdf/2608.15139#page=4) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 이전 project URL은 이번 도구에서 접근 실패하여 새 release 상태를 확정하지 않았다. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지.
 
 ## Problem and Importance
@@ -41,3 +42,7 @@ VLA flow decoder와 실행 행동의 stochasticity를 분리한다. 조건부 �
 ## Verification Boundary
 
 Last-step likelihood 의미·noise covariance·중간 flow dilution 분석·코드 호환을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 원문에서 확인한 방법과 평가
+
+StructRL은 결정론적 flow ODE가 산출한 행동 청크에 구조적 잡음을 더해 시간·행동 축의 탐색 상관을 제어한다. 행동 공간의 상관 구조에 대해 우도를 계산하므로 flow를 적분하는 과정에 확률 전이를 삽입하지 않고 정책을 갱신한다. LIBERO·ManiSkill과 실물 FR3의 바나나 집기·충전기 연결에서 독립 잡음 등과 비교했다. [방법·평가 · PDF 4, 5, 7, 9, 14쪽](https://arxiv.org/pdf/2608.15139#page=4)

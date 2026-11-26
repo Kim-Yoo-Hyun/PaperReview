@@ -8,7 +8,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, feedback, evaluation
+- Tags: Robotics, feedback, evaluation, VLA, failure recovery, Reinforcement Learning
 - Aliases:
 - Official paper: https://arxiv.org/abs/2609.26313
 - Full-text retrieval: https://arxiv.org/pdf/2609.26313v1
@@ -33,6 +33,10 @@ SafeLoop는 영상과 고유수용감각에서 충돌·물체 실패의 확률�
 ## Evaluation Scope and Claim Boundary
 
 시뮬레이션은 LIBERO 24개 과제에 시드 16개씩을 사용해 방법별 384회 시행했다. 실물 검증은 세 과제를 각각 25회 수행해 위해 사건과 작업 성공을 기록했다. [PDF 5쪽](https://arxiv.org/pdf/2609.26313v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.26313v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2609.26313v1#page=7)
+
+## 검색 태그 근거
+
+시각·상태 이력, 지시와 예정 행동으로 위험을 예측하고, 비대칭 강화학습으로 계속 실행·체크포인트 저장·되돌리기 중 하나를 고른다. 학습용 critic의 특권 정보와 실행 시 감독 정책의 관측을 구분했다. [원문 4쪽](https://arxiv.org/pdf/2609.26313v1#page=4) · [원문 6쪽](https://arxiv.org/pdf/2609.26313v1#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

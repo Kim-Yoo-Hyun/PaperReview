@@ -10,7 +10,7 @@
 - Authors: Changkun Liu, Bin Tan, Zeran Ke, Shangzhan Zhang, Jiachen Liu, Ming Qian, Nan Xue, Yujun Shen, Tristan Braud
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision, camera pose
 - Official paper: https://arxiv.org/abs/2510.18714
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2510.18714
@@ -80,3 +80,7 @@ PLANA3R은 카메라 자세가 없는 두 실내 영상에서 벽·바닥 같은
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 4 (3 Method), p. 5 (3 Method)이다.
+
+## 검색 태그 근거
+
+내부 파라미터가 있는 두 RGB 영상에서 평면 가우시안과 상대 카메라 자세를 예측한다. 학습용 미터 단위 깊이·법선 감독과 실행 시 RGB 입력을 구별했다. [원문 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=4) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/fc8ee7c7ab5b5f6b1615045dfb617ed6-Paper-Conference.pdf#page=7)

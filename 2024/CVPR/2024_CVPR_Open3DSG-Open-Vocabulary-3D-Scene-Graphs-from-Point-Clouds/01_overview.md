@@ -10,7 +10,7 @@
 - Authors: Sebastian Koch, Narunas Vaskevicius, Mirco Colosi, Pedro Hermosilla, Timo Ropinski
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Scene Graph, open-vocabulary, Graph Reasoning
+- Tags: 3D Scene Graph, open-vocabulary, Graph Reasoning, knowledge distillation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -43,12 +43,14 @@ Open3DSG는 점군에서 물체와 물체 사이 관계를 열린 어휘로 질�
 
 ## Observation, State, and Output Interface
 
+그림 2에서 포즈가 알려진 RGB-D 영상의 교사 특징을 점군 그래프에 증류한다. §3의 3D 추론 경로는 점군에서 표현을 얻고 텍스트로 물체·관계를 질의한다. 영상 특징을 함께 쓰는 2D–3D 융합 결과도 따로 제공한다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Koch_Open3DSG_Open-Vocabulary_3D_Scene_Graphs_from_Point_Clouds_with_Queryable_CVPR_2024_paper.pdf#page=5)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | 3.1), and in parallel, we extract vision-language features from aligned 2D images (Sec. | camera/depth stream, pose, map와 language goal | p. 3 (3. Method), p. 3 (3. Method) |
-| State/latent | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill, knowledge, models | robot pose, free-space/semantic map와 local goal | p. 3 (3. Method), p. 3 (3. Method), p. 1 (1. Introduction) |
-| Output/action | The overall goal of our approach is to distill the knowledge of 2D vision-language models into a 3D graph neural network (GNN) to predict open-vocabulary 3D scene graphs in a 2-step process. | collision-free trajectory 또는 velocity command | p. 3 (3. Method), p. 1 (1. Introduction), p. 1 (1. Introduction) |
-| Objective/outcome | goal reach, safety, localization error와 replanning latency | goal reach, safety, localization error와 replanning latency | 본문 anchor 없음 |
+| Observation/input | 3.1), and in parallel, we extract vision-language features from aligned 2D images (Sec. | 점군·텍스트 질의와 선택적인 다중 시점 RGB-D 특징 | p. 3 (3. Method), p. 3 (3. Method) |
+| State/latent | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill, knowledge, models | 물체 노드와 쌍별 관계 임베딩 | p. 3 (3. Method), p. 3 (3. Method), p. 1 (1. Introduction) |
+| Output/action | The overall goal of our approach is to distill the knowledge of 2D vision-language models into a 3D graph neural network (GNN) to predict open-vocabulary 3D scene graphs in a 2-step process. | 질의된 물체 및 관계를 담은 장면 그래프 | p. 3 (3. Method), p. 1 (1. Introduction), p. 1 (1. Introduction) |
+| Objective/outcome | 물체·관계 예측과 열린 어휘 질의 성능 | 물체·관계 예측과 열린 어휘 질의 성능 | 본문 anchor 없음 |
 
 ## Main Claims and Actual Contribution
 

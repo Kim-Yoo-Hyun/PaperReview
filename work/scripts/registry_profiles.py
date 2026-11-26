@@ -184,11 +184,8 @@ def _trial_evidence(text: str, source_note: str) -> list[dict[str, Any]]:
     return evidence
 
 
-def _cue_resources(path: Path, catalog_name: str, id_key: str) -> dict[str, list[dict[str, str]]]:
+def catalog_cues(payload: dict, id_key: str) -> dict[str, list[dict[str, str]]]:
     by_paper: dict[str, list[dict[str, str]]] = defaultdict(list)
-    if not path.exists():
-        return by_paper
-    payload = json.loads(path.read_text(encoding="utf-8"))
     for entry in payload.get("entries", []):
         resource_id = entry.get(id_key)
         if not resource_id:
@@ -206,6 +203,11 @@ def _cue_resources(path: Path, catalog_name: str, id_key: str) -> dict[str, list
             if value not in by_paper[paper_id]:
                 by_paper[paper_id].append(value)
     return by_paper
+
+
+def _cue_resources(path: Path, id_key: str) -> dict[str, list[dict[str, str]]]:
+    payload = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    return catalog_cues(payload, id_key)
 
 
 def _explicit_data_status(text: str, paper_type: str, benchmark_cues: list[dict]) -> tuple[str, str]:
@@ -318,12 +320,10 @@ def enrich_profiles(
     selected_ids = {paper["paper_id"] for paper in papers}
     benchmark_by_paper = _cue_resources(
         root / "work" / "sources" / "benchmark_catalog.json",
-        "benchmark",
         "benchmark_id",
     )
     metric_by_paper = _cue_resources(
         root / "work" / "sources" / "metric_catalog.json",
-        "metric",
         "metric_id",
     )
     title_to_id = {paper.get("title", "").casefold(): paper.get("paper_id") for paper in all_papers}

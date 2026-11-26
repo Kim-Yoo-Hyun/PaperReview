@@ -10,7 +10,7 @@
 - Authors: Sijin Chen, Xin Chen, Chi Zhang, Mingsheng Li, Gang Yu, Hao Fei, Hongyuan Zhu, Jiayuan Fan, Tao Chen
 - Primary track: Planning and control
 - Tier: ARCHIVE
-- Tags: LLM, 3D Vision, Planning
+- Tags: LLM, 3D Vision, 3D reasoning
 - Official paper: https://arxiv.org/abs/2311.18651
 - Full-text retrieval: https://arxiv.org/pdf/2311.18651
 - Code/Project: https://github.com/Open3DA/LL3DA
@@ -43,12 +43,14 @@ LL3DA는 점군과 사용자의 언어·시각 지시를 받아 3D 장면에 대
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | To summarize, our key contributions lie in: • We present a LLM-based solution for understanding, reasoning, and planning in complex 3D environments. • Our model takes both the textual instructions and visual ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1. Introduction), p. 3 (3.1. Problem Formatting) |
-| State/latent | summarize, contributions, present, LLM-based, solution, understanding, reasoning, planning, complex, environments, model, takes | geometry, map, object/relationship state | p. 2 (1. Introduction), p. 3 (3.1. Problem Formatting), p. 3 (3.2. Model Design) |
-| Output/action | 2 (a), the input of our model consists of a 3D scene represented by a set of points PC, the textual instruction It, and potential visual interactions Iv that serve as supplementary ... | point map, pose, scene graph, affordance 또는 query result | p. 3 (3.1. Problem Formatting), p. 3 (3.2. Model Design), p. 4 (3.2. Model Design) |
-| Objective/outcome | The parameters and the embedding layers of the LLM are kept frozen to save memory cost. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3.2. Model Design), p. 4 (3.2. Model Design) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 장면 점군, 자연어와 선택적 클릭·상자 |
+| 표현 | 장면과 사용자 위치 지시를 인코딩한 토큰 |
+| 출력 | 장면 설명·질문 답변·텍스트 과제 계획 |
+| 평가 | 장면 단위 지시 수행과 3D 질문 응답 |
+
+[방법 3쪽](https://arxiv.org/pdf/2311.18651#page=3) · [평가 6쪽](https://arxiv.org/pdf/2311.18651#page=6)
 
 ## Main Claims and Actual Contribution
 
@@ -75,3 +77,7 @@ LL3DA는 점군과 사용자의 언어·시각 지시를 받아 3D 장면에 대
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.1. Problem Formatting)이다.
+
+## 검색 태그 근거
+
+장면 점군과 텍스트, 사용자 클릭이나 3D 상자 같은 위치 지시를 받아 응답한다. 장면에 관한 질문과 텍스트로 작성한 과제 계획이 평가 범위다. [원문 3쪽](https://arxiv.org/pdf/2311.18651#page=3) · [원문 6쪽](https://arxiv.org/pdf/2311.18651#page=6)

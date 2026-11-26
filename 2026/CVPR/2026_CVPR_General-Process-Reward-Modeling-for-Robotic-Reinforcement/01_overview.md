@@ -42,3 +42,8 @@ VLA+RL 보상 설계와 HINDSIGHT의 대안 설명을 검토할 직접 선행이
 ## Verification Boundary
 
 보존 정리의 가정, 종료 처리, multi-view 특권, task별 추가 시연을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · Dopamine 보상 모델 추론 예제 · examples/inference.py [배포 파일](https://raw.githubusercontent.com/FlagOpen/Robo-Dopamine/2c714abca66329f8e2113587226bc9556726f6c2/examples/inference.py)
+- 가중치 · 논문의 Dopamine-GRM 3B 보상 모델 · model-00001-of-00002.safetensors [배포 파일](https://huggingface.co/tanhuajie2001/Robo-Dopamine-GRM-3B/resolve/b75e1ea8381d384f580b41d04ee80fdff5369b34/model-00001-of-00002.safetensors)

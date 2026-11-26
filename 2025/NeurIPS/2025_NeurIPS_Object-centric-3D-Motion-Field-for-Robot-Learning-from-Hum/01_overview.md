@@ -10,7 +10,7 @@
 - Authors: Zhao-Heng Yin, Sherry Yang, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, learning from human videos, 3D motion field, cross-embodiment
+- Tags: Robotics, learning from human videos, 3D motion field, cross-embodiment, Diffusion
 - Official paper: https://neurips.cc/virtual/2025/poster/116341
 - Full-text retrieval: https://arxiv.org/pdf/2506.04227
 - Code/Project: not identified

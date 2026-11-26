@@ -41,3 +41,8 @@ Simulation과 실제 드론의 언어 조건부 navigation을 평가한다.
 ## Verification Boundary
 
 언어 encoder·MoE 갱신 범위, dynamics model 오차, 이전 GRaD-Nav 대비 새 평가 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 혼합 전문가 항법 정책 평가 · auto_test_vla_long_task_moe.py [배포 파일](https://raw.githubusercontent.com/Qianzhong-Chen/grad_nav/95218abe9a5d355519cdaab78d915365303066fe/auto_test_vla_long_task_moe.py)
+- 데이터 · 항법 장면의 점군 자료 · point_cloud.zip [배포 파일](https://drive.google.com/file/d/1FS0hF7aufFsd6OH0Xcca9fGgbcMGqkOf/view)

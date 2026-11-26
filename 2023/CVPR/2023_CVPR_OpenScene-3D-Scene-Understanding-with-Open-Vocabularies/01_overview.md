@@ -10,7 +10,7 @@
 - Authors: Songyou Peng, Kyle Genova, Chiyu “Max” Jiang, Andrea Tagliasacchi, Marc Pollefeys, Thomas Funkhouser
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: open-vocabulary, 3D semantic, CLIP
+- Tags: open-vocabulary, 3D semantic, CLIP, distillation
 - Official paper: https://arxiv.org/abs/2211.15654
 - Full-text retrieval: https://arxiv.org/pdf/2211.15654
 - Code/Project: https://pengsongyou.github.io/openscene
@@ -42,12 +42,14 @@ OpenScene은 텍스트와 3D 점을 같은 특징 공간에서 비교해 장면�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Specifically, given an input point cloud P, we seek to learn an encoder that outputs per-point embeddings: \ b F ^\tex t { 3 D} = \ cE ^\text {3D}(\bP ), \quad ... | camera/depth stream, pose, map와 language goal | p. 4 (3.2. 3D Distillation), p. 3 (3. Method) |
-| State/latent | Specifically, given, input, point, cloud, seek, learn, encoder, outputs, per-point, embeddings, text | robot pose, free-space/semantic map와 local goal | p. 4 (3.2. 3D Distillation), p. 3 (3. Method), p. 4 (3.2. 3D Distillation) |
-| Output/action | We next distill a 3D network to reproduce the fused features using only the 3D point cloud as input Sec. | collision-free trajectory 또는 velocity command | p. 3 (3. Method), p. 4 (3.2. 3D Distillation), p. 1 (1. Introduction) |
-| Objective/outcome | To enforce the output of the network F3D to be consistent with the fused features F2D, we use a cosine similarity loss: \ c L = 1 - \text {cos}(\bF ^\text {2D}, ... | goal reach, safety, localization error와 replanning latency | p. 4 (3.2. 3D Distillation) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 3D 점과 텍스트 질의. 영상 융합 방식은 포즈가 있는 영상도 사용한다 |
+| 표현 | 텍스트와 비교할 수 있는 점별 특징 |
+| 출력 | 질의의 점별 유사도 또는 의미 분할 |
+| 평가 | 실내·실외 의미 분할과 텍스트 조회 |
+
+[방법 3쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Peng_OpenScene_3D_Scene_Understanding_With_Open_Vocabularies_CVPR_2023_paper.pdf#page=3) · [평가 7쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Peng_OpenScene_3D_Scene_Understanding_With_Open_Vocabularies_CVPR_2023_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -78,3 +80,7 @@ OpenScene은 텍스트와 3D 점을 같은 특징 공간에서 비교해 장면�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 4 (3.2. 3D Distillation), p. 3 (3.1. Image Feature Fusion), p. 3 (3. Method), p. 4 (3.3. 2D-3D Feature Ensemble), p. 5 (4.1. Comparisons), p. 5 (4. Experiments)이다.
+
+## 검색 태그 근거
+
+OpenScene은 3D 점과 텍스트를 공통 특징 공간에서 비교한다. 포즈가 알려진 영상 특징을 3D에 합치는 방식과 점군만으로 그 특징을 예측하는 증류 모델을 나누어 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Peng_OpenScene_3D_Scene_Understanding_With_Open_Vocabularies_CVPR_2023_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2023/papers/Peng_OpenScene_3D_Scene_Understanding_With_Open_Vocabularies_CVPR_2023_paper.pdf#page=7)

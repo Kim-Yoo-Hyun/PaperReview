@@ -10,7 +10,7 @@
 - Authors: Yihui Li, Chengxin Lv, Zichen Tang, Hongyu Yang, Di Huang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, geometry, 3D Vision, camera pose
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -78,3 +78,7 @@ TokenSplat은 카메라 자세가 주어지지 않은 영상에서 공통 좌표
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Architecture), p. 4 (3.4. Token Fusion for Scene Reconstruction), p. 4 (3.3. Asymmetric Dual-Flow Decoder)이다.
+
+## 검색 태그 근거
+
+여러 영상의 토큰을 정렬하고 기하 특징을 융합해 공통 좌표계의 가우시안과 카메라 외부 파라미터를 한 번에 예측한다. 평가에는 자세 및 뷰 합성 정확도가 포함된다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Li_TokenSplat_Token-aligned_3D_Gaussian_Splatting_for_Feed-forward_Pose-free_Reconstruction_CVPR_2026_paper.pdf#page=6)

@@ -1,0 +1,84 @@
+# Human-level control through deep reinforcement learning
+
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0); canonical paper source: https://doi.org/10.1038/nature14236.
+> PDF retrieval source: https://doi.org/10.1038/nature14236. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> Evidence boundary: selected PDF body sentences, captions and section anchors; exact table/equation values remain at those anchors.
+
+- Year/Venue: 2015 / Nature
+- Authors: Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A. Rusu, Joel Veness, Marc G. Bellemare, Alex Graves, Martin Riedmiller, Andreas K. Fidjeland, Georg Ostrovski, Stig Petersen, Charles Beattie, Amir Sadik, Ioannis Antonoglou, Helen King, Dharshan Kumaran, Daan Wierstra, Shane Legg, Demis Hassabis
+- Primary track: RL, IL, offline learning, and robot data
+- Tier: REFERENCE
+- Tags: Reinforcement Learning, Deep Q-Network, Value Learning, Q-learning
+- Official paper: https://doi.org/10.1038/nature14236
+- Full-text retrieval: https://www.nature.com/articles/nature14236.pdf
+- Code/Project: not identified
+- Paper type: theory_or_foundation
+- Source audit: full-text PDF body checked on 2026-09-03 (13 pages; PyMuPDF text; title-token overlap first two pages=1.0). 2026-11-24 요약·기여는 [이번 대조 판본](https://www.nature.com/articles/nature14236.pdf) 기준이다.
+
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 6. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
+## Why This Paper Is Here
+
+DQN은 화면과 보상만으로 합성곱 신경망이 행동가치를 학습하게 해 여러 Atari 게임을 같은 학습 절차로 플레이한다. [PDF 1쪽](https://www.nature.com/articles/nature14236.pdf#page=1)
+
+## Problem and Motivation
+
+- **p. 1 / Body text (section not recovered) - extractive body cue:** LETTER doi:10.1038/nature14236 Human-level control through deep reinforcement learning Volodymyr Mnih1*, Koray Kavukcuoglu1*, David Silver1*, Andrei A.
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Bellemare1, Alex Graves1, Martin Riedmiller1, Andreas K.
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Here we use recent advances in training deep neural networks9-11 to develop a novel artificial agent, termed a deep Q-network, that can learnsuccessfulpoliciesdirectlyfromhigh-dimensionalsensoryinputs using end-to-end ...
+- **p. 1 / Body text (section not recovered) - extractive body cue:** We tested this agent on the challenging domain of classic Atari 2600 games12.
+- **p. 1 / Body text (section not recovered) - extractive body cue:** We demonstrate that the deep Q-network agent, receiving only the pixels and the game score as inputs, was able to surpass the performance of all ...
+- **p. 4 / 2 6 F E B R U A R Y - extractive body cue:** Indeed, in certain games DQN is able to discover a relatively long-term strategy (for example, Breakout: the agent learns the optimal strategy, which is to ...
+- **p. 2 / 2 6 F E B R U A R Y - extractive body cue:** difficult and engaging for human players.
+
+## Core Idea
+
+- **p. 2 / 2 6 F E B R U A R Y - extractive body cue:** Notably, our method was able to train large neural networks using a reinforcementlearningsignalandstochasticgradientdescentinastablemannerillustrated by the temporal evolution of two indices of learning (the agent's average ...
+- **p. 2 / 2 6 F E B R U A R Y - extractive body cue:** The input to the neural network consists of an 843 843 4 image produced by the preprocessing map w, followed by three convolutional layers (note: ...
+- **p. 3 / V O L - extractive body cue:** Furthermore, we also show that the representations learned by DQN are able to generalize to data generated from policies other than its own-in simulations where ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The final hidden layer is fully-connected and consists of 512 rectifier units.
+- **p. 1 / Body text (section not recovered) - extractive body cue:** Here we use recent advances in training deep neural networks9-11 to develop a novel artificial agent, termed a deep Q-network, that can learnsuccessfulpoliciesdirectlyfromhigh-dimensionalsensoryinputs using end-to-end ...
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The main advantageof this type of architecture is the ability tocompute Q-valuesforall possibleactionsinagivenstatewithonlyasingleforwardpassthroughthenetwork.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** We instead usean architecture in which there is a separate output unit for each possible action, and only the state representation is an input to ...
+- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** First, we use a technique known as experience replay23 in which we store the agent's experiences at each time-step, et5(st,at, rt,st 1 1), in a ...
+
+## Observation, State, and Output Interface
+
+DQN은 Atari의 연속 화면을 휘도 프레임으로 변환·쌓아 Q값을 예측한다. 경험 재생과 목표 네트워크를 쓰며 점수 비교는 Atari 게임에서 수행한다. [PDF 1쪽](https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf#page=1) · [PDF 6쪽](https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf#page=6)
+
+| Role | PDF body evidence | Robotics interpretation | Anchor |
+|---|---|---|---|
+| Observation/input | The outputs correspond to the predicted Q-values of the individual actions for the input state. | 연속 화면의 휘도 프레임과 학습용 보상 | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
+| State/latent | outputs, correspond, predicted, Q-values, individual, actions, input, state, instead, usean, architecture, there | 프레임 스택의 특징과 행동별 Q값 | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 2 (2 6 F E B R U A R Y) |
+| Output/action | We instead usean architecture in which there is a separate output unit for each possible action, and only the state representation is an input to the neural network. | 허용된 게임 행동 중 선택 | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 2 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y) |
+| Objective/outcome | Optimal action value Q*(s,a)는 다음 state에서 max_a′Q*(s′,a′)를 사용한 Bellman equation을 만족하며 discounted return 최대화를 나타낸다. | Atari action-value learning objective; contact/stability tracking metric이 아님 | PDF p. 6 Methods / model description |
+
+## Main Claims and Actual Contribution
+
+- 저장한 전이를 무작위로 재표집하고 별도의 목표 네트워크로 시간차 학습의 목표값을 계산한다. [PDF 1쪽](https://www.nature.com/articles/nature14236.pdf#page=1) · [PDF 2쪽](https://www.nature.com/articles/nature14236.pdf#page=2)
+- 49개 게임에서 학습한 에이전트의 점수를 무작위 및 전문 플레이어의 점수로 정규화해 게임별 성능을 비교했다. [PDF 2쪽](https://www.nature.com/articles/nature14236.pdf#page=2) · [PDF 3쪽](https://www.nature.com/articles/nature14236.pdf#page=3)
+
+## Evaluation Scope
+
+| Dimension | Body-grounded record | Boundary | Anchor |
+|---|---|---|---|
+| Evaluation type | SYSTEM / EVALUATION SCOPE UNRESOLVED | do not infer unreported downstream behavior | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
+| Embodiment/environment | Reinforcement learning for robot soccer. | hardware/simulator version and reset protocol | p. 5 (2 6 F E B R U A R Y), p. 5 (2 6 F E B R U A R Y) |
+| Dataset/benchmark | The human performanceis theaverage rewardachievedfromaround20episodesofeachgamelastingamaximumof5 min each, following around 2 h of practice playing each game. | role, split, size and leakage | p. 5 (2 6 F E B R U A R Y), p. 5 (2 6 F E B R U A R Y), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess) |
+| Metric | Clipping the rewards in this manner limits the scale of the error derivatives and makesiteasierto use thesamelearningrateacrossmultiplegames. | definition, denominator, direction and uncertainty | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y) |
+| Baseline/ablation | The random agent served as a baseline comparison and chose a random action at 10 Hz which is every sixth frame, repeating its last action on intervening frames. | fair input/data/compute/action matching | p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 13 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess), p. 4 (2 6 F E B R U A R Y) |
+
+## Explicit Limitations and Failure Boundary
+
+- **p. 5 / 2 6 F E B R U A R Y - extractive body cue:** Why there are complementary learning systems in the hippocampus and neocortex: insights from the successes and failures of connectionist models of learning and memory.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** At the same time, it could affect the performance of our agent since it cannot differentiate between rewards of different magnitude.
+- **p. 6 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** Thevaluesofallthehyperparametersandoptimizationparameterswereselected by performing an informal search on the games Pong, Breakout, Seaquest, Space Invaders and Beam Rider.
+- **p. 9 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** At time point 2, the agent starts moving the paddle towards the ball and the value of the ‘up' action stays high while the value ...
+- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** The final term is the variance of the targets, which does not depend on the parameters hi that we are currently optimizing, and may therefore ...
+- **p. 7 / 84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess - extractive body cue:** This approach is in some respects limited because the memory buffer does not differentiate important transitions and always overwrites with recent transitions owing to the ...
+
+## Why Read It
+
+방법과 평가 범위를 대조할 원문 구간은 p. 4 (2 6 F E B R U A R Y), p. 2 (2 6 F E B R U A R Y), p. 3 (V O L), p. 6 (84 3 84.The functionw fromalgorithm1 described belowappliesthispreprocess)이다.

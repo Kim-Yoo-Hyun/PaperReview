@@ -10,7 +10,7 @@
 - Authors: Nolan Fey, Gabriel B. Margolis, Martin Peticco, Pulkit Agrawal
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, quadruped locomotion, loco-manipulation, sim-to-real
+- Tags: Robotics, quadruped locomotion, loco-manipulation, sim-to-real, Reinforcement Learning
 - Official paper: https://www.roboticsproceedings.org/rss21/p125.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p125.pdf
 - Code/Project: not identified

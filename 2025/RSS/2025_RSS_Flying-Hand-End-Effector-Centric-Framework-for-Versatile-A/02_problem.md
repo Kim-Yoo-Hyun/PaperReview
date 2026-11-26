@@ -22,19 +22,19 @@ PDF body framing (p. 1 (1. Iyrropuction), p. 3 (C. Teleportation and Imitation L
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, most previous works have been tailored to specific tasks, developing unique platforms and algorithms accordingly, lacking the ability to handle different ... | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | After that, we train a joint space ACT policy with the same training setting as the ee-centric ACT policy, except that the ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | After, train, joint, space, ACT, policy, same, training, setting, ee-centric | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
-| Output / action | hierarchical, framework, consists, understanding, module, trained, large, visual-language | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
-| Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
+| Target problem | However, most previous works have been tailored to specific tasks, developing unique platforms and algorithms accordingly, lacking the ability to handle different ... | 팔을 장착한 육회전익의 공중 조작 | body wording is the source claim |
+| Observation / input | After that, we train a joint space ACT policy with the same training setting as the ee-centric ACT policy, except that the ... | 말단 상태와 기체·말단의 RGB 영상 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | After, train, joint, space, ACT, policy, same, training, setting, ee-centric | 말단 목표 자세와 결합 기체·팔 동역학 | notation and tensor shape require body check |
+| Output / action | hierarchical, framework, consists, understanding, module, trained, large, visual-language | ACT의 목표 말단 자세와 MPC의 기체·팔 명령 | exact unit/frame/decoder require body check |
+| Target outcome | motion/task success and recovery | 비행 추종 오차와 조작 과제 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | whole-body pose/contact/reference state; body terms: After, train, joint, space, ACT, policy, same, training, setting, ee-centric | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface) |
-| Decision / output variable | joint/whole-body action; body terms: framework, consists, fully-actuated, hexarotor, DoF, robotic, end-effector-centrie, whole-body | p. 1 (Abstract), p. 7 (VII. EE-CENTRIC TELEOPERATION AND POLICY), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface) |
-| Objective / loss / cost | tracking/balance/task objective; cue terms: MPC, formulation, minimizes, cost, function, over, finite, time | p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 10 (B. Implementation Details), p. 11 (B. Implementation Details) |
+| State / observation variable | 말단 상태와 기체·말단의 RGB 영상; body terms: After, train, joint, space, ACT, policy, same, training, setting, ee-centric | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface) |
+| Decision / output variable | ACT의 목표 말단 자세와 MPC의 기체·팔 명령; body terms: framework, consists, fully-actuated, hexarotor, DoF, robotic, end-effector-centrie, whole-body | p. 1 (Abstract), p. 7 (VII. EE-CENTRIC TELEOPERATION AND POLICY), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface) |
+| Objective / loss / cost | 비행 추종 오차와 조작 과제 성공; cue terms: MPC, formulation, minimizes, cost, function, over, finite, time | p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 6 (A. End-Effector-Centric Model Predictive Controller), p. 10 (B. Implementation Details), p. 11 (B. Implementation Details) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 9 (B. Implementation Details), p. 10 (B. Implementation Details), p. 11 (B. Implementation Details) |
 | Success / guarantee | motion/task success and recovery | p. 10 (B. Implementation Details), p. 11 (B. Implementation Details), p. 10 (B. Implementation Details) |
 
@@ -67,7 +67,7 @@ PDF body contribution framing (p. 1 (Abstract), p. 7 (VII. EE-CENTRIC TELEOPERAT
 
 ## Position in the Robotics Loop
 
-humanoid writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning), p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface), p. 7 (B. EE-Centrie Policy Learning). The downstream handoff is claimed only when the body describes it.
+말단 상태와 기체·말단의 RGB 영상 → 말단 목표 자세와 결합 기체·팔 동역학 → ACT의 목표 말단 자세와 MPC의 기체·팔 명령. [원문 근거](./01_overview.md#observation-state-and-output-interface)
 
 ## Verification Questions
 

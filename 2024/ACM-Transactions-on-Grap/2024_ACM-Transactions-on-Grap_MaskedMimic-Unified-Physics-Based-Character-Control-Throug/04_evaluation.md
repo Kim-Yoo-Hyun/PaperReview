@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** high-DoF humanoid whole-body dynamics와 contacts.
-- **Input boundary:** proprioception, reference pose/motion, visual or language command.
-- **Output/decision under evaluation:** joint/whole-body action, motion target 또는 task trajectory.
-- **Primary target:** tracking, balance, skill/task success와 recovery.
+- **Target system/task:** 시뮬레이션 캐릭터의 부분 목표 조건 제어.
+- **Input boundary:** 캐릭터 상태와 부분 관절·경로·텍스트 등 명령.
+- **Output/decision under evaluation:** 캐릭터의 관절 제어 명령.
+- **Primary target:** 전체·희소 관절 추종 오차와 과제 수행.
 - **Detected evaluation headings:** 7.2 Evaluation (p. 9); 8 RESULTS (p. 10).
 
 ## Experimental Matrix
@@ -66,8 +66,8 @@ PDF body evaluation/result cue (p. 15 (8 RESULTS), p. 11 (8 RESULTS), p. 9 (7.2 
 |---|---|---|---|
 | Robot/hardware/simulator | To evaluate the effectiveness of our framework, we construct a benchmark consisting of common tasks introduced by prior systems. | embodiment, simulator version and control stack | p. 9 (7.2 Evaluation), p. 10 (7.2 Evaluation) |
 | Task/environment | In this task, we focus on sitting on a set of held-out objects. | reset, timeout, object/scene variation | p. 10 (7.2 Evaluation), p. 11 (8 RESULTS) |
-| Observation/sensor | proprioception, reference pose/motion, visual or language command | calibration, preprocessing, privileged input | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
-| Output/decision | joint/whole-body action, motion target 또는 task trajectory | action frame, controller and termination | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
+| Observation/sensor | 캐릭터 상태와 부분 관절·경로·텍스트 등 명령 | calibration, preprocessing, privileged input | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
+| Output/decision | 캐릭터의 관절 제어 명령 | action frame, controller and termination | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
 
 ## Metrics and Success Definition
 

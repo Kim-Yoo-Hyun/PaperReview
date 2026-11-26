@@ -62,9 +62,9 @@ PDF body method statement (p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat),
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB, RGB-D, images, understand, scene | RGB-D, image set, point cloud, depth와 camera pose | body cue; exact tensor/frame verify |
-| State/latent | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB | geometry, map, object/relationship state | body cue; notation verify |
-| Action/output | contributions, follows, Novel, framework, embodied, perception, enables, online, whole-scene, reconstruction | point map, pose, scene graph, affordance 또는 query result | body cue; unit/decoder verify |
+| Input/observation | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB, RGB-D, images, understand, scene | 연속 RGB 영상, 조건별 측정 깊이 및 텍스트 클래스 | body cue; exact tensor/frame verify |
+| State/latent | Specifically, embodied, agent, equipped, precise, SLAM, system, collects, posed, RGB | 3D 가우시안의 기하 특징과 의미 코드북 계수 | body cue; notation verify |
+| Action/output | contributions, follows, Novel, framework, embodied, perception, enables, online, whole-scene, reconstruction | 텍스트 질의에 따른 의미 분할 | body cue; unit/decoder verify |
 | Objective/constraint | resulting, total, cost, L-1, precompute, global, codebook, where, size, contrast | geometric/semantic reconstruction or matching loss | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -76,7 +76,7 @@ PDF body method statement (p. 4 (4.1. EmbodiedSplat), p. 4 (4.1. EmbodiedSplat),
 - **p. 1 / 1. Introduction - extractive body cue:** 4) Whole-scene Understanding: Reconstructing and interpreting large-scale 3D scenes are demanded to perform long-term actions.
 - **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** Nonetheless, it does not support online settings or full-scene reconstruction as it operates with only two or a few input views.
 - **p. 2 / 1) They require per-scene optimization that cannot be gen - extractive body cue:** LSM [12] and SIU3R [49] propose language-embedded feed-forward 3DGS that can be easily generalized to the new scene.
-- **Normalized interface:** observation=RGB-D, image set, point cloud, depth와 camera pose; state=geometry, map, object/relationship state; output/action=point map, pose, scene graph, affordance 또는 query result.
+- **Normalized interface:** observation=연속 RGB 영상, 조건별 측정 깊이 및 텍스트 클래스; state=3D 가우시안의 기하 특징과 의미 코드북 계수; output/action=텍스트 질의에 따른 의미 분할.
 
 ## Temporal and Runtime Contract
 

@@ -10,7 +10,7 @@
 - Authors: Carmelo Sferrazza, Dun-Ming Huang, Fangchen Liu, Jongmin Lee, Pieter Abbeel
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, embodiment, graph neural network, policy learning
+- Tags: Robotics, embodiment, Transformer, policy learning
 - Official paper: https://proceedings.mlr.press/v270/sferrazza25a.html
 - Full-text retrieval: https://arxiv.org/pdf/2408.06316
 - Code/Project: https://sferrazza.cc/bot_site/

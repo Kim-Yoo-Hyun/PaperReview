@@ -10,7 +10,7 @@
 - Authors: Haoyi Zhu, Honghui Yang, Yating Wang, Jiange Yang, Limin Wang, Tong He
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, 3D Vision
+- Tags: Robotics, 3D Vision, visual representation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/421fcf51a0e243f15f977553a6f482cb-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/421fcf51a0e243f15f977553a6f482cb-Paper-Conference.pdf
 - Code/Project: not identified

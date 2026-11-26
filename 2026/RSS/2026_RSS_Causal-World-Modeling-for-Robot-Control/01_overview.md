@@ -9,11 +9,11 @@
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: NEXT
 - Tags: world-model, action-generation, temporal-context, manipulation
-- Aliases: CauVA
+- Aliases: CauVA, LingBot-VA
 - Official paper: https://www.roboticsproceedings.org/rss22/p016.html
 - Venue verification: https://www.roboticsproceedings.org/rss22/p016.html
-- Code/Project:
-- Code: not_identified
+- Code/Project: https://technology.robbyant.com/lingbot-va
+- Code: https://github.com/Robbyant/lingbot-va
 - Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. 공식 RSS abstract만을 canonical scope로 사용한다. 같은 제목의 arXiv2601.21998은 LingBot-VA와 다른 저자 구성·설계를 표기하므로 version mapping을 확정하지 않았고 arXiv ID/code를 자동 합치지 않았다. 별도 중복 등록도 하지 않았다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,9 @@ Architecture 통합과 RL 공동 갱신을 구별할 world-action 비교 대상�
 ## Verification Boundary
 
 본문에서 확인할 항목: 예측/행동 gradient 경로·추론 history·실제 피드백·버전별 모델 명칭. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · LingBot-VA 영상·행동 세계 모델 · wan_va/modules/model.py [배포 파일](https://raw.githubusercontent.com/Robbyant/lingbot-va/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/wan_va/modules/model.py)
+- 가중치 · LingBot-VA 기반 세계 모델 트랜스포머 · transformer/diffusion_pytorch_model-00001-of-00003.safetensors [배포 파일](https://huggingface.co/robbyant/lingbot-va-base/resolve/68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c/transformer/diffusion_pytorch_model-00001-of-00003.safetensors)
+- 데이터 · RoboTwin 정제·증강 궤적의 한 에피소드 · lerobot_robotwin_eef_aug_500/adjust_bottle-aloha-agilex_randomized_500-1000/data/chunk-000/episode_000000.parquet [배포 파일](https://huggingface.co/datasets/robbyant/robotwin-clean-and-aug-lerobot/resolve/595d4acc7e026aa57afba218f4170c6d79e39103/lerobot_robotwin_eef_aug_500/adjust_bottle-aloha-agilex_randomized_500-1000/data/chunk-000/episode_000000.parquet)

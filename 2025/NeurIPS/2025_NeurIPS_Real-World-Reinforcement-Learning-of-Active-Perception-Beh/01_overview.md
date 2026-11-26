@@ -14,6 +14,7 @@
 - Venue verification: https://papers.neurips.cc/paper_files/paper/2025/hash/aa1b1a959c80086cba61d0fd66de412f-Abstract-Conference.html
 - Code/Project: https://penn-pal-lab.github.io/aawr/
 - Code: https://github.com/penn-pal-lab/aawr
+- 방법·평가 확인 (2026-11-25): [원문 4, 5, 7, 8쪽](https://papers.neurips.cc/paper_files/paper/2025/file/aa1b1a959c80086cba61d0fd66de412f-Paper-Conference.pdf#page=4) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,8 @@ VLA+RL로 관측 행동을 만든다는 넓은 주장을 제한하는 핵심 실
 ## Verification Boundary
 
 추가 센서 접근·초기 demonstrations·advantage 추정·배포 observation을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- AAWR의 시연·가치 기반 정책 학습 진입점 · src/train_il.py [배포 파일](https://raw.githubusercontent.com/penn-pal-lab/aawr/05845db6c0da25993e816c44f47c123487f20cd1/src/train_il.py)
+- AAWR-DROID 로봇 궤적 · bookshelf_duck/failure/2025-05-06_21-35-51/trajectory.h5 [배포 파일](https://huggingface.co/datasets/Everloom/AAWR-DROID/resolve/374a4de67cd72052bb37766098286244bb87c980/bookshelf_duck/failure/2025-05-06_21-35-51/trajectory.h5)

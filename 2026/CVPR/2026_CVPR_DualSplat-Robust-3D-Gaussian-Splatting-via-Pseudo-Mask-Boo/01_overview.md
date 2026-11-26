@@ -10,7 +10,7 @@
 - Authors: Xu Wang, Zhiru Wang, Shiyun Xie, Chengwei Pan, Yisong Chen
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision, segmentation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -82,3 +82,7 @@ DualSplat은 여러 뷰에 잠시 나타난 사람이나 물체를 정적 장면
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 5 (3.4. Reconstruction Failures to Object-Level Priors), p. 4 (3.2. Overview)이다.
+
+## 검색 태그 근거
+
+첫 렌더링과 입력 사진의 특징이 맞지 않는 영역을 찾아 SAM2 마스크와 결합한다. 두 번째 복원은 이 마스크로 일시적으로 나타난 물체를 제외하고, RobustNeRF와 NeRF On-the-go에서 정적 장면 렌더링을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_DualSplat_Robust_3D_Gaussian_Splatting_via_Pseudo-Mask_Bootstrapping_from_Reconstruction_CVPR_2026_paper.pdf#page=6)

@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-shot Evaluation), p. 8 (5.4. Abl
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SIMULATION`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** RoboCasa의 지시 조건 조작.
+- **Input boundary:** 영상·로봇 상태·언어 지시와 VLM이 추정한 마스크.
+- **Output/decision under evaluation:** 팔 및 그리퍼 행동.
+- **Primary target:** 조건별 조작 성공과 마스크 품질.
 - **Detected evaluation headings:** 5. Experiments (p. 6); 5.2. Main Results (p. 6); 5.3. Zero-shot Evaluation (p. 7).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 7 (5.3. Zero-shot Evaluation), p. 8 (5.4. Abl
 |---|---|---|---|
 | Robot/hardware/simulator | Specifically, we create an instruction-following dataset based on simulated data using the following prompt format: "Given a robotic manipulation instruction: <Instruction>, identify the target ... | embodiment, simulator version and control stack | p. 8 (5.4. Ablation Study), p. 7 (5.2. Main Results) |
 | Task/environment | The original GR-1 model was pre-trained on a large video dataset and predicts both robot actions and future images. | reset, timeout, object/scene variation | p. 7 (5.2. Main Results), p. 6 (5.1. Simulation Setting) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview) |
+| Observation/sensor | 영상·로봇 상태·언어 지시와 VLM이 추정한 마스크 | calibration, preprocessing, privileged input | p. 5 (4.3. Grounded Policy Network), p. 5 (4.2. Grounded Vision-Language Model) |
+| Output/decision | 팔 및 그리퍼 행동 | action frame, controller and termination | p. 6 (4.4. Training and Inference), p. 4 (4.1. Overview) |
 
 ## Metrics and Success Definition
 

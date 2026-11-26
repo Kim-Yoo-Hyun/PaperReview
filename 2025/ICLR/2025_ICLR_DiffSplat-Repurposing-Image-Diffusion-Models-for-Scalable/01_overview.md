@@ -79,3 +79,7 @@ DiffSplat은 대규모 2D 이미지 확산 모델을 다중 뷰 가우시안 격
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 6 (3 METHOD), p. 5 (3 METHOD)이다.
+
+## 검색 태그 근거
+
+사전학습 이미지 확산을 가우시안 잠재 격자에 전용해 텍스트나 단일 영상으로부터 3D 가우시안 물체를 생성한다. 여러 뷰에서 렌더링하여 평가했다. [원문 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/6518f9339196e172fa0ceef48a85543a-Paper-Conference.pdf#page=3) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/6518f9339196e172fa0ceef48a85543a-Paper-Conference.pdf#page=7)

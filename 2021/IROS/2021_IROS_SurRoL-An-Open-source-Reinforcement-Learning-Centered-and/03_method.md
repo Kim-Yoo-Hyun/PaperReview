@@ -48,9 +48,9 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption, machine, learning, community, removal | multi-view observation, language/task label과 action trajectory | body cue; exact tensor/frame verify |
-| State/latent | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption | shared representation, embodiment/task identity와 data distribution | body cue; notation verify |
-| Action/output | main, contributions, summarized, follows, design, open-source, surgical, robot, learning, simulation | dataset sample 또는 learned policy action | body cue; unit/decoder verify |
+| Input/observation | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption, machine, learning, community, removal | 시뮬레이션의 저차원 상태와 실물 시험별 도구·표적 위치 | body cue; exact tensor/frame verify |
+| State/latent | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption | 도구·물체·카메라 및 목표 상태 | body cue; notation verify |
+| Action/output | main, contributions, summarized, follows, design, open-source, surgical, robot, learning, simulation | 도구의 이동·집게 조작 또는 카메라 명령 | body cue; unit/decoder verify |
 | Objective/constraint | not recovered | coverage/data efficiency/transfer objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -59,7 +59,7 @@ PDF body method statement (p. 2 (III. METHODS), p. 2 (III. METHODS)): Finally, t
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Our main contributions are summarized as follows: • We design an open-source surgical robot learning simulation platform centered on reinforcement learning for surgical skills, which ...
 - **p. 2 / I. INTRODUCTION - extractive body cue:** SurRoL provides dVRK compatible simulation environments for surgical robot learning (left), with Gym-like interfaces for reinforcement learning algorithm development and ranges of surgical contents with ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** Moreover, the physical interactions supported by the current learning-based simulators are simplified.
-- **Normalized interface:** observation=multi-view observation, language/task label과 action trajectory; state=shared representation, embodiment/task identity와 data distribution; output/action=dataset sample 또는 learned policy action.
+- **Normalized interface:** observation=시뮬레이션의 저차원 상태와 실물 시험별 도구·표적 위치; state=도구·물체·카메라 및 목표 상태; output/action=도구의 이동·집게 조작 또는 카메라 명령.
 
 ## Temporal and Runtime Contract
 

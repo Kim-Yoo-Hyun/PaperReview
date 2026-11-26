@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SIMULATION`.
-- **Target system/task:** multi-robot demonstration/dataset ecosystem.
-- **Input boundary:** multi-view observation, language/task label과 action trajectory.
-- **Output/decision under evaluation:** dataset sample 또는 learned policy action.
-- **Primary target:** coverage, cross-embodiment transfer, data efficiency와 task success.
+- **Target system/task:** dVRK 수술 도구와 내시경 카메라 과제.
+- **Input boundary:** 시뮬레이션의 저차원 상태와 실물 시험별 도구·표적 위치.
+- **Output/decision under evaluation:** 도구의 이동·집게 조작 또는 카메라 명령.
+- **Primary target:** 수술 기본 과제별 성공 및 실물 전이.
 - **Detected evaluation headings:** IV. EXPERIMENTS (p. 4).
 
 ## Experimental Matrix
@@ -65,8 +65,8 @@ PDF body evaluation/result cue (p. 7 (IV. EXPERIMENTS), p. 5 (IV. EXPERIMENTS), 
 |---|---|---|---|
 | Robot/hardware/simulator | 1) Experiment Setup: In our RL environments, we set up the manipulation workspace for robots and objects to interact within. | embodiment, simulator version and control stack | p. 5 (IV. EXPERIMENTS), p. 7 (IV. EXPERIMENTS) |
 | Task/environment | The physical evaluation environments are set the same with only successful episodes for both policies in simulation to ensure fair comparisons. | reset, timeout, object/scene variation | p. 7 (IV. EXPERIMENTS), p. 6 (IV. EXPERIMENTS) |
-| Observation/sensor | multi-view observation, language/task label과 action trajectory | calibration, preprocessing, privileged input | p. 2 (III. METHODS), p. 1 (I. INTRODUCTION) |
-| Output/decision | dataset sample 또는 learned policy action | action frame, controller and termination | p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Observation/sensor | 시뮬레이션의 저차원 상태와 실물 시험별 도구·표적 위치 | calibration, preprocessing, privileged input | p. 2 (III. METHODS), p. 1 (I. INTRODUCTION) |
+| Output/decision | 도구의 이동·집게 조작 또는 카메라 명령 | action frame, controller and termination | p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
 
 ## Metrics and Success Definition
 

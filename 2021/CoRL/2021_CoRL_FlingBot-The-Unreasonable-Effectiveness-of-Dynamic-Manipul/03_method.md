@@ -61,9 +61,9 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p.
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales, transforming, observation, then, predicting | RGB-D/point cloud, object state와 contact/task observation | body cue; exact tensor/frame verify |
-| State/latent | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales | object geometry, affordance, contact mode 또는 end-effector state | body cue; notation verify |
-| Action/output | summary, main, contribution, demonstrating, effectiveness, dynamic, manipulation, cloth, unfolding, through | grasp, pose, force 또는 end-effector trajectory | body cue; unit/decoder verify |
+| Input/observation | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales, transforming, observation, then, predicting | 상단 RGB 영상과 파지 높이 결정용 깊이 | body cue; exact tensor/frame verify |
+| State/latent | top-down, RGB, image, policy, evaluates, batch, different, action, rotations, scales | 도달 가능한 양팔 파지 후보별 면적 증가 점수 | body cue; notation verify |
+| Action/output | summary, main, contribution, demonstrating, effectiveness, dynamic, manipulation, cloth, unfolding, through | 두 파지점 및 잡기·당기기·던지기 동작 | body cue; unit/decoder verify |
 | Objective/constraint | However, minimize, collisions, between, arms, wish, impose, constraint, always, left | task/contact/pose objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 5 (3 Method), p. 5 (3 Method), p. 3 (3 Method), p.
 - **p. 4 / 3 Method - extractive body cue:** Without loss of generality for the purposes of grasping from a top-down RGB-D input, the third dimension could be specified by depth information.
 - **p. 2 / 1 Introduction - extractive body cue:** To provide the supervision signal, the system computes the difference in coverage of the cloth before and after each action - the delta-coverage - from ...
 - **p. 3 / 3 Method - extractive body cue:** Meanwhile, dynamic actions largely rely on cloths' mass combined with a high-velocity throw to do most of its work.
-- **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
+- **Normalized interface:** observation=상단 RGB 영상과 파지 높이 결정용 깊이; state=도달 가능한 양팔 파지 후보별 면적 증가 점수; output/action=두 파지점 및 잡기·당기기·던지기 동작.
 
 ## Temporal and Runtime Contract
 

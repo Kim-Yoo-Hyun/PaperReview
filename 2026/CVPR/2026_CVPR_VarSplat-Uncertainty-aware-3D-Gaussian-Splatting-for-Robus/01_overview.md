@@ -10,7 +10,7 @@
 - Authors: Anh Thuan Tran, Jana Kosecka
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Gaussian Splatting, geometry, 3D Vision
+- Tags: Gaussian Splatting, SLAM, uncertainty, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Tran_VarSplat_Uncertainty-aware_3D_Gaussian_Splatting_for_Robust_RGB-D_SLAM_CVPR_2026_paper.pdf
 - Code/Project: not identified

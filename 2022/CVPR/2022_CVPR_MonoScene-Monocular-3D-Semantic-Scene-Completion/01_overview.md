@@ -10,7 +10,7 @@
 - Authors: Anh-Quan Cao, Raoul de Charette
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, semantic, occupancy, monocular geometry
+- Tags: 3D Vision, semantic occupancy, monocular geometry
 - Official paper: https://arxiv.org/abs/2112.00726
 - Full-text retrieval: https://arxiv.org/pdf/2112.00726
 - Code/Project: https://github.com/cv-rits/MonoScene

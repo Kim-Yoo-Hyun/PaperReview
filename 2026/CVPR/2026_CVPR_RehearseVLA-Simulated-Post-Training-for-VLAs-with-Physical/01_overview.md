@@ -42,3 +42,8 @@ VLAW 등과 함께 imagined rollout으로 실제 interaction을 대체하는 직
 ## Verification Boundary
 
 실제/가상 rollout 분모, 물리 일관성 검증, reflector의 감독 비용, 종료 오탐을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · LIBERO의 OpenVLA-OFT 실행 어댑터 · lib/env_runner/openvla_oft_libero_runner.py [배포 파일](https://raw.githubusercontent.com/iSEE-Laboratory/RehearseVLA/ed4f343d91aeed160863773b27101bf3103b4d6a/lib/env_runner/openvla_oft_libero_runner.py)
+- 가중치 · LIBERO-Goal OpenVLA 어댑터 · lora/GOAL/adapter_model.safetensors [배포 파일](https://www.modelscope.cn/api/v1/models/junjxiao/world-env/repo?Revision=009ba91b5c38c0dde0aa65f61a391b05d852089c&FilePath=lora/GOAL/adapter_model.safetensors)

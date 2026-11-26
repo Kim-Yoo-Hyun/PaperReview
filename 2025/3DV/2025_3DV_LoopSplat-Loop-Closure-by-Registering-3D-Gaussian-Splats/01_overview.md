@@ -10,7 +10,7 @@
 - Authors: Liyuan Zhu, Yue Li, Erik Sandström, Shengyu Huang, Konrad Schindler, Iro Armeni
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D Vision
+- Tags: Gaussian Splatting, 3D Vision, SLAM, 3D Registration
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00020
 - Full-text retrieval: https://arxiv.org/pdf/2408.10154.pdf
 - Code/Project: not identified
@@ -79,3 +79,7 @@ LoopSplat은 RGB-D SLAM에서 서로 다른 지역 가우시안 지도를 정합
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 6 (Method)이다.
+
+## 검색 태그 근거
+
+RGB-D 시퀀스로 하위 지도를 만들고 서로 다시 만난 구간의 가우시안 지도를 등록해 상대 변환을 얻는다. 이 변환을 자세 그래프에 넣어 카메라 궤적과 지도를 교정한다. [원문 3쪽](https://arxiv.org/pdf/2408.10154.pdf#page=3) · [원문 7쪽](https://arxiv.org/pdf/2408.10154.pdf#page=7)

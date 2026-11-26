@@ -10,7 +10,7 @@
 - Authors: Yiyang Chen, Siyan Dong, Xulong Wang, Lulu Cai, Youyi Zheng, Yanchao Yang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: NeRF, 3D reconstruction, 3D Vision
+- Tags: NeRF, 3D reconstruction, 3D Vision, camera pose
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8870_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf
 - Code/Project: https://github.com/Iris-cyy/SG-NeRF
@@ -81,3 +81,7 @@ SG-NeRF는 신경 방사장과 장면 그래프를 함께 최적화해 3D 표면
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 3 (1 Introduction), p. 7 (3 Method), p. 5 (3 Method), p. 8 (3 Method)이다.
+
+## 검색 태그 근거
+
+초기 카메라 자세와 영상 간 공시야 관계로 장면 그래프를 만들고, 부정확한 영상 대응을 솎으며 카메라 자세와 신경 표면을 함께 보정한다. [원문 4쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf#page=4) · [원문 9쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08870.pdf#page=9)

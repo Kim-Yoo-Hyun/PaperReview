@@ -10,7 +10,7 @@
 - Authors: Dongxu Wei, Lingzhe Zhao, Wenpu Li, Zhangchi Huang, Shunping Ji, Peidong Liu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D reconstruction, semantic, alignment, 3D Vision
+- Tags: 3D reconstruction, semantic, Multi-Task Learning, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/118929
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/a070d9c5759cea39a5e166fdd2df0435-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2507.02705

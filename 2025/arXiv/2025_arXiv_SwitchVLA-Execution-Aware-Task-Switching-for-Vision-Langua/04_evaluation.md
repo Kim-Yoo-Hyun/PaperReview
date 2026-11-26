@@ -32,7 +32,7 @@ not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목
 
 ## Generalization and Failure Cases
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 contact label, rollback 가정, 정식 venue status을 점검한다.
+not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 접촉 라벨의 오차율, 되돌리기가 가능한 접촉 조건, 정식 게재 여부를 점검한다.
 
 ## Statistics, Efficiency, and Reproducibility
 

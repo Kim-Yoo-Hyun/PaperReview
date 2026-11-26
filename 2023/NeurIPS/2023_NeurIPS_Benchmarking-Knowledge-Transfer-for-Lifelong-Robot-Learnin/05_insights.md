@@ -52,7 +52,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Imitation Learning, Benchmark`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Evaluating Real-World Robot Manipulation Policies in Simulation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** MimicPlay: Long-Horizon Imitation Learning by Watching Human Play (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

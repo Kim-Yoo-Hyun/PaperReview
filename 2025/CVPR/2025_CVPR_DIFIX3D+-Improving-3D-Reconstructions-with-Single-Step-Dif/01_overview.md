@@ -77,3 +77,7 @@ DIFIX3D+는 희소한 입력 뷰로 복원한 장면의 렌더링 오류를 단�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (4. Boosting 3D Reconstruction with DM priors), p. 6 (4. Boosting 3D Reconstruction with DM priors), p. 5 (4. Boosting 3D Reconstruction with DM priors)이다.
+
+## 검색 태그 근거
+
+희소 뷰 장면에서 생기는 렌더링 오류를 단일 단계 영상 확산으로 수정하고 일부 수정 뷰로 3D 표현을 정제한다. 정적 장면과 자동차 촬영 자료에서 뷰 품질을 비교했다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wu_DIFIX3D_Improving_3D_Reconstructions_with_Single-Step_Diffusion_Models_CVPR_2025_paper.pdf#page=7)

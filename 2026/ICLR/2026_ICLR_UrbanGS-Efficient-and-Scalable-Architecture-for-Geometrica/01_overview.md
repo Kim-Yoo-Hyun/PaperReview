@@ -10,7 +10,7 @@
 - Authors: Changbai Li, Haodong Zhu, Hanlin Chen, Xiuping Liang, Tongfei Chen, Shuwei Shao, Linlin Yang, Huobin Tan, Baochang Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, 3D Vision
+- Tags: 3D reconstruction, 3D Vision, Gaussian Splatting
 - Aliases: UrbanGS: A Scalable and Efficient Architecture for Geometrically Accurate Large-Scene Reconstruction
 - 게재 PDF 표제: UrbanGS: A Scalable and Efficient Architecture for Geometrically Accurate Large-Scene Reconstruction [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/108030643e640ac050e0ed5e6aace48f-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/108030643e640ac050e0ed5e6aace48f-Abstract-Conference.html)
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/108030643e640ac050e0ed5e6aace48f-Abstract-Conference.html
@@ -82,3 +82,7 @@ ICLR의 UrbanGS는 도시 규모 장면에서 깊이와 표면 법선의 일관�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 5 (3.1 PRELIMINARIES), p. 6 (3.1 PRELIMINARIES), p. 7 (3.1 PRELIMINARIES)이다.
+
+## 검색 태그 근거
+
+단안 깊이 추정과 가우시안 렌더링의 일치로 표면 법선과 기하를 정제하고, 도시 장면의 가우시안을 중요도에 따라 줄인다. 평가 대상은 대규모 장면 복원이다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/108030643e640ac050e0ed5e6aace48f-Paper-Conference.pdf#page=4) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/108030643e640ac050e0ed5e6aace48f-Paper-Conference.pdf#page=8)

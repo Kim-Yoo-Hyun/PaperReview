@@ -14,8 +14,9 @@ import hashlib
 import json
 import re
 from collections import Counter, defaultdict
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -231,7 +232,7 @@ def build_index(papers: list[dict], resources: dict) -> tuple[list[str], list[di
                 "category": paper.get("category", ""),
                 "primary_track": paper.get("primary_track") or "",
                 "tier": tier.get("tier", ""),
-                "sequence": tier.get("sequence", ""),
+                "sequence": tracker.get("sequence", "") if tier.get("tier") in {"CORE", "NEXT"} else "",
                 "roles": ";".join(curation.get("roles", [])),
                 "facets": json.dumps(paper.get("facets", {}), ensure_ascii=False, separators=(",", ":")),
                 "evidence_level": tracker.get("evidence_level") or provenance.get("content_evidence", ""),
@@ -284,151 +285,61 @@ def build_index(papers: list[dict], resources: dict) -> tuple[list[str], list[di
 
 
 def build_stats(papers: list[dict], resources: dict, rows: list[dict[str, str]]) -> str:
-    def table(title: str, counter: Counter) -> list[str]:
-        lines = [f"## {title}", "", "| Value | Count |", "|---|---:|"]
-        lines.extend(f"| {key or '(empty)'} | {value} |" for key, value in counter.most_common())
-        return lines + [""]
+    def distribution(values) -> str:
+        return " · ".join(f"`{name or 'unknown'}` {count:,}" for name, count in Counter(values).most_common())
 
-    tier = Counter(row["tier"] for row in rows)
-    evidence = Counter(row["evidence_level"] for row in rows)
-    status = Counter(row["reading_status"] for row in rows if row["tier"] in {"CORE", "NEXT"})
-    history_status = Counter(row["reading_status"] for row in rows if row["tier"] not in {"CORE", "NEXT"} and row["reading_status"] != "N/A")
-    rationale = Counter(row["curation_status"] for row in rows)
-    identifiers = Counter(row["identifier_status"] for row in rows)
-    sources = Counter(row["primary_source_scope"] for row in rows)
-    roles = Counter(role for row in rows for role in row["roles"].split(";") if role)
-    publication = Counter(row["publication_kind"] for row in rows)
-    code = Counter(row["code_status"] for row in rows)
-    data = Counter(row["data_status"] for row in rows)
-    evaluation_types = Counter(row["evaluation_type"] for row in rows)
-    evaluation_settings = Counter(
-        setting
-        for row in rows
-        for setting in row["evaluation_settings"].split(";")
-        if setting
-    )
-    evaluation_protocol = Counter()
-    for row in rows:
-        try:
-            protocol = json.loads(row["evaluation_protocol"] or "{}")
-        except json.JSONDecodeError:
-            protocol = {}
-        for key, value in protocol.items():
-            evaluation_protocol[f"{key}={value}"] += 1
-    reproducibility = Counter(row["reproducibility_status"] for row in rows)
-    checkpoint = Counter(row["checkpoint_status"] for row in rows)
-    configuration = Counter(row["configuration_status"] for row in rows)
-    environment = Counter(row["environment_status"] for row in rows)
-    run_conditions = Counter(row["run_conditions_status"] for row in rows)
-    lineage_status = Counter(row["lineage_status"] for row in rows)
-    relation_rows = [
-        (paper["paper_id"], relation)
-        for paper in papers
-        for relation in paper.get("relations", [])
-    ]
-    relations = len(relation_rows)
-    relation_types = Counter(relation.get("type", "") for _, relation in relation_rows)
-    relation_confidence = Counter(relation.get("confidence", "") for _, relation in relation_rows)
-    relation_scopes = Counter(relation.get("evidence_scope", "") for _, relation in relation_rows)
-    outgoing_papers = {paper_id for paper_id, _ in relation_rows}
-    target_papers = {relation.get("paper_id") for _, relation in relation_rows if relation.get("paper_id")}
-    paper_by_id = {paper["paper_id"]: paper for paper in papers}
-
-    def relation_paper_label(paper_id: str) -> str:
-        paper = paper_by_id.get(paper_id) or {}
-        title = str(paper.get("title") or "unknown paper").replace("|", "\\|")
-        return f"`{paper_id}` {title}"
-    missing_note_evidence = Counter()
-    for paper in papers:
-        for name, value in (paper.get("provenance", {}).get("note_evidence") or {}).items():
-            if value == "MISSING":
-                missing_note_evidence[name] += 1
-    trial_cue_count = 0
-    for row in rows:
-        try:
-            protocol = json.loads(row["evaluation_protocol"] or "{}")
-        except json.JSONDecodeError:
-            protocol = {}
-        trial_cue_count += int(protocol.get("trials_or_seeds") == "reported")
+    today = datetime.now(ZoneInfo("Asia/Seoul")).date()
+    tiers = Counter(row["tier"] for row in rows)
+    active = Counter(row["reading_status"] for row in rows if row["tier"] in {"CORE", "NEXT"})
+    history = Counter(row["reading_status"] for row in rows
+                      if row["tier"] not in {"CORE", "NEXT"} and row["reading_status"] != "N/A")
+    years = Counter(paper["year"] for paper in papers)
+    recent = range(today.year - 2, today.year + 1)
+    venues = Counter(paper["venue_canonical"] for paper in papers).most_common(8)
+    relations = [(paper["paper_id"], edge) for paper in papers for edge in paper.get("relations", [])]
+    sources = {source for source, _ in relations}
+    targets = {edge["paper_id"] for _, edge in relations if edge.get("paper_id")}
+    trial_cues = sum(json.loads(row["evaluation_protocol"]).get("trials_or_seeds") == "reported" for row in rows)
+    source_only = sum(row["identifier_status"] == "source_only" for row in rows)
+    missing_notes = sum(value == "MISSING" for paper in papers
+                        for value in (paper.get("provenance", {}).get("note_evidence") or {}).values())
     lines = [
-        "# 레지스트리 통계",
-        "",
-        f"- Generated: {date.today()} KST",
-        "- Source: [papers.json](../work/sources/papers.json)",
-        "- 분포와 검색 필드는 원장·등급표·읽기 이력에서 생성한다. 교정 후 오류율과 미확인 항목은 [원문 감사](./SOURCE_AUDIT.md)에서 확인한다.",
-        "",
-        "## Snapshot",
-        "",
-        f"- Papers: **{len(papers)}**",
-        f"- Resources in the combined view: **{len(resources.get('entries', []))}**",
-        f"- Curated relation edges: **{relations}**",
-        f"- Papers with outgoing relations: **{len(outgoing_papers)}**",
-        f"- Papers participating in a relation: **{len(outgoing_papers | target_papers)}**",
-        f"- Structured evaluation profiles: **{sum(bool(row['evaluation_type']) for row in rows)}**",
-        f"- Reproducibility profiles: **{sum(bool(row['reproducibility_status']) for row in rows)}**",
-        f"- Lineage coverage profiles: **{sum(bool(row['lineage_status']) for row in rows)}**",
-        f"- Papers with explicit trial/seed cues: **{trial_cue_count}**",
-        f"- Papers without DOI/arXiv/OpenReview identifier: **{sum(value == 'source_only' for value in identifiers.elements())}**",
-        "",
+        "# 레지스트리 통계", "",
+        f"{today} KST 기준 **{len(papers):,}편**. 연도·발표처·태그를 조합해 찾을 때는 [검색 색인](./REGISTRY_INDEX.csv), "
+        "교정 후 오류율과 미확인 항목은 [원문 감사](./SOURCE_AUDIT.md)를 사용한다.", "",
+        "## 등록 분포", "",
+        "| 등급 | 편수 |", "|---|---:|",
+        *(f"| {tier} | {tiers[tier]} |" for tier in ("CORE", "NEXT", "REFERENCE", "ARCHIVE")), "",
+        "| 등록 연도 | 편수 |", "|---|---:|",
+        *(f"| {year} | {years[year]} |" for year in recent),
+        f"| 그 밖의 연도 | {len(papers) - sum(years[y] for y in recent)} |", "",
+        "| 발표처·공개처 | 편수 |", "|---|---:|",
+        *(f"| {venue} | {count} |" for venue, count in venues),
+        f"| 그 밖의 발표처·공개처 | {len(papers) - sum(count for _, count in venues)} |", "",
+        "프리프린트는 등록한 공개 연도를 따른다. 등급별 선정 이유는 [읽기 계획](./READING_PLAN.md)에 있다.", "",
+        "## 읽기 상태", "",
+        "| 사용자 기록 | 현재 정독 대상 | 이전 정독 대상 |", "|---|---:|---:|",
+        *(f"| {status} | {active[status]} | {history[status]} |"
+          for status in ("UNREAD", "SKIMMED", "READ", "SYNTHESIZED", "REPRODUCED")),
+        f"| 합계 | {sum(active.values())} | {sum(history.values())} |", "",
+        "이전 대상의 분석은 재편입 시 복원된다. [현재 기록](./READING_STATUS.csv) · [이전 기록](./READING_STATUS_HISTORY.csv)", "",
+        "## 원문과 공개 자료", "",
+        "| 확인 범위 | 원장 분포 |", "|---|---|",
+        f"| 판본 유형 | {distribution(row['publication_kind'] for row in rows)} |",
+        f"| 문헌 검토 근거 | {distribution(p.get('provenance', {}).get('content_evidence') for p in papers)} |",
+        f"| 코드 배포 | {distribution(row['code_status'] for row in rows)} |",
+        f"| 데이터 배포 | {distribution(row['data_status'] for row in rows)} |",
+        f"| 체크포인트 기록 | {distribution(row['checkpoint_status'] for row in rows)} |", "",
+        f"DOI·arXiv·OpenReview ID 없이 원문 주소로 식별한 논문은 {source_only}편, 근거가 `MISSING`으로 표시된 표준 노트는 {missing_notes}개다. "
+        "코드·데이터의 `not_identified`는 공개 여부 미확인, 체크포인트의 `reported`는 노트에 관련 기록이 있다는 뜻이다. "
+        "논문별 판정에는 [감사 원장](../work/sources/batches/source_audit_2026_11.jsonl)을 참조한다.", "",
+        "## 평가 자료와 인용 관계", "",
+        f"[통합 자료 목록](../work/sources/resources.json)에 벤치마크·지표·배포처 {len(resources.get('entries', []))}개가 있다. "
+        f"시행 횟수나 시드가 검색 단서로 기록된 논문은 {trial_cues}편이다. 실제 평가 분할·지표·실행 조건은 해당 논문의 평가 노트에서 확인한다.", "",
+        f"원장의 방향성 있는 관계 {len(relations)}개는 출발 논문 {len(sources)}편, 양끝을 합쳐 {len(sources | targets)}편에 걸친다. "
+        "색인의 `outgoing_relations`에서 상대 ID를 찾고 원장의 `relations`에서 관계 방향·유형·근거를 확인한다. "
+        "[논문 원장](../work/sources/papers.json) · [OpenVLA 인용 계보](./OPENVLA_LINEAGE.md)", "",
     ]
-    counts_by_year = Counter(p["year"] for p in papers)
-    recent_years = range(date.today().year - 2, date.today().year + 1)
-    lines += ["## 연도와 발표처", "", "| 등록 연도 | 편수 |", "|---|---:|"]
-    lines += [f"| {year} | {counts_by_year[year]} |" for year in recent_years]
-    lines += [f"| 그 밖의 연도 | {len(papers) - sum(counts_by_year[y] for y in recent_years)} |", ""]
-    venues = Counter(p["venue_canonical"] for p in papers)
-    leading = venues.most_common(8)
-    lines += ["| 발표처·공개처 | 편수 |", "|---|---:|", *(f"| {venue} | {n} |" for venue, n in leading),
-              f"| 그 밖의 발표처·공개처 | {len(papers) - sum(n for _, n in leading)} |", "",
-              "프리프린트는 등록한 공개 연도를 따른다. 전체 연도·발표처·등급 조합은 [검색 색인](./REGISTRY_INDEX.csv)에서 확인할 수 있다.", ""]
-    lines += table("Tier", tier)
-    lines += table("Evidence level", evidence)
-    lines += table("Reading status (intensive set)", status)
-    lines += table("Reading status (inactive history; excluded from intensive denominator)", history_status)
-    lines += table("Curation rationale status", rationale)
-    lines += table("Curation roles", roles)
-    lines += table("Publication kind", publication)
-    lines += table("Identifier status", identifiers)
-    lines += table("Primary source scope", sources)
-    lines += table("Code status", code)
-    lines += table("Data status", data)
-    lines += table("Evaluation type", evaluation_types)
-    lines += table("Evaluation setting", evaluation_settings)
-    lines += table("Evaluation protocol status", evaluation_protocol)
-    lines += table("Reproducibility profile", reproducibility)
-    lines += table("Checkpoint status", checkpoint)
-    lines += table("Configuration status", configuration)
-    lines += table("Environment status", environment)
-    lines += table("Run-condition status", run_conditions)
-    lines += table("Lineage coverage status", lineage_status)
-    lines += table("Relation type", relation_types)
-    lines += table("Relation confidence", relation_confidence)
-    lines += table("Relation evidence scope", relation_scopes)
-    lines += [
-        "## Curated relation edges",
-        "",
-        "The manifest is the source of truth; this table is a compact human-readable edge view.",
-        "",
-        "| From paper | Relation | To paper | Confidence | Evidence scope |",
-        "|---|---|---|---|---|",
-    ]
-    for source_id, relation in sorted(
-        relation_rows,
-        key=lambda item: (
-            relation_paper_label(item[0]).casefold(),
-            str(item[1].get("type") or ""),
-            relation_paper_label(str(item[1].get("paper_id") or "")).casefold(),
-        ),
-    ):
-        lines.append(
-            f"| {relation_paper_label(source_id)} | `{relation.get('type', '')}` | "
-            f"{relation_paper_label(str(relation.get('paper_id') or ''))} | "
-            f"`{relation.get('confidence', '')}` | `{relation.get('evidence_scope', '')}` |"
-        )
-    lines += [""]
-    lines += ["## Note evidence gaps", "", "| Note | Missing evidence header |", "|---|---:|"]
-    lines.extend(f"| {name} | {count} |" for name, count in sorted(missing_note_evidence.items()))
-    lines += ["", "## Interpretation", "", "- `reading_status` is user-controlled and is intentionally independent from `evidence_level`.", "- Facets are curation cues for filtering; exact task, split, metric, and failure claims remain in the paper notes.", "- Evaluation profiles expose note-derived cues within each paper's recorded evidence scope. Abstract/project-only notes are not full-text protocol checks; profile coverage does not imply verified experiments.", "- `benchmark_catalog.json` and `metric_catalog.json` remain cue-only navigation inputs; benchmark and metric cue lists in each profile retain that label.", "- Reproducibility profiles distinguish manifest links from explicit note cues; a code/project URL does not prove executable reproduction.", "- Lineage profiles cover every registry paper. Curated relations remain selective; queue adjacency and legacy-summary matches are non-relational candidates, not citation facts.", "- Relation edges are directed curation links, not an exhaustive citation graph: a method points to a predecessor/data dependency, while a baseline points to the evaluated paper. Managed edges retain a basis, source, confidence, evidence scope, and review date.", ""]
     return "\n".join(lines)
 
 

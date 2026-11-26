@@ -10,7 +10,7 @@
 - Authors: Chong Zhang, Jin Jin, Jonas Frey, Nikita Rudin, Matías Mattamala, Cesar Cadena, Marco Hutter
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, legged locomotion, Navigation, robust perception
+- Tags: Robotics, legged locomotion, Navigation, robust perception, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/2310.03581
 - Full-text retrieval: https://arxiv.org/pdf/2310.03581
 - Code/Project: https://bit.ly/45NBTuh

@@ -22,19 +22,19 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction)): However, sinc
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, since these methods primarily rely on offline per-scene reconstruction, their computational demands pose significant challenges [49, 91] on applying them in ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Feed-forward 3D Gaussian Splatting Given single or two-view image inputs I = {I}i={1,2} of a world state, our goal is to first ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Feed-forward, Gaussian, Splatting, Given, single, two-view, image, inputs, world, state | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | task, suite, ROBOCASA, comprises, atomic, tasks, related, language | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | However, since these methods primarily rely on offline per-scene reconstruction, their computational demands pose significant challenges [49, 91] on applying them in ... | 로봇 행동에 따른 장면 예측과 하위 정책 학습 | body wording is the source claim |
+| Observation / input | Feed-forward 3D Gaussian Splatting Given single or two-view image inputs I = {I}i={1,2} of a world state, our goal is to first ... | 한두 시점 RGB에서 얻은 장면 표현과 로봇 행동 이력 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Feed-forward, Gaussian, Splatting, Given, single, two-view, image, inputs, world, state | 3D 가우시안 집합을 압축한 잠재 상태 | notation and tensor shape require body check |
+| Output / action | task, suite, ROBOCASA, comprises, atomic, tasks, related, language | 예측한 다음 장면 상태와 렌더링 영상 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 영상 예측 품질 및 하위 모방학습·모델 기반 RL 성과 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | multimodal context o,l,p/history; body terms: Feed-forward, Gaussian, Splatting, Given, single, two-view, image, inputs, world, state | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding), p. 6 (4.2. GWM-based Imitation Learning) |
-| Decision / output variable | action, pose, option or chunk a; body terms: summary, main, contributions, threefold, introduce, GWM, novel, world | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. World State Encoding) |
-| Objective / loss / cost | policy/action modeling objective; cue terms: goal, model-based, learn, policy, maximizes, expected, discounted, rewards | p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 4 (3.1. World State Encoding), p. 5 (3.2. Diffusion-based Dynamics Modeling) |
+| State / observation variable | 한두 시점 RGB에서 얻은 장면 표현과 로봇 행동 이력; body terms: Feed-forward, Gaussian, Splatting, Given, single, two-view, image, inputs, world, state | p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding), p. 6 (4.2. GWM-based Imitation Learning) |
+| Decision / output variable | 예측한 다음 장면 상태와 렌더링 영상; body terms: summary, main, contributions, threefold, introduce, GWM, novel, world | p. 2 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. World State Encoding) |
+| Objective / loss / cost | 영상 예측 품질 및 하위 모방학습·모델 기반 RL 성과; cue terms: goal, model-based, learn, policy, maximizes, expected, discounted, rewards | p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 4 (3.1. World State Encoding), p. 5 (3.2. Diffusion-based Dynamics Modeling) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 4 (3.2. Diffusion-based Dynamics Modeling), p. 3 (3.1. World State Encoding), p. 8 (4.3. GWM-based Reinforcement Learning) |
 | Success / guarantee | instruction-conditioned task success | p. 7 (Figure/Table caption), p. 8 (4.5. Ablation Analysis), p. 6 (Figure/Table caption) |
 
@@ -62,7 +62,7 @@ PDF body contribution framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p
 
 ## Position in the Robotics Loop
 
-vla writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 3 (3.1. World State Encoding), p. 3 (3.1. World State Encoding), p. 6 (4.2. GWM-based Imitation Learning), p. 2 (1. Introduction). The downstream handoff is claimed only when the body describes it.
+한두 시점 RGB에서 얻은 장면 표현과 로봇 행동 이력 → 3D 가우시안 집합을 압축한 잠재 상태 → 예측한 다음 장면 상태와 렌더링 영상. [원문 근거](./01_overview.md#observation-state-and-output-interface)
 
 ## Verification Questions
 

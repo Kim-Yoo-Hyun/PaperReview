@@ -10,7 +10,7 @@
 - Authors: Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Metzger, Rodrigo Caye Daudt, Konrad Schindler
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Diffusion, Generation, depth, 3D Vision
+- Tags: Diffusion, monocular depth, 3D Vision
 - Official paper: https://arxiv.org/abs/2312.02145
 - Full-text retrieval: https://arxiv.org/pdf/2312.02145
 - Code/Project: not identified

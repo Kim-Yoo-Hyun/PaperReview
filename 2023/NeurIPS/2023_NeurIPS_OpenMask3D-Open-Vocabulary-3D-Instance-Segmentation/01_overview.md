@@ -10,7 +10,7 @@
 - Authors: Ayca Takmaz, Elisabetta Fedele, Robert Sumner, Marc Pollefeys, Federico Tombari, Francis Engelmann
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: open-vocabulary, 3D segmentation, CLIP
+- Tags: open-vocabulary, 3D segmentation, CLIP, object-centric
 - Official paper: https://arxiv.org/abs/2306.13631
 - Full-text retrieval: https://arxiv.org/pdf/2306.13631
 - Code/Project: https://openmask3d.github.io/
@@ -77,3 +77,7 @@ OpenMask3D는 어휘에 없는 물체도 자연어로 검색할 수 있도록 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 4 (3 Method), p. 7 (Model)이다.
+
+## 검색 태그 근거
+
+3D 인스턴스 마스크를 먼저 산출하고, 깊이로 가려짐을 확인한 뒤 선택한 뷰의 마스크 내부에서 CLIP 특징을 집계한다. 평가 대상은 ScanNet200의 개별 인스턴스 분할과 언어로 조회한 물체다. [원문 4쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=4) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/d77b5482e38339a8068791d939126be2-Paper-Conference.pdf#page=7)

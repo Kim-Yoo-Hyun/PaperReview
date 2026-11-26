@@ -10,7 +10,7 @@
 - Authors: Yiyang Shao, Bike Zhang, Qiayuan Liao, Xiaoyu Huang, Yuman Gao, Yufeng Chi, Zhongyu Li, Sophia Shao, Koushil Sreenath
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, language-conditioned control, policy distillation
+- Tags: Robotics, humanoid, whole-body control, language-conditioned control, policy distillation, Reinforcement Learning
 - Official paper: https://www.roboticsproceedings.org/rss21/p065.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p065.pdf
 - Code/Project: https://langwbc.github.io/

@@ -10,7 +10,7 @@
 - Authors: Perry Dong, Suvir Mirchandani, Dorsa Sadigh, Chelsea Finn
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, Reinforcement Learning, batch online RL, real robot
+- Tags: Robotics, Reinforcement Learning, batch online RL, real robot, value guidance
 - Official paper: https://iclr.cc/virtual/2026/poster/10006859
 - Full-text retrieval: https://arxiv.org/pdf/2505.08078
 - Code/Project: https://pd-perry.github.io/batch-online-rl/

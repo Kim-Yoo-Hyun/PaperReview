@@ -8,7 +8,7 @@
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: RL, evaluation, learning-foundation
+- Tags: RL, evaluation, learning-foundation, reset-free learning
 - Aliases: RSA
 - Official paper: https://proceedings.neurips.cc/paper_files/paper/2025/hash/56d748a1d7128158681280be7668e0d3-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.neurips.cc/paper_files/paper/2025/file/56d748a1d7128158681280be7668e0d3-Paper-Conference.pdf
@@ -35,6 +35,10 @@ Forward/reset 경험 → informative state 선택·위험 회피.
 가역/비가역 환경에서 성능과 manual reset 감소를 보고한다.
 
 근거: [공식 paper/abstract](https://proceedings.neurips.cc/paper_files/paper/2025/hash/56d748a1d7128158681280be7668e0d3-Abstract-Conference.html). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+순방향 정책과 리셋 정책을 번갈아 실행하고 도달 확률로 다음 초기 상태와 비가역 구역을 판단한다. 이동·손 조작 시뮬레이션에서 성공과 외부 리셋 횟수를 비교한다. [원문 4쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/56d748a1d7128158681280be7668e0d3-Paper-Conference.pdf#page=4) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/56d748a1d7128158681280be7668e0d3-Paper-Conference.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -10,7 +10,7 @@
 - Authors: Li Peizhuo, Hongyi Li, Ge Sun, Jin Cheng, Xinrong Yang, Guillaume Bellegarda, Milad Shafiee Ashtiani, Yuhong Cao, Auke Ijspeert, Guillaume Adrien Sartoretti
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, quadruped locomotion, safe locomotion, torque control
+- Tags: Robotics, quadruped locomotion, safe locomotion, torque control, Reinforcement Learning
 - Official paper: https://www.roboticsproceedings.org/rss21/p124.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p124.pdf
 - Code/Project: not identified

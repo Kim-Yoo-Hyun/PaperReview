@@ -10,7 +10,7 @@
 - Authors: Daichi Azuma, Taiki Miyanishi, Shuhei Kurita, Motoaki Kawanabe
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D Vision, Vision-Language, grounding, 3D QA
+- Tags: 3D Vision, Vision-Language, grounding, 3D QA, Benchmark
 - Official paper: https://arxiv.org/abs/2112.10482
 - Full-text retrieval: https://arxiv.org/pdf/2112.10482
 - Code/Project: https://github.com/ATR-DBI/ScanQA
@@ -69,3 +69,7 @@ ScanQA 표 2의 질문은 총 41,363개로, 고유한 질문 문구는 32,337개
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4. ScanQA Model), p. 5 (4. ScanQA Model)이다.
+
+## 검색 태그 근거
+
+ScanNet 장면 점군과 자연어 질문에서 텍스트 답변과 그 근거가 되는 물체를 찾는다. 답변 정확도와 근거 3D 물체의 위치를 별도로 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2022/papers/Azuma_ScanQA_3D_Question_Answering_for_Spatial_Scene_Understanding_CVPR_2022_paper.pdf#page=7)

@@ -18,7 +18,7 @@ Contact phase와 behavior-conditioned trajectory를 이용해 switching을 학�
 
 ## Training vs Inference
 
-학습·추론 구분을 위해 확인할 항목: contact label, rollback 가정, 정식 venue status.
+학습·추론 구분을 위해 확인할 항목: 접촉 라벨의 오차율, 되돌리기가 가능한 접촉 조건, 정식 게재 여부.
 
 Source가 명시한 evaluation 범위: 실행 중 task switching 평가를 보고한다.
 

@@ -10,7 +10,7 @@
 - Authors: Haoming Song, Delin Qu, Yuanqi Yao, Qizhi Chen, Jiarui Li, Qi Lv, Yiwen Tang, Li Kang, Heng Zhou, Xianqiang Gao, Yuhang Tang, Xiaofan Li, Modi Shi, Guanghui Ren, Maoqing Yao, Bin Zhao, Dong Wang, Xuelong Li
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, VLA, test-time computation, value guidance, dexterous manipulation, real-time control
+- Tags: Robotics, VLA, test-time computation, value guidance, dexterous manipulation, real-time control, Flow Matching
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Song_FM-Steer_Enhance_Generalist_Policies_with_Value-Guided_Cascaded_Denoising_CVPR_2026_paper.pdf
 - Code/Project: https://hume-vla.github.io/

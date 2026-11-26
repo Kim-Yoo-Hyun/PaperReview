@@ -7,7 +7,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: vision-language-navigation, spatial-representation, predictive-learning
+- Tags: vision-language-navigation, spatial-representation, predictive-learning, VLA, RGB
 - Aliases: PROSPECT, PROSPECT: Unified Streaming Vision-Language Navigation via Semantic--Spatial Fusion and Latent Predictive Representation
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2026.3729462
 - Venue verification: https://ieeexplore.ieee.org/document/11673313/
@@ -27,13 +27,17 @@ PROSPECT는 연속 관측의 3차원 공간 특징과 영상 의미 특징을 �
 
 ## Observation–State–Action Interface
 
-영상 stream·언어 → semantic-spatial state → navigation action; predictive branch는 학습 보조다.
+단안 RGB 프레임과 언어 지시로 전진·회전·정지 행동을 예측한다. 미래 표현 예측 분기는 훈련 시에만 사용한다.
 
 ## Evaluation Scope and Claim Boundary
 
 VLN-CE와 실제 항법을 평가한다.
 
 근거: [공식 paper/abstract](https://ieeexplore.ieee.org/document/11673313/) · [저자 project/code](https://github.com/Debactor/PROSPECT).
+
+## 검색 태그 근거
+
+표의 파노라마·오도메트리·깊이 열은 비교 방법의 사용 여부를 나타낸다. PROSPECT 행에서 실행에 쓰인 영상은 각 스텝의 단안 RGB다. [항법 입력과 비교표](https://arxiv.org/pdf/2603.03739v1#page=5) · [비교 방법별 센서](https://arxiv.org/pdf/2603.03739v1#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

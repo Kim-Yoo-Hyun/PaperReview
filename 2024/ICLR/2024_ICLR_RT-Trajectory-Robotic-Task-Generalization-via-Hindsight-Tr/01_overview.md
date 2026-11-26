@@ -10,7 +10,7 @@
 - Authors: Jiayuan Gu, Sean Kirmani, Paul Wohlhart, Yao Lu, Montserrat Gonzalez Arenas, Kanishka Rao, Wenhao Yu, Chuyuan Fu, Keerthana Gopalakrishnan, Zhuo Xu, Priya Sundaresan, Peng Xu, Hao Su, Karol Hausman, Chelsea Finn, Quan Vuong, Ted Xiao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, VLA, trajectory representation, spatial reasoning, task generalization
+- Tags: Robotics, trajectory representation, task generalization, behavior cloning, RGB
 - Official paper: https://arxiv.org/abs/2311.01977
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2024/hash/c383e44d9a878d1982d9abb838bd5d8a-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2311.01977

@@ -51,9 +51,9 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method)): We first constru
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill, knowledge, models, graph, neural | camera/depth stream, pose, map와 language goal | body cue; exact tensor/frame verify |
-| State/latent | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill | robot pose, free-space/semantic map와 local goal | body cue; notation verify |
-| Action/output | highlight, following, three, contributions, first, present, create, interactive, graph, representation | collision-free trajectory 또는 velocity command | body cue; unit/decoder verify |
+| Input/observation | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill, knowledge, models, graph, neural | 점군·텍스트 질의와 선택적인 다중 시점 RGB-D 특징 | body cue; exact tensor/frame verify |
+| State/latent | parallel, extract, vision-language, features, aligned, images, Sec, overall, goal, distill | 물체 노드와 쌍별 관계 임베딩 | body cue; notation verify |
+| Action/output | highlight, following, three, contributions, first, present, create, interactive, graph, representation | 질의된 물체 및 관계를 담은 장면 그래프 | body cue; unit/decoder verify |
 | Objective/constraint | not recovered | path cost, risk or goal utility | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -64,7 +64,7 @@ PDF body method statement (p. 3 (3. Method), p. 3 (3. Method)): We first constru
 - **p. 1 / 1. Introduction - extractive body cue:** The state-of-the-art (SOTA) methods for 3D scene graph prediction are limited to a fixed set of object and relationship labels provided by small-scale datasets.
 - **p. 2 / 1. Introduction - extractive body cue:** Thus effectively proposing the first open-vocabulary scene graph prediction approach from 3D point cloud data. • Our proposed approach shows promising results on the closed-set ...
 - **p. 2 / 1. Introduction - extractive body cue:** We highlight the following three contributions: • We are the first to present a method to create an interactive graph representation of a scene from ...
-- **Normalized interface:** observation=camera/depth stream, pose, map와 language goal; state=robot pose, free-space/semantic map와 local goal; output/action=collision-free trajectory 또는 velocity command.
+- **Normalized interface:** observation=점군·텍스트 질의와 선택적인 다중 시점 RGB-D 특징; state=물체 노드와 쌍별 관계 임베딩; output/action=질의된 물체 및 관계를 담은 장면 그래프.
 
 ## Temporal and Runtime Contract
 

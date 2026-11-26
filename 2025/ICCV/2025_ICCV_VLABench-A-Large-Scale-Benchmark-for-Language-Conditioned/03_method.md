@@ -59,9 +59,9 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action, models, large-scale, robotics, data | standardized observation, action, task state와 evaluation split | body cue; exact tensor/frame verify |
-| State/latent | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action | benchmark state/goal와 method decision | body cue; notation verify |
-| Action/output | summarize, contributions, follows, VLABench, first, benchmark, designed, comprehensively, evaluate, capabilities | policy/controller trajectory 또는 measured result | body cue; unit/decoder verify |
+| Input/observation | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action, models, large-scale, robotics, data | 정책 평가의 관측·지시와 별도 계획 평가의 표시된 이미지 | body cue; exact tensor/frame verify |
+| State/latent | strong, generalization, capabilities, inspired, main, approaches, language-conditioned, manipulation, pre-training, visionlanguage-action | 과제 상태와 지시 의도·진행도 | body cue; notation verify |
+| Action/output | summarize, contributions, follows, VLABench, first, benchmark, designed, comprehensively, evaluate, capabilities | VLA의 조작 행동 또는 VLM의 스킬 순서 | body cue; unit/decoder verify |
 | Objective/constraint | final, trajectory, smoothed, Bezier, curve, optimize, path, quality, motion, planners | benchmark score and failure cost | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -73,7 +73,7 @@ PDF body method statement (p. 7 (Model), p. 7 (4.2. Zero-shot Ability of Agent),
 - **p. 7 / 4.2. Zero-shot Ability of Agent - extractive body cue:** For our evaluation of foundation model-based algorithms, we reviewed two state-of-the-art frameworks, Voxposer [25] and CoPA [24], and the comparison results are shown in Figure ...
 - **p. 6 / 3.4. Dataset Construction - extractive body cue:** Section 8.4 provides more details of the instruction generation.
 - **p. 6 / 3.4. Dataset Construction - extractive body cue:** We use GPT-4o [1] to generate descriptions that incorporate target-specific characteristics and interactive instructions that encompass a variety of contexts and intentions.
-- **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
+- **Normalized interface:** observation=정책 평가의 관측·지시와 별도 계획 평가의 표시된 이미지; state=과제 상태와 지시 의도·진행도; output/action=VLA의 조작 행동 또는 VLM의 스킬 순서.
 
 ## Temporal and Runtime Contract
 

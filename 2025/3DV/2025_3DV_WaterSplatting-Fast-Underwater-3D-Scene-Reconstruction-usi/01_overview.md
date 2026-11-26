@@ -79,3 +79,7 @@ WaterSplatting은 수중 장면에서 물체의 외관과 물을 통과하는 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 4 (3.3. Loss Function Alignment), p. 3 (3.1. Preliminaries), p. 5 (3.3. Loss Function Alignment), p. 3 (3. Method)이다.
+
+## 검색 태그 근거
+
+수중 영상의 색과 광학 매질의 감쇠·산란이 분리되도록 가우시안을 최적화한다. SeaThru-NeRF의 실제 수중 장면에서 렌더링 품질을 평가했다. [원문 3쪽](https://arxiv.org/pdf/2408.08206.pdf#page=3) · [원문 7쪽](https://arxiv.org/pdf/2408.08206.pdf#page=7)

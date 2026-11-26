@@ -14,6 +14,7 @@
 - Venue verification: https://api.crossref.org/works/10.1109/icra57385.2026.11696357
 - Code/Project: https://ericjin2002.github.io/SOE/
 - Code: https://github.com/EricJin2002/SOE
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 5, 6쪽](https://arxiv.org/pdf/2509.19292v1#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 저자 repo ICRA2026 표기와 일부 BibTeX IROS2025 문구가 혼재한다. 공식 proceedings identity를 확보하지 못해 arXiv2025 유지. 공식 conference/journal acceptance 확인을 확보하지 못해 preprint 유지. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,7 @@ SOE는 로봇 정책이 이미 알고 있는 유효 행동의 주변을 낮은 �
 ## Verification Boundary
 
 Manifold 학습 데이터·추가 supervision·policy update 방식·안전 주장 조건을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- SOE의 시연 학습·잠재 행동 탐색 학습 진입점 · src/train.py [배포 파일](https://raw.githubusercontent.com/EricJin2002/SOE/9b5be5a7be16c39e8aa5314aad4bff29c6c81261/src/train.py)

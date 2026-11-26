@@ -16,7 +16,7 @@ Contact phase와 behavior-conditioned trajectory를 이용해 switching을 학�
 
 ### Evidence Boundary
 
-Exact assumptions·negative results·transfer limits는 본문 확인 필요. 특히 contact label, rollback 가정, 정식 venue status은 아직 확정하지 않았다.
+Exact assumptions·negative results·transfer limits는 본문 확인 필요. 특히 접촉 라벨의 오차율, 되돌리기가 가능한 접촉 조건, 정식 게재 여부는 아직 확정하지 않았다.
 
 ## Researcher interpretation
 

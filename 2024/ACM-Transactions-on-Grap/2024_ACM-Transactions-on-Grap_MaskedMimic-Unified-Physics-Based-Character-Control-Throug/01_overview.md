@@ -10,7 +10,7 @@
 - Authors: Chen Tessler, Yunrong Guo, Ofir Nabati, Gal Chechik, Xue Bin Peng
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, motion imitation, NVIDIA
+- Tags: humanoid, whole-body control, motion imitation, policy distillation, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/2409.14393
 - Full-text retrieval: https://arxiv.org/pdf/2409.14393v1
 - Code/Project: https://research.nvidia.com/labs/par/maskedmimic/
@@ -43,12 +43,14 @@ MaskedMimic은 시공간적으로 일부만 주어진 동작 조건을 채워 �
 
 ## Observation, State, and Output Interface
 
+완전한 동작을 보는 교사를 RL로 학습하고 부분 관절·텍스트·물체 조건을 받는 학생을 교사 행동으로 증류한다. 경로·자세·물체 상호작용 평가는 물리 캐릭터 제어다. [PDF 5쪽](https://arxiv.org/pdf/2409.14393v1#page=5) · [PDF 8쪽](https://arxiv.org/pdf/2409.14393v1#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | (2) 𝑝(𝑠,𝑔/𝜋) denotes the distribution of states and goals observed under the student policy. | proprioception, reference pose/motion, visual or language command | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
-| State/latent | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations, step, observes | whole-body pose, balance/contact state와 skill/mode | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference), p. 4 (3 PRELIMINARIES) |
-| Output/action | Character Observations: At each step, 𝜋FC observes the current humanoid state 𝑠𝑡, consisting of the 3D body pose and velocity, canonicalized with respect to the character's local coordinate frame: 𝑠𝑡= (𝜃𝑡⊖𝜃root 𝑡 ... | joint/whole-body action, motion target 또는 task trajectory | p. 5 (3. Inference), p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
-| Objective/outcome | The agent's objective is to learn a policy that maximizes the discounted cumulative reward: 𝐽= E𝑝(𝜏/𝜋) " 𝑇 ∑︁ 𝑡=0 𝛾𝑡𝑟𝑡 # , (1) where 𝑝(𝜏/𝜋) = 𝑝(𝑠0)Π𝑇-1 𝑡=0 𝑝(𝑠𝑡+1/𝑠𝑡,𝑎𝑡)𝜋(𝑎𝑡/𝑠𝑡,𝑔𝑡) is the ... | tracking, balance, skill/task success와 recovery | p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 5 (3. Inference) |
+| Observation/input | (2) 𝑝(𝑠,𝑔/𝜋) denotes the distribution of states and goals observed under the student policy. | 캐릭터 상태와 부분 관절·경로·텍스트 등 명령 | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
+| State/latent | denotes, distribution, states, goals, observed, under, student, policy, Character, Observations, step, observes | 완전한 추종 교사와 부분 목표 학생의 잠재 표현 | p. 4 (3 PRELIMINARIES), p. 5 (3. Inference), p. 4 (3 PRELIMINARIES) |
+| Output/action | Character Observations: At each step, 𝜋FC observes the current humanoid state 𝑠𝑡, consisting of the 3D body pose and velocity, canonicalized with respect to the character's local coordinate frame: 𝑠𝑡= (𝜃𝑡⊖𝜃root 𝑡 ... | 캐릭터의 관절 제어 명령 | p. 5 (3. Inference), p. 4 (3 PRELIMINARIES), p. 5 (3. Inference) |
+| Objective/outcome | The agent's objective is to learn a policy that maximizes the discounted cumulative reward: 𝐽= E𝑝(𝜏/𝜋) " 𝑇 ∑︁ 𝑡=0 𝛾𝑡𝑟𝑡 # , (1) where 𝑝(𝜏/𝜋) = 𝑝(𝑠0)Π𝑇-1 𝑡=0 𝑝(𝑠𝑡+1/𝑠𝑡,𝑎𝑡)𝜋(𝑎𝑡/𝑠𝑡,𝑔𝑡) is the ... | 전체·희소 관절 추종 오차와 과제 수행 | p. 4 (3 PRELIMINARIES), p. 7 (3. Inference), p. 5 (3. Inference) |
 
 ## Main Claims and Actual Contribution
 

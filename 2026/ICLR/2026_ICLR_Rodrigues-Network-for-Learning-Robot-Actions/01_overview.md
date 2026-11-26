@@ -10,7 +10,7 @@
 - Authors: Jialiang Zhang, Haoran Geng, Yang You, Congyue Deng, Pieter Abbeel, Jitendra Malik, Leonidas Guibas
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, kinematics, action representation, Imitation Learning
+- Tags: Robotics, kinematics, representation learning, Imitation Learning, Diffusion
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/eb9b18ccb76a1156af5779ffdca1d91f-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2506.02618
 - Code/Project: not identified

@@ -61,9 +61,9 @@ PDF body method statement (p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS), p. 
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel, prediction, action-values, Qpick, correlate | RGB-D/point cloud, object state와 contact/task observation | body cue; exact tensor/frame verify |
-| State/latent | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel | object geometry, affordance, contact mode 또는 end-effector state | body cue; notation verify |
-| Action/output | several, tasks, benchmark, tackle, them, novel, goal-conditioned, variants, Transporter, Network | grasp, pose, force 또는 end-effector trajectory | body cue; unit/decoder verify |
+| Input/observation | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel, prediction, action-values, Qpick, correlate | 시뮬레이션의 정사영 RGB-D와 목표 영상, 실물 케이블의 이진 마스크 | body cue; exact tensor/frame verify |
+| State/latent | first, FCN, fpick, takes, input, visual, observation, outputs, dense, per-pixel | 현재·목표 영상의 공간 특징과 대응 점수 | body cue; notation verify |
+| Action/output | several, tasks, benchmark, tackle, them, novel, goal-conditioned, variants, Transporter, Network | 집기·놓기 위치와 회전 | body cue; unit/decoder verify |
 | Objective/constraint | Contact, friction, constraints, between, soft, bodies, multi, solved, unified, constraint | task/contact/pose objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 3 (IV. GOAL-CONDITIONED TRANSPORTER NETWORKS), p. 
 - **p. 5 / V. SIMULATOR AND TASKS - extractive body cue:** The goal is to train a policy that executes a sequence of pick and place actions in the workspace to achieve an objective, learned from ...
 - **p. 1 / I. INTRODUCTION - extractive body cue:** 1: Example of a trained Transporter Network policy in action on the bag-items-1 task (see Table I).
 - **p. 1 / I. INTRODUCTION - extractive body cue:** These types of tasks are especially challenging with diverse goal conditioning: the goal states of deformable objects are not easily specified, for example, by compact ...
-- **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
+- **Normalized interface:** observation=시뮬레이션의 정사영 RGB-D와 목표 영상, 실물 케이블의 이진 마스크; state=현재·목표 영상의 공간 특징과 대응 점수; output/action=집기·놓기 위치와 회전.
 
 ## Temporal and Runtime Contract
 

@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `Robotics, Imitation Learning, Vision-Language Action`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** NVIDIA Isaac GR00T N1: An Open Foundation Model for Humanoid Robots (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

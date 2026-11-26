@@ -14,6 +14,7 @@
 - Venue verification: https://link.springer.com/article/10.1007/s10514-024-10164-6
 - Code/Project: not identified
 - Code: not_identified
+- 방법·평가 확인 (2026-11-25): [원문 1, 2, 7, 8, 10, 11, 13쪽](https://elib.dlr.de/206235/1/s10514-024-10164-6.pdf#page=1) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. Autonomous Robots journal로 기록하며 top-tier conference 논문으로 묶지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance

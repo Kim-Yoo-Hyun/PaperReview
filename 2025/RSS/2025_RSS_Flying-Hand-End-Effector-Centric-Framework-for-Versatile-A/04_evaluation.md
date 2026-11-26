@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** high-DoF humanoid whole-body dynamics와 contacts.
-- **Input boundary:** proprioception, reference pose/motion, visual or language command.
-- **Output/decision under evaluation:** joint/whole-body action, motion target 또는 task trajectory.
-- **Primary target:** tracking, balance, skill/task success와 recovery.
+- **Target system/task:** 팔을 장착한 육회전익의 공중 조작.
+- **Input boundary:** 말단 상태와 기체·말단의 RGB 영상.
+- **Output/decision under evaluation:** ACT의 목표 말단 자세와 MPC의 기체·팔 명령.
+- **Primary target:** 비행 추종 오차와 조작 과제 성공.
 - **Detected evaluation headings:** 4) Rich real-world experiments demonstrated the versatility (p. 2); A. Experimental Setup (p. 7); B. Implementation Details (p. 8).
 
 ## Experimental Matrix
@@ -65,8 +65,8 @@ PDF body evaluation/result cue (p. 9 (B. Implementation Details), p. 10 (B. Impl
 |---|---|---|---|
 | Robot/hardware/simulator | Some work also showed amazing results, achieving high-speed grasping, or grasping moving objects [50], but sacrificed payload capacity or precision due to specialized hardware ... | embodiment, simulator version and control stack | p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 2 (4) Rich real-world experiments demonstrated the versatility) |
 | Task/environment | In general, although different works have shown success on different specific tasks, the specific system design and algorithm development make the same hardware and ... | reset, timeout, object/scene variation | p. 2 (4) Rich real-world experiments demonstrated the versatility), p. 10 (B. Implementation Details) |
-| Observation/sensor | proprioception, reference pose/motion, visual or language command | calibration, preprocessing, privileged input | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning) |
-| Output/decision | joint/whole-body action, motion target 또는 task trajectory | action frame, controller and termination | p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface), p. 7 (B. EE-Centrie Policy Learning) |
+| Observation/sensor | 말단 상태와 기체·말단의 RGB 영상 | calibration, preprocessing, privileged input | p. 10 (B. Implementation Details), p. 4 (C. Teleportation and Imitation Learning) |
+| Output/decision | ACT의 목표 말단 자세와 MPC의 기체·팔 명령 | action frame, controller and termination | p. 2 (B. Mobile Manipulation Framework and EE-Centric Interface), p. 7 (B. EE-Centrie Policy Learning) |
 
 ## Metrics and Success Definition
 

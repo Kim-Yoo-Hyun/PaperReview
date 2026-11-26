@@ -11,7 +11,7 @@
 - 저자 판본: ICLR 게재본 표제면의 마지막 저자 표기 Jian Yang을 반영했다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2026/hash/6fa4a1def9d60b5bf6078e13c900c45c-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision
+- Tags: Gaussian Splatting, Diffusion, Generation, 3D Vision, Video Generation
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/6fa4a1def9d60b5bf6078e13c900c45c-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf
 - Code/Project: not identified
@@ -81,3 +81,7 @@ WorldSplat은 동적 주행 장면을 시간에 따라 변하는 가우시안으
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 15 (A.1 ARCHITECTURES), p. 5 (3 METHOD)이다.
+
+## 검색 태그 근거
+
+지도·3D 상자·자차 경로·텍스트를 조건으로 다중 카메라의 RGB·깊이·움직임 표현을 생성하고 시간에 따라 달라지는 가우시안 장면으로 바꾼다. 바꾼 경로의 렌더링 일관성을 비교했다. [원문 3쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=3) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/6fa4a1def9d60b5bf6078e13c900c45c-Paper-Conference.pdf#page=7)

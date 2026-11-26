@@ -22,21 +22,21 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, efficient and accurate LiDAR odometry and mapping are still challenging problems: 1) Current LiDAR sensors produce a large amount of 3D ... | mapped 3D environment과 mobile robot | body wording is the source claim |
-| Observation / input | To prevent the size of the map from going unbound, only map points in a large local region of length L around ... | camera/depth stream, pose, map와 language goal | exact sensor/frame/preprocessing from PDF body |
-| State / latent | prevent, size, going, unbound, only, points, large, local, region, length | robot pose, free-space/semantic map와 local goal | notation and tensor shape require body check |
-| Output / action | operation, defined, continuous, kinematic, model, discretized, IMU, sampling | collision-free trajectory 또는 velocity command | exact unit/frame/decoder require body check |
-| Target outcome | goal reach with collision-free execution | goal reach, safety, localization error와 replanning latency | metric/denominator are in 04 evidence |
+| Target problem | However, efficient and accurate LiDAR odometry and mapping are still challenging problems: 1) Current LiDAR sensors produce a large amount of 3D ... | 실제 이동 플랫폼의 LiDAR–관성 오도메트리와 지도 작성 | body wording is the source claim |
+| Observation / input | To prevent the size of the map from going unbound, only map points in a large local region of length L around ... | 원시 LiDAR 스캔과 IMU 가속도·각속도 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | prevent, size, going, unbound, only, points, large, local, region, length | 관성 상태와 로컬 점군 지도 | notation and tensor shape require body check |
+| Output / action | operation, defined, continuous, kinematic, model, discretized, IMU, sampling | 추정한 자세·위치와 갱신된 점군 지도 | exact unit/frame/decoder require body check |
+| Target outcome | 궤적 추정 정확도와 스캔당 처리 시간 | 궤적 오차와 스캔당 추정·지도 갱신 시간 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
 | Formulation field | PDF body-grounded record | Evidence anchor |
 |---|---|---|
-| State / observation variable | sensor/map state and goal; body terms: prevent, size, going, unbound, only, points, large, local, region, length | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION), p. 4 (IV. STATE ESTIMATION) |
-| Decision / output variable | path/waypoint/velocity; body terms: More, specifically, contributions, follows, develop, incremental, tree, data | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract) |
-| Objective / loss / cost | path cost, risk or goal utility; cue terms: Besides, efficient, nearest, neighbor, search, data, structure, supports | p. 5 (IV. STATE ESTIMATION), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. SYSTEM OVERVIEW), p. 5 (IV. STATE ESTIMATION) |
+| State / observation variable | 원시 LiDAR·IMU 측정과 이전 관성 상태; body terms: prevent, size, going, unbound, only, points, large, local, region, length | p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION), p. 4 (IV. STATE ESTIMATION) |
+| Decision / output variable | 관성 상태 추정치와 점군 지도; body terms: More, specifically, contributions, follows, develop, incremental, tree, data | p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 1 (Abstract) |
+| Objective / loss / cost | 점–평면 측정 잔차와 관성 사전 추정의 결합; cue terms: Besides, efficient, nearest, neighbor, search, data, structure, supports | p. 5 (IV. STATE ESTIMATION), p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p. 4 (III. SYSTEM OVERVIEW), p. 5 (IV. STATE ESTIMATION) |
 | Constraint / feasibility | paper-specific constraints are recorded only where the body states them; otherwise unresolved | p. 1 (I. INTRODUCTION), p. 8 (9 Algorithm End), p. 8 (24 End Function) |
-| Success / guarantee | goal reach with collision-free execution | p. 10 (VI. BENCHMARK RESULTS), p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. BENCHMARK RESULTS) |
+| Success / guarantee | 궤적 추정 정확도와 스캔당 처리 시간 | p. 10 (VI. BENCHMARK RESULTS), p. 16 (VII. REAL-WORLD EXPERIMENTS), p. 10 (VI. BENCHMARK RESULTS) |
 
 - **Formulation status:** domain mapping is an analyst bridge; symbols, initial/terminal conditions, transition/observation model and guarantees are attributed to the paper only at the cited PDF body anchors.
 
@@ -65,7 +65,7 @@ PDF body contribution framing (p. 2 (I. INTRODUCTION), p. 2 (I. INTRODUCTION), p
 
 ## Position in the Robotics Loop
 
-navigation writing domain maps to observation -> state/world model -> task and motion decision -> policy/control -> feedback. Evidence interface anchors: p. 6 (V. MAPPING), p. 1 (I. INTRODUCTION), p. 4 (IV. STATE ESTIMATION), p. 4 (III. SYSTEM OVERVIEW). The downstream handoff is claimed only when the body describes it.
+로봇의 관측을 자세·위치 및 로컬 지도로 바꾸는 상태 추정 단계다. 그림 1과 IV–V절에서 실제 출력과 지도 갱신을 확인할 수 있다.
 
 ## Verification Questions
 

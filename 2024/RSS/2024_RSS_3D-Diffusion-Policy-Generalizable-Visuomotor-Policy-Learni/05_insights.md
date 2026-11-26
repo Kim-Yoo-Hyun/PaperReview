@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, 3D representation, point cloud, diffusion policy, Imitation Learning, visuomotor control`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** end of this track queue (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

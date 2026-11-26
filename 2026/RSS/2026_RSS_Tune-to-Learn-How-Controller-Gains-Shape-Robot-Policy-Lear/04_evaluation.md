@@ -5,7 +5,7 @@
 
 ## Source-Supported Evaluation Scope
 
-여러 과제·embodiment에서 학습 방식에 따라 gain 선호가 달라지는 결과를 보고한다.
+세 비교의 조건이 다르다. 행동 복제는 폐루프 성공률로 제어 이득을 비교했고, RL은 각 이득 설정에 맞춰 학습 하이퍼파라미터를 다시 탐색했다. G1 속도 추종은 시뮬레이션이다. FR3의 실물 도달 시험에서는 큰 강성·과감쇠 조건에서 시스템 식별 오차는 작아도 폐루프 궤적의 시뮬레이션–실물 오차가 컸다. [행동 복제·RL 설계](https://www.roboticsproceedings.org/rss22/p139.pdf#page=5) · [G1 비교와 FR3 전이](https://www.roboticsproceedings.org/rss22/p139.pdf#page=8) · [궤적 오차](https://www.roboticsproceedings.org/rss22/p139.pdf#page=9)
 
 ## Metrics, Baselines, and Generalization
 

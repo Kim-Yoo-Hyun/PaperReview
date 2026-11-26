@@ -8,7 +8,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: reward-learning, robot-learning, evaluation
+- Tags: reward-learning, robot-learning, evaluation, self-supervised
 - Aliases:
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf
@@ -35,6 +35,10 @@ PROGRESSOR는 초기·현재·목표 관측에서 작업 진행도의 분포를 
 Human video와 실제 로봇 offline RL 평가를 보고한다.
 
 근거: [공식 paper/abstract](https://openaccess.thecvf.com/content/ICCV2025/html/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.html). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+영상 프레임의 시간 관계로 진행도 보상을 학습한다. Meta-World에서는 정책 경험으로 보상 모형을 온라인 갱신하고, 실물 UR5에서는 성공·실패 시연에 진행도 가중치를 주어 RWR-ACT를 오프라인 학습한다. [원문 5쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=5) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Ayalew_PROGRESSOR_A_Perceptually_Guided_Reward_Estimator_with_Self-Supervised_Online_Refinement_ICCV_2025_paper.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

@@ -53,7 +53,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Reinforcement Learning, human-in-the-loop, real-world RL, dexterous manipulation, recovery`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

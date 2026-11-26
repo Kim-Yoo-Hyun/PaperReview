@@ -14,6 +14,7 @@
 - Venue verification: https://openaccess.thecvf.com/content/CVPR2024/html/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.html
 - Code/Project: https://nvlabs.github.io/FoundationPose/
 - Code: https://github.com/NVlabs/FoundationPose
+- 방법·평가 확인 (2026-11-25): [원문 4, 5, 6, 7, 8쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wen_FoundationPose_Unified_6D_Pose_Estimation_and_Tracking_of_Novel_Objects_CVPR_2024_paper.pdf#page=4) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-18: 공식 초록·bibliographic record와 연결된 저자 자료 확인. Abstract 기반 등록이며 본문 전체·실험 재현은 미확인. 직접 HTML 접근 제한은 공식 사이트의 검색 색인 abstract/BibTeX 및 저자 abstract/project 자료로 교차 확인; HTML 전면 열람으로 기록하지 않음. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,9 @@ RGB-D와 CAD 또는 reference 관측에서 물체 6D pose·tracking 출력을 �
 ## Verification Boundary
 
 Model-free reference 요구·대칭 처리·ranking score와 보정 확률의 차이을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- FoundationPose의 물체 자세 등록·추적 추론 · estimater.py [배포 파일](https://raw.githubusercontent.com/NVlabs/FoundationPose/a1b694b83e633c2cb6115b9063d940a687759392/estimater.py)
+- FoundationPose의 자세 가설 점수 또는 보정 네트워크 체크포인트 · model_best.pth [배포 파일](https://drive.google.com/file/d/1E9FPB5WFIBMLrOJqZLpoVOK4Mjzrrxhv/view)
+- FoundationPose 학습용 GSO 렌더 배포 자료 · 30602556.zip [배포 파일](https://drive.google.com/file/d/1_ctJIyrlsco7e6l975kgqFN2M9g-EIPi/view)

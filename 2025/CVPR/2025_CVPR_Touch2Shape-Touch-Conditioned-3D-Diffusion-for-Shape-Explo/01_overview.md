@@ -10,7 +10,7 @@
 - Authors: Yuanbo Wang, Zhaoxuan Zhang, Jiajin Qiu, Dilong Sun, Zhengyu Meng, Xiaopeng Wei, Xin Yang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision, active perception, reinforcement-learning
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf
 - Code/Project: not identified
@@ -68,3 +68,7 @@ ABC 기반 표 3에서 접촉 영상은 시뮬레이터로 생성했다. 촉각�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.1. Touch-conditioned Diffusion Model), p. 5 (3.3. Policy Training)이다.
+
+## 검색 태그 근거
+
+촉각 패치를 모아 확산 모델로 전체 형상을 예측하고, 복원 오차를 줄이는 다음 접촉 위치를 DQN으로 선택한다. 시뮬레이션에서 촉각만 쓰는 조건과 영상을 함께 쓰는 조건의 형상 오차를 비교했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=3) · [원문 5쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=5) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Wang_Touch2Shape_Touch-Conditioned_3D_Diffusion_for_Shape_Exploration_and_Reconstruction_CVPR_2025_paper.pdf#page=6)

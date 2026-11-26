@@ -61,9 +61,9 @@ PDF body method statement (p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BAC
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian, distribution, over, actions, input-dependent | proprioception, reference pose/motion, visual or language command | body cue; exact tensor/frame verify |
-| State/latent | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian | whole-body pose, balance/contact state와 skill/mode | body cue; notation verify |
-| Action/output | central, contribution, adversarial, learning, physics-based, character, animation, combines, goalconditioned, reinforcement | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
+| Input/observation | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian, distribution, over, actions, input-dependent | 캐릭터 상태·과제 목표와 학습용 참조 동작 | body cue; exact tensor/frame verify |
+| State/latent | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian | 상태 전이를 평가하는 동작 판별기 | body cue; notation verify |
+| Action/output | central, contribution, adversarial, learning, physics-based, character, animation, combines, goalconditioned, reinforcement | 저수준 PD 제어기에 보낼 관절 목표 | body cue; unit/decoder verify |
 | Objective/constraint | Least-Squares, Discriminator, standard, GAN, objective, detailed, Equation, typically, uses, sigmoid | tracking/balance/task objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 7 (4 BACKGROUND), p. 6 (4 BACKGROUND), p. 4 (4 BAC
 - **p. 5 / 4 BACKGROUND - extractive body cue:** (2) 𝑑M (s, a) and 𝑑𝜋(s, a) denote the state-action distribution of the dataset and policy respectively.
 - **p. 6 / 4 BACKGROUND - extractive body cue:** 6.1 States and Actions The state s𝑡consists of a set of features that describes the configuration of the character's body.
 - **p. 6 / 4 BACKGROUND - extractive body cue:** Note, the gradient penalty is calculated with respect to the observation features 𝜙= (Φ(s), Φ(s′)), not the full set of state features (s, s′).
-- **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
+- **Normalized interface:** observation=캐릭터 상태·과제 목표와 학습용 참조 동작; state=상태 전이를 평가하는 동작 판별기; output/action=저수준 PD 제어기에 보낼 관절 목표.
 
 ## Temporal and Runtime Contract
 

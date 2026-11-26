@@ -6,7 +6,7 @@
 
 ## Evaluation in One Sentence
 
-D4RL·robomimic과 실제 pipe assembly·kitting을 평가한다.
+D4RL·robomimic과 Franka의 실물 조립·부품 배치를 평가했다. 먼저 사전학습한 행동 복제(BC) 정책으로 환경을 실행해 그 정책의 Q값을 추정한다. 이어지는 온라인 단계는 BC와 RL이 제안한 행동을 각각 평가한다. 그림 3은 초기 Q 추정에 쓴 환경 상호작용도 가로축에 포함한다. [방법과 그림 3](https://roboticsproceedings.org/rss22/p153.pdf#page=4) · [상호작용 예산](https://roboticsproceedings.org/rss22/p153.pdf#page=5) · [실물 평가](https://roboticsproceedings.org/rss22/p153.pdf#page=8)
 
 ## Evaluation Type and Scope
 

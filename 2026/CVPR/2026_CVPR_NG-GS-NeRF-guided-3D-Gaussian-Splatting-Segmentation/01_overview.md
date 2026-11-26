@@ -10,7 +10,7 @@
 - Authors: Yi He, Tao Wang, Yi Jin, Congyan Lang, Yidong Li, Haibin Ling
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, NeRF, semantic, alignment, 3D Vision
+- Tags: Gaussian Splatting, NeRF, semantic, alignment, 3D Vision, 3D segmentation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ NG-GS는 3D 가우시안으로 표현한 장면에서 물체 경계가 계단처
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 4 (4.1. Edge Gaussian Continuity), p. 3 (4. Method)이다.
+
+## 검색 태그 근거
+
+이미 학습한 3D 가우시안에 연속 해시 특징장을 결합해 경계 부근의 분할을 정제한다. ScanNet의 상호작용 분할과 NVOS·LERF-OVS에서 영역 분할을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/He_NG-GS_NeRF-guided_3D_Gaussian_Splatting_Segmentation_CVPR_2026_paper.pdf#page=7)

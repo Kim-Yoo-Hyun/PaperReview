@@ -7,7 +7,7 @@
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: RL, evaluation, learning-foundation
+- Tags: RL, evaluation, learning-foundation, reset-free learning
 - Aliases: MEDAL
 - Official paper: https://proceedings.mlr.press/v162/sharma22a.html
 - Venue verification: https://proceedings.mlr.press/v162/sharma22a.html
@@ -34,6 +34,10 @@ Demonstration states → reset policy → forward learner.
 EARL의 sparse-reward continuous control task를 평가한다.
 
 근거: [공식 paper/abstract](https://proceedings.mlr.press/v162/sharma22a.html).
+
+## 검색 태그 근거
+
+MEDAL은 시연과 에이전트 방문 상태를 구별하는 판별기로 역방향 보상을 구성한다. 순·역 정책을 번갈아 학습해 Sawyer 문 열기·페그 과제 등의 연속 상호작용을 평가한다. [원문 5쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=5) · [원문 7쪽](https://proceedings.mlr.press/v162/sharma22a/sharma22a.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

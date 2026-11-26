@@ -10,7 +10,7 @@
 
 Planner 데이터로 embodiment-agnostic flow expert를 학습하고 이를 고정한 채 로봇별 경량 refiner를 online RL로 적응한다.
 
-사족·이족·quadrotor 실험과 실제 배포를 보고한다.
+사족·이족·쿼드로터의 국소 항법은 시뮬레이션에서 비교했다. 실물 배포 대상은 Unitree Go2와 MagicDog다.
 
 근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/514bdfb12b318ad02c6f28dc68f2feea-Abstract-Conference.html) · [저자 project/code](https://github.com/amap-cvlab/CE-Nav). 이는 논문의 abstract/project 주장 범위이며 독립 재현 결과가 아니다.
 

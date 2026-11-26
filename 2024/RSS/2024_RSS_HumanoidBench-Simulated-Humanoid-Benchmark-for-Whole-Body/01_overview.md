@@ -10,7 +10,7 @@
 - Authors: Carmelo Sferrazza, Dun-Ming Huang, Xingyu Lin, Youngwoon Lee, Pieter Abbeel
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, Benchmark, whole-body control, loco-manipulation
+- Tags: Robotics, humanoid, Benchmark, whole-body control, loco-manipulation, Reinforcement Learning
 - Official paper: https://www.roboticsproceedings.org/rss20/p061.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss20/p061.pdf
 - Code/Project: https://humanoid-bench.github.io/

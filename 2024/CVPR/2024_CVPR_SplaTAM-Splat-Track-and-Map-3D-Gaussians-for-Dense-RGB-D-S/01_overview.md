@@ -10,7 +10,7 @@
 - Authors: Nikhil Keetha, Jay Karhade, Krishna Murthy Jatavallabhula, Gengshan Yang, Sebastian Scherer, Deva Ramanan, Jonathon Luiten
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, geometry, 3D Vision
+- Tags: Gaussian Splatting, geometry, 3D Vision, SLAM
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ SplaTAM은 카메라 자세를 모르는 RGB-D 스트림에서 가우시안 지�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3. Method), p. 3 (3. Method)이다.
+
+## 검색 태그 근거
+
+RGB-D 프레임을 누적 지도에 렌더링해 카메라 자세를 추적하고, 새로 관측한 영역에 가우시안을 추가한다. 평가 지표는 카메라 궤적 오차와 재구성 품질이다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Keetha_SplaTAM_Splat_Track__Map_3D_Gaussians_for_Dense_RGB-D_CVPR_2024_paper.pdf#page=6)

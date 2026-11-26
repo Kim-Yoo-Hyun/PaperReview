@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, the number of discretized bins needed to approximate a continuous action space grows exponentially with increasing dimensionality, making it difficult to ... | rigid/articulated object와 robot manipulator contact scene | body wording is the source claim |
-| Observation / input | In particular, given RGB-D observations \protect \mathbf {o}, language instruction \protect \mathbf {l} and robot proprioception \protect \mathbf {c}, our goal is ... | RGB-D/point cloud, object state와 contact/task observation | exact sensor/frame/preprocessing from PDF body |
-| State / latent | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception | object geometry, affordance, contact mode 또는 end-effector state | notation and tensor shape require body check |
-| Output / action | hybrid, policy, learns, latent, diffusion, field, visual, observations | grasp, pose, force 또는 end-effector trajectory | exact unit/frame/decoder require body check |
-| Target outcome | completion, contact success and robustness | task completion, contact success, pose/force error와 generalization | metric/denominator are in 04 evidence |
+| Target problem | However, the number of discretized bins needed to approximate a continuous action space grows exponentially with increasing dimensionality, making it difficult to ... | RLBench 및 실제 로봇팔의 다과제 조작 | body wording is the source claim |
+| Observation / input | In particular, given RGB-D observations \protect \mathbf {o}, language instruction \protect \mathbf {l} and robot proprioception \protect \mathbf {c}, our goal is ... | RGB-D로 복원한 점군과 언어 지시 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception | 세 평면의 공간 특징 및 행동 확산 필드 | notation and tensor shape require body check |
+| Output / action | hybrid, policy, learns, latent, diffusion, field, visual, observations | 그리퍼의 자세·개폐 명령 | exact unit/frame/decoder require body check |
+| Target outcome | completion, contact success and robustness | 과제별 조작 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

@@ -14,6 +14,7 @@
 - Venue verification: https://arxiv.org/abs/2512.05107
 - Code/Project: https://sites.google.com/view/stare-vla
 - Code: not_identified
+- 방법·평가 확인 (2026-11-25): [원문 6, 7, 8, 9, 10쪽](https://arxiv.org/pdf/2512.05107v2#page=6) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. arXiv v2 및 저자 project 확인. 검색 색인의 ICLR 표기는 공식 proceedings/forum으로 확인하지 못해 arXiv 2025로 유지한다. 공개 구현 URL은 식별하지 못했다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance

@@ -10,7 +10,7 @@
 - Authors: Xinjun Li, Wenfei Yang, Zhixin Cheng, Jiacheng Deng, Fei Wang, Chen Qian, Tianzhu Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: geometry, point cloud, 3D Vision
+- Tags: geometry, point cloud, 3D Vision, 3D Registration
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/49f42aafbcce59b2665640cb9f3d794f-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/49f42aafbcce59b2665640cb9f3d794f-Paper-Conference.pdf
 - Code/Project: not identified

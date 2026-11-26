@@ -10,7 +10,7 @@
 - Authors: Weiyu Li, Jiarui Liu, Hongyu Yan, Rui Chen, Yixun Liang, Xuelin Chen, Ping Tan, Xiaoxiao Long
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Tags: Diffusion, Generation, 3D Vision, shape
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ CraftsMan3D는 초기 메시 생성과 국소 기하 정제를 나눠 영상으�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Multi-view guided 3D generation model), p. 5 (3.2. Multi-view guided 3D generation model), p. 4 (3.1. Data Preprocessing)이다.
+
+## 검색 태그 근거
+
+다중 시점 이미지와 시점 조건을 받아 잠재 확산으로 초기 메시를 만든다. 참조에 따라 국소 법선 지도를 다듬어 표면을 정제할 수 있다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=3) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_CraftsMan3D_High-fidelity_Mesh_Generation_with_3D_Native_Diffusion_and_Interactive_CVPR_2025_paper.pdf#page=8)

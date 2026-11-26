@@ -10,7 +10,7 @@
 - Authors: Yutong Chen, Marko Mihajlovic, Xiyi Chen, Yiming Wang, Sergey Prokudin, Siyu Tang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, point cloud, 3D Vision
+- Tags: Gaussian Splatting, point cloud, 3D Vision, Transformer
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/8cbde11e5e271ef9ff67fc9f292e43ed-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ SplatFormer는 기존 가우시안 장면을 점 집합으로 처리해 학습 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 1 (1 INTRODUCTION), p. 15 (B IMPLEMENTATION DETAILS)이다.
+
+## 검색 태그 근거
+
+이미 구축한 장면 가우시안을 속성이 붙은 3D 점 집합으로 보고 점 트랜스포머로 정제한다. 훈련 카메라에서 멀리 벗어난 뷰의 렌더링 오류를 평가했다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=4) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/8cbde11e5e271ef9ff67fc9f292e43ed-Paper-Conference.pdf#page=8)

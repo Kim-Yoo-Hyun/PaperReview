@@ -16,7 +16,7 @@ RoboTwin2.0과 실제 양팔 조작을 평가한다.
 
 ### Evidence Boundary
 
-Exact assumptions·negative results·transfer limits는 본문 확인 필요. 특히 학습 depth 정답 비용, 추론 depth 필요 여부, unseen camera/object 전이은 아직 확정하지 않았다.
+Exact assumptions·negative results·transfer limits는 본문 확인 필요. 특히 깊이 교사 정답 생성 비용과 새로운 시점·물체에서의 일반화는 아직 확정하지 않았다.
 
 ## Researcher interpretation
 

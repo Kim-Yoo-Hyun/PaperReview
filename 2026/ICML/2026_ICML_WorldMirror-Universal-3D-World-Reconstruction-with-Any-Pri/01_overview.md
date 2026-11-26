@@ -10,7 +10,7 @@
 - Authors: Yifan Liu, Zhiyuan Min, Zhenwei Wang, Junta Wu, Tengfei Wang, Yixuan Yuan, Yawei Luo, Chunchao Guo
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, 3D Vision
+- Tags: 3D reconstruction, 3D Vision, camera pose
 - Official paper: https://icml.cc/virtual/2026/poster/65052
 - Full-text retrieval: https://arxiv.org/pdf/2510.10726.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ WorldMirror는 입력 영상과 선택적으로 주어진 카메라·깊이 정�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.2. Unified Spatial Prediction), p. 3 (3. Method)이다.
+
+## 검색 태그 근거
+
+여러 RGB 영상과 선택 가능한 내부 파라미터·카메라 자세·깊이를 토큰으로 묶어 장면 기하를 예측한다. 깊이 입력을 제공하거나 생략하는 조건과 카메라 자세 추정 성능을 비교한다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=3) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/liu26cw/liu26cw.pdf#page=7)

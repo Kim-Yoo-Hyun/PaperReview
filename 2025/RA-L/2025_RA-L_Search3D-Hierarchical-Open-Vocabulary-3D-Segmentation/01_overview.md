@@ -10,7 +10,7 @@
 - Authors: Ayca Takmaz, Alexandros Delitzas, Robert W. Sumner, Francis Engelmann, Johanna Wald, Federico Tombari
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, semantic
+- Tags: 3D Vision, semantic, 3D segmentation
 - Official paper: https://arxiv.org/abs/2409.18431
 - Full-text retrieval: https://arxiv.org/pdf/2409.18431
 - Code/Project: http://search3d-segmentation.github.io/

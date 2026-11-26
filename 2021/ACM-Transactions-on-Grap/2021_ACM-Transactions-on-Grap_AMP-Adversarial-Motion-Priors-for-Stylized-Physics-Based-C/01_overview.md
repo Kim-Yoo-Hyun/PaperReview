@@ -10,7 +10,7 @@
 - Authors: Xue Bin Peng, Ze Ma, Pieter Abbeel, Sergey Levine, Angjoo Kanazawa
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, Reinforcement Learning, motion imitation, whole-body control
+- Tags: humanoid, Reinforcement Learning, motion imitation, whole-body control, physics-based control
 - Official paper: https://xbpeng.github.io/projects/AMP/
 - Full-text retrieval: https://xbpeng.github.io/projects/AMP/AMP_2021.pdf
 - Code/Project: https://xbpeng.github.io/projects/AMP/
@@ -44,12 +44,14 @@ AMP는 동작 자료와 시뮬레이션 캐릭터의 상태 전이를 구별하�
 
 ## Observation, State, and Output Interface
 
+참조 동작과 정책 상태 전이를 판별하는 적대적 스타일 보상과 과제 보상으로 행동을 학습한다. 정책의 관절 목표는 PD 제어로 실행된다. 인간형 및 티라노사우루스 캐릭터의 이동·목표 접촉을 물리 시뮬레이션에서 평가했다. [PDF 5쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=5) · [PDF 9쪽](https://xbpeng.github.io/projects/AMP/AMP_2021.pdf#page=9)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | 6.2 Network Architecture Each policy 𝜋is modeled by a neural network that maps a given state s𝑡and goal g to a Gaussian distribution over actions 𝜋(a𝑡/s𝑡, g) = N (𝜇(s𝑡, g), Σ), ... | proprioception, reference pose/motion, visual or language command | p. 7 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
-| State/latent | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian, distribution, over | whole-body pose, balance/contact state와 skill/mode | p. 7 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND) |
-| Output/action | Behavioral cloning can be used to directly fit a policy to map from states observed in M to their corresponding actions using supervised learning [Bojarski et al. | joint/whole-body action, motion target 또는 task trajectory | p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
-| Objective/outcome | 5.2 Least-Squares Discriminator The standard GAN objective detailed in Equation 5 typically uses a sigmoid cross-entropy loss function. | tracking, balance, skill/task success와 recovery | p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
+| Observation/input | 6.2 Network Architecture Each policy 𝜋is modeled by a neural network that maps a given state s𝑡and goal g to a Gaussian distribution over actions 𝜋(a𝑡/s𝑡, g) = N (𝜇(s𝑡, g), Σ), ... | 캐릭터 상태·과제 목표와 학습용 참조 동작 | p. 7 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
+| State/latent | Network, Architecture, policy, modeled, neural, maps, given, state, goal, Gaussian, distribution, over | 상태 전이를 평가하는 동작 판별기 | p. 7 (4 BACKGROUND), p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND) |
+| Output/action | Behavioral cloning can be used to directly fit a policy to map from states observed in M to their corresponding actions using supervised learning [Bojarski et al. | 저수준 PD 제어기에 보낼 관절 목표 | p. 4 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
+| Objective/outcome | 5.2 Least-Squares Discriminator The standard GAN objective detailed in Equation 5 typically uses a sigmoid cross-entropy loss function. | 과제 보상 및 생성한 움직임의 스타일 | p. 5 (4 BACKGROUND), p. 5 (4 BACKGROUND), p. 4 (4 BACKGROUND) |
 
 ## Main Claims and Actual Contribution
 

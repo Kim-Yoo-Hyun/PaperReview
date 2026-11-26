@@ -10,7 +10,7 @@
 - Authors: Xun Huang, Jinlong Wang, Qiming Xia, Siheng Chen, Bisheng Yang, Xin Li, Cheng Wang, Chenglu Wen
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
+- Tags: sensor fusion, LiDAR, Diffusion, 3D detection, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Huang_V2X-R_Cooperative_LiDAR-4D_Radar_Fusion_with_Denoising_Diffusion_for_3D_CVPR_2025_paper.pdf
 - Code/Project: not identified

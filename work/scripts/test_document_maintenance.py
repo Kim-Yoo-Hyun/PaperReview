@@ -1,26 +1,46 @@
 #!/usr/bin/env python3
 """Regression checks for Markdown coverage and canonical registry views."""
 
-import tempfile
 import argparse
+import csv
 import json
+import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 import audit_repository as audit
+import build_registry_catalogs as catalogs
 import build_registry_views as views
 import audit_note_artifacts as artifacts
 import build_lit_survey as survey
 import build_reading_tiers as reading
 from normalize_taxonomy import registry
 import registry_profiles as profiles
-from reconcile_registry import build_facets
+from reconcile_registry import build_facets, read_facet_reviews, refresh_insight_position
 from render_source_audit import OPEN, PASS, bibliography_digest, check_applied, cited_statement, current_checks, summary_headings
 from registry_schema import enrich_record, validate_record_shape
 
 
 class DocumentMaintenanceTest(unittest.TestCase):
+    def test_paper_folder_uses_the_period_at_each_year_boundary(self):
+        for year, parent in [(1959, "1959"), (1960, "1960-2010/1960"), (2010, "1960-2010/2010"),
+                             (2011, "2011-2020/2011"), (2020, "2011-2020/2020"), (2021, "2021")]:
+            with self.subTest(year=year):
+                item = {"year": year, "venue": "RSS", "title": "Study"}
+                self.assertEqual(survey.folder_name(item), f"{parent}/RSS/{year}_RSS_Study")
+
+    def test_stale_insight_position_retires_only_the_generated_line(self):
+        line = "- **Registry position:** `CORE` in `old track`; tags: `old tag`."
+        heading = "### Dependency and evolution\n\n"
+        manual = "\n\n## Analyst notes\n\n" + line + "\n"
+        original = heading + line + manual
+        self.assertEqual(refresh_insight_position(original, "CORE", "old track", ["old tag"]), original)
+        updated = refresh_insight_position(original, "NEXT", "new track", ["new tag"])
+        self.assertIn("[논문 개요](./01_overview.md)", updated)
+        self.assertTrue(updated.endswith(manual))
+        self.assertEqual(refresh_insight_position(updated, "NEXT", "new track", ["new tag"]), updated)
+
     def test_every_tag_match_survives_alias_rendering_and_tier_parsing(self):
         papers = [
             {"category": "Control", "title": f"Paper {i:02d}", "folder": f"2025/RSS/p{i}",
@@ -80,6 +100,20 @@ class DocumentMaintenanceTest(unittest.TestCase):
         facets = build_facets(paper)
         self.assertIn("force_torque", facets["modality"])
         self.assertIn("contact_rich", facets["interaction"])
+
+    def test_reviewed_search_facets_survive_regeneration(self):
+        row = {"id": "pr-0001", "postcheck": {"removed_search_cues": {"modality": "point_cloud"}},
+               "taxonomy_review": {"legacy_tags": {"facets": {"interaction": [], "learning": ["imitation_learning"]}}}}
+        with tempfile.TemporaryDirectory() as directory:
+            ledger = Path(directory) / "audit.jsonl"
+            ledger.write_text(json.dumps(row) + "\n")
+            rules = read_facet_reviews(ledger)
+        paper = {"title": "Navigation from camera images", "tags": ["3D geometry", "reinforcement learning"]}
+        facets = build_facets(paper, **rules[row["id"]])
+        self.assertEqual(facets["modality"], ["rgb"])
+        self.assertEqual(facets["interaction"], [])
+        self.assertEqual(facets["learning"], ["imitation_learning"])
+        self.assertIn("navigation", build_facets(paper)["interaction"])
 
     def test_final_byline_correction_preserves_the_earlier_bibliographic_digest(self):
         old, new = ["Ada Doe"], ["Ada M. Doe"]
@@ -266,6 +300,38 @@ class DocumentMaintenanceTest(unittest.TestCase):
                 self.assertFalse(audit.path_has_exact_case("2022/arXiv/Paper"))
                 self.assertFalse(audit.path_has_exact_case("../outside"))
 
+    def test_markdown_audit_rejects_wrong_case_in_a_relative_path(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "Links").mkdir()
+            (root / "Links" / "Note.md").write_text("# Note\n")
+            (root / "README.md").write_text("# Guide\n[works](./Links/Note.md)\n[broken](./links/Note.md)\n")
+            errors = []
+            with patch.object(audit, "ROOT", root):
+                self.assertEqual(audit.audit_markdown_documents(errors)["links"], 2)
+            self.assertEqual(len(errors), 1)
+            self.assertIn("./links/Note.md", errors[0])
+
+    def test_pdf_download_prefers_official_source_and_cleans_invalid_response(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            paper = {"folder": "2026/RSS/paper", "pdf": "https://example.org/legacy.pdf",
+                     "sources": {"paper_pdf": {"url": "https://example.org/official.pdf"}}}
+            response = MagicMock(status_code=200)
+            response.iter_content.return_value = [b"not a PDF"]
+            with patch.object(survey, "ROOT", root), patch.object(survey.requests, "get") as get:
+                get.return_value.__enter__.return_value = response
+                self.assertIn("not a valid PDF", survey.download_pdf(paper)["pdf_status"])
+                self.assertEqual(get.call_args.args[0], "https://example.org/official.pdf")
+                self.assertEqual(list((root / paper["folder"]).iterdir()), [])
+                valid = b"%PDF" + b" " * 20_000
+                response.iter_content.return_value = [valid]
+                self.assertEqual(survey.download_pdf(paper)["pdf_status"], "downloaded")
+                self.assertEqual((root / paper["folder"] / "paper.pdf").read_bytes(), valid)
+                get.reset_mock()
+                self.assertEqual(survey.download_pdf(paper)["pdf_status"], "downloaded")
+                get.assert_not_called()
+
     def test_pdf_control_glyphs_are_reported_and_never_auto_cleaned(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -348,6 +414,58 @@ class DocumentMaintenanceTest(unittest.TestCase):
         self.assertEqual(rows[0]["primary_source_scope"], "paper_specific")
         self.assertEqual(rows[0]["evidence_level"], "ABSTRACT_CHECKED")
         self.assertEqual(rows[0]["reading_status"], "N/A")
+
+    def test_index_sequence_comes_from_current_reading_cohort(self):
+        papers = [
+            {"paper_id": paper_id, "title": paper_id, "year": 2025, "folder": f"2025/RSS/{paper_id}"}
+            for paper_id in ("active", "demoted")
+        ]
+        tiers = {"active": {"tier": "NEXT"}, "demoted": {"tier": "REFERENCE"}}
+        records = {"active": {"sequence": "13", "status": "UNREAD"}, "demoted": {"sequence": "2", "status": "READ"}}
+        with patch.object(views, "read_tiers", return_value=tiers), patch.object(views, "read_status", return_value=records):
+            _, rows = views.build_index(papers, {"entries": []})
+        self.assertEqual([(r["sequence"], r["reading_status"]) for r in rows], [("13", "UNREAD"), ("", "READ")])
+
+    def test_index_audit_rejects_valid_but_stale_path_facets_and_source(self):
+        paper = {
+            "paper_id": "paper", "title": "Study", "year": 2020,
+            "folder": "2011-2020/2020/RSS/paper", "facets": {"learning": ["imitation_learning"]},
+            "sources": {"primary": {"url": "https://example.org/accepted"}},
+        }
+        with patch.object(views, "read_tiers", return_value={}), patch.object(views, "read_status", return_value={}):
+            fields, rows = views.build_index([paper], {"entries": []})
+        rows[0].update(overview_path="./2020/RSS/paper/01_overview.md", facets="{}", primary_source="https://example.org/old")
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "index.csv"
+            with path.open("w", newline="") as handle:
+                writer = csv.DictWriter(handle, fields)
+                writer.writeheader()
+                writer.writerows(rows)
+            errors = []
+            audit.audit_registry_index(path, {"paper": paper}, errors)
+        self.assertCountEqual(errors, [f"generated registry index {field} mismatch: paper"
+                                        for field in ("overview_path", "facets", "source URL")])
+
+    def test_catalog_audit_rejects_stale_note_path_and_manifest_cue_list(self):
+        papers = {"paper": {"folder": "2011-2020/2020/RSS/paper", "evaluation_profile": {"metric_cues": []}}}
+        entry = {
+            "metric_id": "metric:spl", "name": "SPL",
+            "paper_references": [{"paper_id": "paper", "source": "2020/RSS/paper/04_evaluation.md", "evidence": "cue_only"}],
+        }
+        catalog = {"schema_version": audit.SCHEMA_VERSION, "catalog_type": "metric", "entries": [entry]}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "metric_catalog.json"
+            path.write_text(json.dumps(catalog))
+            errors = []
+            audit.audit_catalog(path, "metric", papers, errors)
+        self.assertEqual(errors, ["metric catalog note path mismatch: metric:spl paper",
+                                  "metric catalog differs from evaluation cues for 1 papers"])
+
+    def test_map_is_not_a_mean_average_precision_cue(self):
+        aliases = next(aliases for name, aliases, *_ in catalogs.METRIC_VOCAB if name == "mAP")
+        self.assertFalse(catalogs.cue_lines("The policy builds a local map from depth.", aliases))
+        self.assertTrue(catalogs.cue_lines("The detector reports mAP@0.5.", aliases))
+        self.assertTrue(catalogs.cue_lines("Mean Average Precision is the reported metric.", aliases))
 
     def test_stale_derived_identifier_flag_does_not_override_manifest(self):
         paper = {

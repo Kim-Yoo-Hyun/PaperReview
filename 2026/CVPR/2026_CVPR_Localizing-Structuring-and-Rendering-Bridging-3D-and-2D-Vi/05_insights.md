@@ -41,14 +41,14 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `image/video, language instruction, proprioception과 history → language-grounded task state와 action-policy context → continuous action, pose 또는 action chunk`.
-- 이 논문의 재사용 가능한 지점은 Given a natural language instruction I which is transformed to elang by VLM, like [43], and multi-view RGB-D observations O = {oi}Mobs i=1 , our final goal is to predict a 6-DoF ...를 Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric understanding into imageinterpretable action policies. • We ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 language-grounded task state와 action-policy context가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 (3) Two-stage training: 76.2% (-4.3%)-without end-to-end gradient flow, stages cannot co-adapt.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `언어 지시와 보정된 다중 RGB-D 점군 → 관심 영역 내 점군과 렌더링한 시점 특징 → 말단의 위치·회전 및 그리퍼 행동`.
+- 이 논문의 재사용 가능한 지점은 Given a natural language instruction I which is transformed to elang by VLM, like [43], and multi-view RGB-D observations O = {oi}Mobs i=1 , our final goal is to predict a 6-DoF ...를 Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric understanding into imageinterpretable action policies. • We ...로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 관심 영역 내 점군과 렌더링한 시점 특징가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 (3) Two-stage training: 76.2% (-4.3%)-without end-to-end gradient flow, stages cannot co-adapt.에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric understanding into imageinterpretable action policies. • We ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 
 ### Dependency and evolution
 
-- **Registry position:** `REFERENCE` in `VLA and generalist robot policies`; tags: `VLA, 3D-2D alignment, Robotics`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** not recorded (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

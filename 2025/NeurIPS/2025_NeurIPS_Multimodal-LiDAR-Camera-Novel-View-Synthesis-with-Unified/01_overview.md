@@ -11,7 +11,7 @@
 - 저자 판본: NeurIPS 게재본은 Haiyun Wei를 다섯 번째 저자로 싣는다. 학회 웹 서지에는 여덟 번째로 올라 있다. [표제면](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.neurips.cc/paper_files/paper/2025/hash/70915b08a205ea5522528690d93518f6-Abstract-Conference.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: geometry, sensor fusion, LiDAR, 3D Vision
+- Tags: geometry, sensor fusion, LiDAR, 3D Vision, camera pose
 - Official paper: https://neurips.cc/virtual/2025/poster/118967
 - Full-text retrieval: https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ MUP은 정확한 센서 자세가 주어지지 않은 주행 시퀀스에서 카
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 1 (1 Introduction), p. 3 (1 Introduction), p. 5 (4 Methodology)이다.
+
+## 검색 태그 근거
+
+카메라 영상과 라이다 스캔의 공유 신경장을 최적화하면서 두 센서의 자세를 보정한다. 주행 자료에서 카메라 뷰와 라이다 스캔을 새 관측 위치에서 합성하는 성능을 비교한다. [원문 4쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=4) · [원문 7쪽](https://papers.neurips.cc/paper_files/paper/2025/file/70915b08a205ea5522528690d93518f6-Paper-Conference.pdf#page=7)

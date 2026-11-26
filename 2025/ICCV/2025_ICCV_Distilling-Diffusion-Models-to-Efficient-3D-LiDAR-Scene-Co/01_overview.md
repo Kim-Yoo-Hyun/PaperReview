@@ -11,7 +11,7 @@
 - 저자 판본: ICCV 게재본의 아홉 번째 저자 표기는 Perry Pengyun GU다. [표제면](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=1) · [학회 서지](https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html)
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, Diffusion, Generation, 3D Vision
+- Tags: LiDAR, Diffusion, Generation, 3D Vision, distillation, shape completion
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -48,12 +48,14 @@ ScoreLiDAR는 부분 LiDAR 스캔에서 장면 전체를 완성하는 확산 모
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Given the input x0 and the condition c (optional), the noisy data xt can be calculated by Eq. | RGB-D, image set, point cloud, depth와 camera pose | p. 3 (3.1. Brief introduction of diffusion models), p. 3 (3.2. 3D LiDAR scene completion diffusion models) |
-| State/latent | Given, input, condition, optional, noisy, data, calculated, LiDAR, scan, ground, truth, diffusion | geometry, map, object/relationship state | p. 3 (3.1. Brief introduction of diffusion models), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 4 (3.2. 3D LiDAR scene completion diffusion models) |
-| Output/action | Given the input LiDAR scan P and ground truth G, a diffusion model can be trained to perform 3D LiDAR scene completion. | point map, pose, scene graph, affordance 또는 query result | p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 4 (3.2. 3D LiDAR scene completion diffusion models), p. 5 (4.2. Structural loss) |
-| Objective/outcome | To solve this issue, we introduce the scene-wise loss, which minimizes the distance between the ground truth scene G and the completed scene G0, Lscene = 1 /G0/ X p0 i ∈G0 ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (4.2. Structural loss), p. 4 (4.1. Distillation for 3D LiDAR scene completion), p. 5 (4.2. Structural loss) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 부분 라이다 스캔 |
+| 표현 | 거리·깊이 기반 장면 특징과 증류한 모델 |
+| 출력 | 밀도를 높인 완성 라이다 장면 |
+| 평가 | SemanticKITTI의 기하 정확도와 샘플링 시간 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -72,3 +74,7 @@ SemanticKITTI 표 1에서 정제 단계를 포함한 프레임당 샘플링 시�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3.2. 3D LiDAR scene completion diffusion models), p. 4 (4. Method), p. 3 (3.1. Brief introduction of diffusion models)이다.
+
+## 검색 태그 근거
+
+부분 라이다 스캔에서 전체 장면을 복원하는 확산 교사의 결과를 짧은 단계의 학생 모델로 증류한다. SemanticKITTI에서 형상 완성 품질과 샘플링 시간을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Zhang_Distilling_Diffusion_Models_to_Efficient_3D_LiDAR_Scene_Completion_ICCV_2025_paper.pdf#page=7)

@@ -8,7 +8,7 @@
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: RL, evaluation, learning-foundation
+- Tags: RL, evaluation, learning-foundation, policy evaluation, offline-evaluation
 - Aliases: AOPS
 - Official paper: https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html
 - Venue verification: https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html
@@ -35,6 +35,10 @@ Logged data·policy 후보·평가 결과 → 다음 policy 선택.
 여러 benchmark와 다수 후보 정책의 selection 효율을 보고한다.
 
 근거: [공식 paper/abstract](https://papers.nips.cc/paper_files/paper/2021/hash/cec2346566ba8ecd04bfd992fd193fb3-Abstract.html).
+
+## 검색 태그 근거
+
+정책 간 행동 유사성으로 반환값의 상관을 모형화하고, 오프라인 추정과 소수의 온라인 평가로 어느 후보를 선택할지 정한다. DeepMind Control Suite, Kinova Jaco 모의 조작, Atari에서 기존 정책들을 비교한다. [원문 3쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=3) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2021/file/cec2346566ba8ecd04bfd992fd193fb3-Paper.pdf#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

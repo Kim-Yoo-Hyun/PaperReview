@@ -10,7 +10,7 @@
 - Authors: Antoine Guédon, Vincent Lepetit
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision, surface reconstruction
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -76,3 +76,7 @@ SuGaR는 렌더링용 3D 가우시안을 장면 표면을 따라 정렬해 고�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (4. Method), p. 5 (4.1. Aligning the Gaussians with the Surface), p. 4 (4.1. Aligning the Gaussians with the Surface)이다.
+
+## 검색 태그 근거
+
+포즈가 알려진 여러 영상에서 최적화한 가우시안을 표면에 정렬하고 메시를 추출한다. 메시 및 가우시안 표현으로 표면 복원과 자유 시점 렌더링을 평가했다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Guedon_SuGaR_Surface-Aligned_Gaussian_Splatting_for_Efficient_3D_Mesh_Reconstruction_and_CVPR_2024_paper.pdf#page=7)

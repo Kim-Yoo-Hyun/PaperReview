@@ -10,7 +10,7 @@
 - Authors: David Hoeller, Nikita Rudin, Dhionis Sako, Marco Hutter
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, quadruped locomotion, parkour, Navigation
+- Tags: Robotics, quadruped locomotion, parkour, Navigation, hierarchical policy
 - Official paper: https://arxiv.org/abs/2306.14874
 - Full-text retrieval: https://arxiv.org/pdf/2306.14874
 - Code/Project: https://anymal-parkour.ethz.ch/

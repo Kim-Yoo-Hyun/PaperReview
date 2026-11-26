@@ -10,7 +10,7 @@
 - Authors: Linqing Zhong, Yi Liu, Yifei Wei, Ziyu Xiong, Si Liu, Guanghui Ren
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Chain-of-Thought, Planning
+- Tags: VLA, Chain-of-Thought, Flow Matching
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf
 - Code/Project: https://github.com/AgibotTech/ACoT-VLA
@@ -44,12 +44,14 @@ ACoT-VLA는 행동 공간에서 먼저 거친 기준 궤적을 추론하고 이�
 
 ## Observation, State, and Output Interface
 
+명시적 추론기는 flow matching으로 중간 행동 궤적을 생성하고 암시적 특징과 함께 최종 행동 헤드를 조건화한다. 시연 행동이 감독 신호다. LIBERO 계열·VLABench와 AgiBot G1·AgileX의 실물 과제에서 평가했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=4) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhong_ACoT-VLA_Action_Chain-of-Thought_for_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action Policy Instruction Observation Actions Reference Actions Fig ... | image/video, language instruction, proprioception과 history | p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation) |
-| State/latent | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model, Goal-image, Reference | language-grounded task state와 action-policy context | p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction) |
-| Output/action | Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the specified task. | continuous action, pose 또는 action chunk | p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction), p. 1 (1. Introduction) |
-| Objective/outcome | The entire framework is optimized under a standard flow-matching mean-squared error (MSE) objective. | instruction following, task success, generalization과 latency | p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 4 (3.2. Explicit Action Reasoner) |
+| Observation/input | (a) Pre-trained VLM Action Policy Instruction Sub-tasks Observation Actions (b) World Model Action Policy Instruction Goal-image Observation Actions (c) Pre-trained VLM Action Policy Instruction Observation Actions Reference Actions Fig ... | 영상·언어 지시 및 학습 시의 시연 행동 | p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation) |
+| State/latent | Pre-trained, VLM, Action, Policy, Instruction, Sub-tasks, Observation, Actions, World, Model, Goal-image, Reference | 명시적 기준 행동 궤적과 암시적 행동 특징 | p. 1 (1. Introduction), p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction) |
+| Output/action | Given a natural language instruction l and current visual observation ot, the generalist robot policy πθ aims to predict action sequences at:t+H-1 that accomplishes the specified task. | 최종 행동 시퀀스 | p. 3 (3.1. Problem Formulation), p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Objective/outcome | The entire framework is optimized under a standard flow-matching mean-squared error (MSE) objective. | 시뮬레이션·실물의 조작 성공 | p. 5 (3.4. Action-Guided Prediction), p. 5 (3.4. Action-Guided Prediction), p. 4 (3.2. Explicit Action Reasoner) |
 
 ## Main Claims and Actual Contribution
 

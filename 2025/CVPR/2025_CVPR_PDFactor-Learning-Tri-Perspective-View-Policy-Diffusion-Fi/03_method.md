@@ -59,9 +59,9 @@ PDF body method statement (p. 3 (3. Method), p. 5 (3. We aim to model their join
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception, goal, learn, multi-task, policy | RGB-D/point cloud, object state와 contact/task observation | body cue; exact tensor/frame verify |
-| State/latent | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception | object geometry, affordance, contact mode 또는 end-effector state | body cue; notation verify |
-| Action/output | PDFactor, novel, multi-task, manipulation, agent, leverages, tri-perspective, view, transformer, learn | grasp, pose, force 또는 end-effector trajectory | body cue; unit/decoder verify |
+| Input/observation | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception, goal, learn, multi-task, policy | RGB-D로 복원한 점군과 언어 지시 | body cue; exact tensor/frame verify |
+| State/latent | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception | 세 평면의 공간 특징 및 행동 확산 필드 | body cue; notation verify |
+| Action/output | PDFactor, novel, multi-task, manipulation, agent, leverages, tri-perspective, view, transformer, learn | 그리퍼의 자세·개폐 명령 | body cue; unit/decoder verify |
 | Objective/constraint | gripper, open, state, collision, simply, pass, latent, vector, protect, mathbf | task/contact/pose objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -73,7 +73,7 @@ PDF body method statement (p. 3 (3. Method), p. 5 (3. We aim to model their join
 - **p. 4 / 3.3. Tri-Perspective View Transformer - extractive body cue:** We concatenate the triplane and instruction sequences as input tokens which are then processed by a sequence of transformer blocks.
 - **p. 3 / 3. Method - extractive body cue:** In this section, we elaborate on the proposed PDFactor, a multi-task agent that learns a language-conditioned policy for real-world robotic manipulation.
 - **p. 4 / 3.3. Tri-Perspective View Transformer - extractive body cue:** The tri-perspective view transformer is responsible to extract latent triplane features from projected tri-perspective view features \ifmm ode \lb race \else \textbraceleft \fi \mathbf {V}_{\text ...
-- **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
+- **Normalized interface:** observation=RGB-D로 복원한 점군과 언어 지시; state=세 평면의 공간 특징 및 행동 확산 필드; output/action=그리퍼의 자세·개폐 명령.
 
 ## Temporal and Runtime Contract
 

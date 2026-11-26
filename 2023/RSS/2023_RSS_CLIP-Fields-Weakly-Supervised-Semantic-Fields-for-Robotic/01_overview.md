@@ -10,7 +10,7 @@
 - Authors: Nur Muhammad (Mahi) Shafiullah, Chris Paxton, Lerrel Pinto, Soumith Chintala, Arthur Szlam
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: CLIP, Robotics, semantic, NeRF
+- Tags: CLIP, Robotics, semantic, implicit representation
 - Official paper: https://arxiv.org/abs/2210.05663
 - Venue verification: https://www.roboticsproceedings.org/rss19/p074.html
 - DOI: https://doi.org/10.15607/RSS.2023.XIX.074

@@ -10,7 +10,7 @@
 - Authors: Lujie Yang, Xiaoyu Huang, Zhen Wu, Angjoo Kanazawa, Pieter Abbeel, Carmelo Sferrazza, C. Karen Liu, Rocky Duan, Guanya Shi
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, loco-manipulation, motion retargeting
+- Tags: Robotics, humanoid, loco-manipulation, motion retargeting, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/2509.26633
 - Full-text retrieval: https://arxiv.org/pdf/2509.26633
 - Code/Project: https://omniretarget.github.io/

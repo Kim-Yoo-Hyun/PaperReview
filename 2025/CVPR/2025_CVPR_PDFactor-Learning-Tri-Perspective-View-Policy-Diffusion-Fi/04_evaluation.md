@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** rigid/articulated object와 robot manipulator contact scene.
-- **Input boundary:** RGB-D/point cloud, object state와 contact/task observation.
-- **Output/decision under evaluation:** grasp, pose, force 또는 end-effector trajectory.
-- **Primary target:** task completion, contact success, pose/force error와 generalization.
+- **Target system/task:** RLBench 및 실제 로봇팔의 다과제 조작.
+- **Input boundary:** RGB-D로 복원한 점군과 언어 지시.
+- **Output/decision under evaluation:** 그리퍼의 자세·개폐 명령.
+- **Primary target:** 과제별 조작 성공.
 - **Detected evaluation headings:** 4. Experiments (p. 6); 4.1. Experiment Setup (p. 6); 4.4. Evaluation in the Real World (p. 8).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 6 (4.2. Comparison with State-of-the-Art Meth
 |---|---|---|---|
 | Robot/hardware/simulator | We collect 15 demonstrations per task and train PDFactor-B with the collected dataset for 10k steps with the same hyperparameters as the simulation data. | embodiment, simulator version and control stack | p. 8 (4.4. Evaluation in the Real World), p. 6 (4.1. Experiment Setup) |
 | Task/environment | Our experiments are conducted on a popular simulation benchmark RLBench [31] which is built upon the CoppelaSim simulator. | reset, timeout, object/scene variation | p. 6 (4.1. Experiment Setup), p. 6 (4.1. Experiment Setup) |
-| Observation/sensor | RGB-D/point cloud, object state와 contact/task observation | calibration, preprocessing, privileged input | p. 3 (3. Method), p. 2 (1. Introduction) |
-| Output/decision | grasp, pose, force 또는 end-effector trajectory | action frame, controller and termination | p. 1 (1. Introduction), p. 2 (1. Introduction) |
+| Observation/sensor | RGB-D로 복원한 점군과 언어 지시 | calibration, preprocessing, privileged input | p. 3 (3. Method), p. 2 (1. Introduction) |
+| Output/decision | 그리퍼의 자세·개폐 명령 | action frame, controller and termination | p. 1 (1. Introduction), p. 2 (1. Introduction) |
 
 ## Metrics and Success Definition
 

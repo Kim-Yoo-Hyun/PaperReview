@@ -1,0 +1,116 @@
+# Method - Information Theoretic MPC for Model-Based Reinforcement Learning
+
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (8 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://ieeexplore.ieee.org/document/7989202/; PDF retrieval source: https://ieeexplore.ieee.org/document/7989202/. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+## Method in One Sentence
+
+PDF body method statement (p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL)): The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking.
+
+## Method Body Digest
+
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking.
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur in real time.
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The resulting derivation and update law are closely related to the cross-entropy method for stochastic diffusion processes [19], as well as reward weighted regression [20].
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The types of reinforcement learning problems encountered in robotic tasks are frequently in the continuous state-action space and high dimensional [1].
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In the second paradigm, model-based RL approaches first learn a model of the system and then train a feedback control policy using the learned model ...
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** However, those prior works are geared towards updating the parameters of a feedback control policy, whereas we focus on optimizing an open-loop control plan for ...
+
+## Design Rationale
+
+- **p. 1 / I. INTRODUCTION - extractive body cue:** This is a significant step forward because it enables a purely data-driven approach to model learning within the MPPI framework.
+- **p. 1 / I. INTRODUCTION - extractive body cue:** This limits the method's ability to discover novel optimal control behaviors.
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The information theoretic MPC algorithm that we develop is originally based on path integral control theory.
+
+## Source Evidence Cues
+
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking.
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur in real time.
+- **Detected method headings:** II. MODEL PREDICTIVE CONTROL (p. 2)
+
+## Pipeline
+
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
+|---|---|---|---|---|---|---|
+| Task / error representation | motion·force 목표를 제어 error로 바꾼다 | joint/task state, reference, wrench | task frame, Jacobian, impedance, selection 또는 error coordinates를 구성 | desired task command | The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking. | p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL) |
+| Dynamics / constraint solve | 목표를 feasible actuator command로 바꾼다 | error, model, constraints | inverse dynamics, QP, MPC, operational mapping 또는 feedback law를 계산 | torque, force, velocity 또는 position command | The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur ... | p. 2 (II. MODEL PREDICTIVE CONTROL) |
+| Feedback / actuation | 실제 state와 disturbance에 따라 command를 닫힌 loop로 보정한다 | sensor feedback과 nominal command | tracking correction, saturation, null-space, fallback 또는 replan을 수행 | next actuation과 response | The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking. | p. 2 (II. MODEL PREDICTIVE CONTROL) |
+
+- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
+
+## Objective / Update Rule
+
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur in real time.
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The resulting derivation and update law are closely related to the cross-entropy method for stochastic diffusion processes [19], as well as reward weighted regression [20].
+- **Formal bridge:** q, q̇, x, wrench -> u/τ subject to dynamics and actuator/contact constraints -> tracking or interaction error -> stability, tracking and constraint satisfaction.
+- **Equation/algorithm anchors:** p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL).
+
+## Variables and Parameters
+
+| Role | PDF-derived terms | Normalized robotics interpretation | Status |
+|---|---|---|---|
+| Input/observation | types, reinforcement, learning, problems, encountered, robotic, tasks, frequently, continuous, state-action, space, high, dimensional, second | joint/task state, reference와 sensor feedback | body cue; exact tensor/frame verify |
+| State/latent | types, reinforcement, learning, problems, encountered, robotic, tasks, frequently, continuous, state-action | state estimate, task-space error와 control decision | body cue; notation verify |
+| Action/output | significant, step, forward, because, enables, purely, data-driven, model, learning, within | torque, force, velocity 또는 position command | body cue; unit/decoder verify |
+| Objective/constraint | complexity, objectives, tasks, increases, computational, cost, optimization, major, problem, since | tracking or interaction error | equation anchor required |
+
+## Observation–State–Action Interface
+
+- **p. 1 / I. INTRODUCTION - extractive body cue:** The types of reinforcement learning problems encountered in robotic tasks are frequently in the continuous state-action space and high dimensional [1].
+- **p. 1 / I. INTRODUCTION - extractive body cue:** In the second paradigm, model-based RL approaches first learn a model of the system and then train a feedback control policy using the learned model ...
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** However, those prior works are geared towards updating the parameters of a feedback control policy, whereas we focus on optimizing an open-loop control plan for ...
+- **p. 2 / II. MODEL PREDICTIVE CONTROL - extractive body cue:** The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking.
+- **Normalized interface:** observation=joint/task state, reference와 sensor feedback; state=state estimate, task-space error와 control decision; output/action=torque, force, velocity 또는 position command.
+
+## Temporal and Runtime Contract
+
+| Contract | Generic domain prior | PDF body cue | Unresolved detail |
+|---|---|---|---|
+| Horizon | instantaneous or receding-horizon reference tracking; exact prediction horizon은 exact value was not selected from the PDF body. | The MPPI controller uses a time horizon of 2.5 seconds, a control frequency of 40 Hz, and performs 1200 samples every time-step. | episode/sequence/action-chunk boundary |
+| Rate / latency | sensor/actuator control tick마다 feedback solve; numeric rate는 paper-specific. | Model predictive control (MPC) or receding horizon control tackles this problem by relying on online optimization of the cost function and is ... | Hz/fps, inference time and control rate |
+| Memory | 현재 joint/task state, reference, contact/wrench feedback; long history 여부 확인 필요. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | dynamics/Jacobian evaluation, QP/MPC/inverse-dynamics solve와 actuator latency가 결정한다. | The MPPI controller uses a time horizon of 2.5 seconds, a control frequency of 40 Hz, and performs 1200 samples every time-step. | hardware, batch and throughput |
+
+## Training vs Inference
+
+- **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** Each training/test iteration consisted of three separate trial runs.
+
+## Method-Specific Formal Details
+
+- **Body-defined terms:** difference, between, classical, MPC, reinforcement, learning, tasks, have, complicated, objectives, beyond, stabilization, tracking, complexity, increases, computational, cost, optimization, major, problem.
+- **Relevant PDF headings:** II. MODEL PREDICTIVE CONTROL (p. 2).
+
+## Evaluation Link
+
+| Method component | Evaluation evidence to inspect | PDF anchor |
+|---|---|---|
+| Task / error representation | The bootstrapping dataset for the cart-pole comes from 5 minutes of multiple MPPI demonstrations using known dynamics but a different cost function ... | p. 5 (V. SIMULATED RESULTS), p. 6 (VI. EXPERIMENTAL RESULTS) |
+| Dynamics / constraint solve | In our prior work, MPPI was successfully applied to this task using a physics-inspired model. | p. 6 (VI. EXPERIMENTAL RESULTS), p. 5 (V. SIMULATED RESULTS) |
+| Feedback / actuation | After one iteration, the algorithm achieves the same level of performance regardless of which network is being used. | p. 5 (V. SIMULATED RESULTS), p. 6 (V. SIMULATED RESULTS) |
+
+## Failure and Ablation Link
+
+- **p. 5 / V. SIMULATED RESULTS - extractive body cue:** Running the algorithm without a bootstrapped neural network results in repeated failures.
+- **p. 6 / VI. EXPERIMENTAL RESULTS - extractive body cue:** The slip angle is defined as -arctan( vy /vx/), where vx and vy are the longitudinal and lateral velocities, respectively.
+- **p. 6 / VI. EXPERIMENTAL RESULTS - extractive body cue:** M(x, y) is the cost-map value at the position (x, y), and Sc is an indicator variable which activates if the magnitude of the slip ...
+- **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** During training, we set the slip angle threshold to 15.76 degrees (0.275 radians), and for the final testing runs we raised it to 21.5 degrees ...
+- **p. 7 / VI. EXPERIMENTAL RESULTS - extractive body cue:** Slip 10 m/s 10.34 9.93 8.05 38.68 11 m/s 9.97 9.43 8.71 34.65 12 m/s 9.88 9.47 8.63 43.72 13 m/s 9.74 9.36 8.44 48.70 ...
+- **p. 5 / V. SIMULATED RESULTS - extractive body cue:** The temperature was set as λ = 1 and the system noise to (2.5, .25, .25, .25), where the 2.5 value corresponds to the thrust ...
+
+## Reproduction Checklist
+
+[공통 검토 기준](../../../../research/READING_STATUS.md#note-checks)
+
+## Verification Questions
+
+- **Evidence anchors reviewed:** method p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), objective p. 2 (II. MODEL PREDICTIVE CONTROL), p. 2 (II. MODEL PREDICTIVE CONTROL), temporal p. 6 (VI. EXPERIMENTAL RESULTS), p. 1 (I. INTRODUCTION), p. 2 (III. INFORMATION THEORETIC CONTROL), p. 5 (IV. MPC WITH NEURAL NETWORK DYNAMICS), p. 1 (I. INTRODUCTION), p. 2 (II. MODEL PREDICTIVE CONTROL).
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (8 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** The key difference between classical MPC and MPC for reinforcement learning is that RL tasks have complicated objectives beyond stabilization or tracking. (p. 2, II. MODEL PREDICTIVE CONTROL).
+- **Objective/update evidence:** The complexity of the objectives in RL tasks increases the computational cost of the optimization, a major problem since optimization must occur in real time. (p. 2, II. MODEL PREDICTIVE CONTROL).
+- **Temporal/runtime evidence:** The MPPI controller uses a time horizon of 2.5 seconds, a control frequency of 40 Hz, and performs 1200 samples every time-step. (p. 6, VI. EXPERIMENTAL RESULTS).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

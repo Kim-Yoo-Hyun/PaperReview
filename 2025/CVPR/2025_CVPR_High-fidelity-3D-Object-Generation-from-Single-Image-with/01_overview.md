@@ -78,3 +78,7 @@ GS-RGBN은 한 장의 물체 영상으로부터 여러 시점의 색과 표면 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3. Method), p. 4 (3.1. Hybrid Voxel-Gaussian)이다.
+
+## 검색 태그 근거
+
+단일 영상에서 파생한 여러 뷰의 색과 표면 법선 특징을 체적 공간에 융합하고, 가우시안 물체를 생성한다. 확산 기반 다중 뷰 생성은 입력 뷰를 보강하는 구성요소다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Shen_High-fidelity_3D_Object_Generation_from_Single_Image_with_RGBN-Volume_Gaussian_CVPR_2025_paper.pdf#page=7)

@@ -32,7 +32,7 @@ not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목
 
 ## Generalization and Failure Cases
 
-not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 학습 depth 정답 비용, 추론 depth 필요 여부, unseen camera/object 전이을 점검한다.
+not recorded — 이번 abstract/project 조사에서 확인하지 못한 항목이며, 논문 자체의 미보고를 뜻하지 않는다. 특히 깊이 교사 정답 생성 비용과 새로운 시점·물체에서의 일반화를 점검한다.
 
 ## Statistics, Efficiency, and Reproducibility
 

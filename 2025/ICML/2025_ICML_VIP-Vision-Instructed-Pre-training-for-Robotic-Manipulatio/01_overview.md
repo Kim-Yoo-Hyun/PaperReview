@@ -10,7 +10,7 @@
 - Authors: Zhuoling Li, Liangliang Ren, Jinrong Yang, Yong Zhao, Xiaoyang Wu, Zhenhua Xu, Xiang Bai, Hengshuang Zhao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, Imitation Learning
+- Tags: Robotics, Imitation Learning, tracking
 - Official paper: https://proceedings.mlr.press/v267/li25by.html
 - Full-text retrieval: https://raw.githubusercontent.com/mlresearch/v267/main/assets/li25by/li25by.pdf
 - Code/Project: not identified

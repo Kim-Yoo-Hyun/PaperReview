@@ -10,7 +10,7 @@
 - Authors: Huan Ling, Seung Wook Kim, Antonio Torralba, Sanja Fidler, Karsten Kreis
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, geometry, Diffusion, Generation, 3D Vision
+- Tags: Gaussian Splatting, geometry, Diffusion, Generation, 3D Vision, video diffusion
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -75,3 +75,7 @@ Align Your Gaussians는 텍스트로 지정한 장면과 움직임을 동적 3D 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Text-to-4D as Compositional Generation), p. 4 (3.2. Text-to-4D as Compositional Generation), p. 3 (2. Background)이다.
+
+## 검색 태그 근거
+
+텍스트 조건부 영상·이미지 확산 모델로 시간에 따라 변형되는 가우시안을 최적화한다. 평가 대상은 여러 시점에서 렌더링하는 동적 그래픽 자산이다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Ling_Align_Your_Gaussians_Text-to-4D_with_Dynamic_3D_Gaussians_and_Composed_CVPR_2024_paper.pdf#page=7)

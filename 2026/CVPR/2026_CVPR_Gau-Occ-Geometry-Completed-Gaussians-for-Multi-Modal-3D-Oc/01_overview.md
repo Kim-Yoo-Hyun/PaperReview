@@ -10,7 +10,7 @@
 - Authors: Chengxin Lv, Yihui Li, Hongyu Yang, YunHong Wang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
+- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision, diffusion model
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ Gau-Occ는 희소 라이다와 다중 시점 영상에서 3D 공간의 점유 �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Given a sparse LiDAR point cloud P = {Pi ∈R3}NP i=1 and multi-view images I = {Ij ∈R3×H×W }NI j=1, the task is to predict a voxelized semantic occupancy grid O ∈R/C/×X×Y ... | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (3.1. 3D Semantic Gaussian Scene Representation), p. 4 (3.2. LiDAR Completion Diffuser (LCD)) |
-| State/latent | Given, sparse, LiDAR, point, cloud, multi-view, images, task, predict, voxelized, semantic, occupancy | geometry, map, object/relationship state | p. 2 (3.1. 3D Semantic Gaussian Scene Representation), p. 4 (3.2. LiDAR Completion Diffuser (LCD)), p. 3 (3.2. LiDAR Completion Diffuser (LCD)) |
-| Output/action | The denoising network ˆϵθ learns to predict the injected noise conditioned on the sparse input P: Ldiff = | point map, pose, scene graph, affordance 또는 query result | p. 4 (3.2. LiDAR Completion Diffuser (LCD)), p. 3 (3.2. LiDAR Completion Diffuser (LCD)), p. 2 (1. Introduction) |
-| Objective/outcome | Following [14], we optimize the model with a joint objective LCE + LLov, combining cross-entropy and Lov´aszSoftmax losses to enhance segmentation accuracy and class balance. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 3 (3.2. LiDAR Completion Diffuser (LCD)), p. 2 (3. Proposed Approach) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 희소 라이다 점군과 다중 시점 RGB |
+| 표현 | 완성 점군에서 초기화한 가우시안과 융합 특징 |
+| 출력 | 복셀의 점유 상태 및 의미 범주 |
+| 평가 | nuScenes 데이터의 점유 IoU와 범주 평균 IoU |
+
+[방법 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=3) · [평가 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -79,3 +81,7 @@ Gau-Occ는 희소 라이다와 다중 시점 영상에서 3D 공간의 점유 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.4. Gaussian Anchor Fusion (GAF)), p. 3 (3.1. 3D Semantic Gaussian Scene Representation), p. 2 (3. Proposed Approach)이다.
+
+## 검색 태그 근거
+
+확산 모델이 보완한 라이다 점군으로 가우시안을 초기화하고 카메라 특징과 합쳐 공간 점유 및 의미를 예측한다. nuScenes 점유 벤치마크에서 비교했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=3) · [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=4) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Lv_Gau-Occ_Geometry-Completed_Gaussians_for_Multi-Modal_3D_Occupancy_Prediction_CVPR_2026_paper.pdf#page=6)

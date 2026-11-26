@@ -10,7 +10,7 @@
 - Authors: Seonghyeon Ye, Yunhao Ge, Kaiyuan Zheng, Shenyuan Gao, Sihyun Yu, George Kurian, Suneel Indupuru, You Liang Tan, Chuning Zhu, Jiannan Xiang, Ayaan Malik, Kyungmin Lee, William Liang, Nadun Ranawaka, Jiasheng Gu, Yinzhen Xu, Guanzhi Wang, Fengyuan Hu, Avnish Narayan, Johan Bjorck, Jing Wang, Gwanghyun Kim, Dantong Niu, Ruijie Zheng, Yuqi Xie, Jimmy Wu, Qi Wang, Ryan Julian, Danfei Xu, Yilun Du, Yevgen Chebotar, Scott Reed, Jan Kautz, Yuke Zhu, Linxi "Jim" Fan, Joel Jang
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Robotics, VLA, world model, zero-shot policy, action representation
+- Tags: Robotics, world model, zero-shot policy, action representation, video diffusion, Flow Matching, cross-embodiment
 - Official paper: https://arxiv.org/abs/2602.15922
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Full-text retrieval: https://arxiv.org/pdf/2602.15922

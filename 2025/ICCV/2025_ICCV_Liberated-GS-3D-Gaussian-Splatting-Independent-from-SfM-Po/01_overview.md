@@ -10,7 +10,7 @@
 - Authors: Weihong Pan, Xiaoyu Zhang, Hongjia Zhai, Xiaojun Xiang, Hanqing Jiang, Guofeng Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, geometry, point cloud, 3D Vision
+- Tags: Gaussian Splatting, geometry, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -78,3 +78,7 @@ Liberated-GS는 조밀한 영상 시퀀스에서 단안 깊이와 초기 가우�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3. Method), p. 2 (3. Method), p. 3 (3.2. Effective Depth Alignment)이다.
+
+## 검색 태그 근거
+
+단안 깊이와 가우시안에서 렌더링한 깊이를 정렬해 기하를 초기화한다. SfM 점군 없이 복원하며, 깊이 영상에 해당하는 값은 RGB 관측에서 내부적으로 얻는다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Pan_Liberated-GS_3D_Gaussian_Splatting_Independent_from_SfM_Point_Clouds_ICCV_2025_paper.pdf#page=7)

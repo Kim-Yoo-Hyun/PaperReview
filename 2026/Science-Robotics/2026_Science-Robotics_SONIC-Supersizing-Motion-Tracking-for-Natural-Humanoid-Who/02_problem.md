@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | These foundation models have shown a consistent pattern: scale unlocks emergent capabilities, generalization, and robustness that smaller models cannot achieve [7-9]. | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ... | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
-| Output / action | context, keyframes, capture, historical, robot, states, joint, positions | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
-| Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
+| Target problem | These foundation models have shown a consistent pattern: scale unlocks emergent capabilities, generalization, and robustness that smaller models cannot achieve [7-9]. | 실물 G1과 모의 휴머노이드의 전신 동작 추종 | body wording is the source claim |
+| Observation / input | Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ... | 고유수용 상태와 인코딩한 동작 명령 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline | 여러 명령 인코더가 공유하는 동작 표현 | notation and tensor shape require body check |
+| Output / action | context, keyframes, capture, historical, robot, states, joint, positions | 관절 제어 명령 | exact unit/frame/decoder require body check |
+| Target outcome | motion/task success and recovery | 추종 오차·생존율 및 실물 명령 추종 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

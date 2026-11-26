@@ -10,7 +10,7 @@
 - Authors: Wenyao Zhang, Hongsi Liu, Zekun Qi, Yunnan Wang, XinQiang Yu, Jiazhao Zhang, Runpei Dong, Jiawei He, He Wang, Zhizheng Zhang, Li Yi, Wenjun Zeng, Xin Jin
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Vision-Language Model, Robotics, Reinforcement Learning
+- Tags: VLA, Vision-Language Model, Robotics, Diffusion
 - Official paper: https://neurips.cc/virtual/2025/poster/118226
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/22d4f952efa13970f0b1ffb22170d416-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2507.04447

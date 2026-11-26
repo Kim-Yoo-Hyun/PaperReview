@@ -26,7 +26,7 @@ reward metric과 task 목표 정합성, planner의 model exploitation, 로봇 �
 
 ## Evaluation Target
 
-언어·영상 world model의 여러 도메인을 평가한다. RT-1 로봇 영상의 예측 품질을 로봇 제어 성공으로 해석하지 않는다.
+텍스트 환경의 상태 예측과 RT-1 영상 예측을 평가한다. 부록 표 12는 PushT 시뮬레이션에서 각 세계 모델을 CEM 계획기에 넣고 과제 성공률을 비교한다.
 
 ## Evidence Anchor
 

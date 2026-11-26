@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, action-chunking, feedback, control-frequency
+- Tags: VLA, action-chunking, temporal-abstraction, action representation
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.25961
 - Venue verification: https://arxiv.org/abs/2610.25961
@@ -33,6 +33,10 @@ VLA action의 시간 해상도를 task에 맞게 조절한다.
 Simulation과 실제 manipulation에서 실행 효율·성능을 평가한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2610.25961) · [저자 project/code](https://pacevla.github.io/). 정확한 수치·baseline fairness·failure 범위는 본문 확인 전까지 확정하지 않는다.
+
+## 검색 태그 근거
+
+시연 구간에서 행동을 얼마나 성기게 표현할 수 있는지를 보조 감독으로 사용한다. 라우터가 시간 단위를 고르며, 실물 로봇에서는 과제 성공률과 성공 시행의 실행 시간 또는 처리량을 평가한다. [원문 5쪽](https://arxiv.org/pdf/2610.25961v2#page=5) · [원문 7쪽](https://arxiv.org/pdf/2610.25961v2#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

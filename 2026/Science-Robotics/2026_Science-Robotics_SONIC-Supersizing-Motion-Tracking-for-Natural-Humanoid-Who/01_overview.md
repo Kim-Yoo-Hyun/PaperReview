@@ -10,7 +10,7 @@
 - Authors: Zhengyi Luo, Ye Yuan, Tingwu Wang, Chenran Li, Fernando Castañeda, Sirui Chen, Zi-Ang Cao, Jiefeng Li, David Minor, Qingwei Ben, Jinhyung Park, David Sami, Zi Wang, Xingye Da, Runyu Ding, Cyrus Hogg, Lina Song, Edy Lim, Eugene Jeong, Tairan He, Haoru Xue, Wenli Xiao, Simon Yuen, Jan Kautz, Yan Chang, Umar Iqbal, Linxi “Jim” Fan, Yuke Zhu
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, whole-body control, Motion Tracking, NVIDIA
+- Tags: Robotics, humanoid, whole-body control, Motion Tracking, Reinforcement Learning
 - Official paper: https://api.crossref.org/works/10.1126/scirobotics.aed4592
 - Full-text retrieval: https://research.nvidia.com/labs/dair/publication/sonic2026/
 - Project: https://nvlabs.github.io/GEAR-SONIC/
@@ -51,12 +51,14 @@ SONIC은 다양한 인간형 동작을 추종할 수 있는 전신 제어기를 
 
 ## Observation, State, and Output Interface
 
+여러 동작 인코더의 공통 표현과 로봇 상태를 사용해 전신 동작을 추종하는 정책을 시뮬레이션에서 PPO로 학습한다. 실물 Unitree G1에서 실행한다. VR·영상·생성모형은 동작 명령을 공급하는 상위 인터페이스다. [PDF 14쪽](https://nvlabs.github.io/GEAR-SONIC/static/pdf/sonic_paper.pdf#page=14) · [PDF 18쪽](https://nvlabs.github.io/GEAR-SONIC/static/pdf/sonic_paper.pdf#page=18)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ℒrecon serves as a retargeting loss that enables learning from ... | proprioception, reference pose/motion, visual or language command | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking) |
-| State/latent | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline, robot, recon | whole-body pose, balance/contact state와 skill/mode | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.3. Generative Kinematic Motion Planner) |
-| Output/action | The policy 𝜋outputs target joint positions 𝑎𝑡as actions, which are tracked by proportional-derivative (PD) controllers at each joint. | joint/whole-body action, motion target 또는 task trajectory | p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.3. Generative Kinematic Motion Planner), p. 16 (3.2. Universal Humanoid Motion Tracking) |
-| Objective/outcome | We defined the reward as 𝑟𝑡= ℛ(𝑠p 𝑡, 𝑠g 𝑡) + 𝒫(𝑠p 𝑡, 𝑎𝑡), combining a tracking term that minimizes root and body-link pose and velocity errors (including an end-effector term on ... | tracking, balance, skill/task success와 recovery | p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking) |
+| Observation/input | Notably, when the input command is human motion 𝑔ℎ, the encoder-decoder acts as a retargeting pipeline from human to robot motion, and ℒrecon serves as a retargeting loss that enables learning from ... | 고유수용 상태와 인코딩한 동작 명령 | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking) |
+| State/latent | Notably, when, input, command, human, motion, encoder-decoder, acts, retargeting, pipeline, robot, recon | 여러 명령 인코더가 공유하는 동작 표현 | p. 15 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.3. Generative Kinematic Motion Planner) |
+| Output/action | The policy 𝜋outputs target joint positions 𝑎𝑡as actions, which are tracked by proportional-derivative (PD) controllers at each joint. | 관절 제어 명령 | p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.3. Generative Kinematic Motion Planner), p. 16 (3.2. Universal Humanoid Motion Tracking) |
+| Objective/outcome | We defined the reward as 𝑟𝑡= ℛ(𝑠p 𝑡, 𝑠g 𝑡) + 𝒫(𝑠p 𝑡, 𝑎𝑡), combining a tracking term that minimizes root and body-link pose and velocity errors (including an end-effector term on ... | 추종 오차·생존율 및 실물 명령 추종 | p. 14 (3.2. Universal Humanoid Motion Tracking), p. 14 (3.2. Universal Humanoid Motion Tracking), p. 16 (3.2. Universal Humanoid Motion Tracking) |
 
 ## Main Claims and Actual Contribution
 

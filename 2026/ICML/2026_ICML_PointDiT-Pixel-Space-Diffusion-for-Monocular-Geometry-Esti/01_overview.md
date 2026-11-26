@@ -10,7 +10,7 @@
 - Authors: Haofei Xu, Rundi Wu, Philipp Henzler, Nikolai Kalischek, Michael Oechsle, Fabian Manhardt, Marc Pollefeys, Andreas Geiger, Federico Tombari, Michael Niemeyer
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Diffusion, Generation, depth, point cloud, 3D Vision
+- Tags: Diffusion, depth, point cloud, 3D Vision, flow-matching
 - Official paper: https://icml.cc/virtual/2026/poster/62351
 - Full-text retrieval: https://arxiv.org/pdf/2607.02515.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ PointDiT는 단일 영상에 대응하는 3D 점 지도를 영상 공간의 확�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Formally, given an input image c ∈RH×W ×3, our goal is to estimate the corresponding point map x ∈ RH×W ×3, in which each pixel encodes its 3D spatial (X, Y , ... | conditioning observation와 noisy/intermediate sample | p. 3 (3. Approach), p. 4 (3.2. Architecture) |
-| State/latent | Formally, given, input, image, goal, estimate, corresponding, point, pixel, encodes, spatial, coordinates | latent/noise variable와 conditional distribution | p. 3 (3. Approach), p. 4 (3.2. Architecture), p. 4 (3.1. Point Map Generation with Flow Matching) |
-| Output/action | The network takes the noisy point map zt, the current time step t, and the conditioning image c as input. | generated sample, action chunk 또는 trajectory | p. 4 (3.2. Architecture), p. 4 (3.1. Point Map Generation with Flow Matching), p. 5 (3.4. Inference) |
-| Objective/outcome | The final optimization objective is the weighted sum: L = Lfm + λLrel, (7) where λ = 0.1 is the loss weight. | distribution fit, multimodality, sample quality와 latency | p. 5 (3.3. Training), p. 5 (3.3. Training), p. 3 (3.1. Point Map Generation with Flow Matching) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 한 장의 RGB 영상 |
+| 표현 | RGB 패치와 잡음이 있는 픽셀 정렬 점 지도 |
+| 출력 | 3D 점 지도 및 깊이 |
+| 평가 | 스케일·오프셋 정렬 후 기하 정확도 |
+
+[원문 4쪽](https://arxiv.org/pdf/2607.02515v1#page=4) · [원문 5쪽](https://arxiv.org/pdf/2607.02515v1#page=5) · [원문 7쪽](https://arxiv.org/pdf/2607.02515v1#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -81,3 +83,7 @@ PointDiT는 단일 영상에 대응하는 3D 점 지도를 영상 공간의 확�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.3. Training), p. 3 (3. Approach), p. 5 (3.2. Architecture)이다.
+
+## 검색 태그 근거
+
+RGB 한 장에서 픽셀 정렬 3D 점 지도와 깊이를 추정한다. 손실은 조건부 flow matching이며, 실험에서 깊이와 점 지도는 스케일과 오프셋을 정렬한 뒤 평가했다. [원문 4쪽](https://arxiv.org/pdf/2607.02515v1#page=4) · [원문 5쪽](https://arxiv.org/pdf/2607.02515v1#page=5) · [원문 7쪽](https://arxiv.org/pdf/2607.02515v1#page=7)

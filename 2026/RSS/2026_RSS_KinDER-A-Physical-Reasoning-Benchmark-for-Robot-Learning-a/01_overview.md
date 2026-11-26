@@ -4,7 +4,7 @@
 > 자동 작성 노트는 실제 정독을 뜻하지 않는다. 사용자 reading status는 UNREAD로 시작한다.
 
 - Year/Venue: 2026 / RSS
-- Authors: Yixuan Huang, Bowen Li, Vaibhav Saxena, Yichao Liang, Utkarsh Aashu Mishra, Liang Ji, Lihan Zha, Jimmy Wu, Nishanth Kumar, Sebastian Scherer, Danfei Xu, Tom Silver
+- Authors: Yixuan Huang, Bowen Li, Vaibhav Saxena, Yichao Liang, Utkarsh A. Mishra, Liang Ji, Lihan Zha, Jimmy Wu, Nishanth Kumar, Sebastian Scherer, Danfei Xu, Tom Silver
 - Category: Planning and Long-Horizon Reasoning
 - Primary track: Planning and control
 - Tier: NEXT
@@ -42,3 +42,8 @@ VLA의 실패가 언어 표현 문제인지 물리적 의사결정 문제인지 
 ## Verification Boundary
 
 skill 호출 권한, 관측 특권, baseline별 compute, 절차적 split을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · KinDER 물리 추론 환경 인터페이스 · src/kinder/core.py [배포 파일](https://raw.githubusercontent.com/Princeton-Robot-Planning-and-Learning/kindergarden/3f57bb6e07f89f8701e6b86410c773860ea9db2d/src/kinder/core.py)
+- 데이터 · KinDER의 Sweep3D 시연 · sweep3d_100.hdf5 [배포 파일](https://huggingface.co/datasets/kinder-bench/kinder-datasets/resolve/13066f04518dd63ddf286a5bfec3487b71ca7fd8/sweep3d_100.hdf5)

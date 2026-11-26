@@ -42,3 +42,8 @@ RoboMME counting task에서 무효 사건·시간표식·memory 입력을 통제
 ## Verification Boundary
 
 본문에서 확인할 항목: event 기준의 관측 접근권·counting task 외 전이·제어 개입과 memory 효과의 분리. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 기억 조작 조건을 실행하는 정책 서버 · memory_clock/policy_server.py [배포 파일](https://raw.githubusercontent.com/bennidict23/memory-clock/b7842fe156fea0660c3b4e525a7d686cd04f13b2/memory_clock/policy_server.py)
+- 가중치 · Clock 조건으로 후학습한 기억 정책 · clock/29999/params/d/3ec5c6c8bcc1949043b2cb2e4fc2aef6 [배포 파일](https://huggingface.co/benni23/memory-clock/resolve/e9b54a81ea2c5c027bfdb9d3af0b0acce6db65a7/clock/29999/params/d/3ec5c6c8bcc1949043b2cb2e4fc2aef6)

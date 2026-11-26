@@ -7,7 +7,7 @@
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, tactile sensing, skill-composition, process-specification
+- Tags: Robotics, skill-composition, process-specification, force control
 - Aliases: TMS
 - Official paper: https://www.nature.com/articles/s42256-025-01045-3
 - Venue verification: https://www.nature.com/articles/s42256-025-01045-3
@@ -34,6 +34,10 @@
 28은 구현한 조작 스킬 수다. 표 1은 작업별 실행 시간과 접촉 토크의 강건성을 따로 싣는다. 원통 삽입의 두 열은 각각 94%와 92%다. [PDF 5쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=5) · [PDF 6쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=6) · [PDF 7쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=7)
 
 근거: [공식 paper/abstract](https://www.nature.com/articles/s42256-025-01045-3).
+
+## 검색 태그 근거
+
+과정을 힘·모멘트의 변화와 물체 간 공간 관계로 기술해 조작 기술을 선택한다. 실물 평가에서는 힘·임피던스 제어와 접촉 토크를 다룬다. 이 논문의 tactile skill이라는 용어만으로 피부형 촉각 센서를 정책 입력으로 지정할 수 없다. [원문 2쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=2) · [원문 9쪽](https://www.nature.com/articles/s42256-025-01045-3.pdf#page=9)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

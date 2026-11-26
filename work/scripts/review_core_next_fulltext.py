@@ -455,7 +455,6 @@ def insights_note(
     old_insights: str,
     rows: list[dict[str, str]],
 ) -> str:
-    track = row.get("primary_track") or item.get("primary_track") or item.get("category", "unclassified")
     scope = get_scope(domain)
     evidence_label = body_evidence_label(record)
     previous, following = neighbors(item["paper_id"], row, rows)
@@ -501,7 +500,7 @@ def insights_note(
         + f"- The paper-specific mechanism to preserve in a reproduction is: {body_mechanism}\n"
         + "- Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.\n\n"
         + "### Dependency and evolution\n\n"
-        + f"- **Registry position:** `{row.get('tier', 'not recorded')}` in `{track}`; tags: `{tag_text(item, row)}`.\n"
+        + "- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.\n"
         + f"- **Reading predecessor in the generated track queue:** {previous} (queue adjacency, not a confirmed citation).\n"
         + f"- **Reading successor in the generated track queue:** {following} (queue adjacency, not a confirmed citation).\n"
         + (f"- **Legacy lineage cue retained for manual reference audit:** {'; '.join(old_lineage)}\n" if old_lineage else "- Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.\n")

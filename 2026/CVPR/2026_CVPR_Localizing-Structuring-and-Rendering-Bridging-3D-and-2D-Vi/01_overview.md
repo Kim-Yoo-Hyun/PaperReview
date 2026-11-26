@@ -10,7 +10,7 @@
 - Authors: Yunlong Zhao, Xiaoheng Deng, Yichao Cao, Yi Chen, Xiangjian He, Shan You, Shuo Yang, Lei Fan, Fei Wang, Xiu Su
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, 3D-2D alignment, Robotics
+- Tags: VLA, 3D-2D alignment, Robotics, point cloud
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.pdf
 - Code/Project: https://github.com/zyl123456aB/DIFFVLA
@@ -44,12 +44,14 @@ DiffRender-VLA는 미분 가능한 렌더링을 매개로 3D 장면 정보와 2D
 
 ## Observation, State, and Output Interface
 
+다중 RGB-D로 재구성한 점군과 지시에서 조작 영역을 고르고 렌더링한 영상을 2D VLA에 전달한다. 시연으로 학습한다. 표 1의 핀 삽입은 RLBench, 그림 4의 도장 놓기·가려진 바나나 놓기·버튼 누르기·블록 쌓기는 실물 과제다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=3) · [PDF 5쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhao_Localizing_Structuring_and_Rendering_Bridging_3D_and_2D_Vision-Language-Action_Models_CVPR_2026_paper.pdf#page=5)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Given a natural language instruction I which is transformed to elang by VLM, like [43], and multi-view RGB-D observations O = {oi}Mobs i=1 , our final goal is to predict a 6-DoF ... | image/video, language instruction, proprioception과 history | p. 3 (3.1. Localizing Coarse Target Region), p. 2 (1. Introduction) |
-| State/latent | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D, observations, Mobs | language-grounded task state와 action-policy context | p. 3 (3.1. Localizing Coarse Target Region), p. 2 (1. Introduction), p. 6 (3.4. Fine-Grained Action Prediction) |
-| Output/action | Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric understanding into imageinterpretable action policies. • We ... | continuous action, pose 또는 action chunk | p. 2 (1. Introduction), p. 6 (3.4. Fine-Grained Action Prediction), p. 2 (1. Introduction) |
-| Objective/outcome | By learning viewpoints end-to-end through task loss, the model discovers task-relevant perspectives: clearly revealing color gradients from multiple faces (maximizing directional information), minimizing occlusions of the target end-eff ... | instruction following, task success, generalization과 latency | p. 4 (3.3. Rendering Adaptive Viewpoint), p. 4 (3.2. Structuring Differential Spatial Information), p. 3 (3. Method) |
+| Observation/input | Given a natural language instruction I which is transformed to elang by VLM, like [43], and multi-view RGB-D observations O = {oi}Mobs i=1 , our final goal is to predict a 6-DoF ... | 언어 지시와 보정된 다중 RGB-D 점군 | p. 3 (3.1. Localizing Coarse Target Region), p. 2 (1. Introduction) |
+| State/latent | Given, natural, language, instruction, transformed, elang, VLM, like, multi-view, RGB-D, observations, Mobs | 관심 영역 내 점군과 렌더링한 시점 특징 | p. 3 (3.1. Localizing Coarse Target Region), p. 2 (1. Introduction), p. 6 (3.4. Fine-Grained Action Prediction) |
+| Output/action | Our main contributions are as follows: • We propose DiffRender-VLA, a unified framework that bridges 3D spatial reasoning and 2D visual perception to transfer geometric understanding into imageinterpretable action policies. • We ... | 말단의 위치·회전 및 그리퍼 행동 | p. 2 (1. Introduction), p. 6 (3.4. Fine-Grained Action Prediction), p. 2 (1. Introduction) |
+| Objective/outcome | By learning viewpoints end-to-end through task loss, the model discovers task-relevant perspectives: clearly revealing color gradients from multiple faces (maximizing directional information), minimizing occlusions of the target end-eff ... | 조작 과제의 성공률 | p. 4 (3.3. Rendering Adaptive Viewpoint), p. 4 (3.2. Structuring Differential Spatial Information), p. 3 (3. Method) |
 
 ## Main Claims and Actual Contribution
 

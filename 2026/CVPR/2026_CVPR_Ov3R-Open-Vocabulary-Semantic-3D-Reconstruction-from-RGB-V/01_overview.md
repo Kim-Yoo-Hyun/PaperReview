@@ -10,7 +10,7 @@
 - Authors: Ziren Gong, Xiaohan Li, Fabio Tosi, Jiawei Han, Stefano Mattoccia, Jianfei Cai, Matteo Poggi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, semantic, alignment, 3D Vision
+- Tags: 3D reconstruction, semantic, alignment, 3D Vision, open-vocabulary
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ Ov3R은 RGB 영상 시퀀스에서 열린 어휘로 물체를 질의할 수 있�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 5 (3.2. 2D-3D OVS), p. 3 (3. Method), p. 3 (3.1. CLIP3R)이다.
+
+## 검색 태그 근거
+
+연속 RGB를 겹치는 클립으로 나누어 CLIP3R로 점 지도와 특징을 예측하고, 2D 의미 단서를 3D로 올려 열린 어휘 분할을 수행한다. ScanNet 계열에서 기하 및 의미 분할을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Gong_Ov3R_Open-Vocabulary_Semantic_3D_Reconstruction_from_RGB_Videos_CVPR_2026_paper.pdf#page=7)

@@ -10,7 +10,7 @@
 - Authors: Zipeng Fu, Qingqing Zhao, Qi Wu, Gordon Wetzstein, Chelsea Finn
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, humanoid, human-to-humanoid, Imitation Learning, teleoperation
+- Tags: Robotics, humanoid, human-to-humanoid, Imitation Learning, teleoperation, Reinforcement Learning
 - Official paper: https://proceedings.mlr.press/v270/fu25a.html
 - Full-text retrieval: https://arxiv.org/pdf/2406.10454
 - Code/Project: https://humanoid-ai.github.io/

@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `Manipulation, contact, tactile, and dexterity`; tags: `Robotics, dexterous manipulation, tracking control, human demonstration`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** RoboPack: Learning Tactile-Informed Dynamics Models for Dense Packing (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

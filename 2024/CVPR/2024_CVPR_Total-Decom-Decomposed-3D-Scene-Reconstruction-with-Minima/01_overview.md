@@ -10,7 +10,7 @@
 - Authors: Xiaoyang Lyu, Chirui Chang, Peng Dai, Yang-Tian Sun, Xiaojuan Qi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, geometry, 3D Vision
+- Tags: 3D reconstruction, geometry, 3D Vision, object reconstruction
 - Official paper: https://openaccess.thecvf.com/content/CVPR2024/html/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ Total-Decom은 실내 장면에서 사용자가 소수의 점을 선택하면 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (5. Neural Implicit Feature Distillation and Sur), p. 5 (5. Neural Implicit Feature Distillation and Sur)이다.
+
+## 검색 태그 근거
+
+소수의 사용자 클릭으로 장면에서 원하는 물체를 지정한다. 신경장에 학습한 시각 특징과 메시의 영역 확장으로 물체를 분리하고 가려진 배경을 복원한다. [원문 4쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=4) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Lyu_Total-Decom_Decomposed_3D_Scene_Reconstruction_with_Minimal_Interaction_CVPR_2024_paper.pdf#page=7)

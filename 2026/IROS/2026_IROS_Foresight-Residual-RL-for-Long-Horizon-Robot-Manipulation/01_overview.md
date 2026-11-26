@@ -8,7 +8,7 @@
 - Category: Robot Learning and Data
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: robot-learning, imitation-learning, Control
+- Tags: robot-learning, imitation-learning, Control, VLA, residual-RL
 - Aliases:
 - Official paper: https://arxiv.org/abs/2607.16506
 - Full-text retrieval: https://arxiv.org/pdf/2607.16506v1
@@ -33,6 +33,10 @@ VLA 행동·종료 state → 미래 성공 예측 → residual policy 학습.
 ## Evaluation Scope and Claim Boundary
 
 표 II의 각 단계는 전문가 상태에서 시작하고 전체 작업은 처음부터 실행한다. Isaac Gym의 전체 조립 성공률은 기본 잔차 정책 54.5%, 다음 단계 성공 가능성을 보상에 반영한 정책 85.6%다. [PDF 6쪽](https://arxiv.org/pdf/2607.16506v1#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2607.16506v1#page=7)
+
+## 검색 태그 근거
+
+시연으로 미세조정한 π0는 두 카메라와 고유수용 상태를 받는다. 시뮬레이션의 렌치·너트 과제에서 고정한 후속 정책을 반복 실행해 단계 종료 후 성공 확률을 추정한다. 이를 예측한 종단 보상으로 손목 영상을 쓰는 잔차 정책을 PPO 학습한다. [원문 5쪽](https://arxiv.org/pdf/2607.16506v1#page=5) · [원문 6쪽](https://arxiv.org/pdf/2607.16506v1#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

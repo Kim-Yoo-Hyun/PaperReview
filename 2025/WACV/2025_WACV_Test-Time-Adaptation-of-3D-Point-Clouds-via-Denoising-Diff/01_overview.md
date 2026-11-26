@@ -10,7 +10,7 @@
 - Authors: Hamidreza Dastmalchi, Aijun An, Ali Cheraghian, Shafin Rahman, Sameera Ramasinghe
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Tags: Diffusion, point cloud, 3D Vision, test-time-adaptation
 - Official paper: https://openaccess.thecvf.com/content/WACV2025/html/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf
 - Code/Project: https://github.com/hamidreza-dastmalchi/3DD-TTA
@@ -80,3 +80,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (3.1. Preliminaries), p. 5 (3.3. Denoising Diffusion-based Adaption Method)이다.
+
+## 검색 태그 근거
+
+손상된 시험 점군을 확산 잠재 공간에서 원래 학습 분포 쪽으로 수정한다. 수정한 점군을 기존 분류기에 넣고 손상 조건별 분류 정확도를 비교했다. [원문 3쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/WACV2025/papers/Dastmalchi_Test-Time_Adaptation_of_3D_Point_Clouds_via_Denoising_Diffusion_Models_WACV_2025_paper.pdf#page=7)

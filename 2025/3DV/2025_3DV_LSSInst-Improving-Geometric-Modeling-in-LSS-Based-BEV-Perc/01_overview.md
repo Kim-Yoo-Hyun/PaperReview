@@ -10,7 +10,7 @@
 - Authors: Weijie Ma, Jingwei Jiang, Yang Yang, Zehui Chen, Hao Chen
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, 3D Vision
+- Tags: 3D Vision, 3D detection, multi-view
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00113
 - Full-text retrieval: https://arxiv.org/pdf/2411.06173.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ LSSInst는 여러 카메라의 영상을 조감도에서 먼저 검출한 뒤 �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | BEV Branch: Looking around for scene-level representation The multi-view sequential images with the previous T frames are first input into the 2D image backbone network for feature extraction. | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (3. Methodology), p. 4 (3. Methodology) |
-| State/latent | BEV, Branch, Looking, around, scene-level, representation, multi-view, sequential, images, previous, frames, first | geometry, map, object/relationship state | p. 4 (3. Methodology), p. 4 (3. Methodology), p. 2 (1. Introduction) |
-| Output/action | Backbone Multi-frame Multi-view Features Multi-view Images with Previous T Frames Depth Distribution Map BEV Feature BEV Temporal Encoder BEV Branch Temporally-shared View Transformation BEV Sequence Feature Extraction Net Voxel Pooling ... | point map, pose, scene graph, affordance 또는 query result | p. 4 (3. Methodology), p. 2 (1. Introduction), p. 3 (3. Methodology) |
-| Objective/outcome | Lastly, the model makes the final prediction based on the updated output. briefly introduces the BEV branch. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 4 (3. Methodology), p. 4 (3. Methodology), p. 5 (3. Methodology) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 연속한 여러 시점의 카메라 영상 |
+| 표현 | 조감도 및 3D 후보별 영상 특징 |
+| 출력 | 3D 물체 경계 상자 |
+| 평가 | nuScenes 3D 검출 |
+
+[원문 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=4) · [원문 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=6) · [원문 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -78,3 +80,7 @@ LSSInst는 여러 카메라의 영상을 조감도에서 먼저 검출한 뒤 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3. Methodology), p. 3 (3. Methodology)이다.
+
+## 검색 태그 근거
+
+여러 시점의 카메라 영상을 조감도에서 처리하고, 먼저 찾은 3D 후보별로 원래 영상의 특징을 다시 샘플링한다. nuScenes의 3D 물체 검출로 평가했다. [원문 4쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=4) · [원문 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=6) · [원문 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125638#page=7)

@@ -20,7 +20,7 @@ Planner 데이터로 embodiment-agnostic flow expert를 학습하고 이를 고�
 
 학습·추론 구분을 위해 확인할 항목: planner 관측 접근, dynamics별 상호작용 분모, morphology별 평가 조건.
 
-Source가 명시한 evaluation 범위: 사족·이족·quadrotor 실험과 실제 배포를 보고한다.
+Source가 명시한 evaluation 범위: 사족·이족·쿼드로터의 국소 항법은 시뮬레이션에서 비교했다. 실물 배포 대상은 Unitree Go2와 MagicDog다.
 
 ## Temporal and Runtime Contract
 

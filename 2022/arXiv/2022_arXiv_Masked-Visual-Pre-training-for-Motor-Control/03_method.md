@@ -38,13 +38,7 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
-|---|---|---|---|---|---|---|
-| Demonstration representation | expert trajectory를 training pair/context로 정렬한다 | observation history, goal, expert action | temporal alignment, relabeling 또는 latent context construction을 수행 | training sample/context | Specifically, we use the proximal policy optimization (PPO) algorithm (Schulman et al., 2017). | p. 3 (2.2. Learning Motor Control from Pixels), p. 3 (2.1. Masked Visual Pre-training) |
-| Policy fitting | expert action distribution을 학습한다 | context와 action target | behavior cloning, adversarial, sequence, diffusion 또는 flow objective를 최적화 | policy/action distribution | We adopt masked modeling as our self-supervision objective-specifically, we use masked autoencoder (MAE) (He et al., 2021). | p. 3 (2.1. Masked Visual Pre-training), p. 2 (2) Our self-supervised approach consistently outperforms) |
-| Closed-loop rollout | distribution shift와 recovery를 확인한다 | current observation/history | action/chunk을 실행하고 feedback으로 다음 prediction을 갱신 | trajectory/failure signal | We believe that our work is a promising step in this direction and release the benchmark suite, pre-trained models, and the training ... | p. 2 (2) Our self-supervised approach consistently outperforms), p. 2 (2) Our self-supervised approach consistently outperforms) |
-
-- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
+자연 이미지 사전학습 후 손목 영상과 관절 상태 → 동결된 시각 특징과 고유수용 상태 → PPO 정책의 관절 명령. [방법·평가의 원문 근거](./01_overview.md#observation-state-and-output-interface)
 
 ## Objective / Update Rule
 
@@ -52,16 +46,16 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 - **p. 3 / 2.2. Learning Motor Control from Pixels - extractive body cue:** PPO is a state-of-theart policy gradient method that has shown excellent performance on complex motor control tasks and successful transfer to real hardware (OpenAI et ...
 - **p. 4 / 3.6. Distributed Training - extractive body cue:** Similar to data parallel training, we create a model replica per-GPU, collect rollouts on each GPU, and synchronize gradients across GPUs.
 - **p. 4 / 2.2. Learning Motor Control from Pixels - extractive body cue:** Compared to existing benchmarks, ours features a unique combination of hand-designed tasks, dense rewards, and complex robots (e.g., multi-finger hands).
-- **Formal bridge:** observation history o_{t−H:t} -> expert-like action/chunk a_{t:t+H} -> imitation or action-distribution loss -> closed-loop task success and robustness.
+- **Formal bridge:** 자연 이미지 사전학습 후 손목 영상과 관절 상태 → 동결된 시각 특징과 고유수용 상태 → PPO 정책의 관절 명령.
 - **Equation/algorithm anchors:** p. 3 (2.1. Masked Visual Pre-training), p. 3 (2.2. Learning Motor Control from Pixels), p. 4 (3.6. Distributed Training).
 
 ## Variables and Parameters
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs, actions, PPO, state-of-theart, policy | observation history와 expert trajectory/action | body cue; exact tensor/frame verify |
-| State/latent | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs | behavior policy와 temporal action context | body cue; notation verify |
-| Action/output | compare, visual, encoders, trained, supervised, learning, ImageNet, Deng, choice, encoder | predicted action 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs, actions, PPO, state-of-theart, policy | 자연 이미지 사전학습 후 손목 영상과 관절 상태 | body cue; exact tensor/frame verify |
+| State/latent | First, training, computationally, expensive, poor, sample, complexity, especially, high-dimensional, inputs | 동결된 시각 특징과 고유수용 상태 | body cue; notation verify |
+| Action/output | compare, visual, encoders, trained, supervised, learning, ImageNet, Deng, choice, encoder | PPO 정책의 관절 명령 | body cue; unit/decoder verify |
 | Objective/constraint | adopt, masked, modeling, self-supervision, objective-specifically, autoencoder, MAE, PPO, state-of-theart, policy | imitation or action-distribution loss | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -73,16 +67,16 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 - **p. 1 / 1. Introduction - extractive body cue:** Our network encodes the input image using a high-capacity visual encoder (Dosovitskiy et al., 2020) and combines it with proprioceptive information to obtain an embedding.
 - **p. 3 / 2.1. Masked Visual Pre-training - extractive body cue:** Notice that the images are representative of everyday interactions making them well suited for our needs.
 - **p. 1 / 1. Introduction - extractive body cue:** The required movement types vary from simple reaching to object interactions.
-- **Normalized interface:** observation=observation history와 expert trajectory/action; state=behavior policy와 temporal action context; output/action=predicted action 또는 action chunk.
+- **Normalized interface:** observation=자연 이미지 사전학습 후 손목 영상과 관절 상태; state=동결된 시각 특징과 고유수용 상태; output/action=PPO 정책의 관절 명령.
 
 ## Temporal and Runtime Contract
 
-| Contract | Generic domain prior | PDF body cue | Unresolved detail |
-|---|---|---|---|
-| Horizon | single-step 또는 action chunk/trajectory horizon; exact chunk length는 exact value not recovered from the selected body cues. | We define reward-independent success metrics that typically quantify the distance from the agent or an object to a specified goal location over ... | episode/sequence/action-chunk boundary |
-| Rate / latency | training inference와 deployed control tick을 분리; action chunk면 receding execution 여부 확인. | We freeze the visual encoder throughout the entire training horizon. | Hz/fps, inference time and control rate |
-| Memory | current observation, temporal history 또는 recurrent/sequence context. | not recovered | window and reset |
-| Compute | backbone/decoder inference, sampling steps와 action horizon이 latency를 결정한다. | To reduce randomness in the RL experiments (Agarwal et al., 2021), for each task and model we search for the best learning ... | hardware, batch and throughput |
+| Contract | PDF body cue | Unresolved detail |
+|---|---|---|
+| Horizon | We define reward-independent success metrics that typically quantify the distance from the agent or an object to a specified goal location over ... | episode/sequence/action-chunk boundary |
+| Rate / latency | We freeze the visual encoder throughout the entire training horizon. | Hz/fps, inference time and control rate |
+| Memory | not recovered | window and reset |
+| Compute | To reduce randomness in the RL experiments (Agarwal et al., 2021), for each task and model we search for the best learning ... | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -100,11 +94,11 @@ PDF body method statement (p. 3 (2.2. Learning Motor Control from Pixels), p. 3 
 
 ## Evaluation Link
 
-| Method component | Evaluation evidence to inspect | PDF anchor |
+| 평가 근거 | 원문에서 추출한 내용 | 원문 위치 |
 |---|---|---|
-| Demonstration representation | The benchmark provides proprioceptive information for the robots, as well as hand-engineered states typically including 3D poses or relevant objects, goals, and ... | p. 4 (3.4. Observations and Actions), p. 4 (3.1. Motivation) |
-| Policy fitting | The MVP approach significantly outperforms the supervised baseline on 7 tasks and closely matches the oracle state model (considered the upper bound ... | p. 5 (3.6. Distributed Training), p. 6 (5.1. Sample Complexity) |
-| Closed-loop rollout | Figure 5. Sample complexity. We plot the success rate as a function of environment steps on the 8 PixMC tasks. Each task ... | p. 5 (Figure/Table caption), p. 7 (Figure/Table caption) |
+| 원문 대조 | The benchmark provides proprioceptive information for the robots, as well as hand-engineered states typically including 3D poses or relevant objects, goals, and ... | p. 4 (3.4. Observations and Actions), p. 4 (3.1. Motivation) |
+| 원문 대조 | The MVP approach significantly outperforms the supervised baseline on 7 tasks and closely matches the oracle state model (considered the upper bound ... | p. 5 (3.6. Distributed Training), p. 6 (5.1. Sample Complexity) |
+| 원문 대조 | Figure 5. Sample complexity. We plot the success rate as a function of environment steps on the 8 PixMC tasks. Each task ... | p. 5 (Figure/Table caption), p. 7 (Figure/Table caption) |
 
 ## Failure and Ablation Link
 

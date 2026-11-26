@@ -1,0 +1,137 @@
+# Method - Denoising Diffusion Probabilistic Models
+
+> Canonical metadata: [01_overview.md](./01_overview.md).
+> 2026-11-19 표본 감사에서 요약과 관련 본문 표현을 원문에 대조해 교정했다. [원문](https://arxiv.org/html/2006.11239)
+> Evidence maturity: `FULL_TEXT_CHECKED`.
+> Analysis basis: full-text PDF body checked on 2026-09-03 (25 pages; PyMuPDF text; extraction quality: high); canonical paper source: https://arxiv.org/abs/2006.11239; PDF retrieval source: https://arxiv.org/pdf/2006.11239. The note is an evidence-anchored PDF body analysis; exact tables/equations remain at the cited page anchors. Evidence boundary: selected PDF body sentences, captions and section anchors were used; exact table/equation values remain at those anchors. Reading tracker status remains user-controlled; registry source evidence is reconciled separately.
+
+> DOC-QA2 targeted source review: 2026-10-23; PDF pp. 4. 손상 구간·직접 연결된 표 분류만 원문 이미지와 대조했다. 전체 주장 정독·실험 검증·reading status 승격을 뜻하지 않는다. [URL·PDF hash·수정 기록](../../../../work/sources/pdf_note_review_followup_2026-10-23.json).
+
+## Method in One Sentence
+
+DDPM은 이미지에 단계별로 가우시안 잡음을 더하고, 시점별 잡음을 신경망으로 예측하도록 학습한다. 생성 시에는 잡음에서 시작해 역과정을 반복하여 이미지를 얻는다. [원문](https://arxiv.org/html/2006.11239)
+
+## Method Body Digest
+
+- **p. 1 / Abstract - extractive body cue:** Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score ...
+- **p. 5 / 2 Background - extractive body cue:** Model IS FID NLL Test (Train) Conditional EBM [11] 8.30 37.9 JEM [17] 8.76 38.4 BigGAN [3] 9.22 14.73 StyleGAN2 + ADA (v1) [29] 10.06 ...
+- **p. 2 / 1 Introduction - extractive body cue:** When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians too, allowing for ...
+- **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
+- **p. 2 / 1 Introduction - extractive body cue:** In addition, we show that a certain parameterization of diffusion models reveals an equivalence with denoising score matching over multiple noise levels during training and ...
+- **p. 4 / 2 Background - extractive body cue:** 3.3 Data scaling, reverse process decoder, and L0 We assume that image data consists of integers in {0, 1, . . . , 255} scaled ...
+- **p. 3 / 2 Background - extractive body cue:** 3 Diffusion models and denoising autoencoders Diffusion models might appear to be a restricted class of latent variable models, but they allow a large number ...
+- **p. 5 / 2 Background - extractive body cue:** In particular, our diffusion process setup in Section 4 causes the simplified objective to down-weight loss terms corresponding to small t.
+
+## Design Rationale
+
+- **p. 2 / 1 Introduction - extractive body cue:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models ...
+- **p. 2 / 1 Introduction - extractive body cue:** When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians too, allowing for ...
+- **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
+
+## Source Evidence Cues
+
+- **p. 1 / Abstract - extractive body cue:** Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score ...
+- **p. 5 / 2 Background - extractive body cue:** Model IS FID NLL Test (Train) Conditional EBM [11] 8.30 37.9 JEM [17] 8.76 38.4 BigGAN [3] 9.22 14.73 StyleGAN2 + ADA (v1) [29] 10.06 ...
+- **p. 2 / 1 Introduction - extractive body cue:** When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians too, allowing for ...
+- **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
+- **p. 2 / 1 Introduction - extractive body cue:** In addition, we show that a certain parameterization of diffusion models reveals an equivalence with denoising score matching over multiple noise levels during training and ...
+- **p. 4 / 2 Background - extractive body cue:** 3.3 Data scaling, reverse process decoder, and L0 We assume that image data consists of integers in {0, 1, . . . , 255} scaled ...
+- **p. 3 / 2 Background - extractive body cue:** 3 Diffusion models and denoising autoencoders Diffusion models might appear to be a restricted class of latent variable models, but they allow a large number ...
+- **Detected method headings:** none reliably recovered
+
+## Pipeline
+
+| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
+|---|---|---|---|---|---|---|
+| Data / condition representation | data와 condition을 generation state로 바꾼다 | data, text/image/task condition | encoder, noise/path parameterization 또는 latent representation을 구성 | conditioned generation state | Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models ... | p. 1 (Abstract), p. 5 (2 Background) |
+| Denoiser / vector field | data distribution을 복원하는 방향을 학습한다 | noisy/interpolated state와 time | score, noise, velocity, flow 또는 autoregressive objective를 optimize | denoising/velocity prediction | Model IS FID NLL Test (Train) Conditional EBM [11] 8.30 37.9 JEM [17] 8.76 38.4 BigGAN [3] 9.22 14.73 StyleGAN2 + ADA ... | p. 5 (2 Background), p. 2 (1 Introduction) |
+| Sampling / downstream interface | learned field를 sample·action으로 변환한다 | base noise와 condition | iterative denoising, ODE integration, decoding 또는 filtering을 수행 | sample/action/trajectory | When the diffusion consists of small amounts of Gaussian noise, it is sufficient to set the sampling chain transitions to conditional Gaussians ... | p. 2 (1 Introduction), p. 1 (Abstract) |
+
+- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
+
+## Objective / Update Rule
+
+- **p. 5 / 2 Background - extractive body cue:** In particular, our diffusion process setup in Section 4 causes the simplified objective to down-weight loss terms corresponding to small t.
+- **p. 1 / Abstract - extractive body cue:** Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score ...
+- **p. 2 / 1 Introduction - extractive body cue:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models ...
+- **p. 3 / 2 Background - extractive body cue:** Efficient training is therefore possible by optimizing random terms of L with stochastic gradient descent.
+- **p. 4 / 2 Background - extractive body cue:** 2 6: until converged Algorithm 2 Sampling 1: xT ∼N(0, I) 2: for t = T, . . . , 1 do 3: z ∼N(0, ...
+- **p. 4 / 2 Background - extractive body cue:** (12) is equal to (one term of) the variational bound for the Langevin-like reverse process (11), we see that optimizing an objective resembling denoising score ...
+- **Formal bridge:** data x₀, noisy state x_t, condition c -> sample/action x̂ or trajectory -> distribution/denoising/flow objective -> sample quality, diversity and latency.
+- **Equation/algorithm anchors:** p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), p. 2 (1 Introduction), p. 3 (2 Background), p. 3 (2 Background).
+
+## Variables and Parameters
+
+| Role | PDF-derived terms | Normalized robotics interpretation | Status |
+|---|---|---|---|
+| Input/observation | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural, network, reverse, process, operates | 잡음이 더해진 이미지와 확산 시점 | body cue; exact tensor/frame verify |
+| State/latent | unconditional, CIFAR10, dataset, obtain, Inception, score, state-of-the-art, FID, ensures, neural | latent/noise variable와 conditional distribution | body cue; notation verify |
+| Action/output | present, more, refined, analysis, phenomenon, language, lossy, compression, sampling, procedure | 역확산으로 생성한 이미지 | body cue; unit/decoder verify |
+| Objective/constraint | particular, diffusion, process, setup, Section, causes, simplified, objective, down-weight, loss | distribution/denoising/flow objective | equation anchor required |
+
+## Observation–State–Action Interface
+
+- **p. 1 / Abstract - extractive body cue:** On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17.
+- **p. 4 / 2 Background - extractive body cue:** This ensures that the neural network reverse process operates on consistently scaled inputs starting from the standard normal prior p(xT ).
+- **PDF p. 4, §3.2 / Eq. (11) (DOC-QA2 원문 대조):** 역과정 평균은 noise predictor로 재매개화된다: $\mu_\theta(x_t,t)=\frac{1}{\sqrt{\alpha_t}}(x_t-\frac{\beta_t}{\sqrt{1-\bar\alpha_t}}\epsilon_\theta(x_t,t))$. 잘린 중간식을 완전한 등식처럼 유지하지 않았다.
+- **p. 1 / Abstract - extractive body cue:** We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics.
+- **p. 2 / 1 Introduction - extractive body cue:** We find that the majority of our models' lossless codelengths are consumed to describe imperceptible image details (Section 4.3).
+- **p. 2 / 1 Introduction - extractive body cue:** We present a more refined analysis of this phenomenon in the language of lossy compression, and we show that the sampling procedure of diffusion models ...
+- **p. 3 / 2 Background - extractive body cue:** Second, to represent the mean µθ(xt, t), we propose a specific parameterization motivated by the following analysis of Lt.
+- **Normalized interface:** observation=잡음이 더해진 이미지와 확산 시점; state=latent/noise variable와 conditional distribution; output/action=역확산으로 생성한 이미지.
+
+## Temporal and Runtime Contract
+
+| Contract | Generic domain prior | PDF body cue | Unresolved detail |
+|---|---|---|---|
+| Horizon | noise/time schedule 또는 action sample horizon; exact denoising steps 확인 필요. | A notable property of the forward process is that it admits sampling xt at an arbitrary timestep t in closed form: using ... | episode/sequence/action-chunk boundary |
+| Rate / latency | training update와 iterative sampling/inference rate가 분리된다. | When applied to x0 ∼q(x0), Algorithms 3 and 4 transmit xT , . . . , x0 in sequence using a total ... | Hz/fps, inference time and control rate |
+| Memory | current noisy sample, condition과 time/noise embedding. | not stated or recoverable in the selected PDF body | window and reset |
+| Compute | number of denoising/ODE steps와 network evaluation이 latency를 결정한다. | 4.1 Sample quality Table 1 shows Inception scores, FID scores, and negative log likelihoods (lossless codelengths) on CIFAR10. | hardware, batch and throughput |
+
+## Training vs Inference
+
+- **p. 1 / Abstract - extractive body cue:** Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score ...
+- **p. 5 / 2 Background - extractive body cue:** Model IS FID NLL Test (Train) Conditional EBM [11] 8.30 37.9 JEM [17] 8.76 38.4 BigGAN [3] 9.22 14.73 StyleGAN2 + ADA (v1) [29] 10.06 ...
+- **p. 2 / 1 Introduction - extractive body cue:** In addition, we show that a certain parameterization of diffusion models reveals an equivalence with denoising score matching over multiple noise levels during training and ...
+- **p. 5 / 4 Experiments - extractive body cue:** Our FID score is computed with respect to the training set, as is standard practice; when we compute it with respect to the test set, ...
+
+## Method-Specific Formal Details
+
+- **Body-defined terms:** best, obtained, training, weighted, variational, bound, designed, according, novel, connection, between, diffusion, probabilistic, models, denoising, score, matching, Langevin, dynamics, naturally.
+- **Relevant PDF headings:** not reliably recovered.
+
+## Evaluation Link
+
+| Method component | Evaluation evidence to inspect | PDF anchor |
+|---|---|---|
+| Data / condition representation | Our FID score is computed with respect to the training set, as is standard practice; when we compute it with respect to ... | p. 5 (4 Experiments), p. 7 (4 Experiments) |
+| Denoiser / vector field | Prior work has shown that such reorderings introduce inductive biases that have an impact on sample quality [38], so we speculate that ... | p. 8 (4 Experiments), p. 6 (4 Experiments) |
+| Sampling / downstream interface | With our FID score of 3.17, our unconditional model achieves better sample quality than most models in the literature, including class conditional ... | p. 5 (4 Experiments), p. 5 (4 Experiments) |
+
+## Failure and Ablation Link
+
+- **p. 6 / 4 Experiments - extractive body cue:** 4.2 Reverse process parameterization and training objective ablation In Table 2, we show the sample quality effects of reverse process parameterizations and training objectives (Section ...
+- **p. 8 / 4 Experiments - extractive body cue:** In effect, we use the reverse process to remove artifacts from linearly interpolating corrupted versions of the source images, as depicted in Fig.
+- **p. 5 / Figure/Table caption - extractive body cue:** Table 2: Unconditional CIFAR10 reverse process parameterization and training objec- tive ablation. Blank entries were unstable to train and generated poor samples with out-of- range ...
+- **p. 5 / 2 Background - extractive body cue:** Blank entries were unstable to train and generated poor samples with out-ofrange scores.
+- **p. 6 / 4 Experiments - extractive body cue:** We also see that learning reverse process variances (by incorporating a parameterized diagonal Σθ(xt) into the variational bound) leads to unstable training and poorer sample ...
+- **p. 8 / 4 Experiments - extractive body cue:** We can therefore interpret the Gaussian diffusion model (2) as a kind of autoregressive model with a generalized bit ordering that cannot be expressed by ...
+- **p. 4 / 2 Background - extractive body cue:** (It would be straightforward to instead incorporate a more powerful decoder like a conditional autoregressive model, but we leave that to future work.) Similar to ...
+
+## Reproduction Checklist
+
+[공통 검토 기준](../../../../research/READING_STATUS.md#note-checks)
+
+## Verification Questions
+
+- **Evidence anchors reviewed:** method p. 1 (Abstract), p. 5 (2 Background), p. 2 (1 Introduction), p. 1 (Abstract), p. 2 (1 Introduction), p. 4 (2 Background), objective p. 5 (2 Background), p. 1 (Abstract), p. 2 (1 Introduction), p. 3 (2 Background), p. 4 (2 Background), p. 4 (2 Background), temporal p. 2 (2 Background), p. 6 (4 Experiments), p. 7 (4 Experiments), p. 4 (2 Background).
+
+## Semantic QA — PDF body cross-check
+
+> Cross-checked on 2026-09-03 against the validated PDF body (25 pages; PyMuPDF text; extraction quality: high; title-token overlap: 1.0). This block is a source-quality correction and does not change reading status.
+
+- **Paper-specific method/interface:** Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and ... (p. 1, Abstract).
+- **Objective/update evidence:** Efficient training is therefore possible by optimizing random terms of L with stochastic gradient descent. (p. 3, 2 Background).
+- **Temporal/runtime evidence:** When applied to x0 ∼q(x0), Algorithms 3 and 4 transmit xT , . . . , x0 in sequence using a total expected codelength equal to Eq. (p. 6, 4 Experiments).
+- **Implementation boundary:** architecture labels are not treated as paper-specific operations without a body anchor.

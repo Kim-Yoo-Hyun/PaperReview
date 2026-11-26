@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, it is still challenging for these methods to generalize | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | As shown in Figure 3(b), this model processes a sequence of historical image observations, robot states and a language instruction as input ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Figure, model, processes, sequence, historical, image, observations, robot, states, language | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | forward, pass, policy, network, receives, image, observations, robot | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | However, it is still challenging for these methods to generalize | RoboCasa의 지시 조건 조작 | body wording is the source claim |
+| Observation / input | As shown in Figure 3(b), this model processes a sequence of historical image observations, robot states and a language instruction as input ... | 영상·로봇 상태·언어 지시와 VLM이 추정한 마스크 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Figure, model, processes, sequence, historical, image, observations, robot, states, language | 목표·배치 영역에 집중한 시각 특징 | notation and tensor shape require body check |
+| Output / action | forward, pass, policy, network, receives, image, observations, robot | 팔 및 그리퍼 행동 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 조건별 조작 성공과 마스크 품질 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

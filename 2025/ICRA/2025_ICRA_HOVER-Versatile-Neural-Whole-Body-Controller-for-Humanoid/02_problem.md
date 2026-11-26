@@ -22,11 +22,11 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 2 (I. INTRO
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | This is a non-trivial challenge, as each mode operates within a distinct command space, making direct integration impractical. | high-DoF humanoid whole-body dynamics와 contacts | body wording is the source claim |
-| Observation / input | Using these oracle states, we query the oracle teacher policy πoracle(ˆat/sp-oracle t , sg-oracle t ) to obtain the reference action ˆat. | proprioception, reference pose/motion, visual or language command | exact sensor/frame/preprocessing from PDF body |
-| State / latent | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action | whole-body pose, balance/contact state와 skill/mode | notation and tensor shape require body check |
-| Output / action | student, policy, sp-student, sg-student, distilled, oracle, teacher, proprioception | joint/whole-body action, motion target 또는 task trajectory | exact unit/frame/decoder require body check |
-| Target outcome | motion/task success and recovery | tracking, balance, skill/task success와 recovery | metric/denominator are in 04 evidence |
+| Target problem | This is a non-trivial challenge, as each mode operates within a distinct command space, making direct integration impractical. | 모의 및 실물 휴머노이드의 전신 추종 | body wording is the source claim |
+| Observation / input | Using these oracle states, we query the oracle teacher policy πoracle(ˆat/sp-oracle t , sg-oracle t ) to obtain the reference action ˆat. | 고유수용 상태와 모드별 마스킹된 신체 목표 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | oracle, states, query, teacher, policy, at/sp-oracle, sg-oracle, obtain, reference, action | 교사의 전신 추종과 학생의 부분 명령 표현 | notation and tensor shape require body check |
+| Output / action | student, policy, sp-student, sg-student, distilled, oracle, teacher, proprioception | 관절 목표 | exact unit/frame/decoder require body check |
+| Target outcome | motion/task success and recovery | 모드별 추종 오차와 실물 제어 전환 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

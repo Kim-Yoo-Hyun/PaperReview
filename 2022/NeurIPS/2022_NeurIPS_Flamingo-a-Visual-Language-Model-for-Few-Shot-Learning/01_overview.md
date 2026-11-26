@@ -10,7 +10,7 @@
 - Authors: Jean-Baptiste Alayrac, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, Arthur Mensch, Katherine Millican, Malcolm Reynolds, Roman Ring, Eliza Rutherford, Serkan Cabi, Tengda Han, Zhitao Gong, Sina Samangooei, Marianne Monteiro, Jacob L Menick, Sebastian Borgeaud, Andy Brock, Aida Nematzadeh, Sahand Sharifzadeh, Mikołaj Bińkowski, Ricardo Barreira, Oriol Vinyals, Andrew Zisserman, Karén Simonyan
 - Primary track: Foundations: Vision and Language Models
 - Tier: REFERENCE
-- Tags: Vision-Language Model, few-shot, alignment
+- Tags: Vision-Language Model, few-shot, in-context learning
 - Official paper: https://arxiv.org/abs/2204.14198
 - Full-text retrieval: https://arxiv.org/pdf/2204.14198
 - Code/Project: not identified

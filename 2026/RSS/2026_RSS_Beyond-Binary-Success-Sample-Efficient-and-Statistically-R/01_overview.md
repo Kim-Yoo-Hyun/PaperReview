@@ -13,7 +13,7 @@
 - Official paper: https://roboticsproceedings.org/rss22/p076.html
 - Venue verification: https://roboticsproceedings.org/rss22/p076.html
 - Code/Project: https://github.com/dasnyder5/nscore
-- Code: not_identified
+- Code: https://github.com/dasnyder5/nscore
 - Source audit: 2026-10-22 공식 abstract/arXiv abstract와 publication metadata 확인. 새 5개 note는 abstract 수준의 분석이며 상세 본문·코드 감사는 기존 buildup dossier의 명시 범위만 따른다.
 
 ## Problem and Importance

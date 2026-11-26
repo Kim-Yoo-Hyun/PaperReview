@@ -77,7 +77,7 @@
     {
       "paper_id": "pr-0008",
       "title": "Denoising Diffusion Probabilistic Models",
-      "folder": "2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models",
+      "folder": "2011-2020/2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0008.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2006.11239",
@@ -185,7 +185,7 @@
     {
       "paper_id": "pr-0012",
       "title": "PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation",
-      "folder": "2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification",
+      "folder": "2011-2020/2017/CVPR/2017_CVPR_PointNet-Deep-Learning-on-Point-Sets-for-3D-Classification",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0012.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1612.00593",
@@ -3105,7 +3105,7 @@
     {
       "paper_id": "pr-0522",
       "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
-      "folder": "2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio",
+      "folder": "2011-2020/2011/AISTATS/2011_AISTATS_A-Reduction-of-Imitation-Learning-and-Structured-Predictio",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0522.pdf",
       "candidate_urls": [
         "https://www.ri.cmu.edu/pub_files/2011/4/Ross-AISTATS11-NoRegret.pdf",
@@ -3158,7 +3158,7 @@
     {
       "paper_id": "pr-0523",
       "title": "Generative Adversarial Imitation Learning",
-      "folder": "2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning",
+      "folder": "2011-2020/2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0523.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1606.03476",
@@ -3212,7 +3212,7 @@
     {
       "paper_id": "pr-0524",
       "title": "Proximal Policy Optimization Algorithms",
-      "folder": "2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms",
+      "folder": "2011-2020/2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0524.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1707.06347",
@@ -3431,7 +3431,7 @@
     {
       "paper_id": "pr-0550",
       "title": "A Unified Approach for Motion and Force Control of Robot Manipulators: The Operational Space Formulation",
-      "folder": "1987/IEEE-JRA/1987_IEEE-JRA_A-Unified-Approach-for-Motion-and-Force-Control-of-Robot-M",
+      "folder": "1960-2010/1987/IEEE-JRA/1987_IEEE-JRA_A-Unified-Approach-for-Motion-and-Force-Control-of-Robot-M",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0550.pdf",
       "candidate_urls": [
         "https://cs.stanford.edu/group/manips/publications/pdfs/Khatib_1987_RA.pdf",
@@ -3484,7 +3484,7 @@
     {
       "paper_id": "pr-0551",
       "title": "Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces",
-      "folder": "1996/IEEE-T-RA/1996_IEEE-T-RA_Probabilistic-Roadmaps-for-Path-Planning-in-High-Dimension",
+      "folder": "1960-2010/1996/IEEE-T-RA/1996_IEEE-T-RA_Probabilistic-Roadmaps-for-Path-Planning-in-High-Dimension",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0551.pdf",
       "candidate_urls": [
         "https://www.cs.cmu.edu/~motionplanning/papers/sbp_papers/PRM/prmbasic_01.pdf",
@@ -3538,7 +3538,7 @@
     {
       "paper_id": "pr-0552",
       "title": "Rapidly-Exploring Random Trees: A New Tool for Path Planning",
-      "folder": "1998/Technical-Report/1998_Technical-Report_Rapidly-Exploring-Random-Trees-A-New-Tool-for-Path-Plannin",
+      "folder": "1960-2010/1998/Technical-Report/1998_Technical-Report_Rapidly-Exploring-Random-Trees-A-New-Tool-for-Path-Plannin",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0552.pdf",
       "candidate_urls": [
         "https://msl.cs.illinois.edu/~lavalle/papers/Lav98c.pdf",
@@ -3592,7 +3592,7 @@
     {
       "paper_id": "pr-0555",
       "title": "CHOMP: Gradient Optimization Techniques for Efficient Motion Planning",
-      "folder": "2009/ICRA/2009_ICRA_CHOMP-Gradient-Optimization-Techniques-for-Efficient-Motio",
+      "folder": "1960-2010/2009/ICRA/2009_ICRA_CHOMP-Gradient-Optimization-Techniques-for-Efficient-Motio",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0555.pdf",
       "candidate_urls": [
         "https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf",
@@ -3645,7 +3645,7 @@
     {
       "paper_id": "pr-0558",
       "title": "Motion Planning with Sequential Convex Optimization and Convex Collision Checking",
-      "folder": "2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co",
+      "folder": "2011-2020/2014/IJRR/2014_IJRR_Motion-Planning-with-Sequential-Convex-Optimization-and-Co",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0558.pdf",
       "candidate_urls": [
         "https://web.archive.org/web/20240419050012id_/http://rll.berkeley.edu/trajopt/ijrr/2013-IJRR-TRAJOPT.pdf",
@@ -3704,7 +3704,7 @@
     {
       "paper_id": "pr-0560",
       "title": "Learning Neural Network Policies with Guided Policy Search under Unknown Dynamics",
-      "folder": "2014/NeurIPS/2014_NeurIPS_Learning-Neural-Network-Policies-with-Guided-Policy-Search",
+      "folder": "2011-2020/2014/NeurIPS/2014_NeurIPS_Learning-Neural-Network-Policies-with-Guided-Policy-Search",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0560.pdf",
       "candidate_urls": [
         "https://jmlr.org/papers/volume17/15-522/15-522.pdf",
@@ -3762,7 +3762,7 @@
     {
       "paper_id": "pr-0561",
       "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
-      "folder": "2017/IROS/2017_IROS_Domain-Randomization-for-Transferring-Deep-Neural-Networks",
+      "folder": "2011-2020/2017/IROS/2017_IROS_Domain-Randomization-for-Transferring-Deep-Neural-Networks",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0561.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1703.06907",
@@ -4218,7 +4218,7 @@
     {
       "paper_id": "pr-0595",
       "title": "DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills",
-      "folder": "2018/TOG-SIGGRAPH/2018_TOG-SIGGRAPH_DeepMimic-Example-Guided-Deep-Reinforcement-Learning-of-Ph",
+      "folder": "2011-2020/2018/TOG-SIGGRAPH/2018_TOG-SIGGRAPH_DeepMimic-Example-Guided-Deep-Reinforcement-Learning-of-Ph",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0595.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1804.02717",
@@ -4809,7 +4809,7 @@
     {
       "paper_id": "pr-0615",
       "title": "Trust Region Policy Optimization",
-      "folder": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization",
+      "folder": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0615.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1502.05477",
@@ -4864,7 +4864,7 @@
     {
       "paper_id": "pr-0616",
       "title": "Continuous Control with Deep Reinforcement Learning",
-      "folder": "2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning",
+      "folder": "2011-2020/2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0616.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1509.02971",
@@ -4918,7 +4918,7 @@
     {
       "paper_id": "pr-0617",
       "title": "Hindsight Experience Replay",
-      "folder": "2017/NeurIPS/2017_NeurIPS_Hindsight-Experience-Replay",
+      "folder": "2011-2020/2017/NeurIPS/2017_NeurIPS_Hindsight-Experience-Replay",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0617.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1707.01495",
@@ -4972,7 +4972,7 @@
     {
       "paper_id": "pr-0618",
       "title": "Constrained Policy Optimization",
-      "folder": "2017/ICML/2017_ICML_Constrained-Policy-Optimization",
+      "folder": "2011-2020/2017/ICML/2017_ICML_Constrained-Policy-Optimization",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0618.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1705.10528",
@@ -5027,7 +5027,7 @@
     {
       "paper_id": "pr-0619",
       "title": "Addressing Function Approximation Error in Actor-Critic Methods",
-      "folder": "2018/ICML/2018_ICML_Addressing-Function-Approximation-Error-in-Actor-Critic-Me",
+      "folder": "2011-2020/2018/ICML/2018_ICML_Addressing-Function-Approximation-Error-in-Actor-Critic-Me",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0619.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1802.09477",
@@ -5081,7 +5081,7 @@
     {
       "paper_id": "pr-0620",
       "title": "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor",
-      "folder": "2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc",
+      "folder": "2011-2020/2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0620.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1801.01290",
@@ -5136,7 +5136,7 @@
     {
       "paper_id": "pr-0621",
       "title": "MOPO: Model-based Offline Policy Optimization",
-      "folder": "2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization",
+      "folder": "2011-2020/2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0621.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2005.13239",
@@ -5190,7 +5190,7 @@
     {
       "paper_id": "pr-0622",
       "title": "Conservative Q-Learning for Offline Reinforcement Learning",
-      "folder": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning",
+      "folder": "2011-2020/2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0622.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2006.04779",
@@ -5411,7 +5411,7 @@
     {
       "paper_id": "pr-0633",
       "title": "Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations",
-      "folder": "2018/RSS/2018_RSS_Learning-Complex-Dexterous-Manipulation-with-Deep-Reinforc",
+      "folder": "2011-2020/2018/RSS/2018_RSS_Learning-Complex-Dexterous-Manipulation-with-Deep-Reinforc",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0633.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1709.10087",
@@ -5465,7 +5465,7 @@
     {
       "paper_id": "pr-0634",
       "title": "Learning Latent Plans from Play",
-      "folder": "2019/CoRL/2019_CoRL_Learning-Latent-Plans-from-Play",
+      "folder": "2011-2020/2019/CoRL/2019_CoRL_Learning-Latent-Plans-from-Play",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0634.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1903.01973",
@@ -5524,7 +5524,7 @@
     {
       "paper_id": "pr-0635",
       "title": "Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning",
-      "folder": "2019/CoRL/2019_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita",
+      "folder": "2011-2020/2019/CoRL/2019_CoRL_Relay-Policy-Learning-Solving-Long-Horizon-Tasks-via-Imita",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0635.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1910.11956",
@@ -5697,7 +5697,7 @@
     {
       "paper_id": "pr-0642",
       "title": "Contact-Invariant Optimization for Hand Manipulation",
-      "folder": "2012/SCA/2012_SCA_Contact-Invariant-Optimization-for-Hand-Manipulation",
+      "folder": "2011-2020/2012/SCA/2012_SCA_Contact-Invariant-Optimization-for-Hand-Manipulation",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0642.pdf",
       "candidate_urls": [
         "https://homes.cs.washington.edu/~zoran/behavior-discovery.pdf",
@@ -5755,7 +5755,7 @@
     {
       "paper_id": "pr-0643",
       "title": "Control-Limited Differential Dynamic Programming",
-      "folder": "2014/ICRA/2014_ICRA_Control-Limited-Differential-Dynamic-Programming",
+      "folder": "2011-2020/2014/ICRA/2014_ICRA_Control-Limited-Differential-Dynamic-Programming",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0643.pdf",
       "candidate_urls": [
         "https://roboti.us/lab/papers/TassaICRA14.pdf",
@@ -5808,7 +5808,7 @@
     {
       "paper_id": "pr-0644",
       "title": "In-Hand Manipulation via Motion Cones",
-      "folder": "2018/RSS/2018_RSS_In-Hand-Manipulation-via-Motion-Cones",
+      "folder": "2011-2020/2018/RSS/2018_RSS_In-Hand-Manipulation-via-Motion-Cones",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0644.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1810.00219",
@@ -5866,7 +5866,7 @@
     {
       "paper_id": "pr-0645",
       "title": "GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping",
-      "folder": "2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje",
+      "folder": "2011-2020/2020/CVPR/2020_CVPR_GraspNet-1Billion-A-Large-Scale-Benchmark-for-General-Obje",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0645.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1912.13470",
@@ -6294,7 +6294,7 @@
     {
       "paper_id": "pr-0654",
       "title": "Sim-to-Real: Learning Agile Locomotion For Quadruped Robots",
-      "folder": "2018/RSS/2018_RSS_Sim-to-Real-Learning-Agile-Locomotion-For-Quadruped-Robots",
+      "folder": "2011-2020/2018/RSS/2018_RSS_Sim-to-Real-Learning-Agile-Locomotion-For-Quadruped-Robots",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0654.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1804.10332",
@@ -6348,7 +6348,7 @@
     {
       "paper_id": "pr-0655",
       "title": "Learning Quadrupedal Locomotion over Challenging Terrain",
-      "folder": "2020/Science-Robotics/2020_Science-Robotics_Learning-Quadrupedal-Locomotion-over-Challenging-Terrain",
+      "folder": "2011-2020/2020/Science-Robotics/2020_Science-Robotics_Learning-Quadrupedal-Locomotion-over-Challenging-Terrain",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0655.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2010.11251",
@@ -6619,7 +6619,7 @@
     {
       "paper_id": "pr-0666",
       "title": "Dynamic Whole-Body Motion Generation under Rigid Contacts and Other Unilateral Constraints",
-      "folder": "2013/T-RO/2013_T-RO_Dynamic-Whole-Body-Motion-Generation-under-Rigid-Contacts",
+      "folder": "2011-2020/2013/T-RO/2013_T-RO_Dynamic-Whole-Body-Motion-Generation-under-Rigid-Contacts",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0666.pdf",
       "candidate_urls": [
         "https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/831097/filename/2013_itro_saab-Dynamic_Whole_Body_Motion_Generation.pdf",
@@ -6672,7 +6672,7 @@
     {
       "paper_id": "pr-0667",
       "title": "Hierarchical Quadratic Programming: Fast Online Humanoid-Robot Motion Generation",
-      "folder": "2014/IJRR/2014_IJRR_Hierarchical-Quadratic-Programming-Fast-Online-Humanoid-Ro",
+      "folder": "2011-2020/2014/IJRR/2014_IJRR_Hierarchical-Quadratic-Programming-Fast-Online-Humanoid-Ro",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0667.pdf",
       "candidate_urls": [
         "https://gepettoweb.laas.fr/uploads/Publications/2014_escande_ijrr.pdf",
@@ -6725,7 +6725,7 @@
     {
       "paper_id": "pr-0668",
       "title": "Whole-Body Nonlinear Model Predictive Control Through Contacts for Quadrupeds",
-      "folder": "2018/RA-L/2018_RA-L_Whole-Body-Nonlinear-Model-Predictive-Control-Through-Cont",
+      "folder": "2011-2020/2018/RA-L/2018_RA-L_Whole-Body-Nonlinear-Model-Predictive-Control-Through-Cont",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0668.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1712.02889",
@@ -6991,7 +6991,7 @@
     {
       "paper_id": "pr-0675",
       "title": "Control Barrier Function Based Quadratic Programs for Safety Critical Systems",
-      "folder": "2017/TAC/2017_TAC_Control-Barrier-Function-Based-Quadratic-Programs-for-Safe",
+      "folder": "2011-2020/2017/TAC/2017_TAC_Control-Barrier-Function-Based-Quadratic-Programs-for-Safe",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0675.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1609.06408",
@@ -7104,7 +7104,7 @@
     {
       "paper_id": "pr-0678",
       "title": "Recurrent World Models Facilitate Policy Evolution",
-      "folder": "2018/NeurIPS/2018_NeurIPS_World-Models",
+      "folder": "2011-2020/2018/NeurIPS/2018_NeurIPS_World-Models",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0678.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1803.10122",
@@ -7162,7 +7162,7 @@
     {
       "paper_id": "pr-0679",
       "title": "Learning Latent Dynamics for Planning from Pixels",
-      "folder": "2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels",
+      "folder": "2011-2020/2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0679.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1811.04551",
@@ -7216,7 +7216,7 @@
     {
       "paper_id": "pr-0680",
       "title": "Dream to Control: Learning Behaviors by Latent Imagination",
-      "folder": "2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination",
+      "folder": "2011-2020/2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0680.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1912.01603",
@@ -9294,7 +9294,7 @@
     {
       "paper_id": "pr-0738",
       "title": "SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation",
-      "folder": "2020/CoRL/2020_CoRL_SoftGym-Benchmarking-Deep-Reinforcement-Learning-for-Defor",
+      "folder": "2011-2020/2020/CoRL/2020_CoRL_SoftGym-Benchmarking-Deep-Reinforcement-Learning-for-Defor",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0738.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2011.07215",
@@ -9614,7 +9614,7 @@
     {
       "paper_id": "pr-0748",
       "title": "PDDLStream: Integrating Symbolic Planners and Blackbox Samplers via Optimistic Adaptive Planning",
-      "folder": "2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp",
+      "folder": "2011-2020/2020/ICAPS/2020_ICAPS_PDDLStream-Integrating-Symbolic-Planners-and-Blackbox-Samp",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0748.pdf",
       "candidate_urls": [
         "https://ojs.aaai.org/index.php/ICAPS/article/download/6739/6593",
@@ -9879,7 +9879,7 @@
     {
       "paper_id": "pr-0753",
       "title": "RLBench: The Robot Learning Benchmark & Learning Environment",
-      "folder": "2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm",
+      "folder": "2011-2020/2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0753.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1909.12271",
@@ -10824,7 +10824,7 @@
     {
       "paper_id": "pr-0821",
       "title": "Planning and Acting in Partially Observable Stochastic Domains",
-      "folder": "1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom",
+      "folder": "1960-2010/1998/Artificial-Intelligence/1998_Artificial-Intelligence_Planning-and-Acting-in-Partially-Observable-Stochastic-Dom",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0821.pdf",
       "candidate_urls": [
         "https://www.cassandra.org/arc/papers/aij98.pdf",
@@ -10877,7 +10877,7 @@
     {
       "paper_id": "pr-0822",
       "title": "A Formal Basis for the Heuristic Determination of Minimum Cost Paths",
-      "folder": "1968/IEEE-Transactions-on-Sys/1968_IEEE-Transactions-on-Sys_A-Formal-Basis-for-the-Heuristic-Determination-of-Minimum",
+      "folder": "1960-2010/1968/IEEE-Transactions-on-Sys/1968_IEEE-Transactions-on-Sys_A-Formal-Basis-for-the-Heuristic-Determination-of-Minimum",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0822.pdf",
       "candidate_urls": [],
       "checked_at": "2026-09-01T17:05:02.766561+00:00",
@@ -10927,7 +10927,7 @@
     {
       "paper_id": "pr-0823",
       "title": "A New Approach to Linear Filtering and Prediction Problems",
-      "folder": "1960/Journal-of-Basic-Enginee/1960_Journal-of-Basic-Enginee_A-New-Approach-to-Linear-Filtering-and-Prediction-Problems",
+      "folder": "1960-2010/1960/Journal-of-Basic-Enginee/1960_Journal-of-Basic-Enginee_A-New-Approach-to-Linear-Filtering-and-Prediction-Problems",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0823.pdf",
       "candidate_urls": [
         "https://dl.icdst.org/pdfs/files/4133b00a8bb6a836906454c19812cdc6.pdf",
@@ -10980,7 +10980,7 @@
     {
       "paper_id": "pr-0824",
       "title": "Hybrid Position/Force Control of Manipulators",
-      "folder": "1981/Journal-of-Dynamic-Syste/1981_Journal-of-Dynamic-Syste_Hybrid-Position-Force-Control-of-Manipulators",
+      "folder": "1960-2010/1981/Journal-of-Dynamic-Syste/1981_Journal-of-Dynamic-Syste_Hybrid-Position-Force-Control-of-Manipulators",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0824.pdf",
       "candidate_urls": [],
       "checked_at": "2026-09-01T17:05:02.789382+00:00",
@@ -11030,7 +11030,7 @@
     {
       "paper_id": "pr-0825",
       "title": "Impedance Control: An Approach to Manipulation: Part I—Theory",
-      "folder": "1985/Journal-of-Dynamic-Syste/1985_Journal-of-Dynamic-Syste_Impedance-Control-An-Approach-to-Manipulation-Part-ITheory",
+      "folder": "1960-2010/1985/Journal-of-Dynamic-Syste/1985_Journal-of-Dynamic-Syste_Impedance-Control-An-Approach-to-Manipulation-Part-ITheory",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0825.pdf",
       "candidate_urls": [
         "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/5/1384/files/2025/02/1985-impedance-control-an-approach-to-manipulation-part-I-theory.pdf"
@@ -11082,7 +11082,7 @@
     {
       "paper_id": "pr-0826",
       "title": "A Method for Registration of 3-D Shapes",
-      "folder": "1992/IEEE-Transactions-on-Pat/1992_IEEE-Transactions-on-Pat_A-Method-for-Registration-of-3-D-Shapes",
+      "folder": "1960-2010/1992/IEEE-Transactions-on-Pat/1992_IEEE-Transactions-on-Pat_A-Method-for-Registration-of-3-D-Shapes",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0826.pdf",
       "candidate_urls": [
         "https://graphics.stanford.edu/courses/cs348a-21-winter/Handouts/Besl92.pdf"
@@ -11134,7 +11134,7 @@
     {
       "paper_id": "pr-0827",
       "title": "Planning Optimal Grasps",
-      "folder": "1992/ICRA/1992_ICRA_Planning-Optimal-Grasps",
+      "folder": "1960-2010/1992/ICRA/1992_ICRA_Planning-Optimal-Grasps",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0827.pdf",
       "candidate_urls": [
         "https://users.cs.duke.edu/~tomasi/public/ReadingGroup/Ferrari%20and%20Canny%20ICRA%201992.pdf",
@@ -11187,7 +11187,7 @@
     {
       "paper_id": "pr-0828",
       "title": "Biped Walking Pattern Generation by using Preview Control of Zero-Moment Point",
-      "folder": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control",
+      "folder": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0828.pdf",
       "candidate_urls": [
         "https://people.csail.mit.edu/katiebyl/kb/DW2008/papers_of_tangential_interest/kajita03.pdf",
@@ -11240,7 +11240,7 @@
     {
       "paper_id": "pr-0830",
       "title": "PILCO: A Model-Based and Data-Efficient Approach to Policy Search",
-      "folder": "2011/ICML/2011_ICML_PILCO-A-Model-Based-and-Data-Efficient-Approach-to-Policy",
+      "folder": "2011-2020/2011/ICML/2011_ICML_PILCO-A-Model-Based-and-Data-Efficient-Approach-to-Policy",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0830.pdf",
       "candidate_urls": [
         "http://mlg.eng.cam.ac.uk/pub/pdf/DeiRas11.pdf"
@@ -11292,7 +11292,7 @@
     {
       "paper_id": "pr-0831",
       "title": "MuJoCo: A Physics Engine for Model-Based Control",
-      "folder": "2012/IROS/2012_IROS_MuJoCo-A-Physics-Engine-for-Model-Based-Control",
+      "folder": "2011-2020/2012/IROS/2012_IROS_MuJoCo-A-Physics-Engine-for-Model-Based-Control",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0831.pdf",
       "candidate_urls": [
         "https://www.roboti.us/lab/papers/TodorovIROS12.pdf",
@@ -11345,7 +11345,7 @@
     {
       "paper_id": "pr-0832",
       "title": "Logic-Geometric Programming: An Optimization-Based Approach to Combined Task and Motion Planning",
-      "folder": "2015/IJCAI/2015_IJCAI_Logic-Geometric-Programming-An-Optimization-Based-Approach",
+      "folder": "2011-2020/2015/IJCAI/2015_IJCAI_Logic-Geometric-Programming-An-Optimization-Based-Approach",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0832.pdf",
       "candidate_urls": [
         "https://www.ijcai.org/Proceedings/15/Papers/274.pdf",
@@ -11398,7 +11398,7 @@
     {
       "paper_id": "pr-0833",
       "title": "Information Theoretic MPC for Model-Based Reinforcement Learning",
-      "folder": "2017/ICRA/2017_ICRA_Information-Theoretic-MPC-for-Model-Based-Reinforcement-Le",
+      "folder": "2011-2020/2017/ICRA/2017_ICRA_Information-Theoretic-MPC-for-Model-Based-Reinforcement-Le",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0833.pdf",
       "candidate_urls": [
         "https://nolanwagener.github.io/media/mppi/paper.pdf"
@@ -11450,7 +11450,7 @@
     {
       "paper_id": "pr-0834",
       "title": "FFRob: Leveraging Symbolic Planning for Efficient Task and Motion Planning",
-      "folder": "2018/The-International-Journa/2018_The-International-Journa_FFRob-Leveraging-Symbolic-Planning-for-Efficient-Task-and",
+      "folder": "2011-2020/2018/The-International-Journa/2018_The-International-Journa_FFRob-Leveraging-Symbolic-Planning-for-Efficient-Task-and",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0834.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1608.01335"
@@ -11502,7 +11502,7 @@
     {
       "paper_id": "pr-0835",
       "title": "Learning to Predict by the Methods of Temporal Differences",
-      "folder": "1988/Machine-Learning/1988_Machine-Learning_Learning-to-Predict-by-the-Methods-of-Temporal-Differences",
+      "folder": "1960-2010/1988/Machine-Learning/1988_Machine-Learning_Learning-to-Predict-by-the-Methods-of-Temporal-Differences",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0835.pdf",
       "candidate_urls": [],
       "checked_at": "2026-09-01T17:05:02.857638+00:00",
@@ -11552,7 +11552,7 @@
     {
       "paper_id": "pr-0836",
       "title": "Q-Learning",
-      "folder": "1992/Machine-Learning/1992_Machine-Learning_Q-Learning",
+      "folder": "1960-2010/1992/Machine-Learning/1992_Machine-Learning_Q-Learning",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0836.pdf",
       "candidate_urls": [],
       "checked_at": "2026-09-01T17:05:02.884424+00:00",
@@ -11602,7 +11602,7 @@
     {
       "paper_id": "pr-0837",
       "title": "Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning",
-      "folder": "1992/Machine-Learning/1992_Machine-Learning_Simple-Statistical-Gradient-Following-Algorithms-for-Conne",
+      "folder": "1960-2010/1992/Machine-Learning/1992_Machine-Learning_Simple-Statistical-Gradient-Following-Algorithms-for-Conne",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0837.pdf",
       "candidate_urls": [],
       "checked_at": "2026-09-01T17:05:02.884488+00:00",
@@ -11652,7 +11652,7 @@
     {
       "paper_id": "pr-0838",
       "title": "Policy Gradient Methods for Reinforcement Learning with Function Approximation",
-      "folder": "1999/NeurIPS/1999_NeurIPS_Policy-Gradient-Methods-for-Reinforcement-Learning-with-Fu",
+      "folder": "1960-2010/1999/NeurIPS/1999_NeurIPS_Policy-Gradient-Methods-for-Reinforcement-Learning-with-Fu",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0838.pdf",
       "candidate_urls": [],
       "checked_at": "2026-09-01T17:05:02.897858+00:00",
@@ -11752,7 +11752,7 @@
     {
       "paper_id": "pr-0840",
       "title": "Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation",
-      "folder": "2018/CoRL/2018_CoRL_Dense-Object-Nets-Learning-Dense-Visual-Object-Descriptors",
+      "folder": "2011-2020/2018/CoRL/2018_CoRL_Dense-Object-Nets-Learning-Dense-Visual-Object-Descriptors",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0840.pdf",
       "candidate_urls": [
         "https://proceedings.mlr.press/v87/florence18a/florence18a.pdf"
@@ -11912,7 +11912,7 @@
     {
       "paper_id": "pr-0848",
       "title": "GelSight: High-Resolution Robot Tactile Sensors for Estimating Geometry and Force",
-      "folder": "2017/Sensors/2017_Sensors_GelSight-High-Resolution-Robot-Tactile-Sensors-for-Estimat",
+      "folder": "2011-2020/2017/Sensors/2017_Sensors_GelSight-High-Resolution-Robot-Tactile-Sensors-for-Estimat",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0848.pdf",
       "candidate_urls": [
         "https://web.stanford.edu/class/cs114/readings/MK-Yuan.pdf"
@@ -11964,7 +11964,7 @@
     {
       "paper_id": "pr-0849",
       "title": "DIGIT: A Novel Design for a Low-Cost Compact High-Resolution Tactile Sensor with Application to In-Hand Manipulation",
-      "folder": "2020/IEEE-Robotics-and-Automa/2020_IEEE-Robotics-and-Automa_DIGIT-A-Novel-Design-for-a-Low-Cost-Compact-High-Resolutio",
+      "folder": "2011-2020/2020/IEEE-Robotics-and-Automa/2020_IEEE-Robotics-and-Automa_DIGIT-A-Novel-Design-for-a-Low-Cost-Compact-High-Resolutio",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0849.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/2005.14679"
@@ -12118,7 +12118,7 @@
     {
       "paper_id": "pr-0855",
       "title": "Maximum a Posteriori Policy Optimisation",
-      "folder": "2018/ICLR/2018_ICLR_Maximum-a-Posteriori-Policy-Optimisation",
+      "folder": "2011-2020/2018/ICLR/2018_ICLR_Maximum-a-Posteriori-Policy-Optimisation",
       "target": "tmp/pdfs/fulltext_core_next_2026-09-02/pr-0855.pdf",
       "candidate_urls": [
         "https://arxiv.org/pdf/1806.06920",

@@ -1452,7 +1452,7 @@
   venue: RSS
   links:
     paper: https://www.roboticsproceedings.org/rss21/p010.html
-    project: https://www.pi.website/research/pi0
+    project: https://www.pi.website/blog/pi0
     code: https://github.com/Physical-Intelligence/openpi
   tier: 1
   one_line_summary: 사전학습 VLM에 flow matching 행동 전문가를 결합해 서로 다른 로봇의 연속 행동 청크를 생성한다.

@@ -42,3 +42,8 @@ V-GPS는 사전학습 로봇 정책이 제안한 행동 중에서 오프라인�
 ## Verification Boundary
 
 후보 수와 latency, value 데이터 범위, 정책별 action normalization을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · 가치 함수로 행동 후보를 재채점하는 평가 · experiments/eval_vgps.py [배포 파일](https://raw.githubusercontent.com/nakamotoo/V-GPS/912a290f95a9f5fcf5942fbb5b9e7b4e99905c7b/experiments/eval_vgps.py)
+- 가중치 · Bridge·Fractal로 사전학습한 500k 스텝 가치 함수 · checkpoint [배포 파일](https://drive.google.com/file/d/1mHUhVlFPUj1_AhxgxrFGHF1QxujgSPru/view)

@@ -6,7 +6,7 @@
 - Authors: Mengting Wang, Yunzhou Zhang, Xingshuo Wang, Zhiyao Zhang, Zhiteng Li
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic
+- Tags: semantic, 3D segmentation, RGB-D
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11128304
 - Full-text retrieval: https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304
 - Code/Project: not identified
@@ -35,3 +35,7 @@ Replica 실내 장면 8개의 표 I에서 LE-Object의 평균 mIoU는 38.79, 별
 추정 마스크로 복원한 결과와 정답 분할을 제공한 조건은 표 II에서 별도 행이다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=5)
 
 게재본은 OpenObj를 표 I의 비교법으로 인용한다. [PDF 5쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=5) · [OpenObj의 별도 서지](https://arxiv.org/abs/2406.08009)
+
+## 검색 태그 근거
+
+물체 마스크에서 만든 점군의 겹침과 특징 유사도로 프레임 간 대응을 구한다. 물체별 신경 방사장을 구성해 Replica에서 텍스트로 지정한 범주의 분할과 표면 복원을 평가했다. [원문 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=3) · [원문 6쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11128304#page=6)

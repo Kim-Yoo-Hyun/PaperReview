@@ -80,3 +80,7 @@ IPoD는 한 RGB-D 뷰에서 보이는 단서를 받아 점 확산과 암시적 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Preliminary), p. 4 (3.2. Implicit Field Learning with Point Diffusion)이다.
+
+## 검색 태그 근거
+
+하나의 RGB-D 영상으로 부분 점군을 만들고 점 확산과 암시적 거리장 추정을 결합해 보이지 않은 표면을 복원한다. CO3D-v2의 미학습 범주에서 형상 정확도를 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_IPoD_Implicit_Field_Learning_with_Point_Diffusion_for_Generalizable_3D_CVPR_2024_paper.pdf#page=7)

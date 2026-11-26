@@ -10,7 +10,7 @@
 - Authors: Yang Tian, Sizhe Yang, Jia Zeng, Ping Wang, Dahua Lin, Hao Dong, Jiangmiao Pang
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, inverse dynamics, world model, manipulation
+- Tags: Robotics, inverse dynamics, world model, manipulation, Vision-Language-Action
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/e5b5c402bb7bd5e60bede6961d6fe39e-Abstract-Conference.html
 - Full-text retrieval: https://arxiv.org/pdf/2412.15109
 - Code/Project: not identified

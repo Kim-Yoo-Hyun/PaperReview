@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, Dataset, in-the-wild, robot manipulation, data diversity, generalist policy`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** MimicGen: A Data Generation System for Scalable Robot Learning using Human Demonstrations (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

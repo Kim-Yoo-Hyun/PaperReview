@@ -60,9 +60,9 @@ PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Ground
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | Figure, model, processes, sequence, historical, image, observations, robot, states, language, instruction, input, predict, future | image/video, language instruction, proprioception과 history | body cue; exact tensor/frame verify |
-| State/latent | Figure, model, processes, sequence, historical, image, observations, robot, states, language | language-grounded task state와 action-policy context | body cue; notation verify |
-| Action/output | introduce, grounding, masks, promising, intermediate, representation, balances, aspects, Effective, spatial | continuous action, pose 또는 action chunk | body cue; unit/decoder verify |
+| Input/observation | Figure, model, processes, sequence, historical, image, observations, robot, states, language, instruction, input, predict, future | 영상·로봇 상태·언어 지시와 VLM이 추정한 마스크 | body cue; exact tensor/frame verify |
+| State/latent | Figure, model, processes, sequence, historical, image, observations, robot, states, language | 목표·배치 영역에 집중한 시각 특징 | body cue; notation verify |
+| Action/output | introduce, grounding, masks, promising, intermediate, representation, balances, aspects, Effective, spatial | 팔 및 그리퍼 행동 | body cue; unit/decoder verify |
 | Objective/constraint | binary, gripper, actions, apply, Cross, Entropy, BCE, loss, Lgripper, Since | policy/action modeling objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -74,7 +74,7 @@ PDF body method statement (p. 6 (4.4. Training and Inference), p. 5 (4.3. Ground
 - **p. 6 / 4.4. Training and Inference - extractive body cue:** These initial masks are provided to the grounded policy network to predict the next action tokens.
 - **p. 1 / 1. Introduction - extractive body cue:** Research in this area typically falls into two categories: accessible yet coarse-grained representations, such as language instructions [2, 49], which are easy to generate but ...
 - **p. 2 / 1. Introduction - extractive body cue:** As shown in Figure 1, existing datasets [10, 26-28, 40] often suffer from limited instruction diversity and scene complexity, leading policy networks to overfit to ...
-- **Normalized interface:** observation=image/video, language instruction, proprioception과 history; state=language-grounded task state와 action-policy context; output/action=continuous action, pose 또는 action chunk.
+- **Normalized interface:** observation=영상·로봇 상태·언어 지시와 VLM이 추정한 마스크; state=목표·배치 영역에 집중한 시각 특징; output/action=팔 및 그리퍼 행동.
 
 ## Temporal and Runtime Contract
 

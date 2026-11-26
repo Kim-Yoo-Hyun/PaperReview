@@ -10,7 +10,7 @@
 - Authors: Xiaoyang Xiao, Runzhao Yao, Zhiqiang Tian, Shaoyi Du
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Tags: Diffusion, self-supervised, point cloud, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/115683
 - Full-text retrieval: https://papers.nips.cc/paper_files/paper/2025/file/4809dd4b628b6253d0aad0154014f7a3-Paper-Conference.pdf
 - Code/Project: not identified

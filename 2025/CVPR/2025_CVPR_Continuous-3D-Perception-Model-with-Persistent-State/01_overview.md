@@ -10,7 +10,7 @@
 - Authors: Qianqian Wang, Yifei Zhang, Aleksander Holynski, Alexei A. Efros, Angjoo Kanazawa
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D reconstruction, SLAM, representation
+- Tags: 3D reconstruction, memory, representation
 - Official paper: https://arxiv.org/abs/2501.12387
 - Full-text retrieval: https://arxiv.org/pdf/2501.12387
 - Code/Project: https://cut3r.github.io/

@@ -22,11 +22,11 @@ PDF body framing (p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION)): Firstly, ther
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Firstly, there is a lack of large and diverse robotic manipulation datasets in this field [B]], despite the community's long-standing eagerness for ... | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | Proprioception encompasses joint angles/torques, end-effector Cartesian pose and gripper states. | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
-| Output / action | Additionally, tele-operation, without, force, feedback, degrades, manipulation, efficiency | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
-| Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |
+| Target problem | Firstly, there is a lack of large and diverse robotic manipulation datasets in this field [B]], despite the community's long-standing eagerness for ... | 여러 로봇팔의 시연 데이터와 Flexiv 블록 옮기기 | body wording is the source claim |
+| Observation / input | Proprioception encompasses joint angles/torques, end-effector Cartesian pose and gripper states. | 기체별 RGB-D·힘·관절·소리 및 일부 촉각 기록, ACT 평가의 RGB·행동 시연 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Proprioception, encompasses, joint, angles/torques, end-effector, Cartesian, pose, gripper, states, sequence | 보정된 카메라·로봇 좌표와 시간 정렬 시연 | notation and tensor shape require body check |
+| Output / action | Additionally, tele-operation, without, force, feedback, degrades, manipulation, efficiency | RH20T 시연 및 ACT의 팔·그리퍼 행동 | exact unit/frame/decoder require body check |
+| Target outcome | cross-domain transfer and task performance | 시연 수별 도달·집기·놓기 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `SYSTEM / EVALUATION SCOPE UNRESOLVED`.
-- **Target system/task:** 논문이 정의한 robot/embodied environment.
-- **Input boundary:** 논문이 명시한 observation과 task input.
-- **Output/decision under evaluation:** paper-specific output/action.
-- **Primary target:** primary task objective와 closed-loop behavior.
+- **Target system/task:** 영상·동영상의 프롬프트 기반 분할.
+- **Input boundary:** 영상 프레임과 사용자가 제공한 점·상자·마스크.
+- **Output/decision under evaluation:** 대상별 분할 마스크와 시간에 따른 마스크열.
+- **Primary target:** 영상 분할 품질과 상호작용 횟수.
 - **Detected evaluation headings:** dataset (p. 30); 3. Who funded the creation of the dataset? (p. 33).
 
 ## Experimental Matrix
@@ -57,8 +57,8 @@ PDF body evaluation/result cue (p. 31 (dataset), p. 32 (dataset), p. 32 (dataset
 |---|---|---|---|
 | Robot/hardware/simulator | Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world scenarios for ... | embodiment, simulator version and control stack | p. 30 (dataset), p. 32 (dataset) |
 | Task/environment | The video benchmark suite included domains such as driving data, microscopy, egocentric video, robotic surgery. | reset, timeout, object/scene variation | p. 32 (dataset), p. 30 (dataset) |
-| Observation/sensor | 논문이 명시한 observation과 task input | calibration, preprocessing, privileged input | p. 1 (1 Introduction), p. 1 (1 Introduction) |
-| Output/decision | paper-specific output/action | action frame, controller and termination | p. 27 (Method), p. 27 (Method) |
+| Observation/sensor | 영상 프레임과 사용자가 제공한 점·상자·마스크 | calibration, preprocessing, privileged input | p. 1 (1 Introduction), p. 1 (1 Introduction) |
+| Output/decision | 대상별 분할 마스크와 시간에 따른 마스크열 | action frame, controller and termination | p. 27 (Method), p. 27 (Method) |
 
 ## Metrics and Success Definition
 

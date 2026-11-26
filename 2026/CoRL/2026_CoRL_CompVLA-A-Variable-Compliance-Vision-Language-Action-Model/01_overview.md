@@ -13,7 +13,7 @@
 - Official paper: https://arxiv.org/abs/2609.23614
 - Venue verification: https://www.corl.org/program/accepted-papers
 - Code/Project: https://compvla.github.io/
-- Code: not_identified
+- Code: https://github.com/compvla/CompVLA
 - Source audit: 2026-11-09: official abstract/project 및 metadata 확인. 최신 v2(2026-11-06) abstract 확인. 기존 N1 본문 대조는 v1이며 v2 본문을 확인한 것으로 승격하지 않는다. 저자 CoRL 2026 표기는 공식 승인 근거 미확인. Code 링크 404. 새 5-note는 abstract 기반이며 전체 본문/실행/사용자 정독을 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +42,8 @@ RGB·언어 → 동작과 시변 강성 행렬.
 ## Verification Boundary
 
 강성–displacement 식별성, force 입력 유무, 데이터·controller 공정성을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · CompVLA 순응도 및 행동 모델 · models/compvla/modeling_compvla.py [배포 파일](https://raw.githubusercontent.com/compvla/CompVLA/8393e22e01ee90cd884c8198a4151c9166aca34e/models/compvla/modeling_compvla.py)
+- 데이터 · 실물 컵 분배 과제의 원시 시연 · Dispense.zip [배포 파일](https://drive.google.com/file/d/1IDYBpHB91uYuCtGOgmTOtpQHwE8lMBAW/view)

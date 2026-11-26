@@ -54,9 +54,9 @@ PDF body method statement (p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learni
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding, zobs, diffusion, policy, employed | RGB-D/point cloud, object state와 contact/task observation | body cue; exact tensor/frame verify |
-| State/latent | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding | object geometry, affordance, contact mode 또는 end-effector state | body cue; notation verify |
-| Action/output | summarize, contributions, follows, DiffuView, novel, diffusion-based, representation, learning, framework, robotic | grasp, pose, force 또는 end-effector trajectory | body cue; unit/decoder verify |
+| Input/observation | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding, zobs, diffusion, policy, employed | 카메라의 RGB·깊이·시점 정보와 언어 지시 | body cue; exact tensor/frame verify |
+| State/latent | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding | 목표 시점 복원으로 학습한 영상 특징 | body cue; notation verify |
+| Action/output | summarize, contributions, follows, DiffuView, novel, diffusion-based, representation, learning, framework, robotic | 확산 정책이 예측한 말단·그리퍼 행동 | body cue; unit/decoder verify |
 | Objective/constraint | Unlike, vanilla, self-attention, causal, masking, enforces, autoregressive, constraint, action, token | task/contact/pose objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -68,7 +68,7 @@ PDF body method statement (p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learni
 - **p. 1 / 1. Introduction - extractive body cue:** The traditional paradigm of Visual Behavior Cloning primarily focuses on extracting informative features from visual input to generate robot actions.
 - **p. 2 / 1. Introduction - extractive body cue:** In the second stage, we integrate the pretrained model into an action diffusion policy network, where the learned representations serve as structured visual features to ...
 - **p. 2 / 1. Introduction - extractive body cue:** Representative works such as MVP [52], 3D-MVP [38], LIFT3D [21], EmbodiedMAE [10], and CL3R [7] adopt this paradigm, where the model learns to reconstruct masked ...
-- **Normalized interface:** observation=RGB-D/point cloud, object state와 contact/task observation; state=object geometry, affordance, contact mode 또는 end-effector state; output/action=grasp, pose, force 또는 end-effector trajectory.
+- **Normalized interface:** observation=카메라의 RGB·깊이·시점 정보와 언어 지시; state=목표 시점 복원으로 학습한 영상 특징; output/action=확산 정책이 예측한 말단·그리퍼 행동.
 
 ## Temporal and Runtime Contract
 

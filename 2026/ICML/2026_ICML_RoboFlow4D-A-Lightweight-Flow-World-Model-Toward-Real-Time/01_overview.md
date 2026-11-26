@@ -10,7 +10,7 @@
 - Authors: Sixu Lin, Junliang Chen, Huaiyuan Xu, Zhuohao Li, Guangming Wang, Yixiong Jing, Sheng Xu, Runyi Zhao, Brian Sheil, Lap-Pui Chau, Guiliang Liu
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Vision-Language Model, Robotics, Reinforcement Learning
+- Tags: Robotics, world model, 3D scene flow, Diffusion
 - Official paper: https://icml.cc/virtual/2026/poster/62543
 - Full-text retrieval: https://arxiv.org/pdf/2605.17522.pdf
 - Code/Project: https://simonlinsx.github.io/RoboFlow4D_Page/

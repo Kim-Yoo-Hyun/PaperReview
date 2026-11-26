@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `CORE` in `RL, IL, offline learning, and robot data`; tags: `Robotics, offline reinforcement learning, Transformer, robot manipulation`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Diffusion Policy: Visuomotor Policy Learning via Action Diffusion (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Behavior Transformers: Cloning k modes with one stone (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

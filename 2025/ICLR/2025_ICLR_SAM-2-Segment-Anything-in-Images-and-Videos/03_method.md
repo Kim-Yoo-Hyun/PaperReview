@@ -35,27 +35,21 @@ PDF body method statement (p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28
 
 ## Pipeline
 
-| Module | Purpose | Input | Operation | Output | PDF body cue | Anchor |
-|---|---|---|---|---|---|---|
-| Input representation | source-defined input을 learnable representation으로 바꾼다 | paper-specific image/text/sequence input | encoder, tokenization, normalization 또는 feature extraction을 수행 | latent feature/state | 16, we show a comparison between our baseline (Cutie-base+, top row) and our model (SAM 2, bottom row) when prompted with a ... | p. 28 (Method), p. 27 (Method) |
-| Core objective / transformation | source task의 prediction·generation 목표를 최적화한다 | representation, target/condition | paper-specific model, loss, decoder 또는 generative process를 적용 | prediction/embedding/sample | The last two rows in Table 15 illustrate the benefits of training with our mix of image and video data, which boosts ... | p. 27 (Method), p. 27 (Method) |
-| Downstream transfer boundary | 결과를 후속 task 또는 embodied system에 전달한다 | output와 query/task context | task head, retrieval, grounding 또는 adapter를 적용 | task cue/representation | We compare SAM 2 to SAM and HQ-SAM with different model sizes in Table 15. | p. 27 (Method), p. 28 (Method) |
-
-- Pipeline rows are domain labels; the paper-specific operations are the extractive cues and section anchors in the same row.
+영상 프레임과 사용자가 제공한 점·상자·마스크 → 프레임 특징과 이전 마스크의 메모리 → 대상별 분할 마스크와 시간에 따른 마스크열. [방법·평가의 원문 근거](./01_overview.md#observation-state-and-output-interface)
 
 ## Objective / Update Rule
 
 - objective/update cue 없음 - inspect equations and algorithm boxes
-- **Formal bridge:** source-defined input o -> prediction/embedding/sample ŷ -> paper-specific objective -> source task metric; robot link not established.
+- **Formal bridge:** 영상 프레임과 사용자가 제공한 점·상자·마스크 → 프레임 특징과 이전 마스크의 메모리 → 대상별 분할 마스크와 시간에 따른 마스크열.
 - **Equation/algorithm anchors:** none selected.
 
 ## Variables and Parameters
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | task, takes, input, points, boxes, masks, frame, video, define, segment, interest, spatio-temporal, mask, masklet | 논문이 명시한 observation과 task input | body cue; exact tensor/frame verify |
-| State/latent | task, takes, input, points, boxes, masks, frame, video, define, segment | task state 또는 decision variable | body cue; notation verify |
-| Action/output | introduce, Segment, Anything, Model, SAM, unified, video, image, segmentation, consider | paper-specific output/action | body cue; unit/decoder verify |
+| Input/observation | task, takes, input, points, boxes, masks, frame, video, define, segment, interest, spatio-temporal, mask, masklet | 영상 프레임과 사용자가 제공한 점·상자·마스크 | body cue; exact tensor/frame verify |
+| State/latent | task, takes, input, points, boxes, masks, frame, video, define, segment | 프레임 특징과 이전 마스크의 메모리 | body cue; notation verify |
+| Action/output | introduce, Segment, Anything, Model, SAM, unified, video, image, segmentation, consider | 대상별 분할 마스크와 시간에 따른 마스크열 | body cue; unit/decoder verify |
 | Objective/constraint | not recovered | paper-specific objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -67,16 +61,16 @@ PDF body method statement (p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28
 - **p. 28 / Method - extractive body cue:** G Details on comparison to state-of-the-art in semi-supervised VOS We provide additional details on the comparison to the previous state-of-the-art in semi-supervised VOS (§7).
 - **p. 28 / Method - extractive body cue:** 15, where the per-dataset delta in 1-click mIoU relative to SAM is color-coded to indicate the data type (image or video).
 - **p. 29 / Method - extractive body cue:** Datasets derived from video distribution are highlighted in red, while those from image distribution are highlighted in blue. ours baseline Figure 16 Comparison between our ...
-- **Normalized interface:** observation=논문이 명시한 observation과 task input; state=task state 또는 decision variable; output/action=paper-specific output/action.
+- **Normalized interface:** observation=영상 프레임과 사용자가 제공한 점·상자·마스크; state=프레임 특징과 이전 마스크의 메모리; output/action=대상별 분할 마스크와 시간에 따른 마스크열.
 
 ## Temporal and Runtime Contract
 
-| Contract | Generic domain prior | PDF body cue | Unresolved detail |
-|---|---|---|---|
-| Horizon | paper-specific horizon; exact value not recovered from the selected body cues. | We fine-tune for 50k iterations (1/3 of the original schedule) using half of the original learning rate and freeze the image encoder ... | episode/sequence/action-chunk boundary |
-| Rate / latency | paper-specific inference/control rate; exact value not recovered from the selected body cues. | Our model is a simple transformer architecture with streaming memory for real-time video processing. | Hz/fps, inference time and control rate |
-| Memory | paper-specific history/state memory; exact value not recovered from the selected body cues. | We fine-tune for 50k iterations (1/3 of the original schedule) using half of the original learning rate and freeze the image encoder ... | window and reset |
-| Compute | representation, optimization/inference steps와 hardware가 latency를 결정한다; exact profile 확인 필요. | Cost and impact of compute The released SAM 2 was trained on 256 A100 GPUs for 108 hours. | hardware, batch and throughput |
+| Contract | PDF body cue | Unresolved detail |
+|---|---|---|
+| Horizon | We fine-tune for 50k iterations (1/3 of the original schedule) using half of the original learning rate and freeze the image encoder ... | episode/sequence/action-chunk boundary |
+| Rate / latency | Our model is a simple transformer architecture with streaming memory for real-time video processing. | Hz/fps, inference time and control rate |
+| Memory | We fine-tune for 50k iterations (1/3 of the original schedule) using half of the original learning rate and freeze the image encoder ... | window and reset |
+| Compute | Cost and impact of compute The released SAM 2 was trained on 256 A100 GPUs for 108 hours. | hardware, batch and throughput |
 
 ## Training vs Inference
 
@@ -91,11 +85,11 @@ PDF body method statement (p. 28 (Method), p. 27 (Method), p. 27 (Method), p. 28
 
 ## Evaluation Link
 
-| Method component | Evaluation evidence to inspect | PDF anchor |
+| 평가 근거 | 원문에서 추출한 내용 | 원문 위치 |
 |---|---|---|
-| Input representation | Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world ... | p. 30 (dataset), p. 32 (dataset) |
-| Core objective / transformation | We report the performance of prior works as evaluated by the LVOSv2 authors. | p. 31 (dataset), p. 31 (dataset) |
-| Downstream transfer boundary | We report the performance of prior works as evaluated by the LVOSv2 authors. | p. 31 (dataset), p. 32 (dataset) |
+| 원문 대조 | Sparse Validation videos on egocentric cameras 1185 1185 327,080 9,035 VIPSeg (Miao et al., 2022) VIPSeg Panoptic Large scale and real world ... | p. 30 (dataset), p. 32 (dataset) |
+| 원문 대조 | We report the performance of prior works as evaluated by the LVOSv2 authors. | p. 31 (dataset), p. 31 (dataset) |
+| 원문 대조 | We report the performance of prior works as evaluated by the LVOSv2 authors. | p. 31 (dataset), p. 32 (dataset) |
 
 ## Failure and Ablation Link
 

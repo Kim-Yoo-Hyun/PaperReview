@@ -10,7 +10,7 @@
 - Authors: Jingyun Fu, Zhiyu Xiang, Na Zhao
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: sensor fusion, LiDAR, 3D Vision
+- Tags: 3D Vision, 3D scene flow, point cloud
 - Official paper: https://icml.cc/virtual/2026/poster/64558
 - Full-text retrieval: https://arxiv.org/pdf/2605.18507.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ IterFlow는 훈련 때 카메라 영상과 차량 주행계 정보를 보조 감
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | These features are fused to form the GRU input xk, and the hidden state is updated as follows: zk = σ(Conv1d([hk-1, xk], Wz)) (2) rk = σ(Conv1d([hk-1, xk], Wr)) (3) ˆhk = ... | RGB-D, image set, point cloud, depth와 camera pose | p. 4 (3.1. IterFlow), p. 6 (3.3. Rigid Static Loss) |
-| State/latent | features, fused, form, GRU, input, hidden, state, updated, follows, Conv1d, hk-1, tanh | geometry, map, object/relationship state | p. 4 (3.1. IterFlow), p. 6 (3.3. Rigid Static Loss), p. 2 (1. Introduction) |
-| Output/action | R represents radar point clouds input. | point map, pose, scene graph, affordance 또는 query result | p. 6 (3.3. Rigid Static Loss), p. 2 (1. Introduction), p. 3 (3. Method) |
-| Objective/outcome | Subsequently, auxiliary 2D image and odometry are used to construct three losses for optimizing the predicted flows: Ltotal = Lstat + Lic + Lis. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 3 (3. Method), p. 3 (3. Method), p. 4 (3.1. IterFlow) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 추론은 연속 4D 레이더 점. 학습 감독은 카메라 추적과 자차 운동 |
+| 표현 | 반복적으로 갱신하는 점 대응과 흐름 |
+| 출력 | 각 레이더 점의 3차원 이동 |
+| 평가 | VoD 장면 흐름 추정 오차 |
+
+[원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=4) · [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=5) · [원문 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=6)
 
 ## Main Claims and Actual Contribution
 
@@ -73,3 +75,7 @@ View-of-Delft의 검증 분할에서 레이더 장면 흐름 오차를 전체·�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3.1. IterFlow), p. 3 (3.1. IterFlow), p. 5 (3.2. Instance-aware Loss Functions)이다.
+
+## 검색 태그 근거
+
+4D 레이더 점 두 프레임에서 점별 이동을 반복해 갱신한다. 카메라 추적과 자차 운동으로 약한 감독을 구성하고 레이더를 사용하는 VoD 변위 정확도를 평가했다. [원문 4쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=4) · [원문 5쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=5) · [원문 6쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/fu26r/fu26r.pdf#page=6)

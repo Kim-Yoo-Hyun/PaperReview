@@ -61,9 +61,9 @@ PDF body method statement (p. 5 (Abstract), p. 8 (Abstract), p. 7 (Abstract), p.
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D, visual, observations, captured, panoramic | standardized observation, action, task state와 evaluation split | body cue; exact tensor/frame verify |
-| State/latent | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D | benchmark state/goal와 method decision | body cue; notation verify |
-| Action/output | Here, SAPIEN, Manipulation, Skill, Benchmark, ManiSkill, skills, over, diverse, objects | policy/controller trajectory 또는 measured result | body cue; unit/decoder verify |
+| Input/observation | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D, visual, observations, captured, panoramic | 모드별 상태·RGB-D·머리 카메라 점군 | body cue; exact tensor/frame verify |
+| State/latent | pointcloud, rgbd, modes, object, states, replaced, corresponding, point, cloud, RGB-D | 로봇 관절과 물체·과제의 상태 | body cue; notation verify |
+| Action/output | Here, SAPIEN, Manipulation, Skill, Benchmark, ManiSkill, skills, over, diverse, objects | 이동 베이스와 팔의 조작 행동 | body cue; unit/decoder verify |
 | Objective/constraint | order, quickly, verify, reward, template, tasks, complicated, solving, takes, hours | benchmark score and failure cost | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 5 (Abstract), p. 8 (Abstract), p. 7 (Abstract), p.
 - **p. 6 / Abstract - extractive body cue:** 2.3 Robots, Actions, Visual Observations, and Rewards All the tasks in ManiSkill use similar robots, which are composed of three parts: moving platform, Sciurus [65] ...
 - **p. 3 / Abstract - extractive body cue:** For example, imitation learning [53, 54, 4] and offline RL [55, 56, 57] can learn a policy purely from demonstrations datasets [58, 59], but online ...
 - **p. 6 / Abstract - extractive body cue:** As mentioned in Sec 2.1, ManiSkill supports three observation modes: state, pointcloud, and rgbd, where the latter two modes are suitable for studying object-level generalizability.
-- **Normalized interface:** observation=standardized observation, action, task state와 evaluation split; state=benchmark state/goal와 method decision; output/action=policy/controller trajectory 또는 measured result.
+- **Normalized interface:** observation=모드별 상태·RGB-D·머리 카메라 점군; state=로봇 관절과 물체·과제의 상태; output/action=이동 베이스와 팔의 조작 행동.
 
 ## Temporal and Runtime Contract
 

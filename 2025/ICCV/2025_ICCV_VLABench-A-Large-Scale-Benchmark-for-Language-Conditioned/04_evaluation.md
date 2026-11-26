@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 5 (3.3. Benchmark), p. 6 (3.3. Benchmark), p.
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `BENCHMARK / DATASET`.
-- **Target system/task:** defined robot simulator/hardware task suite.
-- **Input boundary:** standardized observation, action, task state와 evaluation split.
-- **Output/decision under evaluation:** policy/controller trajectory 또는 measured result.
-- **Primary target:** success metric, robustness, generalization과 reproducibility.
+- **Target system/task:** 시뮬레이션의 언어 조건 장기 조작 벤치마크.
+- **Input boundary:** 정책 평가의 관측·지시와 별도 계획 평가의 표시된 이미지.
+- **Output/decision under evaluation:** VLA의 조작 행동 또는 VLM의 스킬 순서.
+- **Primary target:** 성공률·의도 점수·진행도.
 - **Detected evaluation headings:** 3.3. Benchmark (p. 4); 3.4. Dataset Construction (p. 6); 4. Experiments (p. 6).
 
 ## Experimental Matrix
@@ -61,8 +61,8 @@ PDF body evaluation/result cue (p. 5 (3.3. Benchmark), p. 6 (3.3. Benchmark), p.
 |---|---|---|---|
 | Robot/hardware/simulator | Following the approach of previous benchmarks built on Mujoco [38, 47], the dataset is stored in the same format, with similar visual rendering quality ... | embodiment, simulator version and control stack | p. 6 (3.4. Dataset Construction), p. 5 (3.3. Benchmark) |
 | Task/environment | The evaluation episodes use objects seen in the training set, with minimal differences. - Track 2: Cross-category visual generalization. | reset, timeout, object/scene variation | p. 5 (3.3. Benchmark), p. 5 (3.3. Benchmark) |
-| Observation/sensor | standardized observation, action, task state와 evaluation split | calibration, preprocessing, privileged input | p. 2 (1. Introduction), p. 2 (1. Introduction) |
-| Output/decision | policy/controller trajectory 또는 measured result | action frame, controller and termination | p. 8 (4.3. Comprehensive Ability of VLMs), p. 7 (4.2. Zero-shot Ability of Agent) |
+| Observation/sensor | 정책 평가의 관측·지시와 별도 계획 평가의 표시된 이미지 | calibration, preprocessing, privileged input | p. 2 (1. Introduction), p. 2 (1. Introduction) |
+| Output/decision | VLA의 조작 행동 또는 VLM의 스킬 순서 | action frame, controller and termination | p. 8 (4.3. Comprehensive Ability of VLMs), p. 7 (4.2. Zero-shot Ability of Agent) |
 
 ## Metrics and Success Definition
 

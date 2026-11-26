@@ -10,7 +10,7 @@
 - Authors: Haonan Chen, Jingxiang Guo, Bangjun Wang, Tianrui Zhang, Xuchuan Huang, Boren Zheng, Yiwen Hou, Chenrui Tie, Jiajun Deng, Lin Shao
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, Vision-Language Model, Robotics, Reinforcement Learning
+- Tags: VLA, Vision-Language Model, Robotics, world model, motion planning
 - Official paper: https://api.crossref.org/works/10.1109/icra57385.2026.11696379
 - Full-text retrieval: https://arxiv.org/pdf/2506.23919
 - Code/Project: not identified

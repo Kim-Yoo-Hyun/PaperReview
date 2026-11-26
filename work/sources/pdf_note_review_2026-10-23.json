@@ -2934,7 +2934,7 @@
     },
     {
       "paper_id": "pr-0641",
-      "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/01_overview.md",
+      "path": "1960-2010/1995/ICRA/1995_ICRA_Controllability-of-Pushing/01_overview.md",
       "original_target": true,
       "edits": [
         {
@@ -2980,7 +2980,7 @@
     },
     {
       "paper_id": "pr-0641",
-      "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/02_problem.md",
+      "path": "1960-2010/1995/ICRA/1995_ICRA_Controllability-of-Pushing/02_problem.md",
       "original_target": false,
       "edits": [
         {
@@ -2998,7 +2998,7 @@
     },
     {
       "paper_id": "pr-0641",
-      "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/03_method.md",
+      "path": "1960-2010/1995/ICRA/1995_ICRA_Controllability-of-Pushing/03_method.md",
       "original_target": true,
       "edits": [
         {
@@ -3065,7 +3065,7 @@
     },
     {
       "paper_id": "pr-0641",
-      "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/04_evaluation.md",
+      "path": "1960-2010/1995/ICRA/1995_ICRA_Controllability-of-Pushing/04_evaluation.md",
       "original_target": true,
       "edits": [
         {
@@ -3119,7 +3119,7 @@
     },
     {
       "paper_id": "pr-0641",
-      "path": "1995/ICRA/1995_ICRA_Controllability-of-Pushing/05_insights.md",
+      "path": "1960-2010/1995/ICRA/1995_ICRA_Controllability-of-Pushing/05_insights.md",
       "original_target": true,
       "edits": [
         {
@@ -4405,7 +4405,7 @@
     },
     {
       "paper_id": "pr-0634",
-      "path": "2019/CoRL/2019_CoRL_Learning-Latent-Plans-from-Play/03_method.md",
+      "path": "2011-2020/2019/CoRL/2019_CoRL_Learning-Latent-Plans-from-Play/03_method.md",
       "original_target": true,
       "edits": [
         {
@@ -4422,7 +4422,7 @@
     },
     {
       "paper_id": "pr-0680",
-      "path": "2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/03_method.md",
+      "path": "2011-2020/2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/03_method.md",
       "original_target": true,
       "edits": [
         {
@@ -4446,7 +4446,7 @@
     },
     {
       "paper_id": "pr-0680",
-      "path": "2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/04_evaluation.md",
+      "path": "2011-2020/2020/ICLR/2020_ICLR_Dream-to-Control-Learning-Behaviors-by-Latent-Imagination/04_evaluation.md",
       "original_target": true,
       "edits": [
         {
@@ -4470,7 +4470,7 @@
     },
     {
       "paper_id": "pr-0557",
-      "path": "2011/IJRR/2011_IJRR_Sampling-based-Algorithms-for-Optimal-Motion-Planning/04_evaluation.md",
+      "path": "2011-2020/2011/IJRR/2011_IJRR_Sampling-based-Algorithms-for-Optimal-Motion-Planning/04_evaluation.md",
       "original_target": true,
       "edits": [
         {
@@ -4487,7 +4487,7 @@
     },
     {
       "paper_id": "pr-0616",
-      "path": "2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/01_overview.md",
+      "path": "2011-2020/2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/01_overview.md",
       "original_target": true,
       "edits": [
         {
@@ -4505,7 +4505,7 @@
     },
     {
       "paper_id": "pr-0616",
-      "path": "2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/03_method.md",
+      "path": "2011-2020/2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/03_method.md",
       "original_target": true,
       "edits": [
         {
@@ -4536,7 +4536,7 @@
     },
     {
       "paper_id": "pr-0616",
-      "path": "2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/05_insights.md",
+      "path": "2011-2020/2016/ICLR/2016_ICLR_Continuous-Control-with-Deep-Reinforcement-Learning/05_insights.md",
       "original_target": true,
       "edits": [
         {
@@ -4553,7 +4553,7 @@
     },
     {
       "paper_id": "pr-0553",
-      "path": "2002/AAAI/2002_AAAI_D-Lite/01_overview.md",
+      "path": "1960-2010/2002/AAAI/2002_AAAI_D-Lite/01_overview.md",
       "original_target": true,
       "edits": [
         {
@@ -4597,7 +4597,7 @@
     },
     {
       "paper_id": "pr-0553",
-      "path": "2002/AAAI/2002_AAAI_D-Lite/03_method.md",
+      "path": "1960-2010/2002/AAAI/2002_AAAI_D-Lite/03_method.md",
       "original_target": true,
       "edits": [
         {
@@ -4747,7 +4747,7 @@
     },
     {
       "paper_id": "pr-0553",
-      "path": "2002/AAAI/2002_AAAI_D-Lite/04_evaluation.md",
+      "path": "1960-2010/2002/AAAI/2002_AAAI_D-Lite/04_evaluation.md",
       "original_target": true,
       "edits": [
         {
@@ -4935,7 +4935,7 @@
     },
     {
       "paper_id": "pr-0553",
-      "path": "2002/AAAI/2002_AAAI_D-Lite/05_insights.md",
+      "path": "1960-2010/2002/AAAI/2002_AAAI_D-Lite/05_insights.md",
       "original_target": false,
       "edits": [
         {
@@ -4971,7 +4971,7 @@
     },
     {
       "paper_id": "pr-0553",
-      "path": "2002/AAAI/2002_AAAI_D-Lite/02_problem.md",
+      "path": "1960-2010/2002/AAAI/2002_AAAI_D-Lite/02_problem.md",
       "original_target": false,
       "edits": [
         {
@@ -5011,7 +5011,7 @@
   "remaining_outside_scope": [
     {
       "paper_id": "pr-0008",
-      "path": "2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/03_method.md",
+      "path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Denoising-Diffusion-Probabilistic-Models/03_method.md",
       "sha256": "1941aeea3bb99d108fa04e8465ba2775521d207a853270e80d3b055046f2f411",
       "lines": [
         {
@@ -6710,7 +6710,7 @@
     },
     {
       "paper_id": "pr-0489",
-      "path": "2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/04_evaluation.md",
+      "path": "2011-2020/2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/04_evaluation.md",
       "sha256": "bbea69c9a70cee0e275afe3e7bea0e49026393cd2bf322edaf2703001092cf94",
       "lines": [
         {
@@ -6726,7 +6726,7 @@
     },
     {
       "paper_id": "pr-0489",
-      "path": "2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/03_method.md",
+      "path": "2011-2020/2011/ISMAR/2011_ISMAR_KinectFusion-Real-Time-Dense-Surface-Mapping-and-Tracking/03_method.md",
       "sha256": "36d756cf3d2af5753cfe5d9e90f2f66eeb55799e94b9dbf0277d446d69a1c573",
       "lines": [
         {
@@ -6756,7 +6756,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/01_overview.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/01_overview.md",
       "sha256": "abd8844962186b7e6f7068a531c335f092c32fdba4aaa3ff82957fbed3ca7ee3",
       "lines": [
         {
@@ -6772,7 +6772,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
       "sha256": "1be2b84923f01f772965a1d4e4a8b0388d8a89aa3ea5a936bcc172c525ba8bcd",
       "lines": [
         {
@@ -6788,7 +6788,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/05_insights.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/05_insights.md",
       "sha256": "86105810ccea6b459861100d9a0989f7b026f15abe40ec5b6220ee97f4dca79f",
       "lines": [
         {
@@ -6804,7 +6804,7 @@
     },
     {
       "paper_id": "pr-0497",
-      "path": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/03_method.md",
+      "path": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/03_method.md",
       "sha256": "0c899c06e38b8ef682cb13a248cc99ec3e2a21bf93cc342f291055647a8011c5",
       "lines": [
         {
@@ -6924,7 +6924,7 @@
     },
     {
       "paper_id": "pr-0523",
-      "path": "2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md",
+      "path": "2011-2020/2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/01_overview.md",
       "sha256": "b6c21a60a67accefc759d6916da650f4639e35e0a364ac1f8b369aa663c93d5c",
       "lines": [
         {
@@ -6939,7 +6939,7 @@
     },
     {
       "paper_id": "pr-0523",
-      "path": "2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/03_method.md",
+      "path": "2011-2020/2016/NeurIPS/2016_NeurIPS_Generative-Adversarial-Imitation-Learning/03_method.md",
       "sha256": "70a47f76ed4e0d36a21091007c227c16cbebb9286c6ed9f7b1d1029c8e74bc95",
       "lines": [
         {
@@ -6960,7 +6960,7 @@
     },
     {
       "paper_id": "pr-0524",
-      "path": "2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/03_method.md",
+      "path": "2011-2020/2017/arxiv/2017_arxiv_Proximal-Policy-Optimization-Algorithms/03_method.md",
       "sha256": "a9024c257b8105608859ed950a345d9d122828c92ff9d42de34fa0a5cbf56070",
       "lines": [
         {
@@ -7032,7 +7032,7 @@
     },
     {
       "paper_id": "pr-0546",
-      "path": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/03_method.md",
+      "path": "2011-2020/2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/03_method.md",
       "sha256": "8bd8c24ebdbf813667a9073ed7e4320b8f91e976a3b5015c8feba8804244c388",
       "lines": [
         {
@@ -7047,7 +7047,7 @@
     },
     {
       "paper_id": "pr-0556",
-      "path": "2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/04_evaluation.md",
+      "path": "2011-2020/2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/04_evaluation.md",
       "sha256": "47733e4f168c1da9376f862339e84227a4626f9c660a71b7bea8bb10a661f728",
       "lines": [
         {
@@ -7063,7 +7063,7 @@
     },
     {
       "paper_id": "pr-0556",
-      "path": "2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/03_method.md",
+      "path": "2011-2020/2011/ICRA/2011_ICRA_STOMP-Stochastic-Trajectory-Optimization-for-Motion-Planni/03_method.md",
       "sha256": "4585072d8021d602bd59a390f7d9582ba9b63f5e4036dfc747c274b0d67cebdd",
       "lines": [
         {
@@ -7086,7 +7086,7 @@
     },
     {
       "paper_id": "pr-0559",
-      "path": "2013/Neural-Computation/2013_Neural-Computation_Dynamical-Movement-Primitives-Learning-Attractor-Models-fo/03_method.md",
+      "path": "2011-2020/2013/Neural-Computation/2013_Neural-Computation_Dynamical-Movement-Primitives-Learning-Attractor-Models-fo/03_method.md",
       "sha256": "d97faa14694248c3689991a3c634df2d177e5cb44f6f682caac45d59025bd563",
       "lines": [
         {
@@ -7365,7 +7365,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/01_overview.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/01_overview.md",
       "sha256": "4b79e95ca595719ace93fb174c6c026077dc3e62aa7816dfd3c69d42ec6124d7",
       "lines": [
         {
@@ -7381,7 +7381,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/04_evaluation.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/04_evaluation.md",
       "sha256": "59faac00b41785dff67b83ba04e929280b37881a7232aef800bd77adf0fe3895",
       "lines": [
         {
@@ -7403,7 +7403,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/05_insights.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/05_insights.md",
       "sha256": "af8e2055ed9608f48e0396b7dbe474fafd39646e60031f93bcd4f869a44340aa",
       "lines": [
         {
@@ -7419,7 +7419,7 @@
     },
     {
       "paper_id": "pr-0594",
-      "path": "2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/03_method.md",
+      "path": "2011-2020/2016/Autonomous-Robots/2016_Autonomous-Robots_Optimization-Based-Locomotion-Planning-Estimation-and-Cont/03_method.md",
       "sha256": "bb8941ea226dd87926b0b2b1600eaa0c43182192e5685cc7f4cce99d39489434",
       "lines": [
         {
@@ -7478,7 +7478,7 @@
     },
     {
       "paper_id": "pr-0615",
-      "path": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/02_problem.md",
+      "path": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/02_problem.md",
       "sha256": "0c163bb491073f0d2425eb32b7c5130903b75df437e53d972c92f6f4c6f04a62",
       "lines": [
         {
@@ -7493,7 +7493,7 @@
     },
     {
       "paper_id": "pr-0615",
-      "path": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md",
+      "path": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/01_overview.md",
       "sha256": "b52ff3c50b01d00e422dd24064b61c9cfb274f5808b3322e9208cb514d0becda",
       "lines": [
         {
@@ -7514,7 +7514,7 @@
     },
     {
       "paper_id": "pr-0615",
-      "path": "2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/05_insights.md",
+      "path": "2011-2020/2015/ICML/2015_ICML_Trust-Region-Policy-Optimization/05_insights.md",
       "sha256": "b9e88738268b2e5dcc96e09ea2d03298b6d8146a3a46e93925c6edb8efbe5983",
       "lines": [
         {
@@ -7529,7 +7529,7 @@
     },
     {
       "paper_id": "pr-0620",
-      "path": "2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/03_method.md",
+      "path": "2011-2020/2018/ICML/2018_ICML_Soft-Actor-Critic-Off-Policy-Maximum-Entropy-Deep-Reinforc/03_method.md",
       "sha256": "b1dd48b34651044e9261d198a9581bf24f30e34b4efb46fe8029f4d7e2294273",
       "lines": [
         {
@@ -7554,7 +7554,7 @@
     },
     {
       "paper_id": "pr-0622",
-      "path": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md",
+      "path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/01_overview.md",
       "sha256": "ffb3934eb466437aedb79505b8cffd90539d9f1c9c8966a61b4b989e403858fd",
       "lines": [
         {
@@ -7570,7 +7570,7 @@
     },
     {
       "paper_id": "pr-0622",
-      "path": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/03_method.md",
+      "path": "2011-2020/2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/03_method.md",
       "sha256": "bf179039d43523c8a7ed80da04965c336e7a6fa65b27a71eaa531641acf6a304",
       "lines": [
         {
@@ -7743,7 +7743,7 @@
     },
     {
       "paper_id": "pr-0676",
-      "path": "2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/01_overview.md",
+      "path": "2011-2020/2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/01_overview.md",
       "sha256": "7f6673ae4aaa79fdf135f5e1dc173a8d1138dfc5674897888a8bb4719c59caa6",
       "lines": [
         {
@@ -7759,7 +7759,7 @@
     },
     {
       "paper_id": "pr-0676",
-      "path": "2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/04_evaluation.md",
+      "path": "2011-2020/2019/Technical-Report/2019_Technical-Report_Benchmarking-Safe-Exploration-in-Deep-Reinforcement-Learni/04_evaluation.md",
       "sha256": "1cd7e7025151ebbe0b9020883d3ee4f0fba4bc82f0cea1869ae6becf857e94b4",
       "lines": [
         {
@@ -7782,7 +7782,7 @@
     },
     {
       "paper_id": "pr-0679",
-      "path": "2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/03_method.md",
+      "path": "2011-2020/2019/ICML/2019_ICML_Learning-Latent-Dynamics-for-Planning-from-Pixels/03_method.md",
       "sha256": "1ffecbabfd1144a64c1a7b1af1019d9c8a367ba8241df5282b49679e956ccde7",
       "lines": [
         {
@@ -7954,7 +7954,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/01_overview.md",
       "sha256": "1be7439e2efda87ae6f1e480ba7aac4f2155b8bbfb0d4622822beae9d5ebf8a2",
       "lines": [
         {
@@ -7975,7 +7975,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/04_evaluation.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/04_evaluation.md",
       "sha256": "02388c33fdf8b1bd8e0dbb49775c749396b6f23e5e32d532d682b07ca568f534",
       "lines": [
         {
@@ -8020,7 +8020,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/05_insights.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/05_insights.md",
       "sha256": "d72a322e9f55a96a1f29757d4a2fae54c165c14bd1c06133ba4f279fece8c19c",
       "lines": [
         {
@@ -8060,7 +8060,7 @@
     },
     {
       "paper_id": "pr-0828",
-      "path": "2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/03_method.md",
+      "path": "1960-2010/2003/ICRA/2003_ICRA_Biped-Walking-Pattern-Generation-by-using-Preview-Control/03_method.md",
       "sha256": "f4d5a99c4be54c5b99add85f9e7835376ac3ea7ff79b772a80a263b8ba8a033f",
       "lines": [
         {
@@ -8075,7 +8075,7 @@
     },
     {
       "paper_id": "pr-0846",
-      "path": "2020/arXiv/2020_arXiv_robosuite-A-Modular-Simulation-Framework-and-Benchmark-for/04_evaluation.md",
+      "path": "2011-2020/2020/arXiv/2020_arXiv_robosuite-A-Modular-Simulation-Framework-and-Benchmark-for/04_evaluation.md",
       "sha256": "3554f0b6071ae5e984f133c6cab7fc28ad3b2d44c44205da6a737077e245e0bb",
       "lines": [
         {
@@ -8092,7 +8092,7 @@
     },
     {
       "paper_id": "pr-0853",
-      "path": "2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/01_overview.md",
+      "path": "2011-2020/2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/01_overview.md",
       "sha256": "40f90744be6e485ce4512a982d34b4717a91432631090fdac5a862ddaaf1705a",
       "lines": [
         {
@@ -8107,7 +8107,7 @@
     },
     {
       "paper_id": "pr-0853",
-      "path": "2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/04_evaluation.md",
+      "path": "2011-2020/2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/04_evaluation.md",
       "sha256": "d4226db81701b3d2217dbe7c5200b557b5a4d342d2445d7173232383cc7e4cee",
       "lines": [
         {
@@ -8122,7 +8122,7 @@
     },
     {
       "paper_id": "pr-0853",
-      "path": "2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/03_method.md",
+      "path": "2011-2020/2015/Nature/2015_Nature_Human-level-control-through-deep-reinforcement-learning/03_method.md",
       "sha256": "a4cfa925a4b12c03ebc5235d95bcf3bc28cb34395b11ca10c44457dd603066d3",
       "lines": [
         {
@@ -8188,7 +8188,7 @@
     },
     {
       "paper_id": "pr-0946",
-      "path": "2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
+      "path": "2011-2020/2020/IROS/2020_IROS_LIO-SAM-Tightly-coupled-Lidar-Inertial-Odometry-via-Smooth/03_method.md",
       "sha256": "6906e53140276a0069963a2786ee714db4b135bb552bcec0f0d1fe2811a9cec6",
       "lines": [
         {

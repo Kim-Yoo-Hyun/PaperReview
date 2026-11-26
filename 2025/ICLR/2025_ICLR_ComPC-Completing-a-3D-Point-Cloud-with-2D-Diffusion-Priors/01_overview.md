@@ -11,7 +11,7 @@
 - 저자 판본: ICLR 게재본과 대조해 마지막 저자의 이름을 Gim Hee Lee로 풀어 썼다. [표제면](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=1) · [학회 서지](https://proceedings.iclr.cc/paper_files/paper/2025/hash/804f1fac094d7b751410b50066da3a63-Abstract-Conference.html)
 - Primary track: Planning and control
 - Tier: ARCHIVE
-- Tags: Diffusion, Generation, point cloud, 3D Vision
+- Tags: Diffusion, Generation, point cloud, 3D Vision, shape completion
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/804f1fac094d7b751410b50066da3a63-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ ComPC는 범주별 완성 모델을 새로 훈련하지 않고, 사전학습된 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (1 INTRODUCTION), p. 3 (1 INTRODUCTION), p. 4 (3 METHODOLOGY)이다.
+
+## 검색 태그 근거
+
+부분 점군에서 만든 참조 뷰를 2D 확산 사전분포에 넣어 장면의 비어 있는 부분을 채우고 완성 점군을 추출한다. 영상은 부분 점군의 렌더링으로 제공된다. [원문 3쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=3) · [원문 7쪽](https://proceedings.iclr.cc/paper_files/paper/2025/file/804f1fac094d7b751410b50066da3a63-Paper-Conference.pdf#page=7)

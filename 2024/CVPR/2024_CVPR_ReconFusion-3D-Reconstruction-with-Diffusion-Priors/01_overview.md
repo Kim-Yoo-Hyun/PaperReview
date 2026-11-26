@@ -82,3 +82,7 @@ ReconFusion은 적은 수의 실제 뷰로 방사장을 최적화할 때 새로�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Diffusion Model for Novel View Synthesis), p. 4 (3.1. Diffusion Model for Novel View Synthesis), p. 5 (3.3. Implementation Details)이다.
+
+## 검색 태그 근거
+
+사전학습한 조건부 영상 확산 모델이 적은 관측으로 최적화하는 방사장에 새 시점의 외관 사전분포를 제공한다. 평가는 희소 입력에서 복원한 장면과 뷰 합성에 집중한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2024/papers/Wu_ReconFusion_3D_Reconstruction_with_Diffusion_Priors_CVPR_2024_paper.pdf#page=7)

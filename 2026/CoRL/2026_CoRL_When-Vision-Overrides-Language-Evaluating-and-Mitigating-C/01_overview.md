@@ -42,3 +42,9 @@ LANGRET의 공개 장면·지시쌍·평가기 source이며 기존 counterfactua
 ## Verification Boundary
 
 본문에서 확인할 항목: focused suite의 장면 변경·OR/target-only 종료·두 목표의 기본 능력·guidance 비용. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · LIBERO-CF 반사실 지시 평가 · eval/main_cf.py [배포 파일](https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/eval/main_cf.py)
+- 가중치 · 시각 증강으로 학습한 π₀.₅ LIBERO 정책 파라미터 조각 · params/d/d48f913331207f217fc63b474191e0c3 [배포 파일](https://huggingface.co/VLA-CF/pi05-libero-VA/resolve/7b7b6c2241245a15db80b0b4ff6a623ed329b7cc/params/d/d48f913331207f217fc63b474191e0c3)
+- 데이터 · LIBERO-CF의 반사실 평가 과제 명세 · libero/libero/bddl_files/libero_cf_long/01-put_the_wine_bottle_in_the_bottom_drawer_of_the_cabinet.bddl [배포 파일](https://raw.githubusercontent.com/yuffish/VLA-CF/8280a500a01f7f7d45efe202cb416ca362aa8c1a/libero/libero/bddl_files/libero_cf_long/01-put_the_wine_bottle_in_the_bottom_drawer_of_the_cabinet.bddl)

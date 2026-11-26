@@ -76,3 +76,7 @@ mip-NeRF는 한 픽셀이 보는 공간 범위를 반영해 서로 다른 축척
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 4 (3. Method), p. 6 (3.2. Architecture), p. 5 (3.1. Cone Tracing and Positional Encoding), p. 4 (3.1. Cone Tracing and Positional Encoding)이다.
+
+## 검색 태그 근거
+
+원뿔대를 가우시안으로 근사한 위치 인코딩을 사용해 해상도에 따라 달라지는 광선의 면적을 신경 방사장에 반영한다. 여러 해상도의 뷰 합성과 앨리어싱을 비교했다. [원문 3쪽](https://arxiv.org/pdf/2103.13415#page=3) · [원문 8쪽](https://arxiv.org/pdf/2103.13415#page=8)

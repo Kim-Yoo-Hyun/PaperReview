@@ -8,7 +8,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, feedback, evaluation
+- Tags: Robotics, feedback, evaluation, VLA, failure recovery
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.21453
 - Full-text retrieval: https://arxiv.org/pdf/2610.21453v1
@@ -35,6 +35,10 @@ CarryOn은 고정된 VLA에 사용자 선호를 기억하는 계획 루프와 �
 Simulation과 실제 robot assistance 결과를 보고한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2610.21453) · [저자 project/code](https://vincent2311.github.io/Projects/CarryOn/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+CarryOn은 사용자 선호·장면 기억으로 하위 과제를 정하고, RGB-D와 로봇 상태로 VLA 실행을 감시·보호·복구한다. 실물 보조 과제와 시뮬레이션의 교란 실험을 별도로 보고한다. [원문 5쪽](https://arxiv.org/pdf/2610.21453v1#page=5) · [원문 7쪽](https://arxiv.org/pdf/2610.21453v1#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

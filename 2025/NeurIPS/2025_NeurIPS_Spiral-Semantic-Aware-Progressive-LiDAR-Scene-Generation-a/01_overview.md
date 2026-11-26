@@ -10,7 +10,7 @@
 - Authors: Dekai Zhu, Yixuan Hu, Youquan Liu, Dongyue Lu, Lingdong Kong, Slobodan Ilic
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: sensor fusion, LiDAR, semantic, alignment, Diffusion, Generation, 3D Vision
+- Tags: LiDAR, semantic, Diffusion, Generation, 3D Vision
 - Official paper: https://neurips.cc/virtual/2025/poster/117899
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/536d643875321d6c3282ee8c7ea5eb6a-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2505.22643

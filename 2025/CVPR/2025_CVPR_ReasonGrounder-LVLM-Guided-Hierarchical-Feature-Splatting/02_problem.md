@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 2 (1. Introduction), p. 1 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Existing 3D visual grounding (3DVG) methods [7, 12, 13, 36] face challenges in open-vocabulary grounding and reasoning, primarily due to reliance on ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
-| State / latent | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially | geometry, map, object/relationship state | notation and tensor shape require body check |
-| Output / action | achieve, open-vocabulary, visual, grounding, reasoning, proposes, ReasonGrounder, novel | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
-| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+| Target problem | Existing 3D visual grounding (3DVG) methods [7, 12, 13, 36] face challenges in open-vocabulary grounding and reasoning, primarily due to reliance on ... | 실내 장면의 열린 어휘 3D 물체 찾기 | body wording is the source claim |
+| Observation / input | LVLM aids in interpreting complex instructions and locating objects even when partially or fully occluded. • (4) Dataset Contributions: A new ReasoningGD ... | 다중 시점 영상과 언어 질의 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | LVLM, aids, interpreting, complex, instructions, locating, objects, even, when, partially | 마스크 규모별 가우시안 특징과 참조 시점 | notation and tensor shape require body check |
+| Output / action | achieve, open-vocabulary, visual, grounding, reasoning, proposes, ReasonGrounder, novel | 질의 대상의 3D 위치와 마스크 | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | 위치 정확도와 마스크 겹침 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

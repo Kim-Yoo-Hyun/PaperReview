@@ -10,7 +10,7 @@
 - Authors: Jingyi Tian, Le Wang, Sanping Zhou, Sen Wang, Jiayi Li, Haowen Sun, Wei Tang
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Diffusion, Robotics, 3D action
+- Tags: Diffusion, Robotics, 3D action, point cloud
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ PDFactor는 점군에서 세 직교 평면의 특징을 구성하고, 관측과 
 
 ## Observation, State, and Output Interface
 
+그림 2는 다중 시점 RGB-D에서 만든 점군을 세 평면에 투영하고 언어 조건에서 그리퍼 자세·개폐를 예측한다. 시연으로 학습해 RLBench의 삽입·집기와 실물 조작을 비교했다. [PDF 4쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.pdf#page=4) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Tian_PDFactor_Learning_Tri-Perspective_View_Policy_Diffusion_Field_for_Multi-Task_Robotic_CVPR_2025_paper.pdf#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | In particular, given RGB-D observations \protect \mathbf {o}, language instruction \protect \mathbf {l} and robot proprioception \protect \mathbf {c}, our goal is to learn a multi-task policy \pi (\ ma thbf {a}/\mathbf ... | RGB-D/point cloud, object state와 contact/task observation | p. 3 (3. Method), p. 2 (1. Introduction) |
-| State/latent | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception, goal, learn | object geometry, affordance, contact mode 또는 end-effector state | p. 3 (3. Method), p. 2 (1. Introduction), p. 1 (1. Introduction) |
-| Output/action | Thus the action space is aligned and translationally anchored to the visual features observed from input images, which simplifies the mapping from states to actions and avoids training and inferencing with a ... | grasp, pose, force 또는 end-effector trajectory | p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction) |
-| Objective/outcome | For the gripper open state and collision state, we simply pass latent vector \protect \mathbf {z} through an MLP to predict a binary label optimized via binary cross entropy loss: &\m a ... | task completion, contact success, pose/force error와 generalization | p. 5 (3. We aim to model their joint dis), p. 3 (3. Method), p. 5 (3.4. Score Matching Loss) |
+| Observation/input | In particular, given RGB-D observations \protect \mathbf {o}, language instruction \protect \mathbf {l} and robot proprioception \protect \mathbf {c}, our goal is to learn a multi-task policy \pi (\ ma thbf {a}/\mathbf ... | RGB-D로 복원한 점군과 언어 지시 | p. 3 (3. Method), p. 2 (1. Introduction) |
+| State/latent | particular, given, RGB-D, observations, protect, mathbf, language, instruction, robot, proprioception, goal, learn | 세 평면의 공간 특징 및 행동 확산 필드 | p. 3 (3. Method), p. 2 (1. Introduction), p. 1 (1. Introduction) |
+| Output/action | Thus the action space is aligned and translationally anchored to the visual features observed from input images, which simplifies the mapping from states to actions and avoids training and inferencing with a ... | 그리퍼의 자세·개폐 명령 | p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Introduction) |
+| Objective/outcome | For the gripper open state and collision state, we simply pass latent vector \protect \mathbf {z} through an MLP to predict a binary label optimized via binary cross entropy loss: &\m a ... | 과제별 조작 성공 | p. 5 (3. We aim to model their joint dis), p. 3 (3. Method), p. 5 (3.4. Score Matching Loss) |
 
 ## Main Claims and Actual Contribution
 

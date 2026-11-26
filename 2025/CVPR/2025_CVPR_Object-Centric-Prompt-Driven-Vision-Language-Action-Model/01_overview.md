@@ -44,12 +44,14 @@ CrayonRobo는 영상 위에 그린 시각 지시와 언어를 접촉 자세 및 
 
 ## Observation, State, and Output Interface
 
+RGB에 그린 점·방향과 텍스트를 입력해 접촉 자세·이동 방향을 출력하고 깊이로 접촉점을 역투영한다. SAPIEN의 부유 그리퍼로 수집한 자료로 학습해 실제 Franka 팔에서 열기·들기·닦기를 평가했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=3) · [PDF 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Li_Object-Centric_Prompt-Driven_Vision-Language-Action_Model_for_Robotic_Manipulation_CVPR_2025_paper.pdf#page=8)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Given the visual and language input, the model outputs the predicted action 푎0. | image/video, language instruction, proprioception과 history | p. 5 (3.4.1. Model Inference), p. 4 (3.3.2. Policy Learning) |
-| State/latent | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce, following, losses | language-grounded task state와 action-policy context | p. 5 (3.4.1. Model Inference), p. 4 (3.3.2. Policy Learning), p. 2 (1. Introduction) |
-| Output/action | Therefore, we introduce the following losses to guide the policy training: Text Supervision Loss L푇: This loss ensures the effective alignment of the model's visual and linguistic input, making sure it can ... | continuous action, pose 또는 action chunk | p. 4 (3.3.2. Policy Learning), p. 2 (1. Introduction), p. 4 (3.3.2. Policy Learning) |
-| Objective/outcome | The aforementioned losses are trained simultaneously under the total objective function: L = 휆1 ∗L푇+휆2 ∗L푂+휆3 ∗L푃. | instruction following, task success, generalization과 latency | p. 4 (3.3.2. Policy Learning), p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem Formulation) |
+| Observation/input | Given the visual and language input, the model outputs the predicted action 푎0. | 표시가 그려진 RGB와 텍스트, 역투영용 깊이·카메라 파라미터 | p. 5 (3.4.1. Model Inference), p. 4 (3.3.2. Policy Learning) |
+| State/latent | Given, visual, language, input, model, outputs, predicted, action, Therefore, introduce, following, losses | 접촉점과 그리퍼·이동 방향 | p. 5 (3.4.1. Model Inference), p. 4 (3.3.2. Policy Learning), p. 2 (1. Introduction) |
+| Output/action | Therefore, we introduce the following losses to guide the policy training: Text Supervision Loss L푇: This loss ensures the effective alignment of the model's visual and linguistic input, making sure it can ... | 실행할 접촉 자세와 방향 | p. 4 (3.3.2. Policy Learning), p. 2 (1. Introduction), p. 4 (3.3.2. Policy Learning) |
+| Objective/outcome | The aforementioned losses are trained simultaneously under the total objective function: L = 휆1 ∗L푇+휆2 ∗L푂+휆3 ∗L푃. | 모의·실물 성공 및 표시 잡음 민감도 | p. 4 (3.3.2. Policy Learning), p. 4 (3.3.2. Policy Learning), p. 3 (3.1. Problem Formulation) |
 
 ## Main Claims and Actual Contribution
 

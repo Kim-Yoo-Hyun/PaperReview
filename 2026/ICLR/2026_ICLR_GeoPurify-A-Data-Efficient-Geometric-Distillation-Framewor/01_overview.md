@@ -10,7 +10,7 @@
 - Authors: Weijia Dou, Xu Zhang, Yi Bin, Jian Liu, Bo Peng, Guoqing Wang, Yang Yang, Heng Tao Shen
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: semantic, alignment, 3D Vision
+- Tags: semantic, representation alignment, 3D segmentation, 3D Vision
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/039bc8e424e1fc196b4203555b54ebc4-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/039bc8e424e1fc196b4203555b54ebc4-Paper-Conference.pdf
 - Code/Project: not identified

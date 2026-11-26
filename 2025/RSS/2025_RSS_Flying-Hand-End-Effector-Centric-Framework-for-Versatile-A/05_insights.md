@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Locomotion, whole-body, mobile manipulation, and humanoids`; tags: `Robotics, aerial manipulation, whole-body control, teleoperation, Imitation Learning, assembly`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** HOMIE: Humanoid Loco-Manipulation with Isomorphic Exoskeleton Cockpit (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** SPIN: Simultaneous Perception, Interaction and Navigation (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

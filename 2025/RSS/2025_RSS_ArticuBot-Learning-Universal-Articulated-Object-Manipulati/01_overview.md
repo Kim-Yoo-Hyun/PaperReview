@@ -10,7 +10,7 @@
 - Authors: Yufei Wang, Ziyu Wang, Mino Nakura, Pratik Bhowal, Chia-Liang Kuo, Yi-Ting Chen, Zackory Erickson, David Held
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: Robotics, mobile manipulation, simulation, articulated objects
+- Tags: Robotics, mobile manipulation, simulation, articulated objects, hierarchical policy, diffusion policy
 - Official paper: https://www.roboticsproceedings.org/rss21/p156.html
 - Full-text retrieval: https://www.roboticsproceedings.org/rss21/p156.pdf
 - Code/Project: https://articubot.github.io/

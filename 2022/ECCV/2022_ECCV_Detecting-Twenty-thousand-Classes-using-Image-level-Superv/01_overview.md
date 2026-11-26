@@ -78,3 +78,7 @@ Detic은 상자 주석이 있는 검출 자료와 영상 전체의 범주만 아
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 5 (3 Preliminaries), p. 1 (1 Introduction), p. 4 (3 Preliminaries), p. 2 (X. Zhou et al)이다.
+
+## 검색 태그 근거
+
+상자 주석이 있는 검출 데이터와 이미지 전체의 클래스 라벨이 있는 데이터를 함께 사용한다. 추론 범주는 CLIP 텍스트 임베딩으로 지정하고 LVIS 등의 검출 성능으로 평가한다. [원문 4쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=4) · [원문 8쪽](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136690344.pdf#page=8)

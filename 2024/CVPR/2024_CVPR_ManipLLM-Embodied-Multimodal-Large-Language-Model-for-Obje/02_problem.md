@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Consequently, MLLMs lack prior knowledge in this field while successful training for these tasks necessitates extensive data to achieve desired generalization ability. | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | To deal with these difficulties, the proposed policy aims to adjust how we interact with things based on impedance force feedback, which ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | Given, text, prompt, RGB, image, depth, inputs, obtain | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | Consequently, MLLMs lack prior knowledge in this field while successful training for these tasks necessitates extensive data to achieve desired generalization ability. | 관절 물체의 접촉 위치와 움직임 결정 | body wording is the source claim |
+| Observation / input | To deal with these difficulties, the proposed policy aims to adjust how we interact with things based on impedance force feedback, which ... | RGB와 텍스트, 3D 역투영용 깊이와 실행 중 힘 피드백 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | deal, difficulties, policy, aims, adjust, interact, things, impedance, force, feedback | 접촉점·그리퍼 방향과 관절 물체의 움직임 | notation and tensor shape require body check |
+| Output / action | Given, text, prompt, RGB, image, depth, inputs, obtain | 시작 자세 및 조정된 조작 방향 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 시뮬레이션과 실물의 물체 조작 성공 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

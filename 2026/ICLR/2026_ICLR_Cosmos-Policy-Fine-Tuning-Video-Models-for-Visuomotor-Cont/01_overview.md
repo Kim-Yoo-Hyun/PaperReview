@@ -10,7 +10,7 @@
 - Authors: Moo Jin Kim, Yihuai Gao, Tsung-Yi Lin, Yen-Chen Lin, Yunhao Ge, Grace Lam, Percy Liang, Shuran Song, Ming-Yu Liu, Chelsea Finn, Jinwei Gu
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, world model, visuomotor control, video model
+- Tags: Robotics, world model, visuomotor control, video model, model-based planning
 - Official paper: https://iclr.cc/virtual/2026/poster/10006732
 - Full-text retrieval: https://arxiv.org/pdf/2601.16163
 - Code/Project: https://research.nvidia.com/labs/dir/cosmos-policy/

@@ -10,7 +10,7 @@
 - Authors: Haoyu Zhang, Meng Liu, Zaijing Li, Haokun Wen, Weili Guan, Yaowei Wang, Liqiang Nie
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Vision-Language Model, 3D Vision
+- Tags: Vision-Language Model, 3D Vision, 3D QA
 - Official paper: https://neurips.cc/virtual/2025/poster/117952
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/9541101fbc2f24bce5f2462b95db88c4-Paper-Conference.pdf
 - Full-text retrieval at original review: https://arxiv.org/pdf/2506.03642
@@ -79,3 +79,7 @@ SpatialMind와 ScanForgeQA는 영상에 담긴 물체 관계와 배치를 묻는
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 Introduction), p. 2 (1 Introduction)이다.
+
+## 검색 태그 근거
+
+SpatialMind는 동영상에 나온 3D 배치를 구조화한 텍스트 표현으로 서술한다. 합성한 ScanForgeQA를 학습에 쓰고 VSI-Bench에서 영상 질문 응답의 정확도를 비교했다. [원문 3쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/9541101fbc2f24bce5f2462b95db88c4-Paper-Conference.pdf#page=3) · [원문 7쪽](https://proceedings.neurips.cc/paper_files/paper/2025/file/9541101fbc2f24bce5f2462b95db88c4-Paper-Conference.pdf#page=7)

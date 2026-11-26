@@ -78,3 +78,7 @@ Gaussian Atlas는 물체의 3D 가우시안 파라미터를 조밀한 2D 격자�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (4. Formulating 3D Gaussians as 2D Atlas)이다.
+
+## 검색 태그 근거
+
+가우시안의 속성을 2D 격자 형태의 아틀라스로 놓고 텍스트 조건부 이미지 확산으로 생성한다. 디코딩된 3D 물체의 뷰 일관성과 텍스트 부합도를 비교했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Xiang_Repurposing_2D_Diffusion_Models_with_Gaussian_Atlas_for_3D_Generation_ICCV_2025_paper.pdf#page=7)

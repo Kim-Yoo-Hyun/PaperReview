@@ -47,7 +47,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `RL, IL, offline learning, and robot data`; tags: `Robotics, representation learning, Video Pretraining, manipulation`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Behavior Transformers: Cloning k modes with one stone (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence? (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

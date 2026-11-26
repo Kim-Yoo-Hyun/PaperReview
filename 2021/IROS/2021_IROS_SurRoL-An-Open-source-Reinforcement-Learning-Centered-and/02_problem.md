@@ -22,11 +22,11 @@ PDF body framing (p. 2 (I. INTRODUCTION), p. 1 (I. INTRODUCTION), p. 1 (I. INTRO
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Ten constructed surgical relevant tasks with difficulty levels and varying scenes are presented for learning-based algorithm evaluation (right). | multi-robot demonstration/dataset ecosystem | body wording is the source claim |
-| Observation / input | SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and ... | multi-view observation, language/task label과 action trajectory | exact sensor/frame/preprocessing from PDF body |
-| State / latent | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption | shared representation, embodiment/task identity와 data distribution | notation and tensor shape require body check |
-| Output / action | SurRoL, provides, dVRK, compatible, simulation, environments, surgical, robot | dataset sample 또는 learned policy action | exact unit/frame/decoder require body check |
-| Target outcome | cross-domain transfer and task performance | coverage, cross-embodiment transfer, data efficiency와 task success | metric/denominator are in 04 evidence |
+| Target problem | Ten constructed surgical relevant tasks with difficulty levels and varying scenes are presented for learning-based algorithm evaluation (right). | dVRK 수술 도구와 내시경 카메라 과제 | body wording is the source claim |
+| Observation / input | SurRoL builds on top of the open-source PyBullet because of its state-of-the-art physics simulation, wide adoption in the machine learning community, and ... | 시뮬레이션의 저차원 상태와 실물 시험별 도구·표적 위치 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | SurRoL, builds, open-source, PyBullet, because, state-of-the-art, physics, simulation, wide, adoption | 도구·물체·카메라 및 목표 상태 | notation and tensor shape require body check |
+| Output / action | SurRoL, provides, dVRK, compatible, simulation, environments, surgical, robot | 도구의 이동·집게 조작 또는 카메라 명령 | exact unit/frame/decoder require body check |
+| Target outcome | cross-domain transfer and task performance | 수술 기본 과제별 성공 및 실물 전이 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

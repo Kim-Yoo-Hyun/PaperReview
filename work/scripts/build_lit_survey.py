@@ -16,6 +16,8 @@ import os
 import re
 import shutil
 import subprocess
+import sys
+import tempfile
 import time
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -26,10 +28,10 @@ import requests
 
 try:
     from taxonomy import canonicalize
-    from registry_schema import enrich_record, next_paper_id
+    from registry_schema import enrich_record, next_paper_id, paper_year_path
 except ModuleNotFoundError:  # import as work.scripts.build_lit_survey
     from .taxonomy import canonicalize
-    from .registry_schema import enrich_record, next_paper_id
+    from .registry_schema import enrich_record, next_paper_id, paper_year_path
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -277,7 +279,7 @@ def venue_bucket(value: str) -> str:
 def folder_name(paper: dict) -> str:
     short = paper.get("short") or safe_slug(paper["title"])
     venue = safe_slug(venue_bucket(paper["venue"]), 24)
-    return f"{paper['year']}/{venue}/{paper['year']}_{venue}_{short}"
+    return (paper_year_path(paper["year"]) / venue / f"{paper['year']}_{venue}_{short}").as_posix()
 
 
 def venue_display(value: str) -> str:
@@ -423,39 +425,42 @@ def fetch_page_metadata(p: dict) -> None:
 
 
 def download_pdf(p: dict) -> dict:
-    out_dir = ROOT / folder_name(p)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_dir = ROOT / (p.get("folder") or folder_name(p))
     pdf_path = out_dir / "paper.pdf"
-    error_path = out_dir / "paper_pdf_error.txt"
     p["folder"] = str(out_dir.relative_to(ROOT))
-    if pdf_path.exists() and pdf_path.stat().st_size > 20_000:
-        error_path.unlink(missing_ok=True)
-        p["pdf_status"] = "downloaded"
-        return p
-    url = p.get("pdf")
-    if not url:
-        (out_dir / "paper_pdf_error.txt").write_text("No PDF URL identified.\n", encoding="utf-8")
-        p["pdf_status"] = "missing-url"
-        return p
+    tmp = None
     try:
+        if pdf_path.is_file() and pdf_path.stat().st_size >= 20_000:
+            with pdf_path.open("rb") as existing:
+                if existing.read(4) == b"%PDF":
+                    p["pdf_status"] = "downloaded"
+                    return p
+        pdf_source = (p.get("sources") or {}).get("paper_pdf") or {}
+        url = pdf_source.get("url") or p.get("pdf")
+        if not url:
+            p["pdf_status"] = "missing-url"
+            return p
+        out_dir.mkdir(parents=True, exist_ok=True)
         request_headers = {} if p.get("download_without_user_agent") else HEADERS
         with requests.get(url, headers=request_headers, timeout=45, stream=True, allow_redirects=True) as r:
             if r.status_code != 200:
                 raise RuntimeError(f"HTTP {r.status_code}")
-            tmp = pdf_path.with_suffix(".pdf.tmp")
-            with tmp.open("wb") as f:
+            with tempfile.NamedTemporaryFile(dir=out_dir, prefix=".paper-", suffix=".pdf.tmp", delete=False) as f:
+                tmp = Path(f.name)
                 for chunk in r.iter_content(chunk_size=1024 * 64):
                     if chunk:
                         f.write(chunk)
-            data = tmp.read_bytes()[:4]
+            with tmp.open("rb") as candidate:
+                data = candidate.read(4)
             if data != b"%PDF" or tmp.stat().st_size < 20_000:
                 raise RuntimeError("downloaded file is not a valid PDF")
             tmp.replace(pdf_path)
-            error_path.unlink(missing_ok=True)
             p["pdf_status"] = "downloaded"
-    except Exception as exc:
+    except (OSError, RuntimeError) as exc:
         p["pdf_status"] = f"failed: {exc}"
-        (out_dir / "paper_pdf_error.txt").write_text(f"{url}\n{exc}\n", encoding="utf-8")
+    finally:
+        if tmp is not None:
+            tmp.unlink(missing_ok=True)
     return p
 
 
@@ -1131,6 +1136,9 @@ def main() -> None:
     if args.download_pdfs:
         with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex:
             papers = list(ex.map(download_pdf, papers))
+        for paper in papers:
+            if paper["pdf_status"] != "downloaded":
+                print(f"[pdf] {paper['paper_id']}: {paper['pdf_status']}", file=sys.stderr)
 
     if args.create_missing_notes or args.overwrite_notes:
         for p in papers:
@@ -1143,7 +1151,7 @@ def main() -> None:
 
     if args.download_pdfs:
         downloaded = sum(1 for p in papers if p.get("pdf_status") == "downloaded")
-        print(f"[info] PDFs downloaded in this explicit run: {downloaded}/{len(papers)}")
+        print(f"[info] PDFs available in the local cache: {downloaded}/{len(papers)}")
     if not any(vars(args).values()):
         print("[info] read-only audit complete; no files or network state changed")
 

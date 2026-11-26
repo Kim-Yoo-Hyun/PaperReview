@@ -22,11 +22,11 @@ PDF body framing (p. 1 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | However, a significant gap remains: previous works [2, 14, 16] have primarily focused on 3D distance relationships, overlooking the crucial role of ... | 3D scene/object와 robot coordinate frame | body wording is the source claim |
-| Observation / input | Existing pretraining and visual instruction tuning data for LMMs [41, 58] focused on detailed descriptions and conversations about scenes, appearances, and actions, ... | RGB-D, image set, point cloud, depth와 camera pose | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions | geometry, map, object/relationship state | notation and tensor shape require body check |
-| Output / action | compound, design, simultaneously, considers, D-informed, data, architecture, training | point map, pose, scene graph, affordance 또는 query result | exact unit/frame/decoder require body check |
-| Target outcome | spatial accuracy and downstream robot utility | geometric accuracy, semantic consistency와 planning/manipulation utility | metric/denominator are in 04 evidence |
+| Target problem | However, a significant gap remains: previous works [2, 14, 16] have primarily focused on 3D distance relationships, overlooking the crucial role of ... | 단일 영상에서의 공간 질의응답 | body wording is the source claim |
+| Observation / input | Existing pretraining and visual instruction tuning data for LMMs [41, 58] focused on detailed descriptions and conversations about scenes, appearances, and actions, ... | RGB 이미지와 공간 관계 질문 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Existing, pretraining, visual, instruction, tuning, data, LMMs, focused, detailed, descriptions | 이미지에서 추출한 공간 특징 | notation and tensor shape require body check |
+| Output / action | compound, design, simultaneously, considers, D-informed, data, architecture, training | 거리·방향·관계에 대한 답변 | exact unit/frame/decoder require body check |
+| Target outcome | spatial accuracy and downstream robot utility | SpatialVQA 등의 공간 질의응답 정확도 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 

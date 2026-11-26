@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `VLA and generalist robot policies`; tags: `Robotics, VLA, active perception, visual attention, POMDP, recurrent state, long horizon`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** MomaGraph: State-Aware Unified Scene Graphs with Vision-Language Models for Embodied Task Planning (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** VLA-Arena: An Open-Source Framework for Benchmarking Vision-Language-Action Models (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

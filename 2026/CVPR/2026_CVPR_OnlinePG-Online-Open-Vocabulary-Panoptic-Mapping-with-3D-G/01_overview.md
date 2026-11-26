@@ -10,7 +10,7 @@
 - Authors: Hongjia Zhai, Qi Zhang, Xiaokun Pan, Xiyu Zhang, Yitong Dong, Huaqi Zhang, Dan Xu, Guofeng Zhang
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, semantic mapping, open-vocabulary
+- Tags: Gaussian Splatting, semantic mapping, open-vocabulary, 3D segmentation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ OnlinePG는 RGB-D 시퀀스로부터 기하·의미·인스턴스를 온라인�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | For each voxel v occupied by instance Ii, we assign the local instance label and weight grids: T t l (v) = IDi, Kt l(v) = Ni, (8) where t denotes the ... | camera/depth stream, pose, map와 language goal | p. 4 (3.2. Local Consistent Map Construction), p. 1 (1. Introduction) |
-| State/latent | voxel, occupied, instance, assign, local, label, weight, grids, IDi, where, denotes, time | robot pose, free-space/semantic map와 local goal | p. 4 (3.2. Local Consistent Map Construction), p. 1 (1. Introduction), p. 3 (3.2. Local Consistent Map Construction) |
-| Output/action | Open-vocabulary 3D scene understanding is fundamental for embodied tasks, enabling robots to perceive, reason about, and interact with complex environments using natural language and instruction [9, 31, 33, 38]. | collision-free trajectory 또는 velocity command | p. 1 (1. Introduction), p. 3 (3.2. Local Consistent Map Construction), p. 4 (3.2. Local Consistent Map Construction) |
-| Objective/outcome | Following previous works [11, 23], we adopt the L1 loss terms for appearance and geometry optimization: L = α · Lc + (1 -α) · Ld, (2) where α is the weight ... | goal reach, safety, localization error와 replanning latency | p. 3 (3.1. Scene Representation), p. 5 (3.3. Local-to-Global Map Fusion), p. 3 (3.1. Scene Representation) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | RGB-D 스트림과 텍스트 조회 |
+| 표현 | 지역 관측을 정합한 가우시안 인스턴스 지도 |
+| 출력 | 온라인 파놉틱 지도와 조회 영역 |
+| 평가 | ScanNetV2·Replica 열린 어휘 분할 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -79,3 +81,7 @@ OnlinePG는 RGB-D 시퀀스로부터 기하·의미·인스턴스를 온라인�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.2. Local Consistent Map Construction), p. 3 (3. Method)이다.
+
+## 검색 태그 근거
+
+RGB-D 스트림의 깊이로 가우시안을 초기화하고, 슬라이딩 윈도에서 만든 인스턴스 지도를 전역 지도와 대응시킨다. 텍스트가 지정하는 범주와 개별 물체 영역을 질의한다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf#page=7)

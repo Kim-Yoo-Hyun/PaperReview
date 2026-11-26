@@ -42,3 +42,9 @@ Manipulation 외에 단일 VLA 후학습을 검토할 모바일 로봇 선행이
 ## Verification Boundary
 
 속도·이산 행동 output 형식, low-level controller 고정 여부, 2.0 코드와 원 논문 차이을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · MobileVLA-R1 이동 명령 추론 · inference.py [배포 파일](https://raw.githubusercontent.com/AIGeeksGroup/MobileVLA-R1/9d98cce3b623dfddf479740d78869ec30364b75a/inference.py)
+- 가중치 · MobileVLA-R1 가중치 압축본 조각 · weight.zip.part-aa [배포 파일](https://huggingface.co/AIGeeksGroup/MobileVLA-R1/resolve/0c757f3e9d1b95d8416b42e7089e1c04f3e6118a/weight.zip.part-aa)
+- 데이터 · 이동 경로 추론 감독 자료 · MobileVLA-CoT-Nav-38K/Nav_CoT_FINAL_38K.jsonl [배포 파일](https://huggingface.co/datasets/AIGeeksGroup/MobileVLA-CoT/resolve/1f80df559fa088010fd6654ceceda000084f644f/MobileVLA-CoT-Nav-38K/Nav_CoT_FINAL_38K.jsonl)

@@ -7,7 +7,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, latency, action-chunking, control-frequency
+- Tags: VLA, latency, action-chunking, asynchronous inference, trajectory following
 - Aliases: Path-preserving Time Scaling, PTS
 - Official paper: https://arxiv.org/abs/2611.01390
 - Venue verification: https://arxiv.org/abs/2611.01390
@@ -34,6 +34,10 @@ PTS는 동결된 행동 청크 정책을 실행할 때 새 추론이 끝날 때�
 표 1의 처리량은 추론 대기 시간을 포함한 제어 1,000스텝당 성공 횟수다. π0.5는 4개 과제군, SmolVLA는 2개 과제군에서 비교했다. [PDF 7쪽](https://arxiv.org/pdf/2611.01390v1#page=7) · [PDF 8쪽](https://arxiv.org/pdf/2611.01390v1#page=8)
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2611.01390).
+
+## 검색 태그 근거
+
+PTS는 새 추론이 돌아오면 그동안 진행한 위치에서 행동열에 진입한다. LIBERO에서는 같은 제어 시간 간격을 유지하면서 한 스텝에 전진하는 양을 조절했고, 추론 대기까지 포함한 처리량을 측정했다. [원문 4쪽](https://arxiv.org/pdf/2611.01390v1#page=4) · [원문 6쪽](https://arxiv.org/pdf/2611.01390v1#page=6) · [원문 11쪽](https://arxiv.org/pdf/2611.01390v1#page=11)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

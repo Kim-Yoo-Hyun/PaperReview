@@ -10,7 +10,7 @@
 - Authors: Guangyao Zhai, Evin Pınar Örnek, Dave Zhenyu Chen, Ruotong Liao, Yan Di, Nassir Navab, Federico Tombari, Benjamin Busam
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Graph Reasoning, Diffusion
+- Tags: Graph Reasoning, Diffusion, Generation
 - Official paper: https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3146_ECCV_2024_paper.php
 - Full-text retrieval: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ EchoScene은 장면 그래프에서 물체의 배치와 개별 형상을 함께 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1 Introduction), p. 3 (1 Introduction), p. 8 (4 Method), p. 6 (4 Method), p. 10 (4 Method)이다.
+
+## 검색 태그 근거
+
+주어진 장면 그래프의 관계를 전달하면서 배치와 물체 형상의 확산 분기를 공동으로 갱신한다. 실내 장면 합성 품질을 3D-FRONT에서 파생한 SG-FRONT에서 비교했다. [원문 6쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf#page=6) · [원문 11쪽](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf#page=11)

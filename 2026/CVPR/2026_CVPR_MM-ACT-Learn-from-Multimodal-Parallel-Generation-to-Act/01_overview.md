@@ -42,3 +42,9 @@ LIBERO, 실제 Franka, RoboTwin2.0의 in-domain·out-of-domain 조작을 평가�
 ## Verification Boundary
 
 modality별 loss·compute 균형, 생성 token이 action에 주는 영향, RL 미검증 범위을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · MM-ACT 공통 토큰 모델 · models/modeling_mmact.py [배포 파일](https://raw.githubusercontent.com/HHYHRHY/MM-ACT/ee3745212d905edefb381a8f658e7140e4b3d585/models/modeling_mmact.py)
+- 가중치 · LIBERO-10용 MM-ACT 정책 · LIBERO/MM-ACT-10/model-00001-of-00004.safetensors [배포 파일](https://huggingface.co/hhyhrhy/MM-ACT-Model/resolve/51c22aaca9a54746977952eb034231a28729f541/LIBERO/MM-ACT-10/model-00001-of-00004.safetensors)
+- 데이터 · MM-ACT LIBERO-10 계획 주석 · LIBERO/libero10_planning.jsonl [배포 파일](https://huggingface.co/datasets/hhyhrhy/MM-ACT-data/resolve/0d903db375b6bfb3603c6ce95bbf4d182411e864/LIBERO/libero10_planning.jsonl)

@@ -42,3 +42,8 @@ VLA 내부 학습을 제안할 때 비교해야 할 사전학습 coverage·탐�
 ## Verification Boundary
 
 pretraining 추가 비용, high-level action 주기, baseline 탐색 분산, 로봇별 학습 시간을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · LIBERO에서 탐색 단계를 미세조정하는 RL 학습 · sac_libero.py [배포 파일](https://raw.githubusercontent.com/matthewh6/tmrl/a881748b612460cba8194aa7da10bc8bac51ae09/sac_libero.py)
+- 가중치 · LIBERO 문맥 평활화 사전학습 정책 · model.safetensors [배포 파일](https://huggingface.co/matthewh6/cspi0_libero/resolve/5092ecb529ac17057ce3b96cd8ac7bca97f4a906/model.safetensors)

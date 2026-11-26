@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / SOURCE-REPORTED EVALUATION`.
-- **Target system/task:** 3D scene/object와 robot coordinate frame.
-- **Input boundary:** RGB-D, image set, point cloud, depth와 camera pose.
-- **Output/decision under evaluation:** point map, pose, scene graph, affordance 또는 query result.
-- **Primary target:** geometric accuracy, semantic consistency와 planning/manipulation utility.
+- **Target system/task:** 단일 영상에서의 공간 질의응답.
+- **Input boundary:** RGB 이미지와 공간 관계 질문.
+- **Output/decision under evaluation:** 거리·방향·관계에 대한 답변.
+- **Primary target:** SpatialVQA 등의 공간 질의응답 정확도.
 - **Detected evaluation headings:** 3.2.2. SpatialVQA for Evaluation (p. 4); 4. Experiments (p. 7); 4.1. Experimental setup (p. 7); 4.2. Results (p. 7).
 
 ## Experimental Matrix
@@ -62,8 +62,8 @@ PDF body evaluation/result cue (p. 7 (4.2. Results), p. 7 (4.2. Results), p. 6 (
 |---|---|---|---|
 | Robot/hardware/simulator | We build our SpatialVQA on images from Omni3D [11], with 3D bounding box annotations on diverse objects from both urban [12, 21] and indoor ... | embodiment, simulator version and control stack | p. 4 (3.2.2. SpatialVQA for Evaluation), p. 4 (3.2.2. SpatialVQA for Evaluation) |
 | Task/environment | Early datasets on spatial reasoning were built on 3D scans rather than images [6, 64]. | reset, timeout, object/scene variation | p. 4 (3.2.2. SpatialVQA for Evaluation), p. 7 (4.2. Results) |
-| Observation/sensor | RGB-D, image set, point cloud, depth와 camera pose | calibration, preprocessing, privileged input | p. 4 (3.2.1. Challenges of 3D spatial reasoning), p. 3 (3.1. Preliminary of LMMs) |
-| Output/decision | point map, pose, scene graph, affordance 또는 query result | action frame, controller and termination | p. 5 (3.3. Compound 3D-Informed Design), p. 6 (3.3.1. Design space) |
+| Observation/sensor | RGB 이미지와 공간 관계 질문 | calibration, preprocessing, privileged input | p. 4 (3.2.1. Challenges of 3D spatial reasoning), p. 3 (3.1. Preliminary of LMMs) |
+| Output/decision | 거리·방향·관계에 대한 답변 | action frame, controller and termination | p. 5 (3.3. Compound 3D-Informed Design), p. 6 (3.3.1. Design space) |
 
 ## Metrics and Success Definition
 

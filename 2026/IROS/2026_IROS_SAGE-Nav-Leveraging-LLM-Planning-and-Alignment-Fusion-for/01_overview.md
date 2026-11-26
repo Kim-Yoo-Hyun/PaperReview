@@ -10,7 +10,7 @@
 - Authors: Hao Su, Yuehao Huang, Yukai Ma, Yong Liu, Jiajun Lv
 - Primary track: Planning and control
 - Tier: REFERENCE
-- Tags: Navigation, Graph Reasoning
+- Tags: Navigation, Graph Reasoning, LLM planning, Reinforcement Learning
 - Official paper: https://arxiv.org/abs/2606.25497
 - Full-text retrieval: https://arxiv.org/pdf/2606.25497
 - Code/Project: not identified

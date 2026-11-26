@@ -42,8 +42,8 @@
 
 ### Reusable lesson in the robotics loop
 
-- **Closed-loop position:** `camera/depth stream, pose, map와 language goal → robot pose, free-space/semantic map와 local goal → collision-free trajectory 또는 velocity command`.
-- 이 논문의 재사용 가능한 지점은 Based on g, we design MAP strategy to predict action probabilities by aggregating spatial-semantic cues from candidate waypoints V, guided by the L-word instruction embedding X ∈RL×768.를 Built upon this, the agent is required to learn a navigation policy that predicts the next step action at ∈ At.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 robot pose, free-space/semantic map와 local goal가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 (b) Our agent precisely identifies and localizes the "bathroom" and "rug", while BEVBert [1] stops in the wrong place since critical landmarks cannot be identified, highlighting the fine-grained semantic awareness of our ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
+- **Closed-loop position:** `RGB-D 파노라마와 언어 지시 → 의미별로 묶은 3D 가우시안 지도 → 후보 경로 노드의 선택`.
+- 이 논문의 재사용 가능한 지점은 Based on g, we design MAP strategy to predict action probabilities by aggregating spatial-semantic cues from candidate waypoints V, guided by the L-word instruction embedding X ∈RL×768.를 Built upon this, the agent is required to learn a navigation policy that predicts the next step action at ∈ At.로 변환하는 body-defined interface를 분리해 보는 것이다. 따라서 의미별로 묶은 3D 가우시안 지도가 실제 decision/control에 어떤 정보로 소비되는지, 그리고 (b) Our agent precisely identifies and localizes the "bathroom" and "rug", while BEVBert [1] stops in the wrong place since critical landmarks cannot be identified, highlighting the fine-grained semantic awareness of our ...에서 feedback/recovery가 유지되는지를 동일 protocol로 비교해야 한다.
 - The paper-specific mechanism to preserve in a reproduction is: In contrast, our method introduces a set of sparse and adaptive 3D Gaussians to model the 3D scene, efficiently capturing spatial structures and integrating open-set semantics. code online visual observations into the ...
 - Do not credit a downstream robotics benefit unless the body evaluation reports the corresponding task, metric and feedback condition.
 

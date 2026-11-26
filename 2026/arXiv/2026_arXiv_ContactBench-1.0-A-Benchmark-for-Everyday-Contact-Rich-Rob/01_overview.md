@@ -42,3 +42,8 @@ ContactBench 1.0은 일상적인 접촉 조작을 여덟 기술로 나누고 여
 ## Verification Boundary
 
 task별 success 판정, asset version, 정책용 reset/step와 scripted helper 분리을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · UR10 문손잡이 시뮬레이션 장면 · examples/custom_scene/ur10_door_handle.py [배포 파일](https://raw.githubusercontent.com/Michaelwyx/contactbench-sim/f51f6aab24ac72c8b4435643efe058c07d73c735/examples/custom_scene/ur10_door_handle.py)
+- 데이터 · 평가 물체의 출력용 STL 형상 묶음 · all_stl.zip [배포 파일](https://jingyi-xiang.github.io/contactbench/website_assets/benchmark_assets/all_stl.zip)

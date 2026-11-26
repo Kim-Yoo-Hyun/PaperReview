@@ -10,7 +10,7 @@
 - Authors: Minsu Kim, Subin Jeon, In Cho, Mijin Yoo, Seon Joo Kim
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision
+- Tags: 3D reconstruction, Diffusion, Generation, 3D Vision, viewpoint-selection
 - Official paper: https://openaccess.thecvf.com/content/ICCV2025/html/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf
 - Code/Project: not identified
@@ -46,12 +46,14 @@ ExploreGS는 입력 시점 밖에서도 탐색할 수 있는 장면을 가상 �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | Then, we determine the boundary of reconstructable scene based on the input observations and identify occupied regions for virtual viewpoints samplings. | conditioning observation와 noisy/intermediate sample | p. 3 (3.1. Overview), p. 3 (3.2. Scene initialization) |
-| State/latent | Then, determine, boundary, reconstructable, scene, input, observations, identify, occupied, regions, virtual, viewpoints | latent/noise variable와 conditional distribution | p. 3 (3.1. Overview), p. 3 (3.2. Scene initialization), p. 2 (1. Introduction) |
-| Output/action | As previously discussed, reconstructing content beyond this bounding box is highly challenging, as it lacks grounding in the input observations and increasingly resembles unconstrained content generation, which is beyond the scope of ... | generated sample, action chunk 또는 trajectory | p. 3 (3.2. Scene initialization), p. 2 (1. Introduction), p. 2 (1. Introduction) |
-| Objective/outcome | NT r camera trajectories that maximizes the information gain are sampled, and each trajectory Trn consists of L progressively shifting virtual viewpoints: Trn = {V G l }L l=1. | distribution fit, multimodality, sample quality와 latency | p. 3 (3.1. Overview), p. 3 (3.2. Scene initialization), p. 4 (3.3. Virtual view sampling) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 원래의 장면 영상과 카메라 파라미터 |
+| 표현 | 가상 시점과 영상 확산으로 보완한 관측 |
+| 출력 | 재학습한 가우시안 장면과 새 시점 렌더링 |
+| 평가 | Wild-Explore의 새 시점 렌더링 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf#page=7)
 
 ## Main Claims and Actual Contribution
 
@@ -78,3 +80,7 @@ ExploreGS는 입력 시점 밖에서도 탐색할 수 있는 장면을 가상 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 3 (3.2. Scene initialization), p. 3 (3.1. Overview), p. 4 (3.3. Virtual view sampling)이다.
+
+## 검색 태그 근거
+
+만들어 놓은 3D 가우시안에서 정보가 부족한 영역을 볼 가상 카메라를 배치한다. 그 렌더링을 영상 확산으로 보강해 재학습하고 Wild-Explore에서 시점 일반화를 비교했다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Kim_ExploreGS_Explorable_3D_Scene_Reconstruction_with_Virtual_Camera_Samplings_and_ICCV_2025_paper.pdf#page=7)

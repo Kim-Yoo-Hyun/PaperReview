@@ -10,7 +10,7 @@
 - Authors: Hritam Basak, Zhaozheng Yin
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: Vision-Language Model, Robotics, 3D Vision
+- Tags: Vision-Language Model, Robotics, 3D Vision, affordance
 - Official paper: https://neurips.cc/virtual/2025/poster/119081
 - Full-text retrieval: https://papers.nips.cc/paper_files/paper/2025/file/5eee634cb9729b8bcc2ec9f2a46a74ae-Paper-Conference.pdf
 - Code/Project: not identified

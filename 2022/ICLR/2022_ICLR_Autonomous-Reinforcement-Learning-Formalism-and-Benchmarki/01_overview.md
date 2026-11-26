@@ -8,7 +8,7 @@
 - Category: Robotics Foundations: Robot Learning
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: RL, evaluation, learning-foundation
+- Tags: RL, evaluation, learning-foundation, Benchmark, reset-free learning
 - Aliases: EARL
 - Official paper: https://arxiv.org/abs/2112.09605
 - Full-text retrieval: https://arxiv.org/pdf/2112.09605v2
@@ -35,6 +35,10 @@ EARL은 학습 중 매 시행마다 외부에서 환경을 초기화하기 어�
 다양한 simulated task에서 reset 의존성과 기존 방법 한계를 분석한다.
 
 근거: [공식 paper/abstract](https://openreview.net/forum?id=nkaba3ND7B5). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+EARL은 환경을 임의로 재설정할 수 있는 빈도를 제한하고 학습 중 개입과 배포 시 성능을 각각 평가한다. Sawyer 조작, DHand 파지, Minitaur 이동 등의 모의 과제가 비교 대상이다. [원문 5쪽](https://arxiv.org/pdf/2112.09605v2#page=5) · [원문 7쪽](https://arxiv.org/pdf/2112.09605v2#page=7)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

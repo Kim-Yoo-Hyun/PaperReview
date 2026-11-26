@@ -7,7 +7,7 @@
 - Category: Manipulation, Contact, and Dexterity
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: variable-impedance, reinforcement-learning, insertion, force-limit
+- Tags: variable-impedance, reinforcement-learning, insertion, force-limit, force-feedback
 - Aliases: CG-RL
 - Official paper: https://arxiv.org/abs/2609.13516
 - Venue verification: https://arxiv.org/abs/2609.13516
@@ -34,6 +34,10 @@ CG-RL은 주어진 축 방향 힘 상한과 접촉 피드백에 따라 삽입 �
 허용 구간 투영이 보장하는 대상은 적용 이득이다. 힘 상한을 지킨 삽입의 85.8±7.7%는 경사 삽입 시뮬레이션에서 측정한 시드 간 평균±표준편차다. [PDF 5쪽](https://arxiv.org/pdf/2609.13516v1#page=5) · [PDF 6쪽](https://arxiv.org/pdf/2609.13516v1#page=6) · [PDF 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10) · [PDF 15쪽](https://arxiv.org/pdf/2609.13516v1#page=15)
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2609.13516).
+
+## 검색 태그 근거
+
+정책은 힘 상한과 접촉 반응을 관측해 잔차 변위·삽입 속도·이득을 요청한다. 실행부만 허용 이득 구간을 받아 요청을 투영한다. 힘 상한 준수 여부는 Isaac Lab의 Franka 경사 삽입 시행에서 측정했다. [원문 5쪽](https://arxiv.org/pdf/2609.13516v1#page=5) · [원문 7쪽](https://arxiv.org/pdf/2609.13516v1#page=7) · [원문 10쪽](https://arxiv.org/pdf/2609.13516v1#page=10)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

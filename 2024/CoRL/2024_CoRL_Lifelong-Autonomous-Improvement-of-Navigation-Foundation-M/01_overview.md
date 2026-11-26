@@ -42,3 +42,7 @@ VLA+RL의 지속 학습을 manipulation에 한정하지 않고 실제 항법 운
 ## Verification Boundary
 
 목표 생성·reset·인간 개입의 범위, 정책 입력의 언어 여부, 이전 장소 회귀을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료
+
+- 코드 · LiReN 항법 정책 학습 · liren/training/train.py [배포 파일](https://raw.githubusercontent.com/kylestach/lifelong-nav-rl/51327f34a834a45ca0c8a9273b081d06a1729158/liren/training/train.py)

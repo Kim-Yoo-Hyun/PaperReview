@@ -8,7 +8,7 @@
 - Category: VLA and Generalist Robot Policies
 - Primary track: VLA and generalist robot policies
 - Tier: REFERENCE
-- Tags: VLA, task-switching, contact-phase
+- Tags: VLA, task-switching, contact-phase, imitation-learning
 - Aliases:
 - Official paper: https://arxiv.org/abs/2506.03574
 - Full-text retrieval: https://arxiv.org/pdf/2506.03574v1
@@ -36,10 +36,14 @@ SwitchVLA는 작업 도중 지시가 바뀌면 현재 접촉 단계와 새 지�
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2506.03574) · [저자 project/code](https://switchvla.github.io/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
+## 검색 태그 근거
+
+시연 영상에서 VLM으로 그리퍼 접촉 구간을 표시해 보조 감독으로 쓴다. 정책은 시각·로봇 상태에서 실행 단계를 추정해 지시 유지·전환에 필요한 행동을 예측한다. 접촉 표시는 힘이나 촉각 센서 측정값과 구분된다. [원문 5쪽](https://arxiv.org/pdf/2506.03574v1#page=5) · [원문 6쪽](https://arxiv.org/pdf/2506.03574v1#page=6)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 D3의 일반 task interruption 주장을 제한하는 REFERENCE다.
 
 ## Verification Boundary
 
-contact label, rollback 가정, 정식 venue status을 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+접촉 라벨의 오차율, 되돌리기가 가능한 접촉 조건, 정식 게재 여부를 확인해야 한다. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.

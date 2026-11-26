@@ -10,7 +10,7 @@
 - Authors: Yifan Xu, Ziming Luo, Qianwei Wang, Vineet Kamat, Carol Menassa
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Robotics, 3D Vision, Navigation, Graph Reasoning, semantic
+- Tags: Robotics, 3D Vision, Navigation, 3D Scene Graph, semantic
 - Official paper: https://api.crossref.org/works/10.1109/icra55743.2025.11127471
 - Full-text retrieval: https://arxiv.org/pdf/2409.10350v1
 - Code/Project: not identified

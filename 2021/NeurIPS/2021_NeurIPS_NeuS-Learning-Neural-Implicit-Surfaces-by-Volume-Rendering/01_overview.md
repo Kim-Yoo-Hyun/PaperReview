@@ -10,7 +10,7 @@
 - Authors: Peng Wang, Lingjie Liu, Yuan Liu, Christian Theobalt, Taku Komura, Wenping Wang
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, NeRF, surface reconstruction, geometry
+- Tags: 3D Vision, implicit representation, surface reconstruction, geometry
 - Official paper: https://arxiv.org/abs/2106.10689
 - Full-text retrieval: https://arxiv.org/pdf/2106.10689
 - Code/Project: https://lingjie0206.github.io/papers/NeuS/

@@ -37,6 +37,10 @@ SPIRE는 과제·동작 계획으로 긴 조작을 분해한 뒤, 접촉이 까�
 
 근거: [공식 paper/abstract](https://proceedings.mlr.press/v270/zhou25a.html) · [저자 project/code](https://sites.google.com/view/spire-corl-2024).
 
+## 검색 태그 근거
+
+SPIRE는 태스크·모션 계획기가 담당하는 구간과 접촉 기술의 학습 구간을 나눈다. 시연과 DrQ-v2로 지역 정책을 학습하고 손목·고정 카메라 영상과 고유수용 상태로 시뮬레이션 조립을 평가한다. [원문 6쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhou25a/zhou25a.pdf#page=6) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v270/d9fe509ba390176a5fd650178a381a0a7b2d4f64/assets/zhou25a/zhou25a.pdf#page=7)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 단일 VLA 내부 RL이 계층형 분해보다 어떤 비용·일반화 이점을 주는지 비교하는 시스템 대안이다.

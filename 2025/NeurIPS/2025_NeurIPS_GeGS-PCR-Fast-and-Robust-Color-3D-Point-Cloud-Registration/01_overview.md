@@ -10,7 +10,7 @@
 - Authors: Jiayi Tian, Haiduo Huang, Tian Xia, Wenzhe Zhao, Pengju Ren
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: geometry, sensor fusion, LiDAR, point cloud, 3D Vision
+- Tags: geometry, Gaussian Splatting, LiDAR, point cloud, 3D Registration, 3D Vision
 - Publication index title: GeGS-PCR: Fast and Robust Color 3D Point Cloud Registration with Two-Stage Geometric-3DGS Fusion
 - Official paper: https://neurips.cc/virtual/2025/poster/117748
 - Published PDF: https://proceedings.neurips.cc/paper_files/paper/2025/file/0d2e544c1baa964a0e274e711ecdacf5-Paper-Conference.pdf

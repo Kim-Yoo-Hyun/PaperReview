@@ -29,15 +29,15 @@
     },
     "files_by_issue": {
       "affiliation_section_label": [
-        "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
-        "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
+        "2011-2020/2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
+        "2011-2020/2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
         "2024/ECCV/2024_ECCV_Global-Local-Collaborative-Inference-with-LLM-for-Lidar-Ba/05_insights.md",
         "2024/ECCV/2024_ECCV_Heterogeneous-Graph-Learning-for-Scene-Graph-Prediction-in/05_insights.md",
         "2024/ECCV/2024_ECCV_MVSGaussian-Fast-Generalizable-Gaussian-Splatting-Reconstr/05_insights.md",
         "2024/ECCV/2024_ECCV_OpenIns3D-Snap-and-Lookup-for-3D-Open-vocabulary-Instance/05_insights.md"
       ],
       "author_footnote": [
-        "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
+        "2011-2020/2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
         "2024/CoRL/2024_CoRL_Learning-to-Walk-from-Three-Minutes-of-Real-World-Data-wit/05_insights.md",
         "2026/ICLR/2026_ICLR_Vision-Language-Action-Instruction-Tuning-From-Understandi/05_insights.md"
       ],
@@ -45,7 +45,7 @@
         "2024/RA-L/2024_RA-L_FM-Fusion-Instance-aware-Semantic-Mapping-Boosted-by-Visio/05_insights.md"
       ],
       "source_header": [
-        "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
+        "2011-2020/2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
         "2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified/05_insights.md",
         "2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human/05_insights.md",
         "2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz/05_insights.md",
@@ -70,7 +70,7 @@
     },
     "findings": [
       {
-        "path": "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
+        "path": "2011-2020/2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
         "issues": {
           "affiliation_section_label": 4
         },
@@ -280,7 +280,7 @@
         }
       },
       {
-        "path": "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
+        "path": "2011-2020/2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
         "issues": {
           "source_header": 1
         },
@@ -348,7 +348,7 @@
         }
       },
       {
-        "path": "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
+        "path": "2011-2020/2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
         "issues": {
           "affiliation_section_label": 5
         },
@@ -385,7 +385,7 @@
         }
       },
       {
-        "path": "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
+        "path": "2011-2020/2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
         "issues": {
           "author_footnote": 4
         },
@@ -461,7 +461,7 @@
   "applied": true,
   "cleanup": {
     "modified_files": [
-      "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
+      "2011-2020/2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/05_insights.md",
       "2025/CVPR/2025_CVPR_VGGT-Visual-Geometry-Grounded-Transformer/05_insights.md",
       "2025/ICLR/2025_ICLR_Articulate-Anything-Automatic-Modeling-of-Articulated-Obje/05_insights.md",
       "2026/ICLR/2026_ICLR_Vision-Language-Action-Instruction-Tuning-From-Understandi/05_insights.md",
@@ -480,16 +480,16 @@
       "2025/IROS/2025_IROS_VLM-See-Robot-Do-Human-Demo-Video-to-Robot-Action-Plan-via/05_insights.md",
       "2025/IROS/2025_IROS_SORT3D-Spatial-Object-centric-Reasoning-Toolbox-for-Zero-S/05_insights.md",
       "2026/IROS/2026_IROS_SAGE-Nav-Leveraging-LLM-Planning-and-Alignment-Fusion-for/05_insights.md",
-      "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
+      "2011-2020/2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/05_insights.md",
       "2024/CVPR/2024_CVPR_Marigold-Repurposing-Diffusion-Based-Image-Generators-for/05_insights.md",
       "2024/ECCV/2024_ECCV_MVSGaussian-Fast-Generalizable-Gaussian-Splatting-Reconstr/05_insights.md",
       "2026/ICML/2026_ICML_WorldMirror-Universal-3D-World-Reconstruction-with-Any-Pri/05_insights.md",
       "2026/ICML/2026_ICML_S2GS-Streaming-Semantic-Gaussian-Splatting-for-Online-Scen/05_insights.md",
       "2023/ICML/2023_ICML_BLIP-2-Bootstrapping-Language-Image-Pre-training-with-Froz/05_insights.md",
-      "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
+      "2011-2020/2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/05_insights.md",
       "2022/NeurIPS/2022_NeurIPS_Training-language-models-to-follow-instructions-with-human/05_insights.md",
       "2022/ICML/2022_ICML_BLIP-Bootstrapping-Language-Image-Pre-training-for-Unified/05_insights.md",
-      "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
+      "2011-2020/2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/05_insights.md",
       "2024/CoRL/2024_CoRL_Learning-to-Walk-from-Three-Minutes-of-Real-World-Data-wit/05_insights.md",
       "2026/ICRA/2026_ICRA_OmniRetarget-Interaction-Preserving-Data-Generation-for-Hu/05_insights.md",
       "2023/ICRA/2023_ICRA_DreamWaQ-Learning-Robust-Quadrupedal-Locomotion-with-Impli/05_insights.md",

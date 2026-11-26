@@ -10,7 +10,7 @@
 - Authors: Xiaoyu Tian, Tao Jiang, Longfei Yun, Yucheng Mao, Huitong Yang, Yue Wang, Yilun Wang, Hang Zhao
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: 3D Vision, occupancy, sensor fusion, Benchmark
+- Tags: 3D Vision, occupancy, LiDAR, Benchmark
 - Official paper: https://arxiv.org/abs/2304.14365
 - Full-text retrieval: https://arxiv.org/pdf/2304.14365
 - Code/Project: https://tsinghua-mars-lab.github.io/Occ3D/

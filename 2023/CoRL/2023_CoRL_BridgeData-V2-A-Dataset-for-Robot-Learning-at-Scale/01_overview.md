@@ -10,7 +10,7 @@
 - Authors: Homer Rich Walke, Kevin Black, Tony Z. Zhao, Quan Vuong, Chongyi Zheng, Philippe Hansen-Estruch, Andre Wang He, Vivek Myers, Moo Jin Kim, Max Du, Abraham Lee, Kuan Fang, Chelsea Finn, Sergey Levine
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Robotics, Dataset, Imitation Learning, robot manipulation, data scaling, generalization
+- Tags: Robotics, Dataset, Imitation Learning, robot manipulation, data scaling, generalization, offline reinforcement learning
 - Official paper: https://arxiv.org/abs/2308.12952
 - Full-text retrieval: https://arxiv.org/pdf/2308.12952
 - Code/Project: https://rail-berkeley.github.io/bridgedata/

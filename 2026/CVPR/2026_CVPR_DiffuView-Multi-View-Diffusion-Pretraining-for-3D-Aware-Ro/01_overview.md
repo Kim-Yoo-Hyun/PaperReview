@@ -10,7 +10,7 @@
 - Authors: Kaizhao Zhang, Tian Niu, Tianyu Liu, Chenen Guo, Zijun Xu, Qingda Hu, Wenchao Ding
 - Primary track: Manipulation, contact, tactile, and dexterity
 - Tier: REFERENCE
-- Tags: Diffusion, 3D manipulation, Robotics
+- Tags: Diffusion, 3D manipulation, Robotics, multi-view
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -44,12 +44,14 @@ DiffuView는 한 시점에서 다른 시점의 영상을 합성하는 확산 사
 
 ## Observation, State, and Output Interface
 
+목표 시점의 영상을 복원하는 확산 사전학습 뒤 영상 특징과 언어 토큰으로 시연 행동의 잡음을 예측한다. RGB-D 입력의 LIBERO 및 Franka 실험에서 카메라 시점 변화와 닦기·서랍 열기를 비교했다. [PDF 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=3) · [PDF 7쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_DiffuView_Multi-View_Diffusion_Pretraining_for_3D_Aware_Robotic_Manipulation_CVPR_2026_paper.pdf#page=7)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | After the FiLM conditioned QFormer aggregates the visual features into a compact observation embedding zobs, a diffusion policy is employed as the action head to generate the robot action a0 conditioned on ... | RGB-D/point cloud, object state와 contact/task observation | p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
-| State/latent | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding, zobs, diffusion | object geometry, affordance, contact mode 또는 end-effector state | p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
-| Output/action | At each timestep t, the policy network εψ learns to predict the noise component based on the noisy action a(t), the timestep t, the observation embedding zobs, and the language token l: ... | grasp, pose, force 또는 end-effector trajectory | p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 4 (3. Method) |
-| Objective/outcome | Unlike vanilla self-attention, causal masking enforces an autoregressive constraint such that each action token can only attend to its preceding tokens. | task completion, contact success, pose/force error와 generalization | p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
+| Observation/input | After the FiLM conditioned QFormer aggregates the visual features into a compact observation embedding zobs, a diffusion policy is employed as the action head to generate the robot action a0 conditioned on ... | 카메라의 RGB·깊이·시점 정보와 언어 지시 | p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
+| State/latent | After, FiLM, conditioned, QFormer, aggregates, visual, features, compact, observation, embedding, zobs, diffusion | 목표 시점 복원으로 학습한 영상 특징 | p. 4 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
+| Output/action | At each timestep t, the policy network εψ learns to predict the noise component based on the noisy action a(t), the timestep t, the observation embedding zobs, and the language token l: ... | 확산 정책이 예측한 말단·그리퍼 행동 | p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning), p. 4 (3. Method) |
+| Objective/outcome | Unlike vanilla self-attention, causal masking enforces an autoregressive constraint such that each action token can only attend to its preceding tokens. | 관측 시점별 시뮬레이션·실물 조작 성공 | p. 5 (3.2. Policy Learning), p. 5 (3.2. Policy Learning) |
 
 ## Main Claims and Actual Contribution
 

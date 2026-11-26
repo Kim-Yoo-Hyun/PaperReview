@@ -10,7 +10,7 @@
 - Authors: Alec Farid, David Snyder, Allen Z. Ren, Anirudha Majumdar
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, failure prediction, vision-based control, statistical guarantees, safe deployment
+- Tags: Robotics, failure prediction, vision-based control, statistical guarantees
 - Official paper: https://arxiv.org/abs/2202.05894
 - Full-text retrieval: https://arxiv.org/pdf/2202.05894
 - Code/Project: not identified

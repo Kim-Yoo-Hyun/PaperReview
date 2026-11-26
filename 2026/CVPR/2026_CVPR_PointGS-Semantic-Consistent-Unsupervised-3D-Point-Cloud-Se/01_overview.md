@@ -10,7 +10,7 @@
 - Authors: Yixiao Song, Qingyong Li, Wen Wang, Zhicheng Yan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, semantic, alignment, point cloud, 3D Vision
+- Tags: Gaussian Splatting, semantic, alignment, point cloud, 3D Vision, 3D segmentation
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ PointGS는 여러 뷰의 2D 분할 신호를 가우시안 장면에 모아 3D �
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | The input sparse point cloud is first reconstructed into a dense 3D Gaussian space using multi-view observations. | RGB-D, image set, point cloud, depth와 camera pose | p. 2 (1. Introduction), p. 4 (3.2. Preliminary) |
-| State/latent | input, sparse, point, cloud, first, reconstructed, dense, Gaussian, space, multi-view, observations, SAM | geometry, map, object/relationship state | p. 2 (1. Introduction), p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary) |
-| Output/action | SAM Input RGB Points Multi-view Images 3DGS Center Points of Gaussians Pseudo Points Labels Projection 3D Gaussian Primitives Masks Render Back propagation 3D Gaussian with Affinity Feature Rendered Images 3D Gaussians with ... | point map, pose, scene graph, affordance 또는 query result | p. 4 (3.2. Preliminary), p. 4 (3.2. Preliminary), p. 6 (3.5. Gaussian-to-Point Cloud Alignment) |
-| Objective/outcome | The total loss is summed over sampled pixel pairs and pixels in each view with regularization on the rendered feature norm. | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 5 (3.4. Semantic Information Distillation), p. 3 (3.2. Preliminary), p. 4 (3.2. Preliminary) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 실내 점군 |
+| 표현 | 렌더링한 여러 시점의 2D 마스크와 가우시안 특징 |
+| 출력 | 원본 점의 분할 레이블 |
+| 평가 | ScanNet-v2와 S3DIS의 의미 분할 |
+
+[원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=6)
 
 ## Main Claims and Actual Contribution
 
@@ -75,3 +77,7 @@ PointGS는 여러 뷰의 2D 분할 신호를 가우시안 장면에 모아 3D �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 3 (3.2. Preliminary), p. 3 (3. Method), p. 4 (3.2. Preliminary)이다.
+
+## 검색 태그 근거
+
+실내 점군을 여러 뷰로 투영하고 가우시안으로 렌더링한 영상의 SAM 마스크를 원래 점군에 전파한다. ScanNet-v2와 S3DIS에서 점별 분할을 평가했다. RGB는 같은 점군에서 만든 중간 영상이다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Song_PointGS_Semantic-Consistent_Unsupervised_3D_Point_Cloud_Segmentation_with_3D_Gaussian_CVPR_2026_paper.pdf#page=6)

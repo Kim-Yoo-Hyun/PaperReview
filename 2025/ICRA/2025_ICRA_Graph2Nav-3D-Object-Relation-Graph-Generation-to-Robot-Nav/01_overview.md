@@ -10,7 +10,7 @@
 - Authors: Tixiao Shan, Abhinav Rajvanshi, Niluthpol Mithun, Han-Pang Chiu
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Robotics, 3D Vision, Navigation, Graph Reasoning
+- Tags: Robotics, 3D Vision, Navigation, 3D Scene Graph
 - Official paper: https://arxiv.org/abs/2504.16782
 - Full-text retrieval: https://arxiv.org/pdf/2504.16782v1
 - Code/Project: not identified

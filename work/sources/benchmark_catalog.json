@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_on": "2026-11-24",
+  "generated_on": "2026-11-26",
   "catalog_type": "benchmark",
   "evidence_policy": "Generated references are cue_only. Do not treat a token match as verified evaluation evidence; consult the paper's 04_evaluation.md and source location.",
   "entries": [
@@ -13,7 +13,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0013",
-          "source": "2017/NeurIPS/2017_NeurIPS_PointNet++-Deep-Hierarchical-Feature-Learning-on-Point-Set/04_evaluation.md",
+          "source": "2011-2020/2017/NeurIPS/2017_NeurIPS_PointNet++-Deep-Hierarchical-Feature-Learning-on-Point-Set/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -23,7 +23,7 @@
         },
         {
           "paper_id": "pr-0025",
-          "source": "2020/ECCV/2020_ECCV_ScanRefer-3D-Object-Localization-in-RGB-D-Scans-using-Natu/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_ScanRefer-3D-Object-Localization-in-RGB-D-Scans-using-Natu/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -223,12 +223,12 @@
         },
         {
           "paper_id": "pr-0295",
-          "source": "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0296",
-          "source": "2019/CVPR/2019_CVPR_4D-Spatio-Temporal-ConvNets-Minkowski-Convolutional-Neural/04_evaluation.md",
+          "source": "2011-2020/2019/CVPR/2019_CVPR_4D-Spatio-Temporal-ConvNets-Minkowski-Convolutional-Neural/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -438,12 +438,12 @@
         },
         {
           "paper_id": "pr-0491",
-          "source": "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0496",
-          "source": "2017/CVPR/2017_CVPR_ScanNet-Richly-annotated-3D-Reconstructions-of-Indoor-Scen/04_evaluation.md",
+          "source": "2011-2020/2017/CVPR/2017_CVPR_ScanNet-Richly-annotated-3D-Reconstructions-of-Indoor-Scen/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -453,12 +453,12 @@
         },
         {
           "paper_id": "pr-0499",
-          "source": "2017/3DV/2017_3DV_Matterport3D-Learning-from-RGB-D-Data-in-Indoor-Environmen/04_evaluation.md",
+          "source": "2011-2020/2017/3DV/2017_3DV_Matterport3D-Learning-from-RGB-D-Data-in-Indoor-Environmen/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0508",
-          "source": "2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/04_evaluation.md",
+          "source": "2011-2020/2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -645,12 +645,12 @@
       "paper_references": [
         {
           "paper_id": "pr-0025",
-          "source": "2020/ECCV/2020_ECCV_ScanRefer-3D-Object-Localization-in-RGB-D-Scans-using-Natu/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_ScanRefer-3D-Object-Localization-in-RGB-D-Scans-using-Natu/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0026",
-          "source": "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -791,7 +791,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0026",
-          "source": "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -892,7 +892,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0026",
-          "source": "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -988,7 +988,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0026",
-          "source": "2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_ReferIt3D-Neural-Listeners-for-Fine-Grained-3D-Object-Iden/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1150,12 +1150,12 @@
         },
         {
           "paper_id": "pr-0294",
-          "source": "2019/TOG/2019_TOG_Dynamic-Graph-CNN-for-Learning-on-Point-Clouds/04_evaluation.md",
+          "source": "2011-2020/2019/TOG/2019_TOG_Dynamic-Graph-CNN-for-Learning-on-Point-Clouds/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0295",
-          "source": "2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_KPConv-Flexible-and-Deformable-Convolution-for-Point-Cloud/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1190,12 +1190,12 @@
         },
         {
           "paper_id": "pr-0491",
-          "source": "2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_PointContrast-Unsupervised-Pre-training-for-3D-Point-Cloud/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0508",
-          "source": "2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/04_evaluation.md",
+          "source": "2011-2020/2018/NeurIPS/2018_NeurIPS_PointCNN-Convolution-On-X-Transformed-Points/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1512,22 +1512,22 @@
         },
         {
           "paper_id": "pr-0499",
-          "source": "2017/3DV/2017_3DV_Matterport3D-Learning-from-RGB-D-Data-in-Indoor-Environmen/04_evaluation.md",
+          "source": "2011-2020/2017/3DV/2017_3DV_Matterport3D-Learning-from-RGB-D-Data-in-Indoor-Environmen/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0500",
-          "source": "2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0539",
-          "source": "2018/CVPR/2018_CVPR_Vision-and-Language-Navigation-Interpreting-Visually-Groun/04_evaluation.md",
+          "source": "2011-2020/2018/CVPR/2018_CVPR_Vision-and-Language-Navigation-Interpreting-Visually-Groun/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0541",
-          "source": "2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1744,7 +1744,7 @@
         },
         {
           "paper_id": "pr-0500",
-          "source": "2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_Habitat-A-Platform-for-Embodied-AI-Research/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1809,7 +1809,7 @@
         },
         {
           "paper_id": "pr-0950",
-          "source": "2020/CVPR/2020_CVPR_SAPIEN-A-SimulAted-Part-Based-Interactive-ENvironment/04_evaluation.md",
+          "source": "2011-2020/2020/CVPR/2020_CVPR_SAPIEN-A-SimulAted-Part-Based-Interactive-ENvironment/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -1880,17 +1880,17 @@
         },
         {
           "paper_id": "pr-0539",
-          "source": "2018/CVPR/2018_CVPR_Vision-and-Language-Navigation-Interpreting-Visually-Groun/04_evaluation.md",
+          "source": "2011-2020/2018/CVPR/2018_CVPR_Vision-and-Language-Navigation-Interpreting-Visually-Groun/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0541",
-          "source": "2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0542",
-          "source": "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/04_evaluation.md",
+          "source": "2011-2020/2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -1976,7 +1976,7 @@
         },
         {
           "paper_id": "pr-0542",
-          "source": "2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/04_evaluation.md",
+          "source": "2011-2020/2020/EMNLP/2020_EMNLP_Room-Across-Room-Multilingual-Vision-and-Language-Navigati/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2032,7 +2032,7 @@
         },
         {
           "paper_id": "pr-0541",
-          "source": "2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_Beyond-the-Nav-Graph-Vision-and-Language-Navigation-in-Con/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2183,7 +2183,7 @@
         },
         {
           "paper_id": "pr-0753",
-          "source": "2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/04_evaluation.md",
+          "source": "2011-2020/2020/RA-L/2020_RA-L_RLBench-The-Robot-Learning-Benchmark-and-Learning-Environm/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -2824,11 +2824,6 @@
           "evidence": "cue_only"
         },
         {
-          "paper_id": "pr-1099",
-          "source": "2026/NeurIPS/2026_NeurIPS_Beyond-Appearance-Shifts-Task-Semantic-Action-Calibration/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
           "paper_id": "pr-1107",
           "source": "2026/ICML/2026_ICML_RA-VLA-Retrieval-Augmented-VLA-for-Test-Time-Adaptation/04_evaluation.md",
           "evidence": "cue_only"
@@ -3004,12 +2999,12 @@
         },
         {
           "paper_id": "pr-0621",
-          "source": "2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/04_evaluation.md",
+          "source": "2011-2020/2020/NeurIPS/2020_NeurIPS_MOPO-Model-based-Offline-Policy-Optimization/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0622",
-          "source": "2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/04_evaluation.md",
+          "source": "2011-2020/2020/NeurIPS/2020_NeurIPS_Conservative-Q-Learning-for-Offline-Reinforcement-Learning/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3497,7 +3492,7 @@
         },
         {
           "paper_id": "pr-0844",
-          "source": "2019/CoRL/2019_CoRL_Meta-World-A-Benchmark-and-Evaluation-for-Multi-Task-and-M/04_evaluation.md",
+          "source": "2011-2020/2019/CoRL/2019_CoRL_Meta-World-A-Benchmark-and-Evaluation-for-Multi-Task-and-M/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3713,7 +3708,7 @@
         },
         {
           "paper_id": "pr-0506",
-          "source": "2020/ECCV/2020_ECCV_Lift-Splat-Shoot-Encoding-Images-from-Arbitrary-Camera-Rig/04_evaluation.md",
+          "source": "2011-2020/2020/ECCV/2020_ECCV_Lift-Splat-Shoot-Encoding-Images-from-Arbitrary-Camera-Rig/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3723,7 +3718,7 @@
         },
         {
           "paper_id": "pr-0546",
-          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md",
+          "source": "2011-2020/2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3794,7 +3789,7 @@
         },
         {
           "paper_id": "pr-0301",
-          "source": "2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/04_evaluation.md",
+          "source": "2011-2020/2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3854,7 +3849,7 @@
         },
         {
           "paper_id": "pr-0546",
-          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md",
+          "source": "2011-2020/2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3864,7 +3859,7 @@
         },
         {
           "paper_id": "pr-0548",
-          "source": "2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md",
+          "source": "2011-2020/2020/CVPR/2020_CVPR_Waymo-Open-Dataset-An-Autonomous-Driving-Dataset/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -3880,7 +3875,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0016",
-          "source": "2015/T-RO/2015_T-RO_ORB-SLAM-A-Versatile-and-Accurate-Monocular-SLAM-System/04_evaluation.md",
+          "source": "2011-2020/2015/T-RO/2015_T-RO_ORB-SLAM-A-Versatile-and-Accurate-Monocular-SLAM-System/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -3925,7 +3920,7 @@
         },
         {
           "paper_id": "pr-0301",
-          "source": "2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/04_evaluation.md",
+          "source": "2011-2020/2020/CVPR/2020_CVPR_PV-RCNN-Point-Voxel-Feature-Set-Abstraction-for-3D-Object/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4040,22 +4035,22 @@
         },
         {
           "paper_id": "pr-0482",
-          "source": "2019/ICCV/2019_ICCV_Fully-Convolutional-Geometric-Features/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_Fully-Convolutional-Geometric-Features/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0497",
-          "source": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0504",
-          "source": "2018/CVPR/2018_CVPR_VoxelNet-End-to-End-Learning-for-Point-Cloud-Based-3D-Obje/04_evaluation.md",
+          "source": "2011-2020/2018/CVPR/2018_CVPR_VoxelNet-End-to-End-Learning-for-Point-Cloud-Based-3D-Obje/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0505",
-          "source": "2019/CVPR/2019_CVPR_PointPillars-Fast-Encoders-for-Object-Detection-from-Point/04_evaluation.md",
+          "source": "2011-2020/2019/CVPR/2019_CVPR_PointPillars-Fast-Encoders-for-Object-Detection-from-Point/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4075,12 +4070,12 @@
         },
         {
           "paper_id": "pr-0519",
-          "source": "2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca/04_evaluation.md",
+          "source": "2011-2020/2014/NeurIPS/2014_NeurIPS_Depth-Map-Prediction-from-a-Single-Image-using-a-Multi-Sca/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
           "paper_id": "pr-0520",
-          "source": "2019/ICCV/2019_ICCV_Digging-Into-Self-Supervised-Monocular-Depth-Estimation/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_Digging-Into-Self-Supervised-Monocular-Depth-Estimation/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4090,7 +4085,7 @@
         },
         {
           "paper_id": "pr-0546",
-          "source": "2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md",
+          "source": "2011-2020/2020/CVPR/2020_CVPR_nuScenes-A-Multimodal-Dataset-for-Autonomous-Driving/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -4151,7 +4146,7 @@
         },
         {
           "paper_id": "pr-0497",
-          "source": "2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
+          "source": "2011-2020/2019/ICCV/2019_ICCV_SemanticKITTI-A-Dataset-for-Semantic-Scene-Understanding-o/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4389,11 +4384,6 @@
         {
           "paper_id": "pr-0880",
           "source": "2025/RSS/2025_RSS_SpatialVLA-Exploring-Spatial-Representations-for-Visual-La/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-1091",
-          "source": "2026/ICLR/2026_ICLR_Self-Improving-Vision-Language-Action-Models-with-Data-Gen/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4849,8 +4839,18 @@
           "evidence": "cue_only"
         },
         {
+          "paper_id": "pr-1081",
+          "source": "2025/CoRL/2025_CoRL_RICL-Adding-In-Context-Adaptability-to-Pre-Trained-Vision/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
           "paper_id": "pr-1094",
           "source": "2026/CoRL/2026_CoRL_EXPO-FT-Sample-Efficient-Reinforcement-Learning-Finetuning/04_evaluation.md",
+          "evidence": "cue_only"
+        },
+        {
+          "paper_id": "pr-1118",
+          "source": "2026/RSS/2026_RSS_PolaRiS-Scalable-Real-to-Sim-Evaluations-for-Generalist-Ro/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4881,7 +4881,7 @@
         },
         {
           "paper_id": "pr-0845",
-          "source": "2019/CoRL/2019_CoRL_RoboNet-Large-Scale-Multi-Robot-Learning/04_evaluation.md",
+          "source": "2011-2020/2019/CoRL/2019_CoRL_RoboNet-Large-Scale-Multi-Robot-Learning/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4933,7 +4933,7 @@
       "paper_references": [
         {
           "paper_id": "pr-0016",
-          "source": "2015/T-RO/2015_T-RO_ORB-SLAM-A-Versatile-and-Accurate-Monocular-SLAM-System/04_evaluation.md",
+          "source": "2011-2020/2015/T-RO/2015_T-RO_ORB-SLAM-A-Versatile-and-Accurate-Monocular-SLAM-System/04_evaluation.md",
           "evidence": "cue_only"
         },
         {
@@ -4953,7 +4953,7 @@
         },
         {
           "paper_id": "pr-0526",
-          "source": "2014/ECCV/2014_ECCV_LSD-SLAM-Large-Scale-Direct-Monocular-SLAM/04_evaluation.md",
+          "source": "2011-2020/2014/ECCV/2014_ECCV_LSD-SLAM-Large-Scale-Direct-Monocular-SLAM/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -4984,7 +4984,7 @@
         },
         {
           "paper_id": "pr-0945",
-          "source": "2018/T-RO/2018_T-RO_VINS-Mono-A-Robust-and-Versatile-Monocular-Visual-Inertial/04_evaluation.md",
+          "source": "2011-2020/2018/T-RO/2018_T-RO_VINS-Mono-A-Robust-and-Versatile-Monocular-Visual-Inertial/04_evaluation.md",
           "evidence": "cue_only"
         }
       ],
@@ -5011,11 +5011,6 @@
         {
           "paper_id": "pr-0255",
           "source": "2025/ICCV/2025_ICCV_Boost-3D-Reconstruction-using-Diffusion-based-Monocular-Ca/04_evaluation.md",
-          "evidence": "cue_only"
-        },
-        {
-          "paper_id": "pr-0305",
-          "source": "2024/CVPR/2024_CVPR_Depth-Anything-Unleashing-the-Power-of-Large-Scale-Unlabel/04_evaluation.md",
           "evidence": "cue_only"
         },
         {

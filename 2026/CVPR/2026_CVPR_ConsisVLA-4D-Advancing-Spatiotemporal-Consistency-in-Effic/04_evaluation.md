@@ -22,10 +22,10 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 ## Evaluation Type and Scope
 
 - **Evaluation type:** `EMPIRICAL / REAL-ROBOT OR HARDWARE`.
-- **Target system/task:** language-conditioned robot task와 embodiment.
-- **Input boundary:** image/video, language instruction, proprioception과 history.
-- **Output/decision under evaluation:** continuous action, pose 또는 action chunk.
-- **Primary target:** instruction following, task success, generalization과 latency.
+- **Target system/task:** 단팔·양팔 로봇의 장기 조작.
+- **Input boundary:** 다중 시점 RGB와 언어 지시.
+- **Output/decision under evaluation:** 병렬 디코딩한 행동 시퀀스.
+- **Primary target:** 시뮬레이션·실물 조작의 성공과 실행 효율.
 - **Detected evaluation headings:** 5. Experiments (p. 6); 5.1. Experimental Setup (p. 6).
 
 ## Experimental Matrix
@@ -64,8 +64,8 @@ PDF body evaluation/result cue (p. 7 (5.2. Overall Performance & Efficiency), p.
 |---|---|---|---|
 | Robot/hardware/simulator | We conduct evaluations across multiple simulation benchmarks, including: 1) the four task suites of LIBERO [44]-Spatial, Object, Goal, and Long; 2) three pick-and-place tasks ... | embodiment, simulator version and control stack | p. 6 (5.1. Experimental Setup), p. 7 (5.1. Experimental Setup) |
 | Task/environment | Simulation Results on RoboTwin 2.0 Benchmark. | reset, timeout, object/scene variation | p. 7 (5.1. Experimental Setup), p. 7 (5.3. Ablation Studies) |
-| Observation/sensor | image/video, language instruction, proprioception과 history | calibration, preprocessing, privileged input | p. 1 (Abstract), p. 1 (1. Introduction) |
-| Output/decision | continuous action, pose 또는 action chunk | action frame, controller and termination | p. 4 (4.1. Proposed Framework), p. 3 (3. Preliminary & Problem Definition) |
+| Observation/sensor | 다중 시점 RGB와 언어 지시 | calibration, preprocessing, privileged input | p. 1 (Abstract), p. 1 (1. Introduction) |
+| Output/decision | 병렬 디코딩한 행동 시퀀스 | action frame, controller and termination | p. 4 (4.1. Proposed Framework), p. 3 (3. Preliminary & Problem Definition) |
 
 ## Metrics and Success Definition
 

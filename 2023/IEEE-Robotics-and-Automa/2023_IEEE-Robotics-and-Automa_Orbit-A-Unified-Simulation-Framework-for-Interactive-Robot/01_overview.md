@@ -10,7 +10,7 @@
 - Authors: Mayank Mittal, Calvin Yu, Qinxi Yu, Jingzhou Liu, Nikita Rudin, David Hoeller, Jia Lin Yuan, Ritvik Singh, Yunrong Guo, Hammad Mazhar, Ajay Mandlekar, Buck Babich, Gavriel State, Marco Hutter, Animesh Garg
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, simulation, Robot Learning, Benchmark, NVIDIA
+- Tags: Robotics, simulation, Robot Learning, Benchmark, sim-to-real
 - Official paper: https://api.crossref.org/works/10.1109/LRA.2023.3270034
 - Full-text retrieval: https://arxiv.org/pdf/2301.04195v2
 - Code/Project: https://isaac-orbit.github.io/
@@ -44,12 +44,14 @@ ORBIT는 Isaac Sim에서 센서·로봇·제어기를 조합해 강화학습, �
 
 ## Observation, State, and Output Interface
 
+Isaac Sim 기반 플랫폼은 RGB·깊이·관절 상태 등 선택형 센서와 제어·시연 수집을 제공한다. Franka 조작의 PPO 및 시연 모방학습을 평가하고, 시뮬레이션에서 학습한 보행 정책은 실물 ANYmal-D로 전이했다. [PDF 6쪽](https://arxiv.org/pdf/2301.04195v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2301.04195v2#page=7)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | To support working with diverse observations and action spaces, we include fixed-arm and mobile manipulators with different physically-based sensors and motion generators. | standardized observation, action, task state와 evaluation split | p. 1 (Abstract), p. 1 (I. INTRODUCTION) |
-| State/latent | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators, different, physically-based | benchmark state/goal와 method decision | p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (2) It provides a batteries-included experience for roboti) |
-| Output/action | We design the system bottom-up - from incorporating user-defined models for the actuator dynamics to modularizing task specifications for learning with different levels of observations and action spaces. | policy/controller trajectory 또는 measured result | p. 1 (I. INTRODUCTION), p. 2 (2) It provides a batteries-included experience for roboti), p. 2 (2) It provides a batteries-included experience for roboti) |
-| Objective/outcome | Since RSL-rl and rl-games are optimized for GPU, we observe a training speed of 50,00075,000 frames per second (FPS) with 2048 environments, while with stable-baselines3, we receive 6,000-18,000 FPS. | success metric, robustness, generalization과 reproducibility | p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
+| Observation/input | To support working with diverse observations and action spaces, we include fixed-arm and mobile manipulators with different physically-based sensors and motion generators. | 과제별 상태·센서 관측 및 보행 명령 | p. 1 (Abstract), p. 1 (I. INTRODUCTION) |
+| State/latent | support, working, diverse, observations, action, spaces, include, fixed-arm, mobile, manipulators, different, physically-based | Isaac Sim의 로봇·물체·센서·제어 모듈 | p. 1 (Abstract), p. 1 (I. INTRODUCTION), p. 2 (2) It provides a batteries-included experience for roboti) |
+| Output/action | We design the system bottom-up - from incorporating user-defined models for the actuator dynamics to modularizing task specifications for learning with different levels of observations and action spaces. | 조작 행동과 보행 정책 명령 | p. 1 (I. INTRODUCTION), p. 2 (2) It provides a batteries-included experience for roboti), p. 2 (2) It provides a batteries-included experience for roboti) |
+| Objective/outcome | Since RSL-rl and rl-games are optimized for GPU, we observe a training speed of 50,00075,000 frames per second (FPS) with 2048 environments, while with stable-baselines3, we receive 6,000-18,000 FPS. | 조작 학습 성과와 실물 보행 실행 | p. 5 (V. EXEMPLAR WORKFLOWS WITH ORBIT) |
 
 ## Main Claims and Actual Contribution
 

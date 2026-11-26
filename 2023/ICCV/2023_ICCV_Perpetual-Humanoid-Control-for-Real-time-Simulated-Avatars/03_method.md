@@ -61,9 +61,9 @@ PDF body method statement (p. 4 (3.1. Goal Conditioned Motion Imitation with Ad)
 
 | Role | PDF-derived terms | Normalized robotics interpretation | Status |
 |---|---|---|---|
-| Input/observation | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes, per-step, action, shares, same | proprioception, reference pose/motion, visual or language command | body cue; exact tensor/frame verify |
-| State/latent | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes | whole-body pose, balance/contact state와 skill/mode | body cue; notation verify |
-| Action/output | summarize, contributions, follows, Perpetual, Humanoid, Controller, successfully, imitate, AMASS, dataset | joint/whole-body action, motion target 또는 task trajectory | body cue; unit/decoder verify |
+| Input/observation | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes, per-step, action, shares, same | 고유수용 상태와 참조 자세·속도 | body cue; exact tensor/frame verify |
+| State/latent | physics, simulation, determines, state, transition, dynamics, while, policy, PHC, computes | 추종·복구 정책과 결합 가중치 | body cue; notation verify |
+| Action/output | summarize, contributions, follows, Perpetual, Humanoid, Controller, successfully, imitate, AMASS, dataset | 관절 제어 행동 | body cue; unit/decoder verify |
 | Objective/constraint | policy, goal, maximize, discounted, reward, hPT, t-1rt, proximal, gradient, PPO | tracking/balance/task objective | equation anchor required |
 
 ## Observation–State–Action Interface
@@ -75,7 +75,7 @@ PDF body method statement (p. 4 (3.1. Goal Conditioned Motion Imitation with Ad)
 - **p. 6 / 3.2. Progressive Multiplicative Control Policy - extractive body cue:** Combining our composer and primitives, we have the PHC's output distribution: \scri p tsi z e \pol i c y (\ba _t \ m id ...
 - **p. 3 / 3.1. Goal Conditioned Motion Imitation with Ad - extractive body cue:** Based on the simulation state st and reference motion ˆqt, the reward function R computes a reward rt = R(st, ˆqt) as the learning signal ...
 - **p. 2 / 1. Introduction - extractive body cue:** In this work, we consider human poses estimated from video or language input.
-- **Normalized interface:** observation=proprioception, reference pose/motion, visual or language command; state=whole-body pose, balance/contact state와 skill/mode; output/action=joint/whole-body action, motion target 또는 task trajectory.
+- **Normalized interface:** observation=고유수용 상태와 참조 자세·속도; state=추종·복구 정책과 결합 가중치; output/action=관절 제어 행동.
 
 ## Temporal and Runtime Contract
 

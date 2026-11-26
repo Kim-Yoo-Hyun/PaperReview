@@ -10,7 +10,7 @@
 - Authors: Xiao Zhao, Chang Liu, Mingxu Zhu, Zheyuan Zhang, Linna Song, Qingliang Luo, Chufan Guo, Kuifeng Su
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision
+- Tags: Gaussian Splatting, sensor fusion, LiDAR, 3D Vision, 3D detection
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/b8932994f80e23f6dd535f0762ed3ef4-Abstract-Conference.html
 - Full-text retrieval: https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf
 - Code/Project: not identified
@@ -45,12 +45,14 @@ GaussianFusion은 카메라와 LiDAR의 관측을 공통 3D 가우시안 집합�
 
 ## Observation, State, and Output Interface
 
-| Role | PDF body evidence | Robotics interpretation | Anchor |
-|---|---|---|---|
-| Observation/input | However, the discrete grid representation of BEV leads to significant detail loss and limits feature alignment and cross-modal information interaction in multimodal fusion perception. | RGB-D, image set, point cloud, depth와 camera pose | p. 1 (ABSTRACT), p. 2 (20560 M) |
-| State/latent | However, discrete, grid, representation, BEV, leads, significant, detail, loss, limits, feature, alignment | geometry, map, object/relationship state | p. 1 (ABSTRACT), p. 2 (20560 M), p. 2 (20560 M) |
-| Output/action | During feature extraction, perception data are projected onto a fixed-resolution BEV grid, which compresses spatial information. | point map, pose, scene graph, affordance 또는 query result | p. 2 (20560 M), p. 2 (20560 M), p. 4 (6 Cameras) |
-| Objective/outcome | Main contributions are as follows: • We propose the first unified 3D Gaussian representation multi-modal fusion framework, where cross-view and cross-modal Gaussian representations are naturally aggregated through the Gaussian mixture m ... | geometric accuracy, semantic consistency와 planning/manipulation utility | p. 2 (20560 M), p. 1 (ABSTRACT), p. 2 (20560 M) |
+| 항목 | 원문에서 확인한 범위 |
+|---|---|
+| 입력 | 다중 카메라와 라이다 |
+| 표현 | 두 모달리티의 특징을 결합하는 가우시안 |
+| 출력 | 3D 상자와 공간 점유 및 의미 |
+| 평가 | 3D 검출·점유 추정의 정확도 |
+
+[원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=4) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=8)
 
 ## Main Claims and Actual Contribution
 
@@ -75,3 +77,7 @@ GaussianFusion은 카메라와 LiDAR의 관측을 공통 3D 가우시안 집합�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1 INTRODUCTION), p. 2 (20560 M), p. 1 (ABSTRACT), p. 6 (6 Cameras)이다.
+
+## 검색 태그 근거
+
+LiDAR와 다중 카메라 특징에 대응하는 초기 가우시안을 만들어 공통 좌표계에서 결합한다. 출력은 3D 물체 상자와 주변 공간의 의미 점유다. [원문 4쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=4) · [원문 8쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/b8932994f80e23f6dd535f0762ed3ef4-Paper-Conference.pdf#page=8)

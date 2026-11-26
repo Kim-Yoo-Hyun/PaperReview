@@ -10,7 +10,7 @@
 - Authors: Qiuyi Gu, Zhaocheng Ye, Jincheng Yu, Jiahao Tang, Tinghao Yi, Yuhan Dong, Jian Wang, Jinqiang Cui, Xinlei Chen, Yu Wang
 - Primary track: Robotics-enabling 3D perception
 - Tier: REFERENCE
-- Tags: Robotics, 3D Vision, Graph Reasoning, semantic
+- Tags: Robotics, 3D Vision, 3D Scene Graph, semantic
 - Official paper: https://arxiv.org/abs/2412.18381
 - Venue verification: https://api.crossref.org/works/10.1109/LRA.2025.3561569
 - Full-text retrieval: https://arxiv.org/pdf/2412.18381

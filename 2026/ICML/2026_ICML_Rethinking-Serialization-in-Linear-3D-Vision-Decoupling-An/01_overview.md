@@ -10,7 +10,7 @@
 - Authors: YinYun Yan, Liping Zhang, Tingran Wang, Jiaxin Deng, Changshuo Wang, Limin Jiang, Shanwei Gao, Xin Ning
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic, alignment, 3D Vision
+- Tags: semantic, 3D Vision, 3D segmentation, point cloud
 - Official paper: https://icml.cc/virtual/2026/poster/64540
 - Published PDF: https://raw.githubusercontent.com/mlresearch/v306/main/assets/yan26v/yan26v.pdf
 - Full-text retrieval at original review: https://openreview.net/pdf/fa9e033b756ac063d19be2b3bb91daea759e1ae1.pdf
@@ -76,3 +76,7 @@ AnIsoNet은 점군 직렬화 순서에 따른 편향을 줄이기 위해 국소 
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.1. Overview)이다.
+
+## 검색 태그 근거
+
+점군에서 방향에 민감한 국소 기하를 먼저 추출한 뒤 전역 의미 문맥을 집계한다. ScanNetV2·S3DIS의 점별 의미 분할과 ScanObjectNN의 물체 분류를 평가했다. [원문 3쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=3) · [원문 7쪽](https://raw.githubusercontent.com/mlresearch/v306/acc326bcb01ce154c084938f42db80259d168431/assets/yan26v/yan26v.pdf#page=7)

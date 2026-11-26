@@ -50,7 +50,7 @@
 
 ### Dependency and evolution
 
-- **Registry position:** `NEXT` in `Planning and control`; tags: `Robotics, task and motion planning, PDDL, mobile manipulation, long horizon, language grounding, real-world`.
+- 현재 등급·주 트랙·태그는 [논문 개요](./01_overview.md)에서 확인한다.
 - **Reading predecessor in the generated track queue:** Kinodynamic Trajectory Following with STELA: Simultaneous Trajectory Estimation & Local Adaptation (queue adjacency, not a confirmed citation).
 - **Reading successor in the generated track queue:** Neural Assembler: Learning to Generate Fine-Grained Robotic Assembly Instructions from Multi-View Images (queue adjacency, not a confirmed citation).
 - Direct citation predecessor/successor is not asserted automatically; verify the paper's reference section before recording lineage as fact.

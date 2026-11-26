@@ -12,8 +12,9 @@
 - Aliases: Discounted Liveness OPE
 - Official paper: https://www.roboticsproceedings.org/rss22/p154.html
 - Venue verification: https://www.roboticsproceedings.org/rss22/p154.html
-- Code/Project:
-- Code: not_identified
+- Code/Project: https://github.com/haowwang/offline_policy_eval_manipulation
+- Code: https://github.com/haowwang/offline_policy_eval_manipulation
+- 방법·평가 확인 (2026-11-25): [원문 3, 4, 5, 6, 7, 8쪽](https://www.roboticsproceedings.org/rss22/p154.pdf#page=3) · [다축 분류와 공개 범위](../../../work/sources/batches/core_next_10.yaml)
 - Source audit: 2026-11-12: 공식 publication/초록 또는 저자 source 확인. RSS official abstract의 두 simulation 과제를 기록한다. arXiv 초록의 추가 cloth demonstration은 venue 본문에서 동일성을 확인하기 전 평가 범위에 합치지 않았다. 초록·지정 project 범위이며 전체 정독·코드 실행·사용자 reading 완료를 뜻하지 않는다. 2026-11-23 개요의 요약과 핵심 기여 두 개를 원문 지정 쪽과 대조했다.
 
 ## Problem and Importance
@@ -42,3 +43,7 @@ RSS abstract는 VLA·diffusion policy를 이용한 두 simulation 조작 과제�
 ## Verification Boundary
 
 본문에서 확인할 항목: 고정 정책·목표 predicate·유한 horizon·복구 구간·실제 성공과 진척의 차이. 이 항목들은 연구자의 점검 질문이며 논문이 보고한 실패 목록이 아니다.
+
+## 공개 자료의 확인 범위
+
+- Square 너트 조립의 할인 가치 추정기 학습 스크립트 · square_task/train_our_method_square_task.sh [배포 파일](https://raw.githubusercontent.com/haowwang/offline_policy_eval_manipulation/45bbad6756aea9ad69176e1c44f7da2dc99c249d/square_task/train_our_method_square_task.sh)

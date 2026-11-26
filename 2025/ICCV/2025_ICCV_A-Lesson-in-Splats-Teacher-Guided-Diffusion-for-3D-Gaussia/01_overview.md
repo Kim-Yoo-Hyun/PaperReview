@@ -77,3 +77,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 5 (3.2. Noisy Teacher Bootstrapping), p. 5 (3.3. Cycle Consistency Regularization), p. 3 (3. Method), p. 7 (4.4. Additional View Guidance)이다.
+
+## 검색 태그 근거
+
+이미지 조건부 가우시안 확산 모델을 훈련할 때 다중 뷰 영상과 결정론적 복원기의 예측을 감독으로 활용한다. 불확실한 표면에 대해 여러 가능한 가우시안 표본을 생성한다. [원문 3쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=3) · [원문 7쪽](https://openaccess.thecvf.com/content/ICCV2025/papers/Peng_A_Lesson_in_Splats_Teacher-Guided_Diffusion_for_3D_Gaussian_Splats_ICCV_2025_paper.pdf#page=7)

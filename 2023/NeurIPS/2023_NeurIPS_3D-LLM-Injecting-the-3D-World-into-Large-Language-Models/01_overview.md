@@ -10,7 +10,7 @@
 - Authors: Yining Hong, Haoyu Zhen, Peihao Chen, Shuhong Zheng, Yilun Du, Zhenfang Chen, Chuang Gan
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: LLM, 3D Vision, Vision-Language
+- Tags: LLM, 3D Vision, Vision-Language, 3D QA
 - Official paper: https://arxiv.org/abs/2307.12981
 - Full-text retrieval: https://arxiv.org/pdf/2307.12981
 - Code/Project: https://vis-www.cs.umass.edu/3dllm/
@@ -73,3 +73,7 @@
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (5. Facing the mirror and dress), p. 6 (5. Facing the mirror and dress), p. 3 (5. Facing the mirror and dress), p. 5 (5. Facing the mirror and dress)이다.
+
+## 검색 태그 근거
+
+여러 뷰의 2D 특징을 장면 내 3D 위치에 모아 언어모델에 제공한다. ScanQA와 상황 이해에서 응답을 평가하고, 계획 사례에서는 텍스트로 행동 순서를 제시했다. [원문 3쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=3) · [원문 10쪽](https://proceedings.neurips.cc/paper_files/paper/2023/file/413885e70482b95dcbeeddc1daf39177-Paper-Conference.pdf#page=10)

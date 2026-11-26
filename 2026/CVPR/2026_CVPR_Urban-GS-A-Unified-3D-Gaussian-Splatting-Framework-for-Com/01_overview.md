@@ -10,7 +10,7 @@
 - Authors: Meng Wang, Changqun Xia, Yuze Wang, Junyi Wang, Wantong Duan, Xinxiong Xie, Yue Qi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision
+- Tags: Gaussian Splatting, 3D reconstruction, 3D Vision, multi-view
 - Official paper: https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf
 - Code/Project: not identified
@@ -78,3 +78,7 @@ Urban-GS는 항공 영상과 거리 영상에서 시야 범위와 관측 밀도�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 2 (1. Introduction), p. 1 (1. Introduction), p. 4 (4. Methods), p. 5 (4.3. Global-to-Local Optimization), p. 5 (4.2. Contribution-based Anchor Pruning)이다.
+
+## 검색 태그 근거
+
+항공·거리 사진의 관측 밀도와 시야 차이를 고려해 가우시안 증식 및 가시성 마스킹을 조정한다. 항공–거리 영상 데이터의 새 시점 렌더링을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=3) · [원문 6쪽](https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf#page=6)

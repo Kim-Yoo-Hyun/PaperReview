@@ -10,7 +10,7 @@
 - Authors: Stanislaw Szymanowicz, Eldar Insafutdinov, Chuanxia Zheng, Dylan Campbell, João F. Henriques, Christian Rupprecht, Andrea Vedaldi
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: 3D reconstruction, 3D Vision
+- Tags: 3D reconstruction, 3D Vision, Gaussian Splatting
 - Official paper: https://api.crossref.org/works/10.1109/3dv66043.2025.00067
 - Full-text retrieval: https://arxiv.org/pdf/2406.04343.pdf
 - Code/Project: not identified
@@ -77,3 +77,7 @@ Flash3D는 한 장의 RGB 영상에서 단안 깊이를 추정하고 여러 층�
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 4 (3.2. Monocular feed-forward multi-Gaussians), p. 3 (3. Method)이다.
+
+## 검색 태그 근거
+
+한 장의 RGB에서 단안 깊이로 표면의 첫 층을 얻고, 추가 층의 가우시안으로 가려지는 영역을 표현한다. 점군 센서나 내비게이션 성능 대신 새 뷰의 렌더링 품질을 평가했다. [원문 3쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=3) · [원문 7쪽](https://ieeexplore.ieee.org/stampPDF/getPDF.jsp?tp=&arnumber=11125585#page=7)

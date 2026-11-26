@@ -8,7 +8,7 @@
 - Category: World Models, Safety, and Recovery
 - Primary track: World models, safety, uncertainty, and recovery
 - Tier: REFERENCE
-- Tags: Robotics, feedback, evaluation
+- Tags: Robotics, feedback, evaluation, control barrier function, safety filter, VLA
 - Aliases:
 - Official paper: https://arxiv.org/abs/2610.01083
 - Full-text retrieval: https://arxiv.org/pdf/2610.01083v2
@@ -35,6 +35,10 @@ Robot·attached object geometry와 VLA action → 수정 action.
 SafeLIBERO 기반 안전성 평가를 보고한다.
 
 근거: [공식 paper/abstract](https://arxiv.org/abs/2610.01083) · [저자 project/code](https://samuelzhen.com/projects/wbag). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
+
+## 검색 태그 근거
+
+WBAG는 RGB-D로 장면을 복원하고 팔 링크와 파지 물체의 기하를 제어 장벽 함수 제약에 넣어 VLA의 행동을 투영한다. SafeLIBERO 시뮬레이션에서 팔과 물체의 충돌을 평가한다. [원문 4쪽](https://arxiv.org/pdf/2610.01083v2#page=4) · [원문 6쪽](https://arxiv.org/pdf/2610.01083v2#page=6)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

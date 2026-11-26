@@ -10,7 +10,7 @@
 - Authors: Haruki Abe, Takayuki Osa, YUSUKE Mukuta, Tatsuya Harada
 - Primary track: RL, IL, offline learning, and robot data
 - Tier: REFERENCE
-- Tags: Robotics, offline reinforcement learning, cross-embodiment, transfer
+- Tags: Robotics, offline reinforcement learning, cross-embodiment, transfer, legged locomotion
 - Official paper: https://iclr.cc/virtual/2026/poster/10010454
 - Full-text retrieval: https://arxiv.org/pdf/2602.18025
 - Code/Project: https://haruki-abe.github.io/cross_embodiment_offline_rl_website/

@@ -10,7 +10,7 @@
 - Authors: Dekai Zhu, Yan Di, Stefan Gavranovic, Slobodan Ilic
 - Primary track: Robotics-enabling 3D perception
 - Tier: ARCHIVE
-- Tags: semantic, alignment, Diffusion, Generation, point cloud, 3D Vision
+- Tags: semantic, Diffusion, Generation, point cloud, 3D Vision
 - Official paper: https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.html
 - Full-text retrieval: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf
 - Code/Project: not identified
@@ -80,3 +80,7 @@ SeaLion은 의미 부품 라벨이 있는 점군의 형상과 부품 구조를 �
 ## Why Read It
 
 방법과 평가 범위를 대조할 원문 구간은 p. 1 (1. Introduction), p. 2 (1. Introduction), p. 3 (3.1. Semantic Part-Aware Latent Point Diffusion), p. 4 (3.2. Model Architecture of SeaLion)이다.
+
+## 검색 태그 근거
+
+의미 부품 라벨을 잠재 점 특징과 함께 확산해 부품 구조가 있는 3D 점군을 생성한다. 형상 전체와 부품의 생성·편집 품질을 평가했다. [원문 3쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=3) · [원문 8쪽](https://openaccess.thecvf.com/content/CVPR2025/papers/Zhu_SeaLion_Semantic_Part-Aware_Latent_Point_Diffusion_Models_for_3D_Generation_CVPR_2025_paper.pdf#page=8)

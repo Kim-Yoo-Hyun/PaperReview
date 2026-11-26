@@ -38,12 +38,14 @@ TACTO는 비전 기반 촉각 센서의 접촉 영상을 물리 시뮬레이터�
 
 ## Observation, State, and Output Interface
 
+렌더러는 접촉 형상에서 광학 촉각 영상과 깊이를 만든다. 그림 10은 외부 시각, 양쪽 촉각, 조합을 따로 비교한다. 실물 DIGIT 비교와 자세 추정의 sim-to-real은 센서 검증이며 구슬 조작 제어는 시뮬레이션이다. [PDF 6쪽](https://arxiv.org/pdf/2012.08456v2#page=6) · [PDF 7쪽](https://arxiv.org/pdf/2012.08456v2#page=7)
+
 | Role | PDF body evidence | Robotics interpretation | Anchor |
 |---|---|---|---|
-| Observation/input | Hence, it is difficult to adapt to existing and future sensor designs that require advanced functionalities, like reflection, refraction, and shadows with fast speed. | simulated state, geometry, contact와 control input | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple) |
-| State/latent | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities, like, reflection | dynamics/contact state 또는 learned simulator representation | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 1 (I. INTRODUCTION) |
-| Output/action | To render the RGB image from the depth map, researchers from [13] implemented their own renderer based on Phong's reflection model. | simulation step, trajectory 또는 environment query | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
-| Objective/outcome | physical plausibility, speed, reproducibility와 task utility | physical plausibility, speed, reproducibility와 task utility | 본문 anchor 없음 |
+| Observation/input | Hence, it is difficult to adapt to existing and future sensor designs that require advanced functionalities, like reflection, refraction, and shadows with fast speed. | 시뮬레이션의 접촉 형상 및 센서의 광학 설정 | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple) |
+| State/latent | Hence, difficult, adapt, existing, future, sensor, designs, require, advanced, functionalities, like, reflection | 젤 표면의 접촉 자국과 렌더링 장면 | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 1 (I. INTRODUCTION) |
+| Output/action | To render the RGB image from the depth map, researchers from [13] implemented their own renderer based on Phong's reflection model. | 모의 촉각 영상, 하위 모델의 파지 안정성·자세 추정 | p. 3 (1. Phong's model for RGB rendering from Depth (simple), p. 1 (I. INTRODUCTION), p. 1 (I. INTRODUCTION) |
+| Objective/outcome | 센서 영상 비교와 과제별 예측·제어 성능 | 센서 영상 비교와 과제별 예측·제어 성능 | 본문 anchor 없음 |
 
 ## Main Claims and Actual Contribution
 

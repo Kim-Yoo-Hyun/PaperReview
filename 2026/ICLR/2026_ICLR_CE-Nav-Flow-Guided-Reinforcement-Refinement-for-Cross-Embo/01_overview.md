@@ -7,7 +7,7 @@
 - Category: Locomotion, Whole-Body, and Mobile Manipulation
 - Primary track: Locomotion, whole-body, mobile manipulation, and humanoids
 - Tier: REFERENCE
-- Tags: cross-embodiment, local-navigation, flow-policy, reinforcement-learning
+- Tags: cross-embodiment, local-navigation, flow-policy, reinforcement-learning, imitation-learning, LiDAR
 - Aliases: CE-Nav, VelFlow
 - Official paper: https://proceedings.iclr.cc/paper_files/paper/2026/hash/514bdfb12b318ad02c6f28dc68f2feea-Abstract-Conference.html
 - Venue verification: https://proceedings.iclr.cc/paper_files/paper/2026/hash/514bdfb12b318ad02c6f28dc68f2feea-Abstract-Conference.html
@@ -31,9 +31,13 @@ CE-Nav는 여러 로봇에 공통인 국소 경로 선택을 먼저 학습하고
 
 ## Evaluation Scope and Claim Boundary
 
-사족·이족·quadrotor 실험과 실제 배포를 보고한다.
+사족·이족·쿼드로터의 국소 항법은 시뮬레이션에서 비교했다. 실물 배포 대상은 Unitree Go2와 MagicDog다.
 
 근거: [공식 paper/abstract](https://proceedings.iclr.cc/paper_files/paper/2026/hash/514bdfb12b318ad02c6f28dc68f2feea-Abstract-Conference.html) · [저자 project/code](https://github.com/amap-cvlab/CE-Nav).
+
+## 검색 태그 근거
+
+DWA가 생성한 속도 명령을 모방해 VelFlow를 훈련한다. 기체별 PPO 정책은 동결한 VelFlow의 참조 속도와 2D LiDAR·로봇 상태를 받아 실행 속도를 정한다. 사족·이족·쿼드로터 비교는 시뮬레이션에서, 실물 항법은 Go2와 MagicDog에서 수행했다. [원문 5쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/514bdfb12b318ad02c6f28dc68f2feea-Paper-Conference.pdf#page=5) · [원문 6쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/514bdfb12b318ad02c6f28dc68f2feea-Paper-Conference.pdf#page=6) · [원문 9쪽](https://proceedings.iclr.cc/paper_files/paper/2026/file/514bdfb12b318ad02c6f28dc68f2feea-Paper-Conference.pdf#page=9)
 
 ## Why This Paper Is Here — Researcher Interpretation
 

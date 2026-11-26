@@ -36,6 +36,10 @@ Multi-view·언어·proprioception → 양팔 action.
 
 근거: [공식 paper/abstract](https://jjjenghi.github.io/dialogvla/) · [저자 project/code](https://jjjenghi.github.io/dialogvla/). 추가 수치와 실패 조건은 해당 실험의 표·설정을 확인해야 한다.
 
+## 검색 태그 근거
+
+기술 단계와 양팔의 역할을 나타낸 대화로 병렬 전문가를 조건화하고, 고유수용 상태를 받는 행동 전문가가 행동열을 복원한다. RoboTwin·RoboCasa와 실물 양팔에서 평가했다. [원문 3쪽](https://jjjenghi.github.io/dialogvla/static/paper/DialogVLA.pdf#page=3) · [원문 6쪽](https://jjjenghi.github.io/dialogvla/static/paper/DialogVLA.pdf#page=6)
+
 ## Why This Paper Is Here — Researcher Interpretation
 
 D3 양팔 role reasoning의 중복을 피할 REFERENCE다. IROS 2026은 저자 표기이며 공식 채택 미확인이다.

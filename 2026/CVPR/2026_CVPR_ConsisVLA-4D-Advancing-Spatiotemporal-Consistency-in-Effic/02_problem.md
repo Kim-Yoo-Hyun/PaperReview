@@ -22,11 +22,11 @@ PDF body framing (p. 2 (1. Introduction), p. 1 (1. Introduction), p. 2 (1. Intro
 
 | Dimension | PDF body evidence | Registry/robotics interpretation | Boundary |
 |---|---|---|---|
-| Target problem | Due to the lack of a comprehensive understanding of current spatial states and insufficient knowledge of evolving scene dynamics, existing methods struggle ... | language-conditioned robot task와 embodiment | body wording is the source claim |
-| Observation / input | Current Vision-Language-Action (VLA) models primarily focus on mapping 2D observations to actions but exhibit notable limitations in spatiotemporal perception and reasoning: 1) ... | image/video, language instruction, proprioception과 history | exact sensor/frame/preprocessing from PDF body |
-| State / latent | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit | language-grounded task state와 action-policy context | notation and tensor shape require body check |
-| Output / action | concatenate, initialized, action, chunk, sequence, apply, Spatiotemporal, Consistency | continuous action, pose 또는 action chunk | exact unit/frame/decoder require body check |
-| Target outcome | instruction-conditioned task success | instruction following, task success, generalization과 latency | metric/denominator are in 04 evidence |
+| Target problem | Due to the lack of a comprehensive understanding of current spatial states and insufficient knowledge of evolving scene dynamics, existing methods struggle ... | 단팔·양팔 로봇의 장기 조작 | body wording is the source claim |
+| Observation / input | Current Vision-Language-Action (VLA) models primarily focus on mapping 2D observations to actions but exhibit notable limitations in spatiotemporal perception and reasoning: 1) ... | 다중 시점 RGB와 언어 지시 | exact sensor/frame/preprocessing from PDF body |
+| State / latent | Current, Vision-Language-Action, VLA, models, primarily, focus, mapping, observations, actions, exhibit | 시점 간 대응과 학습 중 미래 물체·깊이 특징 | notation and tensor shape require body check |
+| Output / action | concatenate, initialized, action, chunk, sequence, apply, Spatiotemporal, Consistency | 병렬 디코딩한 행동 시퀀스 | exact unit/frame/decoder require body check |
+| Target outcome | instruction-conditioned task success | 시뮬레이션·실물 조작의 성공과 실행 효율 | metric/denominator are in 04 evidence |
 
 ## Formal Problem Formulation
 
