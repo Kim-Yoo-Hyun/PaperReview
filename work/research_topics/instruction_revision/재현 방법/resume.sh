@@ -11,12 +11,14 @@ mode=${1:-help}
 case "$mode" in
   help|-h|--help)
     printf '%s\n' 'Setup: check, gpu, build, assets, smoke, results' \
+      'View windows: drawer-view-window NEW_DIR, verify-drawer-view-window DIR, replay-drawer-view-window DIR [NEW_REPORT]' \
       'View duration: drawer-view-duration NEW_DIR, verify-drawer-view-duration DIR, replay-drawer-view-duration DIR [NEW_REPORT]' \
       'Collect: drawer-first-camera NEW_DIR, drawer-width NEW_DIR, drawer-location NEW_DIR, middle-aperture-layout2 NEW_DIR' \
       'Score: verify-drawer-first-camera DIR, verify-drawer-width DIR, verify-drawer-location DIR, verify-middle-aperture DIR, verify-stove-layouts DIR' \
       'Replay: replay-drawer-first-camera DIR [NEW_REPORT], replay-drawer-width DIR [NEW_REPORT], replay-drawer-location DIR [NEW_REPORT], replay-prior-closed DIR NEW_REPORT'
     exit 0 ;;
   drawer-view-duration|verify-drawer-view-duration|replay-drawer-view-duration) ;;
+  drawer-view-window|verify-drawer-view-window|replay-drawer-view-window) ;;
   check|gpu|build|assets|smoke|results|drawer-first-camera|drawer-width|drawer-location|middle-aperture-layout2|verify-drawer-first-camera|verify-drawer-width|verify-drawer-location|verify-middle-aperture|verify-stove-layouts|replay-drawer-first-camera|replay-drawer-width|replay-drawer-location|replay-prior-closed) ;;
   *) printf 'Unknown drawer study stage: %s\n' "$mode" >&2; exit 2 ;;
 esac
@@ -81,9 +83,10 @@ image_id=$(d image inspect --format '{{.Id}}' "$image")
 sim=/opt/resteer/.venv/bin/python
 policy=/opt/resteer/third_party/openpi/.venv/bin/python
 case "$mode" in
-  verify-drawer-view-duration|verify-drawer-first-camera|verify-drawer-width|verify-drawer-location|verify-middle-aperture|verify-stove-layouts)
+  verify-drawer-view-window|verify-drawer-view-duration|verify-drawer-first-camera|verify-drawer-width|verify-drawer-location|verify-middle-aperture|verify-stove-layouts)
     [ "$#" -eq 2 ] && [ -d "$2" ] || { echo 'Supply the recorded run or archive directory.' >&2; exit 2; }
     case "$mode" in
+      verify-drawer-view-window) verifier=drawer_view_window.py ;;
       verify-drawer-view-duration) verifier=drawer_view_duration.py ;;
       verify-drawer-first-camera) verifier=drawer_first_camera.py ;;
       verify-drawer-width) verifier=drawer_width.py ;;
@@ -97,12 +100,14 @@ case "$mode" in
       --mount "type=bind,src=$recipe_dir,dst=/packet,readonly" --mount "type=bind,src=$run_path,dst=/trial,readonly" \
       --entrypoint "$sim" "$image_id" "/packet/$verifier" /trial
     exit 0 ;;
-  replay-drawer-view-duration|replay-drawer-first-camera|replay-drawer-width|replay-drawer-location|replay-prior-closed)
+  replay-drawer-view-window|replay-drawer-view-duration|replay-drawer-first-camera|replay-drawer-width|replay-drawer-location|replay-prior-closed)
     [ "$#" -ge 2 ] && [ "$#" -le 3 ] && [ -d "$2" ] || { echo 'Supply an existing run and optionally a new report.' >&2; exit 2; }
     run_path=$(CDPATH= cd -- "$2" && pwd)
     if [ "$mode" = replay-prior-closed ]; then
       [ "$#" -eq 3 ] || { echo 'Supply a new report path for the historical replay.' >&2; exit 2; }
       script=replay_prior_closed.py
+    elif [ "$mode" = replay-drawer-view-window ]; then
+      script=drawer_view_window.py
     elif [ "$mode" = replay-drawer-view-duration ]; then
       script=drawer_view_duration.py
     elif [ "$mode" = replay-drawer-first-camera ]; then
@@ -144,11 +149,13 @@ if [ "$mode" = results ]; then
 fi
 
 volume "$data_volume"
-if [ "$mode" = drawer-view-duration ] || [ "$mode" = drawer-first-camera ] || [ "$mode" = drawer-width ] || [ "$mode" = drawer-location ] || [ "$mode" = middle-aperture-layout2 ]; then
+if [ "$mode" = drawer-view-window ] || [ "$mode" = drawer-view-duration ] || [ "$mode" = drawer-first-camera ] || [ "$mode" = drawer-width ] || [ "$mode" = drawer-location ] || [ "$mode" = middle-aperture-layout2 ]; then
   [ "$#" -eq 2 ] && [ ! -e "$2" ] || { echo 'Supply a new output directory.' >&2; exit 2; }
   parent=$(CDPATH= cd -- "$(dirname -- "$2")" && pwd)
   leaf=$(basename -- "$2")
-  if [ "$mode" = drawer-view-duration ]; then
+  if [ "$mode" = drawer-view-window ]; then
+    set -- /packet/drawer_view_window.py "/output/$leaf" collect
+  elif [ "$mode" = drawer-view-duration ]; then
     set -- /packet/drawer_view_duration.py "/output/$leaf" collect
   elif [ "$mode" = drawer-first-camera ]; then
     set -- /packet/drawer_first_camera.py "/output/$leaf" collect

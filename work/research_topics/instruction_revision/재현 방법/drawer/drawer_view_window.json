@@ -1,0 +1,14 @@
+{
+  "question": "With equal 0.50 s visual exposure, does showing the opposite opening in the first or the second half of the first second change the first drawer or bowl contacted by the gripper?",
+  "parent": "results/2026-11-26-drawer-view-duration/study.zip",
+  "parent_sha256": "df06cedba30e58d24c768318012dee6afa54cf9948afcdc84a0f705fbf622ae8",
+  "parent_verification_sha256": "3a58a4cd23c29aec137247b2f3ae448628a6a7c35bdc74c2f200caa7b7664227",
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "physical_modes": ["narrow-middle", "full-middle", "narrow-bottom", "full-bottom"],
+  "render_queries": 4,
+  "exchange_indices": {"self": [], "early": [0, 1], "late": [2, 3], "four": [0, 1, 2, 3]},
+  "figure": "drawer_view_window.png",
+  "cohort": "LIBERO-Goal layout 2, pi05_libero, fixed tabletop, same two returned arm postures and eight seeds. Run all four schedules for each physical opening on both independent model loads in reverse order on load 2. Each pairing holds host, posture, seed, load and instruction fixed. 512 trajectories and 128 early/late pairs. The 15 s and 30 s clock includes a 3 s return. Contact and containment ticks start at policy onset (20 Hz).",
+  "assignment": "Zero-based indices are measured from the first policy query. A query covers five executed controls, or 0.25 s. Re-render both cameras with the current arm and object poses, moving only the chosen drawer in detached render data. Match both sham images pixel-for-pixel, check live physics before and after, verify the first inputs against the archived host/donor and the server receipts at every query. Stop exchanging at the first query after gripper contact with any drawer or bowl. Retain assigned and actually delivered indices, including truncated schedules.",
+  "analysis": "Compare early directly with late on all matched pairs, reporting the first 20 controls, first gripper contact target and tick, first containment tick and destination, missing placement, and the drawer at 15 and 30 s. Where self and four disagree on first target, classify each half as self, four, or neither. Preserve the joint paired table and report denominators by physical drawer and direction. A window more often matches the full exposure consistently in a direction only if its count is strictly larger in every posture by load cell with eligible pairs, comparing the same eligible seeds in each. Ties or any empty cell yield no consistent winner. Also check first-ten-control equality in pairs sharing those first two visual assignments and independent model reloads."
+}

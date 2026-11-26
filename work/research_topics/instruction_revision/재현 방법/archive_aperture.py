@@ -66,7 +66,7 @@ def figure_filename(result):
         default = 'drawer_first_camera.png'
     name = result.get('figure_name', default)
     assert name in ('middle_aperture.png', 'drawer_location.png', 'drawer_width.png', 'drawer_first_camera.png',
-                    'drawer_view_duration.png')
+                    'drawer_view_duration.png', 'drawer_view_window.png')
     return name
 
 

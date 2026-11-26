@@ -4,11 +4,11 @@
 
 ## 최근 실험
 
-LIBERO 배치 2에서 실제 서랍 폭을 고정하고, 외부·손목 카메라에 반대 폭을 보여주는 시간을 0.25초에서 1초로 늘렸다. 같은 자세·시드·모델 실행을 맞춘 128쌍 중 126쌍에서 첫 접촉 대상이, 102쌍에서 30초 수납 칸이 달라졌다. 가운데를 76 mm 열고 넓게 보이게 하면 32쌍 전부 첫 접촉이 위 칸에서 그릇으로 바뀌었고, 1초 조건은 30초까지 한 번도 수납하지 못했다. [서랍·방향별 결과와 한계](./work/research_topics/instruction_revision/내용/README.md#drawer-view-duration) · [측정 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-view-duration/drawer_view_duration.png)
+LIBERO 배치 2에서 두 카메라에 반대 폭의 서랍을 똑같이 0.5초 보여주고, 그 시점만 옮겼다. 실제 폭을 보여준 대조군과 비교해 정책 시작 후 0–0.5초 교환은 0/128쌍, 0.5–1초 교환은 120/128쌍에서 그리퍼의 첫 접촉 결과가 달라졌다. 앞·뒤 구간을 직접 비교하면 30초 수납 결과는 72/128쌍에서 달랐다. [서랍·방향별 결과와 한계](./work/research_topics/instruction_revision/내용/README.md#drawer-view-window) · [측정 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-view-window/drawer_view_window.png)
 
 | 하려는 일 | 시작점 |
 |---|---|
-| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-view-duration) |
+| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-view-window) |
 | 후속 실험의 대조 조건 확인 | [다음 작업](./TODO.md) |
 | 1,260편의 논문 검색 | [분야별 목록](./PAPER.md) · [태그·별칭 색인](./research/REGISTRY_INDEX.csv) |
 | 정독 순서·기록·분야별 비교 | [논문 읽기](./research/README.md) · [7개 분야의 합성](./synthesis/README.md) |

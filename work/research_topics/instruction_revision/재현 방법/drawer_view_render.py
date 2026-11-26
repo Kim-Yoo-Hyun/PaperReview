@@ -104,23 +104,25 @@ class DrawerViews:
 
 
 class ViewSchedule:
-    def __init__(self, env, scene, *, drawer, width, duration, limit, bank, opposite_bank):
+    def __init__(self, env, scene, *, drawer, width, limit, bank, opposite_bank, indices=None, duration=None):
         self.renderer = DrawerViews(env, drawer)
         self.geometry = contact_geometry(scene.geometry)
         self.qpos = scene.slides[drawer]['closed'] - width
-        self.duration, self.limit = duration, limit
+        assert (indices is None) != (duration is None)
+        self.indices = frozenset(range(duration) if indices is None else indices)
+        self.limit = limit
         self.bank, self.opposite_bank = bank, opposite_bank
 
     def apply(self, index, query, sample, rows):
         if index >= self.limit:
             return
         contact = any(set(targets(r, self.geometry)) - {'other'} for r in rows)
-        exchange = index < self.duration and not contact
+        exchange = index in self.indices and not contact
         rgb, record = self.renderer.images(query, sample, self.qpos if exchange else None)
         if index == 0:
             assert sample['live'] == self.bank
             assert record['sent'] == (self.opposite_bank if exchange else self.bank)
-        if exchange or (self.duration == 0 and not contact):
+        if exchange or (not self.indices and not contact):
             query.update(rgb)
         sample['render'] = dict(record, exchange=exchange)
 

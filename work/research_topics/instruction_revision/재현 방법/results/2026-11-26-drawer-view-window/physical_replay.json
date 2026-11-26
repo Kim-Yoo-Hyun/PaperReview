@@ -1,0 +1,4750 @@
+{
+  "paths": 512,
+  "runs": [
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "890f7ab37ca78cb80540cce4827f00b127d8ab81cdb2823ea67be18273ae8553"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        360
+      ],
+      "final_physics": "3dee953f3dcfc9a3f406613b9dd9a228cf5244f17f6395ec43a66007d4c0f8e2"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6f6d1dff5b43b9b5d1ea0aaef0c2e7925a3d669447c151f6c55aefd23363d6bf"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9a0b56cbcedb1bab948145549d3212a04f092c95e668f4493bfbc69f36eb489a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "260d0451043c2e2d63307eaf8302ef1e5a74f1ebc149b20794db1af15b1fdc80"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d22d848ed5cfd93ee18fed784dc47a299191b60a3c89d52412d767951e8af8b7"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "96e308923d7c728d1775302ca3a8fdded9c681c729d8cf3bafacec2d462a9e6a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "be2010a6685cd2a16e4ea32ffa4aea5cffdd8028fb6442d3e454b519361a08dc"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "890f7ab37ca78cb80540cce4827f00b127d8ab81cdb2823ea67be18273ae8553"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "10c8c1b93e68efde1e40d91617f1e7c077d248d27967ed7e6062c02cca52f6aa"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6f6d1dff5b43b9b5d1ea0aaef0c2e7925a3d669447c151f6c55aefd23363d6bf"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9a0b56cbcedb1bab948145549d3212a04f092c95e668f4493bfbc69f36eb489a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "260d0451043c2e2d63307eaf8302ef1e5a74f1ebc149b20794db1af15b1fdc80"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d22d848ed5cfd93ee18fed784dc47a299191b60a3c89d52412d767951e8af8b7"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "96e308923d7c728d1775302ca3a8fdded9c681c729d8cf3bafacec2d462a9e6a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "be2010a6685cd2a16e4ea32ffa4aea5cffdd8028fb6442d3e454b519361a08dc"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5d6a4aca2add6b7000228034eacebd5f460b40cca76494d00eaaafd4eeccf5ac"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "34d9aeff19fc44c77b559d77caffe5646d733c6bdef00153537b01c8125db039"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "227a1ca6b779b286ae6bb5648c5da1ef155791e289c90c76a9d378c2f3369571"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d558876dda8d5ef2255f57cd0580333efc7bbb1b0010d639604f387ef6b57944"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f3158c509118773e6fe1f8bb87a04f0ba258e8a8ecbbcffb3fb5316ecf2c45b6"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        110
+      ],
+      "final_physics": "cb0be4e235a95796dbd81b69c06c055411c3902bef628ef2c2e61afee6883923"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f76d985206b5f7391a4059cf64e1da8eea8b54a2ff40f30dc73dd0d5847c489d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "560f4c6edd1be4f91c6a6fa9bfd32321a1785d851c16ee408321be7fe1d86f98"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5d6a4aca2add6b7000228034eacebd5f460b40cca76494d00eaaafd4eeccf5ac"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "34d9aeff19fc44c77b559d77caffe5646d733c6bdef00153537b01c8125db039"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "227a1ca6b779b286ae6bb5648c5da1ef155791e289c90c76a9d378c2f3369571"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d558876dda8d5ef2255f57cd0580333efc7bbb1b0010d639604f387ef6b57944"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f3158c509118773e6fe1f8bb87a04f0ba258e8a8ecbbcffb3fb5316ecf2c45b6"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "676ab1644650dd225c2c036aa14f25d3a08db25915d9d18c965d71a982a95e88"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f76d985206b5f7391a4059cf64e1da8eea8b54a2ff40f30dc73dd0d5847c489d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "560f4c6edd1be4f91c6a6fa9bfd32321a1785d851c16ee408321be7fe1d86f98"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ae63e2faa10f0a8eeaa86a354abfa3808930ad2b7ead2588c784701c681dedb6"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9f843c224ddf6453fa516d39f4995bd298aa46d8ea0c96cac561747d14184b56"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "29959fb375f6e7fe8c7598a0d65372da60f57f7b38eb8827ab543aee19d5cb87"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "498820e0811ad362cd83cf36a1ccee13583f2ac1921754af69398ca956ac3544"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "00535580b439d8c098c19b9396dc29e8113c390428e4991c911d0bd8daf31f5d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9f6871c095c9106ac6600497e726efc9583567ac059122bb347dec0f0aace07d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "050ce082439b9f2979999fc6d8e3f383afaccb354166c122e24252a5f93d3b6a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c4c19203f6bb4567aa39c7d568e5fea217096a74811757c6376f52ea3ae38c0f"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ae63e2faa10f0a8eeaa86a354abfa3808930ad2b7ead2588c784701c681dedb6"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9f843c224ddf6453fa516d39f4995bd298aa46d8ea0c96cac561747d14184b56"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "29959fb375f6e7fe8c7598a0d65372da60f57f7b38eb8827ab543aee19d5cb87"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "498820e0811ad362cd83cf36a1ccee13583f2ac1921754af69398ca956ac3544"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "00535580b439d8c098c19b9396dc29e8113c390428e4991c911d0bd8daf31f5d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9f6871c095c9106ac6600497e726efc9583567ac059122bb347dec0f0aace07d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "050ce082439b9f2979999fc6d8e3f383afaccb354166c122e24252a5f93d3b6a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c4c19203f6bb4567aa39c7d568e5fea217096a74811757c6376f52ea3ae38c0f"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f64e430b805ecfd7ea024a2281100b281de33956d4a5d63b2ddcd49b04e9339c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "da76bbdb88f5dc0286f04e3f162f0c78fca25809c2869c7b4cb479aa8b882d8c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "369440a76f47c24a0940910a589572325f649597a13683815465791caed0c5c2"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7c04c1597557a0509a67345092f99e674a93285aa86015db5eeada67428fd86e"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3814181f7fe657066947da53918d34c0595d84c505b1b0576bc09bdc65d0cdf5"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c21dd71436594294097e52578f3f587d3d7aefe81c683709d5f9e83b6e345140"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "aba58444a8a14680ff12adbd99ee4855c70243b9335a406f8a67a4664c0a44e0"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "07e50bd40b55c3dd7cb0cf32ecccb49f02b4c23ef8d77f4e7546cd50996c430e"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f64e430b805ecfd7ea024a2281100b281de33956d4a5d63b2ddcd49b04e9339c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "da76bbdb88f5dc0286f04e3f162f0c78fca25809c2869c7b4cb479aa8b882d8c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "369440a76f47c24a0940910a589572325f649597a13683815465791caed0c5c2"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        265
+      ],
+      "final_physics": "274580c67b1bb0823b76a617581a95b7cebaa6ca6b82cfd4cbb58623fc3a6897"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3814181f7fe657066947da53918d34c0595d84c505b1b0576bc09bdc65d0cdf5"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c21dd71436594294097e52578f3f587d3d7aefe81c683709d5f9e83b6e345140"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "aba58444a8a14680ff12adbd99ee4855c70243b9335a406f8a67a4664c0a44e0"
+    },
+    {
+      "session": "drawer-1-2-k0-full-bottom.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "07e50bd40b55c3dd7cb0cf32ecccb49f02b4c23ef8d77f4e7546cd50996c430e"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fa5a2bdccf705d25370a57dec811072017eec18bc21683b393424fe9809430cf"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "18943f21a5d7489526afd8e816d740e1b246c6a169f80d1ae60933112e7f2049"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "420c0b183cfe116a54253f83aec4d3db517d4515e59b32b88bdceaeda3ee95e4"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "838400e365878bb53140b363ac99edbb2accf1cd6cb99d88b30e110b2fea4f76"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "07fbccf427f7ba61ed11fcf71ee39d34cf4fd2ae3521d1ea39ceb0b6a343aa7b"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5f0debff094f2a700ce4bb65368eccb8e3629858620f6237d077ec30ad5b373e"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fd3d79c0b01b48a038d45a4040aac283b9b4ccf9994ffdc699f332ef32e96df9"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d11f0877e56f245fb0536572d024ffc5c82be279c23cbaafc9ae4822a2e53c18"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        150
+      ],
+      "final_physics": "27be379d3edb80fafc59769ac5c3355a8099f68823bed759c47122a6e60fc898"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "18943f21a5d7489526afd8e816d740e1b246c6a169f80d1ae60933112e7f2049"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "420c0b183cfe116a54253f83aec4d3db517d4515e59b32b88bdceaeda3ee95e4"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "838400e365878bb53140b363ac99edbb2accf1cd6cb99d88b30e110b2fea4f76"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "07fbccf427f7ba61ed11fcf71ee39d34cf4fd2ae3521d1ea39ceb0b6a343aa7b"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5f0debff094f2a700ce4bb65368eccb8e3629858620f6237d077ec30ad5b373e"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fd3d79c0b01b48a038d45a4040aac283b9b4ccf9994ffdc699f332ef32e96df9"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d11f0877e56f245fb0536572d024ffc5c82be279c23cbaafc9ae4822a2e53c18"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "828d1260d5ded524823643059545800a7c46686d32bf1bb33e0dccef27ffa945"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c9ebf0600dff64f4bc10c537aa9ba6cb3d9d1e9f4badd5c21f8f705d8f209091"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f5df0b25e46536a9df11159bc6cbbaa63b620235bc45e1f3de63df8f86d6f20d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "471a744211a1741e1c3f578f6ccbb3f81962656ee8543e21086c8eac4c9494c6"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cfd0023bfcff80daf6583bcbb4dbd8d90d2942e5d8a222dc4d7c2641e8824d62"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a39ed709e5483eac0cb825c1be7e2001c3326a00f8e0caefce12c807bee8e819"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a0cc80a39666433b0230f0ae1d2218ca45ad2c3a8bae4310abd7701eeb086d1f"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "045d10288a9e9c373db3f2e437ffa3cf1ff317683967b12cd6d71c47ffca7528"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "828d1260d5ded524823643059545800a7c46686d32bf1bb33e0dccef27ffa945"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c9ebf0600dff64f4bc10c537aa9ba6cb3d9d1e9f4badd5c21f8f705d8f209091"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f5df0b25e46536a9df11159bc6cbbaa63b620235bc45e1f3de63df8f86d6f20d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "471a744211a1741e1c3f578f6ccbb3f81962656ee8543e21086c8eac4c9494c6"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cfd0023bfcff80daf6583bcbb4dbd8d90d2942e5d8a222dc4d7c2641e8824d62"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a39ed709e5483eac0cb825c1be7e2001c3326a00f8e0caefce12c807bee8e819"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a0cc80a39666433b0230f0ae1d2218ca45ad2c3a8bae4310abd7701eeb086d1f"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "045d10288a9e9c373db3f2e437ffa3cf1ff317683967b12cd6d71c47ffca7528"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3203980936b20552c850de8ac4efb023a28fbe6d91acda15b49b0f68dfc04253"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        490
+      ],
+      "final_physics": "01db526f7ea3676df80deaa467274a1184797610c74ce14d95361b41e71b5f6d"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "30baf7edc42c5eeecd8330571278a1e6aa2ae731539ea3143a5dd0fd394941f8"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "0b1377d590e492caee8b456dfce30651098bb2265b3d5d729a3516e5ce3de06c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "447524051c5f6ecbe66740dae1697b32d84ba35e25b8d959b5b124d45e4a1485"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1ad7391b0f525c7b3c59d706368190cd1e7ac11265c4ee922118b84b0c02fbf1"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a69bffe47673094be79e819d029d88fcdcb66705577eafd73dcdfdd326743b5a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a2a7944560aec5bafe7e6d6b88e3460d04d81ad59fd934c1fc9db37974a2d9c3"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3203980936b20552c850de8ac4efb023a28fbe6d91acda15b49b0f68dfc04253"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6d4290599c1c03cf884bb898fba61337db25f4bc54f410c62275b4ee8dbb4a6a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "30baf7edc42c5eeecd8330571278a1e6aa2ae731539ea3143a5dd0fd394941f8"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "0b1377d590e492caee8b456dfce30651098bb2265b3d5d729a3516e5ce3de06c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "447524051c5f6ecbe66740dae1697b32d84ba35e25b8d959b5b124d45e4a1485"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        150
+      ],
+      "final_physics": "7ce1ceffa8773b0232c35cd4011cd28e6bcb46c371c172b7feac287a779559c4"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a69bffe47673094be79e819d029d88fcdcb66705577eafd73dcdfdd326743b5a"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a2a7944560aec5bafe7e6d6b88e3460d04d81ad59fd934c1fc9db37974a2d9c3"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4e28b6aa0dd9e99472ef7cc291055a55eeb7d91b69d98812af4a8955e46dd1d1"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "857c1ab1ce451033e8f0a48ae53960c536d75821677f363d995bb19c612df22f"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "dc72238da7679757eb008c0fb778b804782b5c5b3e14886c9fcb80ef11e9738c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c7992418662bce5adeb1e69a402b7a6cd30e67bbf7656f96a7ea827f5ecc3432"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ad32e48a3bb9dc577e47315621ba0980d0d5e9f45471ff8636b932ecb9b3fc68"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2b5d2f1a30dab7271f402f864c3f20fbe97ef5cf97cc242ec7dfebf1a605e343"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "890b1386c3ec8c99389360ae9feff86643f5df3797e2600fe59059807b0091e2"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6d9941e38f6ae2ce37423605b6362f19d7ff693b6924f1193153b64e1d05abe0"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4e28b6aa0dd9e99472ef7cc291055a55eeb7d91b69d98812af4a8955e46dd1d1"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "857c1ab1ce451033e8f0a48ae53960c536d75821677f363d995bb19c612df22f"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "dc72238da7679757eb008c0fb778b804782b5c5b3e14886c9fcb80ef11e9738c"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c7992418662bce5adeb1e69a402b7a6cd30e67bbf7656f96a7ea827f5ecc3432"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ad32e48a3bb9dc577e47315621ba0980d0d5e9f45471ff8636b932ecb9b3fc68"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2b5d2f1a30dab7271f402f864c3f20fbe97ef5cf97cc242ec7dfebf1a605e343"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "890b1386c3ec8c99389360ae9feff86643f5df3797e2600fe59059807b0091e2"
+    },
+    {
+      "session": "drawer-1-2-k0-full-middle.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        105
+      ],
+      "final_physics": "c2925d6a191867a9dc7a990f91fc2ef05cb5e10ac482807a1961b70e971a2e0e"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2ab0c81fff11230e325512013b9f4a4481364a8c77f45e2e3a13967286b3b9cc"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "20c7392b540b7902e4871232bd6d93c3d10827b14c018a1e95e745c2ebb47e4c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b05bc6c7be3782cf5d901f5c359c0018a124f3ea23b6bf3ef1cd864fcb5b78c5"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d92af3487d05fb7c642a0d0653e9ff8e0e16900103a6dcd0e75e2d4309f3e52e"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        505
+      ],
+      "final_physics": "9d245ae107321bdd679038ae7675e0fc47006f54fdbaea436f5243db3c0ed182"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "181ecd70564427bb841dce6ef5b349536514bb1f88da3db7d997095515e61529"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7f4528035f78372a04ef3724412488bda41fa603f6b3fdc5fd78be1aae452c2e"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "774b7af50abc1a8fe5cceb9c49b5b7fd00584e57487f9c699467f6f689d85596"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2ab0c81fff11230e325512013b9f4a4481364a8c77f45e2e3a13967286b3b9cc"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "20c7392b540b7902e4871232bd6d93c3d10827b14c018a1e95e745c2ebb47e4c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b05bc6c7be3782cf5d901f5c359c0018a124f3ea23b6bf3ef1cd864fcb5b78c5"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d92af3487d05fb7c642a0d0653e9ff8e0e16900103a6dcd0e75e2d4309f3e52e"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "19d7bd16ea2260c7541aba91d68b640b6847eadd44bd79b9ca1411703cccfba4"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "181ecd70564427bb841dce6ef5b349536514bb1f88da3db7d997095515e61529"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7f4528035f78372a04ef3724412488bda41fa603f6b3fdc5fd78be1aae452c2e"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "774b7af50abc1a8fe5cceb9c49b5b7fd00584e57487f9c699467f6f689d85596"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cb100c9f68746de3d6a7b50bca59240e6760e9af1a8c21a83f6a30221efae1df"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8fc969097972a0b7a7df01f6d744e14e52e5b4969ce78e062d21373bd50cae54"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9d5583fba99190cfc08e7b3384f3b7d25519c7a31f68274c6ecc6d0085da38cc"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "793d159b59140c44e952ed6168fbe8b760e6365ad4fcc83b0d673996dd3baead"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2c92ca89b969231326b8d4c28c3be695ae5aa04795233af0a9956023d306fc13"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cd1d80af463d4f1a9600e200751ab3fc0120f9d8d43aa1b5a7c50f777f1e7a78"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2cb105a35189883de3ef25cb868b7549079f5aa165f7a5c2771ff7499773ffc6"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c96352a3aa1dc97368a804a4f069331f7e8a95c50a0c13aec630336b98597199"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cb100c9f68746de3d6a7b50bca59240e6760e9af1a8c21a83f6a30221efae1df"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8fc969097972a0b7a7df01f6d744e14e52e5b4969ce78e062d21373bd50cae54"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9d5583fba99190cfc08e7b3384f3b7d25519c7a31f68274c6ecc6d0085da38cc"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "793d159b59140c44e952ed6168fbe8b760e6365ad4fcc83b0d673996dd3baead"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2c92ca89b969231326b8d4c28c3be695ae5aa04795233af0a9956023d306fc13"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cd1d80af463d4f1a9600e200751ab3fc0120f9d8d43aa1b5a7c50f777f1e7a78"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2cb105a35189883de3ef25cb868b7549079f5aa165f7a5c2771ff7499773ffc6"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c96352a3aa1dc97368a804a4f069331f7e8a95c50a0c13aec630336b98597199"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a61700797c57acd5fa777f685948a31abdd15e41bbb6970122c1f4e7275b93ee"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1b304c1fcd2997253a4b0a6750c58543b9f993b9aa95f2110a019e742cecc6ca"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "045cad32d7651513aedc48578fae8accbe9898beb6660acc982453229628e0ed"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9dbbc891ef621306c835d4664e73350aaeb8f5c4b6dca5928f881bddcf328c94"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d2fce0fe3223d0cc445e416c42e36e9c496f84ca3b0d25dff596f32868457d5c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "99acc80a1d5416ac124e0f61b507b392995d970aa56906f450d3e791835d35ca"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8d4e1ac4f61d9af18aeb8a491f4f04eb0ff0c0aeba28e9429021ef359784bd19"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "21c0292e4ac35c929a6a3c43f56967fb20b8f5c003b77cc44a3fcad5bf7049d2"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a61700797c57acd5fa777f685948a31abdd15e41bbb6970122c1f4e7275b93ee"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1b304c1fcd2997253a4b0a6750c58543b9f993b9aa95f2110a019e742cecc6ca"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "045cad32d7651513aedc48578fae8accbe9898beb6660acc982453229628e0ed"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9dbbc891ef621306c835d4664e73350aaeb8f5c4b6dca5928f881bddcf328c94"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d2fce0fe3223d0cc445e416c42e36e9c496f84ca3b0d25dff596f32868457d5c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "99acc80a1d5416ac124e0f61b507b392995d970aa56906f450d3e791835d35ca"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8d4e1ac4f61d9af18aeb8a491f4f04eb0ff0c0aeba28e9429021ef359784bd19"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "21c0292e4ac35c929a6a3c43f56967fb20b8f5c003b77cc44a3fcad5bf7049d2"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8a4aead8a3c0da73edd8d60472969dd32cf87f90757e3403378dc96f844c7dab"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d9bfa9d7ff9967f1569382d3634fea6604af24a0484a7ebe922ae75374325d90"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8a82116f2809082e7f4667b1f2d72f884c2f4b5b0ea22718d521c09c07ce4198"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "125ed6ec96b56bd6a3e26b0b4b48af5bf3fed284f3a8a3546ff0d0e0707d6b0c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "90c20f2ad0378ced2c45dbb0acb7456ee9ae74c78f22b5ff44c39ed9a45c6cde"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "70ab4543b7205c5df1b59eda83aaf0313e4670692f87b54aeb836785df4fbd90"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5ef1dc1f7248459b583117d02a80c0806dd3e3483de5dc7c0be01bcf0a7ec7f7"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ea0e24ab989c26f9168e5c28bcea7bb7c4107c503c1029b85e4e47641c43c7a1"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8a4aead8a3c0da73edd8d60472969dd32cf87f90757e3403378dc96f844c7dab"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d9bfa9d7ff9967f1569382d3634fea6604af24a0484a7ebe922ae75374325d90"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8a82116f2809082e7f4667b1f2d72f884c2f4b5b0ea22718d521c09c07ce4198"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "125ed6ec96b56bd6a3e26b0b4b48af5bf3fed284f3a8a3546ff0d0e0707d6b0c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        295
+      ],
+      "final_physics": "d6849d955c7f10984596f717bc3593150a15055f57e3e5022a4a043d16095ccc"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "70ab4543b7205c5df1b59eda83aaf0313e4670692f87b54aeb836785df4fbd90"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5ef1dc1f7248459b583117d02a80c0806dd3e3483de5dc7c0be01bcf0a7ec7f7"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-bottom.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ea0e24ab989c26f9168e5c28bcea7bb7c4107c503c1029b85e4e47641c43c7a1"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ea6be0d27df80994dc98c60c6677c5c36de9836214c054f32f76b6931a3fa722"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f350e6a3ae4ef6e8487f8d3672ca94325529abeceec3c7a6b11b348725978853"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6a1289fba1bb8c3ed86f6d18f454c80bfb41080d59411de6a47d771e83970b77"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d6998f37152b3fc0dd1502e52afab0783ed3b045ac965e9303735629066b014c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "13da58461d0ecc6b97e300efa95ded64b5596d377073f14cec2b9e8316417256"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f39de5cb35d5d798b686f089c7a33f0a6d2dc018067516f06ce8556cba6c07ab"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "0eef91c96fbeb0aec71e9ab05a2144e2bc0ce2c580b8bc53570571e46b078e70"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "494c699fd13dab35d9cf797a5457682017726fd71c5997beef3e40f8b77be232"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ea6be0d27df80994dc98c60c6677c5c36de9836214c054f32f76b6931a3fa722"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f350e6a3ae4ef6e8487f8d3672ca94325529abeceec3c7a6b11b348725978853"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6a1289fba1bb8c3ed86f6d18f454c80bfb41080d59411de6a47d771e83970b77"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d6998f37152b3fc0dd1502e52afab0783ed3b045ac965e9303735629066b014c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "13da58461d0ecc6b97e300efa95ded64b5596d377073f14cec2b9e8316417256"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f39de5cb35d5d798b686f089c7a33f0a6d2dc018067516f06ce8556cba6c07ab"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "0eef91c96fbeb0aec71e9ab05a2144e2bc0ce2c580b8bc53570571e46b078e70"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "494c699fd13dab35d9cf797a5457682017726fd71c5997beef3e40f8b77be232"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c95eff764be2184f58539562650a2047f86ef28e4e476e10482e62add20b9b7a"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1d6643141e6868f9069f1a7201f592a7b438d9928c1ea810a9d7c71a3a9d646b"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "39e9e67461ce7d6a3d92cf50af68113338c87034608b0898167440c66807a706"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9868b642fdedc93cf128471cb2a771e9010d94437b2461a7936a8075f6289695"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "66fad3afd73153bee866f6da6e728104eb301f2188660a6e5dcaaf58262ee3c4"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "66b2ca6d945a98b9fec8d777cfe857f33bf6baafcf8c19f735a93c4ba02c6f6c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "486fccc1ab0f10ef66b74d3110a34792a8227c7c5fff01b2d3269ce6fd7059ef"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b316ee628e09e3510acb0dbd1240808b9104abfb8cb83ef033a9d46f9f28d5a2"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c95eff764be2184f58539562650a2047f86ef28e4e476e10482e62add20b9b7a"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1d6643141e6868f9069f1a7201f592a7b438d9928c1ea810a9d7c71a3a9d646b"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "39e9e67461ce7d6a3d92cf50af68113338c87034608b0898167440c66807a706"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9868b642fdedc93cf128471cb2a771e9010d94437b2461a7936a8075f6289695"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "66fad3afd73153bee866f6da6e728104eb301f2188660a6e5dcaaf58262ee3c4"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "66b2ca6d945a98b9fec8d777cfe857f33bf6baafcf8c19f735a93c4ba02c6f6c"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "486fccc1ab0f10ef66b74d3110a34792a8227c7c5fff01b2d3269ce6fd7059ef"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b316ee628e09e3510acb0dbd1240808b9104abfb8cb83ef033a9d46f9f28d5a2"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        475
+      ],
+      "final_physics": "6f883e6b13a407898a8a30d72c7337fe976794ec2ab36f0c946283a366b9ae18"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "31083db6d8a470daecd0751f978897d56416701a1d96d577bc509f9192ac47fa"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "75b723c8a7ac563cc917f163db202de221c8f9af1b30cdb91c37d39c2b19a99b"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "43e11b1e26329fe8010082c8d81b5a1d92018039a032b5ad81bdf907245901a9"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6903dc87b57d7f4396a07da29e783e506ff4eafd097b7f9836d24c1c530d87d3"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "73d14c25e632c3506768c4a0e296054ce65cf4d07f9329071d5eb2f43aabd119"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1d56ac57ec71efe06aa54074282a60981a240275dd55144c1d47337c15dfa4fe"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        70
+      ],
+      "final_physics": "b4e09e4a96beb75ba7e2553cb289aac98c1ef7af16ed7090ba8e2252f5bc6b53"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "047e66db419221d64eeda4eb57b609b067a5dcc64ec9ec8b2c916c6b74491c63"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "31083db6d8a470daecd0751f978897d56416701a1d96d577bc509f9192ac47fa"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        405,
+        420
+      ],
+      "final_physics": "e38c58cfc94da036f3a7032f4100af4345af873fda936f819a5841f43f9e025d"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "43e11b1e26329fe8010082c8d81b5a1d92018039a032b5ad81bdf907245901a9"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6903dc87b57d7f4396a07da29e783e506ff4eafd097b7f9836d24c1c530d87d3"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        455
+      ],
+      "final_physics": "16126b516c3bab8d61601430d64994b4e7330b296343a795046e432d3268a008"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1d56ac57ec71efe06aa54074282a60981a240275dd55144c1d47337c15dfa4fe"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "69074bed6f410ea913c8abc9c7af8a4f887e15404c97eee2db003f9733b64c12"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9390a6237452a753841a50db383b03729dde5df3b86d8a08a586cfc67f61e1f3"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e4d3dea37ca43aa210df07e9ae012555e5e8be46becf296ecd5bf82db348dabf"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fd13a87a128654c68cf2e383e7070f14ccf0cab14d5d7212b872e215313531f9"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8eea64f3ee3a69e3e5e78db684c1a153df6970edb46525712bf086f44b0000f4"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2a7da294313920e8358d832e4956496a4d641358271e1c459fbb1b23a65bc4c9"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1986e2e06280818f848dfd4976091eadaaf1d48ae4aa7807178176adbc3a3e2b"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d7277ce86f5cc9914ccdd6a0ac391a6a0909188facd0e048ff00d09e17c7a060"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "39119da09873976a298fc6c9d8c8ad10886ad153d5286d3c168d329cbea716c8"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9390a6237452a753841a50db383b03729dde5df3b86d8a08a586cfc67f61e1f3"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e4d3dea37ca43aa210df07e9ae012555e5e8be46becf296ecd5bf82db348dabf"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fd13a87a128654c68cf2e383e7070f14ccf0cab14d5d7212b872e215313531f9"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8eea64f3ee3a69e3e5e78db684c1a153df6970edb46525712bf086f44b0000f4"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        355
+      ],
+      "final_physics": "055ca07483ff85733d4b4bb510acd0574758070c6ff07219a739bc421ce7ece3"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1986e2e06280818f848dfd4976091eadaaf1d48ae4aa7807178176adbc3a3e2b"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d7277ce86f5cc9914ccdd6a0ac391a6a0909188facd0e048ff00d09e17c7a060"
+    },
+    {
+      "session": "drawer-1-2-k0-narrow-middle.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "39119da09873976a298fc6c9d8c8ad10886ad153d5286d3c168d329cbea716c8"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9e65e98495ba665e21508d0168f0bd1f229e36f538c4e105b5d5bd8daf557385"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9e5de8264c14550c0e56812b35c106fa6159689667fab8ba80a6c92805b954ed"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        120
+      ],
+      "final_physics": "77b693303f9e61e070c19954506c7103e4f9fb83244abd22934621a8a7fe43cf"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "640e3dbe59913229d55980f3e4dad51d2b513936df36a4d4e800b93d6931e8a3"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "01992df1f96ef5e99057e1c7fb944c7bd82b08bdbc19fe621004378a73a21f6a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a54ce290b471fc34e89a54ae6c3e7fe26495e7cfe8e21932462d10186b49c2b0"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b12b1f5aad3badfdec84568e633a6781347ab3fbd6f4c7e6a6781f9e4c2fa6bc"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7a387cdc614be13ab237a1797187da1e68b90640d4b8fc17baf79394e172d046"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9e65e98495ba665e21508d0168f0bd1f229e36f538c4e105b5d5bd8daf557385"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9e5de8264c14550c0e56812b35c106fa6159689667fab8ba80a6c92805b954ed"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "77b693303f9e61e070c19954506c7103e4f9fb83244abd22934621a8a7fe43cf"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "640e3dbe59913229d55980f3e4dad51d2b513936df36a4d4e800b93d6931e8a3"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "01992df1f96ef5e99057e1c7fb944c7bd82b08bdbc19fe621004378a73a21f6a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a54ce290b471fc34e89a54ae6c3e7fe26495e7cfe8e21932462d10186b49c2b0"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b12b1f5aad3badfdec84568e633a6781347ab3fbd6f4c7e6a6781f9e4c2fa6bc"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7a387cdc614be13ab237a1797187da1e68b90640d4b8fc17baf79394e172d046"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e2dbf3bc770302e3ca9cf955e9144f0556d14c5edf085cd9758e971f831b8f4e"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cf549ed0fc63c7e127cf7a0077b49d72fbf3267b939aea214d43ace43090322a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        475
+      ],
+      "final_physics": "b73e019eba94310a69c158d7add86f377d50115303579b708dcdbd3415cd0237"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fc9a5c79f1429ffcb2ec7677d15248b89693ef7a9d0b4e8c03853726ed73b280"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "08182daace3b3f05629265b00fd1bab852d1be08a287cb3f392d88d051f4f78d"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2e339768d63fdc23e17209bd1eef424537311cf6730b8355b9dbb3b51bfeea82"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "76ca7b639e70f2a6d0363abd8f12c33eb1be0badb4fab8f2ff439fafacfa77a9"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e3dc1329272b581998b08bb75a36c56b849bec0a71f0e55c04c4975d32165c6a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e2dbf3bc770302e3ca9cf955e9144f0556d14c5edf085cd9758e971f831b8f4e"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "cf549ed0fc63c7e127cf7a0077b49d72fbf3267b939aea214d43ace43090322a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "684a8b28a2b31cd4a2cbbf88026b1dac7120293cad98c4bcb01fbdaf338d7864"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        520
+      ],
+      "final_physics": "fc9a5c79f1429ffcb2ec7677d15248b89693ef7a9d0b4e8c03853726ed73b280"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "08182daace3b3f05629265b00fd1bab852d1be08a287cb3f392d88d051f4f78d"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2e339768d63fdc23e17209bd1eef424537311cf6730b8355b9dbb3b51bfeea82"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        125
+      ],
+      "final_physics": "76ca7b639e70f2a6d0363abd8f12c33eb1be0badb4fab8f2ff439fafacfa77a9"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e3dc1329272b581998b08bb75a36c56b849bec0a71f0e55c04c4975d32165c6a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9eabe0a22fc73bc95bb7eaf8520a83b2bdc373f8c6833b54516edf2852e19832"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "501f29231082dc7df2d2305f87f39932e48e4fac4007cbc78f929df7b88aecfb"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2c20203d0974518689e4700fa4b61ed1311627d5fd957c2e628769543f955299"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ca43d101f9129c63321ab38b91d62f52dae69a192fd54e4c7c9856e2c2370788"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "90b29dd811a59cca85f06d31bf9e387ab4e84e924ff899546cb9a2accc694285"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9c5827a860d5b744bdd627996a945580f3c75d3b0b491d809ad1aa8b2e7b075a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6c582f63b6978f2b3229507eac0f1ed99dc5d7a4de413a42aa58c09b9ccfa217"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b0e93fe6428f19d539d34b44d65db8a70512c5826c21c559693ee731114f6cc4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9eabe0a22fc73bc95bb7eaf8520a83b2bdc373f8c6833b54516edf2852e19832"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "501f29231082dc7df2d2305f87f39932e48e4fac4007cbc78f929df7b88aecfb"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2c20203d0974518689e4700fa4b61ed1311627d5fd957c2e628769543f955299"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ca43d101f9129c63321ab38b91d62f52dae69a192fd54e4c7c9856e2c2370788"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "90b29dd811a59cca85f06d31bf9e387ab4e84e924ff899546cb9a2accc694285"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9c5827a860d5b744bdd627996a945580f3c75d3b0b491d809ad1aa8b2e7b075a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6c582f63b6978f2b3229507eac0f1ed99dc5d7a4de413a42aa58c09b9ccfa217"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b0e93fe6428f19d539d34b44d65db8a70512c5826c21c559693ee731114f6cc4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6500507411f8b6486ccfb376c365dc2d20bffcaf302f2d59b691dc702c37c9d9"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5ddafff1a295ff21973f680a85265311b69ff561ea025a04002229a88c0651cc"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9af0c6725d1e0cbfa84b8c5f4f4550ee31133828eb2ad8f11c3e34e35e710e21"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4debd9e63bd27e3b33052b614f676edfc121a86f99e33810dd18d5bd38ed586c"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1ce98c7b9630a68d74e5da16d423033ac2e403d543f5a7a45214b0c5dddcdaac"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "06f2849464af505b70072ac0d2b025e9c112d028101b66b3475be91791157f3b"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "285d8638d1609766730c8fafc2e1adc8a9cad668b0958afcea73a26294dbc140"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b9ef9398cf663904df116205023f4cfc39ac98fa2d9668c67c58b4d7dcdd5fd7"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6500507411f8b6486ccfb376c365dc2d20bffcaf302f2d59b691dc702c37c9d9"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5ddafff1a295ff21973f680a85265311b69ff561ea025a04002229a88c0651cc"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9af0c6725d1e0cbfa84b8c5f4f4550ee31133828eb2ad8f11c3e34e35e710e21"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        355
+      ],
+      "final_physics": "4debd9e63bd27e3b33052b614f676edfc121a86f99e33810dd18d5bd38ed586c"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1ce98c7b9630a68d74e5da16d423033ac2e403d543f5a7a45214b0c5dddcdaac"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "06f2849464af505b70072ac0d2b025e9c112d028101b66b3475be91791157f3b"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "285d8638d1609766730c8fafc2e1adc8a9cad668b0958afcea73a26294dbc140"
+    },
+    {
+      "session": "drawer-1-2-k1-full-bottom.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b9ef9398cf663904df116205023f4cfc39ac98fa2d9668c67c58b4d7dcdd5fd7"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "98c0500c321c6dce951b2054ceb0ca33419cb69c390116c7bb8ff049ca9a00b2"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8b8b60386c4be5a53e4aa7b9a6ad76260cec51f4b12fe7a80be762310bdc33cd"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "bac86ebfc78bdf8be032a07129a741c8b6d83d0716073b32bcdca3d049d25afc"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a38fd73376519a3220a158ff04ec67dbd19d004475a4a0a331e6272935b72d2a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "abc364c877ba0a0156a101f0dcf9d357b9f6b19413a786dba15b9651d35fea5f"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e77c5181c16c415084a785cec40f5a45e580bcb25859b4a178ff49621945b52b"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "91208555761a096d38eb078cb90abf1abc202ea0b26521022520f3397b1972f5"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "214f7f0a132374944bc6a4e05902d30e30799a0467e214791385f45190d81530"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "98c0500c321c6dce951b2054ceb0ca33419cb69c390116c7bb8ff049ca9a00b2"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8b8b60386c4be5a53e4aa7b9a6ad76260cec51f4b12fe7a80be762310bdc33cd"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "bac86ebfc78bdf8be032a07129a741c8b6d83d0716073b32bcdca3d049d25afc"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a38fd73376519a3220a158ff04ec67dbd19d004475a4a0a331e6272935b72d2a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "abc364c877ba0a0156a101f0dcf9d357b9f6b19413a786dba15b9651d35fea5f"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e77c5181c16c415084a785cec40f5a45e580bcb25859b4a178ff49621945b52b"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "91208555761a096d38eb078cb90abf1abc202ea0b26521022520f3397b1972f5"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "214f7f0a132374944bc6a4e05902d30e30799a0467e214791385f45190d81530"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e335b2871dcc812e87c022cb90ef3a0071276421886e909bee86f4baf376b2b4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c0810543f93a51a18bb1a5babc080154ea2448ca469e7e021db306188703b0ac"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c410a5207201918d8448c12c2840eda2c44c971ad870935009ddcd74aef2d4bf"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "eaabf01e4ceca0017df11d43a020af8fba27e900550f31f43ece3f6567833919"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "188392b253d9bd7713f942ecf15b2c17b62f16d885c4344519574e41a8d34cc3"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9596dcf1c6b8597f118ea5a47413cf79f124a170c2e66e98209f65f22fd565af"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4b2c3adee347f22cd8453920b04adc8537a5f4f8e681ffa3589ac1096a3e9c62"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "88016b113f643d56c85c52ca6f30c39723035bba909611dad8ac7b6be4924bf5"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e335b2871dcc812e87c022cb90ef3a0071276421886e909bee86f4baf376b2b4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c0810543f93a51a18bb1a5babc080154ea2448ca469e7e021db306188703b0ac"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        335
+      ],
+      "final_physics": "c410a5207201918d8448c12c2840eda2c44c971ad870935009ddcd74aef2d4bf"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "eaabf01e4ceca0017df11d43a020af8fba27e900550f31f43ece3f6567833919"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "188392b253d9bd7713f942ecf15b2c17b62f16d885c4344519574e41a8d34cc3"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "9596dcf1c6b8597f118ea5a47413cf79f124a170c2e66e98209f65f22fd565af"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4b2c3adee347f22cd8453920b04adc8537a5f4f8e681ffa3589ac1096a3e9c62"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "88016b113f643d56c85c52ca6f30c39723035bba909611dad8ac7b6be4924bf5"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "084cd1981faa7c28f7847417f51f82ee927cba8221dfe093f9b8ded69a58c836"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6a7de646453defc92f25557dfba5b56e568ffa991d386e26508c4f84d7ab5be3"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "35ab5a761c178389cb226269b433ed3657fe3f0da554ba813bb7a7775e0dc0ce"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "06a91ea8a0952536b14a81f9fd915691111ed02b5e93142dda0483b3dd0a3c9b"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b2277ed00742ddbe1794ce9e3fdfe2e6016a7fed16f46b452f853058ffb0912f"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        130
+      ],
+      "final_physics": "b4d10a5744a10d04608137a6475c7a0ad6e04ec910ebd606bee9e39a11c9e55e"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b49ed88b3d865d70c5c0ef3117731955927742e5ebef1510c3f6c8368e694829"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "704a76352fbbb2dbfc9c42b805ba219d63bccae603e4d69e7ca5be38c836eed4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "084cd1981faa7c28f7847417f51f82ee927cba8221dfe093f9b8ded69a58c836"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "6a7de646453defc92f25557dfba5b56e568ffa991d386e26508c4f84d7ab5be3"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "35ab5a761c178389cb226269b433ed3657fe3f0da554ba813bb7a7775e0dc0ce"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "06a91ea8a0952536b14a81f9fd915691111ed02b5e93142dda0483b3dd0a3c9b"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b2277ed00742ddbe1794ce9e3fdfe2e6016a7fed16f46b452f853058ffb0912f"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b4d10a5744a10d04608137a6475c7a0ad6e04ec910ebd606bee9e39a11c9e55e"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b49ed88b3d865d70c5c0ef3117731955927742e5ebef1510c3f6c8368e694829"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "704a76352fbbb2dbfc9c42b805ba219d63bccae603e4d69e7ca5be38c836eed4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "89e46926e96f51c0bd35845354a0fd290700b67fef7fe18b7e4859818aa1c645"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "916a795daac2cacfcaa37faa95265b5cdca854cf43a950e967660dd9855b76d4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7c696eff802a37eb94340b921ca13ea9a4bb86d8fcacd91d5a04e81dde5de0b1"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5815513d543886d76b4a42b8063aa6e79e54289d07484d20832d82d2f183d476"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e7041940d7845588753d1ff7d6dc48b38d09d00cbc80b05a059956fa4d53871a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d6141f2f6848be8e670189e5f4c9b88e8d947f02358145da1cd76f0c1eadb4ce"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "71fdbd84af5adfbf572988e87c2f9727a1bb4fa360a25b4204c8b1e58a4f3ce9"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a3091d580386d333219368a072cb491f538727720d3f032f8332fadd53313cab"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "89e46926e96f51c0bd35845354a0fd290700b67fef7fe18b7e4859818aa1c645"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "916a795daac2cacfcaa37faa95265b5cdca854cf43a950e967660dd9855b76d4"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7c696eff802a37eb94340b921ca13ea9a4bb86d8fcacd91d5a04e81dde5de0b1"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5815513d543886d76b4a42b8063aa6e79e54289d07484d20832d82d2f183d476"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "e7041940d7845588753d1ff7d6dc48b38d09d00cbc80b05a059956fa4d53871a"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d6141f2f6848be8e670189e5f4c9b88e8d947f02358145da1cd76f0c1eadb4ce"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "71fdbd84af5adfbf572988e87c2f9727a1bb4fa360a25b4204c8b1e58a4f3ce9"
+    },
+    {
+      "session": "drawer-1-2-k1-full-middle.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a3091d580386d333219368a072cb491f538727720d3f032f8332fadd53313cab"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "082cbd00b49a655368969875bc2557ab8c09c73e6e5b4ac7cfa3aa955e452ea2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8bc937efd8a151f307628ea9ccf77c520645ca787505624e3d0ea43b60e855de"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "834b5a03d4607976a601240d1fde9d3fb59d0dab5c33d9e541f70f03a0a87aca"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "bb7f25571674e50eca957a064e43702ea08b3db8587f61bc54fa7b20e4b6de98"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "09f677dd948891d7b771922f192e158822b82580f5269ad4087b0e5f7640cc0a"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "149fa3ac0cfd133aa6d2b0cb92bc3e232cf2c378581c1a07612b7fbce5e2b6ef"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fddf75cb981d5b06d16a1cf3f7f005325812c9d9a1e39b741c33e4b60e2d7aa5"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "0fe7faa7dd3b1d750b991f71b54c8a2b2ba04f85d8d67555e8d6686db6e34bf2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "082cbd00b49a655368969875bc2557ab8c09c73e6e5b4ac7cfa3aa955e452ea2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8bc937efd8a151f307628ea9ccf77c520645ca787505624e3d0ea43b60e855de"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "834b5a03d4607976a601240d1fde9d3fb59d0dab5c33d9e541f70f03a0a87aca"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "bb7f25571674e50eca957a064e43702ea08b3db8587f61bc54fa7b20e4b6de98"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "09f677dd948891d7b771922f192e158822b82580f5269ad4087b0e5f7640cc0a"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "149fa3ac0cfd133aa6d2b0cb92bc3e232cf2c378581c1a07612b7fbce5e2b6ef"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fddf75cb981d5b06d16a1cf3f7f005325812c9d9a1e39b741c33e4b60e2d7aa5"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "0fe7faa7dd3b1d750b991f71b54c8a2b2ba04f85d8d67555e8d6686db6e34bf2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d34954986868d0c51324e45b8e683cdfcf52128d6542b764afa0e65e0de614d2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1af7bab7013a3b8c6b9a8d640bc2b1d67c09d64b8406a4ec7d0e342da7af488f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4aeca82dc4ed098058e67114fe2ac082415d40a106f379874d3193b33c44c872"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "37bc72700d54bb6438c28fef2ab0df492e89773193764599a131476cd9ca8c8c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d6e56ba862a8a30591ec0da7192559379b6febff27ba24d78706f9987981986c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5cc5c1d08c66efb6846606df861ad2555c34e9eab2fbbb41ae81b5a5d5722d39"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        325
+      ],
+      "final_physics": "96021a7119c3c0bffcbe9360c82b10279afe1649362e10b959b5f486562376a8"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2ed99da1f0da079d3d650cf919d49dc9e6dc4210b7da7eaa98b75a2399a033cb"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d34954986868d0c51324e45b8e683cdfcf52128d6542b764afa0e65e0de614d2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1af7bab7013a3b8c6b9a8d640bc2b1d67c09d64b8406a4ec7d0e342da7af488f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4aeca82dc4ed098058e67114fe2ac082415d40a106f379874d3193b33c44c872"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "37bc72700d54bb6438c28fef2ab0df492e89773193764599a131476cd9ca8c8c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "d6e56ba862a8a30591ec0da7192559379b6febff27ba24d78706f9987981986c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5cc5c1d08c66efb6846606df861ad2555c34e9eab2fbbb41ae81b5a5d5722d39"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "72c7d10f3a10f369a6830240f12ec584a61e7eaa41e5f5c7ba551dd1e86f1df9"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2ed99da1f0da079d3d650cf919d49dc9e6dc4210b7da7eaa98b75a2399a033cb"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a2e7e69963940e1aff3084de14f1c857bb543ffcaf5d5ec3c87baf591bc1a78c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f0a9d8d5dd9f350762ab9748be88bd2c52663a3443a9638f3058dbf73da68d0e"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "48634c22fe05dcaacffb0810b0a30104e9f8f1c4ab7aa15c8409362df1c3508d"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ce43909ee8c64efaa0eaa3b8a89ba5bbdba94b4f12c525a5862aab120b9da5d3"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c9d6273b8beadcd1954630084263ff317a356aa2284ceb555a554508a77d7fd8"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a1f05a4baaaff32146c746b75173e9a1ad0b466aa94b1844fd8286408a46151b"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        160
+      ],
+      "final_physics": "918cea330c08943f1bd6fba17aad4a8dea73717c842a424f7374fb61e8b3ea3d"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1310a7ebbec11278a52de2325583c6fd971f3453aa7c3970b6df3b328034395f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a2e7e69963940e1aff3084de14f1c857bb543ffcaf5d5ec3c87baf591bc1a78c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "f0a9d8d5dd9f350762ab9748be88bd2c52663a3443a9638f3058dbf73da68d0e"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        285
+      ],
+      "final_physics": "48634c22fe05dcaacffb0810b0a30104e9f8f1c4ab7aa15c8409362df1c3508d"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ce43909ee8c64efaa0eaa3b8a89ba5bbdba94b4f12c525a5862aab120b9da5d3"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c9d6273b8beadcd1954630084263ff317a356aa2284ceb555a554508a77d7fd8"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a1f05a4baaaff32146c746b75173e9a1ad0b466aa94b1844fd8286408a46151b"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "7e4d69817e2dd2fbc2febf5b8b151c72b7cfe6859e0f5d5656046b55e4f2be97"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "1310a7ebbec11278a52de2325583c6fd971f3453aa7c3970b6df3b328034395f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8497fb83e4497a7b8003d340586eb57cf30dc61276e519a801fa12408dac32e2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ca12191643d520c4990ac6188bc3cc977dc267d28b3e1c438d6113cdf6ee6629"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b4b75caa112fa6357ce3cf32b7b01047f40522016e04f8f297b9cc8ecdbfba31"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c53e6f54bf31511fba2d5efc124a99c8821196f0e0554056604236a570b2070f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3cfb19560c11d48fca0921906f38ec917dc78de2ef4d40ed7370ef9f330f452f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "59eedd3de801b39710b8e01958c1dcc6182b6a6b0e12172a89e53a82273d644c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ca1fa8c203406e695ac2bdefa7f4d37e103c7b7a2f10a5b1170d375df98adb00"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5c8a14bf5cce2273ed4eed394691fbde8749b8bc4a95b80fcba2723124420c88"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "8497fb83e4497a7b8003d340586eb57cf30dc61276e519a801fa12408dac32e2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ca12191643d520c4990ac6188bc3cc977dc267d28b3e1c438d6113cdf6ee6629"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b4b75caa112fa6357ce3cf32b7b01047f40522016e04f8f297b9cc8ecdbfba31"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c53e6f54bf31511fba2d5efc124a99c8821196f0e0554056604236a570b2070f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3cfb19560c11d48fca0921906f38ec917dc78de2ef4d40ed7370ef9f330f452f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "59eedd3de801b39710b8e01958c1dcc6182b6a6b0e12172a89e53a82273d644c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ca1fa8c203406e695ac2bdefa7f4d37e103c7b7a2f10a5b1170d375df98adb00"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-bottom.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "5c8a14bf5cce2273ed4eed394691fbde8749b8bc4a95b80fcba2723124420c88"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "98551b4c97b4da97023459d9d732e9cc38a26e165af04436c9e3cda6eeabd382"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "640ca382d2eadb51def0767f6c02a125c63a07f5e8188bcd0f439a8dd12c7ec9"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c066d196c210aaf5283b08077bb410b0deddb58d327438f6c968ee195619bb69"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b7fed96b47877cd0465d6ba32b99244dbac3a1f5e82d819c2c0d1ea020cc05f1"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "63e73d399094427800a1a9f9a6f3c7fb64a924b4a0ba32961526de5d392eb29c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "10a5bbf7d213b4621d90e8f826921835497b5d4f71234bfcbe5e647dd2343357"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "26623f43c61cc03560605d95909faf99492dd5b2d5f56299859042c110a94a6e"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "db25ac20fe186005444c254616ae55eeec203fea1df06c1b1639c8206d5d28d2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "98551b4c97b4da97023459d9d732e9cc38a26e165af04436c9e3cda6eeabd382"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "640ca382d2eadb51def0767f6c02a125c63a07f5e8188bcd0f439a8dd12c7ec9"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c066d196c210aaf5283b08077bb410b0deddb58d327438f6c968ee195619bb69"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "b7fed96b47877cd0465d6ba32b99244dbac3a1f5e82d819c2c0d1ea020cc05f1"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "63e73d399094427800a1a9f9a6f3c7fb64a924b4a0ba32961526de5d392eb29c"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "10a5bbf7d213b4621d90e8f826921835497b5d4f71234bfcbe5e647dd2343357"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "26623f43c61cc03560605d95909faf99492dd5b2d5f56299859042c110a94a6e"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.early-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "db25ac20fe186005444c254616ae55eeec203fea1df06c1b1639c8206d5d28d2"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c572c3d0d1cc72951471442ba33657c84e208902d9210f78b87ce0c3299edc62"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3b4184d60b2208a4d2128daf2328dc81f60e7d9cab1024ed9c6411270d171677"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2e731a7ec2fedf8f639830cad235718f8a240db14ecf1d374dd6a51d991da161"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4fc998adebabe53f351241d8cd7720d766bba70a31fa7536f1e6d7b365bd0efb"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "981ba5aa40f88e2f37a7c2f2b1fc652a0277aefc886495f9d94f7ce57c29f68b"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "27a54642394633482ae9097e3be26f8aca8d7e9b8a62577889f6b6a0258b15ba"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a648446dca34b7551c0542c2ee8115879cb1864152540454d9e96dfe90c7c088"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2faa372f7e0b6d0207f4eddbdce1ed16560cdac15075d366ce84b3bd4f7a4482"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "c572c3d0d1cc72951471442ba33657c84e208902d9210f78b87ce0c3299edc62"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "3b4184d60b2208a4d2128daf2328dc81f60e7d9cab1024ed9c6411270d171677"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2e731a7ec2fedf8f639830cad235718f8a240db14ecf1d374dd6a51d991da161"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4fc998adebabe53f351241d8cd7720d766bba70a31fa7536f1e6d7b365bd0efb"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "981ba5aa40f88e2f37a7c2f2b1fc652a0277aefc886495f9d94f7ce57c29f68b"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "27a54642394633482ae9097e3be26f8aca8d7e9b8a62577889f6b6a0258b15ba"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "a648446dca34b7551c0542c2ee8115879cb1864152540454d9e96dfe90c7c088"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.four-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2faa372f7e0b6d0207f4eddbdce1ed16560cdac15075d366ce84b3bd4f7a4482"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "033f4f261758aa25b3e4ce9c55e3fdf6a1574aa3e3f7911ab2136c6ce16923cf"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "01959195ec08560decaed6e1fdf8c13efeadb491934fec586479472938e1efa8"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4caba13c5600c5f8f0e30f4709fd6cbfbbfa34044bc37d07521bdd6269c6f1a7"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "202529899b99838313f4cddfa48cdb7ae7e81897dd8fa8ee48f12f34cd0fd495"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ab2c0cad76884007582debb7bacaa2eda34d852ebd5e8bde6720beac2595d0f6"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "963169d6fc2f5633e09051b4a990f14639f53a7a0f3f30f537c670f13d9fa348"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fc8f11a63760d322c98b72747aebdf6d767b7e7992814c489660e5ae9332af97"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "91bfb988eb9fff2cab25800127f7f532f7d89595fb39d9126f62ba964a8e273f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "033f4f261758aa25b3e4ce9c55e3fdf6a1574aa3e3f7911ab2136c6ce16923cf"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "01959195ec08560decaed6e1fdf8c13efeadb491934fec586479472938e1efa8"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [
+        575
+      ],
+      "final_physics": "9b9ee843ff8d643a12b3e353bb59d8a91eec991ff0e022e6003902a7be60cd4b"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "202529899b99838313f4cddfa48cdb7ae7e81897dd8fa8ee48f12f34cd0fd495"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "ab2c0cad76884007582debb7bacaa2eda34d852ebd5e8bde6720beac2595d0f6"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "963169d6fc2f5633e09051b4a990f14639f53a7a0f3f30f537c670f13d9fa348"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "fc8f11a63760d322c98b72747aebdf6d767b7e7992814c489660e5ae9332af97"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.late-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "91bfb988eb9fff2cab25800127f7f532f7d89595fb39d9126f62ba964a8e273f"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4034c315f8a3321fc642a87cbbca2ad7080602a0c6a30ff6a36dab67e662065b"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4d6082128ae5e0a46f908de4ee0d2481798dc8209468e90770c6f9050031d419"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "dc519b890ad5de0ae8f806976dfaed32e3911f8e385ef772a9e73b9b50a0d54a"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2685dfb5fc2066e2aea117f2dc0ab75bd8d33aa9ee23c97283611c0180ca9b1a"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2471614eaba7a09ba6c5b629b80631c8df8b1e71077b22d79c8431b746938ce4"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "97a2d98e8665965099d0f172f71995de53c65b0c273541496c8f5ed49ecef423"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4b779b718a59d702b6c1d01ac6b8ed65c7f57ded69d28e1127136f6986368cd7"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b1-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "613df0b966776eb14453b6da5428afd0d2b654c90492683df0129d929af7ef3e"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s0",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4034c315f8a3321fc642a87cbbca2ad7080602a0c6a30ff6a36dab67e662065b"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s1",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4d6082128ae5e0a46f908de4ee0d2481798dc8209468e90770c6f9050031d419"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s2",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "dc519b890ad5de0ae8f806976dfaed32e3911f8e385ef772a9e73b9b50a0d54a"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s3",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2685dfb5fc2066e2aea117f2dc0ab75bd8d33aa9ee23c97283611c0180ca9b1a"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s4",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "2471614eaba7a09ba6c5b629b80631c8df8b1e71077b22d79c8431b746938ce4"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s5",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "97a2d98e8665965099d0f172f71995de53c65b0c273541496c8f5ed49ecef423"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s6",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "4b779b718a59d702b6c1d01ac6b8ed65c7f57ded69d28e1127136f6986368cd7"
+    },
+    {
+      "session": "drawer-1-2-k1-narrow-middle.self-b2-s7",
+      "prefix_controls": 160,
+      "lead": 60,
+      "policy_controls": 540,
+      "observations": 108,
+      "changed_rgb_ticks": [],
+      "final_physics": "613df0b966776eb14453b6da5428afd0d2b654c90492683df0129d929af7ef3e"
+    }
+  ],
+  "total_controls": 307200,
+  "prefix_controls": 81920,
+  "archive_repeat": {
+    "source_zip_sha256": "f2e3116738c939ec36a821d81d716eb69e4c0832190f27e519142627556140f0",
+    "repeat_report_digest": "533d157eeff4e3ad39e0ef409545161c7b3cca80585f22701404a11beaaae4a1",
+    "rerender_overrides": {
+      "drawer-1-2-k0-full-bottom.four-b1-s6": [
+        140
+      ],
+      "drawer-1-2-k0-full-bottom.four-b2-s6": [
+        330
+      ],
+      "drawer-1-2-k0-full-middle.early-b1-s0": [
+        150
+      ],
+      "drawer-1-2-k0-full-middle.early-b1-s7": [
+        100
+      ],
+      "drawer-1-2-k0-full-middle.four-b2-s0": [
+        330
+      ],
+      "drawer-1-2-k0-full-middle.late-b1-s5": [
+        155
+      ],
+      "drawer-1-2-k0-full-middle.late-b2-s5": [
+        150,
+        205
+      ],
+      "drawer-1-2-k0-full-middle.self-b2-s0": [
+        270
+      ],
+      "drawer-1-2-k0-narrow-middle.early-b2-s4": [
+        315
+      ],
+      "drawer-1-2-k0-narrow-middle.late-b1-s2": [
+        405,
+        410,
+        415,
+        420,
+        430,
+        435,
+        440
+      ],
+      "drawer-1-2-k0-narrow-middle.late-b2-s2": [
+        410,
+        420,
+        425
+      ],
+      "drawer-1-2-k0-narrow-middle.late-b2-s6": [
+        70
+      ],
+      "drawer-1-2-k1-full-bottom.early-b1-s2": [],
+      "drawer-1-2-k1-full-bottom.early-b2-s7": [
+        305
+      ],
+      "drawer-1-2-k1-full-bottom.four-b1-s7": [
+        455
+      ],
+      "drawer-1-2-k1-full-bottom.four-b2-s3": [],
+      "drawer-1-2-k1-full-bottom.four-b2-s6": [],
+      "drawer-1-2-k1-full-bottom.self-b2-s0": [
+        295
+      ],
+      "drawer-1-2-k1-full-bottom.self-b2-s3": [],
+      "drawer-1-2-k1-full-middle.four-b2-s5": [
+        585
+      ],
+      "drawer-1-2-k1-full-middle.late-b1-s5": [],
+      "drawer-1-2-k1-full-middle.late-b2-s6": [
+        120
+      ],
+      "drawer-1-2-k1-full-middle.late-b2-s7": [
+        240
+      ],
+      "drawer-1-2-k1-narrow-bottom.four-b2-s5": [
+        295
+      ],
+      "drawer-1-2-k1-narrow-bottom.four-b2-s7": [
+        590
+      ],
+      "drawer-1-2-k1-narrow-bottom.late-b2-s2": [],
+      "drawer-1-2-k1-narrow-middle.four-b2-s3": [
+        150
+      ]
+    }
+  }
+}
