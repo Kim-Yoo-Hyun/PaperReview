@@ -1,0 +1,18 @@
+{
+  "question": "Does exchanging only the initial bowl XY between layouts 2 and 3 transfer the late visual effect on first gripper contact with the fully open bottom drawer?",
+  "parent": "results/2026-11-26-drawer-view-window-layout3/study.zip",
+  "parent_sha256": "b899a2fe0f8c2810246b56c8f0e9799a06b921e8a811ed0dac0164013b16795c",
+  "parent_verification_sha256": "2b38f720db88b919e15dd9fb460de7f4c1c41df6a456c3dedbf4b6a588a15a03",
+  "layout2_parent": "results/2026-11-26-drawer-view-window/study.zip",
+  "layout2_parent_sha256": "f2e3116738c939ec36a821d81d716eb69e4c0832190f27e519142627556140f0",
+  "layout2_parent_verification_sha256": "821f0610a6d22ff224fd1b393d2a83dcf565797b77a7be27ad0b3ff7b5ee9c3a",
+  "rng_sha256": "bb4ce793ca07d6d2a0c05ef7469627535cd3bb6b2c26b2d24c216d7be1b57344",
+  "positions": ["native", "crossed"],
+  "exchange_indices": {"self": [], "late": [2, 3], "four": [0, 1, 2, 3]},
+  "camera_width_m": 0.076,
+  "figure": "drawer_bowl_position.png",
+  "starts": "Restore both archived handoffs per layout. Keep the native bowl XY or set just its two free-joint translations to the other layout's archived world XY. Hold all remaining integration state, gripper, bowl Z and quaternion, plate and drawer fixed within each comparison. Measure each host's natural full opening. Physically prepare 76 mm counterparts to validate render inputs. Check tabletop support, initial clearance, a one-second stationary probe, both native cameras and the detached first image at both widths before policy inference.",
+  "cohort": "One pi05_libero checkpoint, upper-drawer bowl instruction, four returned postures, two positions, three schedules, eight original seeds at offset 32 and two independent loads with reversed order. Collect every one of the 384 full-width paths at 20 Hz for 540 policy controls. Reuse the exact two-camera exchange, contact cutoff and server input checks from the layout-3 window study.",
+  "primary": "For every layout, posture, load and seed compare late and self on first drawer-or-bowl contact, including no contact. Pair this binary change across the native and crossed bowl positions and count native-only, crossed-only, both and neither. Transfer toward the other layout requires a decrease after crossing in layout 2 and an increase in layout 3. Report whether each sign holds in every posture by load cell. Report raw target identities and ties so an altered self reference is visible.",
+  "secondary": "Within each position classify late against the full-second exchange and the own-width view, including the denominator where these two reference contacts differ. Compare no contact and destination at 15 and 30 seconds, and check fresh native results against their pinned parent trajectories. The 15/30 s clock includes the common three-second return. Summarize paired model reloads and replay stored physical commands from the run and its archive."
+}

@@ -11,6 +11,7 @@ mode=${1:-help}
 case "$mode" in
   help|-h|--help)
     printf '%s\n' 'Setup: check, gpu, build, assets, smoke, results' \
+      'Bowl position: drawer-bowl-position NEW_DIR, verify-drawer-bowl-position DIR, replay-drawer-bowl-position DIR [NEW_REPORT]' \
       'Second layout: drawer-view-window-layout3 NEW_DIR, verify-drawer-view-window-layout3 DIR, replay-drawer-view-window-layout3 DIR [NEW_REPORT]' \
       'View windows: drawer-view-window NEW_DIR, verify-drawer-view-window DIR, replay-drawer-view-window DIR [NEW_REPORT]' \
       'View duration: drawer-view-duration NEW_DIR, verify-drawer-view-duration DIR, replay-drawer-view-duration DIR [NEW_REPORT]' \
@@ -21,6 +22,7 @@ case "$mode" in
   drawer-view-duration|verify-drawer-view-duration|replay-drawer-view-duration) ;;
   drawer-view-window|verify-drawer-view-window|replay-drawer-view-window) ;;
   drawer-view-window-layout3|verify-drawer-view-window-layout3|replay-drawer-view-window-layout3) ;;
+  drawer-bowl-position|verify-drawer-bowl-position|replay-drawer-bowl-position) ;;
   check|gpu|build|assets|smoke|results|drawer-first-camera|drawer-width|drawer-location|middle-aperture-layout2|verify-drawer-first-camera|verify-drawer-width|verify-drawer-location|verify-middle-aperture|verify-stove-layouts|replay-drawer-first-camera|replay-drawer-width|replay-drawer-location|replay-prior-closed) ;;
   *) printf 'Unknown drawer study stage: %s\n' "$mode" >&2; exit 2 ;;
 esac
@@ -85,9 +87,10 @@ image_id=$(d image inspect --format '{{.Id}}' "$image")
 sim=/opt/resteer/.venv/bin/python
 policy=/opt/resteer/third_party/openpi/.venv/bin/python
 case "$mode" in
-  verify-drawer-view-window-layout3|verify-drawer-view-window|verify-drawer-view-duration|verify-drawer-first-camera|verify-drawer-width|verify-drawer-location|verify-middle-aperture|verify-stove-layouts)
+  verify-drawer-bowl-position|verify-drawer-view-window-layout3|verify-drawer-view-window|verify-drawer-view-duration|verify-drawer-first-camera|verify-drawer-width|verify-drawer-location|verify-middle-aperture|verify-stove-layouts)
     [ "$#" -eq 2 ] && [ -d "$2" ] || { echo 'Supply the recorded run or archive directory.' >&2; exit 2; }
     case "$mode" in
+      verify-drawer-bowl-position) verifier=drawer_bowl_position.py ;;
       verify-drawer-view-window-layout3) verifier=drawer_view_window_layout3.py ;;
       verify-drawer-view-window) verifier=drawer_view_window.py ;;
       verify-drawer-view-duration) verifier=drawer_view_duration.py ;;
@@ -103,12 +106,14 @@ case "$mode" in
       --mount "type=bind,src=$recipe_dir,dst=/packet,readonly" --mount "type=bind,src=$run_path,dst=/trial,readonly" \
       --entrypoint "$sim" "$image_id" "/packet/$verifier" /trial
     exit 0 ;;
-  replay-drawer-view-window-layout3|replay-drawer-view-window|replay-drawer-view-duration|replay-drawer-first-camera|replay-drawer-width|replay-drawer-location|replay-prior-closed)
+  replay-drawer-bowl-position|replay-drawer-view-window-layout3|replay-drawer-view-window|replay-drawer-view-duration|replay-drawer-first-camera|replay-drawer-width|replay-drawer-location|replay-prior-closed)
     [ "$#" -ge 2 ] && [ "$#" -le 3 ] && [ -d "$2" ] || { echo 'Supply an existing run and optionally a new report.' >&2; exit 2; }
     run_path=$(CDPATH= cd -- "$2" && pwd)
     if [ "$mode" = replay-prior-closed ]; then
       [ "$#" -eq 3 ] || { echo 'Supply a new report path for the historical replay.' >&2; exit 2; }
       script=replay_prior_closed.py
+    elif [ "$mode" = replay-drawer-bowl-position ]; then
+      script=drawer_bowl_position.py
     elif [ "$mode" = replay-drawer-view-window-layout3 ]; then
       script=drawer_view_window_layout3.py
     elif [ "$mode" = replay-drawer-view-window ]; then
@@ -154,11 +159,13 @@ if [ "$mode" = results ]; then
 fi
 
 volume "$data_volume"
-if [ "$mode" = drawer-view-window-layout3 ] || [ "$mode" = drawer-view-window ] || [ "$mode" = drawer-view-duration ] || [ "$mode" = drawer-first-camera ] || [ "$mode" = drawer-width ] || [ "$mode" = drawer-location ] || [ "$mode" = middle-aperture-layout2 ]; then
+if [ "$mode" = drawer-bowl-position ] || [ "$mode" = drawer-view-window-layout3 ] || [ "$mode" = drawer-view-window ] || [ "$mode" = drawer-view-duration ] || [ "$mode" = drawer-first-camera ] || [ "$mode" = drawer-width ] || [ "$mode" = drawer-location ] || [ "$mode" = middle-aperture-layout2 ]; then
   [ "$#" -eq 2 ] && [ ! -e "$2" ] || { echo 'Supply a new output directory.' >&2; exit 2; }
   parent=$(CDPATH= cd -- "$(dirname -- "$2")" && pwd)
   leaf=$(basename -- "$2")
-  if [ "$mode" = drawer-view-window-layout3 ]; then
+  if [ "$mode" = drawer-bowl-position ]; then
+    set -- /packet/drawer_bowl_position.py "/output/$leaf" collect
+  elif [ "$mode" = drawer-view-window-layout3 ]; then
     set -- /packet/drawer_view_window_layout3.py "/output/$leaf" collect
   elif [ "$mode" = drawer-view-window ]; then
     set -- /packet/drawer_view_window.py "/output/$leaf" collect

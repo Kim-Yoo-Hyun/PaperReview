@@ -4,11 +4,11 @@
 
 ## 최근 실험
 
-반대 폭의 서랍을 두 카메라에 보여주면, 정책 시작 후 어느 0.5초에 보여줬는지에 따라 그리퍼가 처음 닿는 대상이 달라졌다. 실제 폭을 보여준 대조와 비교해 앞 0.5초 교환은 LIBERO 배치 2와 3 모두 0/128쌍, 뒤 0.5초 교환은 각각 120/128쌍과 46/128쌍에서 첫 접촉 결과가 달라졌다. 배치 3의 변화는 모두 가운데 서랍에서 발생했다. [서랍·방향별 결과와 한계](./work/research_topics/instruction_revision/내용/README.md#drawer-view-window-layout3) · [두 배치 비교 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-view-window-layout3/drawer_view_window_layout3.png)
+아래 서랍을 약 160 mm 연 채 정책 시작 후 0.5–1초에 76 mm로 보여주면, 첫 접촉이 바뀐 경우는 배치 2에서 32/32쌍, 배치 3에서 0/32쌍이었다. 두 배치에서 그릇 중심 위치만 9.4 mm 서로 바꾸고 다시 측정해도 각각 30/32쌍과 0/32쌍이었다. 달라진 두 쌍은 같은 자세·시드를 두 번 실행한 결과다. [접촉·수납과 검증 범위](./work/research_topics/instruction_revision/내용/README.md#drawer-bowl-position) · [그릇 위치 비교 그림](./work/research_topics/instruction_revision/재현%20방법/results/2026-11-26-drawer-bowl-position/drawer_bowl_position.png)
 
 | 하려는 일 | 시작점 |
 |---|---|
-| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-view-window-layout3) |
+| 측정값을 검산하거나 같은 실험 실행 | [로컬 Docker 재현](./work/research_topics/instruction_revision/재현%20방법/README.md#drawer-bowl-position) |
 | 후속 실험의 대조 조건 확인 | [다음 작업](./TODO.md) |
 | 1,260편의 논문 검색 | [분야별 목록](./PAPER.md) · [태그·별칭 색인](./research/REGISTRY_INDEX.csv) |
 | 정독 순서·기록·분야별 비교 | [논문 읽기](./research/README.md) · [7개 분야의 합성](./synthesis/README.md) |

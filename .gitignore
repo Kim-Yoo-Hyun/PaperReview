@@ -32,6 +32,7 @@ runs/
 *.pdf
 
 # Measured drawer trials, their direct control and the source of the two starting postures.
+!/work/research_topics/instruction_revision/재현 방법/results/2026-11-26-drawer-bowl-position/study.zip
 !/work/research_topics/instruction_revision/재현 방법/results/2026-11-26-drawer-view-window-layout3/study.zip
 !/work/research_topics/instruction_revision/재현 방법/results/2026-11-26-drawer-view-window/study.zip
 !/work/research_topics/instruction_revision/재현 방법/results/2026-11-26-drawer-view-duration/study.zip

@@ -216,6 +216,17 @@ def comparisons(records, cohort, indices=DEFAULT_INDICES):
     return results
 
 
+def behavior_record(values, tape, exchanged):
+    last = values['600']
+    firsts = {l: last['first'][f] for l, f in zip(LEVELS, ('bowl_in', 'middle_in', 'bottom_in'), strict=True)}
+    tick = min((t for t in firsts.values() if t is not None), default=None)
+    first = '+'.join(l for l, t in firsts.items() if tick is not None and t == tick) or 'none'
+    return dict(contact=last['first_task_contact']['target'], contact_tick=last['first_task_contact']['tick'],
+                per_drawer_first_tick=firsts, place_tick=tick, first_destination=first, exchanged=exchanged,
+                at15=destination(values['300']), at30=destination(last),
+                controls=[r['action'] for r in tape['rows'][:LIMIT * PERIOD]])
+
+
 def score(out, design_file=DESIGN_FILE):
     src, runtime = out / 'sources', read(out / 'runtime.json')
     design = read(PACKET / design_file)
@@ -254,15 +265,7 @@ def score(out, design_file=DESIGN_FILE):
             for a in attempts:
                 raster['max_pixels_one_camera'] = max(raster['max_pixels_one_camera'], *a['pixels'].values())
         vals, _ = path_outcomes(out, e, prep, geometry, keys, seen, sent_by_tick=sent, tape=tape)
-        last = vals['600']
-        firsts = {l: last['first'][f] for l, f in zip(LEVELS, ('bowl_in', 'middle_in', 'bottom_in'), strict=True)}
-        tick = min((t for t in firsts.values() if t is not None), default=None)
-        first = '+'.join(l for l, t in firsts.items() if tick is not None and t == tick) or 'none'
-        records[arm, e['block'], e['key'], mode, view] = dict(
-            contact=last['first_task_contact']['target'], contact_tick=last['first_task_contact']['tick'],
-            per_drawer_first_tick=firsts, place_tick=tick, first_destination=first, exchanged=exchanged,
-            at15=destination(vals['300']), at30=destination(last),
-            controls=[r['action'] for r in tape['rows'][:LIMIT * PERIOD]])
+        records[arm, e['block'], e['key'], mode, view] = behavior_record(vals, tape, exchanged)
     cohort = [(a, b, k) for a in study['arms'] for b in study['blocks'] for k in BASE['stove_seeds']]
     groups = {'all': cohort}
     for a in study['arms']:
